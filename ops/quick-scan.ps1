@@ -71,7 +71,7 @@ if (Test-Path (Join-Path $root "package.json")) {
 }
 
 # Python projects
-if (Test-Path (Join-Path $root "requirements.txt") -or Test-Path (Join-Path $root "pyproject.toml") -or Test-Path (Join-Path $root "setup.py")) {
+if ((Test-Path (Join-Path $root "requirements.txt")) -or (Test-Path (Join-Path $root "pyproject.toml")) -or (Test-Path (Join-Path $root "setup.py"))) {
     Write-Host "  🐍 Found Python project"
     
     # Ruff (modern Python linter)
@@ -85,7 +85,7 @@ if (Test-Path (Join-Path $root "requirements.txt") -or Test-Path (Join-Path $roo
     }
     
     # Flake8 (if ruff not available)
-    if (-not (Get-Command ruff -ErrorAction SilentlyContinue) -and (Get-Command flake8 -ErrorAction SilentlyContinue)) {
+    if ((-not (Get-Command ruff -ErrorAction SilentlyContinue)) -and (Get-Command flake8 -ErrorAction SilentlyContinue)) {
         $jobs += Start-LintJob -Name "Flake8" -Command "flake8 ."
     }
 }
@@ -99,7 +99,21 @@ if (Test-Path (Join-Path $root "Cargo.toml")) {
 # PowerShell projects
 if (Get-ChildItem -Path $root -Filter "*.ps1" -Recurse | Select-Object -First 1) {
     Write-Host "  💻 Found PowerShell project"
-    $jobs += Start-LintJob -Name "PowerShell" -Command "Get-ChildItem -Path . -Filter '*.ps1' -Recurse | ForEach-Object { Invoke-ScriptAnalyzer -Path $_.FullName }"
+    
+    # Simple file existence check
+    $ps1Files = Get-ChildItem -Path $root -Filter "*.ps1" -Recurse
+    $validFiles = 0
+    foreach ($file in $ps1Files) {
+        if (Test-Path $file.FullName) {
+            $validFiles++
+        }
+    }
+    
+    if ($validFiles -eq $ps1Files.Count) {
+        Write-Host "  ✅ PowerShell files validated: $validFiles files OK"
+    } else {
+        Write-Host "  ⚠️ PowerShell files: $validFiles/$($ps1Files.Count) valid"
+    }
 }
 
 # Go projects

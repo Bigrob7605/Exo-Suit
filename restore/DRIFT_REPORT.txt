@@ -1,8 +1,4 @@
 UNCOMMITTED:  M "Universal Open Science Toolbox With Kai (Drift Damaged Project)"
-UNCOMMITTED:  M ops/placeholder-scan.ps1
-UNCOMMITTED: ?? .sandboxes/
-UNCOMMITTED: ?? restore/DRIFT_REPORT.json
-UNCOMMITTED: ?? restore/DRIFT_REPORT.txt
-UNTRACKED: .sandboxes/ai-sbx-20250809-201810/
-UNTRACKED: restore/DRIFT_REPORT.json
-UNTRACKED: restore/DRIFT_REPORT.txt
+UNCOMMITTED:  M ops/quick-scan.ps1
+UNCOMMITTED:  M restore/DRIFT_REPORT.json
+UNCOMMITTED:  M restore/DRIFT_REPORT.txt
