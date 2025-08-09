@@ -1,0 +1,312 @@
+[
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\titan_mode_v3.zip",
+    "sizeMB": 0.02,
+    "reason": "binary"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\.venv\\Lib\\site-packages\\pip\\_vendor\\distlib\\t32.exe",
+    "sizeMB": 0.09,
+    "reason": "binary"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\.venv\\Lib\\site-packages\\pip\\_vendor\\distlib\\t64-arm.exe",
+    "sizeMB": 0.17,
+    "reason": "binary"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\.venv\\Lib\\site-packages\\pip\\_vendor\\distlib\\t64.exe",
+    "sizeMB": 0.1,
+    "reason": "binary"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\.venv\\Lib\\site-packages\\pip\\_vendor\\distlib\\w32.exe",
+    "sizeMB": 0.09,
+    "reason": "binary"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\.venv\\Lib\\site-packages\\pip\\_vendor\\distlib\\w64-arm.exe",
+    "sizeMB": 0.16,
+    "reason": "binary"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\.venv\\Lib\\site-packages\\pip\\_vendor\\distlib\\w64.exe",
+    "sizeMB": 0.1,
+    "reason": "binary"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\.venv\\Scripts\\pip.exe",
+    "sizeMB": 0.1,
+    "reason": "binary"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\.venv\\Scripts\\pip3.13.exe",
+    "sizeMB": 0.1,
+    "reason": "binary"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\.venv\\Scripts\\pip3.exe",
+    "sizeMB": 0.1,
+    "reason": "binary"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\.venv\\Scripts\\python.exe",
+    "sizeMB": 0.24,
+    "reason": "binary"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\.venv\\Scripts\\pythonw.exe",
+    "sizeMB": 0.24,
+    "reason": "binary"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\Universal Open Science Toolbox With Kai (Drift Damaged Project)\\V1_Rebuild_Checklist.zip",
+    "sizeMB": 0.0,
+    "reason": "binary"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\Universal Open Science Toolbox With Kai (Drift Damaged Project)\\.venv\\Lib\\site-packages\\matplotlib\\mpl-data\\images\\back.pdf",
+    "sizeMB": 0.0,
+    "reason": "binary"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\Universal Open Science Toolbox With Kai (Drift Damaged Project)\\.venv\\Lib\\site-packages\\matplotlib\\mpl-data\\images\\filesave.pdf",
+    "sizeMB": 0.0,
+    "reason": "binary"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\Universal Open Science Toolbox With Kai (Drift Damaged Project)\\.venv\\Lib\\site-packages\\matplotlib\\mpl-data\\images\\forward.pdf",
+    "sizeMB": 0.0,
+    "reason": "binary"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\Universal Open Science Toolbox With Kai (Drift Damaged Project)\\.venv\\Lib\\site-packages\\matplotlib\\mpl-data\\images\\hand.pdf",
+    "sizeMB": 0.0,
+    "reason": "binary"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\Universal Open Science Toolbox With Kai (Drift Damaged Project)\\.venv\\Lib\\site-packages\\matplotlib\\mpl-data\\images\\help.pdf",
+    "sizeMB": 0.0,
+    "reason": "binary"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\Universal Open Science Toolbox With Kai (Drift Damaged Project)\\.venv\\Lib\\site-packages\\matplotlib\\mpl-data\\images\\home.pdf",
+    "sizeMB": 0.0,
+    "reason": "binary"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\Universal Open Science Toolbox With Kai (Drift Damaged Project)\\.venv\\Lib\\site-packages\\matplotlib\\mpl-data\\images\\matplotlib.pdf",
+    "sizeMB": 0.02,
+    "reason": "binary"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\Universal Open Science Toolbox With Kai (Drift Damaged Project)\\.venv\\Lib\\site-packages\\matplotlib\\mpl-data\\images\\move.pdf",
+    "sizeMB": 0.0,
+    "reason": "binary"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\Universal Open Science Toolbox With Kai (Drift Damaged Project)\\.venv\\Lib\\site-packages\\matplotlib\\mpl-data\\images\\qt4_editor_options.pdf",
+    "sizeMB": 0.0,
+    "reason": "binary"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\Universal Open Science Toolbox With Kai (Drift Damaged Project)\\.venv\\Lib\\site-packages\\matplotlib\\mpl-data\\images\\subplots.pdf",
+    "sizeMB": 0.0,
+    "reason": "binary"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\Universal Open Science Toolbox With Kai (Drift Damaged Project)\\.venv\\Lib\\site-packages\\matplotlib\\mpl-data\\images\\zoom_to_rect.pdf",
+    "sizeMB": 0.0,
+    "reason": "binary"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\Universal Open Science Toolbox With Kai (Drift Damaged Project)\\.venv\\Lib\\site-packages\\numpy.libs\\libscipy_openblas64_-860d95b1c38e637ce4509f5fa24fbf2a.dll",
+    "sizeMB": 19.46,
+    "reason": "binary"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\Universal Open Science Toolbox With Kai (Drift Damaged Project)\\.venv\\Lib\\site-packages\\numpy.libs\\msvcp140-a4c2229bdc2a2a630acdc095b4d86008.dll",
+    "sizeMB": 0.55,
+    "reason": "binary"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\Universal Open Science Toolbox With Kai (Drift Damaged Project)\\.venv\\Lib\\site-packages\\pandas.libs\\msvcp140-1a0962f2a91a74c6d7136a768987a591.dll",
+    "sizeMB": 0.55,
+    "reason": "binary"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\Universal Open Science Toolbox With Kai (Drift Damaged Project)\\.venv\\Lib\\site-packages\\pip\\_vendor\\distlib\\t32.exe",
+    "sizeMB": 0.09,
+    "reason": "binary"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\Universal Open Science Toolbox With Kai (Drift Damaged Project)\\.venv\\Lib\\site-packages\\pip\\_vendor\\distlib\\t64-arm.exe",
+    "sizeMB": 0.17,
+    "reason": "binary"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\Universal Open Science Toolbox With Kai (Drift Damaged Project)\\.venv\\Lib\\site-packages\\pip\\_vendor\\distlib\\t64.exe",
+    "sizeMB": 0.1,
+    "reason": "binary"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\Universal Open Science Toolbox With Kai (Drift Damaged Project)\\.venv\\Lib\\site-packages\\pip\\_vendor\\distlib\\w32.exe",
+    "sizeMB": 0.09,
+    "reason": "binary"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\Universal Open Science Toolbox With Kai (Drift Damaged Project)\\.venv\\Lib\\site-packages\\pip\\_vendor\\distlib\\w64-arm.exe",
+    "sizeMB": 0.16,
+    "reason": "binary"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\Universal Open Science Toolbox With Kai (Drift Damaged Project)\\.venv\\Lib\\site-packages\\pip\\_vendor\\distlib\\w64.exe",
+    "sizeMB": 0.1,
+    "reason": "binary"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\Universal Open Science Toolbox With Kai (Drift Damaged Project)\\.venv\\Lib\\site-packages\\pkg_resources\\tests\\data\\my-test-package-zip\\my-test-package.zip",
+    "sizeMB": 0.0,
+    "reason": "binary"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\Universal Open Science Toolbox With Kai (Drift Damaged Project)\\.venv\\Lib\\site-packages\\scipy.libs\\libscipy_openblas-6b2103f2ae4d8547998b5d188e9801fb.dll",
+    "sizeMB": 19.22,
+    "reason": "binary"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\Universal Open Science Toolbox With Kai (Drift Damaged Project)\\.venv\\Lib\\site-packages\\setuptools\\cli-32.exe",
+    "sizeMB": 0.01,
+    "reason": "binary"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\Universal Open Science Toolbox With Kai (Drift Damaged Project)\\.venv\\Lib\\site-packages\\setuptools\\cli-64.exe",
+    "sizeMB": 0.01,
+    "reason": "binary"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\Universal Open Science Toolbox With Kai (Drift Damaged Project)\\.venv\\Lib\\site-packages\\setuptools\\cli-arm64.exe",
+    "sizeMB": 0.01,
+    "reason": "binary"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\Universal Open Science Toolbox With Kai (Drift Damaged Project)\\.venv\\Lib\\site-packages\\setuptools\\cli.exe",
+    "sizeMB": 0.01,
+    "reason": "binary"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\Universal Open Science Toolbox With Kai (Drift Damaged Project)\\.venv\\Lib\\site-packages\\setuptools\\gui-32.exe",
+    "sizeMB": 0.01,
+    "reason": "binary"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\Universal Open Science Toolbox With Kai (Drift Damaged Project)\\.venv\\Lib\\site-packages\\setuptools\\gui-64.exe",
+    "sizeMB": 0.01,
+    "reason": "binary"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\Universal Open Science Toolbox With Kai (Drift Damaged Project)\\.venv\\Lib\\site-packages\\setuptools\\gui-arm64.exe",
+    "sizeMB": 0.01,
+    "reason": "binary"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\Universal Open Science Toolbox With Kai (Drift Damaged Project)\\.venv\\Lib\\site-packages\\setuptools\\gui.exe",
+    "sizeMB": 0.01,
+    "reason": "binary"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\Universal Open Science Toolbox With Kai (Drift Damaged Project)\\.venv\\Lib\\site-packages\\sklearn\\.libs\\msvcp140.dll",
+    "sizeMB": 0.53,
+    "reason": "binary"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\Universal Open Science Toolbox With Kai (Drift Damaged Project)\\.venv\\Lib\\site-packages\\sklearn\\.libs\\vcomp140.dll",
+    "sizeMB": 0.18,
+    "reason": "binary"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\Universal Open Science Toolbox With Kai (Drift Damaged Project)\\.venv\\Scripts\\f2py.exe",
+    "sizeMB": 0.1,
+    "reason": "binary"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\Universal Open Science Toolbox With Kai (Drift Damaged Project)\\.venv\\Scripts\\fonttools.exe",
+    "sizeMB": 0.1,
+    "reason": "binary"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\Universal Open Science Toolbox With Kai (Drift Damaged Project)\\.venv\\Scripts\\gunicorn.exe",
+    "sizeMB": 0.1,
+    "reason": "binary"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\Universal Open Science Toolbox With Kai (Drift Damaged Project)\\.venv\\Scripts\\normalizer.exe",
+    "sizeMB": 0.1,
+    "reason": "binary"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\Universal Open Science Toolbox With Kai (Drift Damaged Project)\\.venv\\Scripts\\numpy-config.exe",
+    "sizeMB": 0.1,
+    "reason": "binary"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\Universal Open Science Toolbox With Kai (Drift Damaged Project)\\.venv\\Scripts\\pip.exe",
+    "sizeMB": 0.1,
+    "reason": "binary"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\Universal Open Science Toolbox With Kai (Drift Damaged Project)\\.venv\\Scripts\\pip3.13.exe",
+    "sizeMB": 0.1,
+    "reason": "binary"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\Universal Open Science Toolbox With Kai (Drift Damaged Project)\\.venv\\Scripts\\pip3.exe",
+    "sizeMB": 0.1,
+    "reason": "binary"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\Universal Open Science Toolbox With Kai (Drift Damaged Project)\\.venv\\Scripts\\pyftmerge.exe",
+    "sizeMB": 0.1,
+    "reason": "binary"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\Universal Open Science Toolbox With Kai (Drift Damaged Project)\\.venv\\Scripts\\pyftsubset.exe",
+    "sizeMB": 0.1,
+    "reason": "binary"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\Universal Open Science Toolbox With Kai (Drift Damaged Project)\\.venv\\Scripts\\python.exe",
+    "sizeMB": 0.24,
+    "reason": "binary"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\Universal Open Science Toolbox With Kai (Drift Damaged Project)\\.venv\\Scripts\\pythonw.exe",
+    "sizeMB": 0.24,
+    "reason": "binary"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\Universal Open Science Toolbox With Kai (Drift Damaged Project)\\.venv\\Scripts\\ttx.exe",
+    "sizeMB": 0.1,
+    "reason": "binary"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\Universal Open Science Toolbox With Kai (Drift Damaged Project)\\.venv\\Scripts\\waitress-serve.exe",
+    "sizeMB": 0.1,
+    "reason": "binary"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\Universal Open Science Toolbox With Kai (Drift Damaged Project)\\.venv\\Scripts\\wheel.exe",
+    "sizeMB": 0.1,
+    "reason": "binary"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\Universal Open Science Toolbox With Kai (Drift Damaged Project)\\archive\\Project White Papers.rar",
+    "sizeMB": 0.08,
+    "reason": "binary"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\Universal Open Science Toolbox With Kai (Drift Damaged Project)\\backups\\pre-recovery_.tgz",
+    "sizeMB": 18954.84,
+    "reason": "oversize"
+  }
+]

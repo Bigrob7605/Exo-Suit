@@ -1,0 +1,14 @@
+[
+  {
+    "id": "exo-suit-core",
+    "type": "CODE_MISSING",
+    "doc": "README.md#exo-suit",
+    "pattern": "ops/**, rag/**, mermaid/**"
+  },
+  {
+    "id": "exo-suit-core",
+    "type": "TEST_MISSING",
+    "doc": "README.md#exo-suit",
+    "pattern": "test_*.py, *_test.py"
+  }
+]

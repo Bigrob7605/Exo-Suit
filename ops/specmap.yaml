@@ -1,0 +1,28 @@
+spec:
+  - id: api-core
+    doc: Project White Papers/CORE_API.md#endpoints
+    code:
+      - web_interface/api/**
+    tests:
+      - tests/api/**
+  - id: agent-engine
+    doc: Project White Papers/AGENT_ENGINE.md#contracts
+    code:
+      - kai_core/agents/**
+    tests:
+      - tests/agents/**
+  - id: security-auth
+    doc: Project White Papers/SECURITY.md#auth
+    code:
+      - kai_core/security/**
+    tests:
+      - tests/security/**
+  - id: exo-suit-core
+    doc: README.md#exo-suit
+    code:
+      - ops/**
+      - rag/**
+      - mermaid/**
+    tests:
+      - test_*.py
+      - *_test.py

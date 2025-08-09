@@ -1,0 +1,176 @@
+<!doctype html><html><head><meta charset="utf-8">
+<title>Exo-Suit Dashboard</title>
+<style>
+body{font-family:system-ui,Segoe UI,Roboto,Arial;margin:24px;background:#0b0f14;color:#e6eef6}
+.card{background:#121820;border:1px solid #1f2a36;border-radius:12px;padding:16px;margin:12px 0}
+.h{font-size:20px;margin:0 0 8px}
+.kv{display:flex;gap:16px;flex-wrap:wrap}
+.kv div{background:#0f141b;border:1px solid #1c2632;border-radius:10px;padding:12px 16px}
+pre{white-space:pre-wrap;background:#0f141b;padding:12px;border-radius:8px;border:1px solid #1c2632}
+a{color:#8ad3ff}
+</style></head><body>
+<h1>Exo-Suit Dashboard</h1>
+<div class="card"><div class="h">Status</div>
+<div class="kv">
+<div><b>BLOCK</b><br>30</div>
+<div><b>WARN</b><br>26</div>
+<div><b>INFO</b><br>59</div>
+<div><b>Drift</b><br>0</div>
+<div><b>Secrets</b><br>15410</div>
+<div><b>Binaries</b><br>62</div>
+</div></div>
+
+<div class="card"><div class="h">Lock file age</div><pre></pre></div>
+<div class="card"><div class="h">Ownership</div><pre>[
+  {
+    "Path": "kai_core/",
+    "Owner": "AI"
+  },
+  {
+    "Path": "docs/",
+    "Owner": "Rob"
+  },
+  {
+    "Path": "tests/",
+    "Owner": "AI"
+  },
+  {
+    "Path": "ops/",
+    "Owner": "AI"
+  },
+  {
+    "Path": "web_interface/",
+    "Owner": "AI"
+  },
+  {
+    "Path": "context/",
+    "Owner": "AI"
+  },
+  {
+    "Path": "scripts/",
+    "Owner": "AI"
+  },
+  {
+    "Path": "validation/",
+    "Owner": "AI"
+  },
+  {
+    "Path": "cursor/",
+    "Owner": "AI"
+  }
+]</pre></div>
+<div class="card"><div class="h">Secrets (top 10)</div><pre>[
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\.env",
+    "rule": ".ENV_ASSIGN",
+    "sample": "EMBEDDING_MODEL=all-MiniLM-L6-v2\r",
+    "severity": "WARN"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\.env",
+    "rule": ".ENV_ASSIGN",
+    "sample": "FAISS_INDEX_PATH=rag/index.faiss\r",
+    "severity": "WARN"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\.env",
+    "rule": ".ENV_ASSIGN",
+    "sample": "RAG_META_PATH=rag/meta.jsonl\r",
+    "severity": "WARN"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\upgrade-to-exo.ps1",
+    "rule": ".ENV_ASSIGN",
+    "sample": "EMBEDDING_MODEL=all-MiniLM-L6-v2\r",
+    "severity": "WARN"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\upgrade-to-exo.ps1",
+    "rule": ".ENV_ASSIGN",
+    "sample": "FAISS_INDEX_PATH=rag/index.faiss\r",
+    "severity": "WARN"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\upgrade-to-exo.ps1",
+    "rule": ".ENV_ASSIGN",
+    "sample": "RAG_META_PATH=rag/meta.jsonl\r",
+    "severity": "WARN"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\.venv\\pyvenv.cfg",
+    "rule": ".ENV_ASSIGN",
+    "sample": "home = C:\\Program Files\\Python313\r",
+    "severity": "WARN"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\.venv\\pyvenv.cfg",
+    "rule": ".ENV_ASSIGN",
+    "sample": "executable = C:\\Program Files\\Python313\\python.exe\r",
+    "severity": "WARN"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\.venv\\pyvenv.cfg",
+    "rule": ".ENV_ASSIGN",
+    "sample": "command = C:\\Program Files\\Python313\\python.exe -m venv c:\\M",
+    "severity": "WARN"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\.venv\\Lib\\site-packages\\pip\\__pip-runner__.py",
+    "rule": ".ENV_ASSIGN",
+    "sample": "PIP_SOURCES_ROOT = dirname(dirname(__file__))",
+    "severity": "WARN"
+  }
+]</pre></div>
+<div class="card"><div class="h">Binary Guard (top 10)</div><pre>[
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\titan_mode_v3.zip",
+    "sizeMB": 0.02,
+    "reason": "binary"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\.venv\\Lib\\site-packages\\pip\\_vendor\\distlib\\t32.exe",
+    "sizeMB": 0.09,
+    "reason": "binary"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\.venv\\Lib\\site-packages\\pip\\_vendor\\distlib\\t64-arm.exe",
+    "sizeMB": 0.17,
+    "reason": "binary"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\.venv\\Lib\\site-packages\\pip\\_vendor\\distlib\\t64.exe",
+    "sizeMB": 0.1,
+    "reason": "binary"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\.venv\\Lib\\site-packages\\pip\\_vendor\\distlib\\w32.exe",
+    "sizeMB": 0.09,
+    "reason": "binary"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\.venv\\Lib\\site-packages\\pip\\_vendor\\distlib\\w64-arm.exe",
+    "sizeMB": 0.16,
+    "reason": "binary"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\.venv\\Lib\\site-packages\\pip\\_vendor\\distlib\\w64.exe",
+    "sizeMB": 0.1,
+    "reason": "binary"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\.venv\\Scripts\\pip.exe",
+    "sizeMB": 0.1,
+    "reason": "binary"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\.venv\\Scripts\\pip3.13.exe",
+    "sizeMB": 0.1,
+    "reason": "binary"
+  },
+  {
+    "file": "C:\\My Projects\\Agent Exo-Suit\\.venv\\Scripts\\pip3.exe",
+    "sizeMB": 0.1,
+    "reason": "binary"
+  }
+]</pre></div>
+</body></html>
