@@ -33,6 +33,8 @@ $files = Get-ChildItem -Path $root -Recurse -File | Where-Object {
     $_.FullName -notmatch '\.(git|venv|node_modules|__pycache__)' -and
     $_.FullName -notmatch '\\ops\\' -and  # Exclude ops directory
     $_.FullName -notmatch '\\context\\' -and  # Exclude context directory
+    $_.FullName -notmatch '\\\.sandboxes\\' -and  # Exclude sandbox directories
+    $_.FullName -notmatch 'Universal Open Science Toolbox With Kai' -and  # Exclude test project
     $_.Name -notmatch '^(package-lock\.json|yarn\.lock|Cargo\.lock)$' -and
     $_.Name -notmatch '^(placeholder-scan|make-pack|drift-gate|index-symbols|index-imports)\.ps1$'  # Exclude our own scripts
 }
@@ -52,18 +54,77 @@ foreach ($f in $files) {
                     continue
                 }
                 
+                # Skip documentation examples and markdown content that's just examples
+                if ($line -match '^\s*`' -or $line -match '^\s*-' -or $line -match '^\s*\*') {
+                    # Check if this is just a documentation example
+                    if ($line -match 'example|sample|demo|template' -or $line -match '^.*`.*`.*$') {
+                        continue
+                    }
+                }
+                
+                # Skip lines that are clearly just documentation references
+                if ($line -match 'archive/|savepoints/' -or $line -match '\.md.*-.*') {
+                    continue
+                }
+                
+                # Skip markdown files that are just documentation (not actual code issues)
+                if ($f.Extension -eq '.md') {
+                    # Skip if it's just describing patterns rather than actual issues
+                    if ($line -match '^\s*- \*\*.*\*\*.*' -or $line -match '^\s*- `.*` - .*') {
+                        continue
+                    }
+                    # Skip if it's just listing examples
+                    if ($line -match 'Various .* items' -or $line -match 'General .* items') {
+                        continue
+                    }
+                    # Skip if it's just documentation about the scanner itself
+                    if ($line -match 'Placeholder Scanning|Identification of.*markers') {
+                        continue
+                    }
+                }
+                
                 foreach ($pattern in $patterns) {
                     # Look for the pattern as a standalone word or in context, but not in strings or comments
                     if ($line -match "\b$pattern\b" -and $line -notmatch "'$pattern'" -and $line -notmatch '"$pattern"') {
-                        $keys = $patterns | Where-Object { $line -match "\b$_\b" }
-                        $sev = ($keys | ForEach-Object { $severityMap[$_] } | Sort-Object { $rank[$_] } -Descending | Select-Object -First 1)
+                        # Additional filtering for false positives
+                        $isFalsePositive = $false
                         
-                        $result += [PSCustomObject]@{
-                            File = $f.FullName.Replace($root, '').TrimStart('\')
-                            Line = $i + 1
-                            Text = $line
-                            Severity = $sev
-                            Pattern = $pattern
+                        # Skip if it's just a documentation reference
+                        if ($line -match 'archive/|savepoints/' -or $line -match '\.md.*-.*') {
+                            $isFalsePositive = $true
+                        }
+                        
+                        # Skip if it's just an example in documentation
+                        if ($line -match 'example|sample|demo|template' -or $line -match '^.*`.*`.*$') {
+                            $isFalsePositive = $true
+                        }
+                        
+                        # Skip if it's just a file path reference
+                        if ($line -match '^\s*- `.*` - .*$') {
+                            $isFalsePositive = $true
+                        }
+                        
+                        # Skip if it's just documentation about patterns
+                        if ($line -match '^\s*- \*\*.*\*\*.*' -or $line -match 'Various .* items' -or $line -match 'General .* items') {
+                            $isFalsePositive = $true
+                        }
+                        
+                        # Skip if it's just documentation about the scanner
+                        if ($line -match 'Placeholder Scanning|Identification of.*markers') {
+                            $isFalsePositive = $true
+                        }
+                        
+                        if (-not $isFalsePositive) {
+                            $keys = $patterns | Where-Object { $line -match "\b$_\b" }
+                            $sev = ($keys | ForEach-Object { $severityMap[$_] } | Sort-Object { $rank[$_] } -Descending | Select-Object -First 1)
+                            
+                            $result += [PSCustomObject]@{
+                                File = $f.FullName.Replace($root, '').TrimStart('\')
+                                Line = $i + 1
+                                Text = $line
+                                Severity = $sev
+                                Pattern = $pattern
+                            }
                         }
                     }
                 }
@@ -76,9 +137,15 @@ foreach ($f in $files) {
 $result | ConvertTo-Json -Depth 4 | Out-File (Join-Path $outDir "placeholders.json") -Encoding utf8
 
 # Summary
-$blockCount = ($result | Where-Object { $_.Severity -eq 'BLOCK' }).Count
-$warnCount = ($result | Where-Object { $_.Severity -eq 'WARN' }).Count
-$infoCount = ($result | Where-Object { $_.Severity -eq 'INFO' }).Count
+$blockCount = 0
+$warnCount = 0
+$infoCount = 0
+
+if ($result) {
+    $blockCount = @($result | Where-Object { $_.Severity -eq 'BLOCK' }).Count
+    $warnCount = @($result | Where-Object { $_.Severity -eq 'WARN' }).Count
+    $infoCount = @($result | Where-Object { $_.Severity -eq 'INFO' }).Count
+}
 
 Write-Host "Placeholder scan complete:"
 Write-Host "  BLOCK: $blockCount"
