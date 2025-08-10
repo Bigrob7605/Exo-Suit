@@ -141,7 +141,7 @@ process {
     if ((Test-Path (Join-Path $proj 'requirements.txt')) -or (Get-ChildItem $proj -Filter '*.py' -Recurse -ErrorAction SilentlyContinue)) {
         try {
             pip install cyclonedx-bom 2>&1 | Out-Null
-            cyclonedx-py -r -o (Join-Path $sbomDir 'pip_sbom.json') $proj 2>&1 | Out-Null
+            python -m cyclonedx_py requirements -o (Join-Path $sbomDir 'pip_sbom.json') $proj 2>&1 | Out-Null
             Write-Log "pip SBOM written" -Level Verbose
         }
         catch { Write-Log "pip SBOM failed: $_" -Level Warning }
@@ -176,7 +176,7 @@ process {
     if ((Test-Path (Join-Path $proj 'requirements.txt')) -or (Get-ChildItem $proj -Filter '*.py' -Recurse -ErrorAction SilentlyContinue)) {
         try {
             pip install pip-audit 2>&1 | Out-Null
-            pip-audit --format=json --desc --output (Join-Path $cveDir 'pip_audit.json') $proj 2>&1 | Out-Null
+            python -m pip_audit --format=json --desc --output (Join-Path $cveDir 'pip_audit.json') $proj 2>&1 | Out-Null
             Write-Log "pip audit complete" -Level Verbose
         }
         catch { Write-Log "pip audit failed: $_" -Level Warning }
@@ -188,21 +188,26 @@ process {
     Write-Log "Scanning for secrets …" -Level Verbose
     $gitleaksPath = Join-Path $out 'secrets.json'
     try {
-        if (-not (Get-Command gitleaks -ErrorAction SilentlyContinue)) {
+        $gitleaksExe = "$env:TEMP\gitleaks\gitleaks.exe"
+        if (-not (Test-Path $gitleaksExe)) {
             if ($IsWindows) {
-                $url = 'https://github.com/gitleaks/gitleaks/releases/latest/download/gitleaks_8.18.2_windows_x64.zip'
-                Invoke-WebRequest $url -OutFile "$env:TEMP\g.zip"; Expand-Archive "$env:TEMP\g.zip" "$env:TEMP\gitleaks" -Force
-                $env:PATH += ";$env:TEMP\gitleaks"
+                $url = 'https://github.com/gitleaks/gitleaks/releases/download/v8.28.0/gitleaks_8.28.0_windows_x64.zip'
+                Invoke-WebRequest $url -OutFile "$env:TEMP\gitleaks.zip"
+                Expand-Archive "$env:TEMP\gitleaks.zip" "$env:TEMP\gitleaks" -Force
             }
             else {
                 brew install gitleaks 2>&1 | Out-Null
             }
         }
-        gitleaks detect --source $proj --report-format json --report-path $gitleaksPath 2>&1 | Out-Null
+        & $gitleaksExe detect --source $proj --report-format json --report-path $gitleaksPath 2>&1 | Out-Null
         Write-Log "gitleaks scan complete" -Level Verbose
     }
     catch { Write-Log "gitleaks scan failed: $_" -Level Warning }
 
     # -----------------------------------------------------------------------
-    Write-Log "All done – results in $out" -Level Info
+    Write-Log "All done - results in $out" -Level Info
+}
+
+end {
+    Write-Log "Project health scan completed successfully" -Level Info
 }
