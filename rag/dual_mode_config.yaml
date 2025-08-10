@@ -1,0 +1,242 @@
+# Agent Exo-Suit V3.0 - Dual-Mode RAG System Configuration
+# Supports: CPU-only, GPU-only, and CPU+GPU hybrid modes
+
+# Device Configuration
+devices:
+  # GPU Settings
+  gpu:
+    enabled: true
+    device_id: 0  # Primary GPU
+    memory_fraction: 0.8  # Use 80% of GPU memory
+    fallback_to_cpu: true  # Fallback to CPU if GPU fails
+    warmup_batches: 3  # Number of warmup batches for GPU
+    
+  # CPU Settings
+  cpu:
+    enabled: true
+    max_workers: null  # null = auto-detect, or specify number
+    chunk_size: 512  # Text chunk size for processing
+    overlap: 50  # Overlap between chunks
+    
+  # Hybrid Mode Settings
+  hybrid:
+    enabled: true
+    gpu_threshold: 0.6  # Use GPU for queries above this similarity threshold
+    cpu_fallback_threshold: 0.3  # Fallback to CPU for queries below this threshold
+    parallel_processing: true  # Process CPU and GPU simultaneously when possible
+
+# Model Configuration
+models:
+  # Embedding Model
+  embedding:
+    name: "all-MiniLM-L6-v2"  # Default model
+    alternatives:
+      - "all-MiniLM-L12-v2"  # Higher quality, slower
+      - "paraphrase-MiniLM-L3-v2"  # Faster, lower quality
+      - "multi-qa-MiniLM-L6-v2"  # Optimized for Q&A
+    
+    # Model-specific settings
+    all-MiniLM-L6-v2:
+      max_length: 512
+      normalize: true
+      device_preference: "gpu"  # Preferred device for this model
+      
+    all-MiniLM-L12-v2:
+      max_length: 512
+      normalize: true
+      device_preference: "gpu"
+      
+    paraphrase-MiniLM-L3-v2:
+      max_length: 256
+      normalize: true
+      device_preference: "cpu"  # CPU preferred for faster model
+      
+    multi-qa-MiniLM-L6-v2:
+      max_length: 512
+      normalize: true
+      device_preference: "gpu"
+
+# Index Configuration
+index:
+  # FAISS Index Settings
+  faiss:
+    type: "IndexFlatIP"  # Inner product for cosine similarity
+    gpu_resources: 1  # Number of GPU resources to allocate
+    cpu_threads: null  # null = auto-detect
+    
+  # Chunking Strategy
+  chunking:
+    method: "sliding_window"  # or "semantic" for semantic chunking
+    size: 512
+    overlap: 50
+    min_chunk_size: 100
+    max_chunk_size: 1024
+    
+  # Metadata Storage
+  metadata:
+    include_content: true  # Store actual text content
+    include_embeddings: false  # Don't store embeddings (use FAISS)
+    include_file_info: true  # File path, size, modification time
+    include_semantic_info: true  # Chunk position, parent context
+
+# Processing Configuration
+processing:
+  # File Discovery
+  file_discovery:
+    include_patterns:
+      - "*.py"
+      - "*.js"
+      - "*.ts"
+      - "*.md"
+      - "*.txt"
+      - "*.yml"
+      - "*.yaml"
+      - "*.json"
+      - "*.xml"
+      - "*.html"
+      - "*.css"
+      - "*.ps1"
+      - "*.sh"
+      
+    exclude_patterns:
+      - "node_modules"
+      - "target"
+      - "__pycache__"
+      - "dist"
+      - "build"
+      - ".venv"
+      - "venv"
+      - "env"
+      - ".git"
+      - ".vscode"
+      - "*.pyc"
+      - "*.log"
+      - "*.tmp"
+      - "*.cache"
+      - "*.lock"
+      
+  # Text Processing
+  text_processing:
+    remove_comments: true
+    remove_whitespace: false
+    normalize_unicode: true
+    language_detection: true
+    code_language_detection: true
+    
+  # Parallel Processing
+  parallel:
+    max_workers: null  # null = auto-detect
+    chunk_size: 100  # Files per worker
+    timeout: 300  # 5 minutes per worker
+
+# Performance Configuration
+performance:
+  # GPU Optimization
+  gpu:
+    mixed_precision: true  # Use mixed precision for faster processing
+    memory_efficient: true  # Optimize memory usage
+    gradient_checkpointing: false  # Disable for inference
+    
+  # CPU Optimization
+  cpu:
+    use_mkl: true  # Use Intel MKL if available
+    num_threads: null  # null = auto-detect
+    memory_mapping: true  # Memory map large files
+    
+  # Caching
+  caching:
+    enable_model_cache: true
+    enable_embedding_cache: true
+    cache_size: "2GB"  # Maximum cache size
+    cache_ttl: 3600  # Cache TTL in seconds
+
+# Output Configuration
+output:
+  # File Outputs
+  files:
+    index_file: "index.faiss"
+    metadata_file: "meta.jsonl"
+    context_file: "context_topk.jsonl"
+    report_file: "dual_mode_test_report.json"
+    
+  # Logging
+  logging:
+    level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+    format: "detailed"  # simple, detailed, json
+    output_file: "rag_system.log"
+    console_output: true
+    
+  # Reporting
+  reporting:
+    include_performance_metrics: true
+    include_device_usage: true
+    include_error_details: true
+    include_system_info: true
+
+# Error Handling
+error_handling:
+  # Fallback Strategies
+  fallbacks:
+    gpu_to_cpu: true  # Fallback to CPU if GPU fails
+    model_to_alternative: true  # Try alternative models
+    index_to_rebuild: false  # Rebuild index on failure
+    
+  # Retry Logic
+  retry:
+    max_attempts: 3
+    delay_between_attempts: 1  # seconds
+    exponential_backoff: true
+    
+  # Graceful Degradation
+  graceful_degradation:
+    enable: true
+    min_acceptable_quality: 0.5  # Minimum similarity score
+    partial_results: true  # Return partial results on failure
+
+# Testing Configuration
+testing:
+  # Test Modes
+  modes:
+    cpu_only: true
+    gpu_only: true
+    hybrid: true
+    auto_detection: true
+    
+  # Test Queries
+  test_queries:
+    - "GPU acceleration and performance optimization"
+    - "CPU processing and multi-threading"
+    - "Hybrid computing and load balancing"
+    - "Machine learning and neural networks"
+    - "System administration and automation"
+    
+  # Performance Benchmarks
+  benchmarks:
+    batch_sizes: [10, 50, 100, 500]
+    query_complexity: ["simple", "medium", "complex"]
+    device_comparison: true
+    memory_usage: true
+    timing_analysis: true
+
+# Environment Variables (for .env file)
+environment:
+  # Device Selection
+  USE_GPU: "true"
+  USE_CPU: "true"
+  HYBRID_MODE: "true"
+  
+  # Model Configuration
+  EMBEDDING_MODEL: "all-MiniLM-L6-v2"
+  FAISS_INDEX_PATH: "rag/index.faiss"
+  RAG_META_PATH: "rag/meta.jsonl"
+  
+  # Performance Tuning
+  GPU_MEMORY_FRACTION: "0.8"
+  CPU_MAX_WORKERS: "null"
+  CHUNK_SIZE: "512"
+  OVERLAP_SIZE: "50"
+  
+  # Output Configuration
+  LOG_LEVEL: "INFO"
+  CACHE_SIZE: "2GB"
+  ENABLE_LOGGING: "true"
