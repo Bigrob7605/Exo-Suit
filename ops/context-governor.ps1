@@ -152,7 +152,7 @@ class GPUContextGovernor:
             for i, chunk in enumerate(chunks):
                 if chunk.strip():
                     doc = {
-                        'file': str(file_path.relative_to(Path('$Root'))),
+                        'file': str(file_path.relative_to(Path(r'$Root'))),
                         'chunk': i,
                         'content': chunk,
                         'type': file_path.suffix.lower(),
@@ -427,17 +427,17 @@ def main():
     governor = GPUContextGovernor()
     
     # Build or load index
-    index_path = Path('$Root') / 'context' / 'vec'
+    index_path = Path(r'$Root') / 'context' / 'vec'
     
     if index_path.exists() and (index_path / 'index.faiss').exists():
         print("📂 Loading existing index...")
         governor.load_index(str(index_path))
     else:
         print("🔨 Building new index...")
-        governor.build_index('$Root')
+        governor.build_index(r'$Root')
         
         # Save index
-        output_path = Path('$Root') / 'context' / 'vec'
+        output_path = Path(r'$Root') / 'context' / 'vec'
         output_path.mkdir(parents=True, exist_ok=True)
         
         # Save FAISS index
@@ -473,7 +473,7 @@ def main():
                 print(f"💾 Token usage: {context['total_tokens']:,}/{context['max_tokens']:,} ({context['budget_used']:.1f}%)")
                 
                 # Save context
-                context_dir = Path('$Root') / 'context' / '_latest'
+                context_dir = Path(r'$Root') / 'context' / '_latest'
                 governor.save_context(context, str(context_dir))
     
     # Benchmark mode
@@ -544,8 +544,10 @@ if ($LASTEXITCODE -eq 0) {
     $trimmedPath = Join-Path $Root "context\_latest\TRIMMED.json"
     if (Test-Path $trimmedPath) {
         $context = Get-Content $trimmedPath -Raw | ConvertFrom-Json
-        Write-Host "📊 Generated $($context.total_results) results" -ForegroundColor Green
-        Write-Host "💾 Token usage: $($context.used_tokens)/$($context.max_tokens) ($($context.budget_used_percent)%)" -ForegroundColor Green
+        Write-Host "📊 Generated $($context.Count) results" -ForegroundColor Green
+        if ($context.Count -gt 0) {
+            Write-Host "💾 Top result score: $($context[0].score)" -ForegroundColor Green
+        }
     }
 } else {
     Write-Error "Context Governor failed"
