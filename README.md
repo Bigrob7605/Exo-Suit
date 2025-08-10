@@ -2,6 +2,8 @@
 
 This Exo-Suit IS THE PROJECT. NOT THE UNIVERSAL OPEN SCIENCE TOOLBOX WITH KAI!!!.
 
+This project MUST HAVE CPU, GPU and CPU+GPU SUPPORT!! NO MORE DRIFTING!! If no GPU exists then CPU only, or we can do GPU only. Let people pick.
+
 That folder is ONLY for using to test the exo-suit project. Got it? Do not focus on the Tool box project!.
 
 **Your ASUS TUF i7-13620H + RTX 4070 rig now has the juice to let Cursor roam *without* hitting context ceilings or rate limits.**

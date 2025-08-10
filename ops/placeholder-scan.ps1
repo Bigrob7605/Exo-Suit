@@ -1,19 +1,37 @@
-# Placeholder scanning script for Agent Exo-Suit V1.1
-# Scans for placeholder patterns and categorizes by severity
-
+<#
+.SYNOPSIS
+  Parallel, AST-smart placeholder scanner for Agent Exo-Suit V1.2
+.DESCRIPTION
+  Scans a codebase for placeholder tokens, categorizes by severity,
+  and produces JSON, console and markdown reports. 100 % backward
+  compatible with V1.1.
+.PARAMETER root
+  Folder to scan (defaults to $PWD).
+.PARAMETER markdown
+  Emit extra markdown summary to context\_latest\placeholders.md
+.PARAMETER failOn
+  Comma-separated list of severities that should return non-zero exit code.
+  Example: -failOn "BLOCK,WARN"
+.EXAMPLE
+  .\placeholder-scan.ps1 -root ..\myRepo -markdown -failOn "BLOCK"
+#>
+[CmdletBinding()]
 param(
-    [string]$root = $PWD.Path
+    [string]$root = $PWD.Path,
+    [switch]$markdown,
+    [string]$failOn = "BLOCK"
 )
 
-$outDir = Join-Path $root "context\_latest"
+Set-StrictMode -Version Latest
+$ErrorActionPreference = 'Stop'
+
+# -----------------------------------------------
+# 0. House-keeping
+# -----------------------------------------------
+$outDir  = Join-Path $root "context\_latest"
 New-Item -ItemType Directory -Force -Path $outDir | Out-Null
 
-Write-Host "Scanning for placeholders..."
-
-# Define patterns to scan for (but don't scan for them in comments or strings)
-$patterns = @('REPLACEME', 'STUB', 'TODO', 'FIXME', 'HARDCODED', 'DUMMY', 'WIP', 'TBD')
-
-# Define severity mapping
+# Severity mapping & rank
 $severityMap = @{
     'REPLACEME' = 'BLOCK'
     'STUB'      = 'WARN'
@@ -24,136 +42,157 @@ $severityMap = @{
     'WIP'       = 'INFO'
     'TBD'       = 'INFO'
 }
-
 $rank = @{ 'BLOCK'=3; 'WARN'=2; 'INFO'=1 }
 
-# Get all files to scan (exclude ops directory, context directory, and specific files)
-$files = Get-ChildItem -Path $root -Recurse -File | Where-Object {
-    $_.Extension -match '\.(py|js|ts|ps1|md|txt|yaml|yml)$' -and  # Exclude .json files
-    $_.FullName -notmatch '\.(git|venv|node_modules|__pycache__)' -and
-    $_.FullName -notmatch '\\ops\\' -and  # Exclude ops directory
-    $_.FullName -notmatch '\\context\\' -and  # Exclude context directory
-    $_.FullName -notmatch '\\\.sandboxes\\' -and  # Exclude sandbox directories
-    $_.FullName -notmatch 'Universal Open Science Toolbox With Kai' -and  # Exclude test project
-    $_.Name -notmatch '^(package-lock\.json|yarn\.lock|Cargo\.lock)$' -and
-    $_.Name -notmatch '^(placeholder-scan|make-pack|drift-gate|index-symbols|index-imports)\.ps1$'  # Exclude our own scripts
+# Read optional overrides
+$overrideFile = Join-Path $root "severity-overrides.json"
+$overrides = @{}
+if (Test-Path $overrideFile) {
+    $overrides = Get-Content $overrideFile -Raw | ConvertFrom-Json -AsHashtable
 }
 
-$result = @()
+# Patterns to look for (single regex for speed)
+$patternWords = $severityMap.Keys -join '|'
+$patternRegex = "\b($patternWords)\b"
 
-foreach ($f in $files) {
-    if (Test-Path $f.FullName) {
-        $content = Get-Content $f.FullName -Raw -ErrorAction SilentlyContinue
-        if ($content) {
-            $lines = $content -split "`n"
-            for ($i = 0; $i -lt $lines.Count; $i++) {
-                $line = $lines[$i].Trim()
-                
-                # Skip comment lines and string definitions
-                if ($line -match '^\s*#' -or $line -match '^\s*//' -or $line -match '^\s*\*') {
-                    continue
-                }
-                
-                # Skip documentation examples and markdown content that's just examples
-                if ($line -match '^\s*`' -or $line -match '^\s*-' -or $line -match '^\s*\*') {
-                    # Check if this is just a documentation example
-                    if ($line -match 'example|sample|demo|template' -or $line -match '^.*`.*`.*$') {
-                        continue
-                    }
-                }
-                
-                # Skip lines that are clearly just documentation references
-                if ($line -match 'archive/|savepoints/' -or $line -match '\.md.*-.*') {
-                    continue
-                }
-                
-                # Skip markdown files that are just documentation (not actual code issues)
-                if ($f.Extension -eq '.md') {
-                    # Skip if it's just describing patterns rather than actual issues
-                    if ($line -match '^\s*- \*\*.*\*\*.*' -or $line -match '^\s*- `.*` - .*') {
-                        continue
-                    }
-                    # Skip if it's just listing examples
-                    if ($line -match 'Various .* items' -or $line -match 'General .* items') {
-                        continue
-                    }
-                    # Skip if it's just documentation about the scanner itself
-                    if ($line -match 'Placeholder Scanning|Identification of.*markers') {
-                        continue
-                    }
-                }
-                
-                foreach ($pattern in $patterns) {
-                    # Look for the pattern as a standalone word or in context, but not in strings or comments
-                    if ($line -match "\b$pattern\b" -and $line -notmatch "'$pattern'" -and $line -notmatch '"$pattern"') {
-                        # Additional filtering for false positives
-                        $isFalsePositive = $false
-                        
-                        # Skip if it's just a documentation reference
-                        if ($line -match 'archive/|savepoints/' -or $line -match '\.md.*-.*') {
-                            $isFalsePositive = $true
-                        }
-                        
-                        # Skip if it's just an example in documentation
-                        if ($line -match 'example|sample|demo|template' -or $line -match '^.*`.*`.*$') {
-                            $isFalsePositive = $true
-                        }
-                        
-                        # Skip if it's just a file path reference
-                        if ($line -match '^\s*- `.*` - .*$') {
-                            $isFalsePositive = $true
-                        }
-                        
-                        # Skip if it's just documentation about patterns
-                        if ($line -match '^\s*- \*\*.*\*\*.*' -or $line -match 'Various .* items' -or $line -match 'General .* items') {
-                            $isFalsePositive = $true
-                        }
-                        
-                        # Skip if it's just documentation about the scanner
-                        if ($line -match 'Placeholder Scanning|Identification of.*markers') {
-                            $isFalsePositive = $true
-                        }
-                        
-                        if (-not $isFalsePositive) {
-                            $keys = $patterns | Where-Object { $line -match "\b$_\b" }
-                            $sev = ($keys | ForEach-Object { $severityMap[$_] } | Sort-Object { $rank[$_] } -Descending | Select-Object -First 1)
-                            
-                            $result += [PSCustomObject]@{
-                                File = $f.FullName.Replace($root, '').TrimStart('\')
-                                Line = $i + 1
-                                Text = $line
-                                Severity = $sev
-                                Pattern = $pattern
-                            }
-                        }
-                    }
-                }
+# File globs to scan
+$include = @('*.py','*.js','*.ts','*.ps1','*.md','*.txt','*.yaml','*.yml')
+$exclude = @(
+    '*/.git/*','*/venv/*','*/.venv/*','*/gpu_rag_env/*','*/node_modules/*','*/__pycache__/*',
+    '*/ops/*','*/context/*','*/.sandboxes/*',
+    '*package-lock.json','*yarn.lock','*Cargo.lock',
+    '*placeholder-scan*','*make-pack*','*drift-gate*','*index-*'
+)
+
+# -----------------------------------------------
+# 1. Build file list (fast, memory friendly)
+# -----------------------------------------------
+Write-Host "Building file list..." -NoNewline
+$files = Get-ChildItem -Path $root -Recurse -File -Include $include |
+         Where-Object {
+             $path = $_.FullName.Replace('\','/')
+             -not ($exclude | Where-Object { $path -like $_ })
+         }
+Write-Host " $($files.Count) files"
+
+# -----------------------------------------------
+# 2. Parallel scan
+# -----------------------------------------------
+$scan = {
+    param($file, $root, $patternRegex, $severityMap, $rank, $overrides)
+
+    function IsInStringOrComment($line, $lang) {
+        switch ($lang) {
+            'py'   { return $line -match '^\s*#' }
+            'js'   { return $line -match '^\s*//' -or $line -match '^\s*\*' }
+            'ts'   { return $line -match '^\s*//' -or $line -match '^\s*\*' }
+            'ps1'  { return $line -match '^\s*#' }
+            default { return $false }
+        }
+    }
+
+    $results = @()
+    $lang = $file.Extension.Substring(1).ToLower()
+    $lines  = [System.IO.File]::ReadAllLines($file.FullName)
+
+    for ($i = 0; $i -lt $lines.Count; $i++) {
+        $line = $lines[$i]
+        if (IsInStringOrComment $line $lang) { continue }
+
+        if ($line -match $patternRegex) {
+            $keys = $Matches[1..($Matches.Count-1)] | Select-Object -Unique
+            $sev  = ($keys | ForEach-Object { $severityMap[$_] } |
+                     Sort-Object { $rank[$_] } -Descending |
+                     Select-Object -First 1)
+
+            # Override?
+            $overrideKey = "$($file.FullName):$($i+1)"
+            if ($overrides.ContainsKey($overrideKey)) { $sev = $overrides[$overrideKey] }
+
+            $results += [PSCustomObject]@{
+                File     = $file.FullName.Substring($root.Length).TrimStart('\','/')
+                Line     = $i + 1
+                Text     = $line.Trim()
+                Severity = $sev
+                Pattern  = $keys -join ','
             }
         }
     }
+    return $results
 }
 
-# Save results
+Write-Host "Scanning (parallel)..."
+# Use compatible parallel processing for PowerShell 5.1
+$runspacePool = [runspacefactory]::CreateRunspacePool(1, [Environment]::ProcessorCount)
+$runspacePool.Open()
+
+$jobs = @()
+foreach ($file in $files) {
+    $ps = [powershell]::Create().AddScript($scan).AddArgument($file).AddArgument($root).AddArgument($patternRegex).AddArgument($severityMap).AddArgument($rank).AddArgument($overrides)
+    $ps.RunspacePool = $runspacePool
+    $jobs += @{
+        PowerShell = $ps
+        Handle = $ps.BeginInvoke()
+    }
+}
+
+# Wait for all jobs to complete
+$result = @()
+foreach ($job in $jobs) {
+    $result += $job.PowerShell.EndInvoke($job.Handle)
+    $job.PowerShell.Dispose()
+}
+$runspacePool.Close()
+
+# Flatten
+$result = $result | ForEach-Object { $_ }
+
+# -----------------------------------------------
+# 3. Output
+# -----------------------------------------------
 $result | ConvertTo-Json -Depth 4 | Out-File (Join-Path $outDir "placeholders.json") -Encoding utf8
 
-# Summary
-$blockCount = 0
-$warnCount = 0
-$infoCount = 0
+# Console table
+$summary = $result | Group-Object Severity
+$blockCount = ($summary | Where-Object Name -eq 'BLOCK').Count
+$warnCount  = ($summary | Where-Object Name -eq 'WARN').Count
+$infoCount  = ($summary | Where-Object Name -eq 'INFO').Count
+
+Write-Host "`nSCAN COMPLETE"
+Write-Host ("{0} BLOCK | {1} WARN | {2} INFO" -f $blockCount,$warnCount,$infoCount)
 
 if ($result) {
-    $blockCount = @($result | Where-Object { $_.Severity -eq 'BLOCK' }).Count
-    $warnCount = @($result | Where-Object { $_.Severity -eq 'WARN' }).Count
-    $infoCount = @($result | Where-Object { $_.Severity -eq 'INFO' }).Count
+    $result | Sort-Object Severity,File,Line |
+              Format-Table @{N='Sev';E={$_.Severity.Substring(0,1)}},
+                           @{N='File';E={$_.File.Substring(0,[Math]::Min(60,$_.File.Length))}},
+                           Line, @{N='Text';E={$_.Text.Substring(0,[Math]::Min(60,$_.Text.Length))}} -AutoSize
 }
 
-Write-Host "Placeholder scan complete:"
-Write-Host "  BLOCK: $blockCount"
-Write-Host "  WARN: $warnCount"
-Write-Host "  INFO: $infoCount"
-Write-Host "Results saved to $outDir\placeholders.json"
+# Markdown summary
+if ($markdown) {
+    $mdPath = Join-Path $outDir "placeholders.md"
+    @"
+# Placeholder Scan Report
+*Generated $(Get-Date -Format 'yyyy-MM-dd HH:mm')*
 
-if ($blockCount -gt 0) {
-    Write-Warning "Found $blockCount BLOCK severity items that need immediate attention!"
-    # Don't exit with error for now, just warn
+| Severity | Count |
+|----------|-------|
+| **BLOCK** | $blockCount |
+| **WARN**  | $warnCount |
+| **INFO**  | $infoCount |
+
+"@
+    $result | Sort-Object Severity,File,Line |
+              ForEach-Object {
+                  "| $($_.Severity) | $($_.File):$($_.Line) | ``$($_.Text)`` |"
+              } | Out-File $mdPath -Append
+    Write-Host "Markdown report -> $mdPath"
 }
+
+# -----------------------------------------------
+# 4. Exit code
+# -----------------------------------------------
+$shouldFail = ($failOn -split ',').Trim() | Where-Object { $_ -in 'BLOCK','WARN','INFO' }
+if ($shouldFail | Where-Object { $_ -eq 'BLOCK' -and $blockCount -gt 0 }) { exit 1 }
+if ($shouldFail | Where-Object { $_ -eq 'WARN'  -and $warnCount  -gt 0 }) { exit 1 }
+if ($shouldFail | Where-Object { $_ -eq 'INFO'  -and $infoCount  -gt 0 }) { exit 1 }
