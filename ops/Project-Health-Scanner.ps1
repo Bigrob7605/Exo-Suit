@@ -61,7 +61,10 @@ process {
     Write-Log "Building ownership map …" -Level Verbose
     $owners = @{}
     $ownersFile = Join-Path $proj 'OWNERS.md'
-    $codeOwners = Join-Path $proj '.github/CODEOWNERS', (Join-Path $proj 'CODEOWNERS') | Where-Object { Test-Path $_ }
+    $codeOwners = @(
+        (Join-Path $proj '.github/CODEOWNERS'),
+        (Join-Path $proj 'CODEOWNERS')
+    ) | Where-Object { Test-Path $_ }
     if (Test-Path $ownersFile) {
         switch -Regex -File $ownersFile {
             '^\s*\*\s*(?<path>[\w\/\-\.\*]+)\s*\|\s*(?<owner>[\w\s,@\-]+)\s*$' {
@@ -135,7 +138,7 @@ process {
         catch { Write-Log "cargo SBOM failed: $_" -Level Warning }
     }
 
-    if (Test-Path (Join-Path $proj 'requirements.txt') -or (Get-ChildItem $proj -Filter '*.py' -Recurse -ErrorAction SilentlyContinue)) {
+    if ((Test-Path (Join-Path $proj 'requirements.txt')) -or (Get-ChildItem $proj -Filter '*.py' -Recurse -ErrorAction SilentlyContinue)) {
         try {
             pip install cyclonedx-bom 2>&1 | Out-Null
             cyclonedx-py -r -o (Join-Path $sbomDir 'pip_sbom.json') $proj 2>&1 | Out-Null
@@ -170,7 +173,7 @@ process {
         catch { Write-Log "cargo audit failed: $_" -Level Warning }
     }
 
-    if (Test-Path (Join-Path $proj 'requirements.txt') -or (Get-ChildItem $proj -Filter '*.py' -Recurse -ErrorAction SilentlyContinue)) {
+    if ((Test-Path (Join-Path $proj 'requirements.txt')) -or (Get-ChildItem $proj -Filter '*.py' -Recurse -ErrorAction SilentlyContinue)) {
         try {
             pip install pip-audit 2>&1 | Out-Null
             pip-audit --format=json --desc --output (Join-Path $cveDir 'pip_audit.json') $proj 2>&1 | Out-Null
