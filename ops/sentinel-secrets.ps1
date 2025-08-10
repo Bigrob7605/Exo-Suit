@@ -18,7 +18,7 @@ $rules = @(
 
 $exclude = @(
   'node_modules','dist','build','target','bin','obj','__pycache__',
-  '.git','context','rag','restore','telemetry','cache'
+  '.git','context','rag','restore','telemetry','cache','gpu_rag_env'
 )
 
 $files = Get-ChildItem -Recurse -File | Where-Object {
@@ -49,7 +49,7 @@ foreach ($f in $files) {
 $path = 'restore/SECRETS_REPORT.json'
 $hits | ConvertTo-Json -Depth 4 | Out-File $path -Encoding utf8
 if ($hits.Count -gt 0) {
-  $blocks = $hits | Where-Object severity -eq 'BLOCK'
+  $blocks = @($hits | Where-Object severity -eq 'BLOCK')
   if ($blocks.Count -gt 0 -or $strict) {
     Write-Error "Secrets found. See $path"
     exit 3

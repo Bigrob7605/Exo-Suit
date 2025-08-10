@@ -1,5 +1,7 @@
 # 🚀 Agent Exo-Suit V3.0 "Monster-Mode" - Production Ready
 
+We are still in testing phase. Make sure we don't repair "Drift" from this project we are building. Got it?
+
 **Status:** ✅ **FULLY OPERATIONAL - V3.0 COMPLETE**  
 **Version:** V3.0 "Monster-Mode" with GPU Acceleration  
 **Last Updated:** January 2025  

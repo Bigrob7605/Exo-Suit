@@ -49,7 +49,7 @@ $patternTable = @(
 # 2. Build rg arguments
 # ------------------------------------------------------------------
 $typeArgs = $Language | ForEach-Object { '--type', $_ }
-$rgArgs   = @('-n', '-P') + $typeArgs + ($patternTable.re -join '|')
+$rgArgs   = @('-n') + $typeArgs + ($patternTable.re -join '|')
 
 # ------------------------------------------------------------------
 # 3. Search

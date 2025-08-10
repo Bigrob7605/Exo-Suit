@@ -71,7 +71,7 @@ $issues = foreach ($f in $files) {
 # ------------------------------------------------------------------
 $issues | ConvertTo-Json -Depth 3 | Out-File -LiteralPath $reportFile -Encoding utf8
 
-if ($issues.Count) {
+if ($issues -and $issues.Count -gt 0) {
     Write-Error "Binary/oversize files detected. See $reportFile"
     exit 4
 }

@@ -39,14 +39,31 @@ $contextGovernor = @"
 import os
 import json
 import numpy as np
-import torch
-import faiss
-from sentence_transformers import SentenceTransformer
 from pathlib import Path
 import re
 from typing import List, Dict, Tuple
 import time
 import hashlib
+
+# Try to import GPU libraries, fallback to CPU-only if they fail
+try:
+    import torch
+    import faiss
+    from sentence_transformers import SentenceTransformer
+    GPU_AVAILABLE = True
+    print("🚀 GPU acceleration enabled")
+except ImportError as e:
+    print(f"⚠️ GPU libraries not available: {e}")
+    print("🔄 Falling back to CPU-only mode")
+    GPU_AVAILABLE = False
+    
+    # CPU fallback imports
+    try:
+        import numpy as np
+        print("✅ CPU fallback mode enabled")
+    except ImportError:
+        print("❌ Critical: numpy not available")
+        exit(1)
 
 class GPUContextGovernor:
     def __init__(self, model_name='$Model', device='auto', max_tokens=$MaxTokens):
@@ -60,7 +77,13 @@ class GPUContextGovernor:
         self.setup_model()
     
     def setup_model(self):
-        """Initialize sentence transformer with GPU optimization"""
+        """Initialize sentence transformer with GPU optimization or CPU fallback"""
+        if not GPU_AVAILABLE:
+            print("🔄 Using CPU-only fallback mode")
+            self.device = 'cpu'
+            self.model = None
+            return
+            
         print(f"🚀 Loading model: {self.model_name}")
         
         # Auto-detect device
@@ -72,14 +95,20 @@ class GPUContextGovernor:
         
         print(f"📱 Using device: {self.device}")
         
-        # Load model with optimizations
-        self.model = SentenceTransformer(self.model_name, device=self.device)
-        
-        # Move to GPU if available
-        if self.device == 'cuda':
-            self.model = self.model.to('cuda')
-            print(f"✅ Model moved to GPU: {torch.cuda.get_device_name(0)}")
-            print(f"🎮 GPU Memory: {torch.cuda.get_device_properties(0).total_memory / 1024**3:.1f} GB")
+        try:
+            # Load model with optimizations
+            self.model = SentenceTransformer(self.model_name, device=self.device)
+            
+            # Move to GPU if available
+            if self.device == 'cuda':
+                self.model = self.model.to('cuda')
+                print(f"✅ Model moved to GPU: {torch.cuda.get_device_name(0)}")
+                print(f"🎮 GPU Memory: {torch.cuda.get_device_properties(0).total_memory / 1024**3:.1f} GB")
+        except Exception as e:
+            print(f"⚠️ Model loading failed: {e}")
+            print("🔄 Falling back to CPU-only mode")
+            self.device = 'cpu'
+            self.model = None
     
     def estimate_tokens(self, text: str) -> int:
         """Estimate token count for text"""
