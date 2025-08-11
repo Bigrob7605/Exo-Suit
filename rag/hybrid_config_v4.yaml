@@ -12,7 +12,7 @@ device:
 model:
   name: "all-MiniLM-L6-v2"  # lightweight, fast model
   max_length: 512  # maximum sequence length
-  batch_size: 1024  # batch size for processing
+  batch_size: 128  # batch size for processing
   precision: "float16"  # float16, float32 for GPU optimization
   
 # Processing Configuration
@@ -21,7 +21,7 @@ processing:
   chunk_overlap: 50  # overlap between chunks
   max_file_size: 10485760  # 10MB max file size
   supported_extensions: [".txt", ".md", ".py", ".js", ".html", ".css", ".json", ".xml", ".yaml", ".yml"]
-  parallel_workers: 24  # number of parallel processing workers
+  parallel_workers: 12  # number of parallel processing workers
   queue_size: 1000  # maximum queue size for tasks
   
 # RAM Disk Configuration
@@ -43,7 +43,7 @@ memory:
 performance:
   use_gpu_memory_pool: true  # optimize GPU memory usage
   cpu_threads: "auto"  # auto-detect CPU threads
-  gpu_memory_fraction: 0.98  # GPU memory usage limit
+  gpu_memory_fraction: 0.95  # GPU memory usage limit
   mixed_precision: true  # use mixed precision for GPU
   warmup_batches: 3  # number of warmup batches
   prefetch_factor: 64  # data prefetch factor
@@ -106,7 +106,7 @@ monitoring:
 # Ultimate Speed Boost V4.0 Optimizations
 ultimate_speed_boost:
   mode: "Max"
-  batch_size: 1024
+  batch_size: 128
   workers: 16
   prefetch: 16
   memory_threshold: 0.98
@@ -132,9 +132,9 @@ v5_optimizations:
   timestamp: "2025-08-11 08:35:50"
   cache_size_gb: 48
   workers: 20
-  batch_size: 1024
+  batch_size: 128
   prefetch: 32
-  gpu_memory_fraction: 0.98
+  gpu_memory_fraction: 0.95
   cpu_priority: "High"
   power_plan: "Ultimate Performance"
   
@@ -152,9 +152,9 @@ v5_optimizations:
   timestamp: "2025-08-11 08:36:29"
   cache_size_gb: 53
   workers: 24
-  batch_size: 1024
+  batch_size: 128
   prefetch: 64
-  gpu_memory_fraction: 0.98
+  gpu_memory_fraction: 0.95
   cpu_priority: "RealTime"
   power_plan: "Ultimate Performance"
   
@@ -165,3 +165,45 @@ v5_optimizations:
     gpu_utilization: "95%+"
     overall_speedup: "5-10x"
     system_potential: "80-95% unlocked"
+
+# V5.0 "Builder of Dreams" Optimizations
+v5_optimizations:
+  mode: "Ultimate"
+  timestamp: "2025-08-11 13:19:30"
+  cache_size_gb: 53
+  workers: 24
+  batch_size: 128
+  prefetch: 64
+  gpu_memory_fraction: 0.95
+  cpu_priority: "RealTime"
+  power_plan: "Ultimate Performance"
+  
+  # V5.0 Performance Claims
+  performance_claims:
+    cpu_boost: "Maximum"
+    memory_utilization: "90%+"
+    gpu_utilization: "95%+"
+    overall_speedup: "5-10x"
+    system_potential: "80-95% unlocked"
+
+
+# V5.0 "Builder of Dreams" Optimizations
+v5_optimizations:
+  mode: "Ultimate"
+  timestamp: "2025-08-11 13:32:51"
+  cache_size_gb: 53
+  workers: 24
+  batch_size: 128
+  prefetch: 64
+  gpu_memory_fraction: 0.95
+  cpu_priority: "RealTime"
+  power_plan: "Ultimate Performance"
+  
+  # V5.0 Performance Claims
+  performance_claims:
+    cpu_boost: "Maximum"
+    memory_utilization: "90%+"
+    gpu_utilization: "95%+"
+    overall_speedup: "5-10x"
+    system_potential: "80-95% unlocked"
+

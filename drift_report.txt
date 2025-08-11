@@ -1,0 +1,36 @@
+UNCOMMITTED:  M Cleanup/Legacy_Backup/Legacy/.sandboxes/ai-sbx-20250809-201810
+UNCOMMITTED:  D "Project White Papers/WHITE_PAPER_FIX_PLAN.md"
+UNCOMMITTED:  M README.md
+UNCOMMITTED:  M V4.0_ERROR_PATCHING_GAME_PLAN.md
+UNCOMMITTED:  M emoji_sentinel_v4.log
+UNCOMMITTED:  M health_report.json/health_scan_v4.log
+UNCOMMITTED:  M health_report.json/health_scan_v4_report.json
+UNCOMMITTED:  M health_report.json/lock_age.json
+UNCOMMITTED:  M health_report.json/sbom/sbom_summary.json
+UNCOMMITTED:  M ops/Drift-Guard-V4.ps1
+UNCOMMITTED:  M ops/context-governor.ps1
+UNCOMMITTED:  M ops/emoji-sentinel-v4.ps1
+UNCOMMITTED:  M rag/hybrid_config_v4.yaml
+UNCOMMITTED:  M restore/health_scan_v4.log
+UNCOMMITTED:  M restore/health_scan_v4_report.json
+UNCOMMITTED:  M restore/lock_age.json
+UNCOMMITTED:  M restore/sbom/sbom_summary.json
+UNCOMMITTED: ?? DRIFT_RECOVERY_COMPLETION_REPORT.md
+UNCOMMITTED: ?? PERFECT_100_TEST_SYSTEM_GAME_PLAN.md
+UNCOMMITTED: ?? "Project White Papers/README2.md"
+UNCOMMITTED: ?? Testing_Tools/small_test_batch/
+UNCOMMITTED: ?? context/
+UNCOMMITTED: ?? drift_report.txt
+UNCOMMITTED: ?? emoji_report.txt
+UNCOMMITTED: ?? test_small_batch.txt
+UNTRACKED: DRIFT_RECOVERY_COMPLETION_REPORT.md
+UNTRACKED: PERFECT_100_TEST_SYSTEM_GAME_PLAN.md
+UNTRACKED: Project White Papers/README2.md
+UNTRACKED: Testing_Tools/small_test_batch/test1.txt
+UNTRACKED: Testing_Tools/small_test_batch/test2.py
+UNTRACKED: Testing_Tools/small_test_batch/test3.md
+UNTRACKED: Testing_Tools/small_test_batch/test4.txt
+UNTRACKED: context/vec/index.faiss
+UNTRACKED: drift_report.txt
+UNTRACKED: emoji_report.txt
+UNTRACKED: test_small_batch.txt

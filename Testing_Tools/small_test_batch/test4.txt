@@ -1,0 +1,7 @@
+This is a test file with NO emojis.
+It contains only plain text characters.
+The emoji scanner should detect this as a file with no emojis.
+This is useful for testing the scanner's ability to handle different file types.
+No special characters or symbols here.
+Just regular ASCII text for testing purposes.
+End of test file.

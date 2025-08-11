@@ -496,8 +496,17 @@ def main():
         
         # Save FAISS index
         if governor.device == 'cuda':
-            cpu_index = faiss.index_gpu_to_cpu(governor.index)
-            faiss.write_index(cpu_index, str(output_path / 'index.faiss'))
+            try:
+                # Try GPU to CPU conversion if available
+                if hasattr(faiss, 'index_gpu_to_cpu'):
+                    cpu_index = faiss.index_gpu_to_cpu(governor.index)
+                    faiss.write_index(cpu_index, str(output_path / 'index.faiss'))
+                else:
+                    # Fallback: save GPU index directly
+                    faiss.write_index(governor.index, str(output_path / 'index.faiss'))
+            except:
+                # Fallback: save GPU index directly
+                faiss.write_index(governor.index, str(output_path / 'index.faiss'))
         else:
             faiss.write_index(governor.index, str(output_path / 'index.faiss'))
         

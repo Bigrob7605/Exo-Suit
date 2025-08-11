@@ -10,7 +10,7 @@ param(
     
     [switch]$EnableVerbose,
     
-    [string]$Output = "restore\DRIFT_REPORT.json",
+    [string]$OutputPath = "restore\DRIFT_REPORT.json",
     
     [string]$Path = ".",
     
@@ -24,11 +24,7 @@ $ErrorActionPreference = 'Stop'
 Set-StrictMode -Version Latest
 
 # ===== PARAMETER VALIDATION =====
-# Ensure output directory exists
-$outputDir = Split-Path $Output -Parent
-if (-not (Test-Path $outputDir)) {
-    New-Item -ItemType Directory -Path $outputDir -Force | Out-Null
-}
+# Parameter validation will be done in main execution after functions are defined
 
 # ===== ADVANCED LOGGING =====
 function Write-Log {
@@ -455,6 +451,35 @@ function Start-DriftBenchmark {
 function Start-DriftGuard {
     Write-Log " Starting Agent Exo-Suit V4.0 'PERFECTION' - Drift Guard..." -Color Cyan
     
+    # Validate and ensure output directory exists
+    try {
+        Write-Log " Debug: OutputPath value: '$OutputPath'" -Color Cyan
+        Write-Log " Debug: OutputPath type: $($OutputPath.GetType().Name)" -Color Cyan
+        Write-Log " Debug: OutputPath length: $($OutputPath.Length)" -Color Cyan
+        
+        if ([string]::IsNullOrEmpty($OutputPath)) {
+            Write-Log " OutputPath is empty, using default" -Color Yellow
+            $OutputPath = "restore\DRIFT_REPORT.json"
+        }
+        
+        $outputDir = Split-Path $OutputPath -Parent
+        Write-Log " Debug: Output directory: '$outputDir'" -Color Cyan
+        
+        # Handle case where output path is just a filename (no directory)
+        if ([string]::IsNullOrEmpty($outputDir)) {
+            Write-Log " Debug: Output path is just a filename, using current directory" -Color Cyan
+            $outputDir = (Get-Location).Path
+        }
+        
+        if (-not (Test-Path $outputDir)) {
+            New-Item -ItemType Directory -Path $outputDir -Force | Out-Null
+            Write-Log " Created output directory: $outputDir" -Color Green
+        }
+    } catch {
+        Write-Log " Error creating output directory: $_" -Color Red
+        exit 1
+    }
+    
     # Validate system requirements
     if (-not (Test-SystemRequirements)) {
         Write-Log " System requirements not met. Exiting." -Color Red
@@ -503,7 +528,8 @@ function Start-DriftGuard {
                 Write-Log " Drift detected: $($drift.Count) items" -Color Yellow
                 
                 # Write report
-                $outputPath = Join-Path (Get-Location) $Output
+                $outputPath = Join-Path (Get-Location) $OutputPath
+                Write-Log " Debug: About to write report to: $outputPath" -Color Cyan
                 Write-DriftReport -Drift $drift -OutputPath $outputPath -Json:$Json
                 
                 exit 1

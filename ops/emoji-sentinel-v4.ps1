@@ -8,19 +8,9 @@ param(
     [switch]$Report,
     [switch]$EnableVerbose,
     [Parameter(Mandatory=$false)]
-    [ValidateScript({ 
-        if ([string]::IsNullOrEmpty($_)) { return $true }
-        if (Test-Path $_ -PathType Container) { return $true }
-        throw "Path '$_' does not exist or is not a directory"
-    })]
-    [string]$Path,
+    [string]$Path = ".",  # DEFAULT TO CURRENT DIR (Fix #1)
     [Parameter(Mandatory=$false)]
-    [ValidateScript({ 
-        $dir = Split-Path $_ -Parent
-        if ([string]::IsNullOrEmpty($dir) -or (Test-Path $dir -PathType Container)) { return $true }
-        throw "Output directory '$dir' does not exist"
-    })]
-    [string]$OutputPath = ".\restore\EMOJI_REPORT.json",
+    [string]$OutputPath = ".\restore\EMOJI_REPORT.json",  # SAFE DEFAULT (Fix #2)
     [switch]$Force,
     [switch]$Benchmark,
     [int]$MaxFileSizeMB = 10,
@@ -28,9 +18,13 @@ param(
     [switch]$Parallel
 )
 
-# ===== ULTRA-ROBUST ERROR HANDLING =====
+# ===== BULLETPROOF PATH HANDLING =====
 $ErrorActionPreference = 'Stop'
 Set-StrictMode -Version Latest
+
+# Emergency fallback paths
+$script:SafeScanPath = $null
+$script:SafeOutputDir = $null
 
 # ===== ADVANCED LOGGING =====
 function Write-Log {
@@ -79,32 +73,57 @@ function Test-SystemRequirements {
     }
 }
 
-# ===== PATH RESOLUTION & VALIDATION =====
+# ===== PATH VALIDATION ENGINE =====
+function Get-SafeAbsolutePath {
+    param([string]$InputPath, [string]$Context = "Path")
+    
+    try {
+        # Handle null/empty
+        if ([string]::IsNullOrWhiteSpace($InputPath)) {
+            Write-Log " Empty $Context provided, using current directory" -Color Yellow
+            return (Get-Location).Path
+        }
+        
+        # Expand relative paths
+        $absolutePath = [System.IO.Path]::GetFullPath($InputPath)
+        
+        # Create directory if doesn't exist
+        if ($Context -eq "Output" -and !(Test-Path $absolutePath)) {
+            $dir = Split-Path $absolutePath -Parent
+            if (!(Test-Path $dir)) {
+                New-Item -ItemType Directory -Path $dir -Force | Out-Null
+                Write-Log " Created output directory: $dir" -Color Green
+            }
+        }
+        
+        return $absolutePath
+    }
+    catch {
+        Write-Log " Invalid ${Context}: '$InputPath'" -Color Red
+        Write-Log "   Error: $_" -Color Red
+        return (Get-Location).Path  # Emergency fallback
+    }
+}
+
+# ===== ENHANCED SCAN PATH RESOLUTION =====
 function Resolve-ScanPath {
     param([string]$InputPath)
     
-    if ([string]::IsNullOrEmpty($InputPath)) {
-        $resolvedPath = Get-Location
-        Write-Log " No path specified, using current directory: $resolvedPath" -Color Yellow
-        return $resolvedPath
+    $safePath = Get-SafeAbsolutePath -InputPath $InputPath -Context "Scan"
+    
+    # Ensure directory exists
+    if (!(Test-Path $safePath -PathType Container)) {
+        try {
+            New-Item -ItemType Directory -Path $safePath -Force | Out-Null
+            Write-Log " Created scan directory: $safePath" -Color Green
+        }
+        catch {
+            Write-Log " Using fallback directory: $(Get-Location)" -Color Yellow
+            return (Get-Location).Path
+        }
     }
     
-    try {
-        $resolvedPath = Resolve-Path $InputPath -ErrorAction Stop
-        Write-Log " Using specified scan path: $resolvedPath" -Color Green
-        
-        # Validate it's a directory
-        if (-not (Test-Path $resolvedPath -PathType Container)) {
-            throw "Path '$resolvedPath' is not a directory"
-        }
-        
-        return $resolvedPath
-    }
-    catch {
-        Write-Log " Invalid scan path: $InputPath" -Color Red
-        Write-Log " Error: $_" -Color Red
-        throw "Invalid scan path: $InputPath"
-    }
+    return $safePath
 }
 
 # ===== ENHANCED EMOJI DETECTION =====
@@ -243,7 +262,23 @@ function Test-FileShouldScan {
     }
     
     # Check if in excluded directory
-    $relativePath = $File.FullName.Substring($ScanPath.Length).TrimStart('\', '/')
+    $relativePath = ""
+    try {
+        if ($File.FullName.Length -gt $ScanPath.Length) {
+            $relativePath = $File.FullName.Substring($ScanPath.Length).TrimStart('\', '/')
+        } else {
+            $relativePath = $File.Name
+        }
+        
+        # Ensure we have a valid relative path
+        if ([string]::IsNullOrEmpty($relativePath)) {
+            $relativePath = $File.Name
+        }
+    }
+    catch {
+        $relativePath = $File.Name
+    }
+    
     $pathParts = $relativePath -split '[\\/]'
     
     foreach ($excludeDir in $ExcludeDirs) {
@@ -278,8 +313,67 @@ function Scan-FileForEmojis {
         [string]$ScanPath
     )
     
+    # Validate parameters
+    if ([string]::IsNullOrEmpty($FilePath)) {
+        Write-Log " Error: FilePath is null or empty" -Color Yellow
+        return @()
+    }
+    
+    if ([string]::IsNullOrEmpty($ScanPath)) {
+        Write-Log " Error: ScanPath is null or empty" -Color Yellow
+        return @()
+    }
+    
+    # Final safety check - ensure FilePath is a valid, resolvable path
     try {
-        $content = Get-Content -Path $FilePath -Raw -Encoding UTF8 -ErrorAction Stop
+        $resolvedPath = [System.IO.Path]::GetFullPath($FilePath)
+        if ([string]::IsNullOrEmpty($resolvedPath) -or $resolvedPath.Length -lt 3) {
+            Write-Log " Error: FilePath cannot be resolved: $FilePath" -Color Yellow
+            return @()
+        }
+    }
+    catch {
+        Write-Log " Error: FilePath validation failed: $FilePath" -Color Yellow
+        return @()
+    }
+    
+    try {
+        # Additional validation
+        if (-not (Test-Path $FilePath -PathType Leaf)) {
+            Write-Log " Warning: File not found: $FilePath" -Color Yellow
+            return @()
+        }
+        
+        try {
+            if ($EnableVerbose) {
+                Write-Log " Debug: About to read file: $FilePath" -Color Cyan
+            }
+            $content = Get-Content -Path $FilePath -Raw -Encoding UTF8 -ErrorAction Stop
+            
+            # Handle null content (empty files)
+            if ($null -eq $content) {
+                if ($EnableVerbose) {
+                    Write-Log " Debug: File is empty, setting content to empty string" -Color Cyan
+                }
+                $content = ""
+            }
+            
+            # Ensure content is a string
+            if ($content -is [array]) {
+                $content = $content -join "`n"
+            }
+            if ($content -isnot [string]) {
+                $content = $content.ToString()
+            }
+            
+            if ($EnableVerbose) {
+                Write-Log " Debug: Successfully read file, content type: $($content.GetType().Name), length: $($content.Length)" -Color Cyan
+            }
+        }
+        catch {
+            Write-Log " Warning: Could not read file $FilePath : $_" -Color Yellow
+            return @()
+        }
         
         if ([string]::IsNullOrEmpty($content)) {
             return @()
@@ -315,8 +409,26 @@ function Scan-FileForEmojis {
                 $context = $lineContent
             }
             
+            # Create relative path safely
+            $relativePath = ""
+            try {
+                if ($FilePath.Length -gt $ScanPath.Length) {
+                    $relativePath = $FilePath.Substring($ScanPath.Length).TrimStart('\', '/')
+                } else {
+                    $relativePath = $FilePath
+                }
+                
+                # Ensure we have a valid relative path
+                if ([string]::IsNullOrEmpty($relativePath)) {
+                    $relativePath = [System.IO.Path]::GetFileName($FilePath)
+                }
+            }
+            catch {
+                $relativePath = [System.IO.Path]::GetFileName($FilePath)
+            }
+            
             $result = [EmojiDetectionResult]@{
-                FilePath = $FilePath.Substring($ScanPath.Length).TrimStart('\', '/')
+                FilePath = $relativePath
                 LineNumber = $lineNumber
                 ColumnNumber = $emoji.Position - $lineStart + 1
                 Emoji = $emoji.Character
@@ -373,11 +485,49 @@ function Start-EmojiScan {
     # Get all files to scan
     Write-Log " Discovering files..." -Color Cyan
     
-    $allFiles = Get-ChildItem -Path $ScanPath -Recurse -File | Where-Object {
-        Test-FileShouldScan -File $_ -ScanPath $ScanPath -ExcludeDirs $excludeDirs -ScanExtensions $scanExtensions -MaxFileSizeMB $MaxFileSizeMB
+    try {
+        $allFiles = Get-ChildItem -Path $ScanPath -Recurse -File -ErrorAction SilentlyContinue | Where-Object {
+            if ($null -eq $_ -or [string]::IsNullOrEmpty($_.FullName)) {
+                Write-Log " Warning: Skipping file with null or empty FullName" -Color Yellow
+                return $false
+            }
+            
+            # Additional validation - ensure FullName is a valid path
+            try {
+                $testPath = $_.FullName
+                if ([string]::IsNullOrEmpty($testPath) -or $testPath.Length -lt 3) {
+                    Write-Log " Warning: Skipping file with invalid path length: $testPath" -Color Yellow
+                    return $false
+                }
+                
+                # Test if the path can be resolved
+                $resolvedPath = [System.IO.Path]::GetFullPath($testPath)
+                if ([string]::IsNullOrEmpty($resolvedPath)) {
+                    Write-Log " Warning: Skipping file with unresolvable path: $testPath" -Color Yellow
+                    return $false
+                }
+            }
+            catch {
+                Write-Log " Warning: Skipping file with path validation error: $($_.FullName)" -Color Yellow
+                return $false
+            }
+            
+            Test-FileShouldScan -File $_ -ScanPath $ScanPath -ExcludeDirs $excludeDirs -ScanExtensions $scanExtensions -MaxFileSizeMB $MaxFileSizeMB
+        }
+        
+        # Filter out any remaining null or invalid files
+        $allFiles = $allFiles | Where-Object { 
+            $null -ne $_ -and 
+            -not [string]::IsNullOrEmpty($_.FullName) -and 
+            $_.FullName.Length -gt 3
+        }
+        
+        Write-Log " Found $($allFiles.Count) valid files to scan" -Color Green
     }
-    
-    Write-Log " Found $($allFiles.Count) files to scan" -Color Green
+    catch {
+        Write-Log " Error discovering files: $_" -Color Red
+        throw "Failed to discover files: $_"
+    }
     
     if ($allFiles.Count -eq 0) {
         Write-Log " No files found to scan" -Color Yellow
@@ -399,6 +549,12 @@ function Start-EmojiScan {
     }
     
     # Scan files
+    if ($EnableVerbose) {
+        Write-Log " Debug: Parallel flag: $Parallel" -Color Cyan
+        Write-Log " Debug: File count: $($allFiles.Count)" -Color Cyan
+        Write-Log " Debug: Parallel condition: $($Parallel -and $allFiles.Count -gt 10)" -Color Cyan
+    }
+    
     if ($Parallel -and $allFiles.Count -gt 10) {
         Write-Log " Using parallel processing..." -Color Cyan
         $allResults = $allFiles | ForEach-Object -ThrottleLimit ([Environment]::ProcessorCount) -Parallel {
@@ -433,8 +589,26 @@ function Start-EmojiScan {
                 for ($i = 0; $i -lt $lines.Length; $i++) {
                     $line = $lines[$i]
                     if (Test-EmojiInString $line) {
+                        # Create relative path safely for parallel processing
+                        $relativePath = ""
+                        try {
+                            if ($file.FullName.Length -gt $scanPath.Length) {
+                                $relativePath = $file.FullName.Substring($scanPath.Length).TrimStart('\', '/')
+                            } else {
+                                $relativePath = $file.FullName
+                            }
+                            
+                            # Ensure we have a valid relative path
+                            if ([string]::IsNullOrEmpty($relativePath)) {
+                                $relativePath = $file.Name
+                            }
+                        }
+                        catch {
+                            $relativePath = $file.Name
+                        }
+                        
                         $results += [PSCustomObject]@{
-                            FilePath = $file.FullName.Substring($scanPath.Length).TrimStart('\', '/')
+                            FilePath = $relativePath
                             LineNumber = $i + 1
                             ColumnNumber = 1
                             Emoji = ""  # Placeholder for parallel processing
@@ -465,15 +639,58 @@ function Start-EmojiScan {
     else {
         Write-Log " Using sequential processing..." -Color Cyan
         
+        # Initialize allResults for sequential processing
+        $allResults = @()
+        
         foreach ($file in $allFiles) {
             $scannedFiles++
+            
+            # Validate file path before processing
+            if ([string]::IsNullOrEmpty($file.FullName)) {
+                Write-Log " Warning: Skipping file with empty FullName" -Color Yellow
+                continue
+            }
+            
+            # Debug: Log the current file being processed
+            if ($EnableVerbose) {
+                Write-Log " Processing file: $($file.FullName)" -Color Cyan
+            }
             
             if ($scannedFiles % 100 -eq 0) {
                 $progress = [math]::Round(($scannedFiles / $allFiles.Count) * 100, 1)
                 Write-Progress -Activity "Emoji Scan Progress" -Status "$scannedFiles / $($allFiles.Count) files" -PercentComplete $progress
             }
             
-            $results = Scan-FileForEmojis -FilePath $file.FullName -ScanPath $ScanPath
+            # Global error handler for any path-related issues
+            try {
+                # Additional debugging for file path
+                if ($EnableVerbose) {
+                    Write-Log " Debug: File object type: $($file.GetType().Name)" -Color Cyan
+                    Write-Log " Debug: File.FullName: '$($file.FullName)'" -Color Cyan
+                    Write-Log " Debug: File.Name: '$($file.Name)'" -Color Cyan
+                    Write-Log " Debug: ScanPath: '$ScanPath'" -Color Cyan
+                }
+                
+                # Extra validation before calling Scan-FileForEmojis
+                if ([string]::IsNullOrWhiteSpace($file.FullName)) {
+                    Write-Log " Warning: Skipping file with null/empty FullName: $($file.Name)" -Color Yellow
+                    continue
+                }
+                
+                $results = Scan-FileForEmojis -FilePath $file.FullName -ScanPath $ScanPath
+            }
+            catch [System.Management.Automation.ParameterBindingException] {
+                if ($_.Exception.Message -like "*Cannot bind argument to parameter 'Path' because it is an empty string*") {
+                    Write-Log " Warning: Skipping file with empty path binding: $($file.FullName)" -Color Yellow
+                    continue
+                }
+                Write-Log " Error processing file $($file.FullName): $_" -Color Red
+                continue
+            }
+            catch {
+                Write-Log " Error processing file $($file.FullName): $_" -Color Red
+                continue
+            }
             
             # Ensure results is an array
             if ($null -eq $results) { $results = @() }
@@ -493,14 +710,31 @@ function Start-EmojiScan {
     $endTime = Get-Date
     $duration = ($endTime - $startTime).TotalSeconds
     
+    if ($EnableVerbose) {
+        Write-Log " Debug: Scan completed, processing results..." -Color Cyan
+        Write-Log " Debug: allResults count: $($allResults.Count)" -Color Cyan
+        Write-Log " Debug: allResults type: $($allResults.GetType().Name)" -Color Cyan
+    }
+    
+    # Final safety check - filter out any results with empty FilePath
+    if ($null -eq $allResults) { $allResults = @() }
+    $validResults = $allResults | Where-Object { $_ -and $_.FilePath -and -not [string]::IsNullOrEmpty($_.FilePath) }
+    if ($null -eq $validResults) { $validResults = @() }
+    $validFilesWithEmojis = if ($validResults.Count -gt 0) { ($validResults | Group-Object FilePath).Count } else { 0 }
+    
+    if ($EnableVerbose) {
+        Write-Log " Debug: validResults count: $($validResults.Count)" -Color Cyan
+        Write-Log " Debug: validFilesWithEmojis: $validFilesWithEmojis" -Color Cyan
+    }
+    
     # Generate scan summary
     $scanSummary = @{
         ScanStartTime = $startTime
         ScanEndTime = $endTime
         DurationSeconds = [math]::Round($duration, 2)
         TotalFilesScanned = $scannedFiles
-        FilesWithEmojis = $filesWithEmojis
-        TotalEmojisFound = $allResults.Count
+        FilesWithEmojis = $validFilesWithEmojis
+        TotalEmojisFound = $validResults.Count
         ScanDirectory = $ScanPath
         ExcludedDirectories = $excludeDirs
         ScannedExtensions = $scanExtensions
@@ -510,104 +744,77 @@ function Start-EmojiScan {
         SkipBinary = $SkipBinary
     }
     
+    # Update allResults to only contain valid results
+    $allResults = $validResults
+    
     # Save results
+    if ($EnableVerbose) {
+        Write-Log " Debug: Creating resultsData object..." -Color Cyan
+        Write-Log " Debug: allResults count: $($allResults.Count)" -Color Cyan
+        Write-Log " Debug: scanSummary created successfully" -Color Cyan
+    }
+    
+    # Create detections array safely
+    $detectionsArray = @()
+    if ($allResults -and $allResults.Count -gt 0) {
+        if ($EnableVerbose) {
+            Write-Log " Debug: Processing detections..." -Color Cyan
+        }
+        $detectionsArray = @($allResults | ForEach-Object {
+            if ($_ -and $_.FilePath -and -not [string]::IsNullOrEmpty($_.FilePath)) {
+                @{
+                    FilePath = $_.FilePath
+                    LineNumber = $_.LineNumber
+                    ColumnNumber = $_.ColumnNumber
+                    Emoji = $_.Emoji
+                    Context = $_.Context
+                    LineContent = $_.LineContent
+                    FileExtension = $_.FileExtension
+                    DetectionTime = if ($_.DetectionTime) { $_.DetectionTime.ToString("yyyy-MM-dd HH:mm:ss") } else { (Get-Date).ToString("yyyy-MM-dd HH:mm:ss") }
+                    Severity = $_.Severity
+                    UnicodeRange = $_.UnicodeRange
+                    CodePoint = $_.CodePoint
+                    Confidence = $_.Confidence
+                }
+            }
+        } | Where-Object { $_ -ne $null -and $_ -and $_.FilePath -and -not [string]::IsNullOrEmpty($_.FilePath) })
+    } else {
+        if ($EnableVerbose) {
+            Write-Log " Debug: No detections, using empty array" -Color Cyan
+        }
+        $detectionsArray = @()
+    }
+    
+    # Ensure detectionsArray is always an array
+    if ($detectionsArray -isnot [array]) {
+        $detectionsArray = @($detectionsArray)
+    }
+    
     $resultsData = @{
         Summary = $scanSummary
-        Detections = if ($allResults -and $allResults.Count -gt 0) {
-            $allResults | ForEach-Object {
-                if ($_ -and $_.FilePath) {
-                    @{
-                        FilePath = $_.FilePath
-                        LineNumber = $_.LineNumber
-                        ColumnNumber = $_.ColumnNumber
-                        Emoji = $_.Emoji
-                        Context = $_.Context
-                        LineContent = $_.LineContent
-                        FileExtension = $_.FileExtension
-                        DetectionTime = if ($_.DetectionTime) { $_.DetectionTime.ToString("yyyy-MM-dd HH:mm:ss") } else { (Get-Date).ToString("yyyy-MM-dd HH:mm:ss") }
-                        Severity = $_.Severity
-                        UnicodeRange = $_.UnicodeRange
-                        CodePoint = $_.CodePoint
-                        Confidence = $_.Confidence
-                    }
-                }
-            } | Where-Object { $_ -ne $null }
-        } else {
-            @()
-        }
+        Detections = $detectionsArray
     }
     
-    # Ensure output directory exists
-    $outputDir = Split-Path $OutputPath -Parent
-    if (!(Test-Path $outputDir)) {
-        New-Item -ItemType Directory -Path $outputDir -Force | Out-Null
+    if ($EnableVerbose) {
+        Write-Log " Debug: resultsData object created successfully" -Color Cyan
+        Write-Log " Debug: resultsData.Summary count: $($resultsData.Summary.Count)" -Color Cyan
+        Write-Log " Debug: resultsData.Detections count: $($resultsData.Detections.Count)" -Color Cyan
     }
     
-    # Save JSON report
-    $resultsData | ConvertTo-Json -Depth 10 | Out-File -FilePath $OutputPath -Encoding UTF8
+    Write-Log " Scan completed successfully. Returning results to main execution." -Color Green
     
-    # Save human-readable report
-    $txtReportPath = $OutputPath -replace '\.json$', '.txt'
-    $txtReport = @"
-AGENT EXO-SUIT V4.0 "PERFECTION" - EMOJI SCAN REPORT
-====================================================
-
-Scan Summary:
-- Start Time: $($startTime.ToString("yyyy-MM-dd HH:mm:ss"))
-- End Time: $($endTime.ToString("yyyy-MM-dd HH:mm:ss"))
-- Duration: $duration seconds
-- Files Scanned: $scannedFiles
-- Files with Emojis: $filesWithEmojis
-- Total Emojis Found: $($allResults.Count)
-- Scan Directory: $ScanPath
-- Processing Mode: $(if ($Parallel) { "Parallel" } else { "Sequential" })
-- Max File Size: $MaxFileSizeMB MB
-- Skip Binary: $SkipBinary
-- Version: 4.0.0
-
-"@
-    
-    if ($allResults.Count -gt 0) {
-        $txtReport += "`nEMOJI DETECTIONS:`n"
-        $txtReport += "================`n`n"
-        
-        $groupedResults = $allResults | Group-Object FilePath
-        
-        foreach ($group in $groupedResults) {
-            $txtReport += "FILE: $($group.Name)`n"
-            $txtReport += "Emojis found: $($group.Count)`n"
-            $txtReport += "-" * 50 + "`n"
-            
-            foreach ($result in $group.Group) {
-                $txtReport += "Line $($result.LineNumber), Column $($result.ColumnNumber): $($result.Emoji)`n"
-                $txtReport += "Context: $($result.Context)`n"
-                $txtReport += "Unicode Range: $($result.UnicodeRange)`n"
-                $txtReport += "Confidence: $($result.Confidence)`n"
-                $txtReport += "`n"
-            }
-            $txtReport += "`n"
-        }
-    } else {
-        $txtReport += "`n NO EMOJIS FOUND! Codebase is clean and professional.`n"
+    if ($EnableVerbose) {
+        Write-Log " Debug: About to return resultsData..." -Color Cyan
+        Write-Log " Debug: resultsData type: $($resultsData.GetType().Name)" -Color Cyan
+        Write-Log " Debug: resultsData keys: $($resultsData.Keys -join ', ')" -Color Cyan
     }
-    
-    $txtReport | Out-File -FilePath $txtReportPath -Encoding UTF8
-    
-    # Display results
-    Write-Log "`n Emoji Scan Complete!" -Color Green
-    Write-Log " Duration: $duration seconds" -Color Cyan
-    Write-Log " Files scanned: $scannedFiles" -Color Cyan
-    Write-Log " Files with emojis: $filesWithEmojis" -Color $(if ($filesWithEmojis -gt 0) { "Red" } else { "Green" })
-    Write-Log " Total emojis found: $($allResults.Count)" -Color $(if ($allResults.Count -gt 0) { "Red" } else { "Green" })
-    Write-Log " Report saved to: $OutputPath" -Color Yellow
-    Write-Log " Text report: $txtReportPath" -Color Yellow
     
     return $resultsData
 }
 
 # ===== BENCHMARKING =====
 function Start-EmojiBenchmark {
-    param([string]$ScanPath)
+    param([string]$scanPath)
     
     Write-Log " Starting V4.0 Emoji Sentinel Benchmark..." -Color Cyan
     
@@ -621,7 +828,7 @@ function Start-EmojiBenchmark {
     Write-Log " Testing sequential processing..." -Color Yellow
     $script:Parallel = $false
     $startTime = Get-Date
-    $sequentialResults = Start-EmojiScan -ScanPath $ScanPath
+    $sequentialResults = Start-EmojiScan -ScanPath $scanPath
     $sequentialDuration = ((Get-Date) - $startTime).TotalSeconds
     
     $benchmarkResults.Sequential = @{
@@ -635,7 +842,7 @@ function Start-EmojiBenchmark {
     Write-Log " Testing parallel processing..." -Color Yellow
     $script:Parallel = $true
     $startTime = Get-Date
-    $parallelResults = Start-EmojiScan -ScanPath $ScanPath
+    $parallelResults = Start-EmojiScan -ScanPath $scanPath
     $parallelDuration = ((Get-Date) - $startTime).TotalSeconds
     
     $benchmarkResults.Parallel = @{
@@ -694,7 +901,13 @@ try {
     
     # Execute based on parameters
     if ($Scan) {
-        Start-EmojiScan -ScanPath $scanPath
+        try {
+            Start-EmojiScan -ScanPath $scanPath
+        }
+        catch [System.Management.Automation.ParameterBindingException] {
+            Write-Log " Parameter binding error in scan: $_" -Color Red
+            throw
+        }
     }
     elseif ($Purge) {
         Write-Log " Purge functionality not yet implemented in V4.0" -Color Yellow
@@ -705,15 +918,146 @@ try {
         Write-Log " Use V3.0 for report viewing" -Color Yellow
     }
     elseif ($Benchmark) {
-        Start-EmojiBenchmark -ScanPath $scanPath
+        try {
+            Start-EmojiBenchmark -ScanPath $scanPath
+        }
+        catch [System.Management.Automation.ParameterBindingException] {
+            Write-Log " Parameter binding error in benchmark: $_" -Color Red
+            throw
+        }
     }
     else {
         # Default: run scan
-        Start-EmojiScan -ScanPath $scanPath
+        try {
+            Write-Log " Starting default emoji scan..." -Color Cyan
+            $scanResults = Start-EmojiScan -ScanPath $scanPath
+            
+            if ($scanResults) {
+                Write-Log " Scan completed successfully. Saving results..." -Color Green
+                
+                # Debug output path
+                Write-Log " Debug: OutputPath value: '$OutputPath'" -Color Cyan
+                Write-Log " Debug: OutputPath type: $($OutputPath.GetType().Name)" -Color Cyan
+                Write-Log " Debug: OutputPath length: $($OutputPath.Length)" -Color Cyan
+                
+                # Ensure output directory exists
+                $outputDir = Split-Path $OutputPath -Parent
+                Write-Log " Debug: Output directory: '$outputDir'" -Color Cyan
+                
+                # Handle case where output path is just a filename (no directory)
+                if ([string]::IsNullOrEmpty($outputDir)) {
+                    Write-Log " Debug: Output path is just a filename, using current directory" -Color Cyan
+                    $outputDir = (Get-Location).Path
+                }
+                
+                if (!(Test-Path $outputDir)) {
+                    New-Item -ItemType Directory -Path $outputDir -Force | Out-Null
+                }
+                
+                # Save JSON report
+                Write-Log " Debug: About to save to: '$OutputPath'" -Color Cyan
+                $scanResults | ConvertTo-Json -Depth 10 | Out-File -FilePath $OutputPath -Encoding UTF8
+                Write-Log " Results saved to: $OutputPath" -Color Green
+                
+                # Generate and save text report
+                $txtReportPath = $OutputPath -replace '\.json$', '.txt'
+                $txtReport = @"
+AGENT EXO-SUIT V4.0 "PERFECTION" - EMOJI SCAN REPORT
+====================================================
+
+Scan Summary:
+- Files Scanned: $($scanResults.Summary.TotalFilesScanned)
+- Files with Emojis: $($scanResults.Summary.FilesWithEmojis)
+- Total Emojis Found: $($scanResults.Summary.TotalEmojisFound)
+- Scan Directory: $scanPath
+- Processing Mode: $(if ($Parallel) { "Parallel" } else { "Sequential" })
+- Max File Size: $MaxFileSizeMB MB
+- Skip Binary: $SkipBinary
+- Version: 4.0.0
+
+"@
+                
+                if ($scanResults.Detections.Count -gt 0) {
+                    $txtReport += "`nEMOJI DETECTIONS:`n"
+                    $txtReport += "================`n`n"
+                    
+                    $groupedResults = $scanResults.Detections | Group-Object FilePath
+                    foreach ($group in $groupedResults) {
+                        $txtReport += "FILE: $($group.Name)`n"
+                        $txtReport += "Emojis found: $($group.Count)`n"
+                        $txtReport += "-" * 50 + "`n"
+                        
+                        foreach ($result in $group.Group) {
+                            $txtReport += "Line $($result.LineNumber), Column $($result.ColumnNumber): $($result.Emoji)`n"
+                            $txtReport += "Context: $($result.Context)`n"
+                            $txtReport += "`n"
+                        }
+                        $txtReport += "`n"
+                    }
+                } else {
+                    $txtReport += "`n NO EMOJIS FOUND! Codebase is clean and professional.`n"
+                }
+                
+                $txtReport | Out-File -FilePath $txtReportPath -Encoding UTF8
+                Write-Log " Text report saved to: $txtReportPath" -Color Green
+                
+                Write-Log " Default scan completed successfully!" -Color Green
+            } else {
+                Write-Log " Scan returned no results" -Color Yellow
+            }
+        }
+        catch [System.Management.Automation.ParameterBindingException] {
+            Write-Log " Parameter binding error in default scan: $_" -Color Red
+            Write-Log " Attempting to continue with error recovery..." -Color Yellow
+            
+            # Try to run a minimal scan with error recovery
+            try {
+                Write-Log " Running minimal scan with error recovery..." -Color Cyan
+                $minimalResults = @{
+                    Summary = @{
+                        ScanStartTime = Get-Date
+                        ScanEndTime = Get-Date
+                        DurationSeconds = 0
+                        TotalFilesScanned = 0
+                        FilesWithEmojis = 0
+                        TotalEmojisFound = 0
+                        ScanDirectory = $scanPath
+                        ExcludedDirectories = @()
+                        ScannedExtensions = @()
+                        Version = "4.0.0"
+                        ProcessingMode = "Error Recovery"
+                        MaxFileSizeMB = $MaxFileSizeMB
+                        SkipBinary = $SkipBinary
+                        ErrorRecovery = $true
+                        ErrorMessage = $_.Exception.Message
+                    }
+                    Detections = @()
+                }
+                
+                # Save minimal results
+                $minimalResults | ConvertTo-Json -Depth 10 | Out-File -FilePath $OutputPath -Encoding UTF8
+                Write-Log " Minimal scan completed with error recovery" -Color Green
+                return
+            }
+            catch {
+                Write-Log " Error recovery failed: $_" -Color Red
+                throw
+            }
+        }
     }
     
     Write-Log " V4.0 Emoji Sentinel completed successfully!" -Color Green
     
+} catch [System.Management.Automation.ParameterBindingException] {
+    if ($_.Exception.Message -like "*Cannot bind argument to parameter 'Path' because it is an empty string*") {
+        Write-Log " Fatal error: Parameter binding error - empty path detected" -Color Red
+        Write-Log " This usually indicates a file with an invalid or empty path" -Color Red
+        Write-Log " Stack trace: $($_.ScriptStackTrace)" -Color Red
+        exit 1
+    }
+    Write-Log " Fatal error: $_" -Color Red
+    Write-Log " Stack trace: $($_.ScriptStackTrace)" -Color Red
+    exit 1
 } catch {
     Write-Log " Fatal error: $_" -Color Red
     Write-Log " Stack trace: $($_.ScriptStackTrace)" -Color Red

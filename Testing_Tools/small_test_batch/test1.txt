@@ -1,0 +1,5 @@
+This is a test text file with some emojis! 🎉
+Here's another line with a different emoji: 🚀
+And one more: ⭐
+Testing various emoji types: 😀 🎨 🌟 ��
+End of test file.

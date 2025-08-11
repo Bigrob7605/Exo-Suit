@@ -1,46 +1,46 @@
 {
-  "OutputPath": "restore",
+  "AvailableTools": {
+    "pip": "C:\\My Projects\\Agent Exo-Suit\\gpu_rag_env\\Scripts\\pip.exe",
+    "git": "C:\\Program Files\\Git\\cmd\\git.exe",
+    "cargo": "C:\\Users\\screw\\.cargo\\bin\\cargo.exe",
+    "python": "C:\\My Projects\\Agent Exo-Suit\\gpu_rag_env\\Scripts\\python.exe",
+    "npm": null
+  },
+  "ProjectPath": ".",
+  "DurationSeconds": 1.93,
+  "Version": "4.0.0",
+  "ScanStartTime": "2025-08-11 13:53:49",
   "Results": {
-    "SBOM": {
-      "Summary": {
-        "TotalGenerated": 1,
-        "TotalFailed": 0,
-        "GenerationTime": "2025-08-11 08:10:19",
-        "GeneratedTypes": "python",
-        "FailedTypes": null
-      },
-      "Failed": [],
-      "Generated": [
-        {
-          "Path": "restore\\sbom\\python_sbom_cyclonedx.json",
-          "Format": "CycloneDX",
-          "Generator": "cyclonedx-py",
-          "Type": "python"
-        }
-      ]
-    },
-    "Ownership": null,
     "LockFiles": {
       "Type": "pip",
       "Manager": "pip",
       "Path": "requirements.txt",
       "FullPath": ".\\requirements.txt",
-      "AgeDays": 1.0,
+      "AgeDays": 1.2,
       "LastModified": "2025-08-10 08:32:36",
       "SizeKB": 0.58,
       "Status": "Fresh"
+    },
+    "Ownership": null,
+    "SBOM": {
+      "Generated": [
+        {
+          "Format": "CycloneDX",
+          "Generator": "cyclonedx-py",
+          "Path": "restore\\sbom\\python_sbom_cyclonedx.json",
+          "Type": "python"
+        }
+      ],
+      "Summary": {
+        "TotalGenerated": 1,
+        "GeneratedTypes": "python",
+        "TotalFailed": 0,
+        "GenerationTime": "2025-08-11 13:53:51",
+        "FailedTypes": null
+      },
+      "Failed": []
     }
   },
-  "ScanEndTime": "2025-08-11 08:10:19",
-  "Version": "4.0.0",
-  "ProjectPath": ".",
-  "DurationSeconds": 1.38,
-  "ScanStartTime": "2025-08-11 08:10:17",
-  "AvailableTools": {
-    "python": "C:\\Program Files\\Python313\\python.exe",
-    "pip": "C:\\Program Files\\Python313\\Scripts\\pip.exe",
-    "cargo": "C:\\Users\\screw\\.cargo\\bin\\cargo.exe",
-    "npm": null,
-    "git": "C:\\Program Files\\Git\\cmd\\git.exe"
-  }
+  "OutputPath": "restore",
+  "ScanEndTime": "2025-08-11 13:53:51"
 }
