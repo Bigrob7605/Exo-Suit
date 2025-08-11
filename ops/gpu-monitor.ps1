@@ -1,4 +1,4 @@
-# 🎮 GPU Performance Monitor for Agent Exo-Suit V2.1 "Indestructible"
+#  GPU Performance Monitor for Agent Exo-Suit V2.1 "Indestructible"
 # Real-time GPU monitoring with performance optimization and alerts
 
 [CmdletBinding()]
@@ -14,7 +14,7 @@ $ErrorActionPreference = 'Stop'
 Set-StrictMode -Version Latest
 
 # ===== GPU MONITOR INITIALIZATION =====
-Write-Host "🎮 GPU Performance Monitor Initialization..." -ForegroundColor Cyan
+Write-Host " GPU Performance Monitor Initialization..." -ForegroundColor Cyan
 
 # Check for NVIDIA GPU
 $gpuAvailable = $false
@@ -27,11 +27,11 @@ try {
         $gpuDriver = ($nvidiaOutput -split ',')[2]
         $gpuCompute = ($nvidiaOutput -split ',')[3]
         
-        Write-Host "✅ NVIDIA GPU detected: $gpuName" -ForegroundColor Green
+        Write-Host " NVIDIA GPU detected: $gpuName" -ForegroundColor Green
         Write-Host "   Memory: $gpuMemory MB | Driver: $gpuDriver | Compute: $gpuCompute" -ForegroundColor Green
     }
 } catch {
-    Write-Host "❌ NVIDIA GPU not detected or nvidia-smi not available" -ForegroundColor Red
+    Write-Host " NVIDIA GPU not detected or nvidia-smi not available" -ForegroundColor Red
     exit 1
 }
 
@@ -76,23 +76,23 @@ function Show-GPUMetrics {
     $memColor = if ($metrics.Mem_Util -gt 80) { "Red" } elseif ($metrics.Mem_Util -gt 50) { "Yellow" } else { "Green" }
     $tempColor = if ($metrics.Temp -gt 80) { "Red" } elseif ($metrics.Temp -gt 70) { "Yellow" } else { "Green" }
     
-    Write-Host "`n🎮 GPU Performance Metrics - $($metrics.Timestamp)" -ForegroundColor Cyan
+    Write-Host "`n GPU Performance Metrics - $($metrics.Timestamp)" -ForegroundColor Cyan
     Write-Host "=" * 50 -ForegroundColor Cyan
     
-    Write-Host "🖥️  GPU Utilization: $($metrics.GPU_Util)%" -ForegroundColor $gpuColor
-    Write-Host "💾 Memory Usage: $($metrics.Mem_Used) MB / $($metrics.Mem_Total) MB ($($metrics.Mem_Util)%)" -ForegroundColor $memColor
-    Write-Host "🌡️  Temperature: $($metrics.Temp)°C" -ForegroundColor $tempColor
-    Write-Host "⚡ Power Draw: $($metrics.Power) W" -ForegroundColor White
+    Write-Host "  GPU Utilization: $($metrics.GPU_Util)%" -ForegroundColor $gpuColor
+    Write-Host " Memory Usage: $($metrics.Mem_Used) MB / $($metrics.Mem_Total) MB ($($metrics.Mem_Util)%)" -ForegroundColor $memColor
+    Write-Host "  Temperature: $($metrics.Temp)C" -ForegroundColor $tempColor
+    Write-Host " Power Draw: $($metrics.Power) W" -ForegroundColor White
     
     # Performance indicators
     $memEfficiency = ($metrics.Mem_Used / $metrics.Mem_Total) * 100
-    Write-Host "📊 Memory Efficiency: $($memEfficiency.ToString('F1'))%" -ForegroundColor $(if ($memEfficiency -gt 80) { "Green" } else { "Yellow" })
+    Write-Host " Memory Efficiency: $($memEfficiency.ToString('F1'))%" -ForegroundColor $(if ($memEfficiency -gt 80) { "Green" } else { "Yellow" })
 }
 
 function Start-ContinuousMonitoring {
     param([int]$IntervalSeconds)
     
-    Write-Host "🔄 Starting continuous GPU monitoring (interval: $IntervalSeconds seconds)" -ForegroundColor Cyan
+    Write-Host " Starting continuous GPU monitoring (interval: $IntervalSeconds seconds)" -ForegroundColor Cyan
     Write-Host "Press Ctrl+C to stop monitoring" -ForegroundColor Yellow
     
     try {
@@ -104,25 +104,25 @@ function Start-ContinuousMonitoring {
             # Performance alerts
             if ($Alert) {
                 if ($metrics.GPU_Util -gt 90) {
-                    Write-Host "🚨 HIGH GPU UTILIZATION: $($metrics.GPU_Util)%" -ForegroundColor Red -BackgroundColor White
+                    Write-Host " HIGH GPU UTILIZATION: $($metrics.GPU_Util)%" -ForegroundColor Red -BackgroundColor White
                 }
                 if ($metrics.Temp -gt 85) {
-                    Write-Host "🔥 HIGH TEMPERATURE: $($metrics.Temp)°C" -ForegroundColor Red -BackgroundColor White
+                    Write-Host " HIGH TEMPERATURE: $($metrics.Temp)C" -ForegroundColor Red -BackgroundColor White
                 }
                 if ($metrics.Mem_Util -gt 90) {
-                    Write-Host "💥 HIGH MEMORY USAGE: $($metrics.Mem_Util)%" -ForegroundColor Red -BackgroundColor White
+                    Write-Host " HIGH MEMORY USAGE: $($metrics.Mem_Util)%" -ForegroundColor Red -BackgroundColor White
                 }
             }
             
             Start-Sleep -Seconds $IntervalSeconds
         }
     } catch {
-        Write-Host "`n⏹️  Monitoring stopped" -ForegroundColor Yellow
+        Write-Host "`n  Monitoring stopped" -ForegroundColor Yellow
     }
 }
 
 function Start-GPUBenchmark {
-    Write-Host "📊 Starting GPU benchmark..." -ForegroundColor Cyan
+    Write-Host " Starting GPU benchmark..." -ForegroundColor Cyan
     
     $benchmarkScript = @"
 import time
@@ -130,19 +130,19 @@ import torch
 import numpy as np
 
 def run_gpu_benchmark():
-    print("🚀 GPU Benchmark Suite")
+    print(" GPU Benchmark Suite")
     print("=" * 50)
     
     if not torch.cuda.is_available():
-        print("❌ CUDA not available")
+        print(" CUDA not available")
         return False
     
     device = torch.device('cuda')
-    print(f"✅ CUDA available: {torch.cuda.get_device_name(0)}")
-    print(f"🎮 GPU Memory: {torch.cuda.get_device_properties(0).total_memory / 1024**3:.1f} GB")
+    print(f" CUDA available: {torch.cuda.get_device_name(0)}")
+    print(f" GPU Memory: {torch.cuda.get_device_properties(0).total_memory / 1024**3:.1f} GB")
     
     # Memory allocation test
-    print("\\n💾 Memory Allocation Test")
+    print("\\n Memory Allocation Test")
     torch.cuda.empty_cache()
     start_mem = torch.cuda.memory_allocated(0)
     
@@ -161,7 +161,7 @@ def run_gpu_benchmark():
             break
     
     # Matrix multiplication benchmark
-    print("\\n⚡ Matrix Multiplication Benchmark")
+    print("\\n Matrix Multiplication Benchmark")
     test_sizes = [1000, 2000, 4000]
     
     for size in test_sizes:
@@ -192,7 +192,7 @@ def run_gpu_benchmark():
             break
     
     # Memory bandwidth test
-    print("\\n📊 Memory Bandwidth Test")
+    print("\\n Memory Bandwidth Test")
     try:
         size = 4000
         a = torch.randn(size, size, device=device)
@@ -214,7 +214,7 @@ def run_gpu_benchmark():
     except RuntimeError as e:
         print(f"   Memory bandwidth test failed: {e}")
     
-    print("\\n✅ GPU benchmark complete!")
+    print("\\n GPU benchmark complete!")
     return True
 
 if __name__ == '__main__':
@@ -227,23 +227,23 @@ if __name__ == '__main__':
     python $benchmarkPath
     
     if ($LASTEXITCODE -eq 0) {
-        Write-Host "✅ GPU benchmark completed successfully!" -ForegroundColor Green
+        Write-Host " GPU benchmark completed successfully!" -ForegroundColor Green
     } else {
         Write-Warning "GPU benchmark failed"
     }
 }
 
 function Optimize-GPUSettings {
-    Write-Host "🔧 Optimizing GPU settings..." -ForegroundColor Cyan
+    Write-Host " Optimizing GPU settings..." -ForegroundColor Cyan
     
     # Check current power management
     try {
         $powerInfo = nvidia-smi -q -d POWER 2>$null | Select-String "Power Management"
         if ($powerInfo -match "Adaptive") {
-            Write-Host "⚠️  Power management is set to Adaptive" -ForegroundColor Yellow
-            Write-Host "💡 Consider setting to Prefer Maximum Performance for better performance" -ForegroundColor Cyan
+            Write-Host "  Power management is set to Adaptive" -ForegroundColor Yellow
+            Write-Host " Consider setting to Prefer Maximum Performance for better performance" -ForegroundColor Cyan
         } else {
-            Write-Host "✅ Power management optimized" -ForegroundColor Green
+            Write-Host " Power management optimized" -ForegroundColor Green
         }
     } catch {
         Write-Warning "Could not check power management settings"
@@ -259,10 +259,10 @@ function Optimize-GPUSettings {
             $usage = ($used / $total) * 100
             
             if ($usage -gt 80) {
-                Write-Host "⚠️  High memory usage: $($usage.ToString('F1'))%" -ForegroundColor Yellow
-                Write-Host "💡 Consider closing unnecessary applications or reducing batch sizes" -ForegroundColor Cyan
+                Write-Host "  High memory usage: $($usage.ToString('F1'))%" -ForegroundColor Yellow
+                Write-Host " Consider closing unnecessary applications or reducing batch sizes" -ForegroundColor Cyan
             } else {
-                Write-Host "✅ Memory usage optimal: $($usage.ToString('F1'))%" -ForegroundColor Green
+                Write-Host " Memory usage optimal: $($usage.ToString('F1'))%" -ForegroundColor Green
             }
         }
     } catch {
@@ -270,17 +270,17 @@ function Optimize-GPUSettings {
     }
     
     # Performance recommendations
-    Write-Host "`n💡 Performance Optimization Recommendations:" -ForegroundColor Cyan
+    Write-Host "`n Performance Optimization Recommendations:" -ForegroundColor Cyan
     
     if ($gpuMemory -lt 8000) {
-        Write-Host "💾 GPU Memory: Consider using smaller batch sizes for large models" -ForegroundColor Yellow
+        Write-Host " GPU Memory: Consider using smaller batch sizes for large models" -ForegroundColor Yellow
     }
     
-    Write-Host "🎯 For AI workloads: Use mixed precision (FP16) when possible" -ForegroundColor Green
-    Write-Host "🔄 For training: Enable gradient accumulation for large models" -ForegroundColor Green
-    Write-Host "🌡️  Temperature: Keep GPU below 85°C for optimal performance" -ForegroundColor Green
+    Write-Host " For AI workloads: Use mixed precision (FP16) when possible" -ForegroundColor Green
+    Write-Host " For training: Enable gradient accumulation for large models" -ForegroundColor Green
+    Write-Host "  Temperature: Keep GPU below 85C for optimal performance" -ForegroundColor Green
     
-    Write-Host "`n✅ GPU optimization analysis complete!" -ForegroundColor Green
+    Write-Host "`n GPU optimization analysis complete!" -ForegroundColor Green
 }
 
 # ===== MAIN EXECUTION =====
@@ -295,11 +295,11 @@ if ($Continuous) {
     $metrics = Get-GPUMetrics
     Show-GPUMetrics $metrics
     
-    Write-Host "`n💡 Usage:" -ForegroundColor Cyan
+    Write-Host "`n Usage:" -ForegroundColor Cyan
     Write-Host "   -Continuous: Start continuous monitoring" -ForegroundColor White
     Write-Host "   -Benchmark: Run GPU performance tests" -ForegroundColor White
     Write-Host "   -Optimize: Get optimization recommendations" -ForegroundColor White
     Write-Host "   -Alert: Enable performance alerts" -ForegroundColor White
 }
 
-Write-Host "`n🎮 GPU Performance Monitor ready!" -ForegroundColor Green
+Write-Host "`n GPU Performance Monitor ready!" -ForegroundColor Green

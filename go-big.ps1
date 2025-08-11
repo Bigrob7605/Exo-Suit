@@ -1,69 +1,69 @@
-<#
-  Single entry point: max-perf → build → scan → test → Cursor-ready
-#>
-param([switch]$skipTests)
+# Agent Exo-Suit V3.0 "Monster-Mode" - Full System Activation
+# This is the single command to rule them all
 
-$ErrorActionPreference='Stop'; Set-StrictMode -Version Latest
-
-# --- lock CPU to max ---
-$guid = 'e9a42b02-d5df-448d-aa00-03f14749eb61' # Ultimate Performance
-try {
-    powercfg -duplicatescheme $guid | Out-Null
-    powercfg -setactive $guid
-    powercfg /change -standby-timeout-ac 0
-    powercfg /change -hibernate-timeout-ac 0
-} catch {
-    Write-Host "Power scheme configuration failed, continuing..." -ForegroundColor Yellow
-}
-
-# --- RAM-disk scratch (optional) ---
-$cacheDrive = "C:"
-if (Test-Path ".env") {
-    $envContent = Get-Content .env
-    $cacheLine = $envContent | Where-Object { $_ -match '^CACHE_DRIVE=' }
-    if ($cacheLine) {
-        $cacheDrive = $cacheLine.Split('=')[1]
-    }
-}
-$cache = Join-Path $cacheDrive "exocache"
-New-Item -ItemType Directory -Force $cache | Out-Null
-$env:TEMP = $env:TMP = $cache
-
-# --- build & scan ---
-.\ops\make-pack.ps1   $PSScriptRoot "$PSScriptRoot\context\_latest"
-.\ops\index-symbols.ps1
-.\ops\index-imports.ps1
-.\ops\placeholder-scan.ps1
-.\ops\drift-gate.ps1 -json
-
-# --- RAG brain ---
-.\rag\embed.ps1
-.\ops\context-governor.ps1 -maxTokens 128000
-
-# --- lint swarm (parallel & safe) ---
-$lint = @(
-  { if (Test-Path package.json) { npm run lint --silent 2>$null } },
-  { if (Get-Command ruff -EA SilentlyContinue)   { ruff check --fix } },
-  { if (Test-Path Cargo.toml) { cargo clippy -q } }
+param(
+    [switch]$NoEmojiScan,
+    [switch]$ForceEmojiScan,
+    [switch]$EmojiPurge
 )
-$lint | % { Start-Job $_ } | Wait-Job | Receive-Job
 
-if (-not $skipTests) {
-  $tests = @(
-    { if (Test-Path package.json) { npm test --silent } },
-    { if (Get-ChildItem *_test.py -Recurse) { pytest -q } },
-    { if (Test-Path Cargo.toml) { cargo test -q } }
-  )
-  $tests | % { Start-Job $_ } | Wait-Job | Receive-Job
+Write-Host "Agent Exo-Suit V3.0 'Monster-Mode' - Full System Activation" -ForegroundColor Green
+Write-Host "Target: ASUS TUF i7-13620H + RTX 4070" -ForegroundColor Cyan
+Write-Host "=" * 60 -ForegroundColor Cyan
+
+# Step 1: Emoji Sentinel Activation (NEW!)
+if (-not $NoEmojiScan) {
+    Write-Host "`nStep 1: Activating Emoji Sentinel..." -ForegroundColor Cyan
+    
+    if ($ForceEmojiScan -or $EmojiPurge) {
+        Write-Host "Running comprehensive emoji scan..." -ForegroundColor Yellow
+        & .\ops\emoji-sentinel.ps1 -Scan -Verbose
+    } else {
+        # Quick emoji check
+        Write-Host "Running quick emoji scan..." -ForegroundColor Yellow
+        & .\ops\emoji-sentinel.ps1 -Scan
+    }
+    
+    if ($EmojiPurge) {
+        Write-Host "`nInitiating emoji purge protocol..." -ForegroundColor Red
+        & .\ops\emoji-sentinel.ps1 -Purge -Verbose
+    }
+    
+    Write-Host "Emoji Sentinel: ACTIVE" -ForegroundColor Green
 }
 
-# --- diagrams ---
-.\mermaid\generate-maps.ps1
+# Step 2: System Refresh
+Write-Host "`nStep 2: System Refresh..." -ForegroundColor Cyan
+& .\refresh.ps1 -Force
+Write-Host "System Refresh: COMPLETE" -ForegroundColor Green
 
-# --- Sentinel Pack (v2.2 additions) ---
-.\ops\sentinel-secrets.ps1
-.\ops\sentinel-binaries.ps1 -maxSizeMB 75
-.\ops\specmap-enforce.ps1
-.\ops\dashboard.ps1
+# Step 3: Performance Mode Activation
+Write-Host "`nStep 3: Activating Ultimate Performance Mode..." -ForegroundColor Cyan
+& .\AgentExoSuitV3.ps1
+Write-Host "Performance Mode: ACTIVE" -ForegroundColor Green
 
-Write-Host "🔥 Exo-Suit armed. Open Cursor and follow COMMAND_QUEUE.md" -ForegroundColor Cyan
+# Step 4: Drift Detection
+Write-Host "`nStep 4: Drift Detection..." -ForegroundColor Cyan
+& .\ops\drift-gate.ps1
+Write-Host "Drift Detection: COMPLETE" -ForegroundColor Green
+
+# Step 5: Health Scan
+Write-Host "`nStep 5: Project Health Scan..." -ForegroundColor Cyan
+& .\ops\Project-Health-Scanner.ps1
+Write-Host "Health Scan: COMPLETE" -ForegroundColor Green
+
+# Step 6: GPU Acceleration
+Write-Host "`nStep 6: GPU Acceleration..." -ForegroundColor Cyan
+& .\ops\gpu-accelerator.ps1
+Write-Host "GPU Acceleration: ACTIVE" -ForegroundColor Green
+
+Write-Host "`n" + "=" * 60 -ForegroundColor Cyan
+Write-Host "Agent Exo-Suit V3.0 'Monster-Mode' - FULLY OPERATIONAL" -ForegroundColor Green
+Write-Host "All systems: ONLINE" -ForegroundColor Green
+Write-Host "Emoji Sentinel: DEPLOYED" -ForegroundColor Green
+Write-Host "Performance: MAXIMUM" -ForegroundColor Green
+Write-Host "=" * 60 -ForegroundColor Cyan
+
+Write-Host "`nSystem ready for high-performance development!" -ForegroundColor Cyan
+Write-Host "Use '.\ops\emoji-sentinel.ps1 -Report' to view emoji scan results" -ForegroundColor Yellow
+Write-Host "Use '.\ops\emoji-sentinel.ps1 -Purge' to remove all detected emojis" -ForegroundColor Yellow

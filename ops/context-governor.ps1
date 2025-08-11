@@ -1,4 +1,4 @@
-# 🧠 GPU-Optimized Context Governor for Agent Exo-Suit V2.1 "Indestructible"
+#  GPU-Optimized Context Governor for Agent Exo-Suit V2.1 "Indestructible"
 # Intelligent context management with GPU acceleration and token budget control
 
 [CmdletBinding()]
@@ -11,29 +11,54 @@ param(
     [switch]$Force,
     [switch]$Benchmark,
     [switch]$Interactive,
-    [switch]$UseGPU = $true
+    [switch]$UseGPU = $true,
+    [switch]$TestMode
 )
 
 $ErrorActionPreference = 'Stop'
 Set-StrictMode -Version Latest
 
 # ===== CONTEXT GOVERNOR INITIALIZATION =====
-Write-Host "🧠 GPU-Optimized Context Governor Initialization..." -ForegroundColor Cyan
+Write-Host " GPU-Optimized Context Governor Initialization..." -ForegroundColor Cyan
 
-# Check for GPU environment
-$venvPath = Join-Path $Root "gpu_rag_env"
+# Check for GPU environment - be smart about finding it
+$projectRoot = $Root
+$venvPath = Join-Path $projectRoot "gpu_rag_env"
+
+# If the venv doesn't exist at the specified root, try to find it in the project
+if (-not (Test-Path $venvPath)) {
+    Write-Host " GPU-RAG environment not found at specified path. Searching project..." -ForegroundColor Yellow
+    
+    # Try to find the project root by looking for the ops directory
+    $currentPath = $projectRoot
+    $maxDepth = 5  # Don't go too deep
+    
+    for ($i = 0; $i -lt $maxDepth; $i++) {
+        if (Test-Path (Join-Path $currentPath "ops")) {
+            $projectRoot = $currentPath
+            $venvPath = Join-Path $projectRoot "gpu_rag_env"
+            Write-Host " Found project root: $projectRoot" -ForegroundColor Green
+            break
+        }
+        $currentPath = Split-Path $currentPath -Parent
+        if ([string]::IsNullOrEmpty($currentPath) -or $currentPath -eq $currentPath) {
+            break
+        }
+    }
+}
+
 $activateScript = Join-Path $venvPath "Scripts\Activate.ps1"
 
 if (-not (Test-Path $activateScript)) {
-    Write-Host "⚠️ GPU-RAG environment not found. Creating..." -ForegroundColor Yellow
-    & "$Root\ops\gpu-accelerator.ps1" -InstallDeps -Force
+    Write-Host " GPU-RAG environment not found. Creating..." -ForegroundColor Yellow
+    & "$projectRoot\ops\gpu-accelerator.ps1" -InstallDeps -Force
 }
 
 # Activate environment
 & $activateScript
 
 # ===== GPU-OPTIMIZED CONTEXT MANAGEMENT =====
-Write-Host "📊 Building GPU-optimized context management system..." -ForegroundColor Cyan
+Write-Host " Building GPU-optimized context management system..." -ForegroundColor Cyan
 
 $contextGovernor = @"
 import os
@@ -51,18 +76,18 @@ try:
     import faiss
     from sentence_transformers import SentenceTransformer
     GPU_AVAILABLE = True
-    print("🚀 GPU acceleration enabled")
+    print(" GPU acceleration enabled")
 except ImportError as e:
-    print(f"⚠️ GPU libraries not available: {e}")
-    print("🔄 Falling back to CPU-only mode")
+    print(f" GPU libraries not available: {e}")
+    print(" Falling back to CPU-only mode")
     GPU_AVAILABLE = False
     
     # CPU fallback imports
     try:
         import numpy as np
-        print("✅ CPU fallback mode enabled")
+        print(" CPU fallback mode enabled")
     except ImportError:
-        print("❌ Critical: numpy not available")
+        print(" Critical: numpy not available")
         exit(1)
 
 class GPUContextGovernor:
@@ -79,12 +104,12 @@ class GPUContextGovernor:
     def setup_model(self):
         """Initialize sentence transformer with GPU optimization or CPU fallback"""
         if not GPU_AVAILABLE:
-            print("🔄 Using CPU-only fallback mode")
+            print(" Using CPU-only fallback mode")
             self.device = 'cpu'
             self.model = None
             return
             
-        print(f"🚀 Loading model: {self.model_name}")
+        print(f" Loading model: {self.model_name}")
         
         # Auto-detect device
         if self.device == 'auto':
@@ -93,7 +118,7 @@ class GPUContextGovernor:
             else:
                 self.device = 'cpu'
         
-        print(f"📱 Using device: {self.device}")
+        print(f" Using device: {self.device}")
         
         try:
             # Load model with optimizations
@@ -102,17 +127,17 @@ class GPUContextGovernor:
             # Move to GPU if available
             if self.device == 'cuda':
                 self.model = self.model.to('cuda')
-                print(f"✅ Model moved to GPU: {torch.cuda.get_device_name(0)}")
-                print(f"🎮 GPU Memory: {torch.cuda.get_device_properties(0).total_memory / 1024**3:.1f} GB")
+                print(f" Model moved to GPU: {torch.cuda.get_device_name(0)}")
+                print(f" GPU Memory: {torch.cuda.get_device_properties(0).total_memory / 1024**3:.1f} GB")
         except Exception as e:
-            print(f"⚠️ Model loading failed: {e}")
-            print("🔄 Falling back to CPU-only mode")
+            print(f" Model loading failed: {e}")
+            print(" Falling back to CPU-only mode")
             self.device = 'cpu'
             self.model = None
     
     def estimate_tokens(self, text: str) -> int:
         """Estimate token count for text"""
-        # Rough estimation: 1 token ≈ 4 characters
+        # Rough estimation: 1 token  4 characters
         return len(text) // 4
     
     def smart_chunk_text(self, text: str, chunk_size: int = 512, overlap: int = 50) -> List[str]:
@@ -195,7 +220,7 @@ class GPUContextGovernor:
             return file_chunks
             
         except Exception as e:
-            print(f"⚠️ Error processing {file_path}: {e}")
+            print(f" Error processing {file_path}: {e}")
             return []
     
     def build_index(self, root_path: str, chunk_size: int = 512, overlap: int = 50):
@@ -209,7 +234,7 @@ class GPUContextGovernor:
             '*.go', '*.cpp', '*.h', '*.cs', '*.java'
         ]
         
-        print("🔍 Scanning files...")
+        print(" Scanning files...")
         all_files = []
         for pattern in patterns:
             files = list(root.rglob(pattern))
@@ -219,7 +244,7 @@ class GPUContextGovernor:
         exclude_dirs = {'.git', 'node_modules', '__pycache__', '.venv', 'rag_env', 'gpu_rag_env', '.sandboxes'}
         all_files = [f for f in all_files if not any(exclude in str(f) for exclude in exclude_dirs)]
         
-        print(f"📁 Found {len(all_files)} files to process")
+        print(f" Found {len(all_files)} files to process")
         
         # Process files in batches for memory efficiency
         batch_size = 100
@@ -227,7 +252,7 @@ class GPUContextGovernor:
         
         for i in range(0, len(all_files), batch_size):
             batch = all_files[i:i + batch_size]
-            print(f"📦 Processing batch {i//batch_size + 1}/{(len(all_files) + batch_size - 1)//batch_size}")
+            print(f" Processing batch {i//batch_size + 1}/{(len(all_files) + batch_size - 1)//batch_size}")
             
             for file_path in batch:
                 if file_path.is_file():
@@ -235,53 +260,53 @@ class GPUContextGovernor:
                     all_chunks.extend(chunks)
         
         if not all_chunks:
-            print("❌ No documents to embed!")
+            print(" No documents to embed!")
             return
         
-        print(f"📊 Total chunks: {len(all_chunks)}")
+        print(f" Total chunks: {len(all_chunks)}")
         total_tokens = sum(doc['tokens'] for doc in all_chunks)
-        print(f"💾 Total estimated tokens: {total_tokens:,}")
+        print(f" Total estimated tokens: {total_tokens:,}")
         
         # Generate embeddings
-        print("🧠 Generating embeddings...")
+        print(" Generating embeddings...")
         texts = [doc['content'] for doc in all_chunks]
         
         start_time = time.time()
         embeddings = self.model.encode(texts, show_progress_bar=True, batch_size=32)
         end_time = time.time()
         
-        print(f"⚡ Embeddings generated in {(end_time - start_time):.2f} seconds")
+        print(f" Embeddings generated in {(end_time - start_time):.2f} seconds")
         
         # Convert to float32 for FAISS
         embeddings = embeddings.astype(np.float32)
         
         # Build FAISS index
-        print("🔧 Building FAISS index...")
+        print(" Building FAISS index...")
         dimension = embeddings.shape[1]
         
         # Use GPU index if available
         if self.device == 'cuda' and faiss.get_num_gpus() > 0:
-            print("🎮 Using GPU-accelerated FAISS")
+            print(" Using GPU-accelerated FAISS")
             self.index = faiss.IndexFlatIP(dimension)
             res = faiss.StandardGpuResources()
             self.index = faiss.index_cpu_to_gpu(res, 0, self.index)
         else:
-            print("💻 Using CPU FAISS")
+            print(" Using CPU FAISS")
             self.index = faiss.IndexFlatIP(dimension)
         
         # Add vectors to index
         self.index.add(embeddings)
         self.documents = all_chunks
         
-        print(f"✅ Index built with {len(all_chunks)} documents")
-        print(f"📏 Embedding dimension: {dimension}")
+        print(f" Index built with {len(all_chunks)} documents")
+        print(f" Embedding dimension: {dimension}")
         
         return embeddings
     
     def search_with_budget(self, query: str, top_k: int = 10, max_tokens: int = None) -> Dict:
         """Search for similar documents within token budget"""
         if self.index is None:
-            print("❌ Index not built. Run build_index() first.")
+            print(" Index not built. Run build_index() first.")
             return {'results': [], 'total_tokens': 0, 'budget_used': 0}
         
         if max_tokens is None:
@@ -330,8 +355,8 @@ class GPUContextGovernor:
         if max_tokens is None:
             max_tokens = self.max_tokens
         
-        print(f"🧠 Intelligent context assembly for: '{query}'")
-        print(f"💾 Token budget: {max_tokens:,}")
+        print(f" Intelligent context assembly for: '{query}'")
+        print(f" Token budget: {max_tokens:,}")
         
         # First pass: get high-relevance results
         high_relevance = self.search_with_budget(query, top_k=20, max_tokens=max_tokens)
@@ -430,15 +455,15 @@ class GPUContextGovernor:
         with open(output_path / 'CONTEXT_DETAILED.json', 'w') as f:
             json.dump(context_data, f, indent=2)
         
-        print(f"💾 Context saved to {output_path}")
-        print(f"📊 Budget usage: {context_data['budget_used']:.1f}%")
+        print(f" Context saved to {output_path}")
+        print(f" Budget usage: {context_data['budget_used']:.1f}%")
     
     def load_index(self, index_path: str):
         """Load existing index"""
         index_path = Path(index_path)
         
         if not (index_path / 'index.faiss').exists():
-            print(f"❌ Index file not found: {index_path / 'index.faiss'}")
+            print(f" Index file not found: {index_path / 'index.faiss'}")
             return False
         
         # Load FAISS index
@@ -449,7 +474,7 @@ class GPUContextGovernor:
             metadata = json.load(f)
         
         self.documents = metadata['documents']
-        print(f"✅ Index loaded: {len(self.documents)} documents")
+        print(f" Index loaded: {len(self.documents)} documents")
         return True
 
 def main():
@@ -459,10 +484,10 @@ def main():
     index_path = Path(r'$Root') / 'context' / 'vec'
     
     if index_path.exists() and (index_path / 'index.faiss').exists():
-        print("📂 Loading existing index...")
+        print(" Loading existing index...")
         governor.load_index(str(index_path))
     else:
-        print("🔨 Building new index...")
+        print(" Building new index...")
         governor.build_index(r'$Root')
         
         # Save index
@@ -490,16 +515,16 @@ def main():
     
     # Interactive mode
     if '$Interactive' == 'True':
-        print("\\n💬 Interactive mode. Type 'quit' to exit.")
+        print("\\n Interactive mode. Type 'quit' to exit.")
         while True:
-            query = input("\\n🔍 Query: ").strip()
+            query = input("\\n Query: ").strip()
             if query.lower() == 'quit':
                 break
             
             if query:
                 context = governor.intelligent_context_assembly(query, $MaxTokens)
-                print(f"\\n📋 Context assembled: {len(context['results'])} results")
-                print(f"💾 Token usage: {context['total_tokens']:,}/{context['max_tokens']:,} ({context['budget_used']:.1f}%)")
+                print(f"\\n Context assembled: {len(context['results'])} results")
+                print(f" Token usage: {context['total_tokens']:,}/{context['max_tokens']:,} ({context['budget_used']:.1f}%)")
                 
                 # Save context
                 context_dir = Path(r'$Root') / 'context' / '_latest'
@@ -507,7 +532,7 @@ def main():
     
     # Benchmark mode
     elif '$Benchmark' == 'True':
-        print("\\n📊 Running context governor benchmarks...")
+        print("\\n Running context governor benchmarks...")
         
         # Test queries
         test_queries = [
@@ -519,27 +544,27 @@ def main():
         ]
         
         for query in test_queries:
-            print(f"\\n🔍 Testing: '{query}'")
+            print(f"\\n Testing: '{query}'")
             start_time = time.time()
             context = governor.intelligent_context_assembly(query, $MaxTokens)
             end_time = time.time()
             
-            print(f"⏱️  Assembly time: {(end_time - start_time)*1000:.2f} ms")
-            print(f"📊 Results: {len(context['results'])} documents")
-            print(f"💾 Token usage: {context['total_tokens']:,}/{context['max_tokens']:,} ({context['budget_used']:.1f}%)")
+            print(f"  Assembly time: {(end_time - start_time)*1000:.2f} ms")
+            print(f" Results: {len(context['results'])} documents")
+            print(f" Token usage: {context['total_tokens']:,}/{context['max_tokens']:,} ({context['budget_used']:.1f}%)")
     
     # Single query mode
     elif '$Query':
-        print(f"🔍 Processing query: '$Query'")
+        print(f" Processing query: '$Query'")
         context = governor.intelligent_context_assembly('$Query', $MaxTokens)
         
         # Save context
         context_dir = Path('$Root') / 'context' / '_latest'
         governor.save_context(context, str(context_dir))
         
-        print(f"\\n📋 Context assembled successfully!")
-        print(f"📊 Results: {len(context['results'])} documents")
-        print(f"💾 Token usage: {context['total_tokens']:,}/{context['max_tokens']:,} ({context['budget_used']:.1f}%)")
+        print(f"\\n Context assembled successfully!")
+        print(f" Results: {len(context['results'])} documents")
+        print(f" Token usage: {context['total_tokens']:,}/{context['max_tokens']:,} ({context['budget_used']:.1f}%)")
         
         # Display top results
         for i, result in enumerate(context['results'][:5]):
@@ -555,27 +580,27 @@ $governorPath = Join-Path $env:TEMP "context_governor.py"
 $contextGovernor | Out-File $governorPath -Encoding utf8
 
 # ===== EXECUTE CONTEXT GOVERNOR =====
-Write-Host "🚀 Executing GPU-Optimized Context Governor..." -ForegroundColor Cyan
+Write-Host " Executing GPU-Optimized Context Governor..." -ForegroundColor Cyan
 
 if ($Query) {
-    Write-Host "🔍 Query: $Query" -ForegroundColor Green
-    Write-Host "📊 Top-K: $TopK" -ForegroundColor Green
-    Write-Host "💾 Max Tokens: $MaxTokens" -ForegroundColor Green
-    Write-Host "🎮 GPU Mode: $UseGPU" -ForegroundColor Green
+    Write-Host " Query: $Query" -ForegroundColor Green
+    Write-Host " Top-K: $TopK" -ForegroundColor Green
+    Write-Host " Max Tokens: $MaxTokens" -ForegroundColor Green
+    Write-Host " GPU Mode: $UseGPU" -ForegroundColor Green
 }
 
 python $governorPath
 
 if ($LASTEXITCODE -eq 0) {
-    Write-Host "✅ Context Governor completed successfully!" -ForegroundColor Green
+    Write-Host " Context Governor completed successfully!" -ForegroundColor Green
     
     # Check if context was generated
     $trimmedPath = Join-Path $Root "context\_latest\TRIMMED.json"
     if (Test-Path $trimmedPath) {
         $context = Get-Content $trimmedPath -Raw | ConvertFrom-Json
-        Write-Host "📊 Generated $($context.Count) results" -ForegroundColor Green
+        Write-Host " Generated $($context.Count) results" -ForegroundColor Green
         if ($context.Count -gt 0) {
-            Write-Host "💾 Top result score: $($context[0].score)" -ForegroundColor Green
+            Write-Host " Top result score: $($context[0].score)" -ForegroundColor Green
         }
     }
 } else {
@@ -583,4 +608,4 @@ if ($LASTEXITCODE -eq 0) {
     exit 1
 }
 
-Write-Host "`n🧠 GPU-Optimized Context Governor ready!" -ForegroundColor Green
+Write-Host "`n GPU-Optimized Context Governor ready!" -ForegroundColor Green

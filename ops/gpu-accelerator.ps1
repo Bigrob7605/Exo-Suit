@@ -1,4 +1,4 @@
-# 🚀 GPU Accelerator for Agent Exo-Suit V2.1 "Indestructible"
+#  GPU Accelerator for Agent Exo-Suit V2.1 "Indestructible"
 # Full CUDA acceleration with fallback to CPU for maximum performance
 
 [CmdletBinding()]
@@ -13,7 +13,7 @@ $ErrorActionPreference = 'Stop'
 Set-StrictMode -Version Latest
 
 # ===== GPU DETECTION & VALIDATION =====
-Write-Host "🎮 GPU Accelerator Initialization..." -ForegroundColor Cyan
+Write-Host " GPU Accelerator Initialization..." -ForegroundColor Cyan
 
 $gpuInfo = @{
     CUDA = $false
@@ -31,11 +31,11 @@ try {
         $gpuInfo.Driver = ($nvidiaOutput -split ',')[2]
         $gpuInfo.Memory = [int]($nvidiaOutput -split ',')[1]
         $gpuInfo.Compute = ($nvidiaOutput -split ',')[3]
-        Write-Host "✅ NVIDIA GPU detected: $($nvidiaOutput -split ',')[0]" -ForegroundColor Green
+        Write-Host " NVIDIA GPU detected: $($nvidiaOutput -split ',')[0]" -ForegroundColor Green
         Write-Host "   Memory: $($gpuInfo.Memory) MB | Driver: $($gpuInfo.Driver) | Compute: $($gpuInfo.Compute)" -ForegroundColor Green
     }
 } catch {
-    Write-Host "⚠️ NVIDIA GPU not detected" -ForegroundColor Yellow
+    Write-Host " NVIDIA GPU not detected" -ForegroundColor Yellow
 }
 
 # Check CUDA availability
@@ -43,26 +43,26 @@ try {
     $cudaVersion = nvidia-smi 2>$null | Select-String "CUDA Version"
     if ($cudaVersion) {
         $gpuInfo.CUDA = $true
-        Write-Host "✅ CUDA detected: $($cudaVersion.ToString())" -ForegroundColor Green
+        Write-Host " CUDA detected: $($cudaVersion.ToString())" -ForegroundColor Green
     }
 } catch {
-    Write-Host "⚠️ CUDA not detected" -ForegroundColor Yellow
+    Write-Host " CUDA not detected" -ForegroundColor Yellow
 }
 
 # Check PyTorch CUDA support
 try {
     $torchCuda = python -c "import torch; print('CUDA available:', torch.cuda.is_available()); print('CUDA version:', torch.version.cuda if torch.cuda.is_available() else 'N/A')" 2>$null
     if ($torchCuda -match "CUDA available: True") {
-        Write-Host "✅ PyTorch CUDA support confirmed" -ForegroundColor Green
+        Write-Host " PyTorch CUDA support confirmed" -ForegroundColor Green
     } else {
-        Write-Host "⚠️ PyTorch CUDA support not available" -ForegroundColor Yellow
+        Write-Host " PyTorch CUDA support not available" -ForegroundColor Yellow
     }
 } catch {
-    Write-Host "⚠️ PyTorch not installed or CUDA support unavailable" -ForegroundColor Yellow
+    Write-Host " PyTorch not installed or CUDA support unavailable" -ForegroundColor Yellow
 }
 
 # ===== ENVIRONMENT OPTIMIZATION =====
-Write-Host "🔧 Optimizing environment for GPU acceleration..." -ForegroundColor Cyan
+Write-Host " Optimizing environment for GPU acceleration..." -ForegroundColor Cyan
 
 # Set CUDA environment variables
 $env:CUDA_VISIBLE_DEVICES = "0"
@@ -78,12 +78,12 @@ $env:NPM_CONFIG_CACHE = Join-Path $env:SCRATCH_DIR "npm"
 # Create scratch directory if it doesn't exist
 if (-not (Test-Path $env:SCRATCH_DIR)) {
     New-Item -ItemType Directory -Force -Path $env:SCRATCH_DIR | Out-Null
-    Write-Host "✅ Created scratch directory: $env:SCRATCH_DIR" -ForegroundColor Green
+    Write-Host " Created scratch directory: $env:SCRATCH_DIR" -ForegroundColor Green
 }
 
 # ===== GPU-OPTIMIZED RAG SETUP =====
 if ($InstallDeps) {
-    Write-Host "📦 Installing GPU-optimized dependencies..." -ForegroundColor Cyan
+    Write-Host " Installing GPU-optimized dependencies..." -ForegroundColor Cyan
     
     # Create virtual environment
     $venvPath = Join-Path $PWD "gpu_rag_env"
@@ -120,14 +120,14 @@ if ($InstallDeps) {
             Write-Host "Installing additional dependencies..." -ForegroundColor Cyan
             pip install numpy pandas scikit-learn transformers accelerate
             
-            Write-Host "✅ GPU-RAG environment setup complete!" -ForegroundColor Green
+            Write-Host " GPU-RAG environment setup complete!" -ForegroundColor Green
         }
     }
 }
 
 # ===== GPU BENCHMARKING =====
 if ($Benchmark) {
-    Write-Host "📊 Running GPU benchmarks..." -ForegroundColor Cyan
+    Write-Host " Running GPU benchmarks..." -ForegroundColor Cyan
     
     $benchmarkScript = @"
 import time
@@ -136,7 +136,7 @@ import numpy as np
 from sentence_transformers import SentenceTransformer
 
 def benchmark_gpu():
-    print("🚀 GPU Benchmark Suite")
+    print(" GPU Benchmark Suite")
     print("=" * 50)
     
     # Check CUDA availability
@@ -172,7 +172,7 @@ def benchmark_gpu():
         torch.cuda.empty_cache()
     
     # Sentence transformer benchmark
-    print("\\n📝 Sentence Transformer Benchmark")
+    print("\\n Sentence Transformer Benchmark")
     model = SentenceTransformer('$Model')
     
     test_texts = ["This is a test sentence for benchmarking."] * 100
@@ -201,42 +201,42 @@ if __name__ == '__main__':
     python $benchmarkPath
     
     if ($LASTEXITCODE -eq 0) {
-        Write-Host "✅ GPU benchmark complete!" -ForegroundColor Green
+        Write-Host " GPU benchmark complete!" -ForegroundColor Green
     } else {
         Write-Warning "GPU benchmark failed"
     }
 }
 
 # ===== GPU STATUS REPORT =====
-Write-Host "📋 GPU Acceleration Status Report" -ForegroundColor Cyan
+Write-Host " GPU Acceleration Status Report" -ForegroundColor Cyan
 Write-Host "=" * 50 -ForegroundColor Cyan
 
 $status = @{
-    "NVIDIA GPU" = if ($gpuInfo.GPU) { "✅ Available" } else { "❌ Not Detected" }
-    "CUDA Support" = if ($gpuInfo.CUDA) { "✅ Available" } else { "❌ Not Available" }
-    "PyTorch CUDA" = if ($torchCuda -match "CUDA available: True") { "✅ Available" } else { "❌ Not Available" }
+    "NVIDIA GPU" = if ($gpuInfo.GPU) { " Available" } else { " Not Detected" }
+    "CUDA Support" = if ($gpuInfo.CUDA) { " Available" } else { " Not Available" }
+    "PyTorch CUDA" = if ($torchCuda -match "CUDA available: True") { " Available" } else { " Not Available" }
     "GPU Memory" = if ($gpuInfo.Memory -gt 0) { "$($gpuInfo.Memory) MB" } else { "Unknown" }
     "Driver Version" = if ($gpuInfo.Driver) { $gpuInfo.Driver } else { "Unknown" }
     "Compute Capability" = if ($gpuInfo.Compute) { $gpuInfo.Compute } else { "Unknown" }
 }
 
 $status.GetEnumerator() | ForEach-Object {
-    Write-Host "$($_.Key): $($_.Value)" -ForegroundColor $(if ($_.Value -match "✅") { "Green" } elseif ($_.Value -match "❌") { "Red" } else { "Yellow" })
+    Write-Host "$($_.Key): $($_.Value)" -ForegroundColor $(if ($_.Value -match "") { "Green" } elseif ($_.Value -match "") { "Red" } else { "Yellow" })
 }
 
 # ===== RECOMMENDATIONS =====
-Write-Host "`n💡 Recommendations:" -ForegroundColor Cyan
+Write-Host "`n Recommendations:" -ForegroundColor Cyan
 
 if (-not $gpuInfo.GPU) {
-    Write-Host "❌ Install NVIDIA drivers and GPU" -ForegroundColor Red
+    Write-Host " Install NVIDIA drivers and GPU" -ForegroundColor Red
 } elseif (-not $gpuInfo.CUDA) {
-    Write-Host "❌ Install CUDA toolkit" -ForegroundColor Red
+    Write-Host " Install CUDA toolkit" -ForegroundColor Red
 } elseif ($torchCuda -notmatch "CUDA available: True") {
-    Write-Host "❌ Reinstall PyTorch with CUDA support" -ForegroundColor Red
+    Write-Host " Reinstall PyTorch with CUDA support" -ForegroundColor Red
     Write-Host "   Run: pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118" -ForegroundColor Yellow
 } else {
-    Write-Host "✅ GPU acceleration fully operational!" -ForegroundColor Green
+    Write-Host " GPU acceleration fully operational!" -ForegroundColor Green
     Write-Host "   Run with -Benchmark to test performance" -ForegroundColor Cyan
 }
 
-Write-Host "`n🚀 GPU Accelerator initialization complete!" -ForegroundColor Green
+Write-Host "`n GPU Accelerator initialization complete!" -ForegroundColor Green

@@ -35,7 +35,7 @@ def main():
             for line in walk_dependencies(data):
                 f.write(line + '\n')
         
-        print(f"✅ Mermaid diagram generated: {output_file}")
+        print(f" Mermaid diagram generated: {output_file}")
         return 0
         
     except json.JSONDecodeError as e:

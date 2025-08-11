@@ -12,9 +12,15 @@ import subprocess
 from pathlib import Path
 from typing import Dict, List, Tuple
 
+# Fix Windows console encoding issues
+if sys.platform == "win32":
+    import codecs
+    sys.stdout = codecs.getwriter('utf-8')(sys.stdout.detach())
+    sys.stderr = codecs.getwriter('utf-8')(sys.stderr.detach())
+
 def run_command(cmd: List[str], description: str) -> Tuple[bool, str, float]:
     """Run a command and return success status, output, and duration"""
-    print(f"🔨 {description}...")
+    print(f"[BUILD] {description}...")
     print(f"  Command: {' '.join(cmd)}")
     
     start_time = time.time()
@@ -29,25 +35,25 @@ def run_command(cmd: List[str], description: str) -> Tuple[bool, str, float]:
         duration = time.time() - start_time
         
         if result.returncode == 0:
-            print(f"  ✅ Success ({duration:.2f}s)")
+            print(f"  [OK] Success ({duration:.2f}s)")
             return True, result.stdout, duration
         else:
-            print(f"  ❌ Failed ({duration:.2f}s)")
+            print(f"  [FAIL] Failed ({duration:.2f}s)")
             print(f"    Error: {result.stderr}")
             return False, result.stderr, duration
             
     except subprocess.TimeoutExpired:
         duration = time.time() - start_time
-        print(f"  ⏰ Timeout after {duration:.2f}s")
+        print(f"  [TIMEOUT] Timeout after {duration:.2f}s")
         return False, "Command timed out", duration
     except Exception as e:
         duration = time.time() - start_time
-        print(f"  💥 Exception: {e}")
+        print(f"  [ERROR] Exception: {e}")
         return False, str(e), duration
 
 def test_device_detection() -> Dict[str, bool]:
     """Test device detection capabilities"""
-    print("🔍 Testing Device Detection")
+    print("[TEST] Testing Device Detection")
     print("=" * 40)
     
     devices = {}
@@ -86,13 +92,13 @@ def test_device_detection() -> Dict[str, bool]:
 
 def test_embedding_modes() -> Dict[str, Dict]:
     """Test different embedding modes"""
-    print("\n🚀 Testing Embedding Modes")
+    print("\n[TEST] Testing Embedding Modes")
     print("=" * 40)
     
     results = {}
     
     # Test CPU-only mode
-    print("\n🖥️ Testing CPU-only mode...")
+    print("\n[CPU] Testing CPU-only mode...")
     success, output, duration = run_command(
         [".\\embed.ps1", "-CPU"], 
         "CPU-only embedding"
@@ -104,7 +110,7 @@ def test_embedding_modes() -> Dict[str, Dict]:
     }
     
     # Test GPU-only mode (if available)
-    print("\n🎮 Testing GPU-only mode...")
+    print("\n[GPU] Testing GPU-only mode...")
     success, output, duration = run_command(
         [".\\embed.ps1", "-GPU"], 
         "GPU-only embedding"
@@ -116,7 +122,7 @@ def test_embedding_modes() -> Dict[str, Dict]:
     }
     
     # Test hybrid mode (if both available)
-    print("\n🚀 Testing hybrid CPU+GPU mode...")
+    print("\n[HYBRID] Testing hybrid CPU+GPU mode...")
     success, output, duration = run_command(
         [".\\embed.ps1", "-Hybrid"], 
         "Hybrid CPU+GPU embedding"
@@ -128,7 +134,7 @@ def test_embedding_modes() -> Dict[str, Dict]:
     }
     
     # Test auto-detection mode
-    print("\n🎯 Testing auto-detection mode...")
+    print("\n[AUTO] Testing auto-detection mode...")
     success, output, duration = run_command(
         [".\\embed.ps1"], 
         "Auto-detection embedding"
@@ -143,20 +149,20 @@ def test_embedding_modes() -> Dict[str, Dict]:
 
 def test_retrieval_modes() -> Dict[str, Dict]:
     """Test different retrieval modes"""
-    print("\n🔍 Testing Retrieval Modes")
+    print("\n[TEST] Testing Retrieval Modes")
     print("=" * 40)
     
     # Check if index exists
     index_file = Path("index.faiss")
     if not index_file.exists():
-        print("⚠️ No index found. Skipping retrieval tests.")
+        print("[WARNING] No index found. Skipping retrieval tests.")
         return {}
     
     results = {}
     test_query = "GPU acceleration and performance optimization"
     
     # Test CPU-only retrieval
-    print("\n🖥️ Testing CPU-only retrieval...")
+    print("\n[CPU] Testing CPU-only retrieval...")
     success, output, duration = run_command(
         ["python", "retrieve.py", "--query", test_query, "--cpu", "--topk", "10"], 
         "CPU-only retrieval"
@@ -168,7 +174,7 @@ def test_retrieval_modes() -> Dict[str, Dict]:
     }
     
     # Test GPU-only retrieval
-    print("\n🎮 Testing GPU-only retrieval...")
+    print("\n[GPU] Testing GPU-only retrieval...")
     success, output, duration = run_command(
         ["python", "retrieve.py", "--query", test_query, "--gpu", "--topk", "10"], 
         "GPU-only retrieval"
@@ -180,7 +186,7 @@ def test_retrieval_modes() -> Dict[str, Dict]:
     }
     
     # Test hybrid retrieval
-    print("\n🚀 Testing hybrid retrieval...")
+    print("\n[HYBRID] Testing hybrid retrieval...")
     success, output, duration = run_command(
         ["python", "retrieve.py", "--query", test_query, "--hybrid", "--topk", "10"], 
         "Hybrid retrieval"
@@ -195,7 +201,7 @@ def test_retrieval_modes() -> Dict[str, Dict]:
 
 def benchmark_performance() -> Dict[str, float]:
     """Run performance benchmarks"""
-    print("\n⚡ Performance Benchmarking")
+    print("\n[BENCHMARK] Performance Benchmarking")
     print("=" * 40)
     
     benchmarks = {}
@@ -204,7 +210,7 @@ def benchmark_performance() -> Dict[str, float]:
     batch_sizes = [10, 50, 100]
     
     for batch_size in batch_sizes:
-        print(f"\n📊 Benchmarking batch size: {batch_size}")
+        print(f"\n[BATCH] Benchmarking batch size: {batch_size}")
         
         # CPU benchmark
         success, output, duration = run_command(
@@ -229,7 +235,7 @@ def generate_test_report(devices: Dict[str, bool],
                         retrieval_results: Dict[str, Dict],
                         benchmarks: Dict[str, float]) -> str:
     """Generate comprehensive test report"""
-    print("\n📋 Generating Test Report")
+    print("\n[REPORT] Generating Test Report")
     print("=" * 40)
     
     report = {
@@ -270,31 +276,31 @@ def generate_test_report(devices: Dict[str, bool],
     with open(report_file, 'w') as f:
         json.dump(report, f, indent=2)
     
-    print(f"✅ Test report saved to: {report_file}")
+    print(f"[OK] Test report saved to: {report_file}")
     return report_file
 
 def display_test_summary(report_file: str):
     """Display test summary"""
-    print("\n🎉 Test Summary")
+    print("\n[SUMMARY] Test Summary")
     print("=" * 40)
     
     with open(report_file, 'r') as f:
         report = json.load(f)
     
-    print(f"📅 Test Date: {report['test_timestamp']}")
-    print(f"🧪 Total Tests: {report['summary']['total_tests']}")
-    print(f"✅ Successful: {report['summary']['successful_tests']}")
-    print(f"❌ Failed: {report['summary']['total_tests'] - report['summary']['successful_tests']}")
+    print(f"[DATE] Test Date: {report['test_timestamp']}")
+    print(f"[TESTS] Total Tests: {report['summary']['total_tests']}")
+    print(f"[OK] Successful: {report['summary']['successful_tests']}")
+    print(f"[FAIL] Failed: {report['summary']['total_tests'] - report['summary']['successful_tests']}")
     
-    print(f"\n🔧 Device Modes Working:")
+    print(f"\n[DEVICES] Device Modes Working:")
     for mode in report['summary']['device_modes_working']:
-        print(f"  ✅ {mode}")
+        print(f"  [OK] {mode}")
     
-    print(f"\n📊 Performance Benchmarks:")
+    print(f"\n[BENCHMARKS] Performance Benchmarks:")
     for benchmark, duration in report['performance_benchmarks'].items():
         print(f"  {benchmark}: {duration:.3f}s")
     
-    print(f"\n📋 Full report: {report_file}")
+    print(f"\n[REPORT] Full report: {report_file}")
 
 def main():
     """Main test function"""
@@ -304,7 +310,7 @@ def main():
     parser.add_argument('--skip-benchmarks', action='store_true', help='Skip performance benchmarks')
     args = parser.parse_args()
     
-    print("🚀 Agent Exo-Suit V3.0 - Dual-Mode RAG System Test")
+    print("[TEST] Agent Exo-Suit V3.0 - Dual-Mode RAG System Test")
     print("=" * 60)
     
     # Test device detection
@@ -329,7 +335,7 @@ def main():
     report_file = generate_test_report(devices, embedding_results, retrieval_results, benchmarks)
     display_test_summary(report_file)
     
-    print("\n🎯 Test Suite Completed!")
+    print("\n[SUCCESS] Test Suite Completed!")
     print("Check the test report for detailed results and performance metrics.")
 
 if __name__ == '__main__':

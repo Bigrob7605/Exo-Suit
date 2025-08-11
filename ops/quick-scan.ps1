@@ -6,7 +6,7 @@ param(
     [switch]$failFast = $true
 )
 
-Write-Host "🔍 Running quick scan with parallel static analysis..."
+Write-Host " Running quick scan with parallel static analysis..."
 
 # Create jobs array
 $jobs = @()
@@ -50,7 +50,7 @@ Write-Host "Detecting project types and creating lint jobs..."
 
 # JavaScript/TypeScript projects
 if (Test-Path (Join-Path $root "package.json")) {
-    Write-Host "  📦 Found Node.js project"
+    Write-Host "   Found Node.js project"
     
     # ESLint
     if (Test-Path (Join-Path $root "node_modules\.bin\eslint.cmd")) {
@@ -72,7 +72,7 @@ if (Test-Path (Join-Path $root "package.json")) {
 
 # Python projects
 if ((Test-Path (Join-Path $root "requirements.txt")) -or (Test-Path (Join-Path $root "pyproject.toml")) -or (Test-Path (Join-Path $root "setup.py"))) {
-    Write-Host "  🐍 Found Python project"
+    Write-Host "   Found Python project"
     
     # Ruff (modern Python linter)
     if (Get-Command ruff -ErrorAction SilentlyContinue) {
@@ -92,13 +92,13 @@ if ((Test-Path (Join-Path $root "requirements.txt")) -or (Test-Path (Join-Path $
 
 # Rust projects
 if (Test-Path (Join-Path $root "Cargo.toml")) {
-    Write-Host "  🦀 Found Rust project"
+    Write-Host "   Found Rust project"
     $jobs += Start-LintJob -Name "Cargo Clippy" -Command "cargo clippy --quiet"
 }
 
 # PowerShell projects
 if (Get-ChildItem -Path $root -Filter "*.ps1" -Recurse | Select-Object -First 1) {
-    Write-Host "  💻 Found PowerShell project"
+    Write-Host "   Found PowerShell project"
     
     # Simple file existence check
     $ps1Files = Get-ChildItem -Path $root -Filter "*.ps1" -Recurse
@@ -110,15 +110,15 @@ if (Get-ChildItem -Path $root -Filter "*.ps1" -Recurse | Select-Object -First 1)
     }
     
     if ($validFiles -eq $ps1Files.Count) {
-        Write-Host "  ✅ PowerShell files validated: $validFiles files OK"
+        Write-Host "   PowerShell files validated: $validFiles files OK"
     } else {
-        Write-Host "  ⚠️ PowerShell files: $validFiles/$($ps1Files.Count) valid"
+        Write-Host "   PowerShell files: $validFiles/$($ps1Files.Count) valid"
     }
 }
 
 # Go projects
 if (Test-Path (Join-Path $root "go.mod")) {
-    Write-Host "  🐹 Found Go project"
+    Write-Host "   Found Go project"
     $jobs += Start-LintJob -Name "Go Vet" -Command "go vet ./..."
     $jobs += Start-LintJob -Name "Go Fmt" -Command "go fmt ./..."
 }
@@ -143,7 +143,7 @@ if ($jobs.Count -gt 0) {
     }
     
     Write-Host ""
-    Write-Host "🔍 Quick scan completed in $($duration.TotalSeconds.ToString('F1')) seconds"
+    Write-Host " Quick scan completed in $($duration.TotalSeconds.ToString('F1')) seconds"
     Write-Host ""
     
     # Display results
@@ -151,9 +151,9 @@ if ($jobs.Count -gt 0) {
     foreach ($tool in $jobs.Name) {
         $result = $results[$tool]
         if ($result.Success) {
-            Write-Host "  ✅ $tool - PASSED" -ForegroundColor Green
+            Write-Host "   $tool - PASSED" -ForegroundColor Green
         } else {
-            Write-Host "  ❌ $tool - FAILED" -ForegroundColor Red
+            Write-Host "   $tool - FAILED" -ForegroundColor Red
             if ($failFast) {
                 Write-Host "  Error: $($result.Output)" -ForegroundColor Yellow
             } else {
@@ -166,21 +166,21 @@ if ($jobs.Count -gt 0) {
     Write-Host ""
     
     if ($allPassed) {
-        Write-Host "🎉 All lint checks passed! Ready for AI edits." -ForegroundColor Green
+        Write-Host " All lint checks passed! Ready for AI edits." -ForegroundColor Green
         exit 0
     } else {
         if ($failFast) {
-            Write-Host "🚨 Lint checks failed. Please fix issues before proceeding." -ForegroundColor Red
+            Write-Host " Lint checks failed. Please fix issues before proceeding." -ForegroundColor Red
             Write-Host "Run individual lint commands to see detailed errors." -ForegroundColor Yellow
             exit 1
         } else {
-            Write-Host "⚠️ Some lint checks failed. Consider fixing issues before proceeding." -ForegroundColor Yellow
+            Write-Host " Some lint checks failed. Consider fixing issues before proceeding." -ForegroundColor Yellow
             exit 0
         }
     }
     
 } else {
-    Write-Host "⚠️ No lint jobs detected. Project may not have standard linting setup."
+    Write-Host " No lint jobs detected. Project may not have standard linting setup."
     Write-Host "Consider adding ESLint, Ruff, or other linters to your project."
     exit 0
 }

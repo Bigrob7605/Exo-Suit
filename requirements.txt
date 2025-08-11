@@ -1,19 +1,24 @@
-# Exo-Suit Project Requirements
-# Core dependencies for the Agent Exo-Suit system
+# Agent Exo-Suit V4.0 - RAG System Requirements
+# Windows-compatible packages for GPU-accelerated RAG
 
-# RAG and Vector Search
+# Core ML libraries
+torch>=2.0.0
+torchvision>=0.15.0
+torchaudio>=2.0.0
+
+# Sentence transformers for embeddings
 sentence-transformers>=2.2.0
+
+# FAISS for vector search (CPU version for Windows compatibility)
 faiss-cpu>=1.7.0
+
+# NumPy for numerical operations
 numpy>=1.21.0
 
-# Web Framework (if needed)
-waitress>=2.1.0
+# Additional utilities
+tqdm>=4.64.0
+scikit-learn>=1.1.0
+transformers>=4.20.0
 
-# Utilities
-requests>=2.28.0
-python-dotenv>=0.19.0
-
-# Development and Testing
-pytest>=7.0.0
-black>=22.0.0
-flake8>=5.0.0
+# Optional: GPU acceleration (if available)
+# faiss-gpu>=1.7.0  # Uncomment if GPU FAISS is available on Windows

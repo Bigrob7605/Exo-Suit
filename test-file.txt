@@ -1,2 +1,0 @@
-This is a test file to demonstrate Git-Drift stash functionality.
-It will be modified and then stashed to show the complete workflow.
