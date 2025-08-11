@@ -513,7 +513,7 @@ class HybridRAGProcessor:
         logger.info("Cleanup completed")
 
 def main():
-    """Test the hybrid RAG system"""
+    """Test the hybrid RAG system with real project files"""
     print("Agent Exo-Suit V4.0 - Enhanced Hybrid CPU+GPU RAG System")
     print("=" * 70)
     
@@ -521,40 +521,47 @@ def main():
     config = {
         'model_name': 'all-MiniLM-L6-v2',
         'batch_size': 16,
-        'num_workers': 4
+        'num_workers': 4,
+        'ram_disk_size_gb': 2,
+        'gpu_memory_threshold': 0.8
     }
     
     try:
         # Initialize processor
         processor = HybridRAGProcessor(config)
         
-        # Test with sample files
-        test_files = [
-            "test_data.txt",
-            "test_data.txt",  # Duplicate for testing
-            "test_data.txt"   # Duplicate for testing
-        ]
+        # Get real project files instead of test files
+        project_root = Path("..")
+        extensions = ['*.py', '*.ps1', '*.md', '*.txt', '*.json', '*.yaml', '*.yml']
         
-        # Filter existing files
-        existing_files = [f for f in test_files if os.path.exists(f)]
+        project_files = []
+        for ext in extensions:
+            project_files.extend(project_root.rglob(ext))
         
-        if not existing_files:
-            print("No test files found. Creating sample data...")
-            with open("test_data.txt", "w") as f:
-                f.write("This is a test document for the hybrid RAG system.\n" * 100)
-            existing_files = ["test_data.txt"]
+        # Filter to reasonable files (skip large files and directories)
+        filtered_files = []
+        for file_path in project_files:
+            try:
+                if file_path.is_file() and file_path.stat().st_size < 1024 * 1024:  # Less than 1MB
+                    filtered_files.append(str(file_path))
+            except:
+                continue
         
-        print(f"Processing {len(existing_files)} test files...")
+        # Limit to first 50 files for testing
+        test_files = filtered_files[:50]
+        
+        print(f"Found {len(filtered_files)} project files")
+        print(f"Testing with first {len(test_files)} files...")
         
         # Process files
-        results = processor.process_files(existing_files, batch_size=config['batch_size'])
+        results = processor.process_files(test_files, batch_size=config['batch_size'])
         
         # Build index
         if processor.build_index(results):
             print("Index built successfully!")
             
             # Test search
-            query = "test document"
+            query = "GPU acceleration performance"
             search_results = processor.search(query, top_k=3)
             
             print(f"\nSearch results for '{query}':")
@@ -568,6 +575,7 @@ def main():
         print(f"  Successful: {stats.get('successful_processing', 0)}")
         print(f"  Failed: {stats.get('failed_processing', 0)}")
         print(f"  Avg time: {stats.get('average_processing_time', 0):.3f}s")
+        print(f"  Device usage: {stats.get('device_usage', {})}")
         
         # Cleanup
         processor.cleanup()
