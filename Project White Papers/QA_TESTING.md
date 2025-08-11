@@ -1,868 +1,988 @@
-# 🧪 QA_TESTING.md - Agent Exo-Suit V3.0 Testing & Validation
+# QA_TESTING.md - Agent Exo-Suit V4.0 "Perfection" Quality Assurance & Testing
 
 **Document Type:** Quality Assurance & Testing Procedures  
-**Version:** V3.0 "Monster-Mode"  
+**Version:** V4.0 "Perfection"  
 **Last Updated:** January 2025  
-**Target Audience:** QA engineers, testers, developers, DevOps engineers
+**Status:** Development/Testing - V3 System with V4 Components  
+**Target Audience:** QA engineers, developers, system administrators, end users
 
 ---
 
-## 🎯 **QA Testing Overview**
+## **QUALITY ASSURANCE OVERVIEW**
 
-This document covers the **comprehensive testing and validation procedures** for the Agent Exo-Suit V3.0 system. All endpoints, agents, and validation scripts must achieve **100% pass rate with zero failures** before shipping. No partial or flaky successes are acceptable.
+This document provides **comprehensive testing procedures and quality assurance protocols** for the **Agent Exo-Suit V4.0 "Perfection"** system. Follow these procedures to ensure system reliability, performance, and functionality across all environments. The system includes **43 comprehensive features** across **10 major component categories**.
 
----
-
-## 🚨 **Critical Success Requirements**
-
-### **⚠️ MANDATORY SUCCESS CRITERIA**
-- **All tests must pass**: 100% success rate required
-- **Zero failures allowed**: No partial successes acceptable
-- **Evidence bundle updates**: Only after achieving 100% pass
-- **Production readiness**: System must be fully operational
-
-### **🔒 Testing Discipline**
-- **Locked in README**: These requirements are documented at the top
-- **Future workflows**: All future development must follow this discipline
-- **Quality gates**: No deployment without 100% test success
-- **Continuous validation**: Ongoing testing throughout development cycle
+### **What We're Testing**
+- **GPU-RAG-V4.ps1**: Hybrid CPU+GPU processing with intelligent fallback
+- **emoji-sentinel-v4.ps1**: Ultra-robust emoji detection and removal
+- **context-governor.ps1**: Intelligent context management and optimization
+- **Drift-Guard-V4.ps1**: Advanced Git drift detection and protection
+- **Project-Health-Scanner-V4.ps1**: Comprehensive project health assessment
+- **Scan-Secrets-V4.ps1**: Advanced secret detection and vulnerability scanning
+- **Import-Indexer-V4.ps1**: Multi-language import detection and analysis
+- **Symbol-Indexer-V4.ps1**: Comprehensive symbol extraction and indexing
+- **Power-Management-V4.ps1**: System optimization and performance tuning
+- **GPU-Monitor-V4.ps1**: Real-time GPU monitoring and management
 
 ---
 
-## 🧪 **Testing Framework & Architecture**
+## **TESTING FRAMEWORK**
 
-### **Testing Layers**
-```
-┌─────────────────────────────────────────────────────────────┐
-│                    Testing Pyramid                          │
-├─────────────────────────────────────────────────────────────┤
-│  🧪 Integration Tests (20%)                                 │
-│  ├── End-to-end workflows                                  │
-│  ├── System integration                                    │
-│  └── Cross-component testing                               │
-├─────────────────────────────────────────────────────────────┤
-│  🔧 Component Tests (60%)                                  │
-│  ├── Individual script testing                             │
-│  ├── Function validation                                   │
-│  └── Error handling                                        │
-├─────────────────────────────────────────────────────────────┤
-│  📊 Unit Tests (20%)                                       │
-│  ├── Function-level testing                                │
-│  ├── Data validation                                       │
-│  └── Edge case handling                                    │
-└─────────────────────────────────────────────────────────────┘
-```
+### **Test Categories**
 
-### **Testing Tools & Infrastructure**
-- **PowerShell Pester**: Unit and integration testing
-- **Python unittest**: Python module testing
-- **Manual validation**: Interactive testing procedures
-- **Performance benchmarking**: Load and stress testing
-- **Automated CI/CD**: Continuous testing integration
+#### **1. Functional Testing**
+- **Core Operations**: All 43 features across 10 component categories
+- **Performance Tools**: GPU acceleration, power management, optimization
+- **Emoji Defense**: Detection, logging, removal, and prevention
+- **RAG System**: Vector search, context retrieval, token management
+- **Security Scanning**: Secret detection, vulnerability assessment, compliance checking
+- **Symbol Indexing**: Multi-language symbol extraction and indexing
+- **Import Management**: AST-aware import detection and analysis
+- **Context Management**: Intelligent chunking, overlap, and optimization
+- **Drift Protection**: Git state monitoring and drift detection
+- **Health Assessment**: System health, dependency scanning, performance analysis
 
----
+#### **2. Performance Testing**
+- **Speed Benchmarks**: File processing, scan times, response latency
+- **Resource Usage**: Memory consumption, CPU utilization, GPU efficiency
+- **Scalability**: Large codebase handling, concurrent operations
+- **Stress Testing**: Extended operation, resource exhaustion scenarios
+- **GPU Acceleration**: CUDA performance, memory optimization, fallback handling
+- **Hybrid Processing**: CPU+GPU load balancing and optimization
 
-## 📋 **Pre-Testing Checklist**
+#### **3. Integration Testing**
+- **PowerShell Integration**: Script execution, module loading, error handling
+- **Python Integration**: RAG engine, FAISS operations, GPU acceleration
+- **System Integration**: Power plans, registry settings, environment variables
+- **External Tools**: ripgrep, CUDA toolkit, system utilities
+- **Multi-language Support**: Python, JavaScript, C#, Java, Go, Rust, HTML, CSS, and more
+- **Cross-Platform Compatibility**: Windows, Linux, macOS support
 
-### **✅ Environment Preparation**
-- [ ] **System Requirements Met**
-  - [ ] PowerShell 7.0+ installed and configured
-  - [ ] Python 3.8+ with virtual environment
-  - [ ] GPU drivers updated (if GPU testing)
-  - [ ] Sufficient disk space (10GB+ free)
-  - [ ] Administrator privileges available
-
-- [ ] **Dependencies Installed**
-  - [ ] All Python packages installed
-  - [ ] ripgrep available (optional)
-  - [ ] CUDA toolkit (GPU testing)
-  - [ ] PowerShell modules loaded
-
-- [ ] **System State Clean**
-  - [ ] No drift detected
-  - [ ] Clean git working tree
-  - [ ] No conflicting processes
-  - [ ] Sufficient system resources
-
-### **✅ Test Data Preparation**
-- [ ] **Test Projects Available**
-  - [ ] Small project (1K files) for quick tests
-  - [ ] Medium project (10K files) for standard tests
-  - [ ] Large project (100K+ files) for stress tests
-  - [ ] Known good baseline for comparison
-
-- [ ] **Test Scenarios Defined**
-  - [ ] Normal operation scenarios
-  - [ ] Error condition scenarios
-  - [ ] Performance edge cases
-  - [ ] Recovery scenarios
+#### **4. Security Testing**
+- **Permission Validation**: Administrator privileges, file access rights
+- **Input Validation**: Parameter handling, file path security
+- **Resource Protection**: Memory limits, disk space management
+- **Error Handling**: Graceful failure, secure error messages
+- **Emoji Defense**: Comprehensive emoji detection and removal
+- **Secret Scanning**: Credential detection, vulnerability assessment
+- **Vulnerability Assessment**: CVE scanning, dependency analysis
 
 ---
 
-## 🧪 **Core Testing Procedures**
+## **PRE-TESTING SETUP**
 
-### **1️⃣ System Health Testing**
+### **Environment Preparation**
 
-#### **Test: Basic Health Scan**
+#### **System Requirements Verification**
 ```powershell
-# Test Procedure
-.\ops\placeholder-scan.ps1
+# 1. Check PowerShell version
+$PSVersionTable.PSVersion
 
-# Expected Results
-- Scan completes without errors
-- Output shows scan summary
-- No PowerShell errors or exceptions
-- Reasonable scan time (<30 seconds for small project)
+# 2. Verify administrator privileges
+([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")
 
-# Success Criteria
-✅ Scan completes successfully
-✅ No error messages
-✅ Output format correct
-✅ Performance within acceptable range
+# 3. Check Python environment
+python --version
+pip list | Select-String "faiss|torch|transformers|sentence-transformers|numpy|pandas|scikit-learn"
+
+# 4. Verify GPU support (if applicable)
+python -c "import torch; print('CUDA:', torch.cuda.is_available())"
+nvidia-smi
+
+# 5. Check available memory
+Get-CimInstance -ClassName Win32_OperatingSystem | Select-Object TotalVisibleMemorySize
+
+# 6. Verify CUDA installation
+nvcc --version
 ```
 
-#### **Test: Comprehensive Health Scanner**
+#### **Test Data Preparation**
 ```powershell
-# Test Procedure
-.\ops\Project-Health-Scanner.ps1 "C:\My Projects\Agent Exo-Suit" "C:\My Projects\Agent Exo-Suit\context\_latest"
+# 1. Create test directories
+New-Item -ItemType Directory -Path "test-data" -Force
+New-Item -ItemType Directory -Path "test-data\small" -Force
+New-Item -ItemType Directory -Path "test-data\medium" -Force
+New-Item -ItemType Directory -Path "test-data\large" -Force
 
-# Expected Results
-- Scanner runs without errors
-- Generates ownership.json
-- Generates lock_age.json
-- Generates placeholders.json
-- Creates context/_latest directory
+# 2. Generate test files with various extensions
+1..100 | ForEach-Object { "Test content $_" | Out-File "test-data\small\test$_\.txt" }
+1..100 | ForEach-Object { "def test_function_$_(): pass" | Out-File "test-data\small\test$_\.py" }
+1..100 | ForEach-Object { "function testFunction$_() { }" | Out-File "test-data\small\test$_\.js" }
+1..100 | ForEach-Object { "# Test $_" | Out-File "test-data\small\test$_\.md" }
+1..100 | ForEach-Object { "public class TestClass$_ { }" | Out-File "test-data\small\test$_\.cs" }
+1..100 | ForEach-Object { "package main; func main$_() { }" | Out-File "test-data\small\test$_\.go" }
+1..100 | ForEach-Object { "fn test_function_$_() { }" | Out-File "test-data\small\test$_\.rs" }
 
-# Success Criteria
-✅ All files generated successfully
-✅ No error messages
-✅ File contents valid JSON
-✅ Directory structure correct
+# 3. Create test context
+.\ops\make-pack.ps1 "test-data" "test-context"
 ```
 
-### **2️⃣ Drift Detection Testing**
-
-#### **Test: Drift Gate Basic Operation**
+#### **Baseline Establishment**
 ```powershell
-# Test Procedure
-.\ops\drift-gate.ps1
+# 1. Record system baseline
+Get-Counter "\Processor(_Total)\% Processor Time", "\Memory\Available MBytes" -SampleInterval 5 -MaxSamples 12 | Export-Counter -Path "baseline.csv"
 
-# Expected Results
-- Reports "No drift detected" or lists drift items
-- No PowerShell errors
-- Output format consistent
-- Reasonable execution time (<10 seconds)
+# 2. Record file counts
+Get-ChildItem -Recurse | Measure-Object | Select-Object Count | Export-Csv "file-count-baseline.csv"
 
-# Success Criteria
-✅ Command executes successfully
-✅ Output format correct
-✅ No error messages
-✅ Performance acceptable
-```
+# 3. Record memory usage
+Get-Process | Sort-Object WorkingSet -Descending | Select-Object -First 10 | Export-Csv "memory-baseline.csv"
 
-#### **Test: Drift Gate JSON Output**
-```powershell
-# Test Procedure
-.\ops\drift-gate.ps1 -json
-
-# Expected Results
-- JSON output format
-- Valid JSON syntax
-- Contains drift information
-- No PowerShell errors
-
-# Success Criteria
-✅ JSON output generated
-✅ Valid JSON syntax
-✅ Contains expected fields
-✅ No error messages
-```
-
-### **3️⃣ Performance Testing**
-
-#### **Test: Performance Mode Activation**
-```powershell
-# Test Procedure
-.\AgentExoSuitV3.ps1
-
-# Expected Results
-- Ultimate Performance power plan activated
-- Registry settings modified
-- GPU settings optimized (if available)
-- No error messages
-
-# Success Criteria
-✅ Power plan changed to Ultimate Performance
-✅ Registry settings updated
-✅ GPU settings optimized (if applicable)
-✅ No error messages
-```
-
-#### **Test: Performance Mode Restoration**
-```powershell
-# Test Procedure
-.\AgentExoSuitV3.ps1 -Restore
-
-# Expected Results
-- Normal power plan restored
-- Registry settings reverted
-- GPU settings normalized
-- No error messages
-
-# Success Criteria
-✅ Power plan restored to normal
-✅ Registry settings reverted
-✅ GPU settings normalized
-✅ No error messages
-```
-
-### **4️⃣ RAG System Testing**
-
-#### **Test: FAISS Index Building**
-```powershell
-# Test Procedure
-.\rag\embed.ps1
-
-# Expected Results
-- FAISS index built successfully
-- No Python errors
-- Index file created
-- Reasonable build time
-
-# Success Criteria
-✅ Index built successfully
-✅ No Python errors
-✅ Index file exists
-✅ Performance acceptable
-```
-
-#### **Test: Context Retrieval**
-```powershell
-# Test Procedure
-python rag\retrieve.py "test query"
-
-# Expected Results
-- Query processed successfully
-- Results returned
-- No Python errors
-- Reasonable response time
-
-# Success Criteria
-✅ Query processed successfully
-✅ Results returned
-✅ No Python errors
-✅ Performance acceptable
-```
-
-### **5️⃣ Context Management Testing**
-
-#### **Test: Context Package Generation**
-```powershell
-# Test Procedure
-.\ops\make-pack.ps1 "C:\My Projects\Agent Exo-Suit" "C:\My Projects\Agent Exo-Suit\context\_latest"
-
-# Expected Results
-- Context package generated
-- All required files created
-- No PowerShell errors
-- Reasonable generation time
-
-# Success Criteria
-✅ Package generated successfully
-✅ All files created
-✅ No error messages
-✅ Performance acceptable
-```
-
-#### **Test: Context Governor**
-```powershell
-# Test Procedure
-.\ops\context-governor.ps1 -maxTokens 128000
-
-# Expected Results
-- Token budget managed
-- Context trimmed appropriately
-- No PowerShell errors
-- Reasonable processing time
-
-# Success Criteria
-✅ Token budget managed
-✅ Context trimmed correctly
-✅ No error messages
-✅ Performance acceptable
-```
-
----
-
-## 🔄 **Integration Testing**
-
-### **1️⃣ End-to-End Workflow Testing**
-
-#### **Test: Complete System Activation**
-```powershell
-# Test Procedure
-.\go-big.ps1
-
-# Expected Results
-- All systems activated
-- Context package built
-- RAG brain initialized
-- Lint swarm executed
-- Diagrams generated
-- Sentinel pack run
-- No errors throughout
-
-# Success Criteria
-✅ All systems activated successfully
-✅ Context package built
-✅ RAG brain initialized
-✅ Lint swarm executed
-✅ Diagrams generated
-✅ Sentinel pack completed
-✅ Zero errors throughout
-```
-
-#### **Test: Development Workflow**
-```powershell
-# Test Procedure
-# 1. Start development session
-.\go-big.ps1
-
-# 2. Make some changes
-New-Item -Path "test_file.txt" -ItemType File -Value "Test content"
-
-# 3. Check drift
-.\ops\drift-gate.ps1
-
-# 4. Run health scan
-.\ops\placeholder-scan.ps1
-
-# 5. Clean up
-Remove-Item "test_file.txt"
-
-# Expected Results
-- System starts successfully
-- Drift detected after changes
-- Health scan shows new file
-- Cleanup successful
-- No errors throughout
-
-# Success Criteria
-✅ System starts successfully
-✅ Drift detected correctly
-✅ Health scan works
-✅ Cleanup successful
-✅ Zero errors throughout
-```
-
-### **2️⃣ Cross-Component Testing**
-
-#### **Test: GPU Integration**
-```powershell
-# Test Procedure
-# 1. Check GPU availability
-.\ops\gpu-monitor.ps1
-
-# 2. Activate GPU acceleration
-.\ops\gpu-accelerator.ps1
-
-# 3. Test RAG with GPU
-.\rag\embed.ps1
-
-# 4. Monitor GPU usage
-.\ops\gpu-monitor.ps1
-
-# Expected Results
-- GPU detected and monitored
-- GPU acceleration activated
-- RAG operations use GPU
-- GPU utilization tracked
-- No errors throughout
-
-# Success Criteria
-✅ GPU detected correctly
-✅ GPU acceleration activated
-✅ RAG uses GPU
-✅ GPU monitoring works
-✅ Zero errors throughout
-```
-
----
-
-## 📊 **Performance Testing**
-
-### **1️⃣ Load Testing**
-
-#### **Test: Large Codebase Processing**
-```powershell
-# Test Procedure
-# Use project with 100K+ files
-.\ops\Project-Health-Scanner.ps1 "C:\path\to\large\project" "C:\My Projects\Agent Exo-Suit\context\_latest"
-
-# Expected Results
-- Scanner handles large codebase
-- Memory usage reasonable (<4GB)
-- CPU utilization efficient
-- Completion time acceptable
-- No memory leaks
-
-# Success Criteria
-✅ Large codebase processed
-✅ Memory usage <4GB
-✅ CPU utilization efficient
-✅ Completion time acceptable
-✅ No memory leaks
-```
-
-#### **Test: Concurrent Operations**
-```powershell
-# Test Procedure
-# Run multiple operations simultaneously
-Start-Job -ScriptBlock { .\ops\placeholder-scan.ps1 }
-Start-Job -ScriptBlock { .\ops\drift-gate.ps1 }
-Start-Job -ScriptBlock { .\ops\gpu-monitor.ps1 }
-
-# Wait for completion
-Get-Job | Wait-Job
-Get-Job | Receive-Job
-
-# Expected Results
-- All operations complete successfully
-- No resource conflicts
-- Performance degradation acceptable
-- No errors in any job
-
-# Success Criteria
-✅ All operations complete
-✅ No resource conflicts
-✅ Performance acceptable
-✅ Zero errors
-```
-
-### **2️⃣ Stress Testing**
-
-#### **Test: Memory Pressure**
-```powershell
-# Test Procedure
-# Simulate memory pressure
-$env:MAX_TOKENS = "1000000"  # Very high token limit
-.\ops\make-pack.ps1 "C:\My Projects\Agent Exo-Suit" "C:\My Projects\Agent Exo-Suit\context\_latest"
-
-# Expected Results
-- System handles memory pressure gracefully
-- No crashes or hangs
-- Memory usage controlled
-- Error messages appropriate
-
-# Success Criteria
-✅ System handles pressure gracefully
-✅ No crashes or hangs
-✅ Memory usage controlled
-✅ Appropriate error messages
-```
-
-#### **Test: GPU Stress**
-```powershell
-# Test Procedure
-# Run intensive GPU operations
-for ($i = 1; $i -le 10; $i++) {
-    .\rag\embed.ps1
-    Start-Sleep 2
+# 4. Record GPU baseline (if available)
+if (Get-Command nvidia-smi -ErrorAction SilentlyContinue) {
+    nvidia-smi --query-gpu=name,memory.total,memory.used --format=csv > "gpu-baseline.csv"
 }
-
-# Expected Results
-- GPU operations complete successfully
-- No GPU errors or crashes
-- Temperature stays within limits
-- Performance consistent
-
-# Success Criteria
-✅ All operations complete
-✅ No GPU errors
-✅ Temperature within limits
-✅ Performance consistent
 ```
 
 ---
 
-## 🐛 **Error Handling Testing**
+## **V4.0 COMPONENT TESTING - ALL 43 FEATURES**
 
-### **1️⃣ Invalid Input Testing**
+### **Component 1: GPU-RAG-V4.ps1 (10 Features)**
 
-#### **Test: Invalid Paths**
+**Purpose**: Hybrid CPU+GPU processing with intelligent fallback and optimization  
+**Test Command**: `.\ops\GPU-RAG-V4.ps1 -Mode Test`
+
+#### **Feature 1: Hybrid CPU+GPU Processing**
 ```powershell
-# Test Procedure
-.\ops\placeholder-scan.ps1 "C:\nonexistent\path"
-.\ops\drift-gate.ps1 "invalid\parameter"
-.\ops\make-pack.ps1 "C:\invalid\path" "C:\invalid\output"
+# Test hybrid processing
+.\ops\GPU-RAG-V4.ps1 -Mode Test -Hybrid
 
-# Expected Results
-- Appropriate error messages
-- No crashes or hangs
-- Graceful failure handling
-- Helpful error information
+# Test device switching
+.\ops\GPU-RAG-V4.ps1 -Mode Test -DeviceSwitch
 
-# Success Criteria
-✅ Appropriate error messages
-✅ No crashes or hangs
-✅ Graceful failure handling
-✅ Helpful error information
+# Test fallback mechanisms
+.\ops\GPU-RAG-V4.ps1 -Mode Test -Fallback
 ```
 
-#### **Test: Invalid Parameters**
+#### **Feature 2: Intelligent Device Selection**
 ```powershell
-# Test Procedure
-.\ops\context-governor.ps1 -maxTokens "invalid"
-.\AgentExoSuitV3.ps1 -InvalidParameter
-.\ops\gpu-monitor.ps1 -InvalidFlag
+# Test auto device selection
+.\ops\GPU-RAG-V4.ps1 -Mode Test -AutoDevice
 
-# Expected Results
-- Parameter validation errors
-- Helpful usage information
-- No crashes or hangs
-- Clear error messages
+# Test manual device selection
+.\ops\GPU-RAG-V4.ps1 -Mode Test -Device "cuda:0"
 
-# Success Criteria
-✅ Parameter validation errors
-✅ Helpful usage information
-✅ No crashes or hangs
-✅ Clear error messages
+# Test CPU fallback
+.\ops\GPU-RAG-V4.ps1 -Mode Test -Device "cpu"
 ```
 
-### **2️⃣ System Failure Testing**
-
-#### **Test: Network Failure**
+#### **Feature 3: Advanced Memory Management**
 ```powershell
-# Test Procedure
-# Disconnect network temporarily
-# Run operations that might need network
-.\ops\make-pack.ps1 "C:\My Projects\Agent Exo-Suit" "C:\My Projects\Agent Exo-Suit\context\_latest"
+# Test memory optimization
+.\ops\GPU-RAG-V4.ps1 -Mode Test -MemoryOptimize
 
-# Expected Results
-- Graceful handling of network issues
-- Appropriate error messages
-- No crashes or hangs
-- Fallback behavior if applicable
+# Test cleanup mechanisms
+.\ops\GPU-RAG-V4.ps1 -Mode Test -Cleanup
 
-# Success Criteria
-✅ Graceful network failure handling
-✅ Appropriate error messages
-✅ No crashes or hangs
-✅ Fallback behavior works
+# Test memory thresholds
+.\ops\GPU-RAG-V4.ps1 -Mode Test -MemoryThreshold 0.8
 ```
 
-#### **Test: Disk Space Exhaustion**
+#### **Feature 4: RAM Disk Integration**
 ```powershell
-# Test Procedure
-# Fill disk to near capacity
-# Run operations that create files
-.\ops\make-pack.ps1 "C:\My Projects\Agent Exo-Suit" "C:\My Projects\Agent Exo-Suit\context\_latest"
+# Test RAM disk creation
+.\ops\GPU-RAG-V4.ps1 -Mode Test -RAMDisk
 
-# Expected Results
-- Graceful handling of disk space issues
-- Appropriate error messages
-- No crashes or hangs
-- Cleanup of temporary files
+# Test RAM disk performance
+.\ops\GPU-RAG-V4.ps1 -Mode Test -RAMDiskBenchmark
 
-# Success Criteria
-✅ Graceful disk space handling
-✅ Appropriate error messages
-✅ No crashes or hangs
-✅ Temporary files cleaned up
+# Test RAM disk cleanup
+.\ops\GPU-RAG-V4.ps1 -Mode Test -RAMDiskCleanup
 ```
+
+#### **Feature 5: Mixed Precision Processing**
+```powershell
+# Test mixed precision
+.\ops\GPU-RAG-V4.ps1 -Mode Test -MixedPrecision
+
+# Test precision comparison
+.\ops\GPU-RAG-V4.ps1 -Mode Test -PrecisionCompare
+
+# Test performance impact
+.\ops\GPU-RAG-V4.ps1 -Mode Test -PrecisionBenchmark
+```
+
+#### **Feature 6: Dynamic Load Balancing**
+```powershell
+# Test load balancing
+.\ops\GPU-RAG-V4.ps1 -Mode Test -LoadBalancing
+
+# Test dynamic switching
+.\ops\GPU-RAG-V4.ps1 -Mode Test -DynamicSwitch
+
+# Test load distribution
+.\ops\GPU-RAG-V4.ps1 -Mode Test -LoadDistribution
+```
+
+#### **Feature 7: Warmup and Optimization**
+```powershell
+# Test warmup procedures
+.\ops\GPU-RAG-V4.ps1 -Mode Test -Warmup
+
+# Test optimization routines
+.\ops\GPU-RAG-V4.ps1 -Mode Test -Optimize
+
+# Test performance tuning
+.\ops\GPU-RAG-V4.ps1 -Mode Test -PerformanceTune
+```
+
+#### **Feature 8: Comprehensive Benchmarking**
+```powershell
+# Test comprehensive benchmarks
+.\ops\GPU-RAG-V4.ps1 -Mode Benchmark -Comprehensive
+
+# Test performance metrics
+.\ops\GPU-RAG-V4.ps1 -Mode Benchmark -Metrics
+
+# Test comparison benchmarks
+.\ops\GPU-RAG-V4.ps1 -Mode Benchmark -Compare
+```
+
+#### **Feature 9: Error Handling and Recovery**
+```powershell
+# Test error handling
+.\ops\GPU-RAG-V4.ps1 -Mode Test -ErrorHandling
+
+# Test recovery mechanisms
+.\ops\GPU-RAG-V4.ps1 -Mode Test -Recovery
+
+# Test graceful degradation
+.\ops\GPU-RAG-V4.ps1 -Mode Test -GracefulDegradation
+```
+
+#### **Feature 10: Configuration Management**
+```powershell
+# Test configuration loading
+.\ops\GPU-RAG-V4.ps1 -Mode Test -ConfigLoad
+
+# Test configuration validation
+.\ops\GPU-RAG-V4.ps1 -Mode Test -ConfigValidate
+
+# Test configuration optimization
+.\ops\GPU-RAG-V4.ps1 -Mode Test -ConfigOptimize
+```
+
+#### **Success Criteria for GPU-RAG-V4.ps1**
+- [PASS] Hybrid processing working seamlessly
+- [PASS] Device switching automatic and reliable
+- [PASS] Memory management optimized
+- [PASS] RAM disk integration functional
+- [PASS] Mixed precision processing working
+- [PASS] Load balancing dynamic and efficient
+- [PASS] Warmup and optimization effective
+- [PASS] Benchmarking comprehensive and accurate
+- [PASS] Error handling robust and graceful
+- [PASS] Configuration management flexible
 
 ---
 
-## 🔄 **Recovery Testing**
+### **Component 2: emoji-sentinel-v4.ps1 (4 Features)**
 
-### **1️⃣ System Recovery Testing**
+**Purpose**: Ultra-robust emoji detection, logging, and removal system  
+**Test Command**: `.\ops\emoji-sentinel-v4.ps1 -Path test-data -Scan -Verbose`
 
-#### **Test: Power Plan Recovery**
+#### **Feature 1: Advanced Emoji Detection**
 ```powershell
-# Test Procedure
-# 1. Activate performance mode
-.\AgentExoSuitV3.ps1
+# Test basic emoji detection
+.\ops\emoji-sentinel-v4.ps1 -Path test-data -Scan
 
-# 2. Verify performance mode active
-powercfg -list
+# Test comprehensive emoji detection
+.\ops\emoji-sentinel-v4.ps1 -Path test-data -Scan -Comprehensive
 
-# 3. Restore normal settings
-.\AgentExoSuitV3.ps1 -Restore
-
-# 4. Verify normal mode active
-powercfg -list
-
-# Expected Results
-- Performance mode activated successfully
-- Normal mode restored successfully
-- Power plans switch correctly
-- No errors throughout
-
-# Success Criteria
-✅ Performance mode activated
-✅ Normal mode restored
-✅ Power plans switch correctly
-✅ Zero errors throughout
+# Test emoji pattern matching
+.\ops\emoji-sentinel-v4.ps1 -Path test-data -Scan -Patterns
 ```
 
-#### **Test: Context Recovery**
+#### **Feature 2: Intelligent Logging System**
 ```powershell
-# Test Procedure
-# 1. Generate context package
-.\ops\make-pack.ps1 "C:\My Projects\Agent Exo-Suit" "C:\My Projects\Agent Exo-Suit\context\_latest"
+# Test logging functionality
+.\ops\emoji-sentinel-v4.ps1 -Path test-data -Scan -Log
 
-# 2. Backup context files
-Copy-Item "context\_latest\*" "restore\backup\" -Recurse
+# Test log rotation
+.\ops\emoji-sentinel-v4.ps1 -Path test-data -Scan -LogRotate
 
-# 3. Corrupt context files
-Remove-Item "context\_latest\*" -Recurse
-
-# 4. Restore from backup
-Copy-Item "restore\backup\*" "context\_latest\" -Recurse
-
-# 5. Verify recovery
-.\ops\placeholder-scan.ps1
-
-# Expected Results
-- Context package generated successfully
-- Backup created successfully
-- Recovery completed successfully
-- System operational after recovery
-- No errors throughout
-
-# Success Criteria
-✅ Context package generated
-✅ Backup created successfully
-✅ Recovery completed
-✅ System operational
-✅ Zero errors throughout
+# Test log analysis
+.\ops\emoji-sentinel-v4.ps1 -Path test-data -Scan -LogAnalysis
 ```
+
+#### **Feature 3: Safe Removal Operations**
+```powershell
+# Test emoji removal
+.\ops\emoji-sentinel-v4.ps1 -Path test-data -Purge -Force
+
+# Test safe removal
+.\ops\emoji-sentinel-v4.ps1 -Path test-data -Purge -Safe
+
+# Test removal verification
+.\ops\emoji-sentinel-v4.ps1 -Path test-data -Purge -Verify
+```
+
+#### **Feature 4: Performance Optimization**
+```powershell
+# Test performance benchmarks
+.\ops\emoji-sentinel-v4.ps1 -Path test-data -Benchmark
+
+# Test parallel processing
+.\ops\emoji-sentinel-v4.ps1 -Path test-data -Scan -Parallel
+
+# Test optimization modes
+.\ops\emoji-sentinel-v4.ps1 -Path test-data -Scan -Optimize
+```
+
+#### **Success Criteria for emoji-sentinel-v4.ps1**
+- [PASS] Advanced emoji detection working
+- [PASS] Intelligent logging system functional
+- [PASS] Safe removal operations reliable
+- [PASS] Performance optimization effective
 
 ---
 
-## 📊 **Test Results Documentation**
+### **Component 3: context-governor.ps1 (4 Features)**
 
-### **Test Report Template**
+**Purpose**: Intelligent context management and optimization  
+**Test Command**: `.\ops\context-governor.ps1 -TestMode`
 
-#### **Test Execution Summary**
-```markdown
-# Test Execution Report
-**Date:** [Date]
-**Tester:** [Name]
-**System Version:** V3.0 "Monster-Mode"
-**Test Environment:** [OS, Hardware, etc.]
-
-## Test Results Summary
-- **Total Tests:** [Number]
-- **Passed:** [Number]
-- **Failed:** [Number]
-- **Success Rate:** [Percentage]
-
-## Critical Tests Status
-- [ ] System Health Testing: [PASS/FAIL]
-- [ ] Drift Detection Testing: [PASS/FAIL]
-- [ ] Performance Testing: [PASS/FAIL]
-- [ ] RAG System Testing: [PASS/FAIL]
-- [ ] Context Management Testing: [PASS/FAIL]
-- [ ] Integration Testing: [PASS/FAIL]
-- [ ] Error Handling Testing: [PASS/FAIL]
-- [ ] Recovery Testing: [PASS/FAIL]
-
-## Overall Status
-**PRODUCTION READY:** [YES/NO]
-**100% SUCCESS RATE:** [YES/NO]
+#### **Feature 1: Intelligent Chunking**
+```powershell
+# Test intelligent chunking
+.\ops\context-governor.ps1 -TestMode -Chunking
 ```
 
-### **Evidence Bundle Requirements**
+#### **Feature 2: Context Optimization**
+```powershell
+# Test context optimization
+.\ops\context-governor.ps1 -TestMode -Optimize
+```
 
-#### **Required Evidence**
-- [ ] **Test Results**: All test results documented
-- [ ] **Performance Metrics**: Benchmark results recorded
-- [ ] **Error Logs**: Any errors documented and resolved
-- [ ] **System Logs**: System operation logs captured
-- [ ] **Screenshots**: Visual evidence of successful operation
-- [ ] **Video Recordings**: Critical workflow demonstrations
+#### **Feature 3: Token Management**
+```powershell
+# Test token management
+.\ops\context-governor.ps1 -TestMode -TokenManagement
+```
 
-#### **Evidence Update Rules**
-- **Only after 100% pass**: Evidence bundle updated only after all tests pass
-- **No partial updates**: Complete evidence bundle or none
-- **Quality gates**: Evidence must meet quality standards
-- **Verification required**: Evidence verified by multiple testers
+#### **Feature 4: Context Assembly**
+```powershell
+# Test context assembly
+.\ops\context-governor.ps1 -TestMode -Assembly
+```
+
+#### **Success Criteria for context-governor.ps1**
+- [PASS] Intelligent chunking working
+- [PASS] Context optimization effective
+- [PASS] Token management accurate
+- [PASS] Context assembly functional
 
 ---
 
-## 🚨 **Failure Handling & Resolution**
+### **Component 4: Drift-Guard-V4.ps1 (4 Features)**
 
-### **1️⃣ Test Failure Analysis**
+**Purpose**: Advanced Git drift detection and protection  
+**Test Command**: `.\ops\Drift-Guard-V4.ps1 -Path test-data`
 
-#### **Failure Classification**
-```markdown
-## Failure Severity Levels
-**CRITICAL:** System crashes, data loss, security issues
-**HIGH:** Core functionality broken, performance degradation
-**MEDIUM:** Non-critical features broken, usability issues
-**LOW:** Minor issues, cosmetic problems
+#### **Feature 1: Git Drift Detection**
+```powershell
+# Test basic drift detection
+.\ops\Drift-Guard-V4.ps1 -Path test-data
+
+# Test comprehensive drift detection
+.\ops\Drift-Guard-V4.ps1 -Path test-data -Comprehensive
+
+# Test drift analysis
+.\ops\Drift-Guard-V4.ps1 -Path test-data -Analyze
 ```
 
-#### **Failure Investigation Process**
+#### **Feature 2: Edge Case Handling**
 ```powershell
-# 1. Capture failure details
-Get-EventLog -LogName Application -Newest 50 | Where-Object {$_.EntryType -eq "Error"}
-Get-Content "context\_latest\*.log" -Tail 100
+# Test edge case handling
+.\ops\Drift-Guard-V4.ps1 -Path test-data -HandleEdgeCases
 
-# 2. Reproduce failure
-# Document exact steps to reproduce
+# Test empty repository handling
+.\ops\Drift-Guard-V4.ps1 -Path "empty-repo"
 
-# 3. Analyze root cause
-# Identify underlying issue
-
-# 4. Implement fix
-# Code the solution
-
-# 5. Verify fix
-# Re-run failing test
+# Test detached HEAD handling
+.\ops\Drift-Guard-V4.ps1 -Path "detached-head-repo"
 ```
 
-### **2️⃣ Regression Testing**
-
-#### **Regression Test Requirements**
-- **All tests must pass**: After any fix, all tests must pass
-- **No new failures**: Fixes must not introduce new failures
-- **Performance maintained**: Fixes must not degrade performance
-- **Full test suite**: Complete test suite execution required
-
-#### **Regression Test Process**
+#### **Feature 3: Drift Reporting**
 ```powershell
-# 1. Run full test suite
+# Test drift reporting
+.\ops\Drift-Guard-V4.ps1 -Path test-data -Report
+
+# Test detailed reporting
+.\ops\Drift-Guard-V4.ps1 -Path test-data -Report -Detailed
+
+# Test report formats
+.\ops\Drift-Guard-V4.ps1 -Path test-data -Report -Format JSON
+```
+
+#### **Feature 4: Protection Mechanisms**
+```powershell
+# Test protection mechanisms
+.\ops\Drift-Guard-V4.ps1 -Path test-data -Protect
+
+# Test alert system
+.\ops\Drift-Guard-V4.ps1 -Path test-data -Alerts
+
+# Test prevention measures
+.\ops\Drift-Guard-V4.ps1 -Path test-data -Prevent
+```
+
+#### **Success Criteria for Drift-Guard-V4.ps1**
+- [PASS] Git drift detection accurate
+- [PASS] Edge case handling robust
+- [PASS] Drift reporting comprehensive
+- [PASS] Protection mechanisms effective
+
+---
+
+### **Component 5: Project-Health-Scanner-V4.ps1 (4 Features)**
+
+**Purpose**: Comprehensive project health assessment  
+**Test Command**: `.\ops\Project-Health-Scanner-V4.ps1 -ProjectPath test-data -OutputPath "health-report"`
+
+#### **Feature 1: System Health Assessment**
+```powershell
+# Test system health assessment
+.\ops\Project-Health-Scanner-V4.ps1 -ProjectPath test-data -OutputPath "health-report" -SystemCheck
+
+# Test comprehensive health scan
+.\ops\Project-Health-Scanner-V4.ps1 -ProjectPath test-data -OutputPath "health-report" -Comprehensive
+
+# Test health metrics
+.\ops\Project-Health-Scanner-V4.ps1 -ProjectPath test-data -OutputPath "health-report" -Metrics
+```
+
+#### **Feature 2: Dependency Scanning**
+```powershell
+# Test dependency scanning
+.\ops\Project-Health-Scanner-V4.ps1 -ProjectPath test-data -OutputPath "health-report" -DependencyScan
+
+# Test SBOM generation
+.\ops\Project-Health-Scanner-V4.ps1 -ProjectPath test-data -OutputPath "health-report" -GenerateSBOM
+
+# Test dependency analysis
+.\ops\Project-Health-Scanner-V4.ps1 -ProjectPath test-data -OutputPath "health-report" -AnalyzeDependencies
+```
+
+#### **Feature 3: Performance Analysis**
+```powershell
+# Test performance analysis
+.\ops\Project-Health-Scanner-V4.ps1 -ProjectPath test-data -OutputPath "health-report" -PerformanceAnalysis
+
+# Test performance metrics
+.\ops\Project-Health-Scanner-V4.ps1 -ProjectPath test-data -OutputPath "health-report" -PerformanceMetrics
+
+# Test performance optimization
+.\ops\Project-Health-Scanner-V4.ps1 -ProjectPath test-data -OutputPath "health-report" -PerformanceOptimize
+```
+
+#### **Feature 4: Health Reporting**
+```powershell
+# Test health reporting
+.\ops\Project-Health-Scanner-V4.ps1 -ProjectPath test-data -OutputPath "health-report" -Report
+
+# Test multiple output formats
+.\ops\Project-Health-Scanner-V4.ps1 -ProjectPath test-data -OutputPath "health-report" -Format All
+
+# Test health dashboard
+.\ops\Project-Health-Scanner-V4.ps1 -ProjectPath test-data -OutputPath "health-report" -Dashboard
+```
+
+#### **Success Criteria for Project-Health-Scanner-V4.ps1**
+- [PASS] System health assessment working
+- [PASS] Dependency scanning comprehensive
+- [PASS] Performance analysis effective
+- [PASS] Health reporting detailed
+
+---
+
+### **Component 6: Scan-Secrets-V4.ps1 (4 Features)**
+
+**Purpose**: Advanced secret detection and vulnerability assessment  
+**Test Command**: `.\ops\Scan-Secrets-V4.ps1 -Root test-data`
+
+#### **Feature 1: Secret Detection**
+```powershell
+# Test basic secret detection
+.\ops\Scan-Secrets-V4.ps1 -Root test-data
+
+# Test comprehensive secret scanning
+.\ops\Scan-Secrets-V4.ps1 -Root test-data -Comprehensive
+
+# Test secret pattern matching
+.\ops\Scan-Secrets-V4.ps1 -Root test-data -Patterns
+```
+
+#### **Feature 2: Vulnerability Assessment**
+```powershell
+# Test vulnerability assessment
+.\ops\Scan-Secrets-V4.ps1 -Root test-data -VulnerabilityScan
+
+# Test CVE scanning
+.\ops\Scan-Secrets-V4.ps1 -Root test-data -CVEScan
+
+# Test security analysis
+.\ops\Scan-Secrets-V4.ps1 -Root test-data -SecurityAnalysis
+```
+
+#### **Feature 3: Compliance Checking**
+```powershell
+# Test compliance checking
+.\ops\Scan-Secrets-V4.ps1 -Root test-data -ComplianceCheck
+
+# Test policy validation
+.\ops\Scan-Secrets-V4.ps1 -Root test-data -PolicyValidation
+
+# Test compliance reporting
+.\ops\Scan-Secrets-V4.ps1 -Root test-data -ComplianceReport
+```
+
+#### **Feature 4: Security Reporting**
+```powershell
+# Test security reporting
+.\ops\Scan-Secrets-V4.ps1 -Root test-data -Report
+
+# Test multiple output formats
+.\ops\Scan-Secrets-V4.ps1 -Root test-data -Format All
+
+# Test security dashboard
+.\ops\Scan-Secrets-V4.ps1 -Root test-data -Dashboard
+```
+
+#### **Success Criteria for Scan-Secrets-V4.ps1**
+- [PASS] Secret detection accurate
+- [PASS] Vulnerability assessment comprehensive
+- [PASS] Compliance checking functional
+- [PASS] Security reporting detailed
+
+---
+
+### **Component 7: Import-Indexer-V4.ps1 (4 Features)**
+
+**Purpose**: Multi-language import detection and analysis  
+**Test Command**: `.\ops\Import-Indexer-V4.ps1 -Path test-data`
+
+#### **Feature 1: Multi-language Support**
+```powershell
+# Test multi-language support
+.\ops\Import-Indexer-V4.ps1 -Path test-data -Languages @('Python', 'JavaScript', 'C#', 'Java', 'Go', 'Rust')
+
+# Test language detection
+.\ops\Import-Indexer-V4.ps1 -Path test-data -DetectLanguages
+
+# Test language-specific parsing
+.\ops\Import-Indexer-V4.ps1 -Path test-data -LanguageSpecific
+```
+
+#### **Feature 2: AST-Aware Parsing**
+```powershell
+# Test AST-aware parsing
+.\ops\Import-Indexer-V4.ps1 -Path test-data -UseAST
+
+# Test AST analysis
+.\ops\Import-Indexer-V4.ps1 -Path test-data -ASTAnalysis
+
+# Test AST optimization
+.\ops\Import-Indexer-V4.ps1 -Path test-data -ASTOptimize
+```
+
+#### **Feature 3: Import Analysis**
+```powershell
+# Test import analysis
+.\ops\Import-Indexer-V4.ps1 -Path test-data -Analyze
+
+# Test dependency mapping
+.\ops\Import-Indexer-V4.ps1 -Path test-data -DependencyMap
+
+# Test import optimization
+.\ops\Import-Indexer-V4.ps1 -Path test-data -Optimize
+```
+
+#### **Feature 4: Output Generation**
+```powershell
+# Test output generation
+.\ops\Import-Indexer-V4.ps1 -Path test-data -Output
+
+# Test multiple formats
+.\ops\Import-Indexer-V4.ps1 -Path test-data -Format All
+
+# Test custom output
+.\ops\Import-Indexer-V4.ps1 -Path test-data -CustomOutput
+```
+
+#### **Success Criteria for Import-Indexer-V4.ps1**
+- [PASS] Multi-language support working
+- [PASS] AST-aware parsing functional
+- [PASS] Import analysis comprehensive
+- [PASS] Output generation flexible
+
+---
+
+### **Component 8: Symbol-Indexer-V4.ps1 (4 Features)**
+
+**Purpose**: Comprehensive symbol extraction and indexing  
+**Test Command**: `.\ops\Symbol-Indexer-V4.ps1 -Path test-data`
+
+#### **Feature 1: Symbol Extraction**
+```powershell
+# Test symbol extraction
+.\ops\Symbol-Indexer-V4.ps1 -Path test-data -Extract
+
+# Test comprehensive extraction
+.\ops\Symbol-Indexer-V4.ps1 -Path test-data -Extract -Comprehensive
+
+# Test symbol types
+.\ops\Symbol-Indexer-V4.ps1 -Path test-data -Extract -Types @('function', 'class', 'variable', 'constant', 'enum', 'interface')
+```
+
+#### **Feature 2: Multi-language Parsing**
+```powershell
+# Test multi-language parsing
+.\ops\Symbol-Indexer-V4.ps1 -Path test-data -MultiLanguage
+
+# Test language-specific parsing
+.\ops\Symbol-Indexer-V4.ps1 -Path test-data -LanguageSpecific
+
+# Test cross-language symbols
+.\ops\Symbol-Indexer-V4.ps1 -Path test-data -CrossLanguage
+```
+
+#### **Feature 3: Symbol Indexing**
+```powershell
+# Test symbol indexing
+.\ops\Symbol-Indexer-V4.ps1 -Path test-data -Index
+
+# Test index optimization
+.\ops\Symbol-Indexer-V4.ps1 -Path test-data -Index -Optimize
+
+# Test index search
+.\ops\Symbol-Indexer-V4.ps1 -Path test-data -Index -Search
+```
+
+#### **Feature 4: Symbol Analysis**
+```powershell
+# Test symbol analysis
+.\ops\Symbol-Indexer-V4.ps1 -Path test-data -Analyze
+
+# Test symbol relationships
+.\ops\Symbol-Indexer-V4.ps1 -Path test-data -Analyze -Relationships
+
+# Test symbol metrics
+.\ops\Symbol-Indexer-V4.ps1 -Path test-data -Analyze -Metrics
+```
+
+#### **Success Criteria for Symbol-Indexer-V4.ps1**
+- [PASS] Symbol extraction comprehensive
+- [PASS] Multi-language parsing working
+- [PASS] Symbol indexing functional
+- [PASS] Symbol analysis detailed
+
+---
+
+### **Component 9: Power-Management-V4.ps1 (4 Features)**
+
+**Purpose**: System optimization and performance tuning  
+**Test Command**: `.\ops\Power-Management-V4.ps1`
+
+#### **Feature 1: Power Plan Management**
+```powershell
+# Test power plan detection
+.\ops\Power-Management-V4.ps1 -Detect
+
+# Test power plan activation
+.\ops\Power-Management-V4.ps1 -ActivatePerformance
+
+# Test custom plan creation
+.\ops\Power-Management-V4.ps1 -CreatePlan "Custom Performance"
+```
+
+#### **Feature 2: Registry Optimization**
+```powershell
+# Test registry optimization
+.\ops\Power-Management-V4.ps1 -OptimizeRegistry
+
+# Test registry backup
+.\ops\Power-Management-V4.ps1 -BackupRegistry
+
+# Test registry restore
+.\ops\Power-Management-V4.ps1 -RestoreRegistry
+```
+
+#### **Feature 3: Service Optimization**
+```powershell
+# Test service optimization
+.\ops\Power-Management-V4.ps1 -OptimizeServices
+
+# Test service analysis
+.\ops\Power-Management-V4.ps1 -AnalyzeServices
+
+# Test service management
+.\ops\Power-Management-V4.ps1 -ManageServices
+```
+
+#### **Feature 4: Performance Tuning**
+```powershell
+# Test performance tuning
+.\ops\Power-Management-V4.ps1 -PerformanceTune
+
+# Test performance analysis
+.\ops\Power-Management-V4.ps1 -PerformanceAnalysis
+
+# Test performance optimization
+.\ops\Power-Management-V4.ps1 -PerformanceOptimize
+```
+
+#### **Success Criteria for Power-Management-V4.ps1**
+- [PASS] Power plan management working
+- [PASS] Registry optimization effective
+- [PASS] Service optimization functional
+- [PASS] Performance tuning successful
+
+---
+
+### **Component 10: GPU-Monitor-V4.ps1 (4 Features)**
+
+**Purpose**: Real-time GPU monitoring and management  
+**Test Command**: `.\ops\GPU-Monitor-V4.ps1`
+
+#### **Feature 1: GPU Detection**
+```powershell
+# Test GPU detection
+.\ops\GPU-Monitor-V4.ps1 -Detect
+
+# Test GPU information
+.\ops\GPU-Monitor-V4.ps1 -GPUInfo
+
+# Test GPU capabilities
+.\ops\GPU-Monitor-V4.ps1 -GPUCapabilities
+```
+
+#### **Feature 2: Real-Time Monitoring**
+```powershell
+# Test real-time monitoring
+.\ops\GPU-Monitor-V4.ps1 -Monitor -Interval 5
+
+# Test monitoring metrics
+.\ops\GPU-Monitor-V4.ps1 -Monitor -Metrics
+
+# Test monitoring alerts
+.\ops\GPU-Monitor-V4.ps1 -Monitor -Alerts
+```
+
+#### **Feature 3: Performance Tracking**
+```powershell
+# Test performance tracking
+.\ops\GPU-Monitor-V4.ps1 -Track
+
+# Test performance metrics
+.\ops\GPU-Monitor-V4.ps1 -Track -Metrics
+
+# Test performance analysis
+.\ops\GPU-Monitor-V4.ps1 -Track -Analysis
+```
+
+#### **Feature 4: Resource Management**
+```powershell
+# Test resource management
+.\ops\GPU-Monitor-V4.ps1 -Manage
+
+# Test resource allocation
+.\ops\GPU-Monitor-V4.ps1 -Manage -Allocate
+
+# Test resource optimization
+.\ops\GPU-Monitor-V4.ps1 -Manage -Optimize
+```
+
+#### **Success Criteria for GPU-Monitor-V4.ps1**
+- [PASS] GPU detection accurate
+- [PASS] Real-time monitoring stable
+- [PASS] Performance tracking functional
+- [PASS] Resource management effective
+
+---
+
+## **COMPREHENSIVE TESTING SUITE**
+
+### **Automated Test Runner**
+```powershell
+# Run comprehensive test suite
+.\Cleanup\Testing_Tools\test-runner.ps1
+
+# Run batch version
+.\Cleanup\Testing_Tools\test-runner.bat
+
+# Quick test mode
+.\Cleanup\Testing_Tools\quick-test.ps1
+
+# Full system test
 .\go-big.ps1
-
-# 2. Verify all tests pass
-.\ops\drift-gate.ps1
-.\ops\placeholder-scan.ps1
-.\ops\Project-Health-Scanner.ps1 "C:\My Projects\Agent Exo-Suit" "C:\My Projects\Agent Exo-Suit\context\_latest"
-
-# 3. Performance verification
-Measure-Command { .\ops\placeholder-scan.ps1 }
-
-# 4. Document results
-# Update test documentation
 ```
 
----
-
-## 🔄 **Continuous Testing Integration**
-
-### **1️⃣ Automated Testing**
-
-#### **CI/CD Integration**
-```yaml
-# GitHub Actions Example
-name: Agent Exo-Suit V3.0 Testing
-
-on: [push, pull_request]
-
-jobs:
-  test:
-    runs-on: windows-latest
-    
-    steps:
-    - uses: actions/checkout@v3
-    
-    - name: Setup PowerShell
-      uses: actions/setup-powershell@v1
-      
-    - name: Run Health Check
-      run: .\ops\drift-gate.ps1
-      
-    - name: Run Health Scan
-      run: .\ops\placeholder-scan.ps1
-      
-    - name: Verify No Drift
-      run: |
-        if (Test-Path "restore\DRIFT_REPORT.json") {
-          echo "Drift detected! Tests failed!"
-          exit 1
-        }
-```
-
-#### **Automated Test Triggers**
-- **Code changes**: Automatic testing on commits
-- **Pull requests**: Pre-merge testing required
-- **Scheduled runs**: Daily automated testing
-- **Manual triggers**: On-demand testing capability
-
-### **2️⃣ Test Monitoring**
-
-#### **Test Metrics Tracking**
+### **Test Pack Validation**
 ```powershell
-# Test execution monitoring
-$testResults = @{
-    "Date" = Get-Date
-    "TestsRun" = 0
-    "TestsPassed" = 0
-    "TestsFailed" = 0
-    "SuccessRate" = 0
-    "ExecutionTime" = 0
-}
+# 17-file test pack validation
+.\ops\emoji-sentinel-v4.ps1 -Path "Cleanup\Testing_Tools\test-emoji-pack"
 
-# Track test execution
-$startTime = Get-Date
-# ... run tests ...
-$endTime = Get-Date
-$testResults.ExecutionTime = ($endTime - $startTime).TotalSeconds
+# 75-file large test pack
+python rag/test_75_files.py
+
+# Full project validation
+.\ops\Project-Health-Scanner-V4.ps1 -ProjectPath "." -OutputPath "restore"
 ```
 
-#### **Quality Gates**
-- **100% pass rate**: Required for all deployments
-- **Performance thresholds**: Must meet performance requirements
-- **Error rate limits**: Maximum acceptable error rates
-- **Coverage requirements**: Minimum test coverage percentages
+---
+
+## **PERFORMANCE BENCHMARKS**
+
+### **Target Performance Metrics**
+- **Emoji Scanning**: < 0.2 seconds for 17 files
+- **Symbol Indexing**: < 1 second for 17 files
+- **Drift Detection**: < 0.5 seconds for standard repos
+- **GPU RAG**: 3-5× speedup vs CPU
+- **Health Scanning**: < 2 seconds for 17 files
+- **Secret Scanning**: < 1 second for 17 files
+- **Import Indexing**: < 1.5 seconds for 17 files
+- **Context Management**: < 0.5 seconds for standard operations
+- **Power Management**: < 2 seconds for optimization
+- **GPU Monitoring**: < 0.1 seconds for status check
+
+### **Resource Usage Limits**
+- **Memory Peak**: < 4GB for GPU operations
+- **CPU Usage**: < 80% during intensive operations
+- **Disk I/O**: < 100MB/s sustained
+- **GPU Memory**: < 6GB for RTX 4070
+- **Response Time**: < 2 seconds for all operations
+- **Throughput**: > 100 files/minute for scanning operations
 
 ---
 
-## 📚 **Testing Resources & References**
+## **QUALITY GATES**
 
-### **Testing Tools**
-- **PowerShell Pester**: Unit testing framework
-- **Python unittest**: Python testing framework
-- **Performance Monitor**: Windows performance monitoring
-- **GPU-Z**: GPU monitoring and testing
-- **Process Monitor**: System call monitoring
+### **Phase 1: Foundation Hardening**
+- [PASS] All 43 features pass 17-file test pack
+- [PASS] Zero failures across all tests
+- [PASS] Performance benchmarks met
+- [PASS] Resource usage within limits
 
-### **Testing Documentation**
-- **[INSTALLATION.md](INSTALLATION.md)** - Setup and configuration
-- **[TECHNICAL_SPECS.md](TECHNICAL_SPECS.md)** - System architecture
-- **[USER_GUIDE.md](USER_GUIDE.md)** - Daily operations
-- **[TROUBLESHOOTING.md](TROUBLESHOOTING.md)** - Problem resolution
+### **Phase 2: GPU Acceleration**
+- [PASS] GPU operations 3-5× faster than CPU
+- [PASS] CUDA detection and utilization working
+- [PASS] Memory management optimized
+- [PASS] Fallback mechanisms functional
 
-### **Testing Standards**
-- **ISO 25010**: Software quality standards
-- **IEEE 829**: Test documentation standards
-- **ISTQB**: Testing best practices
-- **Microsoft PowerShell**: PowerShell testing guidelines
+### **Phase 3: Hybrid Excellence**
+- [PASS] Seamless CPU/GPU switching
+- [PASS] Consistent results across devices
+- [PASS] Large test packs processed
+- [PASS] Performance optimization complete
 
----
-
-## 🎯 **Testing Success Criteria**
-
-### **Final Validation Checklist**
-- [ ] **All Core Tests Pass**: 100% success rate
-- [ ] **Integration Tests Pass**: End-to-end workflows work
-- [ ] **Performance Tests Pass**: Meets performance requirements
-- [ ] **Error Handling Tests Pass**: Graceful failure handling
-- [ ] **Recovery Tests Pass**: System recovery works
-- [ ] **Documentation Complete**: All test results documented
-- [ ] **Evidence Bundle Updated**: Complete evidence captured
-- [ ] **Quality Gates Met**: All quality requirements satisfied
-
-### **Production Readiness Criteria**
-- **100% Test Success**: All tests must pass
-- **Zero Critical Failures**: No critical issues allowed
-- **Performance Validated**: Meets performance requirements
-- **Recovery Verified**: System recovery confirmed
-- **Documentation Complete**: All procedures documented
-- **Evidence Captured**: Complete evidence bundle
+### **Phase 4: Production Deployment**
+- [PASS] Full project validation successful
+- [PASS] Zero drift detected
+- [PASS] All systems operational
+- [PASS] Evidence bundle generated
 
 ---
 
-**🧪 QA testing procedures complete. Remember: 100% pass rate with zero failures is mandatory for production deployment.**
+## **ERROR HANDLING & RECOVERY**
+
+### **Common Error Scenarios**
+1. **GPU Unavailable**: Automatic fallback to CPU
+2. **Memory Exhaustion**: Graceful degradation
+3. **File Access Denied**: Permission handling
+4. **Network Timeout**: Retry mechanisms
+5. **Corrupted Data**: Validation and recovery
+6. **Permission Issues**: Administrator privilege handling
+7. **Resource Conflicts**: Conflict resolution
+8. **System Errors**: Graceful error handling
+
+### **Recovery Procedures**
+1. **System Reset**: `.\AgentExoSuitV3.ps1 -Restore`
+2. **Context Recovery**: Restore from backup
+3. **Performance Recovery**: Reactivate performance mode
+4. **Security Recovery**: Re-run security scans
+5. **Component Recovery**: Individual component restart
+6. **Configuration Recovery**: Reset to defaults
+7. **Environment Recovery**: Recreate virtual environment
+
+---
+
+## **REPORTING & DOCUMENTATION**
+
+### **Test Reports Generated**
+- **Component Status**: Individual component test results
+- **Performance Metrics**: Benchmark and timing data
+- **Resource Usage**: Memory, CPU, GPU utilization
+- **Error Logs**: Detailed error information
+- **Recommendations**: Improvement suggestions
+- **Feature Coverage**: 43 features across 10 components
+- **Quality Metrics**: Pass/fail ratios and performance scores
+
+### **Output Formats**
+- **JSON**: Structured data for automation
+- **CSV**: Spreadsheet-compatible data
+- **TXT**: Human-readable reports
+- **HTML**: Web-based dashboards
+- **SARIF**: Security analysis results
+- **XML**: Machine-readable reports
+- **YAML**: Configuration-friendly format
+
+---
+
+## **CONTINUOUS INTEGRATION**
+
+### **Automated Testing**
+- **Pre-commit**: Component validation
+- **Daily**: Full system testing
+- **Weekly**: Performance benchmarking
+- **Monthly**: Security assessment
+- **Quarterly**: Full feature validation
+
+### **Quality Metrics**
+- **Test Coverage**: > 95% of functionality
+- **Performance**: Within 10% of baseline
+- **Reliability**: Target uptime goals
+- **Security**: Zero critical vulnerabilities
+- **Feature Completeness**: 100% of 43 features
+- **Component Health**: All 10 components operational
+
+---
+
+## **TESTING CHECKLIST**
+
+### **Pre-Testing Setup**
+- [ ] Environment prepared
+- [ ] Test data generated
+- [ ] Baselines established
+- [ ] Dependencies installed
+- [ ] Permissions verified
+
+### **Component Testing**
+- [ ] GPU-RAG-V4.ps1 (10 features)
+- [ ] emoji-sentinel-v4.ps1 (4 features)
+- [ ] context-governor.ps1 (4 features)
+- [ ] Drift-Guard-V4.ps1 (4 features)
+- [ ] Project-Health-Scanner-V4.ps1 (4 features)
+- [ ] Scan-Secrets-V4.ps1 (4 features)
+- [ ] Import-Indexer-V4.ps1 (4 features)
+- [ ] Symbol-Indexer-V4.ps1 (4 features)
+- [ ] Power-Management-V4.ps1 (4 features)
+- [ ] GPU-Monitor-V4.ps1 (4 features)
+
+### **Post-Testing Validation**
+- [ ] All tests passed
+- [ ] Performance benchmarks met
+- [ ] Resource usage within limits
+- [ ] Error handling verified
+- [ ] Recovery procedures tested
+- [ ] Documentation updated
+- [ ] Reports generated
+
+---
+
+**Status**: V4.0 "Perfection" testing framework complete and ready for comprehensive validation of all 43 features across 10 component categories.
+
+*Last Updated: January 2025*  
+*Version: V4.0 "Perfection"*  
+*Status: Development/Testing - V3 System with V4 Components*
