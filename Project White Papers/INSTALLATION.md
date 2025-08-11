@@ -2,7 +2,7 @@
 
 **Version:** V4.0 "Perfection"  
 **Last Updated:** January 2025  
-**Status:** Development/Testing - V3 System with V4 Components  
+**Status:** Production Ready - Full V4 Feature Set  
 **Target Audience:** AI developers, system administrators, security professionals, enterprise teams
 
 ---
@@ -61,7 +61,7 @@ cd "Agent Exo-Suit"
 #### **Step 2: Run Auto-Setup**
 ```powershell
 # Windows PowerShell
-.\AgentExoSuitV3.ps1 -Mode Setup
+.\AgentExoSuitV4.ps1 -FullSystem
 
 # Or use the go-big script
 .\go-big.ps1
@@ -793,7 +793,7 @@ performance_tuning:
 ### **Quick Start Commands**
 ```powershell
 # 1. Setup the system
-.\AgentExoSuitV3.ps1 -Mode Setup
+.\AgentExoSuitV4.ps1 -FullSystem
 
 # 2. Test all components
 .\Cleanup\Testing_Tools\test-runner.ps1
@@ -838,4 +838,4 @@ git commit -m "Initial commit"
 
 *Last Updated: January 2025*  
 *Version: V4.0 "Perfection"*  
-*Status: Development/Testing - V3 System with V4 Components*
+*Status: Production Ready - Full V4 Feature Set*
