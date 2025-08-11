@@ -1,0 +1,24 @@
+# Large files that exceed GitHub limits
+Cleanup/Legacy_Backup/Legacy/restore/EMOJI_REPORT.json
+Cleanup/Legacy_Backup/Legacy/restore/*.json
+Cleanup/Legacy_Backup/Legacy/large-test-pack/restore/*.json
+
+# Large data files
+*.json
+!rag/hybrid_config_v4.yaml
+!rag/dual_mode_config.yaml
+!rag/requirements*.txt
+!rag/requirements.txt
+!rag/requirements_gpu.txt
+!rag/requirements_hybrid_v4.txt
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
