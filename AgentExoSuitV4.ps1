@@ -30,15 +30,21 @@ function Write-Status {
 $isAdmin = ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")
 
 if (-not $isAdmin) {
-    Write-Host "This script requires administrator privileges for performance tuning." -ForegroundColor Red
-    Write-Host "Please run PowerShell as Administrator and try again." -ForegroundColor Yellow
-    exit 1
+    Write-Host "Administrator privileges not detected. Running in limited mode." -ForegroundColor Yellow
+    Write-Host "Some features will be limited. For full functionality, run as Administrator." -ForegroundColor Yellow
+    $LimitedMode = $true
+} else {
+    $LimitedMode = $false
 }
 
 # Full System Mode - V4.0 Perfection
 if ($FullSystem) {
     Write-Host "🚀 Agent Exo-Suit V4.0 'Perfection' - Full System Activation" -ForegroundColor Green
     Write-Host "Production Ready - Full V4 Feature Set" -ForegroundColor Cyan
+    
+    if ($LimitedMode) {
+        Write-Host "Running in Limited Mode (Non-Admin)" -ForegroundColor Yellow
+    }
     
     # Activate all V4.0 systems
     Write-Status 'Activating Drift-Gate V4...' '🔄'
@@ -66,7 +72,12 @@ if ($FullSystem) {
         & ".\ops\context-governor.ps1"
     }
     
-    Write-Host "✅ Agent Exo-Suit V4.0 'Perfection' - All systems activated!" -ForegroundColor Green
+    if ($LimitedMode) {
+        Write-Host "⚠️  Limited Mode: Performance tuning features disabled" -ForegroundColor Yellow
+        Write-Host "✅ Agent Exo-Suit V4.0 'Perfection' - Core systems activated (Limited Mode)!" -ForegroundColor Green
+    } else {
+        Write-Host "✅ Agent Exo-Suit V4.0 'Perfection' - All systems activated!" -ForegroundColor Green
+    }
     exit 0
 }
 

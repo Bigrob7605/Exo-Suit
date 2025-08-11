@@ -1,0 +1,114 @@
+﻿{
+    "AvailableTools":  {
+                           "pip":  "C:\\Program Files\\Python313\\Scripts\\pip.exe",
+                           "cargo":  "C:\\Users\\screw\\.cargo\\bin\\cargo.exe",
+                           "python":  "C:\\Program Files\\Python313\\python.exe",
+                           "git":  "C:\\Program Files\\Git\\cmd\\git.exe",
+                           "npm":  null
+                       },
+    "DurationSeconds":  4.77,
+    "ProjectPath":  ".",
+    "Version":  "4.0.0",
+    "ScanStartTime":  "2025-08-10 15:50:17",
+    "OutputPath":  ".\\test_output",
+    "Results":  {
+                    "Ownership":  [
+                                      {
+                                          "Path":  "context/",
+                                          "Owner":  "AI",
+                                          "Source":  "OWNERS.md",
+                                          "Type":  "Markdown",
+                                          "LastUpdated":  "2025-08-10 15:50:17"
+                                      },
+                                      {
+                                          "Path":  "web_interface/",
+                                          "Owner":  "AI",
+                                          "Source":  "OWNERS.md",
+                                          "Type":  "Markdown",
+                                          "LastUpdated":  "2025-08-10 15:50:17"
+                                      },
+                                      {
+                                          "Path":  "scripts/",
+                                          "Owner":  "AI",
+                                          "Source":  "OWNERS.md",
+                                          "Type":  "Markdown",
+                                          "LastUpdated":  "2025-08-10 15:50:17"
+                                      },
+                                      {
+                                          "Path":  "ops/",
+                                          "Owner":  "AI",
+                                          "Source":  "OWNERS.md",
+                                          "Type":  "Markdown",
+                                          "LastUpdated":  "2025-08-10 15:50:17"
+                                      },
+                                      {
+                                          "Path":  "validation/",
+                                          "Owner":  "AI",
+                                          "Source":  "OWNERS.md",
+                                          "Type":  "Markdown",
+                                          "LastUpdated":  "2025-08-10 15:50:17"
+                                      },
+                                      {
+                                          "Path":  "kai_core/",
+                                          "Owner":  "AI",
+                                          "Source":  "OWNERS.md",
+                                          "Type":  "Markdown",
+                                          "LastUpdated":  "2025-08-10 15:50:17"
+                                      },
+                                      {
+                                          "Path":  "docs/",
+                                          "Owner":  "Rob",
+                                          "Source":  "OWNERS.md",
+                                          "Type":  "Markdown",
+                                          "LastUpdated":  "2025-08-10 15:50:17"
+                                      },
+                                      {
+                                          "Path":  "tests/",
+                                          "Owner":  "AI",
+                                          "Source":  "OWNERS.md",
+                                          "Type":  "Markdown",
+                                          "LastUpdated":  "2025-08-10 15:50:17"
+                                      },
+                                      {
+                                          "Path":  "cursor/",
+                                          "Owner":  "AI",
+                                          "Source":  "OWNERS.md",
+                                          "Type":  "Markdown",
+                                          "LastUpdated":  "2025-08-10 15:50:17"
+                                      }
+                                  ],
+                    "SBOM":  {
+                                 "Summary":  {
+                                                 "FailedTypes":  {
+
+                                                                 },
+                                                 "GeneratedTypes":  "python",
+                                                 "GenerationTime":  "2025-08-10 15:50:22",
+                                                 "TotalFailed":  0,
+                                                 "TotalGenerated":  1
+                                             },
+                                 "Generated":  [
+                                                   {
+                                                       "Path":  ".\\test_output\\sbom\\python_sbom_pip.json",
+                                                       "Format":  "pip list",
+                                                       "Generator":  "pip list",
+                                                       "Type":  "python"
+                                                   }
+                                               ],
+                                 "Failed":  [
+
+                                            ]
+                             },
+                    "LockFiles":  {
+                                      "Type":  "pip",
+                                      "Manager":  "pip",
+                                      "Path":  "requirements.txt",
+                                      "FullPath":  ".\\requirements.txt",
+                                      "AgeDays":  0.3,
+                                      "LastModified":  "2025-08-10 08:32:36",
+                                      "SizeKB":  0.58,
+                                      "Status":  "Fresh"
+                                  }
+                },
+    "ScanEndTime":  "2025-08-10 15:50:22"
+}

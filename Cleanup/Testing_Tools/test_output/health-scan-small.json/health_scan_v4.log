@@ -1,0 +1,18 @@
+[17:01:49.485] [Info]  Validating system requirements...
+[17:01:49.529] [Warning]  npm not found in PATH
+[17:01:49.537] [Info]  No specific actions specified, running all checks
+[17:01:49.543] [Info]  Building comprehensive ownership map...
+[17:01:49.548] [Info]  Ownership data saved: .\test_output\health-scan-small.json\ownership.json
+[17:01:49.560] [Info]  Found 0 ownership entries
+[17:01:49.564] [Info]  Analyzing lock file freshness...
+[17:01:49.568] [Info]  Lock file freshness data saved: .\test_output\health-scan-small.json\lock_age.json
+[17:01:49.569] [Info]  Analyzed 0 lock files
+[17:01:49.575] [Info]  Generating comprehensive SBOMs...
+[17:01:49.580] [Info]  Generating Python SBOM...
+[17:01:51.106] [Info]  Python SBOM generated with cyclonedx-py
+[17:01:51.125] [Info]  SBOM generation complete
+[17:01:51.127] [Info]  Generated: 1, Failed: 0
+[17:01:51.136] [Info]  V4.0 Project Health Scanner completed successfully!
+[17:01:51.138] [Info]  Duration: 1.5904919 seconds
+[17:01:51.139] [Info]  Report saved to: .\test_output\health-scan-small.json\health_scan_v4_report.json
+[17:01:51.140] [Info]  V4.0 Project Health Scanner ready for production deployment!

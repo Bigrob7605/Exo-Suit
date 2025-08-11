@@ -1,0 +1,61 @@
+# Agent Exo-Suit V4.0 - Enhanced Hybrid CPU+GPU RAG System Requirements
+# Install with: pip install -r requirements_hybrid_v4.txt
+
+# Core PyTorch and CUDA support
+torch>=2.0.0
+torchvision>=0.15.0
+torchaudio>=2.0.0
+
+# GPU acceleration (optional, will fallback to CPU)
+# Uncomment the appropriate line for your CUDA version:
+# torch>=2.0.0+cu118 -f https://download.pytorch.org/whl/torch_stable.html  # CUDA 11.8
+# torch>=2.0.0+cu117 -f https://download.pytorch.org/whl/torch_stable.html  # CUDA 11.7
+# torch>=2.0.0+cu116 -f https://download.pytorch.org/whl/torch_stable.html  # CUDA 11.6
+
+# Core ML libraries
+numpy>=1.21.0
+scipy>=1.7.0
+scikit-learn>=1.0.0
+
+# Sentence transformers for embeddings
+sentence-transformers>=2.2.0
+transformers>=4.20.0
+
+# FAISS for vector similarity search
+faiss-cpu>=1.7.0
+# For GPU FAISS (optional, requires CUDA):
+# faiss-gpu>=1.7.0
+
+# System monitoring and optimization
+psutil>=5.8.0
+pyyaml>=6.0
+
+# File processing and utilities
+pathlib2>=2.3.0
+tqdm>=4.62.0
+
+# Memory optimization
+memory-profiler>=0.60.0
+
+# Performance monitoring
+pynvml>=11.0.0  # NVIDIA GPU monitoring
+
+# Additional optimization libraries
+numba>=0.56.0  # JIT compilation for performance
+joblib>=1.1.0  # Parallel processing
+
+# Development and testing (optional)
+pytest>=6.0.0
+pytest-cov>=2.12.0
+black>=21.0.0  # Code formatting
+flake8>=3.9.0  # Linting
+
+# Windows compatibility
+pywin32>=300; sys_platform == "win32"  # Windows-specific features
+
+# Alternative packages for different environments
+# For Apple Silicon (M1/M2):
+# torch>=2.0.0  # PyTorch with MPS support
+
+# For ARM64 Linux:
+# torch>=2.0.0  # PyTorch with ARM support

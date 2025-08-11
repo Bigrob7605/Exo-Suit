@@ -1,0 +1,21 @@
+[15:50:17.848] [Info]  Agent Exo-Suit V4.0 'PERFECTION' - Project Health Scanner Starting...
+[15:50:17.869] [Info]  Validating system requirements...
+[15:50:17.875] [Warning]  PowerShell 7+ recommended for optimal performance
+[15:50:17.911] [Warning]  npm not found in PATH
+[15:50:17.916] [Info]  No specific actions specified, running all checks
+[15:50:17.925] [Info]  Building comprehensive ownership map...
+[15:50:17.984] [Info]  Ownership data saved: .\test_output\ownership.json
+[15:50:17.987] [Info]  Found 9 ownership entries
+[15:50:17.993] [Info]  Analyzing lock file freshness...
+[15:50:18.009] [Info]  Lock file freshness data saved: .\test_output\lock_age.json
+[15:50:18.010] [Info]  Analyzed 1 lock files
+[15:50:18.017] [Info]  Generating comprehensive SBOMs...
+[15:50:18.020] [Info]  Generating Python SBOM...
+[15:50:22.284] [Warning]  cyclonedx-py failed: CRITICAL | CDX > Could not open requirements file: .|n[Errno 13] Permission denied: '.'
+[15:50:22.671] [Info]  Python SBOM generated with pip list
+[15:50:22.686] [Info]  SBOM generation complete
+[15:50:22.690] [Info]  Generated: 1, Failed: 0
+[15:50:22.695] [Info]  V4.0 Project Health Scanner completed successfully!
+[15:50:22.696] [Info]  Duration: 4.773778 seconds
+[15:50:22.698] [Info]  Report saved to: .\test_output\health_scan_v4_report.json
+[15:50:22.699] [Info]  V4.0 Project Health Scanner ready for production deployment!

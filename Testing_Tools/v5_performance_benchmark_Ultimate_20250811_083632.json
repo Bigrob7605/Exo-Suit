@@ -1,0 +1,46 @@
+{
+  "Performance_Metrics": {
+    "CPU_Speed": 648209.0,
+    "Memory_Speed": 620166.0,
+    "Overall_Score": 634187.0
+  },
+  "Timestamp": "2025-08-11 08:36:29",
+  "Mode": "Ultimate",
+  "CPU_Test_Seconds": 1.5427115,
+  "Profile": {
+    "Batch_Size": 1024,
+    "Description": "V5 Ultimate Mode - Unlocks 90% of system potential",
+    "Priority": "RealTime",
+    "Memory_Cache": 56,
+    "Prefetch": 64,
+    "CPU_Boost": "Maximum",
+    "Workers": 24,
+    "GPU_Memory": 0.995,
+    "Power_Plan": "Ultimate Performance"
+  },
+  "TotalDuration": 3.1955018,
+  "StartTime": "2025-08-11T08:36:29.2504569-04:00",
+  "SystemInfo": {
+    "GPU": {
+      "OptimizableVRAM": 7.5,
+      "ComputeCap": "8.9",
+      "Name": "NVIDIA GeForce RTX 4070 Laptop GPU",
+      "VRAM": 8
+    },
+    "CPU": {
+      "Name": "13th Gen Intel(R) Core(TM) i7-13620H",
+      "MaxBoost": 6000.0,
+      "BaseSpeed": 2400,
+      "Threads": 16,
+      "Cores": 10,
+      "CurrentSpeed": 2400
+    },
+    "Memory": {
+      "TotalGB": 64.0,
+      "AvailableGB": 45.4,
+      "OptimizableGB": 60.8
+    }
+  },
+  "GPU_Test_Seconds": 0.0400541,
+  "Memory_Test_Seconds": 1.6124725
+}

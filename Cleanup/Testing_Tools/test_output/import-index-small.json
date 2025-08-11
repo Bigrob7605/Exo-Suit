@@ -1,0 +1,110 @@
+{
+  "Imports": [
+    {
+      "Line": 2,
+      "File": "C:\\My Projects\\Agent Exo-Suit\\test_small\\test1.py",
+      "Type": "import",
+      "Timestamp": "2025-08-10 17:02:06",
+      "Language": "python",
+      "Pattern": "import",
+      "Items": "os",
+      "RawLine": "import os"
+    },
+    {
+      "Line": 2,
+      "File": "C:\\My Projects\\Agent Exo-Suit\\test_small\\test2.js",
+      "Type": "require",
+      "Module": "fs",
+      "Timestamp": "2025-08-10 17:02:06",
+      "Language": "javascript",
+      "Pattern": "require",
+      "RawLine": "const fs = require('fs');",
+      "Variable": "fs"
+    },
+    null
+  ],
+  "Files": [
+    {
+      "ImportCount": 8,
+      "Success": true,
+      "File": "C:\\My Projects\\Agent Exo-Suit\\test_small\\test1.py",
+      "Imports": {
+        "Line": 2,
+        "File": "C:\\My Projects\\Agent Exo-Suit\\test_small\\test1.py",
+        "Type": "import",
+        "Timestamp": "2025-08-10 17:02:06",
+        "Language": "python",
+        "Pattern": "import",
+        "Items": "os",
+        "RawLine": "import os"
+      },
+      "Errors": [],
+      "Language": "python",
+      "ProcessingTime": 41.9748
+    },
+    {
+      "ImportCount": 9,
+      "Success": true,
+      "File": "C:\\My Projects\\Agent Exo-Suit\\test_small\\test2.js",
+      "Imports": {
+        "Line": 2,
+        "File": "C:\\My Projects\\Agent Exo-Suit\\test_small\\test2.js",
+        "Type": "require",
+        "Module": "fs",
+        "Timestamp": "2025-08-10 17:02:06",
+        "Language": "javascript",
+        "Pattern": "require",
+        "RawLine": "const fs = require('fs');",
+        "Variable": "fs"
+      },
+      "Errors": [],
+      "Language": "javascript",
+      "ProcessingTime": 9.5304
+    },
+    {
+      "ImportCount": 0,
+      "Success": true,
+      "File": "C:\\My Projects\\Agent Exo-Suit\\test_small\\test3.md",
+      "Imports": null,
+      "Errors": [],
+      "Language": "markdown",
+      "ProcessingTime": 7.608
+    }
+  ],
+  "Summary": {
+    "ByLanguage": [
+      {
+        "Files": 1,
+        "Count": 1,
+        "Language": "javascript"
+      },
+      {
+        "Files": 1,
+        "Count": 1,
+        "Language": "python"
+      }
+    ],
+    "ByType": [
+      {
+        "Count": 1,
+        "Type": "import"
+      },
+      {
+        "Count": 1,
+        "Type": "require"
+      }
+    ]
+  },
+  "Metadata": {
+    "ProcessedFiles": 3,
+    "Timestamp": "2025-08-10 17:02:06",
+    "Version": "4.0",
+    "Path": "test_small",
+    "Language": "all",
+    "TotalErrors": 0,
+    "ProcessingMode": "Sequential",
+    "FailedFiles": 0,
+    "TotalImports": 34,
+    "TotalFiles": 3
+  }
+}

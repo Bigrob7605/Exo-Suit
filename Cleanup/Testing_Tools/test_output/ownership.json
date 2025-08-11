@@ -1,0 +1,65 @@
+﻿[
+    {
+        "Path":  "context/",
+        "Owner":  "AI",
+        "Source":  "OWNERS.md",
+        "Type":  "Markdown",
+        "LastUpdated":  "2025-08-10 15:50:17"
+    },
+    {
+        "Path":  "web_interface/",
+        "Owner":  "AI",
+        "Source":  "OWNERS.md",
+        "Type":  "Markdown",
+        "LastUpdated":  "2025-08-10 15:50:17"
+    },
+    {
+        "Path":  "scripts/",
+        "Owner":  "AI",
+        "Source":  "OWNERS.md",
+        "Type":  "Markdown",
+        "LastUpdated":  "2025-08-10 15:50:17"
+    },
+    {
+        "Path":  "ops/",
+        "Owner":  "AI",
+        "Source":  "OWNERS.md",
+        "Type":  "Markdown",
+        "LastUpdated":  "2025-08-10 15:50:17"
+    },
+    {
+        "Path":  "validation/",
+        "Owner":  "AI",
+        "Source":  "OWNERS.md",
+        "Type":  "Markdown",
+        "LastUpdated":  "2025-08-10 15:50:17"
+    },
+    {
+        "Path":  "kai_core/",
+        "Owner":  "AI",
+        "Source":  "OWNERS.md",
+        "Type":  "Markdown",
+        "LastUpdated":  "2025-08-10 15:50:17"
+    },
+    {
+        "Path":  "docs/",
+        "Owner":  "Rob",
+        "Source":  "OWNERS.md",
+        "Type":  "Markdown",
+        "LastUpdated":  "2025-08-10 15:50:17"
+    },
+    {
+        "Path":  "tests/",
+        "Owner":  "AI",
+        "Source":  "OWNERS.md",
+        "Type":  "Markdown",
+        "LastUpdated":  "2025-08-10 15:50:17"
+    },
+    {
+        "Path":  "cursor/",
+        "Owner":  "AI",
+        "Source":  "OWNERS.md",
+        "Type":  "Markdown",
+        "LastUpdated":  "2025-08-10 15:50:17"
+    }
+]

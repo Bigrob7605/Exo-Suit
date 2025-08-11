@@ -1,0 +1,38 @@
+[
+  {
+    "Path": "kai_core/",
+    "Owner": "AI"
+  },
+  {
+    "Path": "docs/",
+    "Owner": "Rob"
+  },
+  {
+    "Path": "validation/",
+    "Owner": "AI"
+  },
+  {
+    "Path": "tests/",
+    "Owner": "AI"
+  },
+  {
+    "Path": "ops/",
+    "Owner": "AI"
+  },
+  {
+    "Path": "cursor/",
+    "Owner": "AI"
+  },
+  {
+    "Path": "web_interface/",
+    "Owner": "AI"
+  },
+  {
+    "Path": "context/",
+    "Owner": "AI"
+  },
+  {
+    "Path": "scripts/",
+    "Owner": "AI"
+  }
+]

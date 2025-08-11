@@ -19,16 +19,16 @@ if (-not $NoEmojiScan) {
     
     if ($ForceEmojiScan -or $EmojiPurge) {
         Write-Host "Running comprehensive emoji scan..." -ForegroundColor Yellow
-        & .\ops\emoji-sentinel-v4.ps1 -Scan -Verbose
+        & .\ops\emoji-sentinel-v4.ps1 -Path "." -Scan -Verbose
     } else {
         # Quick emoji check
         Write-Host "Running quick emoji scan..." -ForegroundColor Yellow
-        & .\ops\emoji-sentinel-v4.ps1 -Scan
+        & .\ops\emoji-sentinel-v4.ps1 -Path "." -Scan
     }
     
     if ($EmojiPurge) {
         Write-Host "`nInitiating emoji purge protocol..." -ForegroundColor Red
-        & .\ops\emoji-sentinel-v4.ps1 -Purge -Verbose
+        & .\ops\emoji-sentinel-v4.ps1 -Path "." -Purge -Verbose
     }
     
     Write-Host "Emoji Sentinel V4.0: ACTIVE" -ForegroundColor Green
@@ -41,17 +41,17 @@ Write-Host "System Refresh: SKIPPED (Legacy component)" -ForegroundColor Yellow
 
 # Step 3: Performance Mode Activation
 Write-Host "`nStep 3: Activating Ultimate Performance Mode..." -ForegroundColor Cyan
-& .\AgentExoSuitV4.ps1
+& .\AgentExoSuitV4.ps1 -Status
 Write-Host "Performance Mode: ACTIVE" -ForegroundColor Green
 
 # Step 4: Drift Detection V4.0
 Write-Host "`nStep 4: Drift Detection V4.0..." -ForegroundColor Cyan
-& .\ops\Drift-Guard-V4.ps1
+& .\ops\Drift-Guard-V4.ps1 -Output "drift_report.json"
 Write-Host "Drift Detection V4.0: COMPLETE" -ForegroundColor Green
 
 # Step 5: Health Scan V4.0
 Write-Host "`nStep 5: Project Health Scan V4.0..." -ForegroundColor Cyan
-& .\ops\Project-Health-Scanner-V4.ps1
+& .\ops\Project-Health-Scanner-V4.ps1 -Path "." -Output "restore"
 Write-Host "Health Scan V4.0: COMPLETE" -ForegroundColor Green
 
 # Step 6: GPU Acceleration
@@ -73,6 +73,6 @@ Write-Host "Performance: MAXIMUM" -ForegroundColor Green
 Write-Host "=" * 60 -ForegroundColor Cyan
 
 Write-Host "`nSystem ready for high-performance V4.0 development!" -ForegroundColor Cyan
-Write-Host "Use '.\ops\emoji-sentinel-v4.ps1 -Report' to view emoji scan results" -ForegroundColor Yellow
-Write-Host "Use '.\ops\emoji-sentinel-v4.ps1 -Purge' to remove all detected emojis" -ForegroundColor Yellow
+Write-Host 'Use ".\ops\emoji-sentinel-v4.ps1 -Path \".\" -Report" to view emoji scan results' -ForegroundColor Yellow
+Write-Host 'Use ".\ops\emoji-sentinel-v4.ps1 -Path \".\" -Purge" to remove all detected emojis' -ForegroundColor Yellow
 Write-Host "Use '.\AgentExoSuitV4.ps1 -Status' to check V4.0 component status" -ForegroundColor Yellow

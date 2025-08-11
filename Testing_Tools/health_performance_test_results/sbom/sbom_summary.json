@@ -1,0 +1,18 @@
+{
+  "Summary": {
+    "TotalGenerated": 1,
+    "TotalFailed": 0,
+    "GenerationTime": "2025-08-11 08:31:03",
+    "GeneratedTypes": "python",
+    "FailedTypes": null
+  },
+  "Failed": [],
+  "Generated": [
+    {
+      "Path": "Testing_Tools\\health_performance_test_results\\sbom\\python_sbom_cyclonedx.json",
+      "Format": "CycloneDX",
+      "Generator": "cyclonedx-py",
+      "Type": "python"
+    }
+  ]
+}

@@ -1,0 +1,1777 @@
+2025-08-10 12:37:46,865 - INFO - Performing memory cleanup...
+2025-08-10 12:37:47,591 - INFO - Memory cleanup completed
+2025-08-10 12:37:47,593 - INFO - RAM disk created at: C:\Users\screw\AppData\Local\Temp\ramdisk_em0mfu_m
+2025-08-10 12:37:47,594 - INFO - RAM disk cleaned up
+2025-08-10 12:37:47,599 - INFO - Detecting system devices...
+2025-08-10 12:37:47,624 - INFO - CPU detected: Intel64 Family 6 Model 186 Stepping 2, GenuineIntel (AMD64) with 16 cores
+2025-08-10 12:37:47,625 - INFO - GPU detected: NVIDIA GeForce RTX 4070 Laptop GPU with 8.0GB VRAM
+2025-08-10 12:37:47,625 - INFO - Device detection complete - CPU: True, GPU: True
+2025-08-10 12:37:47,625 - INFO - Analyzing system capabilities...
+2025-08-10 12:37:47,631 - INFO - System analysis complete - Recommended mode: hybrid
+2025-08-10 12:37:47,631 - INFO - Device manager initialized
+2025-08-10 12:37:47,633 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 12:37:48,371 - INFO - CPU model initialized
+2025-08-10 12:37:48,372 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 12:37:48,875 - INFO - GPU model initialized
+2025-08-10 12:37:48,875 - INFO - RAM disk created at: C:\Users\screw\AppData\Local\Temp\ramdisk__6toc5lx
+2025-08-10 12:37:48,875 - INFO - Processing 1 files with hybrid processing...
+2025-08-10 12:37:48,876 - INFO - Starting 4 processing workers...
+2025-08-10 12:37:48,876 - INFO - Processing worker 0 started
+2025-08-10 12:37:48,877 - INFO - Processing worker 1 started
+2025-08-10 12:37:48,877 - INFO - Processing worker 2 started
+2025-08-10 12:37:48,877 - INFO - Processing worker 3 started
+2025-08-10 12:37:48,877 - INFO - Processing workers started
+2025-08-10 12:37:48,877 - INFO - Processing batch 1/1 (1 files)
+2025-08-10 12:37:49,025 - INFO - Stopping processing workers...
+2025-08-10 12:37:49,879 - INFO - Processing worker 2 stopped
+2025-08-10 12:37:49,879 - INFO - Processing worker 1 stopped
+2025-08-10 12:37:49,879 - INFO - Processing worker 3 stopped
+2025-08-10 12:37:50,022 - INFO - Processing worker 0 stopped
+2025-08-10 12:37:50,023 - INFO - Processing workers stopped
+2025-08-10 12:37:50,024 - INFO - Processing completed. 1 results generated.
+2025-08-10 12:37:50,024 - INFO - FAISS index built with 1 vectors
+2025-08-10 12:37:50,050 - INFO - Cleaning up hybrid RAG processor...
+2025-08-10 12:37:50,051 - INFO - Stopping processing workers...
+2025-08-10 12:37:50,051 - INFO - Processing workers stopped
+2025-08-10 12:37:50,051 - INFO - RAM disk cleaned up
+2025-08-10 12:37:50,051 - INFO - Performing memory cleanup...
+2025-08-10 12:37:50,652 - INFO - Memory cleanup completed
+2025-08-10 12:37:50,652 - INFO - Cleanup completed
+2025-08-10 12:37:50,664 - INFO - Detecting system devices...
+2025-08-10 12:37:50,664 - INFO - CPU detected: Intel64 Family 6 Model 186 Stepping 2, GenuineIntel (AMD64) with 16 cores
+2025-08-10 12:37:50,664 - INFO - GPU detected: NVIDIA GeForce RTX 4070 Laptop GPU with 8.0GB VRAM
+2025-08-10 12:37:50,665 - INFO - Device detection complete - CPU: True, GPU: True
+2025-08-10 12:37:50,665 - INFO - Analyzing system capabilities...
+2025-08-10 12:37:50,665 - INFO - System analysis complete - Recommended mode: hybrid
+2025-08-10 12:37:50,665 - INFO - Device manager initialized
+2025-08-10 12:37:50,666 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 12:37:51,095 - INFO - CPU model initialized
+2025-08-10 12:37:51,096 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 12:37:51,619 - INFO - GPU model initialized
+2025-08-10 12:37:51,620 - INFO - RAM disk created at: C:\Users\screw\AppData\Local\Temp\ramdisk_lxh6thhs
+2025-08-10 12:37:51,620 - INFO - Processing 25 files with hybrid processing...
+2025-08-10 12:37:51,620 - INFO - Starting 4 processing workers...
+2025-08-10 12:37:51,621 - INFO - Processing worker 0 started
+2025-08-10 12:37:51,621 - INFO - Processing worker 1 started
+2025-08-10 12:37:51,621 - INFO - Processing worker 2 started
+2025-08-10 12:37:51,622 - INFO - Processing worker 3 started
+2025-08-10 12:37:51,622 - INFO - Processing workers started
+2025-08-10 12:37:51,622 - INFO - Processing batch 1/2 (16 files)
+2025-08-10 12:37:52,089 - INFO - Processing batch 2/2 (9 files)
+2025-08-10 12:37:52,342 - INFO - Stopping processing workers...
+2025-08-10 12:37:53,306 - INFO - Processing worker 3 stopped
+2025-08-10 12:37:53,318 - INFO - Processing worker 0 stopped
+2025-08-10 12:37:53,328 - INFO - Processing worker 2 stopped
+2025-08-10 12:37:53,339 - INFO - Processing worker 1 stopped
+2025-08-10 12:37:53,340 - INFO - Processing workers stopped
+2025-08-10 12:37:53,340 - INFO - Processing completed. 25 results generated.
+2025-08-10 12:37:53,340 - INFO - FAISS index built with 25 vectors
+2025-08-10 12:37:53,340 - INFO - Cleaning up hybrid RAG processor...
+2025-08-10 12:37:53,340 - INFO - Stopping processing workers...
+2025-08-10 12:37:53,341 - INFO - Processing workers stopped
+2025-08-10 12:37:53,341 - INFO - RAM disk cleaned up
+2025-08-10 12:37:53,341 - INFO - Performing memory cleanup...
+2025-08-10 12:37:54,015 - INFO - Memory cleanup completed
+2025-08-10 12:37:54,016 - INFO - Cleanup completed
+2025-08-10 12:37:54,018 - INFO - Detecting system devices...
+2025-08-10 12:37:54,019 - INFO - CPU detected: Intel64 Family 6 Model 186 Stepping 2, GenuineIntel (AMD64) with 16 cores
+2025-08-10 12:37:54,019 - INFO - GPU detected: NVIDIA GeForce RTX 4070 Laptop GPU with 8.0GB VRAM
+2025-08-10 12:37:54,019 - INFO - Device detection complete - CPU: True, GPU: True
+2025-08-10 12:37:54,019 - INFO - Analyzing system capabilities...
+2025-08-10 12:37:54,019 - INFO - System analysis complete - Recommended mode: hybrid
+2025-08-10 12:37:54,019 - INFO - Device manager initialized
+2025-08-10 12:37:54,021 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 12:37:54,525 - INFO - CPU model initialized
+2025-08-10 12:37:54,526 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 12:37:57,905 - INFO - GPU model initialized
+2025-08-10 12:37:57,906 - INFO - RAM disk created at: C:\Users\screw\AppData\Local\Temp\ramdisk__k3z7uln
+2025-08-10 12:37:57,921 - INFO - Cleaning up hybrid RAG processor...
+2025-08-10 12:37:57,921 - INFO - Stopping processing workers...
+2025-08-10 12:37:57,921 - INFO - Processing workers stopped
+2025-08-10 12:37:57,922 - INFO - RAM disk cleaned up
+2025-08-10 12:37:57,922 - INFO - Performing memory cleanup...
+2025-08-10 12:37:58,628 - INFO - Memory cleanup completed
+2025-08-10 12:37:58,628 - INFO - Cleanup completed
+2025-08-10 12:37:58,629 - INFO - Detecting system devices...
+2025-08-10 12:37:58,629 - INFO - CPU detected: Intel64 Family 6 Model 186 Stepping 2, GenuineIntel (AMD64) with 16 cores
+2025-08-10 12:37:58,629 - INFO - GPU detected: NVIDIA GeForce RTX 4070 Laptop GPU with 8.0GB VRAM
+2025-08-10 12:37:58,629 - INFO - Device detection complete - CPU: True, GPU: True
+2025-08-10 12:37:58,630 - INFO - Analyzing system capabilities...
+2025-08-10 12:37:58,630 - INFO - System analysis complete - Recommended mode: hybrid
+2025-08-10 12:37:58,630 - INFO - Device manager initialized
+2025-08-10 12:37:58,631 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 12:37:59,080 - INFO - CPU model initialized
+2025-08-10 12:37:59,082 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 12:37:59,672 - INFO - GPU model initialized
+2025-08-10 12:37:59,672 - INFO - RAM disk created at: C:\Users\screw\AppData\Local\Temp\ramdisk_skto9ggw
+2025-08-10 12:37:59,681 - INFO - Processing 10 files with hybrid processing...
+2025-08-10 12:37:59,681 - INFO - Starting 4 processing workers...
+2025-08-10 12:37:59,682 - INFO - Processing worker 0 started
+2025-08-10 12:37:59,682 - INFO - Processing worker 1 started
+2025-08-10 12:37:59,683 - INFO - Processing worker 2 started
+2025-08-10 12:37:59,683 - INFO - Processing worker 3 started
+2025-08-10 12:37:59,683 - INFO - Processing workers started
+2025-08-10 12:37:59,683 - INFO - Processing batch 1/3 (4 files)
+2025-08-10 12:37:59,789 - INFO - Processing batch 2/3 (4 files)
+2025-08-10 12:37:59,893 - INFO - Processing batch 3/3 (2 files)
+2025-08-10 12:37:59,949 - INFO - Stopping processing workers...
+2025-08-10 12:38:00,877 - INFO - Processing worker 2 stopped
+2025-08-10 12:38:00,890 - INFO - Processing worker 3 stopped
+2025-08-10 12:38:00,933 - INFO - Processing worker 1 stopped
+2025-08-10 12:38:00,945 - INFO - Processing worker 0 stopped
+2025-08-10 12:38:00,949 - INFO - Processing workers stopped
+2025-08-10 12:38:00,949 - INFO - Processing completed. 10 results generated.
+2025-08-10 12:38:00,954 - INFO - Cleaning up hybrid RAG processor...
+2025-08-10 12:38:00,954 - INFO - Stopping processing workers...
+2025-08-10 12:38:00,954 - INFO - Processing workers stopped
+2025-08-10 12:38:00,954 - INFO - RAM disk cleaned up
+2025-08-10 12:38:00,954 - INFO - Performing memory cleanup...
+2025-08-10 12:38:01,612 - INFO - Memory cleanup completed
+2025-08-10 12:38:01,612 - INFO - Cleanup completed
+2025-08-10 12:38:01,615 - INFO - Detecting system devices...
+2025-08-10 12:38:01,615 - INFO - CPU detected: Intel64 Family 6 Model 186 Stepping 2, GenuineIntel (AMD64) with 16 cores
+2025-08-10 12:38:01,615 - INFO - GPU detected: NVIDIA GeForce RTX 4070 Laptop GPU with 8.0GB VRAM
+2025-08-10 12:38:01,615 - INFO - Device detection complete - CPU: True, GPU: True
+2025-08-10 12:38:01,615 - INFO - Analyzing system capabilities...
+2025-08-10 12:38:01,616 - INFO - System analysis complete - Recommended mode: hybrid
+2025-08-10 12:38:01,616 - INFO - Device manager initialized
+2025-08-10 12:38:01,617 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 12:38:02,071 - INFO - CPU model initialized
+2025-08-10 12:38:02,073 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 12:38:02,809 - INFO - GPU model initialized
+2025-08-10 12:38:02,810 - INFO - RAM disk created at: C:\Users\screw\AppData\Local\Temp\ramdisk_az23lxk2
+2025-08-10 12:38:02,811 - INFO - Processing 4 files with hybrid processing...
+2025-08-10 12:38:02,812 - INFO - Starting 4 processing workers...
+2025-08-10 12:38:02,812 - INFO - Processing worker 0 started
+2025-08-10 12:38:02,813 - INFO - Processing worker 1 started
+2025-08-10 12:38:02,813 - INFO - Processing worker 2 started
+2025-08-10 12:38:02,814 - INFO - Processing worker 3 started
+2025-08-10 12:38:02,814 - INFO - Processing workers started
+2025-08-10 12:38:02,814 - INFO - Processing batch 1/3 (2 files)
+2025-08-10 12:38:02,937 - INFO - Processing batch 2/3 (2 files)
+2025-08-10 12:38:02,938 - ERROR - Failed to read file nonexistent.txt: [Errno 2] No such file or directory: 'nonexistent.txt'
+2025-08-10 12:38:02,964 - INFO - Stopping processing workers...
+2025-08-10 12:38:03,816 - INFO - Processing worker 3 stopped
+2025-08-10 12:38:03,856 - INFO - Processing worker 0 stopped
+2025-08-10 12:38:03,933 - INFO - Processing worker 1 stopped
+2025-08-10 12:38:03,966 - INFO - Processing worker 2 stopped
+2025-08-10 12:38:03,967 - INFO - Processing workers stopped
+2025-08-10 12:38:03,967 - INFO - Processing completed. 3 results generated.
+2025-08-10 12:38:03,968 - INFO - Cleaning up hybrid RAG processor...
+2025-08-10 12:38:03,968 - INFO - Stopping processing workers...
+2025-08-10 12:38:03,968 - INFO - Processing workers stopped
+2025-08-10 12:38:03,968 - INFO - RAM disk cleaned up
+2025-08-10 12:38:03,969 - INFO - Performing memory cleanup...
+2025-08-10 12:38:04,575 - INFO - Memory cleanup completed
+2025-08-10 12:38:04,575 - INFO - Cleanup completed
+2025-08-10 12:38:25,624 - INFO - Performing memory cleanup...
+2025-08-10 12:38:26,521 - INFO - Memory cleanup completed
+2025-08-10 12:38:26,522 - INFO - RAM disk created at: C:\Users\screw\AppData\Local\Temp\ramdisk_llqead32
+2025-08-10 12:38:26,523 - INFO - RAM disk cleaned up
+2025-08-10 12:38:26,527 - INFO - Detecting system devices...
+2025-08-10 12:38:26,541 - INFO - CPU detected: Intel64 Family 6 Model 186 Stepping 2, GenuineIntel (AMD64) with 16 cores
+2025-08-10 12:38:26,542 - INFO - GPU detected: NVIDIA GeForce RTX 4070 Laptop GPU with 8.0GB VRAM
+2025-08-10 12:38:26,542 - INFO - Device detection complete - CPU: True, GPU: True
+2025-08-10 12:38:26,542 - INFO - Analyzing system capabilities...
+2025-08-10 12:38:26,542 - INFO - System analysis complete - Recommended mode: hybrid
+2025-08-10 12:38:26,542 - INFO - Device manager initialized
+2025-08-10 12:38:26,543 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 12:38:27,204 - INFO - CPU model initialized
+2025-08-10 12:38:27,206 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 12:38:27,711 - INFO - GPU model initialized
+2025-08-10 12:38:27,712 - INFO - RAM disk created at: C:\Users\screw\AppData\Local\Temp\ramdisk_fz7gy98s
+2025-08-10 12:38:27,712 - INFO - Processing 1 files with hybrid processing...
+2025-08-10 12:38:27,712 - INFO - Starting 4 processing workers...
+2025-08-10 12:38:27,713 - INFO - Processing worker 0 started
+2025-08-10 12:38:27,714 - INFO - Processing worker 1 started
+2025-08-10 12:38:27,714 - INFO - Processing worker 2 started
+2025-08-10 12:38:27,714 - INFO - Processing worker 3 started
+2025-08-10 12:38:27,714 - INFO - Processing workers started
+2025-08-10 12:38:27,715 - INFO - Processing batch 1/1 (1 files)
+2025-08-10 12:38:27,866 - INFO - Stopping processing workers...
+2025-08-10 12:38:28,714 - INFO - Processing worker 2 stopped
+2025-08-10 12:38:28,714 - INFO - Processing worker 1 stopped
+2025-08-10 12:38:28,716 - INFO - Processing worker 3 stopped
+2025-08-10 12:38:28,862 - INFO - Processing worker 0 stopped
+2025-08-10 12:38:28,863 - INFO - Processing workers stopped
+2025-08-10 12:38:28,863 - INFO - Processing completed. 1 results generated.
+2025-08-10 12:38:28,863 - INFO - FAISS index built with 1 vectors
+2025-08-10 12:38:28,882 - INFO - Cleaning up hybrid RAG processor...
+2025-08-10 12:38:28,883 - INFO - Stopping processing workers...
+2025-08-10 12:38:28,883 - INFO - Processing workers stopped
+2025-08-10 12:38:28,883 - INFO - RAM disk cleaned up
+2025-08-10 12:38:28,884 - INFO - Performing memory cleanup...
+2025-08-10 12:38:29,666 - INFO - Memory cleanup completed
+2025-08-10 12:38:29,666 - INFO - Cleanup completed
+2025-08-10 12:38:29,674 - INFO - Detecting system devices...
+2025-08-10 12:38:29,674 - INFO - CPU detected: Intel64 Family 6 Model 186 Stepping 2, GenuineIntel (AMD64) with 16 cores
+2025-08-10 12:38:29,675 - INFO - GPU detected: NVIDIA GeForce RTX 4070 Laptop GPU with 8.0GB VRAM
+2025-08-10 12:38:29,675 - INFO - Device detection complete - CPU: True, GPU: True
+2025-08-10 12:38:29,675 - INFO - Analyzing system capabilities...
+2025-08-10 12:38:29,675 - INFO - System analysis complete - Recommended mode: hybrid
+2025-08-10 12:38:29,675 - INFO - Device manager initialized
+2025-08-10 12:38:29,676 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 12:38:30,097 - INFO - CPU model initialized
+2025-08-10 12:38:30,098 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 12:38:30,541 - INFO - GPU model initialized
+2025-08-10 12:38:30,543 - INFO - RAM disk created at: C:\Users\screw\AppData\Local\Temp\ramdisk__yrfoxrx
+2025-08-10 12:38:30,543 - INFO - Processing 25 files with hybrid processing...
+2025-08-10 12:38:30,543 - INFO - Starting 4 processing workers...
+2025-08-10 12:38:30,544 - INFO - Processing worker 0 started
+2025-08-10 12:38:30,545 - INFO - Processing worker 1 started
+2025-08-10 12:38:30,545 - INFO - Processing worker 2 started
+2025-08-10 12:38:30,545 - INFO - Processing worker 3 started
+2025-08-10 12:38:30,546 - INFO - Processing workers started
+2025-08-10 12:38:30,546 - INFO - Processing batch 1/2 (16 files)
+2025-08-10 12:38:30,941 - INFO - Processing batch 2/2 (9 files)
+2025-08-10 12:38:31,191 - INFO - Stopping processing workers...
+2025-08-10 12:38:32,148 - INFO - Processing worker 0 stopped
+2025-08-10 12:38:32,156 - INFO - Processing worker 1 stopped
+2025-08-10 12:38:32,167 - INFO - Processing worker 3 stopped
+2025-08-10 12:38:32,192 - INFO - Processing worker 2 stopped
+2025-08-10 12:38:32,193 - INFO - Processing workers stopped
+2025-08-10 12:38:32,193 - INFO - Processing completed. 25 results generated.
+2025-08-10 12:38:32,193 - INFO - FAISS index built with 25 vectors
+2025-08-10 12:38:32,194 - INFO - Cleaning up hybrid RAG processor...
+2025-08-10 12:38:32,194 - INFO - Stopping processing workers...
+2025-08-10 12:38:32,194 - INFO - Processing workers stopped
+2025-08-10 12:38:32,194 - INFO - RAM disk cleaned up
+2025-08-10 12:38:32,195 - INFO - Performing memory cleanup...
+2025-08-10 13:43:01,259 - INFO - Performing memory cleanup...
+2025-08-10 13:43:01,968 - INFO - Memory cleanup completed
+2025-08-10 13:43:01,970 - INFO - RAM disk created at: C:\Users\screw\AppData\Local\Temp\ramdisk_yfeid9gl
+2025-08-10 13:43:01,972 - INFO - RAM disk cleaned up
+2025-08-10 13:43:01,973 - INFO - Detecting system devices...
+2025-08-10 13:43:01,987 - INFO - CPU detected: Intel64 Family 6 Model 186 Stepping 2, GenuineIntel (AMD64) with 16 cores
+2025-08-10 13:43:01,987 - INFO - GPU detected: NVIDIA GeForce RTX 4070 Laptop GPU with 8.0GB VRAM
+2025-08-10 13:43:01,987 - INFO - Device detection complete - CPU: True, GPU: True
+2025-08-10 13:43:01,987 - INFO - Analyzing system capabilities...
+2025-08-10 13:43:01,987 - INFO - System analysis complete - Recommended mode: hybrid
+2025-08-10 13:43:01,987 - INFO - Device manager initialized
+2025-08-10 13:43:01,989 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 13:43:02,750 - INFO - CPU model initialized
+2025-08-10 13:43:02,751 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 13:43:03,255 - INFO - GPU model initialized
+2025-08-10 13:43:03,255 - INFO - RAM disk created at: C:\Users\screw\AppData\Local\Temp\ramdisk_7nrr_ntn
+2025-08-10 13:43:03,256 - INFO - Processing 1 files with hybrid processing...
+2025-08-10 13:43:03,256 - INFO - Starting 4 processing workers...
+2025-08-10 13:43:03,257 - INFO - Processing worker 0 started
+2025-08-10 13:43:03,257 - INFO - Processing worker 1 started
+2025-08-10 13:43:03,258 - INFO - Processing worker 2 started
+2025-08-10 13:43:03,258 - INFO - Processing worker 3 started
+2025-08-10 13:43:03,258 - INFO - Processing workers started
+2025-08-10 13:43:03,258 - INFO - Processing batch 1/1 (1 files)
+2025-08-10 13:43:03,410 - INFO - Stopping processing workers...
+2025-08-10 13:43:04,259 - INFO - Processing worker 1 stopped
+2025-08-10 13:43:04,259 - INFO - Processing worker 2 stopped
+2025-08-10 13:43:04,259 - INFO - Processing worker 3 stopped
+2025-08-10 13:43:04,406 - INFO - Processing worker 0 stopped
+2025-08-10 13:43:04,408 - INFO - Processing workers stopped
+2025-08-10 13:43:04,408 - INFO - Processing completed. 1 results generated.
+2025-08-10 13:43:04,408 - INFO - FAISS index built with 1 vectors
+2025-08-10 13:43:04,426 - INFO - Cleaning up hybrid RAG processor...
+2025-08-10 13:43:04,426 - INFO - Stopping processing workers...
+2025-08-10 13:43:04,426 - INFO - Processing workers stopped
+2025-08-10 13:43:04,426 - INFO - RAM disk cleaned up
+2025-08-10 13:43:04,426 - INFO - Performing memory cleanup...
+2025-08-10 13:43:05,033 - INFO - Memory cleanup completed
+2025-08-10 13:43:05,033 - INFO - Cleanup completed
+2025-08-10 13:43:05,039 - INFO - Detecting system devices...
+2025-08-10 13:43:05,039 - INFO - CPU detected: Intel64 Family 6 Model 186 Stepping 2, GenuineIntel (AMD64) with 16 cores
+2025-08-10 13:43:05,039 - INFO - GPU detected: NVIDIA GeForce RTX 4070 Laptop GPU with 8.0GB VRAM
+2025-08-10 13:43:05,039 - INFO - Device detection complete - CPU: True, GPU: True
+2025-08-10 13:43:05,039 - INFO - Analyzing system capabilities...
+2025-08-10 13:43:05,039 - INFO - System analysis complete - Recommended mode: hybrid
+2025-08-10 13:43:05,039 - INFO - Device manager initialized
+2025-08-10 13:43:05,041 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 13:43:05,486 - INFO - CPU model initialized
+2025-08-10 13:43:05,487 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 13:43:06,183 - INFO - GPU model initialized
+2025-08-10 13:43:06,183 - INFO - RAM disk created at: C:\Users\screw\AppData\Local\Temp\ramdisk_m34rdoxn
+2025-08-10 13:43:06,184 - INFO - Processing 25 files with hybrid processing...
+2025-08-10 13:43:06,184 - INFO - Starting 4 processing workers...
+2025-08-10 13:43:06,185 - INFO - Processing worker 0 started
+2025-08-10 13:43:06,185 - INFO - Processing worker 1 started
+2025-08-10 13:43:06,186 - INFO - Processing worker 2 started
+2025-08-10 13:43:06,186 - INFO - Processing worker 3 started
+2025-08-10 13:43:06,187 - INFO - Processing workers started
+2025-08-10 13:43:06,187 - INFO - Processing batch 1/2 (16 files)
+2025-08-10 13:43:06,609 - INFO - Processing batch 2/2 (9 files)
+2025-08-10 13:43:06,819 - INFO - Stopping processing workers...
+2025-08-10 13:43:07,783 - INFO - Processing worker 2 stopped
+2025-08-10 13:43:07,794 - INFO - Processing worker 3 stopped
+2025-08-10 13:43:07,804 - INFO - Processing worker 0 stopped
+2025-08-10 13:43:07,817 - INFO - Processing worker 1 stopped
+2025-08-10 13:43:07,818 - INFO - Processing workers stopped
+2025-08-10 13:43:07,818 - INFO - Processing completed. 25 results generated.
+2025-08-10 13:43:07,819 - INFO - FAISS index built with 25 vectors
+2025-08-10 13:43:07,819 - INFO - Cleaning up hybrid RAG processor...
+2025-08-10 13:43:07,819 - INFO - Stopping processing workers...
+2025-08-10 13:43:07,819 - INFO - Processing workers stopped
+2025-08-10 13:43:07,819 - INFO - RAM disk cleaned up
+2025-08-10 13:43:07,819 - INFO - Performing memory cleanup...
+2025-08-10 13:43:08,431 - INFO - Memory cleanup completed
+2025-08-10 13:43:08,432 - INFO - Cleanup completed
+2025-08-10 13:43:08,434 - INFO - Detecting system devices...
+2025-08-10 13:43:08,434 - INFO - CPU detected: Intel64 Family 6 Model 186 Stepping 2, GenuineIntel (AMD64) with 16 cores
+2025-08-10 13:43:08,435 - INFO - GPU detected: NVIDIA GeForce RTX 4070 Laptop GPU with 8.0GB VRAM
+2025-08-10 13:43:08,435 - INFO - Device detection complete - CPU: True, GPU: True
+2025-08-10 13:43:08,435 - INFO - Analyzing system capabilities...
+2025-08-10 13:43:08,435 - INFO - System analysis complete - Recommended mode: hybrid
+2025-08-10 13:43:08,435 - INFO - Device manager initialized
+2025-08-10 13:43:08,436 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 13:43:09,063 - INFO - CPU model initialized
+2025-08-10 13:43:09,065 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 13:43:09,558 - INFO - GPU model initialized
+2025-08-10 13:43:09,558 - INFO - RAM disk created at: C:\Users\screw\AppData\Local\Temp\ramdisk_vrmv6ntv
+2025-08-10 13:43:09,573 - INFO - Cleaning up hybrid RAG processor...
+2025-08-10 13:43:09,573 - INFO - Stopping processing workers...
+2025-08-10 13:43:09,573 - INFO - Processing workers stopped
+2025-08-10 13:43:09,574 - INFO - RAM disk cleaned up
+2025-08-10 13:43:09,574 - INFO - Performing memory cleanup...
+2025-08-10 13:43:10,181 - INFO - Memory cleanup completed
+2025-08-10 13:43:10,181 - INFO - Cleanup completed
+2025-08-10 13:43:10,182 - INFO - Detecting system devices...
+2025-08-10 13:43:10,182 - INFO - CPU detected: Intel64 Family 6 Model 186 Stepping 2, GenuineIntel (AMD64) with 16 cores
+2025-08-10 13:43:10,182 - INFO - GPU detected: NVIDIA GeForce RTX 4070 Laptop GPU with 8.0GB VRAM
+2025-08-10 13:43:10,182 - INFO - Device detection complete - CPU: True, GPU: True
+2025-08-10 13:43:10,182 - INFO - Analyzing system capabilities...
+2025-08-10 13:43:10,182 - INFO - System analysis complete - Recommended mode: hybrid
+2025-08-10 13:43:10,182 - INFO - Device manager initialized
+2025-08-10 13:43:10,184 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 13:43:10,600 - INFO - CPU model initialized
+2025-08-10 13:43:10,601 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 13:43:11,095 - INFO - GPU model initialized
+2025-08-10 13:43:11,095 - INFO - RAM disk created at: C:\Users\screw\AppData\Local\Temp\ramdisk_3rygc514
+2025-08-10 13:43:11,103 - INFO - Processing 10 files with hybrid processing...
+2025-08-10 13:43:11,104 - INFO - Starting 4 processing workers...
+2025-08-10 13:43:11,104 - INFO - Processing worker 0 started
+2025-08-10 13:43:11,105 - INFO - Processing worker 1 started
+2025-08-10 13:43:11,105 - INFO - Processing worker 2 started
+2025-08-10 13:43:11,105 - INFO - Processing worker 3 started
+2025-08-10 13:43:11,106 - INFO - Processing workers started
+2025-08-10 13:43:11,106 - INFO - Processing batch 1/3 (4 files)
+2025-08-10 13:43:11,298 - INFO - Processing batch 2/3 (4 files)
+2025-08-10 13:43:11,472 - INFO - Processing batch 3/3 (2 files)
+2025-08-10 13:43:11,536 - INFO - Stopping processing workers...
+2025-08-10 13:43:12,454 - INFO - Processing worker 3 stopped
+2025-08-10 13:43:12,469 - INFO - Processing worker 2 stopped
+2025-08-10 13:43:12,522 - INFO - Processing worker 1 stopped
+2025-08-10 13:43:12,531 - INFO - Processing worker 0 stopped
+2025-08-10 13:43:12,532 - INFO - Processing workers stopped
+2025-08-10 13:43:12,532 - INFO - Processing completed. 10 results generated.
+2025-08-10 13:43:12,538 - INFO - Cleaning up hybrid RAG processor...
+2025-08-10 13:43:12,538 - INFO - Stopping processing workers...
+2025-08-10 13:43:12,538 - INFO - Processing workers stopped
+2025-08-10 13:43:12,539 - INFO - RAM disk cleaned up
+2025-08-10 13:43:12,539 - INFO - Performing memory cleanup...
+2025-08-10 13:43:13,156 - INFO - Memory cleanup completed
+2025-08-10 13:43:13,157 - INFO - Cleanup completed
+2025-08-10 13:43:13,158 - INFO - Detecting system devices...
+2025-08-10 13:43:13,158 - INFO - CPU detected: Intel64 Family 6 Model 186 Stepping 2, GenuineIntel (AMD64) with 16 cores
+2025-08-10 13:43:13,158 - INFO - GPU detected: NVIDIA GeForce RTX 4070 Laptop GPU with 8.0GB VRAM
+2025-08-10 13:43:13,158 - INFO - Device detection complete - CPU: True, GPU: True
+2025-08-10 13:43:13,158 - INFO - Analyzing system capabilities...
+2025-08-10 13:43:13,158 - INFO - System analysis complete - Recommended mode: hybrid
+2025-08-10 13:43:13,159 - INFO - Device manager initialized
+2025-08-10 13:43:13,160 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 13:43:13,601 - INFO - CPU model initialized
+2025-08-10 13:43:13,602 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 13:43:14,427 - INFO - GPU model initialized
+2025-08-10 13:43:14,428 - INFO - RAM disk created at: C:\Users\screw\AppData\Local\Temp\ramdisk_3stfvq6v
+2025-08-10 13:43:14,430 - INFO - Processing 4 files with hybrid processing...
+2025-08-10 13:43:14,430 - INFO - Starting 4 processing workers...
+2025-08-10 13:43:14,431 - INFO - Processing worker 0 started
+2025-08-10 13:43:14,432 - INFO - Processing worker 1 started
+2025-08-10 13:43:14,432 - INFO - Processing worker 2 started
+2025-08-10 13:43:14,432 - INFO - Processing worker 3 started
+2025-08-10 13:43:14,433 - INFO - Processing workers started
+2025-08-10 13:43:14,433 - INFO - Processing batch 1/3 (2 files)
+2025-08-10 13:43:14,584 - INFO - Processing batch 2/3 (2 files)
+2025-08-10 13:43:14,584 - ERROR - Failed to read file nonexistent.txt: [Errno 2] No such file or directory: 'nonexistent.txt'
+2025-08-10 13:43:14,617 - INFO - Stopping processing workers...
+2025-08-10 13:43:15,434 - INFO - Processing worker 3 stopped
+2025-08-10 13:43:15,494 - INFO - Processing worker 0 stopped
+2025-08-10 13:43:15,582 - INFO - Processing worker 1 stopped
+2025-08-10 13:43:15,612 - INFO - Processing worker 2 stopped
+2025-08-10 13:43:15,613 - INFO - Processing workers stopped
+2025-08-10 13:43:15,613 - INFO - Processing completed. 3 results generated.
+2025-08-10 13:43:15,614 - INFO - Cleaning up hybrid RAG processor...
+2025-08-10 13:43:15,614 - INFO - Stopping processing workers...
+2025-08-10 13:43:15,614 - INFO - Processing workers stopped
+2025-08-10 13:43:15,615 - INFO - RAM disk cleaned up
+2025-08-10 13:43:15,615 - INFO - Performing memory cleanup...
+2025-08-10 13:43:16,292 - INFO - Memory cleanup completed
+2025-08-10 13:43:16,292 - INFO - Cleanup completed
+2025-08-10 17:24:13,281 - INFO - Performing memory cleanup...
+2025-08-10 17:24:13,846 - INFO - Memory cleanup completed
+2025-08-10 17:24:13,853 - INFO - RAM disk created at: C:\Users\screw\AppData\Local\Temp\ramdisk_533wjb7m
+2025-08-10 17:24:13,854 - INFO - RAM disk cleaned up
+2025-08-10 17:24:13,863 - INFO - Detecting system devices...
+2025-08-10 17:24:13,885 - INFO - CPU detected: Intel64 Family 6 Model 186 Stepping 2, GenuineIntel (AMD64) with 16 cores
+2025-08-10 17:24:13,885 - INFO - GPU detected: NVIDIA GeForce RTX 4070 Laptop GPU with 8.0GB VRAM
+2025-08-10 17:24:13,885 - INFO - Device detection complete - CPU: True, GPU: True
+2025-08-10 17:24:13,886 - INFO - Analyzing system capabilities...
+2025-08-10 17:24:13,886 - INFO - System analysis complete - Recommended mode: hybrid
+2025-08-10 17:24:13,886 - INFO - Device manager initialized
+2025-08-10 17:24:13,887 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 17:24:14,603 - INFO - CPU model initialized
+2025-08-10 17:24:14,604 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 17:24:15,127 - INFO - GPU model initialized
+2025-08-10 17:24:15,128 - INFO - RAM disk created at: C:\Users\screw\AppData\Local\Temp\ramdisk_c498s5t0
+2025-08-10 17:24:15,128 - INFO - Processing 1 files with hybrid processing...
+2025-08-10 17:24:15,128 - INFO - Starting 4 processing workers...
+2025-08-10 17:24:15,129 - INFO - Processing worker 0 started
+2025-08-10 17:24:15,129 - INFO - Processing worker 1 started
+2025-08-10 17:24:15,129 - INFO - Processing worker 2 started
+2025-08-10 17:24:15,130 - INFO - Processing worker 3 started
+2025-08-10 17:24:15,130 - INFO - Processing workers started
+2025-08-10 17:24:15,130 - INFO - Processing batch 1/1 (1 files)
+2025-08-10 17:24:15,279 - INFO - Stopping processing workers...
+2025-08-10 17:24:16,130 - INFO - Processing worker 3 stopped
+2025-08-10 17:24:16,130 - INFO - Processing worker 2 stopped
+2025-08-10 17:24:16,130 - INFO - Processing worker 1 stopped
+2025-08-10 17:24:16,276 - INFO - Processing worker 0 stopped
+2025-08-10 17:24:16,277 - INFO - Processing workers stopped
+2025-08-10 17:24:16,277 - INFO - Processing completed. 1 results generated.
+2025-08-10 17:24:16,277 - INFO - FAISS index built with 1 vectors
+2025-08-10 17:24:16,301 - INFO - Cleaning up hybrid RAG processor...
+2025-08-10 17:24:16,302 - INFO - Stopping processing workers...
+2025-08-10 17:24:16,302 - INFO - Processing workers stopped
+2025-08-10 17:24:16,302 - INFO - RAM disk cleaned up
+2025-08-10 17:24:16,303 - INFO - Performing memory cleanup...
+2025-08-10 17:24:16,778 - INFO - Memory cleanup completed
+2025-08-10 17:24:16,778 - INFO - Cleanup completed
+2025-08-10 17:24:16,790 - INFO - Detecting system devices...
+2025-08-10 17:24:16,790 - INFO - CPU detected: Intel64 Family 6 Model 186 Stepping 2, GenuineIntel (AMD64) with 16 cores
+2025-08-10 17:24:16,790 - INFO - GPU detected: NVIDIA GeForce RTX 4070 Laptop GPU with 8.0GB VRAM
+2025-08-10 17:24:16,790 - INFO - Device detection complete - CPU: True, GPU: True
+2025-08-10 17:24:16,791 - INFO - Analyzing system capabilities...
+2025-08-10 17:24:16,791 - INFO - System analysis complete - Recommended mode: hybrid
+2025-08-10 17:24:16,791 - INFO - Device manager initialized
+2025-08-10 17:24:16,792 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 17:24:17,281 - INFO - CPU model initialized
+2025-08-10 17:24:17,282 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 17:24:17,811 - INFO - GPU model initialized
+2025-08-10 17:24:17,812 - INFO - RAM disk created at: C:\Users\screw\AppData\Local\Temp\ramdisk_oi84sm7o
+2025-08-10 17:24:17,812 - INFO - Processing 25 files with hybrid processing...
+2025-08-10 17:24:17,812 - INFO - Starting 4 processing workers...
+2025-08-10 17:24:17,813 - INFO - Processing worker 0 started
+2025-08-10 17:24:17,813 - INFO - Processing worker 1 started
+2025-08-10 17:24:17,814 - INFO - Processing worker 2 started
+2025-08-10 17:24:17,814 - INFO - Processing worker 3 started
+2025-08-10 17:24:17,814 - INFO - Processing workers started
+2025-08-10 17:24:17,814 - INFO - Processing batch 1/2 (16 files)
+2025-08-10 17:24:18,111 - INFO - Processing batch 2/2 (9 files)
+2025-08-10 17:24:18,281 - INFO - Stopping processing workers...
+2025-08-10 17:24:19,251 - INFO - Processing worker 2 stopped
+2025-08-10 17:24:19,259 - INFO - Processing worker 3 stopped
+2025-08-10 17:24:19,270 - INFO - Processing worker 0 stopped
+2025-08-10 17:24:19,278 - INFO - Processing worker 1 stopped
+2025-08-10 17:24:19,279 - INFO - Processing workers stopped
+2025-08-10 17:24:19,279 - INFO - Processing completed. 25 results generated.
+2025-08-10 17:24:19,280 - INFO - FAISS index built with 25 vectors
+2025-08-10 17:24:19,280 - INFO - Cleaning up hybrid RAG processor...
+2025-08-10 17:24:19,280 - INFO - Stopping processing workers...
+2025-08-10 17:24:19,280 - INFO - Processing workers stopped
+2025-08-10 17:24:19,280 - INFO - RAM disk cleaned up
+2025-08-10 17:24:19,280 - INFO - Performing memory cleanup...
+2025-08-10 17:24:19,772 - INFO - Memory cleanup completed
+2025-08-10 17:24:19,772 - INFO - Cleanup completed
+2025-08-10 17:24:19,774 - INFO - Detecting system devices...
+2025-08-10 17:24:19,774 - INFO - CPU detected: Intel64 Family 6 Model 186 Stepping 2, GenuineIntel (AMD64) with 16 cores
+2025-08-10 17:24:19,775 - INFO - GPU detected: NVIDIA GeForce RTX 4070 Laptop GPU with 8.0GB VRAM
+2025-08-10 17:24:19,775 - INFO - Device detection complete - CPU: True, GPU: True
+2025-08-10 17:24:19,775 - INFO - Analyzing system capabilities...
+2025-08-10 17:24:19,775 - INFO - System analysis complete - Recommended mode: hybrid
+2025-08-10 17:24:19,775 - INFO - Device manager initialized
+2025-08-10 17:24:19,778 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 17:24:20,263 - INFO - CPU model initialized
+2025-08-10 17:24:20,264 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 17:24:20,811 - INFO - GPU model initialized
+2025-08-10 17:24:20,812 - INFO - RAM disk created at: C:\Users\screw\AppData\Local\Temp\ramdisk_l47kh_cb
+2025-08-10 17:24:20,823 - INFO - Cleaning up hybrid RAG processor...
+2025-08-10 17:24:20,823 - INFO - Stopping processing workers...
+2025-08-10 17:24:20,823 - INFO - Processing workers stopped
+2025-08-10 17:24:20,824 - INFO - RAM disk cleaned up
+2025-08-10 17:24:20,824 - INFO - Performing memory cleanup...
+2025-08-10 17:24:21,316 - INFO - Memory cleanup completed
+2025-08-10 17:24:21,316 - INFO - Cleanup completed
+2025-08-10 17:24:21,316 - INFO - Detecting system devices...
+2025-08-10 17:24:21,316 - INFO - CPU detected: Intel64 Family 6 Model 186 Stepping 2, GenuineIntel (AMD64) with 16 cores
+2025-08-10 17:24:21,316 - INFO - GPU detected: NVIDIA GeForce RTX 4070 Laptop GPU with 8.0GB VRAM
+2025-08-10 17:24:21,316 - INFO - Device detection complete - CPU: True, GPU: True
+2025-08-10 17:24:21,316 - INFO - Analyzing system capabilities...
+2025-08-10 17:24:21,317 - INFO - System analysis complete - Recommended mode: hybrid
+2025-08-10 17:24:21,317 - INFO - Device manager initialized
+2025-08-10 17:24:21,318 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 17:24:21,818 - INFO - CPU model initialized
+2025-08-10 17:24:21,819 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 17:24:22,378 - INFO - GPU model initialized
+2025-08-10 17:24:22,379 - INFO - RAM disk created at: C:\Users\screw\AppData\Local\Temp\ramdisk_jgc6x2x9
+2025-08-10 17:24:22,386 - INFO - Processing 10 files with hybrid processing...
+2025-08-10 17:24:22,387 - INFO - Starting 4 processing workers...
+2025-08-10 17:24:22,387 - INFO - Processing worker 0 started
+2025-08-10 17:24:22,388 - INFO - Processing worker 1 started
+2025-08-10 17:24:22,388 - INFO - Processing worker 2 started
+2025-08-10 17:24:22,388 - INFO - Processing worker 3 started
+2025-08-10 17:24:22,388 - INFO - Processing workers started
+2025-08-10 17:24:22,389 - INFO - Processing batch 1/3 (4 files)
+2025-08-10 17:24:22,505 - INFO - Processing batch 2/3 (4 files)
+2025-08-10 17:24:22,623 - INFO - Processing batch 3/3 (2 files)
+2025-08-10 17:24:22,678 - INFO - Stopping processing workers...
+2025-08-10 17:24:23,614 - INFO - Processing worker 2 stopped
+2025-08-10 17:24:23,620 - INFO - Processing worker 3 stopped
+2025-08-10 17:24:23,669 - INFO - Processing worker 1 stopped
+2025-08-10 17:24:23,677 - INFO - Processing worker 0 stopped
+2025-08-10 17:24:23,678 - INFO - Processing workers stopped
+2025-08-10 17:24:23,678 - INFO - Processing completed. 10 results generated.
+2025-08-10 17:24:23,682 - INFO - Cleaning up hybrid RAG processor...
+2025-08-10 17:24:23,682 - INFO - Stopping processing workers...
+2025-08-10 17:24:23,682 - INFO - Processing workers stopped
+2025-08-10 17:24:23,683 - INFO - RAM disk cleaned up
+2025-08-10 17:24:23,683 - INFO - Performing memory cleanup...
+2025-08-10 17:24:24,177 - INFO - Memory cleanup completed
+2025-08-10 17:24:24,178 - INFO - Cleanup completed
+2025-08-10 17:24:24,179 - INFO - Detecting system devices...
+2025-08-10 17:24:24,179 - INFO - CPU detected: Intel64 Family 6 Model 186 Stepping 2, GenuineIntel (AMD64) with 16 cores
+2025-08-10 17:24:24,179 - INFO - GPU detected: NVIDIA GeForce RTX 4070 Laptop GPU with 8.0GB VRAM
+2025-08-10 17:24:24,179 - INFO - Device detection complete - CPU: True, GPU: True
+2025-08-10 17:24:24,179 - INFO - Analyzing system capabilities...
+2025-08-10 17:24:24,179 - INFO - System analysis complete - Recommended mode: hybrid
+2025-08-10 17:24:24,179 - INFO - Device manager initialized
+2025-08-10 17:24:24,181 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 17:24:24,723 - INFO - CPU model initialized
+2025-08-10 17:24:24,724 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 17:24:25,289 - INFO - GPU model initialized
+2025-08-10 17:24:25,289 - INFO - RAM disk created at: C:\Users\screw\AppData\Local\Temp\ramdisk_11_qcixm
+2025-08-10 17:24:25,291 - INFO - Processing 4 files with hybrid processing...
+2025-08-10 17:24:25,291 - INFO - Starting 4 processing workers...
+2025-08-10 17:24:25,292 - INFO - Processing worker 0 started
+2025-08-10 17:24:25,293 - INFO - Processing worker 1 started
+2025-08-10 17:24:25,293 - INFO - Processing worker 2 started
+2025-08-10 17:24:25,294 - INFO - Processing worker 3 started
+2025-08-10 17:24:25,294 - INFO - Processing workers started
+2025-08-10 17:24:25,294 - INFO - Processing batch 1/3 (2 files)
+2025-08-10 17:24:25,425 - INFO - Processing batch 2/3 (2 files)
+2025-08-10 17:24:25,425 - ERROR - Failed to read file nonexistent.txt: [Errno 2] No such file or directory: 'nonexistent.txt'
+2025-08-10 17:24:25,453 - INFO - Stopping processing workers...
+2025-08-10 17:24:26,295 - INFO - Processing worker 3 stopped
+2025-08-10 17:24:26,331 - INFO - Processing worker 0 stopped
+2025-08-10 17:24:26,422 - INFO - Processing worker 1 stopped
+2025-08-10 17:24:26,449 - INFO - Processing worker 2 stopped
+2025-08-10 17:24:26,450 - INFO - Processing workers stopped
+2025-08-10 17:24:26,451 - INFO - Processing completed. 3 results generated.
+2025-08-10 17:24:26,451 - INFO - Cleaning up hybrid RAG processor...
+2025-08-10 17:24:26,451 - INFO - Stopping processing workers...
+2025-08-10 17:24:26,452 - INFO - Processing workers stopped
+2025-08-10 17:24:26,452 - INFO - RAM disk cleaned up
+2025-08-10 17:24:26,452 - INFO - Performing memory cleanup...
+2025-08-10 17:24:26,932 - INFO - Memory cleanup completed
+2025-08-10 17:24:26,933 - INFO - Cleanup completed
+2025-08-10 17:24:52,655 - INFO - Performing memory cleanup...
+2025-08-10 17:24:53,238 - INFO - Memory cleanup completed
+2025-08-10 17:24:53,239 - INFO - RAM disk created at: C:\Users\screw\AppData\Local\Temp\ramdisk__qg_dbo7
+2025-08-10 17:24:53,240 - INFO - RAM disk cleaned up
+2025-08-10 17:24:53,242 - INFO - Detecting system devices...
+2025-08-10 17:24:53,260 - INFO - CPU detected: Intel64 Family 6 Model 186 Stepping 2, GenuineIntel (AMD64) with 16 cores
+2025-08-10 17:24:53,260 - INFO - GPU detected: NVIDIA GeForce RTX 4070 Laptop GPU with 8.0GB VRAM
+2025-08-10 17:24:53,261 - INFO - Device detection complete - CPU: True, GPU: True
+2025-08-10 17:24:53,261 - INFO - Analyzing system capabilities...
+2025-08-10 17:24:53,261 - INFO - System analysis complete - Recommended mode: hybrid
+2025-08-10 17:24:53,261 - INFO - Device manager initialized
+2025-08-10 17:24:53,262 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 17:24:54,028 - INFO - CPU model initialized
+2025-08-10 17:24:54,029 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 17:24:54,616 - INFO - GPU model initialized
+2025-08-10 17:24:54,616 - INFO - RAM disk created at: C:\Users\screw\AppData\Local\Temp\ramdisk_jqyvcjmb
+2025-08-10 17:24:54,617 - INFO - Processing 1 files with hybrid processing...
+2025-08-10 17:24:54,617 - INFO - Starting 4 processing workers...
+2025-08-10 17:24:54,617 - INFO - Processing worker 0 started
+2025-08-10 17:24:54,618 - INFO - Processing worker 1 started
+2025-08-10 17:24:54,618 - INFO - Processing worker 2 started
+2025-08-10 17:24:54,618 - INFO - Processing worker 3 started
+2025-08-10 17:24:54,618 - INFO - Processing workers started
+2025-08-10 17:24:54,619 - INFO - Processing batch 1/1 (1 files)
+2025-08-10 17:24:54,770 - INFO - Stopping processing workers...
+2025-08-10 17:24:55,619 - INFO - Processing worker 2 stopped
+2025-08-10 17:24:55,619 - INFO - Processing worker 3 stopped
+2025-08-10 17:24:55,619 - INFO - Processing worker 1 stopped
+2025-08-10 17:24:55,768 - INFO - Processing worker 0 stopped
+2025-08-10 17:24:55,769 - INFO - Processing workers stopped
+2025-08-10 17:24:55,769 - INFO - Processing completed. 1 results generated.
+2025-08-10 17:24:55,769 - INFO - FAISS index built with 1 vectors
+2025-08-10 17:24:55,788 - INFO - Cleaning up hybrid RAG processor...
+2025-08-10 17:24:55,789 - INFO - Stopping processing workers...
+2025-08-10 17:24:55,789 - INFO - Processing workers stopped
+2025-08-10 17:24:55,790 - INFO - RAM disk cleaned up
+2025-08-10 17:24:55,790 - INFO - Performing memory cleanup...
+2025-08-10 17:24:56,277 - INFO - Memory cleanup completed
+2025-08-10 17:24:56,277 - INFO - Cleanup completed
+2025-08-10 17:24:56,289 - INFO - Detecting system devices...
+2025-08-10 17:24:56,289 - INFO - CPU detected: Intel64 Family 6 Model 186 Stepping 2, GenuineIntel (AMD64) with 16 cores
+2025-08-10 17:24:56,289 - INFO - GPU detected: NVIDIA GeForce RTX 4070 Laptop GPU with 8.0GB VRAM
+2025-08-10 17:24:56,289 - INFO - Device detection complete - CPU: True, GPU: True
+2025-08-10 17:24:56,290 - INFO - Analyzing system capabilities...
+2025-08-10 17:24:56,290 - INFO - System analysis complete - Recommended mode: hybrid
+2025-08-10 17:24:56,290 - INFO - Device manager initialized
+2025-08-10 17:24:56,292 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 17:24:56,776 - INFO - CPU model initialized
+2025-08-10 17:24:56,778 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 17:24:57,302 - INFO - GPU model initialized
+2025-08-10 17:24:57,303 - INFO - RAM disk created at: C:\Users\screw\AppData\Local\Temp\ramdisk_boufwt5f
+2025-08-10 17:24:57,303 - INFO - Processing 25 files with hybrid processing...
+2025-08-10 17:24:57,303 - INFO - Starting 4 processing workers...
+2025-08-10 17:24:57,304 - INFO - Processing worker 0 started
+2025-08-10 17:24:57,304 - INFO - Processing worker 1 started
+2025-08-10 17:24:57,304 - INFO - Processing worker 2 started
+2025-08-10 17:24:57,305 - INFO - Processing worker 3 started
+2025-08-10 17:24:57,305 - INFO - Processing workers started
+2025-08-10 17:24:57,305 - INFO - Processing batch 1/2 (16 files)
+2025-08-10 17:24:57,608 - INFO - Processing batch 2/2 (9 files)
+2025-08-10 17:24:57,777 - INFO - Stopping processing workers...
+2025-08-10 17:24:58,749 - INFO - Processing worker 2 stopped
+2025-08-10 17:24:58,757 - INFO - Processing worker 0 stopped
+2025-08-10 17:24:58,764 - INFO - Processing worker 3 stopped
+2025-08-10 17:24:58,774 - INFO - Processing worker 1 stopped
+2025-08-10 17:24:58,775 - INFO - Processing workers stopped
+2025-08-10 17:24:58,775 - INFO - Processing completed. 25 results generated.
+2025-08-10 17:24:58,776 - INFO - FAISS index built with 25 vectors
+2025-08-10 17:24:58,776 - INFO - Cleaning up hybrid RAG processor...
+2025-08-10 17:24:58,776 - INFO - Stopping processing workers...
+2025-08-10 17:24:58,776 - INFO - Processing workers stopped
+2025-08-10 17:24:58,777 - INFO - RAM disk cleaned up
+2025-08-10 17:24:58,777 - INFO - Performing memory cleanup...
+2025-08-10 17:24:59,308 - INFO - Memory cleanup completed
+2025-08-10 17:24:59,309 - INFO - Cleanup completed
+2025-08-10 17:24:59,312 - INFO - Detecting system devices...
+2025-08-10 17:24:59,313 - INFO - CPU detected: Intel64 Family 6 Model 186 Stepping 2, GenuineIntel (AMD64) with 16 cores
+2025-08-10 17:24:59,313 - INFO - GPU detected: NVIDIA GeForce RTX 4070 Laptop GPU with 8.0GB VRAM
+2025-08-10 17:24:59,313 - INFO - Device detection complete - CPU: True, GPU: True
+2025-08-10 17:24:59,313 - INFO - Analyzing system capabilities...
+2025-08-10 17:24:59,314 - INFO - System analysis complete - Recommended mode: hybrid
+2025-08-10 17:24:59,314 - INFO - Device manager initialized
+2025-08-10 17:24:59,316 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 17:24:59,816 - INFO - CPU model initialized
+2025-08-10 17:24:59,817 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 17:25:00,391 - INFO - GPU model initialized
+2025-08-10 17:25:00,392 - INFO - RAM disk created at: C:\Users\screw\AppData\Local\Temp\ramdisk_t9muyp9p
+2025-08-10 17:25:00,403 - INFO - Cleaning up hybrid RAG processor...
+2025-08-10 17:25:00,404 - INFO - Stopping processing workers...
+2025-08-10 17:25:00,404 - INFO - Processing workers stopped
+2025-08-10 17:25:00,404 - INFO - RAM disk cleaned up
+2025-08-10 17:25:00,404 - INFO - Performing memory cleanup...
+2025-08-10 17:25:00,918 - INFO - Memory cleanup completed
+2025-08-10 17:25:00,918 - INFO - Cleanup completed
+2025-08-10 17:25:00,919 - INFO - Detecting system devices...
+2025-08-10 17:25:00,919 - INFO - CPU detected: Intel64 Family 6 Model 186 Stepping 2, GenuineIntel (AMD64) with 16 cores
+2025-08-10 17:25:00,919 - INFO - GPU detected: NVIDIA GeForce RTX 4070 Laptop GPU with 8.0GB VRAM
+2025-08-10 17:25:00,919 - INFO - Device detection complete - CPU: True, GPU: True
+2025-08-10 17:25:00,919 - INFO - Analyzing system capabilities...
+2025-08-10 17:25:00,920 - INFO - System analysis complete - Recommended mode: hybrid
+2025-08-10 17:25:00,920 - INFO - Device manager initialized
+2025-08-10 17:25:00,921 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 17:25:01,418 - INFO - CPU model initialized
+2025-08-10 17:25:01,419 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 17:25:01,995 - INFO - GPU model initialized
+2025-08-10 17:25:01,995 - INFO - RAM disk created at: C:\Users\screw\AppData\Local\Temp\ramdisk_09ss8jlz
+2025-08-10 17:25:02,003 - INFO - Processing 10 files with hybrid processing...
+2025-08-10 17:25:02,003 - INFO - Starting 4 processing workers...
+2025-08-10 17:25:02,004 - INFO - Processing worker 0 started
+2025-08-10 17:25:02,005 - INFO - Processing worker 1 started
+2025-08-10 17:25:02,005 - INFO - Processing worker 2 started
+2025-08-10 17:25:02,005 - INFO - Processing worker 3 started
+2025-08-10 17:25:02,005 - INFO - Processing workers started
+2025-08-10 17:25:02,005 - INFO - Processing batch 1/3 (4 files)
+2025-08-10 17:25:02,123 - INFO - Processing batch 2/3 (4 files)
+2025-08-10 17:25:02,234 - INFO - Processing batch 3/3 (2 files)
+2025-08-10 17:25:02,296 - INFO - Stopping processing workers...
+2025-08-10 17:25:03,225 - INFO - Processing worker 3 stopped
+2025-08-10 17:25:03,231 - INFO - Processing worker 2 stopped
+2025-08-10 17:25:03,283 - INFO - Processing worker 0 stopped
+2025-08-10 17:25:03,291 - INFO - Processing worker 1 stopped
+2025-08-10 17:25:03,292 - INFO - Processing workers stopped
+2025-08-10 17:25:03,292 - INFO - Processing completed. 10 results generated.
+2025-08-10 17:25:03,298 - INFO - Cleaning up hybrid RAG processor...
+2025-08-10 17:25:03,298 - INFO - Stopping processing workers...
+2025-08-10 17:25:03,298 - INFO - Processing workers stopped
+2025-08-10 17:25:03,298 - INFO - RAM disk cleaned up
+2025-08-10 17:25:03,298 - INFO - Performing memory cleanup...
+2025-08-10 17:25:03,792 - INFO - Memory cleanup completed
+2025-08-10 17:25:03,793 - INFO - Cleanup completed
+2025-08-10 17:25:03,794 - INFO - Detecting system devices...
+2025-08-10 17:25:03,794 - INFO - CPU detected: Intel64 Family 6 Model 186 Stepping 2, GenuineIntel (AMD64) with 16 cores
+2025-08-10 17:25:03,794 - INFO - GPU detected: NVIDIA GeForce RTX 4070 Laptop GPU with 8.0GB VRAM
+2025-08-10 17:25:03,794 - INFO - Device detection complete - CPU: True, GPU: True
+2025-08-10 17:25:03,794 - INFO - Analyzing system capabilities...
+2025-08-10 17:25:03,794 - INFO - System analysis complete - Recommended mode: hybrid
+2025-08-10 17:25:03,794 - INFO - Device manager initialized
+2025-08-10 17:25:03,796 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 17:25:04,286 - INFO - CPU model initialized
+2025-08-10 17:25:04,287 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 17:25:04,880 - INFO - GPU model initialized
+2025-08-10 17:25:04,880 - INFO - RAM disk created at: C:\Users\screw\AppData\Local\Temp\ramdisk_2b2cg6e9
+2025-08-10 17:25:04,882 - INFO - Processing 4 files with hybrid processing...
+2025-08-10 17:25:04,882 - INFO - Starting 4 processing workers...
+2025-08-10 17:25:04,883 - INFO - Processing worker 0 started
+2025-08-10 17:25:04,883 - INFO - Processing worker 1 started
+2025-08-10 17:25:04,884 - INFO - Processing worker 2 started
+2025-08-10 17:25:04,884 - INFO - Processing worker 3 started
+2025-08-10 17:25:04,884 - INFO - Processing workers started
+2025-08-10 17:25:04,884 - INFO - Processing batch 1/3 (2 files)
+2025-08-10 17:25:05,000 - INFO - Processing batch 2/3 (2 files)
+2025-08-10 17:25:05,000 - ERROR - Failed to read file nonexistent.txt: [Errno 2] No such file or directory: 'nonexistent.txt'
+2025-08-10 17:25:05,030 - INFO - Stopping processing workers...
+2025-08-10 17:25:05,886 - INFO - Processing worker 3 stopped
+2025-08-10 17:25:05,926 - INFO - Processing worker 0 stopped
+2025-08-10 17:25:05,997 - INFO - Processing worker 1 stopped
+2025-08-10 17:25:06,028 - INFO - Processing worker 2 stopped
+2025-08-10 17:25:06,029 - INFO - Processing workers stopped
+2025-08-10 17:25:06,029 - INFO - Processing completed. 3 results generated.
+2025-08-10 17:25:06,029 - INFO - Cleaning up hybrid RAG processor...
+2025-08-10 17:25:06,029 - INFO - Stopping processing workers...
+2025-08-10 17:25:06,029 - INFO - Processing workers stopped
+2025-08-10 17:25:06,030 - INFO - RAM disk cleaned up
+2025-08-10 17:25:06,030 - INFO - Performing memory cleanup...
+2025-08-10 17:25:06,530 - INFO - Memory cleanup completed
+2025-08-10 17:25:06,530 - INFO - Cleanup completed
+2025-08-10 18:09:26,593 - INFO - Performing memory cleanup...
+2025-08-10 18:09:27,191 - INFO - Memory cleanup completed
+2025-08-10 18:09:27,192 - INFO - RAM disk created at: C:\Users\screw\AppData\Local\Temp\ramdisk_nwt5buup
+2025-08-10 18:09:27,193 - INFO - RAM disk cleaned up
+2025-08-10 18:09:27,194 - INFO - Detecting system devices...
+2025-08-10 18:09:27,208 - INFO - CPU detected: Intel64 Family 6 Model 186 Stepping 2, GenuineIntel (AMD64) with 16 cores
+2025-08-10 18:09:27,208 - INFO - GPU detected: NVIDIA GeForce RTX 4070 Laptop GPU with 8.0GB VRAM
+2025-08-10 18:09:27,209 - INFO - Device detection complete - CPU: True, GPU: True
+2025-08-10 18:09:27,209 - INFO - Analyzing system capabilities...
+2025-08-10 18:09:27,209 - INFO - System analysis complete - Recommended mode: hybrid
+2025-08-10 18:09:27,209 - INFO - Device manager initialized
+2025-08-10 18:09:27,210 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 18:09:27,963 - INFO - CPU model initialized
+2025-08-10 18:09:27,964 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 18:09:28,515 - INFO - GPU model initialized
+2025-08-10 18:09:28,515 - INFO - RAM disk created at: C:\Users\screw\AppData\Local\Temp\ramdisk_sfxsktws
+2025-08-10 18:09:28,516 - INFO - Processing 1 files with hybrid processing...
+2025-08-10 18:09:28,516 - INFO - Starting 4 processing workers...
+2025-08-10 18:09:28,517 - INFO - Processing worker 0 started
+2025-08-10 18:09:28,517 - INFO - Processing worker 1 started
+2025-08-10 18:09:28,517 - INFO - Processing worker 2 started
+2025-08-10 18:09:28,518 - INFO - Processing worker 3 started
+2025-08-10 18:09:28,518 - INFO - Processing workers started
+2025-08-10 18:09:28,518 - INFO - Processing batch 1/1 (1 files)
+2025-08-10 18:09:28,672 - INFO - Stopping processing workers...
+2025-08-10 18:09:29,518 - INFO - Processing worker 1 stopped
+2025-08-10 18:09:29,518 - INFO - Processing worker 2 stopped
+2025-08-10 18:09:29,519 - INFO - Processing worker 3 stopped
+2025-08-10 18:09:29,669 - INFO - Processing worker 0 stopped
+2025-08-10 18:09:29,670 - INFO - Processing workers stopped
+2025-08-10 18:09:29,670 - INFO - Processing completed. 1 results generated.
+2025-08-10 18:09:29,670 - INFO - FAISS index built with 1 vectors
+2025-08-10 18:09:29,689 - INFO - Cleaning up hybrid RAG processor...
+2025-08-10 18:09:29,689 - INFO - Stopping processing workers...
+2025-08-10 18:09:29,689 - INFO - Processing workers stopped
+2025-08-10 18:09:29,689 - INFO - RAM disk cleaned up
+2025-08-10 18:09:29,690 - INFO - Performing memory cleanup...
+2025-08-10 18:09:30,234 - INFO - Memory cleanup completed
+2025-08-10 18:09:30,235 - INFO - Cleanup completed
+2025-08-10 18:09:30,247 - INFO - Detecting system devices...
+2025-08-10 18:09:30,248 - INFO - CPU detected: Intel64 Family 6 Model 186 Stepping 2, GenuineIntel (AMD64) with 16 cores
+2025-08-10 18:09:30,248 - INFO - GPU detected: NVIDIA GeForce RTX 4070 Laptop GPU with 8.0GB VRAM
+2025-08-10 18:09:30,248 - INFO - Device detection complete - CPU: True, GPU: True
+2025-08-10 18:09:30,248 - INFO - Analyzing system capabilities...
+2025-08-10 18:09:30,248 - INFO - System analysis complete - Recommended mode: hybrid
+2025-08-10 18:09:30,248 - INFO - Device manager initialized
+2025-08-10 18:09:30,249 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 18:09:30,770 - INFO - CPU model initialized
+2025-08-10 18:09:30,773 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 18:09:31,307 - INFO - GPU model initialized
+2025-08-10 18:09:31,308 - INFO - RAM disk created at: C:\Users\screw\AppData\Local\Temp\ramdisk_5vdayzf6
+2025-08-10 18:09:31,308 - INFO - Processing 25 files with hybrid processing...
+2025-08-10 18:09:31,308 - INFO - Starting 4 processing workers...
+2025-08-10 18:09:31,309 - INFO - Processing worker 0 started
+2025-08-10 18:09:31,309 - INFO - Processing worker 1 started
+2025-08-10 18:09:31,310 - INFO - Processing worker 2 started
+2025-08-10 18:09:31,310 - INFO - Processing worker 3 started
+2025-08-10 18:09:31,310 - INFO - Processing workers started
+2025-08-10 18:09:31,310 - INFO - Processing batch 1/2 (16 files)
+2025-08-10 18:09:31,647 - INFO - Processing batch 2/2 (9 files)
+2025-08-10 18:09:31,825 - INFO - Stopping processing workers...
+2025-08-10 18:09:32,794 - INFO - Processing worker 2 stopped
+2025-08-10 18:09:32,804 - INFO - Processing worker 0 stopped
+2025-08-10 18:09:32,811 - INFO - Processing worker 3 stopped
+2025-08-10 18:09:32,822 - INFO - Processing worker 1 stopped
+2025-08-10 18:09:32,823 - INFO - Processing workers stopped
+2025-08-10 18:09:32,823 - INFO - Processing completed. 25 results generated.
+2025-08-10 18:09:32,824 - INFO - FAISS index built with 25 vectors
+2025-08-10 18:09:32,824 - INFO - Cleaning up hybrid RAG processor...
+2025-08-10 18:09:32,824 - INFO - Stopping processing workers...
+2025-08-10 18:09:32,824 - INFO - Processing workers stopped
+2025-08-10 18:09:32,824 - INFO - RAM disk cleaned up
+2025-08-10 18:09:32,825 - INFO - Performing memory cleanup...
+2025-08-10 18:09:33,390 - INFO - Memory cleanup completed
+2025-08-10 18:09:33,390 - INFO - Cleanup completed
+2025-08-10 18:09:33,393 - INFO - Detecting system devices...
+2025-08-10 18:09:33,393 - INFO - CPU detected: Intel64 Family 6 Model 186 Stepping 2, GenuineIntel (AMD64) with 16 cores
+2025-08-10 18:09:33,393 - INFO - GPU detected: NVIDIA GeForce RTX 4070 Laptop GPU with 8.0GB VRAM
+2025-08-10 18:09:33,393 - INFO - Device detection complete - CPU: True, GPU: True
+2025-08-10 18:09:33,393 - INFO - Analyzing system capabilities...
+2025-08-10 18:09:33,393 - INFO - System analysis complete - Recommended mode: hybrid
+2025-08-10 18:09:33,394 - INFO - Device manager initialized
+2025-08-10 18:09:33,395 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 18:09:33,887 - INFO - CPU model initialized
+2025-08-10 18:09:33,888 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 18:09:34,545 - INFO - GPU model initialized
+2025-08-10 18:09:34,545 - INFO - RAM disk created at: C:\Users\screw\AppData\Local\Temp\ramdisk_lwimu61t
+2025-08-10 18:09:34,557 - INFO - Cleaning up hybrid RAG processor...
+2025-08-10 18:09:34,558 - INFO - Stopping processing workers...
+2025-08-10 18:09:34,558 - INFO - Processing workers stopped
+2025-08-10 18:09:34,558 - INFO - RAM disk cleaned up
+2025-08-10 18:09:34,558 - INFO - Performing memory cleanup...
+2025-08-10 18:09:35,125 - INFO - Memory cleanup completed
+2025-08-10 18:09:35,125 - INFO - Cleanup completed
+2025-08-10 18:09:35,125 - INFO - Detecting system devices...
+2025-08-10 18:09:35,125 - INFO - CPU detected: Intel64 Family 6 Model 186 Stepping 2, GenuineIntel (AMD64) with 16 cores
+2025-08-10 18:09:35,125 - INFO - GPU detected: NVIDIA GeForce RTX 4070 Laptop GPU with 8.0GB VRAM
+2025-08-10 18:09:35,126 - INFO - Device detection complete - CPU: True, GPU: True
+2025-08-10 18:09:35,126 - INFO - Analyzing system capabilities...
+2025-08-10 18:09:35,126 - INFO - System analysis complete - Recommended mode: hybrid
+2025-08-10 18:09:35,126 - INFO - Device manager initialized
+2025-08-10 18:09:35,127 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 18:09:35,679 - INFO - CPU model initialized
+2025-08-10 18:09:35,681 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 18:09:36,445 - INFO - GPU model initialized
+2025-08-10 18:09:36,446 - INFO - RAM disk created at: C:\Users\screw\AppData\Local\Temp\ramdisk_3s4kn2vj
+2025-08-10 18:09:36,455 - INFO - Processing 10 files with hybrid processing...
+2025-08-10 18:09:36,455 - INFO - Starting 4 processing workers...
+2025-08-10 18:09:36,456 - INFO - Processing worker 0 started
+2025-08-10 18:09:36,456 - INFO - Processing worker 1 started
+2025-08-10 18:09:36,457 - INFO - Processing worker 2 started
+2025-08-10 18:09:36,457 - INFO - Processing worker 3 started
+2025-08-10 18:09:36,457 - INFO - Processing workers started
+2025-08-10 18:09:36,457 - INFO - Processing batch 1/3 (4 files)
+2025-08-10 18:09:36,561 - INFO - Processing batch 2/3 (4 files)
+2025-08-10 18:09:36,663 - INFO - Processing batch 3/3 (2 files)
+2025-08-10 18:09:36,720 - INFO - Stopping processing workers...
+2025-08-10 18:09:37,650 - INFO - Processing worker 3 stopped
+2025-08-10 18:09:37,661 - INFO - Processing worker 2 stopped
+2025-08-10 18:09:37,707 - INFO - Processing worker 1 stopped
+2025-08-10 18:09:37,715 - INFO - Processing worker 0 stopped
+2025-08-10 18:09:37,716 - INFO - Processing workers stopped
+2025-08-10 18:09:37,716 - INFO - Processing completed. 10 results generated.
+2025-08-10 18:09:37,720 - INFO - Cleaning up hybrid RAG processor...
+2025-08-10 18:09:37,720 - INFO - Stopping processing workers...
+2025-08-10 18:09:37,720 - INFO - Processing workers stopped
+2025-08-10 18:09:37,721 - INFO - RAM disk cleaned up
+2025-08-10 18:09:37,721 - INFO - Performing memory cleanup...
+2025-08-10 18:09:38,345 - INFO - Memory cleanup completed
+2025-08-10 18:09:38,345 - INFO - Cleanup completed
+2025-08-10 18:09:38,346 - INFO - Detecting system devices...
+2025-08-10 18:09:38,346 - INFO - CPU detected: Intel64 Family 6 Model 186 Stepping 2, GenuineIntel (AMD64) with 16 cores
+2025-08-10 18:09:38,346 - INFO - GPU detected: NVIDIA GeForce RTX 4070 Laptop GPU with 8.0GB VRAM
+2025-08-10 18:09:38,347 - INFO - Device detection complete - CPU: True, GPU: True
+2025-08-10 18:09:38,347 - INFO - Analyzing system capabilities...
+2025-08-10 18:09:38,347 - INFO - System analysis complete - Recommended mode: hybrid
+2025-08-10 18:09:38,347 - INFO - Device manager initialized
+2025-08-10 18:09:38,349 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 18:09:38,836 - INFO - CPU model initialized
+2025-08-10 18:09:38,837 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 18:09:39,445 - INFO - GPU model initialized
+2025-08-10 18:09:39,445 - INFO - RAM disk created at: C:\Users\screw\AppData\Local\Temp\ramdisk_qj3swp2g
+2025-08-10 18:09:39,448 - INFO - Processing 4 files with hybrid processing...
+2025-08-10 18:09:39,448 - INFO - Starting 4 processing workers...
+2025-08-10 18:09:39,449 - INFO - Processing worker 0 started
+2025-08-10 18:09:39,450 - INFO - Processing worker 1 started
+2025-08-10 18:09:39,450 - INFO - Processing worker 2 started
+2025-08-10 18:09:39,451 - INFO - Processing worker 3 started
+2025-08-10 18:09:39,451 - INFO - Processing workers started
+2025-08-10 18:09:39,451 - INFO - Processing batch 1/3 (2 files)
+2025-08-10 18:09:39,581 - INFO - Processing batch 2/3 (2 files)
+2025-08-10 18:09:39,582 - ERROR - Failed to read file nonexistent.txt: [Errno 2] No such file or directory: 'nonexistent.txt'
+2025-08-10 18:09:39,612 - INFO - Stopping processing workers...
+2025-08-10 18:09:40,451 - INFO - Processing worker 3 stopped
+2025-08-10 18:09:40,494 - INFO - Processing worker 0 stopped
+2025-08-10 18:09:40,583 - INFO - Processing worker 1 stopped
+2025-08-10 18:09:40,608 - INFO - Processing worker 2 stopped
+2025-08-10 18:09:40,609 - INFO - Processing workers stopped
+2025-08-10 18:09:40,610 - INFO - Processing completed. 3 results generated.
+2025-08-10 18:09:40,610 - INFO - Cleaning up hybrid RAG processor...
+2025-08-10 18:09:40,610 - INFO - Stopping processing workers...
+2025-08-10 18:09:40,610 - INFO - Processing workers stopped
+2025-08-10 18:09:40,611 - INFO - RAM disk cleaned up
+2025-08-10 18:09:40,611 - INFO - Performing memory cleanup...
+2025-08-10 18:09:41,199 - INFO - Memory cleanup completed
+2025-08-10 18:09:41,199 - INFO - Cleanup completed
+2025-08-10 18:12:56,477 - INFO - Performing memory cleanup...
+2025-08-10 18:12:57,091 - INFO - Memory cleanup completed
+2025-08-10 18:12:57,092 - INFO - RAM disk created at: C:\Users\screw\AppData\Local\Temp\ramdisk_pbw99evm
+2025-08-10 18:12:57,093 - INFO - RAM disk cleaned up
+2025-08-10 18:12:57,095 - INFO - Detecting system devices...
+2025-08-10 18:12:57,108 - INFO - CPU detected: Intel64 Family 6 Model 186 Stepping 2, GenuineIntel (AMD64) with 16 cores
+2025-08-10 18:12:57,108 - INFO - GPU detected: NVIDIA GeForce RTX 4070 Laptop GPU with 8.0GB VRAM
+2025-08-10 18:12:57,108 - INFO - Device detection complete - CPU: True, GPU: True
+2025-08-10 18:12:57,108 - INFO - Analyzing system capabilities...
+2025-08-10 18:12:57,108 - INFO - System analysis complete - Recommended mode: hybrid
+2025-08-10 18:12:57,108 - INFO - Device manager initialized
+2025-08-10 18:12:57,110 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 18:12:58,764 - INFO - CPU model initialized
+2025-08-10 18:12:58,765 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 18:12:59,547 - INFO - GPU model initialized
+2025-08-10 18:12:59,548 - INFO - RAM disk created at: C:\Users\screw\AppData\Local\Temp\ramdisk_d73mlsue
+2025-08-10 18:12:59,548 - INFO - Processing 1 files with hybrid processing...
+2025-08-10 18:12:59,548 - INFO - Starting 4 processing workers...
+2025-08-10 18:12:59,548 - INFO - Processing worker 0 started
+2025-08-10 18:12:59,549 - INFO - Processing worker 1 started
+2025-08-10 18:12:59,549 - INFO - Processing worker 2 started
+2025-08-10 18:12:59,549 - INFO - Processing worker 3 started
+2025-08-10 18:12:59,550 - INFO - Processing workers started
+2025-08-10 18:12:59,550 - INFO - Processing batch 1/1 (1 files)
+2025-08-10 18:12:59,700 - INFO - Stopping processing workers...
+2025-08-10 18:13:00,550 - INFO - Processing worker 1 stopped
+2025-08-10 18:13:00,550 - INFO - Processing worker 2 stopped
+2025-08-10 18:13:00,550 - INFO - Processing worker 3 stopped
+2025-08-10 18:13:00,697 - INFO - Processing worker 0 stopped
+2025-08-10 18:13:00,698 - INFO - Processing workers stopped
+2025-08-10 18:13:00,698 - INFO - Processing completed. 1 results generated.
+2025-08-10 18:13:00,698 - INFO - FAISS index built with 1 vectors
+2025-08-10 18:13:00,715 - INFO - Cleaning up hybrid RAG processor...
+2025-08-10 18:13:00,716 - INFO - Stopping processing workers...
+2025-08-10 18:13:00,716 - INFO - Processing workers stopped
+2025-08-10 18:13:00,716 - INFO - RAM disk cleaned up
+2025-08-10 18:13:00,717 - INFO - Performing memory cleanup...
+2025-08-10 18:13:01,226 - INFO - Memory cleanup completed
+2025-08-10 18:13:01,226 - INFO - Cleanup completed
+2025-08-10 18:13:01,232 - INFO - Detecting system devices...
+2025-08-10 18:13:01,232 - INFO - CPU detected: Intel64 Family 6 Model 186 Stepping 2, GenuineIntel (AMD64) with 16 cores
+2025-08-10 18:13:01,232 - INFO - GPU detected: NVIDIA GeForce RTX 4070 Laptop GPU with 8.0GB VRAM
+2025-08-10 18:13:01,233 - INFO - Device detection complete - CPU: True, GPU: True
+2025-08-10 18:13:01,233 - INFO - Analyzing system capabilities...
+2025-08-10 18:13:01,233 - INFO - System analysis complete - Recommended mode: hybrid
+2025-08-10 18:13:01,233 - INFO - Device manager initialized
+2025-08-10 18:13:01,234 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 18:13:02,141 - INFO - CPU model initialized
+2025-08-10 18:13:02,142 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 18:13:02,763 - INFO - GPU model initialized
+2025-08-10 18:13:02,763 - INFO - RAM disk created at: C:\Users\screw\AppData\Local\Temp\ramdisk_gqdc0kc1
+2025-08-10 18:13:02,763 - INFO - Processing 25 files with hybrid processing...
+2025-08-10 18:13:02,763 - INFO - Starting 4 processing workers...
+2025-08-10 18:13:02,764 - INFO - Processing worker 0 started
+2025-08-10 18:13:02,764 - INFO - Processing worker 1 started
+2025-08-10 18:13:02,765 - INFO - Processing worker 2 started
+2025-08-10 18:13:02,765 - INFO - Processing worker 3 started
+2025-08-10 18:13:02,765 - INFO - Processing workers started
+2025-08-10 18:13:02,765 - INFO - Processing batch 1/2 (16 files)
+2025-08-10 18:13:03,091 - INFO - Processing batch 2/2 (9 files)
+2025-08-10 18:13:03,284 - INFO - Stopping processing workers...
+2025-08-10 18:13:04,249 - INFO - Processing worker 0 stopped
+2025-08-10 18:13:04,257 - INFO - Processing worker 3 stopped
+2025-08-10 18:13:04,271 - INFO - Processing worker 2 stopped
+2025-08-10 18:13:04,281 - INFO - Processing worker 1 stopped
+2025-08-10 18:13:04,282 - INFO - Processing workers stopped
+2025-08-10 18:13:04,282 - INFO - Processing completed. 25 results generated.
+2025-08-10 18:13:04,282 - INFO - FAISS index built with 25 vectors
+2025-08-10 18:13:04,282 - INFO - Cleaning up hybrid RAG processor...
+2025-08-10 18:13:04,283 - INFO - Stopping processing workers...
+2025-08-10 18:13:04,283 - INFO - Processing workers stopped
+2025-08-10 18:13:04,283 - INFO - RAM disk cleaned up
+2025-08-10 18:13:04,283 - INFO - Performing memory cleanup...
+2025-08-10 18:13:04,800 - INFO - Memory cleanup completed
+2025-08-10 18:13:04,800 - INFO - Cleanup completed
+2025-08-10 18:13:04,803 - INFO - Detecting system devices...
+2025-08-10 18:13:04,804 - INFO - CPU detected: Intel64 Family 6 Model 186 Stepping 2, GenuineIntel (AMD64) with 16 cores
+2025-08-10 18:13:04,804 - INFO - GPU detected: NVIDIA GeForce RTX 4070 Laptop GPU with 8.0GB VRAM
+2025-08-10 18:13:04,804 - INFO - Device detection complete - CPU: True, GPU: True
+2025-08-10 18:13:04,804 - INFO - Analyzing system capabilities...
+2025-08-10 18:13:04,804 - INFO - System analysis complete - Recommended mode: hybrid
+2025-08-10 18:13:04,804 - INFO - Device manager initialized
+2025-08-10 18:13:04,806 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 18:13:05,452 - INFO - CPU model initialized
+2025-08-10 18:13:05,453 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 18:13:06,093 - INFO - GPU model initialized
+2025-08-10 18:13:06,093 - INFO - RAM disk created at: C:\Users\screw\AppData\Local\Temp\ramdisk_gg2bei1e
+2025-08-10 18:13:06,105 - INFO - Cleaning up hybrid RAG processor...
+2025-08-10 18:13:06,105 - INFO - Stopping processing workers...
+2025-08-10 18:13:06,105 - INFO - Processing workers stopped
+2025-08-10 18:13:06,106 - INFO - RAM disk cleaned up
+2025-08-10 18:13:06,106 - INFO - Performing memory cleanup...
+2025-08-10 18:13:06,636 - INFO - Memory cleanup completed
+2025-08-10 18:13:06,637 - INFO - Cleanup completed
+2025-08-10 18:13:06,637 - INFO - Detecting system devices...
+2025-08-10 18:13:06,637 - INFO - CPU detected: Intel64 Family 6 Model 186 Stepping 2, GenuineIntel (AMD64) with 16 cores
+2025-08-10 18:13:06,637 - INFO - GPU detected: NVIDIA GeForce RTX 4070 Laptop GPU with 8.0GB VRAM
+2025-08-10 18:13:06,637 - INFO - Device detection complete - CPU: True, GPU: True
+2025-08-10 18:13:06,637 - INFO - Analyzing system capabilities...
+2025-08-10 18:13:06,637 - INFO - System analysis complete - Recommended mode: hybrid
+2025-08-10 18:13:06,637 - INFO - Device manager initialized
+2025-08-10 18:13:06,638 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 18:13:07,182 - INFO - CPU model initialized
+2025-08-10 18:13:07,183 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 18:13:07,749 - INFO - GPU model initialized
+2025-08-10 18:13:07,750 - INFO - RAM disk created at: C:\Users\screw\AppData\Local\Temp\ramdisk_n2a2o32o
+2025-08-10 18:13:07,757 - INFO - Processing 10 files with hybrid processing...
+2025-08-10 18:13:07,758 - INFO - Starting 4 processing workers...
+2025-08-10 18:13:07,758 - INFO - Processing worker 0 started
+2025-08-10 18:13:07,759 - INFO - Processing worker 1 started
+2025-08-10 18:13:07,759 - INFO - Processing worker 2 started
+2025-08-10 18:13:07,759 - INFO - Processing worker 3 started
+2025-08-10 18:13:07,759 - INFO - Processing workers started
+2025-08-10 18:13:07,760 - INFO - Processing batch 1/3 (4 files)
+2025-08-10 18:13:07,869 - INFO - Processing batch 2/3 (4 files)
+2025-08-10 18:13:07,982 - INFO - Processing batch 3/3 (2 files)
+2025-08-10 18:13:08,041 - INFO - Stopping processing workers...
+2025-08-10 18:13:08,966 - INFO - Processing worker 1 stopped
+2025-08-10 18:13:08,981 - INFO - Processing worker 3 stopped
+2025-08-10 18:13:09,030 - INFO - Processing worker 0 stopped
+2025-08-10 18:13:09,039 - INFO - Processing worker 2 stopped
+2025-08-10 18:13:09,040 - INFO - Processing workers stopped
+2025-08-10 18:13:09,040 - INFO - Processing completed. 10 results generated.
+2025-08-10 18:13:09,044 - INFO - Cleaning up hybrid RAG processor...
+2025-08-10 18:13:09,044 - INFO - Stopping processing workers...
+2025-08-10 18:13:09,044 - INFO - Processing workers stopped
+2025-08-10 18:13:09,044 - INFO - RAM disk cleaned up
+2025-08-10 18:13:09,044 - INFO - Performing memory cleanup...
+2025-08-10 18:13:09,559 - INFO - Memory cleanup completed
+2025-08-10 18:13:09,559 - INFO - Cleanup completed
+2025-08-10 18:13:09,560 - INFO - Detecting system devices...
+2025-08-10 18:13:09,560 - INFO - CPU detected: Intel64 Family 6 Model 186 Stepping 2, GenuineIntel (AMD64) with 16 cores
+2025-08-10 18:13:09,560 - INFO - GPU detected: NVIDIA GeForce RTX 4070 Laptop GPU with 8.0GB VRAM
+2025-08-10 18:13:09,561 - INFO - Device detection complete - CPU: True, GPU: True
+2025-08-10 18:13:09,561 - INFO - Analyzing system capabilities...
+2025-08-10 18:13:09,561 - INFO - System analysis complete - Recommended mode: hybrid
+2025-08-10 18:13:09,561 - INFO - Device manager initialized
+2025-08-10 18:13:09,562 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 18:13:10,086 - INFO - CPU model initialized
+2025-08-10 18:13:10,088 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 18:13:10,919 - INFO - GPU model initialized
+2025-08-10 18:13:10,919 - INFO - RAM disk created at: C:\Users\screw\AppData\Local\Temp\ramdisk_0ceiu6sj
+2025-08-10 18:13:10,921 - INFO - Processing 4 files with hybrid processing...
+2025-08-10 18:13:10,921 - INFO - Starting 4 processing workers...
+2025-08-10 18:13:10,922 - INFO - Processing worker 0 started
+2025-08-10 18:13:10,922 - INFO - Processing worker 1 started
+2025-08-10 18:13:10,923 - INFO - Processing worker 2 started
+2025-08-10 18:13:10,923 - INFO - Processing worker 3 started
+2025-08-10 18:13:10,923 - INFO - Processing workers started
+2025-08-10 18:13:10,924 - INFO - Processing batch 1/3 (2 files)
+2025-08-10 18:13:11,042 - INFO - Processing batch 2/3 (2 files)
+2025-08-10 18:13:11,042 - ERROR - Failed to read file nonexistent.txt: [Errno 2] No such file or directory: 'nonexistent.txt'
+2025-08-10 18:13:11,072 - INFO - Stopping processing workers...
+2025-08-10 18:13:11,925 - INFO - Processing worker 3 stopped
+2025-08-10 18:13:11,967 - INFO - Processing worker 0 stopped
+2025-08-10 18:13:12,038 - INFO - Processing worker 1 stopped
+2025-08-10 18:13:12,070 - INFO - Processing worker 2 stopped
+2025-08-10 18:13:12,071 - INFO - Processing workers stopped
+2025-08-10 18:13:12,071 - INFO - Processing completed. 3 results generated.
+2025-08-10 18:13:12,071 - INFO - Cleaning up hybrid RAG processor...
+2025-08-10 18:13:12,071 - INFO - Stopping processing workers...
+2025-08-10 18:13:12,072 - INFO - Processing workers stopped
+2025-08-10 18:13:12,072 - INFO - RAM disk cleaned up
+2025-08-10 18:13:12,072 - INFO - Performing memory cleanup...
+2025-08-10 18:13:12,581 - INFO - Memory cleanup completed
+2025-08-10 18:13:12,582 - INFO - Cleanup completed
+2025-08-10 18:14:36,409 - INFO - Performing memory cleanup...
+2025-08-10 18:14:37,005 - INFO - Memory cleanup completed
+2025-08-10 18:14:37,006 - INFO - RAM disk created at: C:\Users\screw\AppData\Local\Temp\ramdisk_h0o55frl
+2025-08-10 18:14:37,007 - INFO - RAM disk cleaned up
+2025-08-10 18:14:37,008 - INFO - Detecting system devices...
+2025-08-10 18:14:37,023 - INFO - CPU detected: Intel64 Family 6 Model 186 Stepping 2, GenuineIntel (AMD64) with 16 cores
+2025-08-10 18:14:37,023 - INFO - GPU detected: NVIDIA GeForce RTX 4070 Laptop GPU with 8.0GB VRAM
+2025-08-10 18:14:37,023 - INFO - Device detection complete - CPU: True, GPU: True
+2025-08-10 18:14:37,023 - INFO - Analyzing system capabilities...
+2025-08-10 18:14:37,023 - INFO - System analysis complete - Recommended mode: hybrid
+2025-08-10 18:14:37,023 - INFO - Device manager initialized
+2025-08-10 18:14:37,025 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 18:14:37,914 - INFO - CPU model initialized
+2025-08-10 18:14:37,915 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 18:14:38,407 - INFO - GPU model initialized
+2025-08-10 18:14:38,408 - INFO - RAM disk created at: C:\Users\screw\AppData\Local\Temp\ramdisk_ncj6sde4
+2025-08-10 18:14:38,408 - INFO - Processing 1 files with hybrid processing...
+2025-08-10 18:14:38,408 - INFO - Starting 4 processing workers...
+2025-08-10 18:14:38,409 - INFO - Processing worker 0 started
+2025-08-10 18:14:38,409 - INFO - Processing worker 1 started
+2025-08-10 18:14:38,410 - INFO - Processing worker 2 started
+2025-08-10 18:14:38,410 - INFO - Processing worker 3 started
+2025-08-10 18:14:38,410 - INFO - Processing workers started
+2025-08-10 18:14:38,411 - INFO - Processing batch 1/1 (1 files)
+2025-08-10 18:14:38,563 - INFO - Stopping processing workers...
+2025-08-10 18:14:39,410 - INFO - Processing worker 1 stopped
+2025-08-10 18:14:39,412 - INFO - Processing worker 2 stopped
+2025-08-10 18:14:39,412 - INFO - Processing worker 3 stopped
+2025-08-10 18:14:39,560 - INFO - Processing worker 0 stopped
+2025-08-10 18:14:39,561 - INFO - Processing workers stopped
+2025-08-10 18:14:39,562 - INFO - Processing completed. 1 results generated.
+2025-08-10 18:14:39,562 - INFO - FAISS index built with 1 vectors
+2025-08-10 18:14:39,579 - INFO - Cleaning up hybrid RAG processor...
+2025-08-10 18:14:39,579 - INFO - Stopping processing workers...
+2025-08-10 18:14:39,579 - INFO - Processing workers stopped
+2025-08-10 18:14:39,579 - INFO - RAM disk cleaned up
+2025-08-10 18:14:39,579 - INFO - Performing memory cleanup...
+2025-08-10 18:14:40,128 - INFO - Memory cleanup completed
+2025-08-10 18:14:40,128 - INFO - Cleanup completed
+2025-08-10 18:14:40,136 - INFO - Detecting system devices...
+2025-08-10 18:14:40,137 - INFO - CPU detected: Intel64 Family 6 Model 186 Stepping 2, GenuineIntel (AMD64) with 16 cores
+2025-08-10 18:14:40,137 - INFO - GPU detected: NVIDIA GeForce RTX 4070 Laptop GPU with 8.0GB VRAM
+2025-08-10 18:14:40,137 - INFO - Device detection complete - CPU: True, GPU: True
+2025-08-10 18:14:40,137 - INFO - Analyzing system capabilities...
+2025-08-10 18:14:40,137 - INFO - System analysis complete - Recommended mode: hybrid
+2025-08-10 18:14:40,137 - INFO - Device manager initialized
+2025-08-10 18:14:40,138 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 18:14:40,806 - INFO - CPU model initialized
+2025-08-10 18:14:40,807 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 18:14:41,359 - INFO - GPU model initialized
+2025-08-10 18:14:41,359 - INFO - RAM disk created at: C:\Users\screw\AppData\Local\Temp\ramdisk_14w5iszd
+2025-08-10 18:14:41,360 - INFO - Processing 25 files with hybrid processing...
+2025-08-10 18:14:41,360 - INFO - Starting 4 processing workers...
+2025-08-10 18:14:41,361 - INFO - Processing worker 0 started
+2025-08-10 18:14:41,362 - INFO - Processing worker 1 started
+2025-08-10 18:14:41,362 - INFO - Processing worker 2 started
+2025-08-10 18:14:41,363 - INFO - Processing worker 3 started
+2025-08-10 18:14:41,363 - INFO - Processing workers started
+2025-08-10 18:14:41,363 - INFO - Processing batch 1/2 (16 files)
+2025-08-10 18:14:41,749 - INFO - Processing batch 2/2 (9 files)
+2025-08-10 18:14:42,052 - INFO - Stopping processing workers...
+2025-08-10 18:14:42,992 - INFO - Processing worker 0 stopped
+2025-08-10 18:14:43,004 - INFO - Processing worker 1 stopped
+2025-08-10 18:14:43,029 - INFO - Processing worker 2 stopped
+2025-08-10 18:14:43,053 - INFO - Processing worker 3 stopped
+2025-08-10 18:14:43,054 - INFO - Processing workers stopped
+2025-08-10 18:14:43,054 - INFO - Processing completed. 25 results generated.
+2025-08-10 18:14:43,055 - INFO - FAISS index built with 25 vectors
+2025-08-10 18:14:43,055 - INFO - Cleaning up hybrid RAG processor...
+2025-08-10 18:14:43,055 - INFO - Stopping processing workers...
+2025-08-10 18:14:43,055 - INFO - Processing workers stopped
+2025-08-10 18:14:43,056 - INFO - RAM disk cleaned up
+2025-08-10 18:14:43,056 - INFO - Performing memory cleanup...
+2025-08-10 18:14:43,728 - INFO - Memory cleanup completed
+2025-08-10 18:14:43,728 - INFO - Cleanup completed
+2025-08-10 18:14:43,733 - INFO - Detecting system devices...
+2025-08-10 18:14:43,733 - INFO - CPU detected: Intel64 Family 6 Model 186 Stepping 2, GenuineIntel (AMD64) with 16 cores
+2025-08-10 18:14:43,733 - INFO - GPU detected: NVIDIA GeForce RTX 4070 Laptop GPU with 8.0GB VRAM
+2025-08-10 18:14:43,733 - INFO - Device detection complete - CPU: True, GPU: True
+2025-08-10 18:14:43,734 - INFO - Analyzing system capabilities...
+2025-08-10 18:14:43,734 - INFO - System analysis complete - Recommended mode: hybrid
+2025-08-10 18:14:43,734 - INFO - Device manager initialized
+2025-08-10 18:14:43,737 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 18:14:44,281 - INFO - CPU model initialized
+2025-08-10 18:14:44,282 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 18:14:44,812 - INFO - GPU model initialized
+2025-08-10 18:14:44,812 - INFO - RAM disk created at: C:\Users\screw\AppData\Local\Temp\ramdisk_37tvbs9h
+2025-08-10 18:14:44,827 - INFO - Cleaning up hybrid RAG processor...
+2025-08-10 18:14:44,827 - INFO - Stopping processing workers...
+2025-08-10 18:14:44,827 - INFO - Processing workers stopped
+2025-08-10 18:14:44,828 - INFO - RAM disk cleaned up
+2025-08-10 18:14:44,828 - INFO - Performing memory cleanup...
+2025-08-10 18:14:45,462 - INFO - Memory cleanup completed
+2025-08-10 18:14:45,463 - INFO - Cleanup completed
+2025-08-10 18:14:45,463 - INFO - Detecting system devices...
+2025-08-10 18:14:45,463 - INFO - CPU detected: Intel64 Family 6 Model 186 Stepping 2, GenuineIntel (AMD64) with 16 cores
+2025-08-10 18:14:45,463 - INFO - GPU detected: NVIDIA GeForce RTX 4070 Laptop GPU with 8.0GB VRAM
+2025-08-10 18:14:45,463 - INFO - Device detection complete - CPU: True, GPU: True
+2025-08-10 18:14:45,464 - INFO - Analyzing system capabilities...
+2025-08-10 18:14:45,464 - INFO - System analysis complete - Recommended mode: hybrid
+2025-08-10 18:14:45,464 - INFO - Device manager initialized
+2025-08-10 18:14:45,465 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 18:14:45,970 - INFO - CPU model initialized
+2025-08-10 18:14:45,972 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 18:14:46,513 - INFO - GPU model initialized
+2025-08-10 18:14:46,514 - INFO - RAM disk created at: C:\Users\screw\AppData\Local\Temp\ramdisk_1yc8gpp8
+2025-08-10 18:14:46,522 - INFO - Processing 10 files with hybrid processing...
+2025-08-10 18:14:46,523 - INFO - Starting 4 processing workers...
+2025-08-10 18:14:46,524 - INFO - Processing worker 0 started
+2025-08-10 18:14:46,524 - INFO - Processing worker 1 started
+2025-08-10 18:14:46,525 - INFO - Processing worker 2 started
+2025-08-10 18:14:46,525 - INFO - Processing worker 3 started
+2025-08-10 18:14:46,525 - INFO - Processing workers started
+2025-08-10 18:14:46,526 - INFO - Processing batch 1/3 (4 files)
+2025-08-10 18:14:46,650 - INFO - Processing batch 2/3 (4 files)
+2025-08-10 18:14:46,759 - INFO - Processing batch 3/3 (2 files)
+2025-08-10 18:14:46,821 - INFO - Stopping processing workers...
+2025-08-10 18:14:47,747 - INFO - Processing worker 0 stopped
+2025-08-10 18:14:47,758 - INFO - Processing worker 2 stopped
+2025-08-10 18:14:47,805 - INFO - Processing worker 1 stopped
+2025-08-10 18:14:47,822 - INFO - Processing worker 3 stopped
+2025-08-10 18:14:47,823 - INFO - Processing workers stopped
+2025-08-10 18:14:47,823 - INFO - Processing completed. 10 results generated.
+2025-08-10 18:14:47,828 - INFO - Cleaning up hybrid RAG processor...
+2025-08-10 18:14:47,828 - INFO - Stopping processing workers...
+2025-08-10 18:14:47,828 - INFO - Processing workers stopped
+2025-08-10 18:14:47,829 - INFO - RAM disk cleaned up
+2025-08-10 18:14:47,829 - INFO - Performing memory cleanup...
+2025-08-10 18:14:48,358 - INFO - Memory cleanup completed
+2025-08-10 18:14:48,358 - INFO - Cleanup completed
+2025-08-10 18:14:48,359 - INFO - Detecting system devices...
+2025-08-10 18:14:48,360 - INFO - CPU detected: Intel64 Family 6 Model 186 Stepping 2, GenuineIntel (AMD64) with 16 cores
+2025-08-10 18:14:48,360 - INFO - GPU detected: NVIDIA GeForce RTX 4070 Laptop GPU with 8.0GB VRAM
+2025-08-10 18:14:48,360 - INFO - Device detection complete - CPU: True, GPU: True
+2025-08-10 18:14:48,360 - INFO - Analyzing system capabilities...
+2025-08-10 18:14:48,360 - INFO - System analysis complete - Recommended mode: hybrid
+2025-08-10 18:14:48,361 - INFO - Device manager initialized
+2025-08-10 18:14:48,362 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 18:14:48,812 - INFO - CPU model initialized
+2025-08-10 18:14:48,814 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 18:14:49,374 - INFO - GPU model initialized
+2025-08-10 18:14:49,375 - INFO - RAM disk created at: C:\Users\screw\AppData\Local\Temp\ramdisk_5gqqlhwv
+2025-08-10 18:14:49,377 - INFO - Processing 4 files with hybrid processing...
+2025-08-10 18:14:49,377 - INFO - Starting 4 processing workers...
+2025-08-10 18:14:49,378 - INFO - Processing worker 0 started
+2025-08-10 18:14:49,379 - INFO - Processing worker 1 started
+2025-08-10 18:14:49,379 - INFO - Processing worker 2 started
+2025-08-10 18:14:49,379 - INFO - Processing worker 3 started
+2025-08-10 18:14:49,380 - INFO - Processing workers started
+2025-08-10 18:14:49,380 - INFO - Processing batch 1/3 (2 files)
+2025-08-10 18:14:49,501 - INFO - Processing batch 2/3 (2 files)
+2025-08-10 18:14:49,501 - ERROR - Failed to read file nonexistent.txt: [Errno 2] No such file or directory: 'nonexistent.txt'
+2025-08-10 18:14:49,527 - INFO - Stopping processing workers...
+2025-08-10 18:14:50,381 - INFO - Processing worker 3 stopped
+2025-08-10 18:14:50,421 - INFO - Processing worker 0 stopped
+2025-08-10 18:14:50,494 - INFO - Processing worker 1 stopped
+2025-08-10 18:14:50,524 - INFO - Processing worker 2 stopped
+2025-08-10 18:14:50,525 - INFO - Processing workers stopped
+2025-08-10 18:14:50,526 - INFO - Processing completed. 3 results generated.
+2025-08-10 18:14:50,526 - INFO - Cleaning up hybrid RAG processor...
+2025-08-10 18:14:50,526 - INFO - Stopping processing workers...
+2025-08-10 18:14:50,526 - INFO - Processing workers stopped
+2025-08-10 18:14:50,527 - INFO - RAM disk cleaned up
+2025-08-10 18:14:50,527 - INFO - Performing memory cleanup...
+2025-08-10 18:14:51,212 - INFO - Memory cleanup completed
+2025-08-10 18:14:51,212 - INFO - Cleanup completed
+2025-08-10 18:15:18,652 - INFO - Performing memory cleanup...
+2025-08-10 18:15:19,266 - INFO - Memory cleanup completed
+2025-08-10 18:15:19,268 - INFO - RAM disk created at: C:\Users\screw\AppData\Local\Temp\ramdisk_l8p5gtru
+2025-08-10 18:15:19,269 - INFO - RAM disk cleaned up
+2025-08-10 18:15:19,270 - INFO - Detecting system devices...
+2025-08-10 18:15:19,287 - INFO - CPU detected: Intel64 Family 6 Model 186 Stepping 2, GenuineIntel (AMD64) with 16 cores
+2025-08-10 18:15:19,288 - INFO - GPU detected: NVIDIA GeForce RTX 4070 Laptop GPU with 8.0GB VRAM
+2025-08-10 18:15:19,288 - INFO - Device detection complete - CPU: True, GPU: True
+2025-08-10 18:15:19,288 - INFO - Analyzing system capabilities...
+2025-08-10 18:15:19,288 - INFO - System analysis complete - Recommended mode: hybrid
+2025-08-10 18:15:19,288 - INFO - Device manager initialized
+2025-08-10 18:15:19,289 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 18:15:19,980 - INFO - CPU model initialized
+2025-08-10 18:15:19,981 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 18:15:20,453 - INFO - GPU model initialized
+2025-08-10 18:15:20,453 - INFO - RAM disk created at: C:\Users\screw\AppData\Local\Temp\ramdisk_sd80u9pg
+2025-08-10 18:15:20,453 - INFO - Processing 1 files with hybrid processing...
+2025-08-10 18:15:20,454 - INFO - Starting 4 processing workers...
+2025-08-10 18:15:20,454 - INFO - Processing worker 0 started
+2025-08-10 18:15:20,455 - INFO - Processing worker 1 started
+2025-08-10 18:15:20,455 - INFO - Processing worker 2 started
+2025-08-10 18:15:20,455 - INFO - Processing worker 3 started
+2025-08-10 18:15:20,455 - INFO - Processing workers started
+2025-08-10 18:15:20,456 - INFO - Processing batch 1/1 (1 files)
+2025-08-10 18:15:20,609 - INFO - Stopping processing workers...
+2025-08-10 18:15:21,455 - INFO - Processing worker 1 stopped
+2025-08-10 18:15:21,455 - INFO - Processing worker 2 stopped
+2025-08-10 18:15:21,457 - INFO - Processing worker 3 stopped
+2025-08-10 18:15:21,607 - INFO - Processing worker 0 stopped
+2025-08-10 18:15:21,608 - INFO - Processing workers stopped
+2025-08-10 18:15:21,608 - INFO - Processing completed. 1 results generated.
+2025-08-10 18:15:21,608 - INFO - FAISS index built with 1 vectors
+2025-08-10 18:15:21,629 - INFO - Cleaning up hybrid RAG processor...
+2025-08-10 18:15:21,629 - INFO - Stopping processing workers...
+2025-08-10 18:15:21,629 - INFO - Processing workers stopped
+2025-08-10 18:15:21,629 - INFO - RAM disk cleaned up
+2025-08-10 18:15:21,630 - INFO - Performing memory cleanup...
+2025-08-10 18:15:22,156 - INFO - Memory cleanup completed
+2025-08-10 18:15:22,156 - INFO - Cleanup completed
+2025-08-10 18:15:22,168 - INFO - Detecting system devices...
+2025-08-10 18:15:22,168 - INFO - CPU detected: Intel64 Family 6 Model 186 Stepping 2, GenuineIntel (AMD64) with 16 cores
+2025-08-10 18:15:22,169 - INFO - GPU detected: NVIDIA GeForce RTX 4070 Laptop GPU with 8.0GB VRAM
+2025-08-10 18:15:22,169 - INFO - Device detection complete - CPU: True, GPU: True
+2025-08-10 18:15:22,169 - INFO - Analyzing system capabilities...
+2025-08-10 18:15:22,169 - INFO - System analysis complete - Recommended mode: hybrid
+2025-08-10 18:15:22,169 - INFO - Device manager initialized
+2025-08-10 18:15:22,170 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 18:15:22,662 - INFO - CPU model initialized
+2025-08-10 18:15:22,664 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 18:15:23,153 - INFO - GPU model initialized
+2025-08-10 18:15:23,153 - INFO - RAM disk created at: C:\Users\screw\AppData\Local\Temp\ramdisk_zmz341xg
+2025-08-10 18:15:23,153 - INFO - Processing 25 files with hybrid processing...
+2025-08-10 18:15:23,153 - INFO - Starting 4 processing workers...
+2025-08-10 18:15:23,154 - INFO - Processing worker 0 started
+2025-08-10 18:15:23,154 - INFO - Processing worker 1 started
+2025-08-10 18:15:23,155 - INFO - Processing worker 2 started
+2025-08-10 18:15:23,155 - INFO - Processing worker 3 started
+2025-08-10 18:15:23,155 - INFO - Processing workers started
+2025-08-10 18:15:23,155 - INFO - Processing batch 1/2 (16 files)
+2025-08-10 18:15:23,573 - INFO - Processing batch 2/2 (9 files)
+2025-08-10 18:15:23,790 - INFO - Stopping processing workers...
+2025-08-10 18:15:24,753 - INFO - Processing worker 2 stopped
+2025-08-10 18:15:24,764 - INFO - Processing worker 0 stopped
+2025-08-10 18:15:24,772 - INFO - Processing worker 3 stopped
+2025-08-10 18:15:24,787 - INFO - Processing worker 1 stopped
+2025-08-10 18:15:24,788 - INFO - Processing workers stopped
+2025-08-10 18:15:24,788 - INFO - Processing completed. 25 results generated.
+2025-08-10 18:15:24,788 - INFO - FAISS index built with 25 vectors
+2025-08-10 18:15:24,789 - INFO - Cleaning up hybrid RAG processor...
+2025-08-10 18:15:24,789 - INFO - Stopping processing workers...
+2025-08-10 18:15:24,789 - INFO - Processing workers stopped
+2025-08-10 18:15:24,789 - INFO - RAM disk cleaned up
+2025-08-10 18:15:24,789 - INFO - Performing memory cleanup...
+2025-08-10 18:15:25,315 - INFO - Memory cleanup completed
+2025-08-10 18:15:25,315 - INFO - Cleanup completed
+2025-08-10 18:15:25,318 - INFO - Detecting system devices...
+2025-08-10 18:15:25,318 - INFO - CPU detected: Intel64 Family 6 Model 186 Stepping 2, GenuineIntel (AMD64) with 16 cores
+2025-08-10 18:15:25,318 - INFO - GPU detected: NVIDIA GeForce RTX 4070 Laptop GPU with 8.0GB VRAM
+2025-08-10 18:15:25,318 - INFO - Device detection complete - CPU: True, GPU: True
+2025-08-10 18:15:25,318 - INFO - Analyzing system capabilities...
+2025-08-10 18:15:25,318 - INFO - System analysis complete - Recommended mode: hybrid
+2025-08-10 18:15:25,318 - INFO - Device manager initialized
+2025-08-10 18:15:25,320 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 18:15:25,851 - INFO - CPU model initialized
+2025-08-10 18:15:25,853 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 18:15:26,541 - INFO - GPU model initialized
+2025-08-10 18:15:26,541 - INFO - RAM disk created at: C:\Users\screw\AppData\Local\Temp\ramdisk_76yoeepo
+2025-08-10 18:15:26,554 - INFO - Cleaning up hybrid RAG processor...
+2025-08-10 18:15:26,555 - INFO - Stopping processing workers...
+2025-08-10 18:15:26,555 - INFO - Processing workers stopped
+2025-08-10 18:15:26,555 - INFO - RAM disk cleaned up
+2025-08-10 18:15:26,555 - INFO - Performing memory cleanup...
+2025-08-10 18:15:27,075 - INFO - Memory cleanup completed
+2025-08-10 18:15:27,075 - INFO - Cleanup completed
+2025-08-10 18:15:27,075 - INFO - Detecting system devices...
+2025-08-10 18:15:27,075 - INFO - CPU detected: Intel64 Family 6 Model 186 Stepping 2, GenuineIntel (AMD64) with 16 cores
+2025-08-10 18:15:27,075 - INFO - GPU detected: NVIDIA GeForce RTX 4070 Laptop GPU with 8.0GB VRAM
+2025-08-10 18:15:27,076 - INFO - Device detection complete - CPU: True, GPU: True
+2025-08-10 18:15:27,076 - INFO - Analyzing system capabilities...
+2025-08-10 18:15:27,076 - INFO - System analysis complete - Recommended mode: hybrid
+2025-08-10 18:15:27,076 - INFO - Device manager initialized
+2025-08-10 18:15:27,077 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 18:15:27,815 - INFO - CPU model initialized
+2025-08-10 18:15:27,817 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 18:15:28,331 - INFO - GPU model initialized
+2025-08-10 18:15:28,332 - INFO - RAM disk created at: C:\Users\screw\AppData\Local\Temp\ramdisk_cqy0oaus
+2025-08-10 18:15:28,357 - INFO - Processing 10 files with hybrid processing...
+2025-08-10 18:15:28,357 - INFO - Starting 4 processing workers...
+2025-08-10 18:15:28,358 - INFO - Processing worker 0 started
+2025-08-10 18:15:28,358 - INFO - Processing worker 1 started
+2025-08-10 18:15:28,359 - INFO - Processing worker 2 started
+2025-08-10 18:15:28,359 - INFO - Processing worker 3 started
+2025-08-10 18:15:28,359 - INFO - Processing workers started
+2025-08-10 18:15:28,359 - INFO - Processing batch 1/3 (4 files)
+2025-08-10 18:15:28,531 - INFO - Processing batch 2/3 (4 files)
+2025-08-10 18:15:28,651 - INFO - Processing batch 3/3 (2 files)
+2025-08-10 18:15:28,723 - INFO - Stopping processing workers...
+2025-08-10 18:15:29,641 - INFO - Processing worker 1 stopped
+2025-08-10 18:15:29,649 - INFO - Processing worker 2 stopped
+2025-08-10 18:15:29,710 - INFO - Processing worker 0 stopped
+2025-08-10 18:15:29,721 - INFO - Processing worker 3 stopped
+2025-08-10 18:15:29,721 - INFO - Processing workers stopped
+2025-08-10 18:15:29,722 - INFO - Processing completed. 10 results generated.
+2025-08-10 18:15:29,725 - INFO - Cleaning up hybrid RAG processor...
+2025-08-10 18:15:29,725 - INFO - Stopping processing workers...
+2025-08-10 18:15:29,725 - INFO - Processing workers stopped
+2025-08-10 18:15:29,726 - INFO - RAM disk cleaned up
+2025-08-10 18:15:29,726 - INFO - Performing memory cleanup...
+2025-08-10 18:15:30,263 - INFO - Memory cleanup completed
+2025-08-10 18:15:30,264 - INFO - Cleanup completed
+2025-08-10 18:15:30,265 - INFO - Detecting system devices...
+2025-08-10 18:15:30,265 - INFO - CPU detected: Intel64 Family 6 Model 186 Stepping 2, GenuineIntel (AMD64) with 16 cores
+2025-08-10 18:15:30,266 - INFO - GPU detected: NVIDIA GeForce RTX 4070 Laptop GPU with 8.0GB VRAM
+2025-08-10 18:15:30,266 - INFO - Device detection complete - CPU: True, GPU: True
+2025-08-10 18:15:30,266 - INFO - Analyzing system capabilities...
+2025-08-10 18:15:30,266 - INFO - System analysis complete - Recommended mode: hybrid
+2025-08-10 18:15:30,266 - INFO - Device manager initialized
+2025-08-10 18:15:30,267 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 18:15:30,719 - INFO - CPU model initialized
+2025-08-10 18:15:30,721 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 18:15:31,235 - INFO - GPU model initialized
+2025-08-10 18:15:31,235 - INFO - RAM disk created at: C:\Users\screw\AppData\Local\Temp\ramdisk_l8i7s58r
+2025-08-10 18:15:31,237 - INFO - Processing 4 files with hybrid processing...
+2025-08-10 18:15:31,237 - INFO - Starting 4 processing workers...
+2025-08-10 18:15:31,238 - INFO - Processing worker 0 started
+2025-08-10 18:15:31,238 - INFO - Processing worker 1 started
+2025-08-10 18:15:31,238 - INFO - Processing worker 2 started
+2025-08-10 18:15:31,239 - INFO - Processing worker 3 started
+2025-08-10 18:15:31,239 - INFO - Processing workers started
+2025-08-10 18:15:31,239 - INFO - Processing batch 1/3 (2 files)
+2025-08-10 18:15:31,363 - INFO - Processing batch 2/3 (2 files)
+2025-08-10 18:15:31,363 - ERROR - Failed to read file nonexistent.txt: [Errno 2] No such file or directory: 'nonexistent.txt'
+2025-08-10 18:15:31,393 - INFO - Stopping processing workers...
+2025-08-10 18:15:32,239 - INFO - Processing worker 3 stopped
+2025-08-10 18:15:32,282 - INFO - Processing worker 0 stopped
+2025-08-10 18:15:32,363 - INFO - Processing worker 1 stopped
+2025-08-10 18:15:32,389 - INFO - Processing worker 2 stopped
+2025-08-10 18:15:32,389 - INFO - Processing workers stopped
+2025-08-10 18:15:32,390 - INFO - Processing completed. 3 results generated.
+2025-08-10 18:15:32,390 - INFO - Cleaning up hybrid RAG processor...
+2025-08-10 18:15:32,390 - INFO - Stopping processing workers...
+2025-08-10 18:15:32,390 - INFO - Processing workers stopped
+2025-08-10 18:15:32,391 - INFO - RAM disk cleaned up
+2025-08-10 18:15:32,391 - INFO - Performing memory cleanup...
+2025-08-10 18:15:32,922 - INFO - Memory cleanup completed
+2025-08-10 18:15:32,926 - INFO - Cleanup completed
+2025-08-10 18:15:53,906 - INFO - Performing memory cleanup...
+2025-08-10 18:15:54,528 - INFO - Memory cleanup completed
+2025-08-10 18:15:54,530 - INFO - RAM disk created at: C:\Users\screw\AppData\Local\Temp\ramdisk_g1utdg_j
+2025-08-10 18:15:54,532 - INFO - RAM disk cleaned up
+2025-08-10 18:15:54,533 - INFO - Detecting system devices...
+2025-08-10 18:15:54,553 - INFO - CPU detected: Intel64 Family 6 Model 186 Stepping 2, GenuineIntel (AMD64) with 16 cores
+2025-08-10 18:15:54,553 - INFO - GPU detected: NVIDIA GeForce RTX 4070 Laptop GPU with 8.0GB VRAM
+2025-08-10 18:15:54,553 - INFO - Device detection complete - CPU: True, GPU: True
+2025-08-10 18:15:54,553 - INFO - Analyzing system capabilities...
+2025-08-10 18:15:54,553 - INFO - System analysis complete - Recommended mode: hybrid
+2025-08-10 18:15:54,553 - INFO - Device manager initialized
+2025-08-10 18:15:54,555 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 18:15:54,796 - WARNING - HTTP Error 429 thrown while requesting HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/./modules.json
+2025-08-10 18:15:54,797 - WARNING - Retrying in 1s [Retry 1/5].
+2025-08-10 18:15:55,805 - WARNING - HTTP Error 429 thrown while requesting HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/./modules.json
+2025-08-10 18:15:55,805 - WARNING - Retrying in 2s [Retry 2/5].
+2025-08-10 18:15:57,814 - WARNING - HTTP Error 429 thrown while requesting HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/./modules.json
+2025-08-10 18:15:57,815 - WARNING - Retrying in 4s [Retry 3/5].
+2025-08-10 18:16:02,284 - INFO - CPU model initialized
+2025-08-10 18:16:02,286 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 18:16:02,922 - INFO - GPU model initialized
+2025-08-10 18:16:02,922 - INFO - RAM disk created at: C:\Users\screw\AppData\Local\Temp\ramdisk_6aunuw7d
+2025-08-10 18:16:02,923 - INFO - Processing 1 files with hybrid processing...
+2025-08-10 18:16:02,923 - INFO - Starting 4 processing workers...
+2025-08-10 18:16:02,923 - INFO - Processing worker 0 started
+2025-08-10 18:16:02,924 - INFO - Processing worker 1 started
+2025-08-10 18:16:02,924 - INFO - Processing worker 2 started
+2025-08-10 18:16:02,925 - INFO - Processing worker 3 started
+2025-08-10 18:16:02,925 - INFO - Processing workers started
+2025-08-10 18:16:02,925 - INFO - Processing batch 1/1 (1 files)
+2025-08-10 18:16:03,126 - INFO - Stopping processing workers...
+2025-08-10 18:16:03,927 - INFO - Processing worker 1 stopped
+2025-08-10 18:16:03,927 - INFO - Processing worker 3 stopped
+2025-08-10 18:16:03,927 - INFO - Processing worker 2 stopped
+2025-08-10 18:16:04,123 - INFO - Processing worker 0 stopped
+2025-08-10 18:16:04,124 - INFO - Processing workers stopped
+2025-08-10 18:16:04,124 - INFO - Processing completed. 1 results generated.
+2025-08-10 18:16:04,125 - INFO - FAISS index built with 1 vectors
+2025-08-10 18:16:04,152 - INFO - Cleaning up hybrid RAG processor...
+2025-08-10 18:16:04,152 - INFO - Stopping processing workers...
+2025-08-10 18:16:04,152 - INFO - Processing workers stopped
+2025-08-10 18:16:04,153 - INFO - RAM disk cleaned up
+2025-08-10 18:16:04,153 - INFO - Performing memory cleanup...
+2025-08-10 18:16:04,689 - INFO - Memory cleanup completed
+2025-08-10 18:16:04,689 - INFO - Cleanup completed
+2025-08-10 18:16:04,703 - INFO - Detecting system devices...
+2025-08-10 18:16:04,703 - INFO - CPU detected: Intel64 Family 6 Model 186 Stepping 2, GenuineIntel (AMD64) with 16 cores
+2025-08-10 18:16:04,704 - INFO - GPU detected: NVIDIA GeForce RTX 4070 Laptop GPU with 8.0GB VRAM
+2025-08-10 18:16:04,704 - INFO - Device detection complete - CPU: True, GPU: True
+2025-08-10 18:16:04,704 - INFO - Analyzing system capabilities...
+2025-08-10 18:16:04,704 - INFO - System analysis complete - Recommended mode: hybrid
+2025-08-10 18:16:04,704 - INFO - Device manager initialized
+2025-08-10 18:16:04,705 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 18:16:05,177 - INFO - CPU model initialized
+2025-08-10 18:16:05,179 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 18:16:05,762 - INFO - GPU model initialized
+2025-08-10 18:16:05,762 - INFO - RAM disk created at: C:\Users\screw\AppData\Local\Temp\ramdisk_4kqffbos
+2025-08-10 18:16:05,763 - INFO - Processing 25 files with hybrid processing...
+2025-08-10 18:16:05,763 - INFO - Starting 4 processing workers...
+2025-08-10 18:16:05,764 - INFO - Processing worker 0 started
+2025-08-10 18:16:05,765 - INFO - Processing worker 1 started
+2025-08-10 18:16:05,765 - INFO - Processing worker 2 started
+2025-08-10 18:16:05,765 - INFO - Processing worker 3 started
+2025-08-10 18:16:05,765 - INFO - Processing workers started
+2025-08-10 18:16:05,766 - INFO - Processing batch 1/2 (16 files)
+2025-08-10 18:16:06,122 - INFO - Processing batch 2/2 (9 files)
+2025-08-10 18:16:06,314 - INFO - Stopping processing workers...
+2025-08-10 18:16:07,281 - INFO - Processing worker 1 stopped
+2025-08-10 18:16:07,288 - INFO - Processing worker 2 stopped
+2025-08-10 18:16:07,301 - INFO - Processing worker 0 stopped
+2025-08-10 18:16:07,311 - INFO - Processing worker 3 stopped
+2025-08-10 18:16:07,312 - INFO - Processing workers stopped
+2025-08-10 18:16:07,312 - INFO - Processing completed. 25 results generated.
+2025-08-10 18:16:07,312 - INFO - FAISS index built with 25 vectors
+2025-08-10 18:16:07,313 - INFO - Cleaning up hybrid RAG processor...
+2025-08-10 18:16:07,313 - INFO - Stopping processing workers...
+2025-08-10 18:16:07,313 - INFO - Processing workers stopped
+2025-08-10 18:16:07,313 - INFO - RAM disk cleaned up
+2025-08-10 18:16:07,313 - INFO - Performing memory cleanup...
+2025-08-10 18:16:07,858 - INFO - Memory cleanup completed
+2025-08-10 18:16:07,858 - INFO - Cleanup completed
+2025-08-10 18:16:07,861 - INFO - Detecting system devices...
+2025-08-10 18:16:07,862 - INFO - CPU detected: Intel64 Family 6 Model 186 Stepping 2, GenuineIntel (AMD64) with 16 cores
+2025-08-10 18:16:07,862 - INFO - GPU detected: NVIDIA GeForce RTX 4070 Laptop GPU with 8.0GB VRAM
+2025-08-10 18:16:07,862 - INFO - Device detection complete - CPU: True, GPU: True
+2025-08-10 18:16:07,862 - INFO - Analyzing system capabilities...
+2025-08-10 18:16:07,862 - INFO - System analysis complete - Recommended mode: hybrid
+2025-08-10 18:16:07,862 - INFO - Device manager initialized
+2025-08-10 18:16:07,864 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 18:16:08,313 - INFO - CPU model initialized
+2025-08-10 18:16:08,315 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 18:16:09,006 - INFO - GPU model initialized
+2025-08-10 18:16:09,007 - INFO - RAM disk created at: C:\Users\screw\AppData\Local\Temp\ramdisk_7xkvcoe7
+2025-08-10 18:16:09,019 - INFO - Cleaning up hybrid RAG processor...
+2025-08-10 18:16:09,020 - INFO - Stopping processing workers...
+2025-08-10 18:16:09,020 - INFO - Processing workers stopped
+2025-08-10 18:16:09,020 - INFO - RAM disk cleaned up
+2025-08-10 18:16:09,020 - INFO - Performing memory cleanup...
+2025-08-10 18:16:09,567 - INFO - Memory cleanup completed
+2025-08-10 18:16:09,567 - INFO - Cleanup completed
+2025-08-10 18:16:09,568 - INFO - Detecting system devices...
+2025-08-10 18:16:09,568 - INFO - CPU detected: Intel64 Family 6 Model 186 Stepping 2, GenuineIntel (AMD64) with 16 cores
+2025-08-10 18:16:09,568 - INFO - GPU detected: NVIDIA GeForce RTX 4070 Laptop GPU with 8.0GB VRAM
+2025-08-10 18:16:09,568 - INFO - Device detection complete - CPU: True, GPU: True
+2025-08-10 18:16:09,568 - INFO - Analyzing system capabilities...
+2025-08-10 18:16:09,568 - INFO - System analysis complete - Recommended mode: hybrid
+2025-08-10 18:16:09,568 - INFO - Device manager initialized
+2025-08-10 18:16:09,569 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 18:16:10,083 - INFO - CPU model initialized
+2025-08-10 18:16:10,087 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 18:16:10,647 - INFO - GPU model initialized
+2025-08-10 18:16:10,647 - INFO - RAM disk created at: C:\Users\screw\AppData\Local\Temp\ramdisk_li029rvk
+2025-08-10 18:16:10,660 - INFO - Processing 10 files with hybrid processing...
+2025-08-10 18:16:10,660 - INFO - Starting 4 processing workers...
+2025-08-10 18:16:10,661 - INFO - Processing worker 0 started
+2025-08-10 18:16:10,662 - INFO - Processing worker 1 started
+2025-08-10 18:16:10,662 - INFO - Processing worker 2 started
+2025-08-10 18:16:10,663 - INFO - Processing worker 3 started
+2025-08-10 18:16:10,663 - INFO - Processing workers started
+2025-08-10 18:16:10,663 - INFO - Processing batch 1/3 (4 files)
+2025-08-10 18:16:10,835 - INFO - Processing batch 2/3 (4 files)
+2025-08-10 18:16:11,006 - INFO - Processing batch 3/3 (2 files)
+2025-08-10 18:16:11,088 - INFO - Stopping processing workers...
+2025-08-10 18:16:11,994 - INFO - Processing worker 0 stopped
+2025-08-10 18:16:12,002 - INFO - Processing worker 3 stopped
+2025-08-10 18:16:12,062 - INFO - Processing worker 2 stopped
+2025-08-10 18:16:12,090 - INFO - Processing worker 1 stopped
+2025-08-10 18:16:12,091 - INFO - Processing workers stopped
+2025-08-10 18:16:12,091 - INFO - Processing completed. 10 results generated.
+2025-08-10 18:16:12,096 - INFO - Cleaning up hybrid RAG processor...
+2025-08-10 18:16:12,096 - INFO - Stopping processing workers...
+2025-08-10 18:16:12,096 - INFO - Processing workers stopped
+2025-08-10 18:16:12,097 - INFO - RAM disk cleaned up
+2025-08-10 18:16:12,097 - INFO - Performing memory cleanup...
+2025-08-10 18:16:12,635 - INFO - Memory cleanup completed
+2025-08-10 18:16:12,636 - INFO - Cleanup completed
+2025-08-10 18:16:12,637 - INFO - Detecting system devices...
+2025-08-10 18:16:12,637 - INFO - CPU detected: Intel64 Family 6 Model 186 Stepping 2, GenuineIntel (AMD64) with 16 cores
+2025-08-10 18:16:12,637 - INFO - GPU detected: NVIDIA GeForce RTX 4070 Laptop GPU with 8.0GB VRAM
+2025-08-10 18:16:12,638 - INFO - Device detection complete - CPU: True, GPU: True
+2025-08-10 18:16:12,638 - INFO - Analyzing system capabilities...
+2025-08-10 18:16:12,638 - INFO - System analysis complete - Recommended mode: hybrid
+2025-08-10 18:16:12,638 - INFO - Device manager initialized
+2025-08-10 18:16:12,639 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 18:16:13,076 - INFO - CPU model initialized
+2025-08-10 18:16:13,077 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 18:16:13,594 - INFO - GPU model initialized
+2025-08-10 18:16:13,595 - INFO - RAM disk created at: C:\Users\screw\AppData\Local\Temp\ramdisk_39uvy10k
+2025-08-10 18:16:13,597 - INFO - Processing 4 files with hybrid processing...
+2025-08-10 18:16:13,597 - INFO - Starting 4 processing workers...
+2025-08-10 18:16:13,598 - INFO - Processing worker 0 started
+2025-08-10 18:16:13,599 - INFO - Processing worker 1 started
+2025-08-10 18:16:13,599 - INFO - Processing worker 2 started
+2025-08-10 18:16:13,599 - INFO - Processing worker 3 started
+2025-08-10 18:16:13,599 - INFO - Processing workers started
+2025-08-10 18:16:13,600 - INFO - Processing batch 1/3 (2 files)
+2025-08-10 18:16:13,746 - INFO - Processing batch 2/3 (2 files)
+2025-08-10 18:16:13,746 - ERROR - Failed to read file nonexistent.txt: [Errno 2] No such file or directory: 'nonexistent.txt'
+2025-08-10 18:16:13,789 - INFO - Stopping processing workers...
+2025-08-10 18:16:14,601 - INFO - Processing worker 3 stopped
+2025-08-10 18:16:14,648 - INFO - Processing worker 0 stopped
+2025-08-10 18:16:14,743 - INFO - Processing worker 1 stopped
+2025-08-10 18:16:14,789 - INFO - Processing worker 2 stopped
+2025-08-10 18:16:14,790 - INFO - Processing workers stopped
+2025-08-10 18:16:14,790 - INFO - Processing completed. 3 results generated.
+2025-08-10 18:16:14,790 - INFO - Cleaning up hybrid RAG processor...
+2025-08-10 18:16:14,790 - INFO - Stopping processing workers...
+2025-08-10 18:16:14,791 - INFO - Processing workers stopped
+2025-08-10 18:16:14,791 - INFO - RAM disk cleaned up
+2025-08-10 18:16:14,791 - INFO - Performing memory cleanup...
+2025-08-10 18:16:15,379 - INFO - Memory cleanup completed
+2025-08-10 18:16:15,379 - INFO - Cleanup completed
+2025-08-10 18:17:04,389 - INFO - Performing memory cleanup...
+2025-08-10 18:17:04,998 - INFO - Memory cleanup completed
+2025-08-10 18:17:04,999 - INFO - RAM disk created at: C:\Users\screw\AppData\Local\Temp\ramdisk_26v4s_ys
+2025-08-10 18:17:05,000 - INFO - RAM disk cleaned up
+2025-08-10 18:17:05,001 - INFO - Detecting system devices...
+2025-08-10 18:17:05,020 - INFO - CPU detected: Intel64 Family 6 Model 186 Stepping 2, GenuineIntel (AMD64) with 16 cores
+2025-08-10 18:17:05,020 - INFO - GPU detected: NVIDIA GeForce RTX 4070 Laptop GPU with 8.0GB VRAM
+2025-08-10 18:17:05,020 - INFO - Device detection complete - CPU: True, GPU: True
+2025-08-10 18:17:05,020 - INFO - Analyzing system capabilities...
+2025-08-10 18:17:05,020 - INFO - System analysis complete - Recommended mode: hybrid
+2025-08-10 18:17:05,020 - INFO - Device manager initialized
+2025-08-10 18:17:05,022 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 18:17:05,850 - INFO - CPU model initialized
+2025-08-10 18:17:05,851 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 18:17:06,531 - INFO - GPU model initialized
+2025-08-10 18:17:06,531 - INFO - RAM disk created at: C:\Users\screw\AppData\Local\Temp\ramdisk_20lcxdiq
+2025-08-10 18:17:06,532 - INFO - Processing 1 files with hybrid processing...
+2025-08-10 18:17:06,532 - INFO - Starting 4 processing workers...
+2025-08-10 18:17:06,532 - INFO - Processing worker 0 started
+2025-08-10 18:17:06,533 - INFO - Processing worker 1 started
+2025-08-10 18:17:06,533 - INFO - Processing worker 2 started
+2025-08-10 18:17:06,534 - INFO - Processing worker 3 started
+2025-08-10 18:17:06,534 - INFO - Processing workers started
+2025-08-10 18:17:06,534 - INFO - Processing batch 1/1 (1 files)
+2025-08-10 18:17:06,688 - INFO - Stopping processing workers...
+2025-08-10 18:17:07,534 - INFO - Processing worker 3 stopped
+2025-08-10 18:17:07,534 - INFO - Processing worker 2 stopped
+2025-08-10 18:17:07,534 - INFO - Processing worker 1 stopped
+2025-08-10 18:17:07,685 - INFO - Processing worker 0 stopped
+2025-08-10 18:17:07,686 - INFO - Processing workers stopped
+2025-08-10 18:17:07,686 - INFO - Processing completed. 1 results generated.
+2025-08-10 18:17:07,686 - INFO - FAISS index built with 1 vectors
+2025-08-10 18:17:07,708 - INFO - Cleaning up hybrid RAG processor...
+2025-08-10 18:17:07,708 - INFO - Stopping processing workers...
+2025-08-10 18:17:07,708 - INFO - Processing workers stopped
+2025-08-10 18:17:07,708 - INFO - RAM disk cleaned up
+2025-08-10 18:17:07,709 - INFO - Performing memory cleanup...
+2025-08-10 18:17:08,236 - INFO - Memory cleanup completed
+2025-08-10 18:17:08,236 - INFO - Cleanup completed
+2025-08-10 18:17:08,248 - INFO - Detecting system devices...
+2025-08-10 18:17:08,249 - INFO - CPU detected: Intel64 Family 6 Model 186 Stepping 2, GenuineIntel (AMD64) with 16 cores
+2025-08-10 18:17:08,249 - INFO - GPU detected: NVIDIA GeForce RTX 4070 Laptop GPU with 8.0GB VRAM
+2025-08-10 18:17:08,249 - INFO - Device detection complete - CPU: True, GPU: True
+2025-08-10 18:17:08,249 - INFO - Analyzing system capabilities...
+2025-08-10 18:17:08,249 - INFO - System analysis complete - Recommended mode: hybrid
+2025-08-10 18:17:08,249 - INFO - Device manager initialized
+2025-08-10 18:17:08,251 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 18:17:08,774 - INFO - CPU model initialized
+2025-08-10 18:17:08,776 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 18:17:09,310 - INFO - GPU model initialized
+2025-08-10 18:17:09,311 - INFO - RAM disk created at: C:\Users\screw\AppData\Local\Temp\ramdisk_1zf8my0k
+2025-08-10 18:17:09,311 - INFO - Processing 25 files with hybrid processing...
+2025-08-10 18:17:09,311 - INFO - Starting 4 processing workers...
+2025-08-10 18:17:09,312 - INFO - Processing worker 0 started
+2025-08-10 18:17:09,312 - INFO - Processing worker 1 started
+2025-08-10 18:17:09,313 - INFO - Processing worker 2 started
+2025-08-10 18:17:09,313 - INFO - Processing worker 3 started
+2025-08-10 18:17:09,313 - INFO - Processing workers started
+2025-08-10 18:17:09,313 - INFO - Processing batch 1/2 (16 files)
+2025-08-10 18:17:09,725 - INFO - Processing batch 2/2 (9 files)
+2025-08-10 18:17:09,929 - INFO - Stopping processing workers...
+2025-08-10 18:17:10,900 - INFO - Processing worker 0 stopped
+2025-08-10 18:17:10,908 - INFO - Processing worker 1 stopped
+2025-08-10 18:17:10,916 - INFO - Processing worker 3 stopped
+2025-08-10 18:17:10,927 - INFO - Processing worker 2 stopped
+2025-08-10 18:17:10,928 - INFO - Processing workers stopped
+2025-08-10 18:17:10,928 - INFO - Processing completed. 25 results generated.
+2025-08-10 18:17:10,928 - INFO - FAISS index built with 25 vectors
+2025-08-10 18:17:10,928 - INFO - Cleaning up hybrid RAG processor...
+2025-08-10 18:17:10,928 - INFO - Stopping processing workers...
+2025-08-10 18:17:10,928 - INFO - Processing workers stopped
+2025-08-10 18:17:10,929 - INFO - RAM disk cleaned up
+2025-08-10 18:17:10,929 - INFO - Performing memory cleanup...
+2025-08-10 18:17:11,452 - INFO - Memory cleanup completed
+2025-08-10 18:17:11,452 - INFO - Cleanup completed
+2025-08-10 18:17:11,455 - INFO - Detecting system devices...
+2025-08-10 18:17:11,455 - INFO - CPU detected: Intel64 Family 6 Model 186 Stepping 2, GenuineIntel (AMD64) with 16 cores
+2025-08-10 18:17:11,455 - INFO - GPU detected: NVIDIA GeForce RTX 4070 Laptop GPU with 8.0GB VRAM
+2025-08-10 18:17:11,455 - INFO - Device detection complete - CPU: True, GPU: True
+2025-08-10 18:17:11,455 - INFO - Analyzing system capabilities...
+2025-08-10 18:17:11,455 - INFO - System analysis complete - Recommended mode: hybrid
+2025-08-10 18:17:11,455 - INFO - Device manager initialized
+2025-08-10 18:17:11,457 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 18:17:12,093 - INFO - CPU model initialized
+2025-08-10 18:17:12,094 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 18:17:12,713 - INFO - GPU model initialized
+2025-08-10 18:17:12,713 - INFO - RAM disk created at: C:\Users\screw\AppData\Local\Temp\ramdisk_9ugeqxlo
+2025-08-10 18:17:12,728 - INFO - Cleaning up hybrid RAG processor...
+2025-08-10 18:17:12,728 - INFO - Stopping processing workers...
+2025-08-10 18:17:12,728 - INFO - Processing workers stopped
+2025-08-10 18:17:12,728 - INFO - RAM disk cleaned up
+2025-08-10 18:17:12,728 - INFO - Performing memory cleanup...
+2025-08-10 18:17:13,252 - INFO - Memory cleanup completed
+2025-08-10 18:17:13,253 - INFO - Cleanup completed
+2025-08-10 18:17:13,253 - INFO - Detecting system devices...
+2025-08-10 18:17:13,253 - INFO - CPU detected: Intel64 Family 6 Model 186 Stepping 2, GenuineIntel (AMD64) with 16 cores
+2025-08-10 18:17:13,253 - INFO - GPU detected: NVIDIA GeForce RTX 4070 Laptop GPU with 8.0GB VRAM
+2025-08-10 18:17:13,253 - INFO - Device detection complete - CPU: True, GPU: True
+2025-08-10 18:17:13,253 - INFO - Analyzing system capabilities...
+2025-08-10 18:17:13,253 - INFO - System analysis complete - Recommended mode: hybrid
+2025-08-10 18:17:13,253 - INFO - Device manager initialized
+2025-08-10 18:17:13,255 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 18:17:13,802 - INFO - CPU model initialized
+2025-08-10 18:17:13,803 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 18:17:14,463 - INFO - GPU model initialized
+2025-08-10 18:17:14,463 - INFO - RAM disk created at: C:\Users\screw\AppData\Local\Temp\ramdisk_4n0_v0d8
+2025-08-10 18:17:14,470 - INFO - Processing 10 files with hybrid processing...
+2025-08-10 18:17:14,471 - INFO - Starting 4 processing workers...
+2025-08-10 18:17:14,472 - INFO - Processing worker 0 started
+2025-08-10 18:17:14,472 - INFO - Processing worker 1 started
+2025-08-10 18:17:14,473 - INFO - Processing worker 2 started
+2025-08-10 18:17:14,473 - INFO - Processing worker 3 started
+2025-08-10 18:17:14,473 - INFO - Processing workers started
+2025-08-10 18:17:14,473 - INFO - Processing batch 1/3 (4 files)
+2025-08-10 18:17:14,591 - INFO - Processing batch 2/3 (4 files)
+2025-08-10 18:17:14,736 - INFO - Processing batch 3/3 (2 files)
+2025-08-10 18:17:14,891 - INFO - Stopping processing workers...
+2025-08-10 18:17:15,725 - INFO - Processing worker 1 stopped
+2025-08-10 18:17:15,732 - INFO - Processing worker 3 stopped
+2025-08-10 18:17:15,874 - INFO - Processing worker 0 stopped
+2025-08-10 18:17:15,886 - INFO - Processing worker 2 stopped
+2025-08-10 18:17:15,886 - INFO - Processing workers stopped
+2025-08-10 18:17:15,887 - INFO - Processing completed. 10 results generated.
+2025-08-10 18:17:15,890 - INFO - Cleaning up hybrid RAG processor...
+2025-08-10 18:17:15,891 - INFO - Stopping processing workers...
+2025-08-10 18:17:15,891 - INFO - Processing workers stopped
+2025-08-10 18:17:15,892 - INFO - RAM disk cleaned up
+2025-08-10 18:17:15,892 - INFO - Performing memory cleanup...
+2025-08-10 18:17:16,409 - INFO - Memory cleanup completed
+2025-08-10 18:17:16,410 - INFO - Cleanup completed
+2025-08-10 18:17:16,412 - INFO - Detecting system devices...
+2025-08-10 18:17:16,412 - INFO - CPU detected: Intel64 Family 6 Model 186 Stepping 2, GenuineIntel (AMD64) with 16 cores
+2025-08-10 18:17:16,412 - INFO - GPU detected: NVIDIA GeForce RTX 4070 Laptop GPU with 8.0GB VRAM
+2025-08-10 18:17:16,412 - INFO - Device detection complete - CPU: True, GPU: True
+2025-08-10 18:17:16,412 - INFO - Analyzing system capabilities...
+2025-08-10 18:17:16,412 - INFO - System analysis complete - Recommended mode: hybrid
+2025-08-10 18:17:16,413 - INFO - Device manager initialized
+2025-08-10 18:17:16,414 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 18:17:16,901 - INFO - CPU model initialized
+2025-08-10 18:17:16,902 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-10 18:17:17,465 - INFO - GPU model initialized
+2025-08-10 18:17:17,466 - INFO - RAM disk created at: C:\Users\screw\AppData\Local\Temp\ramdisk_k7hti5lk
+2025-08-10 18:17:17,467 - INFO - Processing 4 files with hybrid processing...
+2025-08-10 18:17:17,467 - INFO - Starting 4 processing workers...
+2025-08-10 18:17:17,468 - INFO - Processing worker 0 started
+2025-08-10 18:17:17,468 - INFO - Processing worker 1 started
+2025-08-10 18:17:17,469 - INFO - Processing worker 2 started
+2025-08-10 18:17:17,469 - INFO - Processing worker 3 started
+2025-08-10 18:17:17,469 - INFO - Processing workers started
+2025-08-10 18:17:17,469 - INFO - Processing batch 1/3 (2 files)
+2025-08-10 18:17:17,583 - INFO - Processing batch 2/3 (2 files)
+2025-08-10 18:17:17,584 - ERROR - Failed to read file nonexistent.txt: [Errno 2] No such file or directory: 'nonexistent.txt'
+2025-08-10 18:17:17,613 - INFO - Stopping processing workers...
+2025-08-10 18:17:18,470 - INFO - Processing worker 3 stopped
+2025-08-10 18:17:18,513 - INFO - Processing worker 0 stopped
+2025-08-10 18:17:18,581 - INFO - Processing worker 1 stopped
+2025-08-10 18:17:18,610 - INFO - Processing worker 2 stopped
+2025-08-10 18:17:18,611 - INFO - Processing workers stopped
+2025-08-10 18:17:18,611 - INFO - Processing completed. 3 results generated.
+2025-08-10 18:17:18,611 - INFO - Cleaning up hybrid RAG processor...
+2025-08-10 18:17:18,611 - INFO - Stopping processing workers...
+2025-08-10 18:17:18,611 - INFO - Processing workers stopped
+2025-08-10 18:17:18,612 - INFO - RAM disk cleaned up
+2025-08-10 18:17:18,612 - INFO - Performing memory cleanup...
+2025-08-10 18:17:19,134 - INFO - Memory cleanup completed
+2025-08-10 18:17:19,134 - INFO - Cleanup completed
+2025-08-11 07:33:39,439 - INFO - Loading faiss with AVX2 support.
+2025-08-11 07:33:39,454 - INFO - Successfully loaded faiss with AVX2 support.
+2025-08-11 07:33:39,457 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-08-11 07:33:39,483 - INFO - Detecting system devices...
+2025-08-11 07:33:39,504 - INFO - CPU detected: Intel64 Family 6 Model 186 Stepping 2, GenuineIntel (AMD64) with 16 cores
+2025-08-11 07:33:39,504 - INFO - GPU detected: NVIDIA GeForce RTX 4070 Laptop GPU with 8.0GB VRAM
+2025-08-11 07:33:39,504 - INFO - Device detection complete - CPU: True, GPU: True
+2025-08-11 07:33:39,504 - INFO - Analyzing system capabilities...
+2025-08-11 07:33:39,505 - INFO - System analysis complete - Recommended mode: hybrid
+2025-08-11 07:33:39,505 - INFO - Device manager initialized
+2025-08-11 07:33:39,506 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-11 07:33:40,246 - INFO - CPU model initialized
+2025-08-11 07:33:40,248 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-11 07:33:40,863 - INFO - GPU model initialized
+2025-08-11 07:33:40,865 - INFO - RAM disk created at: C:\Users\screw\AppData\Local\Temp\ramdisk_eg8bag9q
+2025-08-11 07:33:40,865 - INFO - Processing 3 files with hybrid processing...
+2025-08-11 07:33:40,865 - INFO - Starting 4 processing workers...
+2025-08-11 07:33:40,866 - INFO - Processing worker 0 started
+2025-08-11 07:33:40,866 - INFO - Processing worker 1 started
+2025-08-11 07:33:40,867 - INFO - Processing worker 2 started
+2025-08-11 07:33:40,867 - INFO - Processing worker 3 started
+2025-08-11 07:33:40,867 - INFO - Processing workers started
+2025-08-11 07:33:40,867 - INFO - Processing batch 1/1 (3 files)
+2025-08-11 07:33:41,113 - INFO - Stopping processing workers...
+2025-08-11 07:33:41,869 - INFO - Processing worker 3 stopped
+2025-08-11 07:33:42,096 - INFO - Processing worker 0 stopped
+2025-08-11 07:33:42,102 - INFO - Processing worker 2 stopped
+2025-08-11 07:33:42,110 - INFO - Processing worker 1 stopped
+2025-08-11 07:33:42,111 - INFO - Processing workers stopped
+2025-08-11 07:33:42,111 - INFO - Processing completed. 3 results generated.
+2025-08-11 07:33:42,197 - INFO - FAISS index built with 3 vectors
+2025-08-11 07:33:42,215 - INFO - Cleaning up hybrid RAG processor...
+2025-08-11 07:33:42,215 - INFO - Stopping processing workers...
+2025-08-11 07:33:42,215 - INFO - Processing workers stopped
+2025-08-11 07:33:42,216 - INFO - RAM disk cleaned up
+2025-08-11 07:33:42,216 - INFO - Performing memory cleanup...
+2025-08-11 07:33:42,700 - INFO - Memory cleanup completed
+2025-08-11 07:33:42,700 - INFO - Cleanup completed

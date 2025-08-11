@@ -1,0 +1,46 @@
+{
+  "OutputPath": "restore",
+  "Results": {
+    "SBOM": {
+      "Summary": {
+        "TotalGenerated": 1,
+        "TotalFailed": 0,
+        "GenerationTime": "2025-08-11 08:10:19",
+        "GeneratedTypes": "python",
+        "FailedTypes": null
+      },
+      "Failed": [],
+      "Generated": [
+        {
+          "Path": "restore\\sbom\\python_sbom_cyclonedx.json",
+          "Format": "CycloneDX",
+          "Generator": "cyclonedx-py",
+          "Type": "python"
+        }
+      ]
+    },
+    "Ownership": null,
+    "LockFiles": {
+      "Type": "pip",
+      "Manager": "pip",
+      "Path": "requirements.txt",
+      "FullPath": ".\\requirements.txt",
+      "AgeDays": 1.0,
+      "LastModified": "2025-08-10 08:32:36",
+      "SizeKB": 0.58,
+      "Status": "Fresh"
+    }
+  },
+  "ScanEndTime": "2025-08-11 08:10:19",
+  "Version": "4.0.0",
+  "ProjectPath": ".",
+  "DurationSeconds": 1.38,
+  "ScanStartTime": "2025-08-11 08:10:17",
+  "AvailableTools": {
+    "python": "C:\\Program Files\\Python313\\python.exe",
+    "pip": "C:\\Program Files\\Python313\\Scripts\\pip.exe",
+    "cargo": "C:\\Users\\screw\\.cargo\\bin\\cargo.exe",
+    "npm": null,
+    "git": "C:\\Program Files\\Git\\cmd\\git.exe"
+  }
+}

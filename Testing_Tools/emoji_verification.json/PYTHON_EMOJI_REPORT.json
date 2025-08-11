@@ -1,0 +1,67 @@
+{
+  "Summary": {
+    "total_files_scanned": 7,
+    "files_with_emojis": 0,
+    "total_emojis_found": 0,
+    "scan_duration_seconds": 6.356278657913208,
+    "device_mode_used": "auto",
+    "performance_stats": {
+      "total_embeddings": 0,
+      "total_time": 0.0,
+      "avg_time_per_embedding": 0.0,
+      "device_used": null,
+      "fallbacks_used": 0
+    },
+    "scan_timestamp": "2025-08-10T22:04:15.480256"
+  },
+  "Detections": [],
+  "ScanMetadata": {
+    "scanner_version": "3.0",
+    "device_configuration": {
+      "platform": {
+        "system": "Windows",
+        "release": "11",
+        "machine": "AMD64",
+        "processor": "Intel64 Family 6 Model 186 Stepping 2, GenuineIntel"
+      },
+      "devices": {
+        "cpu": {
+          "available": true,
+          "name": "Intel64 Family 6 Model 186 Stepping 2, GenuineIntel (AMD64)",
+          "cores": 16,
+          "performance_score": 1.0
+        },
+        "gpu": {
+          "available": true,
+          "name": "NVIDIA GeForce RTX 4070 Laptop GPU",
+          "memory_gb": 7.99560546875,
+          "performance_score": 1.299285888671875
+        }
+      },
+      "capabilities": {
+        "hybrid_available": true,
+        "recommended_mode": "hybrid",
+        "fallback_strategy": "gpu_to_cpu"
+      },
+      "requirements": {
+        "all_available": true,
+        "missing_packages": []
+      }
+    },
+    "performance_stats": {
+      "total_files_processed": 7,
+      "total_lines_processed": 7,
+      "total_emoji_detections": 0,
+      "processing_time": 6.356278657913208,
+      "device_utilization": {
+        "total_embeddings": 0,
+        "total_time": 0.0,
+        "avg_time_per_embedding": 0.0,
+        "device_used": null,
+        "fallbacks_used": 0
+      },
+      "gpu_utilization": 2.315696564885496,
+      "batch_processing_efficiency": 1.1012733041974796
+    }
+  }
+}

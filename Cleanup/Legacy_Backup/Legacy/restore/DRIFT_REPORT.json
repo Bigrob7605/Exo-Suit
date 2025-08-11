@@ -1,0 +1,9 @@
+[
+  "UNCOMMITTED:  M ops/index-symbols.ps1",
+  "UNCOMMITTED:  M ops/sentinel-binaries.ps1",
+  "UNCOMMITTED:  M ops/sentinel-secrets.ps1",
+  "UNCOMMITTED:  M restore/BINARY_GUARD.json",
+  "UNCOMMITTED:  M restore/DRIFT_REPORT.json",
+  "UNCOMMITTED:  M restore/DRIFT_REPORT.txt",
+  "UNCOMMITTED:  M restore/SECRETS_REPORT.json"
+]

@@ -1,0 +1,114 @@
+{
+  "Files": [
+    {
+      "Language": "javascript",
+      "Placeholders": null,
+      "File": "C:\\My Projects\\Agent Exo-Suit\\test-emoji-pack\\test4.js",
+      "PlaceholderCount": 0,
+      "Errors": [],
+      "Success": true,
+      "ProcessingTime": 30.885
+    },
+    {
+      "Language": "go",
+      "Placeholders": null,
+      "File": "C:\\My Projects\\Agent Exo-Suit\\test-emoji-pack\\test13.go",
+      "PlaceholderCount": 0,
+      "Errors": [],
+      "Success": true,
+      "ProcessingTime": 12.3236
+    },
+    {
+      "Language": "rust",
+      "Placeholders": null,
+      "File": "C:\\My Projects\\Agent Exo-Suit\\test-emoji-pack\\test14.rs",
+      "PlaceholderCount": 0,
+      "Errors": [],
+      "Success": true,
+      "ProcessingTime": 10.1506
+    },
+    {
+      "Language": "python",
+      "Placeholders": null,
+      "File": "C:\\My Projects\\Agent Exo-Suit\\test-emoji-pack\\test2.py",
+      "PlaceholderCount": 0,
+      "Errors": [],
+      "Success": true,
+      "ProcessingTime": 21.0106
+    },
+    {
+      "Language": "java",
+      "Placeholders": null,
+      "File": "C:\\My Projects\\Agent Exo-Suit\\test-emoji-pack\\test11.java",
+      "PlaceholderCount": 0,
+      "Errors": [],
+      "Success": true,
+      "ProcessingTime": 8.9307
+    },
+    {
+      "Language": "powershell",
+      "Placeholders": null,
+      "File": "C:\\My Projects\\Agent Exo-Suit\\test-emoji-pack\\test3.ps1",
+      "PlaceholderCount": 0,
+      "Errors": [],
+      "Success": true,
+      "ProcessingTime": 7.7966
+    },
+    {
+      "Language": "powershell",
+      "Placeholders": null,
+      "File": "C:\\My Projects\\Agent Exo-Suit\\test-emoji-pack\\test16.psm1",
+      "PlaceholderCount": 0,
+      "Errors": [],
+      "Success": true,
+      "ProcessingTime": 3.1765
+    },
+    {
+      "Language": "csharp",
+      "Placeholders": null,
+      "File": "C:\\My Projects\\Agent Exo-Suit\\test-emoji-pack\\test10.cs",
+      "PlaceholderCount": 0,
+      "Errors": [],
+      "Success": true,
+      "ProcessingTime": 9.2877
+    },
+    {
+      "Language": "ruby",
+      "Placeholders": null,
+      "File": "C:\\My Projects\\Agent Exo-Suit\\test-emoji-pack\\test12.rb",
+      "PlaceholderCount": 0,
+      "Errors": [],
+      "Success": true,
+      "ProcessingTime": 8.523
+    }
+  ],
+  "Summary": {
+    "ByLanguage": null,
+    "ByType": null,
+    "BySeverity": null
+  },
+  "Metadata": {
+    "Path": "test-emoji-pack",
+    "ProcessingMode": "Sequential",
+    "Timestamp": "2025-08-10 18:16:57",
+    "FailedFiles": 0,
+    "TotalFiles": 9,
+    "TotalPlaceholders": 0,
+    "Severity": "All",
+    "ProcessedFiles": 9,
+    "Language": "all",
+    "TotalErrors": 0,
+    "Version": "4.0"
+  },
+  "Placeholders": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+  ]
+}
