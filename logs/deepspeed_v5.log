@@ -1,0 +1,41 @@
+[2025-08-11 15:15:19] [INFO] === DeepSpeed Accelerator V5.0 Started ===
+[2025-08-11 15:15:19] [INFO] Mode: List
+[2025-08-11 15:15:19] [INFO] Config Path: DeepSpeed ZeRO-Infinity\deepspeed_config.json
+[2025-08-11 15:15:19] [INFO] Staging Buffer: 8GB
+[2025-08-11 15:15:19] [INFO] Streams: 4
+[2025-08-11 15:15:19] [INFO] GDS Enabled: True
+[2025-08-11 15:15:19] [INFO] Monitoring Enabled: True
+[2025-08-11 15:15:19] [ERROR] === DeepSpeed Accelerator V5.0 Failed ===
+[2025-08-11 15:15:19] [ERROR] Error: Unknown mode: List. Use: Initialize, Test, or Status
+[2025-08-11 15:15:33] [INFO] === DeepSpeed Accelerator V5.0 Started ===
+[2025-08-11 15:15:33] [INFO] Mode: List
+[2025-08-11 15:15:33] [INFO] Config Path: DeepSpeed ZeRO-Infinity\deepspeed_config.json
+[2025-08-11 15:15:33] [INFO] Staging Buffer: 8GB
+[2025-08-11 15:15:33] [INFO] Streams: 4
+[2025-08-11 15:15:33] [INFO] GDS Enabled: True
+[2025-08-11 15:15:33] [INFO] Monitoring Enabled: True
+[2025-08-11 15:15:33] [ERROR] === DeepSpeed Accelerator V5.0 Failed ===
+[2025-08-11 15:15:33] [ERROR] Error: Unknown mode: List. Use: Initialize, Test, or Status
+[2025-08-11 15:16:41] [INFO] === DeepSpeed Accelerator V5.0 Started ===
+[2025-08-11 15:16:41] [INFO] Mode: Status
+[2025-08-11 15:16:41] [INFO] Config Path: DeepSpeed ZeRO-Infinity\deepspeed_config.json
+[2025-08-11 15:16:41] [INFO] Staging Buffer: 8GB
+[2025-08-11 15:16:41] [INFO] Streams: 4
+[2025-08-11 15:16:41] [INFO] GDS Enabled: True
+[2025-08-11 15:16:41] [INFO] Monitoring Enabled: True
+[2025-08-11 15:16:41] [INFO] Testing system capabilities...
+[2025-08-11 15:16:41] [INFO] Python: Available
+[2025-08-11 15:16:43] [INFO] CUDA: Available
+[2025-08-11 15:16:44] [INFO] GPU Device: NVIDIA GeForce RTX 4070 Laptop GPU
+[2025-08-11 15:16:44] [WARN] DeepSpeed: Not installed
+[2025-08-11 15:16:44] [INFO] GDS Components: Available
+[2025-08-11 15:16:44] [INFO] Performance Monitoring: Available
+[2025-08-11 15:16:44] [INFO] Configuration: Available
+[2025-08-11 15:16:44] [INFO] DeepSpeed Status Report:
+[2025-08-11 15:16:44] [INFO]   ✅ GDS: True
+[2025-08-11 15:16:44] [INFO]   ✅ Python: True
+[2025-08-11 15:16:44] [INFO]   ❌ DeepSpeed: False
+[2025-08-11 15:16:44] [INFO]   ✅ Monitoring: True
+[2025-08-11 15:16:44] [INFO]   ✅ Config: True
+[2025-08-11 15:16:44] [INFO]   ✅ CUDA: True
+[2025-08-11 15:16:44] [INFO] === DeepSpeed Accelerator V5.0 Completed Successfully ===

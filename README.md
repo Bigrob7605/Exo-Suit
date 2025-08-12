@@ -12,6 +12,18 @@
 
 ---
 
+## 🌐 **PROJECT WEBSITE**
+
+**Visit our stunning showcase website:** [Agent Exo-Suit V5.0 Website](https://yourusername.github.io/Agent-Exo-Suit/)
+
+The website features:
+- **Interactive Demo**: See V5.0 transform markdown into code
+- **Live Architecture**: Explore the multi-layer V5.0 system
+- **Development Roadmap**: Track progress toward the full vision
+- **Getting Started Guide**: Step-by-step setup instructions
+
+---
+
 ## 🎯 **THE STORY BEHIND THE BUILD**
 
 ### **Weekend Warriors: From V4 to V5 in 48 Hours**

@@ -2186,3 +2186,85 @@
 2025-08-11 15:07:32,850 - INFO - Performing memory cleanup...
 2025-08-11 15:07:33,582 - INFO - Memory cleanup completed
 2025-08-11 15:07:33,582 - INFO - Cleanup completed
+2025-08-11 16:22:28,565 - INFO - Loading faiss with AVX2 support.
+2025-08-11 16:22:28,582 - INFO - Successfully loaded faiss with AVX2 support.
+2025-08-11 16:22:28,586 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-08-11 16:22:28,606 - INFO - Detecting system devices...
+2025-08-11 16:22:28,633 - INFO - CPU detected: Intel64 Family 6 Model 186 Stepping 2, GenuineIntel (AMD64) with 16 cores
+2025-08-11 16:22:28,633 - INFO - GPU detected: NVIDIA GeForce RTX 4070 Laptop GPU with 8.0GB VRAM
+2025-08-11 16:22:28,633 - INFO - Device detection complete - CPU: True, GPU: True
+2025-08-11 16:22:28,633 - INFO - Analyzing system capabilities...
+2025-08-11 16:22:28,633 - INFO - System analysis complete - Recommended mode: hybrid
+2025-08-11 16:22:28,633 - INFO - Device manager initialized
+2025-08-11 16:22:28,635 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-11 16:22:29,402 - INFO - CPU model initialized
+2025-08-11 16:22:29,404 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-11 16:22:30,119 - INFO - GPU model initialized
+2025-08-11 16:22:30,121 - INFO - RAM disk created at: C:\Users\screw\AppData\Local\Temp\ramdisk_06o3wsny
+2025-08-11 16:22:38,740 - INFO - Processing 50 files with hybrid processing...
+2025-08-11 16:22:38,740 - INFO - Starting 4 processing workers...
+2025-08-11 16:22:38,741 - INFO - Processing worker 0 started
+2025-08-11 16:22:38,742 - INFO - Processing worker 1 started
+2025-08-11 16:22:38,742 - INFO - Processing worker 2 started
+2025-08-11 16:22:38,743 - INFO - Processing worker 3 started
+2025-08-11 16:22:38,743 - INFO - Processing workers started
+2025-08-11 16:22:38,743 - INFO - Processing batch 1/4 (16 files)
+2025-08-11 16:22:39,458 - INFO - Processing batch 2/4 (16 files)
+2025-08-11 16:22:39,972 - INFO - Processing batch 3/4 (16 files)
+2025-08-11 16:22:40,438 - INFO - Processing batch 4/4 (2 files)
+2025-08-11 16:22:40,503 - INFO - Stopping processing workers...
+2025-08-11 16:22:41,423 - INFO - Processing worker 2 stopped
+2025-08-11 16:22:41,441 - INFO - Processing worker 0 stopped
+2025-08-11 16:22:41,486 - INFO - Processing worker 3 stopped
+2025-08-11 16:22:41,499 - INFO - Processing worker 1 stopped
+2025-08-11 16:22:41,500 - INFO - Processing workers stopped
+2025-08-11 16:22:41,500 - INFO - Processing completed. 50 results generated.
+2025-08-11 16:22:41,501 - INFO - FAISS index built with 50 vectors
+2025-08-11 16:22:41,524 - INFO - Cleaning up hybrid RAG processor...
+2025-08-11 16:22:41,525 - INFO - Stopping processing workers...
+2025-08-11 16:22:41,525 - INFO - Processing workers stopped
+2025-08-11 16:22:41,525 - INFO - RAM disk cleaned up
+2025-08-11 16:22:41,525 - INFO - Performing memory cleanup...
+2025-08-11 16:22:42,276 - INFO - Memory cleanup completed
+2025-08-11 16:22:42,276 - INFO - Cleanup completed
+2025-08-11 16:22:50,781 - INFO - Loading faiss with AVX2 support.
+2025-08-11 16:22:50,798 - INFO - Successfully loaded faiss with AVX2 support.
+2025-08-11 16:22:50,801 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-08-11 16:22:50,827 - INFO - Detecting system devices...
+2025-08-11 16:22:50,855 - INFO - CPU detected: Intel64 Family 6 Model 186 Stepping 2, GenuineIntel (AMD64) with 16 cores
+2025-08-11 16:22:50,856 - INFO - GPU detected: NVIDIA GeForce RTX 4070 Laptop GPU with 8.0GB VRAM
+2025-08-11 16:22:50,856 - INFO - Device detection complete - CPU: True, GPU: True
+2025-08-11 16:22:50,856 - INFO - Analyzing system capabilities...
+2025-08-11 16:22:50,856 - INFO - System analysis complete - Recommended mode: hybrid
+2025-08-11 16:22:50,856 - INFO - Device manager initialized
+2025-08-11 16:22:50,857 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-11 16:22:51,633 - INFO - CPU model initialized
+2025-08-11 16:22:51,635 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-11 16:22:52,248 - INFO - GPU model initialized
+2025-08-11 16:22:52,250 - INFO - RAM disk created at: C:\Users\screw\AppData\Local\Temp\ramdisk_fxlwincx
+2025-08-11 16:23:00,966 - INFO - Processing 50 files with hybrid processing...
+2025-08-11 16:23:00,966 - INFO - Starting 4 processing workers...
+2025-08-11 16:23:00,967 - INFO - Processing worker 0 started
+2025-08-11 16:23:00,968 - INFO - Processing worker 1 started
+2025-08-11 16:23:00,968 - INFO - Processing worker 2 started
+2025-08-11 16:23:00,968 - INFO - Processing worker 3 started
+2025-08-11 16:23:00,969 - INFO - Processing workers started
+2025-08-11 16:23:00,969 - INFO - Processing batch 1/4 (16 files)
+2025-08-11 16:23:01,706 - INFO - Processing batch 2/4 (16 files)
+2025-08-11 16:23:02,201 - INFO - Processing batch 3/4 (16 files)
+2025-08-11 16:23:02,681 - INFO - Processing batch 4/4 (2 files)
+2025-08-11 16:23:02,741 - INFO - Stopping processing workers...
+2025-08-11 16:23:03,658 - INFO - Processing worker 1 stopped
+2025-08-11 16:23:03,677 - INFO - Processing worker 0 stopped
+2025-08-11 16:23:03,726 - INFO - Processing worker 2 stopped
+2025-08-11 16:23:03,737 - INFO - Processing worker 3 stopped
+2025-08-11 16:23:03,738 - INFO - Processing workers stopped
+2025-08-11 16:23:03,738 - INFO - Processing completed. 50 results generated.
+2025-08-11 16:23:03,739 - INFO - FAISS index built with 50 vectors
+2025-08-11 16:23:03,763 - INFO - Cleaning up hybrid RAG processor...
+2025-08-11 16:23:03,763 - INFO - Stopping processing workers...
+2025-08-11 16:23:03,764 - INFO - Processing workers stopped
+2025-08-11 16:23:03,770 - INFO - RAM disk cleaned up
+2025-08-11 16:23:03,770 - INFO - Performing memory cleanup...
+2025-08-11 16:23:04,562 - INFO - Memory cleanup completed
+2025-08-11 16:23:04,562 - INFO - Cleanup completed

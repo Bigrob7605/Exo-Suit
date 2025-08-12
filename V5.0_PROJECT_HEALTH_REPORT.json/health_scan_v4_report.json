@@ -1,0 +1,46 @@
+{
+  "Results": {
+    "Ownership": null,
+    "LockFiles": {
+      "Type": "pip",
+      "Manager": "pip",
+      "Path": "requirements.txt",
+      "FullPath": ".\\requirements.txt",
+      "AgeDays": 1.3,
+      "LastModified": "2025-08-10 08:32:36",
+      "SizeKB": 0.58,
+      "Status": "Fresh"
+    },
+    "SBOM": {
+      "Summary": {
+        "GenerationTime": "2025-08-11 15:46:41",
+        "TotalFailed": 0,
+        "GeneratedTypes": "python",
+        "TotalGenerated": 1,
+        "FailedTypes": null
+      },
+      "Generated": [
+        {
+          "Generator": "cyclonedx-py",
+          "Type": "python",
+          "Format": "CycloneDX",
+          "Path": "V5.0_PROJECT_HEALTH_REPORT.json\\sbom\\python_sbom_cyclonedx.json"
+        }
+      ],
+      "Failed": []
+    }
+  },
+  "OutputPath": "V5.0_PROJECT_HEALTH_REPORT.json",
+  "ScanEndTime": "2025-08-11 15:46:41",
+  "DurationSeconds": 1.91,
+  "ScanStartTime": "2025-08-11 15:46:39",
+  "AvailableTools": {
+    "python": "C:\\Program Files\\Python313\\python.exe",
+    "git": "C:\\Program Files\\Git\\cmd\\git.exe",
+    "pip": "C:\\Program Files\\Python313\\Scripts\\pip.exe",
+    "cargo": "C:\\Users\\screw\\.cargo\\bin\\cargo.exe",
+    "npm": null
+  },
+  "Version": "4.0.0",
+  "ProjectPath": ".\\"
+}

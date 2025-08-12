@@ -1,24 +1,87 @@
-# Large files that exceed GitHub limits
-Cleanup/Legacy_Backup/Legacy/restore/EMOJI_REPORT.json
-Cleanup/Legacy_Backup/Legacy/restore/*.json
-Cleanup/Legacy_Backup/Legacy/large-test-pack/restore/*.json
+# Virtual Environments
+gpu_rag_env/
+rag_env/
+venv/
+env/
+.venv/
+.env/
 
-# Large data files
-*.json
-!rag/hybrid_config_v4.yaml
-!rag/dual_mode_config.yaml
-!rag/requirements*.txt
-!rag/requirements.txt
-!rag/requirements_gpu.txt
-!rag/requirements_hybrid_v4.txt
-
-# Python cache
+# Python
 __pycache__/
-*.pyc
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
 
-# Logs
+# Large Data Files
+*.bin
+*.pkl
+*.h5
+*.hdf5
+*.faiss
+*.index
+*.vec
+*.model
+*.weights
+*.ckpt
+*.safetensors
+
+# GPU Environment Files
+gpu_rag_env/
+gpu_rag_env/venv/
+gpu_rag_env/venv/Lib/
+gpu_rag_env/venv/Scripts/
+gpu_rag_env/venv/Include/
+gpu_rag_env/venv/share/
+
+# Legacy and Testing Data
+Cleanup - Testing Data/
+Testing_Tools/
+temp/
+logs/
 *.log
 
-# Temporary files
+# IDE and Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Git Submodules and Embedded Repos
+.sandboxes/
+ai-sbx-*/
+
+# Large Model Files
+*.onnx
+*.tflite
+*.pb
+*.pth
+*.pt
+*.bin
+*.safetensors
+
+# Cache and Temporary Files
+.cache/
 *.tmp
 *.temp

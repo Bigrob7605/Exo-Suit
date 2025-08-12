@@ -1,0 +1,9 @@
+This is a placeholder file to ensure the assets directory exists.
+
+To complete the website setup:
+
+1. Add a favicon.ico file here (16x16, 32x32, or 48x48 pixels)
+2. Optionally add a hero-bg.jpg file for custom background
+3. Replace this placeholder with your actual assets
+
+The website will work without these files, but they enhance the visual appeal.

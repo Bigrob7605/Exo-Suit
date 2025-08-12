@@ -1,0 +1,23 @@
+[2025-08-11 15:17:58] [INFO] === DeepSpeed Accelerator V5.0 Started ===
+[2025-08-11 15:17:58] [INFO] Mode: Status
+[2025-08-11 15:17:58] [INFO] Config Path: DeepSpeed ZeRO-Infinity\deepspeed_config.json
+[2025-08-11 15:17:58] [INFO] Staging Buffer: 8GB
+[2025-08-11 15:17:58] [INFO] Streams: 4
+[2025-08-11 15:17:58] [INFO] GDS Enabled: True
+[2025-08-11 15:17:58] [INFO] Monitoring Enabled: True
+[2025-08-11 15:17:58] [INFO] Testing system capabilities...
+[2025-08-11 15:17:58] [INFO] Python: Available
+[2025-08-11 15:18:00] [INFO] CUDA: Available
+[2025-08-11 15:18:02] [INFO] GPU Device: NVIDIA GeForce RTX 4070 Laptop GPU
+[2025-08-11 15:18:02] [WARN] DeepSpeed: Not installed
+[2025-08-11 15:18:02] [WARN] GDS Components: Not found
+[2025-08-11 15:18:02] [WARN] Performance Monitoring: Not found
+[2025-08-11 15:18:02] [WARN] Configuration: Not found
+[2025-08-11 15:18:02] [INFO] DeepSpeed Status Report:
+[2025-08-11 15:18:02] [INFO]   ❌ Config: False
+[2025-08-11 15:18:02] [INFO]   ❌ Monitoring: False
+[2025-08-11 15:18:02] [INFO]   ✅ Python: True
+[2025-08-11 15:18:02] [INFO]   ❌ GDS: False
+[2025-08-11 15:18:02] [INFO]   ✅ CUDA: True
+[2025-08-11 15:18:02] [INFO]   ❌ DeepSpeed: False
+[2025-08-11 15:18:02] [INFO] === DeepSpeed Accelerator V5.0 Completed Successfully ===

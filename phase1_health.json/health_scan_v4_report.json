@@ -1,0 +1,46 @@
+{
+  "ScanStartTime": "2025-08-11 11:37:33",
+  "Version": "4.0.0",
+  "DurationSeconds": 3.37,
+  "ProjectPath": ".\\",
+  "ScanEndTime": "2025-08-11 11:37:36",
+  "OutputPath": "phase1_health.json",
+  "Results": {
+    "Ownership": null,
+    "LockFiles": {
+      "Type": "pip",
+      "Manager": "pip",
+      "Path": "requirements.txt",
+      "FullPath": ".\\requirements.txt",
+      "AgeDays": 1.1,
+      "LastModified": "2025-08-10 08:32:36",
+      "SizeKB": 0.58,
+      "Status": "Fresh"
+    },
+    "SBOM": {
+      "Failed": [],
+      "Summary": {
+        "GeneratedTypes": "python",
+        "GenerationTime": "2025-08-11 11:37:36",
+        "FailedTypes": null,
+        "TotalFailed": 0,
+        "TotalGenerated": 1
+      },
+      "Generated": [
+        {
+          "Format": "CycloneDX",
+          "Generator": "cyclonedx-py",
+          "Type": "python",
+          "Path": "phase1_health.json\\sbom\\python_sbom_cyclonedx.json"
+        }
+      ]
+    }
+  },
+  "AvailableTools": {
+    "python": "C:\\Program Files\\Python313\\python.exe",
+    "pip": "C:\\Program Files\\Python313\\Scripts\\pip.exe",
+    "cargo": "C:\\Users\\screw\\.cargo\\bin\\cargo.exe",
+    "git": "C:\\Program Files\\Git\\cmd\\git.exe",
+    "npm": null
+  }
+}
