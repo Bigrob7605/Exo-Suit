@@ -14,7 +14,7 @@
 
 ## 🌐 **PROJECT WEBSITE**
 
-**Visit our stunning showcase website:** [Agent Exo-Suit V5.0 Website](https://yourusername.github.io/Agent-Exo-Suit/)
+**Visit our stunning showcase website:** [Agent Exo-Suit V5.0 Website](https://yourusername.github.io/Exo-Suit/)
 
 The website features:
 - **Interactive Demo**: See V5.0 transform markdown into code
