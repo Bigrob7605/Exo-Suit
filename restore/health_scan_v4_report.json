@@ -1,46 +1,37 @@
 {
+  "ProjectPath": "Universal Open Science Toolbox With Kai (The Real Test)",
+  "OutputPath": ".\\restore\\",
+  "ScanStartTime": "2025-08-12 20:26:22",
+  "DurationSeconds": 1.78,
+  "ScanEndTime": "2025-08-12 20:26:24",
   "AvailableTools": {
-    "pip": "C:\\My Projects\\Agent Exo-Suit\\gpu_rag_env\\Scripts\\pip.exe",
-    "git": "C:\\Program Files\\Git\\cmd\\git.exe",
+    "python": "C:\\Program Files\\Python313\\python.exe",
     "cargo": "C:\\Users\\screw\\.cargo\\bin\\cargo.exe",
-    "python": "C:\\My Projects\\Agent Exo-Suit\\gpu_rag_env\\Scripts\\python.exe",
-    "npm": null
+    "git": "C:\\Program Files\\Git\\cmd\\git.exe",
+    "npm": null,
+    "pip": "C:\\Program Files\\Python313\\Scripts\\pip.exe"
   },
-  "ProjectPath": ".",
-  "DurationSeconds": 1.93,
-  "Version": "4.0.0",
-  "ScanStartTime": "2025-08-11 13:53:49",
   "Results": {
-    "LockFiles": {
-      "Type": "pip",
-      "Manager": "pip",
-      "Path": "requirements.txt",
-      "FullPath": ".\\requirements.txt",
-      "AgeDays": 1.2,
-      "LastModified": "2025-08-10 08:32:36",
-      "SizeKB": 0.58,
-      "Status": "Fresh"
-    },
-    "Ownership": null,
+    "LockFiles": null,
     "SBOM": {
       "Generated": [
         {
-          "Format": "CycloneDX",
+          "Path": ".\\restore\\sbom\\python_sbom_cyclonedx.json",
           "Generator": "cyclonedx-py",
-          "Path": "restore\\sbom\\python_sbom_cyclonedx.json",
+          "Format": "CycloneDX",
           "Type": "python"
         }
       ],
       "Summary": {
-        "TotalGenerated": 1,
+        "FailedTypes": null,
         "GeneratedTypes": "python",
         "TotalFailed": 0,
-        "GenerationTime": "2025-08-11 13:53:51",
-        "FailedTypes": null
+        "TotalGenerated": 1,
+        "GenerationTime": "2025-08-12 20:26:24"
       },
       "Failed": []
-    }
+    },
+    "Ownership": null
   },
-  "OutputPath": "restore",
-  "ScanEndTime": "2025-08-11 13:53:51"
+  "Version": "4.0.0"
 }

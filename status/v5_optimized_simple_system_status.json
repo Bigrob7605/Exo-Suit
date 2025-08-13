@@ -1,0 +1,35 @@
+{
+  "Performance": {
+    "ParallelJobs": [],
+    "CurrentMetrics": {
+      "GPU": 37,
+      "Memory": 24.0,
+      "CPU": 16.4
+    },
+    "Memory": {},
+    "OptimizationScore": 75,
+    "CPU": {},
+    "GPU": {}
+  },
+  "Version": "V5.0 Simplified Optimized",
+  "Errors": [
+    "DeepSpeed initialization failed"
+  ],
+  "Codename": "Builder of Dreams - Simplified Optimized",
+  "OverallStatus": "CRITICAL",
+  "SuccessRate": 0.0,
+  "Warnings": [],
+  "Components": {
+    "emoji-sentinel-v4": false,
+    "Drift-Guard-V4": false,
+    "GPU-Monitor-V4": false,
+    "Power-Management-V4": false,
+    "Project-Health-Scanner-V4": false,
+    "DeepSpeedAccelerator": false,
+    "context-governor": null,
+    "GPU-RAG-V4": false
+  },
+  "StartTime": "2025-08-12 18:37:37",
+  "EndTime": "2025-08-12 18:37:50",
+  "OptimizationLevel": "Maximum"
+}
