@@ -1,3 +1,5 @@
+Last night the system was upgraded to 1 million tokens. By this weekend it should be up to 10 millionish? (This is Rob, not Kai, Just wanted to drop a 1 line update lol)
+
 # Agent Exo-Suit V5.0 "Builder of Dreams" - Official Production Release
 
 **Where Dreams Become Code, and Code Becomes Legend**
