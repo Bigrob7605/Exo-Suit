@@ -42,6 +42,15 @@ MANIFEST
 *.ckpt
 *.safetensors
 
+# Large Log and Scan Files (Excluded from Jekyll processing)
+emoji_sentinel_v4.log
+current_emoji_scan.txt
+current_emoji_scan.json
+current_emoji_status.txt
+current_emoji_status.json
+post_repair_emoji_scan.txt
+post_repair_emoji_scan.json
+
 # GPU Environment Files
 gpu_rag_env/
 gpu_rag_env/venv/
