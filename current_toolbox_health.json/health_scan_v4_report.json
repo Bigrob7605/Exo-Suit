@@ -1,0 +1,37 @@
+{
+  "Version": "4.0.0",
+  "ScanEndTime": "2025-08-12 19:04:00",
+  "DurationSeconds": 4.34,
+  "AvailableTools": {
+    "cargo": "C:\\Users\\screw\\.cargo\\bin\\cargo.exe",
+    "npm": null,
+    "pip": "C:\\Program Files\\Python313\\Scripts\\pip.exe",
+    "python": "C:\\Program Files\\Python313\\python.exe",
+    "git": "C:\\Program Files\\Git\\cmd\\git.exe"
+  },
+  "ProjectPath": "Universal Open Science Toolbox With Kai (For Testing ONLY - NO NOT PUSH TO REPO)",
+  "ScanStartTime": "2025-08-12 19:03:56",
+  "OutputPath": "current_toolbox_health.json",
+  "Results": {
+    "SBOM": {
+      "Generated": [
+        {
+          "Generator": "cyclonedx-py",
+          "Type": "python",
+          "Format": "CycloneDX",
+          "Path": "current_toolbox_health.json\\sbom\\python_sbom_cyclonedx.json"
+        }
+      ],
+      "Summary": {
+        "TotalFailed": 0,
+        "FailedTypes": null,
+        "TotalGenerated": 1,
+        "GenerationTime": "2025-08-12 19:04:00",
+        "GeneratedTypes": "python"
+      },
+      "Failed": []
+    },
+    "LockFiles": null,
+    "Ownership": null
+  }
+}

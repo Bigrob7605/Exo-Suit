@@ -1,18 +1,18 @@
 {
   "Generated": [
     {
-      "Format": "CycloneDX",
+      "Path": ".\\restore\\sbom\\python_sbom_cyclonedx.json",
       "Generator": "cyclonedx-py",
-      "Path": "restore\\sbom\\python_sbom_cyclonedx.json",
+      "Format": "CycloneDX",
       "Type": "python"
     }
   ],
   "Summary": {
-    "TotalGenerated": 1,
+    "FailedTypes": null,
     "GeneratedTypes": "python",
     "TotalFailed": 0,
-    "GenerationTime": "2025-08-11 13:53:51",
-    "FailedTypes": null
+    "TotalGenerated": 1,
+    "GenerationTime": "2025-08-12 20:26:24"
   },
   "Failed": []
 }
