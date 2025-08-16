@@ -347,24 +347,36 @@ function Scan-FileForSecrets {
                     }
                     
                     # Calculate line number
-                    $beforeMatch = $content.Substring(0, $match.Index)
+                    $beforeMatch = $content.Substring(0, [Math]::Min($match.Index, $content.Length))
                     $lineNumber = ($beforeMatch -split "`r?`n").Count
                     
-                    # Get context
+                    # Get context with bounds checking
                     $lineStart = $beforeMatch.LastIndexOf("`n")
                     if ($lineStart -eq -1) { $lineStart = 0 } else { $lineStart++ }
                     
                     $lineEnd = $content.IndexOf("`n", $match.Index)
                     if ($lineEnd -eq -1) { $lineEnd = $content.Length }
                     
+                    # Ensure indices are within bounds
+                    $lineStart = [Math]::Max(0, [Math]::Min($lineStart, $content.Length))
+                    $lineEnd = [Math]::Max($lineStart, [Math]::Min($lineEnd, $content.Length))
+                    
                     $lineContent = $content.Substring($lineStart, $lineEnd - $lineStart).Trim()
-                    $context = $lineContent.Substring([math]::Max(0, $match.Index - $lineStart - 30), 60)
+                    
+                    # Safe context calculation with bounds checking
+                    $contextStart = [Math]::Max(0, [Math]::Min($match.Index - $lineStart - 30, $lineContent.Length))
+                    $contextLength = [Math]::Min(60, $lineContent.Length - $contextStart)
+                    $context = $lineContent.Substring($contextStart, $contextLength)
+                    
+                    # Safe sample extraction with bounds checking
+                    $sampleLength = [Math]::Min($secret.Length, 60)
+                    $sample = $secret.Substring(0, $sampleLength)
                     
                     $result = [PSCustomObject]@{
                         File = $File.FullName
                         Rule = $rule.Name
                         Description = $rule.Description
-                        Sample = $secret.Substring(0, [Math]::Min($secret.Length, 60))
+                        Sample = $sample
                         Severity = $rule.Severity
                         Category = $rule.Category
                         CWE = $rule.CWE
@@ -402,7 +414,6 @@ function Export-SARIFReport {
     
     $sarif = @{
         version = "2.1.0"
-        $schema = "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json"
         runs = @(@{
             tool = @{ 
                 driver = @{ 
@@ -425,6 +436,9 @@ function Export-SARIFReport {
             })
         })
     }
+    
+    # Add schema separately for compatibility
+    $sarif.Add('$schema', "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json")
     
     # Add rules
     $uniqueRules = $Findings | Group-Object Rule
@@ -647,21 +661,29 @@ function Start-SecretScan {
                             if ($rule.Entropy -and (Get-ShannonEntropy $secret) -lt $rule.Entropy) { continue }
                             if (Test-Allowlist $rule.Name $secret) { continue }
                             
-                            $beforeMatch = $content.Substring(0, $match.Index)
+                            $beforeMatch = $content.Substring(0, [Math]::Min($match.Index, $content.Length))
                             $lineNumber = ($beforeMatch -split "`r?`n").Count
+                            
+                            # Safe sample extraction with bounds checking
+                            $sampleLength = [Math]::Min($secret.Length, 60)
+                            $sample = $secret.Substring(0, $sampleLength)
+                            
+                            # Safe context extraction with bounds checking
+                            $contextLength = [Math]::Min($secret.Length, 40)
+                            $context = $secret.Substring(0, $contextLength)
                             
                             $results += [PSCustomObject]@{
                                 File = $file.FullName
                                 Rule = $rule.Name
                                 Description = $rule.Description
-                                Sample = $secret.Substring(0, [Math]::Min($secret.Length, 60))
+                                Sample = $sample
                                 Severity = $rule.Severity
                                 Category = $rule.Category
                                 CWE = $rule.CWE
                                 Line = $lineNumber
                                 Column = 1
                                 LineContent = "Parallel processing - full content not available"
-                                Context = $secret.Substring(0, [Math]::Min($secret.Length, 40))
+                                Context = $context
                                 Entropy = (Get-ShannonEntropy $secret)
                                 Confidence = $rule.Confidence
                                 DetectionTime = Get-Date
