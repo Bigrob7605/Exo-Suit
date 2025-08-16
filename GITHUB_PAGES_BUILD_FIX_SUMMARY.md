@@ -11,7 +11,7 @@
 
 The GitHub Pages build was failing with the following error:
 ```
-Liquid Exception: Liquid syntax error (line 1804): Variable '{{ bias_recommendations | default("Users should be made aware of the risks, biases and limitations of the dataset. More information needed fo' was not properly terminated with regexp: /\}\}/
+Liquid Exception: Liquid syntax error (line 1804): Variable 'bias_recommendations | default("Users should be made aware of the risks, biases and limitations of the dataset. More information needed fo' was not properly terminated with regexp: /\}\}/
 ```
 
 **Root Cause**: Incomplete Liquid template variables in cleanup files that were being processed by Jekyll during the GitHub Pages build.
