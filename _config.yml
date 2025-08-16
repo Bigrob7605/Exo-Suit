@@ -1,0 +1,101 @@
+# Jekyll Configuration for Agent Exo-Suit V5.0
+# This file configures what Jekyll processes during GitHub Pages builds
+
+# Site settings
+title: "Agent Exo-Suit V5.0 - Builder of Dreams"
+description: "Revolutionary AI Agent Collaboration System for Project Healing and Code Generation"
+url: "https://bigrob7605.github.io/Exo-Suit"
+baseurl: "/Exo-Suit"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+# Exclude files and directories from processing
+exclude:
+  # Large log files that cause build hangs
+  - "*.log"
+  - "emoji_sentinel_v4.log"
+  - "current_emoji_scan.txt"
+  - "current_emoji_scan.json"
+  
+  # Cleanup and testing directories
+  - "Cleanup - Old MD Files/"
+  - "Cleanup - Testing Data/"
+  - "Testing_Tools/"
+  - "Universal Open Science Toolbox With Kai (The Real Test)/"
+  
+  # Temporary and cache directories
+  - "temp/"
+  - "cache/"
+  - "backup/"
+  - ".venv/"
+  - "gpu_rag_env/"
+  
+  # Large data directories
+  - "vision_gap_data/"
+  - "scan_results/"
+  - "logs/"
+  - "generated_code/"
+  
+  # PowerShell and Python files
+  - "*.ps1"
+  - "*.py"
+  - "*.bat"
+  - "requirements*.txt"
+  
+  # Configuration and environment files
+  - "config/"
+  - "rag/"
+  - "ops/"
+  - "mermaid/"
+  - "cursor/"
+  - "DeepSpeed ZeRO-Infinity/"
+  
+  # Status and report files that aren't documentation
+  - "current_*.json"
+  - "current_*.txt"
+  - "post_repair_*.txt"
+  - "post_repair_*.json"
+
+# Include only essential documentation
+include:
+  - "README.md"
+  - "AGENT_STATUS.md"
+  - "AGENT_TASK_CHECKLIST.md"
+  - "ARCHITECTURE.md"
+  - "VISION.md"
+  - "License.md"
+  - "docs/"
+  - "Project White Papers/"
+  - "*.md"
+
+# Collections
+collections:
+  white_papers:
+    output: true
+    permalink: /white-papers/:name/
+
+# Plugins (minimal for GitHub Pages compatibility)
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Defaults for pages
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: "Project White Papers"
+      type: "white_papers"
+    values:
+      layout: "white_paper"
