@@ -236,7 +236,7 @@ The website features:
 - **Interactive Demo**: See V5.0 transform markdown into code
 - **Live Architecture**: Explore the multi-layer V5.0 system
 - **Development Roadmap**: Track progress toward the full vision
-- **Getting Started Guide**: Step-by-step setup instructions
+- **Getting Started Guide**: Step-by-step setup instructions. We use the old folders to scan and test and BUILD on the Exo-suit. Then when we get far enough. We use it on the Exo-Suit to upgrade itself. Got it?
 
 ---
 
