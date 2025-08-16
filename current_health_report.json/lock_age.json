@@ -1,0 +1,10 @@
+{
+  "Type": "pip",
+  "Manager": "pip",
+  "Path": "requirements.txt",
+  "FullPath": ".\\requirements.txt",
+  "AgeDays": 0.0,
+  "LastModified": "2025-08-13 08:04:12",
+  "SizeKB": 0.58,
+  "Status": "Fresh"
+}
