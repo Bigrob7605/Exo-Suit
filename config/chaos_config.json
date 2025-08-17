@@ -1,0 +1,59 @@
+{
+  "chaos_level": "medium",
+  "cycle_interval": 5,
+  "max_failures_per_cycle": 3,
+  "enable_file_corruption": true,
+  "enable_memory_leaks": true,
+  "enable_gpu_starvation": true,
+  "enable_process_crashes": true,
+  "enable_network_partitions": false,
+  "recovery_timeout": 30,
+  "log_level": "INFO",
+  "chaos_levels": {
+    "low": {
+      "description": "Gentle testing - 1% failure rate",
+      "failure_probability": 0.01,
+      "max_failures_per_cycle": 1,
+      "cycle_interval": 10
+    },
+    "medium": {
+      "description": "Standard testing - 5% failure rate",
+      "failure_probability": 0.05,
+      "max_failures_per_cycle": 3,
+      "cycle_interval": 5
+    },
+    "high": {
+      "description": "Aggressive testing - 10% failure rate",
+      "failure_probability": 0.10,
+      "max_failures_per_cycle": 5,
+      "cycle_interval": 3
+    },
+    "extreme": {
+      "description": "Brutal testing - 20% failure rate",
+      "failure_probability": 0.20,
+      "max_failures_per_cycle": 8,
+      "cycle_interval": 2
+    }
+  },
+  "target_directories": [
+    "temp_ram_disk",
+    "logs",
+    "context/chunks",
+    "consolidated_work"
+  ],
+  "file_types_to_corrupt": [
+    ".json",
+    ".txt",
+    ".md",
+    ".py"
+  ],
+  "memory_leak_sizes": {
+    "min_bytes": 1024,
+    "max_bytes": 10240
+  },
+  "health_monitoring": {
+    "cpu_threshold": 90,
+    "memory_threshold": 85,
+    "gpu_threshold": 80
+  }
+}
