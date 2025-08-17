@@ -1,0 +1,9 @@
+{
+  "name": "audit_ril_recursive_reasoning",
+  "original_size": 2502,
+  "compressed_size": 500,
+  "compression_ratio": 5.004,
+  "codec": "zlib_fallback",
+  "created_at": 1754358560,
+  "data_type": "bytes"
+}

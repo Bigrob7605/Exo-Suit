@@ -1,0 +1,11 @@
+{
+  "hash": "b08939813094e9f597ba61313fa7190e078fc95118d31d77d9e84ff97cbdee1f",
+  "timestamp": "2025-08-05T18:36:44.865712",
+  "domain": "math",
+  "type": "missing_function",
+  "code": "import numpy as np\nimport pandas as pd\nfrom scipy import stats\nimport hashlib\nfrom typing import Dict, Any\n\ndef math_bulletproof_test(data: pd.DataFrame, **kwargs) -> Dict[str, Any]:\n    \"\"\"\n    math domain test with bulletproof statistical analysis.\n    \"\"\"\n    try:\n        # Your implementation here\n        if not isinstance(data, pd.DataFrame):\n            raise TypeError(\"The input data must be a pandas DataFrame.\")\n\n        column1 = data['column1']\n        if len(column1) == 0:\n            raise ValueError(\"The provided DataFrame doesn't contain the 'column1'.\")\n\n        effect_size = stats.ttest_1samp(column1, np.mean(column1))[0]\n        power = 1 - stats.norm.sf(np.abs(effect_size) / np.std(column1), len(data) // 2)\n\n        evidence = {\n            \"data_hash\": hashlib.sha256(str(data).encode()).hexdigest(),\n        }\n\n        return {\n            \"test_name\": \"math_bulletproof_test\",\n            \"pass_fail\": {\"criteria\": effect_size > 0},\n            \"metrics\": {\"effect_size\": effect_size, \"power\": power},\n            \"evidence\": evidence\n        }\n    except (TypeError, ValueError) as e:\n        return {\"error\": str(e), \"test_failed\": True}",
+  "description": "Missing bulletproof test function for math",
+  "status": "pending_review",
+  "reviewer": null,
+  "approved": false
+}

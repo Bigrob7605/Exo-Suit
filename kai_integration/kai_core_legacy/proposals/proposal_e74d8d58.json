@@ -1,0 +1,11 @@
+{
+  "hash": "e74d8d58e890650676a0420db08b906ad1c8d59e478105fc7cad4b460d7c56d6",
+  "timestamp": "2025-08-05T18:28:44.996062",
+  "domain": "math_cli",
+  "type": "missing_function",
+  "code": "import numpy as np\nimport pandas as pd\nfrom scipy import stats\nimport hashlib\nfrom typing import Dict, Any\n\ndef math_cli_bulletproof_test(data: pd.DataFrame, **kwargs) -> Dict[str, Any]:\n    try:\n        mean = np.mean(data)\n        std = np.abs(np.std(data))  # Handle the case where std is zero or negative by taking absolute value\n        tstat, pval = stats.ttest_1samp(data, 0)\n        n = len(data)\n        effect_size = tstat / std if std > 0 else None\n\n        power = None\n        if effect_size is not None:\n            power = stats.ttest_1samp(\n                np.random.normal(loc=0, scale=2 * effect_size, size=n + 4), data).pval\n\n        qc_passes = all([np.min(data) > -5, np.max(data) < 5])\n\n        result = {\n            \"test_name\": \"math_cli_bulletproof_test\",\n            \"pass_fail\": {\"criteria\": qc_passes},\n            \"metrics\": {\"effect_size\": effect_size, \"power\": power},\n            \"evidence\": {\"data_hash\": hashlib.sha256(str(data).encode()).hexdigest()}\n        }\n\n        return result if pval > 0.05 else {\n            \"error\": f\"p-value {pval} < 0.05, test failed\",\n            \"test_failed\": True\n        }\n    except Exception as e:\n        return {\n            \"error\": str(e),\n            \"test_failed\": True\n        }",
+  "description": "Missing bulletproof test function for math_cli",
+  "status": "pending_review",
+  "reviewer": null,
+  "approved": false
+}

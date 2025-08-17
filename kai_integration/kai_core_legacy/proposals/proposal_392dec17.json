@@ -1,0 +1,11 @@
+{
+  "hash": "392dec17b65e461284de3b23a436694ec76318382267c859e67c6843854e9a93",
+  "timestamp": "2025-08-05T18:27:16.968375",
+  "domain": "math",
+  "type": "missing_function",
+  "code": "import numpy as np\nimport pandas as pd\nfrom scipy import stats\nimport sympy\nimport hashlib\nfrom typing import Dict, Any\nimport os\nimport tempfile\n\ndef math_bulletproof_test(data: pd.DataFrame, **kwargs) -> Dict[str, Any]:\n    \"\"\"\n    math domain test with bulletproof statistical analysis.\n    \"\"\"\n\n    # Use a temporary file to store the data for hashing to avoid memory issues\n    temp_dir = tempfile.TemporaryDirectory()\n    temp_file = os.path.join(temp_dir.name, 'data.csv')\n    data.to_csv(temp_file, index=False)\n\n    try:\n        # Calculate the hash of the temporary file to ensure it doesn't exceed memory limits\n        data_hash = hashlib.sha256(open(temp_file, 'rb').read()).hexdigest()\n\n        sym_data = {sympify(pd.read_csv(temp_file, header=None)[col]) for col in range(data.shape[1])}\n        sym_expr, sym_sol = sympy.solve(*sym_data.values(), *sym_data.keys())\n\n        sym_expr_hash = hashlib.sha256(str(sym_expr).encode()).hexdigest()\n        sym_sol_hash = hashlib.sha256(str(sym_sol).encode()).hexdigest()\n\n        pvalue = stats.ttest_ind(*np.array([data[data.columns[0]].values]), np.array([sym_sol]))\n\n        # Clean up temporary file after hashing\n        os.remove(temp_file)\n\n        return {\n            \"test_name\": \"math_bulletproof_test\",\n            \"pass_fail\": {\"symbolic_valid\": True if len(sym_expr_hash) > 0 and len(sym_sol_hash) > 0 else False,\n                          \"numerical_stable\": np.allclose(*data[data.columns[0]].values, sym_sol)},\n            \"metrics\": {\"effect_size\": stats.delsym(pvalue)[1], \"power\": stats.probtwosamp(pvalue)},\n            \"evidence\": {\"data_hash\": data_hash, \"expression_hash\": sym_expr_hash, \"proof_hash\": sym_sol_hash}\n        }\n    except Exception as e:\n        return {\"error\": str(e), \"test_failed\": True}\n    finally:\n        temp_dir.cleanup()  # Clean up the temporary directory after the function returns",
+  "description": "Missing bulletproof test function for math",
+  "status": "pending_review",
+  "reviewer": null,
+  "approved": false
+}

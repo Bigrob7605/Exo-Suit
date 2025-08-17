@@ -1,0 +1,84 @@
+{
+  "mode": "autonomous",
+  "llm_provider": "local",
+  "auto_merge": false,
+  "challenge_self": true,
+  "max_cycles_per_day": 10,
+  "domains_to_focus": ["psychology", "social", "coding", "math", "physics", "biology"],
+  "test_templates": {
+    "psychology": "effect_size_power_prereg",
+    "social": "correlation_regression_multiple_comparison",
+    "coding": "reproducibility_hash_validation",
+    "math": "symbolic_numerical_proof",
+    "physics": "experimental_validation",
+    "biology": "statistical_analysis"
+  },
+  "llm_enabled": true,
+  "cross_domain_reasoning": true,
+  "self_audit": true,
+  "auto_correct": true,
+  "mmh_enabled": true,
+  "agent_evolution": false,
+  "recursive_audit": false,
+  "stability_mode": true,
+  "prevent_self_modification": true,
+  "read_only_mode": false,
+  "max_agent_mutations": 0,
+  "genome_lock": true,
+  "safety_system": {
+    "enabled": true,
+    "level": "maximum",
+    "protected_files": [
+      "kai_core/agent.py",
+      "kai_core/safety_system.py",
+      "MMH-RS/Cargo.toml",
+      "MMH-RS/lib.rs",
+      "MMH-RS/main.rs",
+      "install-kai-os.bat",
+      "launch-kai-os.bat"
+    ],
+    "blocked_operations": [
+      "agent_evolution",
+      "genome_modification",
+      "self_destruction",
+      "system_corruption",
+      "recursive_audit"
+    ],
+    "allowed_operations": [
+      "code_generation",
+      "testing",
+      "validation",
+      "documentation",
+      "cross_domain_insights",
+      "scientific_analysis"
+    ]
+  },
+  "advanced_ai_capabilities": {
+    "full_reasoning": true,
+    "cross_domain_synthesis": true,
+    "scientific_discovery": true,
+    "code_generation": true,
+    "problem_solving": true,
+    "knowledge_integration": true,
+    "creative_synthesis": true,
+    "logical_deduction": true,
+    "pattern_recognition": true,
+    "abstraction": true,
+    "generalization": true,
+    "specialization": true,
+    "meta_learning": true,
+    "self_improvement": false,
+    "self_modification": false,
+    "self_destruction": false
+  },
+  "safety_guarantees": {
+    "no_self_modification": true,
+    "no_system_damage": true,
+    "no_recursive_corruption": true,
+    "no_agent_drift": true,
+    "protected_core_files": true,
+    "immutable_safety_system": true,
+    "audit_trail": true,
+    "backup_restoration": true
+  }
+} 

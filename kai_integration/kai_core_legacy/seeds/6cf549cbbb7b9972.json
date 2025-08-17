@@ -1,0 +1,9 @@
+{
+  "name": "simple_test_agent",
+  "original_size": 788,
+  "compressed_size": 372,
+  "compression_ratio": 2.118279569892473,
+  "codec": "zlib_fallback",
+  "created_at": 1754358637,
+  "data_type": "bytes"
+}

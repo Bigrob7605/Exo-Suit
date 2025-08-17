@@ -1,0 +1,62 @@
+[
+  {
+    "id": "security_specialist",
+    "name": "Security Specialist Agent",
+    "type": "automated",
+    "focus": [
+      "security",
+      "backdoors",
+      "vulnerabilities"
+    ],
+    "trust_score": 1.0,
+    "description": "Specializes in security analysis and vulnerability detection"
+  },
+  {
+    "id": "performance_analyst",
+    "name": "Performance Analysis Agent",
+    "type": "automated",
+    "focus": [
+      "performance",
+      "efficiency",
+      "optimization"
+    ],
+    "trust_score": 1.0,
+    "description": "Analyzes performance impact and resource usage"
+  },
+  {
+    "id": "code_quality_expert",
+    "name": "Code Quality Agent",
+    "type": "automated",
+    "focus": [
+      "code_quality",
+      "maintainability",
+      "best_practices"
+    ],
+    "trust_score": 1.0,
+    "description": "Reviews code quality, style, and maintainability"
+  },
+  {
+    "id": "functionality_tester",
+    "name": "Functionality Testing Agent",
+    "type": "automated",
+    "focus": [
+      "functionality",
+      "testing",
+      "integration"
+    ],
+    "trust_score": 1.0,
+    "description": "Tests functionality and integration compatibility"
+  },
+  {
+    "id": "coding_master",
+    "name": "Coding Master Agent",
+    "type": "automated",
+    "focus": [
+      "overall_assessment",
+      "master_orchestrator",
+      "tiebreaker"
+    ],
+    "trust_score": 1.0,
+    "description": "Master orchestrator and tiebreaker for final decisions"
+  }
+]

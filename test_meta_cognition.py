@@ -20,7 +20,7 @@ def test_meta_cognition_system():
     
     try:
         # Test 1: Phoenix Recovery System with Meta-Cognition
-        print("\n🔧 TEST 1: Phoenix Recovery System Meta-Cognition")
+        print("\nTEST 1: Phoenix Recovery System Meta-Cognition")
         print("-" * 50)
         
         from PHOENIX_RECOVERY_SYSTEM_V5 import PhoenixRecoverySystem
@@ -83,7 +83,7 @@ def test_meta_cognition_system():
         print(f"✓ Overall meta-cognition score: {meta_cognition_result.get('overall_meta_cognition_score', 'N/A')}%")
         
         # Test 5: Completion Capability Assessment
-        print("\n🎯 TEST 5: Completion Capability Assessment")
+        print("\nTEST 5: Completion Capability Assessment")
         print("-" * 50)
         
         # Test V5's ability to assess whether it can achieve 100% completion
@@ -113,7 +113,7 @@ def test_meta_cognition_system():
         
         # Final Results
         print("\n" + "=" * 70)
-        print("🎉 META-COGNITION SYSTEM TEST COMPLETED SUCCESSFULLY!")
+        print("META-COGNITION SYSTEM TEST COMPLETED SUCCESSFULLY!")
         print("=" * 70)
         
         # Calculate overall intelligence score
@@ -127,8 +127,8 @@ def test_meta_cognition_system():
         
         overall_intelligence_score = sum(intelligence_metrics) / len(intelligence_metrics)
         
-        print(f"📊 OVERALL INTELLIGENCE SCORE: {overall_intelligence_score:.1f}%")
-        print(f"📊 INTELLIGENCE BREAKDOWN:")
+        print(f"OVERALL INTELLIGENCE SCORE: {overall_intelligence_score:.1f}%")
+        print(f"INTELLIGENCE BREAKDOWN:")
         print(f"  • Repair Strategy Intelligence: {strategy.get('expected_success_rate', 0):.1f}%")
         print(f"  • Data Analysis Intelligence: {analysis.get('data_sufficiency_score', 0):.1f}%")
         print(f"  • Reconstruction Intelligence: {capabilities.get('capability_score', 0):.1f}%")
@@ -142,7 +142,7 @@ def test_meta_cognition_system():
         print(f"  ✓ Can make intelligent decisions about repair strategies")
         print(f"  ✓ Can assess its own capabilities and limitations")
         
-        print(f"\n🚀 V5 is now TRULY INTELLIGENT and ready for the chaos tester!")
+        print(f"\nV5 is now TRULY INTELLIGENT and ready for the chaos tester!")
         print("The meta-cognition system can now test V5's real intelligence!")
         
         return True

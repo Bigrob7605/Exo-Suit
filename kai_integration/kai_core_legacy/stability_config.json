@@ -1,0 +1,23 @@
+{
+  "mode": "human_review",
+  "llm_provider": "local",
+  "auto_merge": false,
+  "challenge_self": false,
+  "max_cycles_per_day": 1,
+  "domains_to_focus": ["coding"],
+  "test_templates": {
+    "coding": "reproducibility_hash_validation"
+  },
+  "llm_enabled": true,
+  "cross_domain_reasoning": false,
+  "self_audit": false,
+  "auto_correct": false,
+  "mmh_enabled": true,
+  "agent_evolution": false,
+  "recursive_audit": false,
+  "stability_mode": true,
+  "prevent_self_modification": true,
+  "read_only_mode": false,
+  "max_agent_mutations": 0,
+  "genome_lock": true
+} 

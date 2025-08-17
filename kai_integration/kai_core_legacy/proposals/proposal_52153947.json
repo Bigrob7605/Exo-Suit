@@ -1,0 +1,11 @@
+{
+  "hash": "521539479a303e0462fe35a36d819505d2f5b0224bfb3caed5e50f490a98b24a",
+  "timestamp": "2025-08-05T18:28:04.559163",
+  "domain": "math_adversarial",
+  "type": "missing_function",
+  "code": "import numpy as np\nimport pandas as pd\nfrom scipy import stats\nimport hashlib\nfrom typing import Dict, Any\nimport warnings\nfrom collections.abc import Iterable\n\ndef math_adversarial_bulletproof_test(data: pd.DataFrame, alpha=0.05) -> Dict[str, Any]:\n    try:\n        # Data Quality Validation\n        if not data.isnull().sum().all():\n            raise ValueError(\"The provided data contains null values.\")\n\n        # Appropriate Statistical Tests (checking for homogeneity of variances)\n        if stats.levene(data[['group1', 'group2']].values.flatten())[0] > 0.05:\n            raise ValueError(\"Heteroscedastic data detected. Please consider using Welch's t-test.\")\n\n        t_stat, p_val = stats.ttest_ind(data['group1'], data['group2'])\n\n        # Pass/Fail Criteria\n        pass_fail = p_val < alpha\n\n        # Effect Size\n        effect_size = np.abs(t_stat)\n\n        # Power Calculation (assuming equal variances)\n        s1, s2 = np.std(data['group1']), np.std(data['group2'])\n        n1, n2 = len(data['group1']), len(data['group2'])\n        power = 1 - stats.norm.cdf((t_stat - effect_size) / np.sqrt(s1**2/n1 + s2**2/n2))\n\n        # Data Hash for Reproducibility\n        data_hash = hashlib.sha256(data.to_string().encode()).hexdigest()\n\n        return {\n            \"test_name\": \"math_adversarial_bulletproof_test\",\n            \"pass_fail\": {\"criteria\": pass_fail},\n            \"metrics\": {\"effect_size\": effect_size, \"power\": power},\n            \"evidence\": {\"data_hash\": data_hash}\n        }\n    except (ValueError, TypeError) as e:\n        return {\"error\": str(e), \"test_failed\": True}\n    except Exception as e:\n        return {\"error\": f\"Unexpected error occurred: {str(e)}\", \"test_failed\": True}",
+  "description": "Missing bulletproof test function for math_adversarial",
+  "status": "pending_review",
+  "reviewer": null,
+  "approved": false
+}

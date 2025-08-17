@@ -1,0 +1,11 @@
+{
+  "hash": "0d158b8cc139b1238dca5f90c9e524d8bf9bc21a94732acc4d64be96fb2f2809",
+  "timestamp": "2025-08-05T18:24:58.308608",
+  "domain": "bio",
+  "type": "missing_function",
+  "code": "import numpy as np\nimport pandas as pd\nfrom scipy import stats\nimport hashlib\nfrom typing import Dict, Any\n\ndef bio_bulletproof_test(data: pd.DataFrame, **kwargs) -> Dict[str, Any]:\n    try:\n        # Data quality validation\n        data.isnull().sum() == 0\n\n        # Appropriate statistical tests (e.g., t-test, ANOVA, etc.)\n        _, p_value = stats.ttest_ind(*(data['group1'], data['group2']))\n\n        # Pass/fail criteria based on significance level (e.g., 0.05)\n        pass_fail = p_value > kwargs.get('alpha', 0.05)\n\n        # Effect size calculation\n        effect_size = stats.ttest_ind(*(data['group1'], data['group2']), equal_var=False)[0]\n\n        # Power calculation (based on pre-specified sample sizes and effect size)\n        n1, n2 = len(data['group1']), len(data['group2'])\n        power = 1 - stats.norm.sf(abs(effect_size / np.sqrt((n1 + n2)**2 / (n1 + n2 - 4))), loc=0, scale=1)\n\n        # Data hash for reproducibility\n        data_hash = hashlib.sha256(data.to_string().encode()).hexdigest()\n\n        return {\n            \"test_name\": \"bio_bulletproof_test\",\n            \"pass_fail\": {\"criteria\": pass_fail},\n            \"metrics\": {\"effect_size\": effect_size, \"power\": power},\n            \"evidence\": {\"data_hash\": data_hash}\n        }\n    except Exception as e:\n        return {\"error\": str(e), \"test_failed\": True}",
+  "description": "Missing bulletproof test function for bio",
+  "status": "pending_review",
+  "reviewer": null,
+  "approved": false
+}

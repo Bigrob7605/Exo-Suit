@@ -1,0 +1,11 @@
+{
+  "hash": "56062d50ea328bc87174e4a326326bfbabfd03fd14eebc7ddf92a4332e05821e",
+  "timestamp": "2025-08-05T18:01:25.855294",
+  "domain": "seismology",
+  "type": "missing_function",
+  "code": "import numpy as np\nimport pandas as pd\nfrom scipy import stats\nimport hashlib\n\ndef seismology_bulletproof_test(data, truth_table):\n    \"\"\"\n    Seismology domain test with bulletproof statistical analysis and data quality checks.\n\n    Args:\n        data (numpy.ndarray): Raw seismic data\n        truth_table (pandas.DataFrame): Truth table for pass/fail criteria\n\n    Returns:\n        dict: Test result summary including metrics, evidence and pass/fail status\n    \"\"\"\n\n    if not isinstance(data, np.ndarray) or not isinstance(truth_table, pd.DataFrame):\n        return {\"error\": \"Invalid input type\", \"test_failed\": True}\n\n    try:\n        data_hash = hashlib.md5(data.tobytes()).hexdigest()\n        pvalue, _, _ = stats.ttest_ind(data, truth_table['expected'], equal_var=False)\n\n        effect_size = stats.ttest_ind(data, truth_table['expected'], equal_var=False)[2]\n        power = 1 - stats.ttdist.ppf(1 - pvalue, df1=len(data), df2=len(truth_table))\n\n        pass_fail = pvalue > truth_table['alpha']\n\n        return {\n            \"test_name\": \"seismology_bulletproof_test\",\n            \"pass_fail\": {\"criteria\": pass_fail},\n            \"metrics\": {\"effect_size\": effect_size, \"power\": power},\n            \"evidence\": {\"data_hash\": data_hash}\n        }\n    except ValueError as e:  # Specific exception handling for ValueError\n        return {\"error\": str(e), \"test_failed\": True}",
+  "description": "Missing bulletproof test function for seismology",
+  "status": "pending_review",
+  "reviewer": null,
+  "approved": false
+}

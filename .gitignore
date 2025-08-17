@@ -80,6 +80,7 @@ Thumbs.db
 # Git Submodules and Embedded Repos
 .sandboxes/
 ai-sbx-*/
+chaos_test_repos/
 
 # Large Model Files
 *.onnx

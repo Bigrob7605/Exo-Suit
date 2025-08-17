@@ -1,0 +1,135 @@
+{
+  "operation": "ril_recursive_reasoning",
+  "timestamp": "2025-08-04T21:51:19.852523",
+  "data_hash": "05debe652e3ca4fe5db5cf77d447ad1d3831bdd252f85ed535d24efce12ac78e",
+  "data": {
+    "agent_name": "comprehensive_ril_agent",
+    "input_data": {
+      "domain": "psychology",
+      "method": "effect_size_analysis",
+      "parameters": {
+        "alpha": 0.05,
+        "power": 0.8,
+        "effect_size": "cohens_d"
+      },
+      "ril_enhanced": true,
+      "recursive_depth": 3
+    },
+    "depth": 3,
+    "timestamp": "2025-08-04T21:51:19.852484",
+    "recursive_operations": [
+      {
+        "level": 0,
+        "reasoning_type": "recursive",
+        "input": {
+          "domain": "psychology",
+          "method": "effect_size_analysis",
+          "parameters": {
+            "alpha": 0.05,
+            "power": 0.8,
+            "effect_size": "cohens_d"
+          },
+          "ril_enhanced": true,
+          "recursive_depth": 3
+        },
+        "output": {
+          "level": 0,
+          "patterns_applied": [
+            "self_reference",
+            "cross_domain",
+            "recursive_compression",
+            "audit_validation"
+          ],
+          "insights": [
+            "Recursive depth 0 analysis completed",
+            "Cross-domain reasoning applied at level 0",
+            "Symbolic compression achieved at level 0",
+            "Audit trail validated at level 0"
+          ],
+          "confidence": 0.9,
+          "timestamp": "2025-08-04T21:51:19.852508"
+        },
+        "timestamp": "2025-08-04T21:51:19.852509"
+      },
+      {
+        "level": 1,
+        "reasoning_type": "recursive",
+        "input": {
+          "level": 0,
+          "patterns_applied": [
+            "self_reference",
+            "cross_domain",
+            "recursive_compression",
+            "audit_validation"
+          ],
+          "insights": [
+            "Recursive depth 0 analysis completed",
+            "Cross-domain reasoning applied at level 0",
+            "Symbolic compression achieved at level 0",
+            "Audit trail validated at level 0"
+          ],
+          "confidence": 0.9,
+          "timestamp": "2025-08-04T21:51:19.852508"
+        },
+        "output": {
+          "level": 1,
+          "patterns_applied": [
+            "self_reference",
+            "cross_domain",
+            "recursive_compression",
+            "audit_validation"
+          ],
+          "insights": [
+            "Recursive depth 1 analysis completed",
+            "Cross-domain reasoning applied at level 1",
+            "Symbolic compression achieved at level 1",
+            "Audit trail validated at level 1"
+          ],
+          "confidence": 0.8,
+          "timestamp": "2025-08-04T21:51:19.852515"
+        },
+        "timestamp": "2025-08-04T21:51:19.852516"
+      },
+      {
+        "level": 2,
+        "reasoning_type": "recursive",
+        "input": {
+          "level": 1,
+          "patterns_applied": [
+            "self_reference",
+            "cross_domain",
+            "recursive_compression",
+            "audit_validation"
+          ],
+          "insights": [
+            "Recursive depth 1 analysis completed",
+            "Cross-domain reasoning applied at level 1",
+            "Symbolic compression achieved at level 1",
+            "Audit trail validated at level 1"
+          ],
+          "confidence": 0.8,
+          "timestamp": "2025-08-04T21:51:19.852515"
+        },
+        "output": {
+          "level": 2,
+          "patterns_applied": [
+            "self_reference",
+            "cross_domain",
+            "recursive_compression",
+            "audit_validation"
+          ],
+          "insights": [
+            "Recursive depth 2 analysis completed",
+            "Cross-domain reasoning applied at level 2",
+            "Symbolic compression achieved at level 2",
+            "Audit trail validated at level 2"
+          ],
+          "confidence": 0.7,
+          "timestamp": "2025-08-04T21:51:19.852519"
+        },
+        "timestamp": "2025-08-04T21:51:19.852520"
+      }
+    ]
+  },
+  "mmh_compression": true
+}

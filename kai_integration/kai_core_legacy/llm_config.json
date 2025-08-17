@@ -1,0 +1,54 @@
+{
+  "provider": "local",
+  "ensemble_mode": "enabled",
+  "models": [
+    {
+      "name": "kai",
+      "type": "orchestrator",
+      "description": "Kai Orchestrator 2.0 - Master conductor and auditor",
+      "api_url": "local://kai_orchestrator",
+      "max_tokens": 4096,
+      "temperature": 0.1,
+      "top_p": 0.9,
+      "safety_mode": "strict",
+      "audit_own_outputs": true
+    },
+    {
+      "name": "mistral",
+      "type": "general",
+      "description": "Mistral - General purpose AI model",
+      "api_url": "local://ollama/mistral:latest",
+      "max_tokens": 4096,
+      "temperature": 0.1,
+      "top_p": 0.9,
+      "safety_mode": "strict",
+      "use_ollama": true
+    },
+    {
+      "name": "deepseek",
+      "type": "coding",
+      "description": "DeepSeek - Coding powerhouse",
+      "api_url": "local://ollama/codellama:7b",
+      "max_tokens": 4096,
+      "temperature": 0.1,
+      "top_p": 0.9,
+      "safety_mode": "strict",
+      "use_ollama": true
+    },
+    {
+      "name": "ollama",
+      "type": "minimal",
+      "description": "Ollama - Fast and efficient base model",
+      "api_url": "local://ollama/llama3.2:3b",
+      "max_tokens": 2048,
+      "temperature": 0.1,
+      "top_p": 0.9,
+      "safety_mode": "strict",
+      "use_ollama": true
+    }
+  ],
+  "cross_domain_reasoning": true,
+  "auto_correct": true,
+  "consensus_required": 3,
+  "total_models": 4
+}

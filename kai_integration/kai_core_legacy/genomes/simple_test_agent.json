@@ -1,0 +1,39 @@
+{
+  "name": "simple_test_agent",
+  "description": "Enhanced test agent",
+  "instructions": "Perform basic recursive reasoning",
+  "tools": [
+    {
+      "name": "recursive_reasoning",
+      "description": "Perform recursive intelligence operations",
+      "safety_level": 1
+    },
+    {
+      "name": "self_modification",
+      "description": "Modify own capabilities and instructions",
+      "safety_level": 2
+    },
+    {
+      "name": "cross_domain_reasoning",
+      "description": "Apply insights across scientific domains",
+      "safety_level": 1
+    },
+    {
+      "name": "audit_trail",
+      "description": "Maintain immutable audit trails",
+      "safety_level": 1
+    }
+  ],
+  "handoffs": [
+    "math_agent",
+    "psychology_agent",
+    "physics_agent"
+  ],
+  "safety_level": 1,
+  "model_settings": {
+    "recursive_depth": 2,
+    "self_modification": true
+  },
+  "created_at": 1754358637,
+  "version": "1.0.0.evolved"
+}

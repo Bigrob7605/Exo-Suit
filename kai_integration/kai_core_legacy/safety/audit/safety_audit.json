@@ -1,0 +1,1649 @@
+[
+  {
+    "timestamp": "2025-08-05T17:20:48.289357",
+    "operation": "code_generation",
+    "target": "bio",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:20:51.068916",
+    "operation": "code_generation",
+    "target": "climate",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:20:52.327385",
+    "operation": "code_generation",
+    "target": "coding_agentic",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:20:53.591813",
+    "operation": "code_generation",
+    "target": "math",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:20:54.832829",
+    "operation": "code_generation",
+    "target": "math_adversarial",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:20:56.079772",
+    "operation": "code_generation",
+    "target": "math_cli",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:20:57.317087",
+    "operation": "code_generation",
+    "target": "physics",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:20:58.562741",
+    "operation": "code_generation",
+    "target": "seismology",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:21:36.830866",
+    "operation": "code_generation",
+    "target": "bio",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:22:46.880298",
+    "operation": "code_generation",
+    "target": "bio",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:23:03.511621",
+    "operation": "code_generation",
+    "target": "bio",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:23:42.856918",
+    "operation": "code_generation",
+    "target": "bio",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:23:44.186698",
+    "operation": "code_generation",
+    "target": "climate",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:23:45.485164",
+    "operation": "code_generation",
+    "target": "coding_agentic",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:23:46.733443",
+    "operation": "code_generation",
+    "target": "math",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:23:48.047208",
+    "operation": "code_generation",
+    "target": "math_adversarial",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:23:49.353612",
+    "operation": "code_generation",
+    "target": "math_cli",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:23:50.630375",
+    "operation": "code_generation",
+    "target": "physics",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:23:51.898279",
+    "operation": "code_generation",
+    "target": "seismology",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:23:53.151069",
+    "operation": "cross_domain_reasoning",
+    "target": "recursive_insights",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:24:10.454825",
+    "operation": "code_generation",
+    "target": "bio",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:24:11.766462",
+    "operation": "code_generation",
+    "target": "climate",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:24:13.062844",
+    "operation": "code_generation",
+    "target": "coding_agentic",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:24:14.326628",
+    "operation": "code_generation",
+    "target": "math",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:24:15.582569",
+    "operation": "code_generation",
+    "target": "math_adversarial",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:24:16.890805",
+    "operation": "code_generation",
+    "target": "math_cli",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:24:18.199470",
+    "operation": "code_generation",
+    "target": "physics",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:24:19.749671",
+    "operation": "code_generation",
+    "target": "seismology",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:24:21.065541",
+    "operation": "cross_domain_reasoning",
+    "target": "recursive_insights",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:24:26.587887",
+    "operation": "code_generation",
+    "target": "bio",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:25:19.331317",
+    "operation": "code_generation",
+    "target": "bio",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:25:38.479617",
+    "operation": "code_generation",
+    "target": "bio",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:26:02.411804",
+    "operation": "code_generation",
+    "target": "bio",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:26:32.454038",
+    "operation": "code_generation",
+    "target": "bio",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:26:48.019322",
+    "operation": "code_generation",
+    "target": "bio",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:27:08.218569",
+    "operation": "code_generation",
+    "target": "bio",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:27:23.729945",
+    "operation": "code_generation",
+    "target": "bio",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:27:32.076189",
+    "operation": "code_generation",
+    "target": "bio",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:27:34.682033",
+    "operation": "code_generation",
+    "target": "climate",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:27:37.316729",
+    "operation": "code_generation",
+    "target": "coding_agentic",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:27:39.964152",
+    "operation": "code_generation",
+    "target": "math",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:27:42.553693",
+    "operation": "code_generation",
+    "target": "math_adversarial",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:27:45.180572",
+    "operation": "code_generation",
+    "target": "math_cli",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:27:47.852179",
+    "operation": "code_generation",
+    "target": "physics",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:27:50.524935",
+    "operation": "code_generation",
+    "target": "seismology",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:27:53.252440",
+    "operation": "cross_domain_reasoning",
+    "target": "recursive_insights",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:39:44.051158",
+    "operation": "code_generation",
+    "target": "bio",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:39:46.686266",
+    "operation": "code_generation",
+    "target": "climate",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:39:49.194430",
+    "operation": "code_generation",
+    "target": "coding_agentic",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:39:51.768489",
+    "operation": "code_generation",
+    "target": "math",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:39:54.394141",
+    "operation": "code_generation",
+    "target": "math_adversarial",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:39:56.927151",
+    "operation": "code_generation",
+    "target": "math_cli",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:39:59.566750",
+    "operation": "code_generation",
+    "target": "physics",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:40:02.041305",
+    "operation": "code_generation",
+    "target": "seismology",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:40:04.541144",
+    "operation": "cross_domain_reasoning",
+    "target": "recursive_insights",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:41:05.161161",
+    "operation": "code_generation",
+    "target": "bio",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:41:06.596800",
+    "operation": "code_generation",
+    "target": "climate",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:41:07.933310",
+    "operation": "code_generation",
+    "target": "coding_agentic",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:41:09.271694",
+    "operation": "code_generation",
+    "target": "math",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:41:10.598313",
+    "operation": "code_generation",
+    "target": "math_adversarial",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:41:11.947477",
+    "operation": "code_generation",
+    "target": "math_cli",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:41:13.315917",
+    "operation": "code_generation",
+    "target": "physics",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:41:14.687538",
+    "operation": "code_generation",
+    "target": "seismology",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:41:16.026887",
+    "operation": "cross_domain_reasoning",
+    "target": "recursive_insights",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:43:03.798045",
+    "operation": "code_generation",
+    "target": "bio",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:43:04.995889",
+    "operation": "code_generation",
+    "target": "climate",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:43:06.193539",
+    "operation": "code_generation",
+    "target": "coding_agentic",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:43:07.350413",
+    "operation": "code_generation",
+    "target": "math",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:43:08.464081",
+    "operation": "code_generation",
+    "target": "math_adversarial",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:43:09.643435",
+    "operation": "code_generation",
+    "target": "math_cli",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:43:10.897759",
+    "operation": "code_generation",
+    "target": "physics",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:43:12.137030",
+    "operation": "code_generation",
+    "target": "seismology",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:43:13.347272",
+    "operation": "cross_domain_reasoning",
+    "target": "recursive_insights",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:43:34.712921",
+    "operation": "code_generation",
+    "target": "bio",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:43:35.812756",
+    "operation": "code_generation",
+    "target": "climate",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:43:36.951191",
+    "operation": "code_generation",
+    "target": "coding_agentic",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:43:38.083830",
+    "operation": "code_generation",
+    "target": "math",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:43:39.215351",
+    "operation": "code_generation",
+    "target": "math_adversarial",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:43:40.396443",
+    "operation": "code_generation",
+    "target": "math_cli",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:43:41.515278",
+    "operation": "code_generation",
+    "target": "physics",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:43:42.682884",
+    "operation": "code_generation",
+    "target": "seismology",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:43:43.857121",
+    "operation": "cross_domain_reasoning",
+    "target": "recursive_insights",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:44:25.461037",
+    "operation": "code_generation",
+    "target": "bio",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:44:26.590275",
+    "operation": "code_generation",
+    "target": "climate",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:44:27.756631",
+    "operation": "code_generation",
+    "target": "coding_agentic",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:44:28.923121",
+    "operation": "code_generation",
+    "target": "math",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:44:30.110807",
+    "operation": "code_generation",
+    "target": "math_adversarial",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:44:31.268257",
+    "operation": "code_generation",
+    "target": "math_cli",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:44:32.398917",
+    "operation": "code_generation",
+    "target": "physics",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:44:33.515039",
+    "operation": "code_generation",
+    "target": "seismology",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:44:34.682378",
+    "operation": "cross_domain_reasoning",
+    "target": "recursive_insights",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:56:10.375626",
+    "operation": "code_generation",
+    "target": "bio",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:56:58.846107",
+    "operation": "code_generation",
+    "target": "climate",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:57:36.495159",
+    "operation": "code_generation",
+    "target": "coding_agentic",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:58:15.277863",
+    "operation": "code_generation",
+    "target": "math",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:58:52.260295",
+    "operation": "code_generation",
+    "target": "math_adversarial",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T17:59:22.089063",
+    "operation": "code_generation",
+    "target": "math_cli",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T18:00:06.446688",
+    "operation": "code_generation",
+    "target": "physics",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T18:00:51.348943",
+    "operation": "code_generation",
+    "target": "seismology",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T18:01:25.855754",
+    "operation": "cross_domain_reasoning",
+    "target": "recursive_insights",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T18:09:30.829517",
+    "operation": "code_generation",
+    "target": "bio",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T18:10:15.730740",
+    "operation": "code_generation",
+    "target": "climate",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T18:10:55.507801",
+    "operation": "code_generation",
+    "target": "coding_agentic",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T18:11:37.567049",
+    "operation": "code_generation",
+    "target": "math",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T18:12:24.854820",
+    "operation": "code_generation",
+    "target": "math_adversarial",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T18:13:13.633355",
+    "operation": "code_generation",
+    "target": "math_cli",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T18:13:53.412753",
+    "operation": "code_generation",
+    "target": "physics",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T18:14:29.042740",
+    "operation": "code_generation",
+    "target": "seismology",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T18:15:10.937626",
+    "operation": "cross_domain_reasoning",
+    "target": "recursive_insights",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T18:16:42.453841",
+    "operation": "code_generation",
+    "target": "climate",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T18:16:42.455920",
+    "operation": "code_generation",
+    "target": "climate",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T18:19:42.927424",
+    "operation": "code_generation",
+    "target": "climate",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T18:22:37.355257",
+    "operation": "code_generation",
+    "target": "climate",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T18:23:34.690910",
+    "operation": "code_generation",
+    "target": "climate",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T18:24:16.342889",
+    "operation": "code_generation",
+    "target": "bio",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T18:24:58.309388",
+    "operation": "code_generation",
+    "target": "climate",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T18:25:37.505831",
+    "operation": "code_generation",
+    "target": "coding_agentic",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T18:26:28.458005",
+    "operation": "code_generation",
+    "target": "math",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T18:27:16.968974",
+    "operation": "code_generation",
+    "target": "math_adversarial",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T18:28:04.559904",
+    "operation": "code_generation",
+    "target": "math_cli",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T18:28:44.996724",
+    "operation": "code_generation",
+    "target": "physics",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T18:29:25.852496",
+    "operation": "code_generation",
+    "target": "seismology",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T18:30:24.857109",
+    "operation": "cross_domain_reasoning",
+    "target": "recursive_insights",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T18:30:42.885510",
+    "operation": "code_generation",
+    "target": "coding_agentic",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T18:31:27.719085",
+    "operation": "code_generation",
+    "target": "physics",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T18:32:29.677822",
+    "operation": "code_generation",
+    "target": "coding_agentic",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T18:33:17.245930",
+    "operation": "code_generation",
+    "target": "physics",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T18:34:04.366875",
+    "operation": "code_generation",
+    "target": "bio",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T18:34:48.468115",
+    "operation": "code_generation",
+    "target": "climate",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T18:35:28.868118",
+    "operation": "code_generation",
+    "target": "coding_agentic",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T18:36:15.344424",
+    "operation": "code_generation",
+    "target": "math",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T18:36:44.866301",
+    "operation": "code_generation",
+    "target": "math_adversarial",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T18:37:52.188973",
+    "operation": "code_generation",
+    "target": "math_cli",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T18:38:45.818754",
+    "operation": "code_generation",
+    "target": "physics",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T18:39:38.967891",
+    "operation": "code_generation",
+    "target": "seismology",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T18:40:31.000578",
+    "operation": "cross_domain_reasoning",
+    "target": "recursive_insights",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T18:41:32.680034",
+    "operation": "code_generation",
+    "target": "seismology",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T18:42:16.067225",
+    "operation": "code_generation",
+    "target": "bio",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T18:42:58.216670",
+    "operation": "code_generation",
+    "target": "climate",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T18:43:45.607664",
+    "operation": "code_generation",
+    "target": "coding_agentic",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T18:44:36.906235",
+    "operation": "code_generation",
+    "target": "math",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T18:45:06.701144",
+    "operation": "code_generation",
+    "target": "math_adversarial",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T18:45:54.171553",
+    "operation": "code_generation",
+    "target": "math_cli",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T18:46:36.305869",
+    "operation": "code_generation",
+    "target": "physics",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T18:47:25.458905",
+    "operation": "code_generation",
+    "target": "seismology",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T18:48:06.542518",
+    "operation": "cross_domain_reasoning",
+    "target": "recursive_insights",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T18:48:37.819260",
+    "operation": "code_generation",
+    "target": "bio",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T18:54:31.954551",
+    "operation": "code_generation",
+    "target": "bio",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T18:55:04.896493",
+    "operation": "code_generation",
+    "target": "climate",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T18:55:46.988873",
+    "operation": "code_generation",
+    "target": "coding_agentic",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T18:56:28.087925",
+    "operation": "code_generation",
+    "target": "math",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T18:57:11.210425",
+    "operation": "code_generation",
+    "target": "math_adversarial",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T18:57:55.724070",
+    "operation": "code_generation",
+    "target": "math_cli",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T18:58:27.112505",
+    "operation": "code_generation",
+    "target": "physics",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T18:59:08.118846",
+    "operation": "code_generation",
+    "target": "seismology",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T18:59:43.326563",
+    "operation": "cross_domain_reasoning",
+    "target": "recursive_insights",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T19:04:01.796235",
+    "operation": "code_generation",
+    "target": "bio",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T19:04:42.419458",
+    "operation": "code_generation",
+    "target": "climate",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T19:05:31.598223",
+    "operation": "code_generation",
+    "target": "coding_agentic",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T19:06:16.422276",
+    "operation": "code_generation",
+    "target": "math",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T19:06:58.280099",
+    "operation": "code_generation",
+    "target": "math_adversarial",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T19:07:37.442948",
+    "operation": "code_generation",
+    "target": "math_cli",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T19:08:22.094798",
+    "operation": "code_generation",
+    "target": "physics",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T19:09:13.667892",
+    "operation": "code_generation",
+    "target": "seismology",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T19:09:54.166755",
+    "operation": "cross_domain_reasoning",
+    "target": "recursive_insights",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T19:16:09.073261",
+    "operation": "code_generation",
+    "target": "math",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T19:17:03.821340",
+    "operation": "code_generation",
+    "target": "bio",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T19:17:43.996598",
+    "operation": "code_generation",
+    "target": "climate",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T19:18:18.387662",
+    "operation": "code_generation",
+    "target": "coding_agentic",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T19:19:00.952827",
+    "operation": "code_generation",
+    "target": "physics",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T19:19:36.817017",
+    "operation": "code_generation",
+    "target": "seismology",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T19:20:20.441570",
+    "operation": "code_generation",
+    "target": "math",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T19:20:56.908204",
+    "operation": "code_generation",
+    "target": "chemistry",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T19:21:40.539159",
+    "operation": "code_generation",
+    "target": "astronomy",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T19:23:19.961936",
+    "operation": "code_generation",
+    "target": "bio",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T19:24:07.750046",
+    "operation": "code_generation",
+    "target": "climate",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T19:24:48.416547",
+    "operation": "code_generation",
+    "target": "coding_agentic",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T19:25:26.283279",
+    "operation": "code_generation",
+    "target": "math",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T19:26:01.064358",
+    "operation": "code_generation",
+    "target": "math_adversarial",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T19:26:51.249882",
+    "operation": "code_generation",
+    "target": "math_cli",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T19:27:34.754341",
+    "operation": "code_generation",
+    "target": "physics",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T19:28:19.628491",
+    "operation": "code_generation",
+    "target": "seismology",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  },
+  {
+    "timestamp": "2025-08-05T19:29:03.585776",
+    "operation": "cross_domain_reasoning",
+    "target": "recursive_insights",
+    "safe": true,
+    "level": "safe",
+    "warnings": [],
+    "blocked": false
+  }
+]

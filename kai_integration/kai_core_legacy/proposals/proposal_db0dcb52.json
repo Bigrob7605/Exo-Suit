@@ -1,0 +1,11 @@
+{
+  "hash": "db0dcb526a375b791996379b4805cce8be5a4ed9057e8f224985b6a401785dee",
+  "timestamp": "2025-08-05T17:58:15.277310",
+  "domain": "coding_agentic",
+  "type": "missing_function",
+  "code": "import numpy as np\nimport pandas as pd\nfrom scipy import stats\nimport hashlib\nfrom typing import Dict, Any\nfrom warnings import warn\n\ndef coding_agentic_bulletproof_test(data: pd.DataFrame, alpha=0.05) -> Dict[str, Any]:\n    \"\"\"\n    coding_agentic domain test with bulletproof statistical analysis.\n    \"\"\"\n    try:\n        # Data Quality Validation\n        if not all(data.columns.str.contains('_id|test')):\n            return {\"error\": \"Invalid data format\", \"test_failed\": True}\n\n        # Ensure proper data types for 'result' column\n        data['result'] = pd.to_numeric(data['result'], errors='coerce')\n        if not all(data['result'].isin([0, 1])):\n            return {\"error\": \"Invalid result format\", \"test_failed\": True}\n\n        # Truth Table Format with pass/fail criteria\n        X, y = data[['test']], data['result']\n\n        t_statistic, p_value = stats.ttest_1samp(y, X.mean())\n\n        # Appropriate statistical tests\n        effect_size = abs(t_statistic) / np.sqrt(len(y))\n        power = 1 - stats.norm.cdf(-abs(t_statistic), len(y)-2)\n\n        # Pass/Fail Criteria\n        pass_fail = p_value > alpha\n\n        # Data Quality Validation\n        if not all(data['result'].isnull().sum() == 0):\n            return {\"error\": \"Missing data\", \"test_failed\": True}\n\n        # Effect Size and Power Analysis\n        metrics = {\n            \"effect_size\": effect_size,\n            \"power\": power\n        }\n        evidence = {\n            \"raw_data_hash\": hashlib.md5(str(data).encode()).hexdigest()\n        }\n\n        return {\n            \"test_name\": \"coding_agentic_bulletproof_test\",\n            \"pass_fail\": {\"criteria\": pass_fail},\n            \"metrics\": metrics,\n            \"evidence\": evidence\n        }\n    except ValueError as e:  # catch specific exception type\n        return {\"error\": str(e), \"test_failed\": True}",
+  "description": "Missing bulletproof test function for coding_agentic",
+  "status": "pending_review",
+  "reviewer": null,
+  "approved": false
+}

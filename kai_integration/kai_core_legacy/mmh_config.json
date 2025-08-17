@@ -1,0 +1,8 @@
+{
+  "default_chunk_bits": 20,
+  "dedup_enabled": true,
+  "codec": "zstd",
+  "compression_level": 3,
+  "fec_type": "raptorq",
+  "redundancy": 1.5
+}

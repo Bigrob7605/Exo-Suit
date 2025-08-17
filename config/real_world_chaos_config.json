@@ -1,0 +1,31 @@
+{
+  "test_repositories": [
+    {
+      "name": "fastapi",
+      "url": "https://github.com/tiangolo/fastapi",
+      "branch": "main",
+      "drift_level": "medium"
+    },
+    {
+      "name": "requests",
+      "url": "https://github.com/psf/requests",
+      "branch": "main",
+      "drift_level": "low"
+    },
+    {
+      "name": "flask",
+      "url": "https://github.com/pallets/flask",
+      "branch": "main",
+      "drift_level": "high"
+    }
+  ],
+  "drift_types": {
+    "syntax_errors": true,
+    "import_breaks": true,
+    "logic_corruption": true,
+    "file_deletion": true,
+    "dependency_breaks": true
+  },
+  "repair_timeout": 300,
+  "max_repair_attempts": 10
+}

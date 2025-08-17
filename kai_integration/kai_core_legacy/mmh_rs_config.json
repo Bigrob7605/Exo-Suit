@@ -1,0 +1,9 @@
+{
+  "codec": "zstd",
+  "fec_type": "raptorq",
+  "compression_level": 3,
+  "chunk_size": 1048576,
+  "max_seed_size": 1048576,
+  "dedup_enabled": true,
+  "redundancy": 1.5
+}

@@ -1,0 +1,12 @@
+# Corrupted requirements.txt for V5 testing
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+pydantic==2.5.0
+# Missing version number
+requests
+# Invalid version format
+flask==invalid_version
+# Duplicate package
+fastapi==0.104.1
+# Non-existent package
+nonexistent_package==1.0.0

@@ -1,0 +1,11 @@
+{
+  "hash": "663bda0d8af5faa090081409a365639afe230ea2b4779f2283fb9775e439816c",
+  "timestamp": "2025-08-05T17:59:22.088507",
+  "domain": "math_adversarial",
+  "type": "missing_function",
+  "code": "import numpy as np\nimport scipy.stats\nimport pandas as pd\nimport hashlib\nimport warnings\nfrom typing import Dict, Any\n\ndef math_adversarial_bulletproof_test(data: np.ndarray, threshold=0.05) -> Dict[str, Any]:\n    try:\n        if not data.dtype == np.float64:\n            raise TypeError(\"Data should be of dtype float64.\")\n\n        data_hash = hashlib.sha256(data.tobytes()).hexdigest()\n\n        t_stat, p_val = scipy.stats.ttest_ind(data, np.ones_like(data), equal_var=False)\n\n        effect_size = abs(t_stat) / np.sqrt((len(data) - 2))\n        power = scipy.stats.ttpower(np.mean(data), np.mean(np.ones_like(data)), len(data), loc=0, scale=1)[1]\n\n        pass_fail = p_val > threshold\n\n        return {\n            \"test_name\": \"math_adversarial_bulletproof_test\",\n            \"pass_fail\": {\"criteria\": pass_fail},\n            \"metrics\": {\"effect_size\": effect_size, \"power\": power},\n            \"evidence\": {\"data_hash\": data_hash}\n        }\n    except (ValueError, TypeError) as e:\n        warnings.warn(e, UserWarning)\n        return {\"error\": str(e), \"test_failed\": True}",
+  "description": "Missing bulletproof test function for math_adversarial",
+  "status": "pending_review",
+  "reviewer": null,
+  "approved": false
+}

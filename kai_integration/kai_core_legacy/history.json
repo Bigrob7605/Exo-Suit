@@ -1,0 +1,951 @@
+{
+  "version": "1.0.0",
+  "created": "2025-08-05T17:39:44.021439",
+  "changes": [
+    {
+      "hash": "a473b6798959a7553392306371ae5244c33fafe47ebe18c9930a1c997b3f47f3",
+      "timestamp": "2025-08-05T17:39:45.402387",
+      "domain": "bio",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 1614,
+      "description": "Missing bulletproof test function for bio"
+    },
+    {
+      "hash": "a473b6798959a7553392306371ae5244c33fafe47ebe18c9930a1c997b3f47f3",
+      "timestamp": "2025-08-05T17:39:47.936332",
+      "domain": "climate",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 1614,
+      "description": "Missing bulletproof test function for climate"
+    },
+    {
+      "hash": "a473b6798959a7553392306371ae5244c33fafe47ebe18c9930a1c997b3f47f3",
+      "timestamp": "2025-08-05T17:39:50.515646",
+      "domain": "coding_agentic",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 1614,
+      "description": "Missing bulletproof test function for coding_agentic"
+    },
+    {
+      "hash": "a473b6798959a7553392306371ae5244c33fafe47ebe18c9930a1c997b3f47f3",
+      "timestamp": "2025-08-05T17:39:53.139393",
+      "domain": "math",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 1614,
+      "description": "Missing bulletproof test function for math"
+    },
+    {
+      "hash": "a473b6798959a7553392306371ae5244c33fafe47ebe18c9930a1c997b3f47f3",
+      "timestamp": "2025-08-05T17:39:55.644296",
+      "domain": "math_adversarial",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 1614,
+      "description": "Missing bulletproof test function for math_adversarial"
+    },
+    {
+      "hash": "a473b6798959a7553392306371ae5244c33fafe47ebe18c9930a1c997b3f47f3",
+      "timestamp": "2025-08-05T17:39:58.255268",
+      "domain": "math_cli",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 1614,
+      "description": "Missing bulletproof test function for math_cli"
+    },
+    {
+      "hash": "a473b6798959a7553392306371ae5244c33fafe47ebe18c9930a1c997b3f47f3",
+      "timestamp": "2025-08-05T17:40:00.816886",
+      "domain": "physics",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 1614,
+      "description": "Missing bulletproof test function for physics"
+    },
+    {
+      "hash": "a473b6798959a7553392306371ae5244c33fafe47ebe18c9930a1c997b3f47f3",
+      "timestamp": "2025-08-05T17:40:03.308073",
+      "domain": "seismology",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 1614,
+      "description": "Missing bulletproof test function for seismology"
+    },
+    {
+      "hash": "a473b6798959a7553392306371ae5244c33fafe47ebe18c9930a1c997b3f47f3",
+      "timestamp": "2025-08-05T17:41:06.093972",
+      "domain": "bio",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 1614,
+      "description": "Missing bulletproof test function for bio"
+    },
+    {
+      "hash": "a473b6798959a7553392306371ae5244c33fafe47ebe18c9930a1c997b3f47f3",
+      "timestamp": "2025-08-05T17:41:07.495689",
+      "domain": "climate",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 1614,
+      "description": "Missing bulletproof test function for climate"
+    },
+    {
+      "hash": "a473b6798959a7553392306371ae5244c33fafe47ebe18c9930a1c997b3f47f3",
+      "timestamp": "2025-08-05T17:41:08.781790",
+      "domain": "coding_agentic",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 1614,
+      "description": "Missing bulletproof test function for coding_agentic"
+    },
+    {
+      "hash": "a473b6798959a7553392306371ae5244c33fafe47ebe18c9930a1c997b3f47f3",
+      "timestamp": "2025-08-05T17:41:10.115357",
+      "domain": "math",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 1614,
+      "description": "Missing bulletproof test function for math"
+    },
+    {
+      "hash": "a473b6798959a7553392306371ae5244c33fafe47ebe18c9930a1c997b3f47f3",
+      "timestamp": "2025-08-05T17:41:11.458572",
+      "domain": "math_adversarial",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 1614,
+      "description": "Missing bulletproof test function for math_adversarial"
+    },
+    {
+      "hash": "a473b6798959a7553392306371ae5244c33fafe47ebe18c9930a1c997b3f47f3",
+      "timestamp": "2025-08-05T17:41:12.843955",
+      "domain": "math_cli",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 1614,
+      "description": "Missing bulletproof test function for math_cli"
+    },
+    {
+      "hash": "a473b6798959a7553392306371ae5244c33fafe47ebe18c9930a1c997b3f47f3",
+      "timestamp": "2025-08-05T17:41:14.189488",
+      "domain": "physics",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 1614,
+      "description": "Missing bulletproof test function for physics"
+    },
+    {
+      "hash": "a473b6798959a7553392306371ae5244c33fafe47ebe18c9930a1c997b3f47f3",
+      "timestamp": "2025-08-05T17:41:15.576396",
+      "domain": "seismology",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 1614,
+      "description": "Missing bulletproof test function for seismology"
+    },
+    {
+      "hash": "a473b6798959a7553392306371ae5244c33fafe47ebe18c9930a1c997b3f47f3",
+      "timestamp": "2025-08-05T17:43:04.669706",
+      "domain": "bio",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 1614,
+      "description": "Missing bulletproof test function for bio"
+    },
+    {
+      "hash": "a473b6798959a7553392306371ae5244c33fafe47ebe18c9930a1c997b3f47f3",
+      "timestamp": "2025-08-05T17:43:05.788159",
+      "domain": "climate",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 1614,
+      "description": "Missing bulletproof test function for climate"
+    },
+    {
+      "hash": "a473b6798959a7553392306371ae5244c33fafe47ebe18c9930a1c997b3f47f3",
+      "timestamp": "2025-08-05T17:43:07.018861",
+      "domain": "coding_agentic",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 1614,
+      "description": "Missing bulletproof test function for coding_agentic"
+    },
+    {
+      "hash": "a473b6798959a7553392306371ae5244c33fafe47ebe18c9930a1c997b3f47f3",
+      "timestamp": "2025-08-05T17:43:08.123673",
+      "domain": "math",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 1614,
+      "description": "Missing bulletproof test function for math"
+    },
+    {
+      "hash": "a473b6798959a7553392306371ae5244c33fafe47ebe18c9930a1c997b3f47f3",
+      "timestamp": "2025-08-05T17:43:09.307484",
+      "domain": "math_adversarial",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 1614,
+      "description": "Missing bulletproof test function for math_adversarial"
+    },
+    {
+      "hash": "a473b6798959a7553392306371ae5244c33fafe47ebe18c9930a1c997b3f47f3",
+      "timestamp": "2025-08-05T17:43:10.525615",
+      "domain": "math_cli",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 1614,
+      "description": "Missing bulletproof test function for math_cli"
+    },
+    {
+      "hash": "a473b6798959a7553392306371ae5244c33fafe47ebe18c9930a1c997b3f47f3",
+      "timestamp": "2025-08-05T17:43:11.807880",
+      "domain": "physics",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 1614,
+      "description": "Missing bulletproof test function for physics"
+    },
+    {
+      "hash": "a473b6798959a7553392306371ae5244c33fafe47ebe18c9930a1c997b3f47f3",
+      "timestamp": "2025-08-05T17:43:13.015353",
+      "domain": "seismology",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 1614,
+      "description": "Missing bulletproof test function for seismology"
+    },
+    {
+      "hash": "a473b6798959a7553392306371ae5244c33fafe47ebe18c9930a1c997b3f47f3",
+      "timestamp": "2025-08-05T17:43:35.489271",
+      "domain": "bio",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 1614,
+      "description": "Missing bulletproof test function for bio"
+    },
+    {
+      "hash": "a473b6798959a7553392306371ae5244c33fafe47ebe18c9930a1c997b3f47f3",
+      "timestamp": "2025-08-05T17:43:36.603971",
+      "domain": "climate",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 1614,
+      "description": "Missing bulletproof test function for climate"
+    },
+    {
+      "hash": "a473b6798959a7553392306371ae5244c33fafe47ebe18c9930a1c997b3f47f3",
+      "timestamp": "2025-08-05T17:43:37.748175",
+      "domain": "coding_agentic",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 1614,
+      "description": "Missing bulletproof test function for coding_agentic"
+    },
+    {
+      "hash": "a473b6798959a7553392306371ae5244c33fafe47ebe18c9930a1c997b3f47f3",
+      "timestamp": "2025-08-05T17:43:38.889688",
+      "domain": "math",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 1614,
+      "description": "Missing bulletproof test function for math"
+    },
+    {
+      "hash": "a473b6798959a7553392306371ae5244c33fafe47ebe18c9930a1c997b3f47f3",
+      "timestamp": "2025-08-05T17:43:40.060941",
+      "domain": "math_adversarial",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 1614,
+      "description": "Missing bulletproof test function for math_adversarial"
+    },
+    {
+      "hash": "a473b6798959a7553392306371ae5244c33fafe47ebe18c9930a1c997b3f47f3",
+      "timestamp": "2025-08-05T17:43:41.195228",
+      "domain": "math_cli",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 1614,
+      "description": "Missing bulletproof test function for math_cli"
+    },
+    {
+      "hash": "a473b6798959a7553392306371ae5244c33fafe47ebe18c9930a1c997b3f47f3",
+      "timestamp": "2025-08-05T17:43:42.324909",
+      "domain": "physics",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 1614,
+      "description": "Missing bulletproof test function for physics"
+    },
+    {
+      "hash": "a473b6798959a7553392306371ae5244c33fafe47ebe18c9930a1c997b3f47f3",
+      "timestamp": "2025-08-05T17:43:43.522096",
+      "domain": "seismology",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 1614,
+      "description": "Missing bulletproof test function for seismology"
+    },
+    {
+      "hash": "a473b6798959a7553392306371ae5244c33fafe47ebe18c9930a1c997b3f47f3",
+      "timestamp": "2025-08-05T17:44:26.260480",
+      "domain": "bio",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 1614,
+      "description": "Missing bulletproof test function for bio"
+    },
+    {
+      "hash": "a473b6798959a7553392306371ae5244c33fafe47ebe18c9930a1c997b3f47f3",
+      "timestamp": "2025-08-05T17:44:27.431139",
+      "domain": "climate",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 1614,
+      "description": "Missing bulletproof test function for climate"
+    },
+    {
+      "hash": "a473b6798959a7553392306371ae5244c33fafe47ebe18c9930a1c997b3f47f3",
+      "timestamp": "2025-08-05T17:44:28.557892",
+      "domain": "coding_agentic",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 1614,
+      "description": "Missing bulletproof test function for coding_agentic"
+    },
+    {
+      "hash": "a473b6798959a7553392306371ae5244c33fafe47ebe18c9930a1c997b3f47f3",
+      "timestamp": "2025-08-05T17:44:29.774630",
+      "domain": "math",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 1614,
+      "description": "Missing bulletproof test function for math"
+    },
+    {
+      "hash": "a473b6798959a7553392306371ae5244c33fafe47ebe18c9930a1c997b3f47f3",
+      "timestamp": "2025-08-05T17:44:30.919960",
+      "domain": "math_adversarial",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 1614,
+      "description": "Missing bulletproof test function for math_adversarial"
+    },
+    {
+      "hash": "a473b6798959a7553392306371ae5244c33fafe47ebe18c9930a1c997b3f47f3",
+      "timestamp": "2025-08-05T17:44:32.080503",
+      "domain": "math_cli",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 1614,
+      "description": "Missing bulletproof test function for math_cli"
+    },
+    {
+      "hash": "a473b6798959a7553392306371ae5244c33fafe47ebe18c9930a1c997b3f47f3",
+      "timestamp": "2025-08-05T17:44:33.182526",
+      "domain": "physics",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 1614,
+      "description": "Missing bulletproof test function for physics"
+    },
+    {
+      "hash": "a473b6798959a7553392306371ae5244c33fafe47ebe18c9930a1c997b3f47f3",
+      "timestamp": "2025-08-05T17:44:34.314336",
+      "domain": "seismology",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 1614,
+      "description": "Missing bulletproof test function for seismology"
+    },
+    {
+      "hash": "c656dbe6468e727868e006ce2e594927ce3fe3b4998f6e93647df3e81a513120",
+      "timestamp": "2025-08-05T17:56:58.691266",
+      "domain": "bio",
+      "type": "missing_function",
+      "passed": false,
+      "code_length": 2249,
+      "description": "Missing bulletproof test function for bio"
+    },
+    {
+      "hash": "5bbb5503b9957dbc950a5b92965245d431b6c87539a0cf708928b35c2e2b0ec1",
+      "timestamp": "2025-08-05T17:57:36.335083",
+      "domain": "climate",
+      "type": "missing_function",
+      "passed": false,
+      "code_length": 1460,
+      "description": "Missing bulletproof test function for climate"
+    },
+    {
+      "hash": "db0dcb526a375b791996379b4805cce8be5a4ed9057e8f224985b6a401785dee",
+      "timestamp": "2025-08-05T17:58:14.956143",
+      "domain": "coding_agentic",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 1842,
+      "description": "Missing bulletproof test function for coding_agentic"
+    },
+    {
+      "hash": "f0ff1c7eeae6d9cc17fc8b4e4b867776bd2a89fd0b3527578c07ac71ab2b01da",
+      "timestamp": "2025-08-05T17:58:52.101332",
+      "domain": "math",
+      "type": "missing_function",
+      "passed": false,
+      "code_length": 1662,
+      "description": "Missing bulletproof test function for math"
+    },
+    {
+      "hash": "663bda0d8af5faa090081409a365639afe230ea2b4779f2283fb9775e439816c",
+      "timestamp": "2025-08-05T17:59:21.764065",
+      "domain": "math_adversarial",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 1079,
+      "description": "Missing bulletproof test function for math_adversarial"
+    },
+    {
+      "hash": "195d04b981680aeb1dc9866af13c52bfdee47369d0ce703d4606289594cf9e71",
+      "timestamp": "2025-08-05T18:00:06.282713",
+      "domain": "math_cli",
+      "type": "missing_function",
+      "passed": false,
+      "code_length": 1937,
+      "description": "Missing bulletproof test function for math_cli"
+    },
+    {
+      "hash": "a651959f5adba052d884eb2609aa32224585073daedbee81eb748c909fa0dca8",
+      "timestamp": "2025-08-05T18:00:51.024561",
+      "domain": "physics",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 2045,
+      "description": "Missing bulletproof test function for physics"
+    },
+    {
+      "hash": "56062d50ea328bc87174e4a326326bfbabfd03fd14eebc7ddf92a4332e05821e",
+      "timestamp": "2025-08-05T18:01:25.530475",
+      "domain": "seismology",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 1385,
+      "description": "Missing bulletproof test function for seismology"
+    },
+    {
+      "hash": "207f9a3ad8e42f16a0906762bdcbdf018cc7ce7200e4ed64ab70b6d56212a1c2",
+      "timestamp": "2025-08-05T18:10:15.390075",
+      "domain": "bio",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 1970,
+      "description": "Missing bulletproof test function for bio"
+    },
+    {
+      "hash": "d8af322df976bea430442f95c6c1674f15474d6f738dea0900b627352f0a2c02",
+      "timestamp": "2025-08-05T18:10:55.350579",
+      "domain": "climate",
+      "type": "missing_function",
+      "passed": false,
+      "code_length": 1629,
+      "description": "Missing bulletproof test function for climate"
+    },
+    {
+      "hash": "d7d8e96d8e4fd61380f7ddc6a7fe694de7e996921deb1fc37c7c82fb27999c63",
+      "timestamp": "2025-08-05T18:11:37.407716",
+      "domain": "coding_agentic",
+      "type": "missing_function",
+      "passed": false,
+      "code_length": 1783,
+      "description": "Missing bulletproof test function for coding_agentic"
+    },
+    {
+      "hash": "f496d7ddc69e7a7f0dbaba47a40c14e48e92d57af6360a2d61980840c84b4cbe",
+      "timestamp": "2025-08-05T18:12:24.685634",
+      "domain": "math",
+      "type": "missing_function",
+      "passed": false,
+      "code_length": 2045,
+      "description": "Missing bulletproof test function for math"
+    },
+    {
+      "hash": "29bc781e7b7be4b32f1fb2628d5741df50a601d6dc5cd10b01e3b2dd6df78441",
+      "timestamp": "2025-08-05T18:13:13.462911",
+      "domain": "math_adversarial",
+      "type": "missing_function",
+      "passed": false,
+      "code_length": 2307,
+      "description": "Missing bulletproof test function for math_adversarial"
+    },
+    {
+      "hash": "04487da3abba5424ea7e3012190b1303e39bf18e6f1f91ed44f42fd1d43e9d8f",
+      "timestamp": "2025-08-05T18:13:53.257511",
+      "domain": "math_cli",
+      "type": "missing_function",
+      "passed": false,
+      "code_length": 1479,
+      "description": "Missing bulletproof test function for math_cli"
+    },
+    {
+      "hash": "dd9f83aa74d1be17810f863acf61e74d9566e6cb22da62fd18415e93ed82c6cb",
+      "timestamp": "2025-08-05T18:14:28.887531",
+      "domain": "physics",
+      "type": "missing_function",
+      "passed": false,
+      "code_length": 1384,
+      "description": "Missing bulletproof test function for physics"
+    },
+    {
+      "hash": "a11eff474f9a6bff75e2a571732f5e9a4d5c9cfd1e9019c88ee13425eb263b70",
+      "timestamp": "2025-08-05T18:15:10.778014",
+      "domain": "seismology",
+      "type": "missing_function",
+      "passed": false,
+      "code_length": 2030,
+      "description": "Missing bulletproof test function for seismology"
+    },
+    {
+      "hash": "0d158b8cc139b1238dca5f90c9e524d8bf9bc21a94732acc4d64be96fb2f2809",
+      "timestamp": "2025-08-05T18:24:57.950019",
+      "domain": "bio",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 1343,
+      "description": "Missing bulletproof test function for bio"
+    },
+    {
+      "hash": "2ce822e59f944e1fadaf20eb7aa0a8f4291e856418f11f71a6493f809b9d5944",
+      "timestamp": "2025-08-05T18:25:37.145992",
+      "domain": "climate",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 1687,
+      "description": "Missing bulletproof test function for climate"
+    },
+    {
+      "hash": "644e21ad5cab48a9c0dc86e943dd7c743a58b0a98ec3660f372de259ea9b49a7",
+      "timestamp": "2025-08-05T18:26:28.297967",
+      "domain": "coding_agentic",
+      "type": "missing_function",
+      "passed": false,
+      "code_length": 2453,
+      "description": "Missing bulletproof test function for coding_agentic"
+    },
+    {
+      "hash": "392dec17b65e461284de3b23a436694ec76318382267c859e67c6843854e9a93",
+      "timestamp": "2025-08-05T18:27:16.637802",
+      "domain": "math",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 1893,
+      "description": "Missing bulletproof test function for math"
+    },
+    {
+      "hash": "521539479a303e0462fe35a36d819505d2f5b0224bfb3caed5e50f490a98b24a",
+      "timestamp": "2025-08-05T18:28:04.210310",
+      "domain": "math_adversarial",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 1714,
+      "description": "Missing bulletproof test function for math_adversarial"
+    },
+    {
+      "hash": "e74d8d58e890650676a0420db08b906ad1c8d59e478105fc7cad4b460d7c56d6",
+      "timestamp": "2025-08-05T18:28:44.640317",
+      "domain": "math_cli",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 1258,
+      "description": "Missing bulletproof test function for math_cli"
+    },
+    {
+      "hash": "d041513ef26cdbb225815fbe791dd2cae3f6e0057583023bb49141c60ee05ee0",
+      "timestamp": "2025-08-05T18:29:25.681170",
+      "domain": "physics",
+      "type": "missing_function",
+      "passed": false,
+      "code_length": 1801,
+      "description": "Missing bulletproof test function for physics"
+    },
+    {
+      "hash": "e004b99a665f1d3fe1facf63e577a9e37fb13fe837cbf6c8cb137868520a1b98",
+      "timestamp": "2025-08-05T18:30:24.523092",
+      "domain": "seismology",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 545,
+      "description": "Missing bulletproof test function for seismology"
+    },
+    {
+      "hash": "a148bb260627d385e16655081d8e02cce2e7a34aa978ee2e7654fa22a2730ca7",
+      "timestamp": "2025-08-05T18:34:48.137471",
+      "domain": "bio",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 1420,
+      "description": "Missing bulletproof test function for bio"
+    },
+    {
+      "hash": "e022613379bb75c9190748ee0f79bbc309a0d28312ffe625e3993952d10cb5ca",
+      "timestamp": "2025-08-05T18:35:28.525571",
+      "domain": "climate",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 1665,
+      "description": "Missing bulletproof test function for climate"
+    },
+    {
+      "hash": "4be3ce41bbcaf59236beed3520c1c0d634aec4d79e033a4a1ebd48fd6fc0f842",
+      "timestamp": "2025-08-05T18:36:14.998120",
+      "domain": "coding_agentic",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 2048,
+      "description": "Missing bulletproof test function for coding_agentic"
+    },
+    {
+      "hash": "b08939813094e9f597ba61313fa7190e078fc95118d31d77d9e84ff97cbdee1f",
+      "timestamp": "2025-08-05T18:36:44.522147",
+      "domain": "math",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 1170,
+      "description": "Missing bulletproof test function for math"
+    },
+    {
+      "hash": "298a7a54a1660e7a238dc0f15337fc317a345e586a499e25d7eb284f427839f0",
+      "timestamp": "2025-08-05T18:37:51.848931",
+      "domain": "math_adversarial",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 3302,
+      "description": "Missing bulletproof test function for math_adversarial"
+    },
+    {
+      "hash": "5ba93b3a2d42d9cad2fbe48f82ec4cc3e95215cda73a959c13e9f65b562da812",
+      "timestamp": "2025-08-05T18:38:45.469178",
+      "domain": "math_cli",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 2454,
+      "description": "Missing bulletproof test function for math_cli"
+    },
+    {
+      "hash": "495d75d9bfdb2f41a99b0ac95a6adb4e97991014ddf813eb717c9a23fd1432cd",
+      "timestamp": "2025-08-05T18:39:38.606086",
+      "domain": "physics",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 2404,
+      "description": "Missing bulletproof test function for physics"
+    },
+    {
+      "hash": "913c0b62d7ee1c8974ecaa18526915d037270b52c8142e50166881566559668f",
+      "timestamp": "2025-08-05T18:40:30.822698",
+      "domain": "seismology",
+      "type": "missing_function",
+      "passed": false,
+      "code_length": 2321,
+      "description": "Missing bulletproof test function for seismology"
+    },
+    {
+      "hash": "76905de726eb8578d3783dea05c524af7998261a2ea65520f3e698ee4e1d6517",
+      "timestamp": "2025-08-05T18:42:58.050623",
+      "domain": "bio",
+      "type": "missing_function",
+      "passed": false,
+      "code_length": 1682,
+      "description": "Missing bulletproof test function for bio"
+    },
+    {
+      "hash": "1a177a2380cd6c8b6928e3188b68fd8e6b79414cce518e9527a44722e7fa9b01",
+      "timestamp": "2025-08-05T18:43:45.271772",
+      "domain": "climate",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 2224,
+      "description": "Missing bulletproof test function for climate"
+    },
+    {
+      "hash": "cbabe25881d87e9ed436471b1ecc35d3e67c173bfc3c60759f572c97b09f9f58",
+      "timestamp": "2025-08-05T18:44:36.565298",
+      "domain": "coding_agentic",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 2788,
+      "description": "Missing bulletproof test function for coding_agentic"
+    },
+    {
+      "hash": "94799feeb0f8b49dc85f828c5c5d018d2729e91f9cbc50262a544b85b45507c2",
+      "timestamp": "2025-08-05T18:45:06.525754",
+      "domain": "math",
+      "type": "missing_function",
+      "passed": false,
+      "code_length": 1009,
+      "description": "Missing bulletproof test function for math"
+    },
+    {
+      "hash": "d9cb6ecd421b936e5d8366b62d8a25ca902fd6fb6e0d21a0bf0672e56c7233dc",
+      "timestamp": "2025-08-05T18:45:54.002101",
+      "domain": "math_adversarial",
+      "type": "missing_function",
+      "passed": false,
+      "code_length": 2784,
+      "description": "Missing bulletproof test function for math_adversarial"
+    },
+    {
+      "hash": "5cf18463a146fce959ea70acff47b26e345205b7e4c324f723496e2d0b74afeb",
+      "timestamp": "2025-08-05T18:46:35.970046",
+      "domain": "math_cli",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 1588,
+      "description": "Missing bulletproof test function for math_cli"
+    },
+    {
+      "hash": "a5955abd2ffd68204e75b7e5e607ba823608153a46775c6ca074d360e5f27c57",
+      "timestamp": "2025-08-05T18:47:25.299310",
+      "domain": "physics",
+      "type": "missing_function",
+      "passed": false,
+      "code_length": 1675,
+      "description": "Missing bulletproof test function for physics"
+    },
+    {
+      "hash": "e37f10f2b20a5bd00e2ebfc7e67f6d6cc926268377f7ab163b23cfb3d81f9d56",
+      "timestamp": "2025-08-05T18:48:06.388417",
+      "domain": "seismology",
+      "type": "missing_function",
+      "passed": false,
+      "code_length": 1644,
+      "description": "Missing bulletproof test function for seismology"
+    },
+    {
+      "hash": "303cd819a8c23c78e6907be6ed15c40d6376a4ea8aeb5ecd9c8c098039664818",
+      "timestamp": "2025-08-05T18:55:04.737214",
+      "domain": "bio",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 1788,
+      "description": "Missing bulletproof test function for bio"
+    },
+    {
+      "hash": "586071d2a70bd6dfdd282bd5df3872a7a99a3762c6d156afb51120b2f77a2460",
+      "timestamp": "2025-08-05T18:55:46.816782",
+      "domain": "climate",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 1804,
+      "description": "Missing bulletproof test function for climate"
+    },
+    {
+      "hash": "335482b33de6a405855c69a94ce342b7d19fc82fce48ad4a0b05eb862f4f7f34",
+      "timestamp": "2025-08-05T18:56:27.926174",
+      "domain": "coding_agentic",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 1832,
+      "description": "Missing bulletproof test function for coding_agentic"
+    },
+    {
+      "hash": "2a18f945a211418422a6cf8b881f26305abd38505e20c81e75964d3710cdc7b8",
+      "timestamp": "2025-08-05T18:57:11.044708",
+      "domain": "math",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 1792,
+      "description": "Missing bulletproof test function for math"
+    },
+    {
+      "hash": "e14e6465ff008d13fb4f8a82ce8f4ea690e1e5b6254566ead5b2d0835ec2a52d",
+      "timestamp": "2025-08-05T18:57:55.558982",
+      "domain": "math_adversarial",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 1840,
+      "description": "Missing bulletproof test function for math_adversarial"
+    },
+    {
+      "hash": "99ae8130e5b19f5d23707ec579eb513db0a99ed73702b6535946654522e0692a",
+      "timestamp": "2025-08-05T18:58:26.948067",
+      "domain": "math_cli",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 1808,
+      "description": "Missing bulletproof test function for math_cli"
+    },
+    {
+      "hash": "d541cf9a037ddb2aff26e96cd9f032749ebdbc4cf9c9536375663f3c9484acbe",
+      "timestamp": "2025-08-05T18:59:07.951812",
+      "domain": "physics",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 1804,
+      "description": "Missing bulletproof test function for physics"
+    },
+    {
+      "hash": "1ec05bd8ade855e56e811a152cfa28e0b012bb4853b0c92fdb92c58e20e3d1fc",
+      "timestamp": "2025-08-05T18:59:43.166555",
+      "domain": "seismology",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 1816,
+      "description": "Missing bulletproof test function for seismology"
+    },
+    {
+      "hash": "303cd819a8c23c78e6907be6ed15c40d6376a4ea8aeb5ecd9c8c098039664818",
+      "timestamp": "2025-08-05T19:04:42.253745",
+      "domain": "bio",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 1788,
+      "description": "Missing bulletproof test function for bio"
+    },
+    {
+      "hash": "586071d2a70bd6dfdd282bd5df3872a7a99a3762c6d156afb51120b2f77a2460",
+      "timestamp": "2025-08-05T19:05:31.429894",
+      "domain": "climate",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 1804,
+      "description": "Missing bulletproof test function for climate"
+    },
+    {
+      "hash": "335482b33de6a405855c69a94ce342b7d19fc82fce48ad4a0b05eb862f4f7f34",
+      "timestamp": "2025-08-05T19:06:16.252594",
+      "domain": "coding_agentic",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 1832,
+      "description": "Missing bulletproof test function for coding_agentic"
+    },
+    {
+      "hash": "2a18f945a211418422a6cf8b881f26305abd38505e20c81e75964d3710cdc7b8",
+      "timestamp": "2025-08-05T19:06:58.113813",
+      "domain": "math",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 1792,
+      "description": "Missing bulletproof test function for math"
+    },
+    {
+      "hash": "e14e6465ff008d13fb4f8a82ce8f4ea690e1e5b6254566ead5b2d0835ec2a52d",
+      "timestamp": "2025-08-05T19:07:37.284889",
+      "domain": "math_adversarial",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 1840,
+      "description": "Missing bulletproof test function for math_adversarial"
+    },
+    {
+      "hash": "99ae8130e5b19f5d23707ec579eb513db0a99ed73702b6535946654522e0692a",
+      "timestamp": "2025-08-05T19:08:21.930663",
+      "domain": "math_cli",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 1808,
+      "description": "Missing bulletproof test function for math_cli"
+    },
+    {
+      "hash": "d541cf9a037ddb2aff26e96cd9f032749ebdbc4cf9c9536375663f3c9484acbe",
+      "timestamp": "2025-08-05T19:09:13.469804",
+      "domain": "physics",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 1804,
+      "description": "Missing bulletproof test function for physics"
+    },
+    {
+      "hash": "1ec05bd8ade855e56e811a152cfa28e0b012bb4853b0c92fdb92c58e20e3d1fc",
+      "timestamp": "2025-08-05T19:09:53.988862",
+      "domain": "seismology",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 1816,
+      "description": "Missing bulletproof test function for seismology"
+    },
+    {
+      "hash": "303cd819a8c23c78e6907be6ed15c40d6376a4ea8aeb5ecd9c8c098039664818",
+      "timestamp": "2025-08-05T19:24:07.590208",
+      "domain": "bio",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 1788,
+      "description": "Missing bulletproof test function for bio"
+    },
+    {
+      "hash": "586071d2a70bd6dfdd282bd5df3872a7a99a3762c6d156afb51120b2f77a2460",
+      "timestamp": "2025-08-05T19:24:48.217029",
+      "domain": "climate",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 1804,
+      "description": "Missing bulletproof test function for climate"
+    },
+    {
+      "hash": "335482b33de6a405855c69a94ce342b7d19fc82fce48ad4a0b05eb862f4f7f34",
+      "timestamp": "2025-08-05T19:25:26.120361",
+      "domain": "coding_agentic",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 1832,
+      "description": "Missing bulletproof test function for coding_agentic"
+    },
+    {
+      "hash": "2a18f945a211418422a6cf8b881f26305abd38505e20c81e75964d3710cdc7b8",
+      "timestamp": "2025-08-05T19:26:00.893651",
+      "domain": "math",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 1792,
+      "description": "Missing bulletproof test function for math"
+    },
+    {
+      "hash": "e14e6465ff008d13fb4f8a82ce8f4ea690e1e5b6254566ead5b2d0835ec2a52d",
+      "timestamp": "2025-08-05T19:26:51.088887",
+      "domain": "math_adversarial",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 1840,
+      "description": "Missing bulletproof test function for math_adversarial"
+    },
+    {
+      "hash": "99ae8130e5b19f5d23707ec579eb513db0a99ed73702b6535946654522e0692a",
+      "timestamp": "2025-08-05T19:27:34.593814",
+      "domain": "math_cli",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 1808,
+      "description": "Missing bulletproof test function for math_cli"
+    },
+    {
+      "hash": "d541cf9a037ddb2aff26e96cd9f032749ebdbc4cf9c9536375663f3c9484acbe",
+      "timestamp": "2025-08-05T19:28:19.459673",
+      "domain": "physics",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 1804,
+      "description": "Missing bulletproof test function for physics"
+    },
+    {
+      "hash": "1ec05bd8ade855e56e811a152cfa28e0b012bb4853b0c92fdb92c58e20e3d1fc",
+      "timestamp": "2025-08-05T19:29:03.426473",
+      "domain": "seismology",
+      "type": "missing_function",
+      "passed": true,
+      "code_length": 1816,
+      "description": "Missing bulletproof test function for seismology"
+    }
+  ],
+  "challenges": [],
+  "cycles": [],
+  "metrics": {
+    "total_changes": 104,
+    "successful_tests": 0,
+    "failed_tests": 104,
+    "total_challenges": 0,
+    "cycles_completed": 0
+  }
+}

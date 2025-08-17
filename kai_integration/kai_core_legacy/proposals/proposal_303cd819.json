@@ -1,0 +1,11 @@
+{
+  "hash": "303cd819a8c23c78e6907be6ed15c40d6376a4ea8aeb5ecd9c8c098039664818",
+  "timestamp": "2025-08-05T19:24:07.749503",
+  "domain": "bio",
+  "type": "missing_function",
+  "code": "\nimport numpy as np\nimport hashlib\nfrom typing import Dict, Any\n\n\ndef bio_bulletproof_test(data: np.ndarray, **kwargs) -> Dict[str, Any]:\n    \"\"\"\n    bio domain test with bulletproof validation.\n    \n    Parameters:\n    -----------\n    data : np.ndarray\n        Domain-specific data\n    **kwargs : Additional parameters\n        \n    Returns:\n    --------\n    dict : Bulletproof test results with pass/fail criteria\n    \"\"\"\n    try:\n        # Basic data validation\n        if data.size == 0:\n            raise ValueError(\"Data cannot be empty\")\n        \n        # Statistical analysis\n        mean_val = float(np.mean(data))\n        std_val = float(np.std(data))\n        \n        # Effect size calculation\n        if data.ndim == 2 and data.shape[1] >= 2:\n            effect_size = (np.mean(data[:, 1]) - np.mean(data[:, 0])) / np.std(data)\n        else:\n            effect_size = 0.0\n        \n        # Pass/fail criteria\n        pass_fail = {\n            \"data_valid\": not np.any(np.isnan(data)),\n            \"sample_size_adequate\": data.size >= 10,\n            \"effect_size_meaningful\": abs(effect_size) >= 0.1\n        }\n        \n        return {\n            \"test_name\": \"bio_bulletproof_test\",\n            \"pass_fail\": pass_fail,\n            \"metrics\": {\n                \"mean\": mean_val,\n                \"std\": std_val,\n                \"effect_size\": float(effect_size),\n                \"sample_size\": data.size\n            },\n            \"evidence\": {\n                \"raw_data_hash\": hashlib.sha256(data.tobytes()).hexdigest(),\n                \"data_shape\": data.shape\n            }\n        }\n        \n    except Exception as e:\n        return {\n            \"test_name\": \"bio_bulletproof_test\",\n            \"error\": str(e),\n            \"pass_fail\": {\"test_failed\": True}\n        }\n",
+  "description": "Missing bulletproof test function for bio",
+  "status": "pending_review",
+  "reviewer": null,
+  "approved": false
+}

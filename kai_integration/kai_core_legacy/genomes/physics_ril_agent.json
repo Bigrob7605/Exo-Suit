@@ -1,0 +1,41 @@
+{
+  "name": "physics_ril_agent",
+  "description": "RIL agent specialized in physical sciences",
+  "instructions": "Apply physical laws and experimental validation",
+  "tools": [
+    {
+      "name": "recursive_reasoning",
+      "description": "Perform recursive intelligence operations",
+      "safety_level": 1
+    },
+    {
+      "name": "self_modification",
+      "description": "Modify own capabilities and instructions",
+      "safety_level": 2
+    },
+    {
+      "name": "cross_domain_reasoning",
+      "description": "Apply insights across scientific domains",
+      "safety_level": 1
+    },
+    {
+      "name": "audit_trail",
+      "description": "Maintain immutable audit trails",
+      "safety_level": 1
+    }
+  ],
+  "handoffs": [
+    "math_agent",
+    "psychology_agent",
+    "physics_agent"
+  ],
+  "safety_level": 1,
+  "model_settings": {
+    "temperature": 0.1,
+    "max_tokens": 4096,
+    "top_p": 0.9,
+    "recursive_depth": 2
+  },
+  "created_at": 1754358680,
+  "version": "1.0.0"
+}

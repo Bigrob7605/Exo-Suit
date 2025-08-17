@@ -1,0 +1,11 @@
+{
+  "hash": "5cf18463a146fce959ea70acff47b26e345205b7e4c324f723496e2d0b74afeb",
+  "timestamp": "2025-08-05T18:46:36.305390",
+  "domain": "math_cli",
+  "type": "missing_function",
+  "code": "import numpy as np\nimport pandas as pd\nfrom scipy import stats\nimport hashlib\nfrom typing import Dict, Any\n\ndef math_cli_bulletproof_test(data: pd.DataFrame) -> Dict[str, Any]:\n    # Validate user input (optional depending on the data source)\n    if not isinstance(data, pd.DataFrame):\n        raise ValueError(\"Invalid DataFrame provided\")\n\n    data_hash = hashlib.sha256(data.to_csv().encode()).hexdigest()\n\n    try:\n        # Data quality validation\n        if np.allclose(data[\"column1\"].dropna(), data[\"column1\"].mean(), atol=0.05*data[\"column1\"].std()) is False:\n            return {\"error\": \"Data Quality Violation\", \"test_failed\": True}\n\n        # Appropriate statistical tests (example: t-test)\n        if len(data) <= 30:\n            effect_size = np.abs(stats.ttest_ind(data[\"column1\"], data[\"column2\"])[0])\n            power = stats.norm.cdf(-np.abs(stats.ttest_ind(data[\"column1\"], data[\"column2\"])[0]), len(data)-2)\n        else:\n            effect_size, _, p_val, _ = stats.ttest_indfromstats(data[\"column1\"].dropna().tolist(), data[\"column2\"].dropna().tolist(), equal_var=False)\n            power = 1 - stats.norm.cdf(-np.abs(effect_size), len(data)-2)\n\n        # Pass/fail criteria (example: p-value < 0.05)\n        pass_fail = {\"criteria\": p_val < 0.05}\n\n        return {\n            \"test_name\": \"math_cli_bulletproof_test\",\n            \"pass_fail\": pass_fail,\n            \"metrics\": {\"effect_size\": effect_size, \"power\": power},\n            \"evidence\": {\"data_hash\": data_hash}\n        }\n    except Exception as e:\n        return {\"error\": str(e), \"test_failed\": True}",
+  "description": "Missing bulletproof test function for math_cli",
+  "status": "pending_review",
+  "reviewer": null,
+  "approved": false
+}

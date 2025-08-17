@@ -541,7 +541,7 @@ def main():
     print("="*60)
     
     if stats['files_removed'] > 0:
-        print("✅ SUCCESS: Legacy tools consolidated into V5 system!")
+        print("SUCCESS: Legacy tools consolidated into V5 system!")
     else:
         print("ℹ️  INFO: No legacy tools found to consolidate")
     

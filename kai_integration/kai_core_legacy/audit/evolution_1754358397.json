@@ -1,0 +1,15 @@
+{
+  "timestamp": "2025-08-04T21:46:37.053939",
+  "original_name": "test_ril_agent",
+  "original_seed": "f832bd8b2f0dc00046a5ffe27459d09dc6b9f928c7b66dcbc1af8c42d06a4476",
+  "evolved_name": "test_ril_agent",
+  "new_seed": "7c6f028a13c9f3f1035f1069d1f06114e78b1b0a38744fa7eda7b99079399885",
+  "mutations": {
+    "name_changed": false,
+    "description_changed": true,
+    "instructions_changed": false,
+    "tools_changed": false,
+    "handoffs_changed": false,
+    "safety_level_changed": false
+  }
+}

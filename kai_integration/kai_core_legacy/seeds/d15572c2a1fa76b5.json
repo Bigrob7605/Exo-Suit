@@ -1,0 +1,9 @@
+{
+  "name": "test_ril_agent",
+  "original_size": 821,
+  "compressed_size": 388,
+  "compression_ratio": 2.115979381443299,
+  "codec": "zlib_fallback",
+  "created_at": 1754358396,
+  "data_type": "bytes"
+}

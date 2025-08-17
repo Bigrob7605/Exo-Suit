@@ -1,0 +1,121 @@
+{
+  "operation": "ril_recursive_reasoning",
+  "timestamp": "2025-08-04T21:49:20.519639",
+  "data_hash": "b47c36634675633766f35e22bd0b6314f9b1fcb34468efb8d55a212cde4039b5",
+  "data": {
+    "agent_name": "simple_test_agent",
+    "input_data": {
+      "test": "data",
+      "domain": "math"
+    },
+    "depth": 3,
+    "timestamp": "2025-08-04T21:49:20.519604",
+    "recursive_operations": [
+      {
+        "level": 0,
+        "reasoning_type": "recursive",
+        "input": {
+          "test": "data",
+          "domain": "math"
+        },
+        "output": {
+          "level": 0,
+          "patterns_applied": [
+            "self_reference",
+            "cross_domain",
+            "recursive_compression",
+            "audit_validation"
+          ],
+          "insights": [
+            "Recursive depth 0 analysis completed",
+            "Cross-domain reasoning applied at level 0",
+            "Symbolic compression achieved at level 0",
+            "Audit trail validated at level 0"
+          ],
+          "confidence": 0.9,
+          "timestamp": "2025-08-04T21:49:20.519626"
+        },
+        "timestamp": "2025-08-04T21:49:20.519627"
+      },
+      {
+        "level": 1,
+        "reasoning_type": "recursive",
+        "input": {
+          "level": 0,
+          "patterns_applied": [
+            "self_reference",
+            "cross_domain",
+            "recursive_compression",
+            "audit_validation"
+          ],
+          "insights": [
+            "Recursive depth 0 analysis completed",
+            "Cross-domain reasoning applied at level 0",
+            "Symbolic compression achieved at level 0",
+            "Audit trail validated at level 0"
+          ],
+          "confidence": 0.9,
+          "timestamp": "2025-08-04T21:49:20.519626"
+        },
+        "output": {
+          "level": 1,
+          "patterns_applied": [
+            "self_reference",
+            "cross_domain",
+            "recursive_compression",
+            "audit_validation"
+          ],
+          "insights": [
+            "Recursive depth 1 analysis completed",
+            "Cross-domain reasoning applied at level 1",
+            "Symbolic compression achieved at level 1",
+            "Audit trail validated at level 1"
+          ],
+          "confidence": 0.8,
+          "timestamp": "2025-08-04T21:49:20.519632"
+        },
+        "timestamp": "2025-08-04T21:49:20.519633"
+      },
+      {
+        "level": 2,
+        "reasoning_type": "recursive",
+        "input": {
+          "level": 1,
+          "patterns_applied": [
+            "self_reference",
+            "cross_domain",
+            "recursive_compression",
+            "audit_validation"
+          ],
+          "insights": [
+            "Recursive depth 1 analysis completed",
+            "Cross-domain reasoning applied at level 1",
+            "Symbolic compression achieved at level 1",
+            "Audit trail validated at level 1"
+          ],
+          "confidence": 0.8,
+          "timestamp": "2025-08-04T21:49:20.519632"
+        },
+        "output": {
+          "level": 2,
+          "patterns_applied": [
+            "self_reference",
+            "cross_domain",
+            "recursive_compression",
+            "audit_validation"
+          ],
+          "insights": [
+            "Recursive depth 2 analysis completed",
+            "Cross-domain reasoning applied at level 2",
+            "Symbolic compression achieved at level 2",
+            "Audit trail validated at level 2"
+          ],
+          "confidence": 0.7,
+          "timestamp": "2025-08-04T21:49:20.519636"
+        },
+        "timestamp": "2025-08-04T21:49:20.519637"
+      }
+    ]
+  },
+  "mmh_compression": true
+}

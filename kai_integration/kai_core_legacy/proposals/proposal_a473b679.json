@@ -1,0 +1,11 @@
+{
+  "hash": "a473b6798959a7553392306371ae5244c33fafe47ebe18c9930a1c997b3f47f3",
+  "timestamp": "2025-08-05T17:44:34.681847",
+  "domain": "seismology",
+  "type": "missing_function",
+  "code": "import numpy as np\nimport hashlib\nfrom scipy import stats\nfrom typing import Dict, Any\ndef psychology_bulletproof_test(data: np.ndarray, **kwargs) -> Dict[str, Any]:\n    \"\"\"Psychology domain test with bulletproof statistical analysis.\"\"\"\n    try:\n        \n        # Data quality checks\n        if data.ndim != 2:\n            raise ValueError(\"Data must be 2D array (participants x conditions)\")\n        \n        n_participants, n_conditions = data.shape\n        \n        # Effect size calculation (Cohen's d)\n        condition_means = np.mean(data, axis=0)\n        pooled_std = np.sqrt(np.mean(np.var(data, axis=0)))\n        cohens_d = (condition_means[1] - condition_means[0]) / pooled_std\n        \n        # Statistical test (t-test)\n        t_stat, p_value = stats.ttest_rel(data[:, 0], data[:, 1])\n        \n        # Data hash for reproducibility\n        data_hash = hashlib.sha256(data.tobytes()).hexdigest()\n        \n        return {\n            \"test_name\": \"psychology_bulletproof_test\",\n            \"pass_fail\": {\n                \"effect_size_adequate\": abs(cohens_d) >= 0.2,\n                \"statistical_significant\": p_value < 0.05,\n                \"sample_size_adequate\": n_participants >= 30\n            },\n            \"metrics\": {\n                \"effect_size\": cohens_d,\n                \"p_value\": p_value,\n                \"sample_size\": n_participants\n            },\n            \"evidence\": {\n                \"data_hash\": data_hash,\n                \"analysis_timestamp\": \"2025-01-04T17:00:00\"\n            }\n        }\n    except Exception as e:\n        return {\"error\": str(e), \"test_failed\": True}\n",
+  "description": "Missing bulletproof test function for seismology",
+  "status": "pending_review",
+  "reviewer": null,
+  "approved": false
+}

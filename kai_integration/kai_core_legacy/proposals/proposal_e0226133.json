@@ -1,0 +1,11 @@
+{
+  "hash": "e022613379bb75c9190748ee0f79bbc309a0d28312ffe625e3993952d10cb5ca",
+  "timestamp": "2025-08-05T18:35:28.867444",
+  "domain": "climate",
+  "type": "missing_function",
+  "code": "import numpy as np\nimport pandas as pd\nfrom scipy import stats\nimport hashlib\nfrom typing import Dict, Any\nfrom scipy.stats import ttest_1samp\n\ndef climate_bulletproof_test(data: pd.DataFrame, threshold=0.05) -> Dict[str, Any]:\n    \"\"\"\n    Bulletproof Python test for climate data analysis.\n\n    Parameters:\n        data (pd.DataFrame): Climate dataset.\n        threshold (float, optional): Significance level for statistical tests. Defaults to 0.05.\n\n    Returns:\n        Dict[str, Any]: Test results.\n    \"\"\"\n    try:\n        # Data quality validation\n        if any(data_col.isnull().sum() > 0 for data_col in data.columns):\n            raise ValueError(f\"Following columns have missing values: {[col for col in data.columns if data_col.isnull().sum() > 0]}\")\n\n        # Descriptive statistics\n        data_mean = data.mean()\n        data_std = data.std()\n\n        # Statistical test: One-sample t-test against a null hypothesis of mean=0\n        _, p_value = ttest_1samp(data, 0, axis=0)\n\n        # Pass/fail criteria\n        pass_fail = p_value > threshold\n\n        # Effect size and power analysis (not included in this example due to complexity and lack of specific dataset)\n\n        # Data hash for reproducibility\n        data_hash = hashlib.sha256(data.to_csv().encode()).hexdigest()\n\n        return {\n            \"test_name\": \"climate_bulletproof_test\",\n            \"pass_fail\": {\"criteria\": pass_fail},\n            \"metrics\": {\"effect_size\": None, \"power\": None},  # TODO: Implement effect size and power analysis\n            \"evidence\": {\"data_hash\": data_hash}\n        }\n    except Exception as e:\n        return {\"error\": str(e), \"test_failed\": True}",
+  "description": "Missing bulletproof test function for climate",
+  "status": "pending_review",
+  "reviewer": null,
+  "approved": false
+}

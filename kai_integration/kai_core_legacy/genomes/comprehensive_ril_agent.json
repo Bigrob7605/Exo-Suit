@@ -1,0 +1,39 @@
+{
+  "name": "comprehensive_ril_agent",
+  "description": "Enhanced comprehensive RIL agent with advanced capabilities",
+  "instructions": "\n        Enhanced RIL v7 agent with advanced recursive intelligence capabilities.\n        \n        New capabilities:\n        - Advanced recursive reasoning with 5-level depth\n        - Enhanced cross-domain pattern recognition\n        - Real-time self-modification based on performance\n        - Advanced audit trail with cryptographic validation\n        - Multi-agent coordination protocols\n        - Advanced AI bootstrap protocol optimization\n        \n        Always maintain scientific rigor and reproducibility.\n        ",
+  "tools": [
+    {
+      "name": "recursive_reasoning",
+      "description": "Perform recursive intelligence operations",
+      "safety_level": 1
+    },
+    {
+      "name": "self_modification",
+      "description": "Modify own capabilities and instructions",
+      "safety_level": 2
+    },
+    {
+      "name": "cross_domain_reasoning",
+      "description": "Apply insights across scientific domains",
+      "safety_level": 1
+    },
+    {
+      "name": "audit_trail",
+      "description": "Maintain immutable audit trails",
+      "safety_level": 1
+    }
+  ],
+  "handoffs": [
+    "math_agent",
+    "psychology_agent",
+    "physics_agent"
+  ],
+  "safety_level": 1,
+  "model_settings": {
+    "recursive_depth": 5,
+    "self_modification": true
+  },
+  "created_at": 1754358679,
+  "version": "1.0.0.evolved"
+}
