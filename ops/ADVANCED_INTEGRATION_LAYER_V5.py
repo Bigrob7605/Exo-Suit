@@ -60,17 +60,39 @@ class ComponentInfo:
     last_heartbeat: float
     performance_metrics: Dict[str, Any]
 
-@dataclass(order=True)
 class IntegrationEvent:
-    """Integration event data structure"""
-    priority: int  # Must be first for ordering
-    timestamp: float
-    event_id: str
-    event_type: str
-    source_component: str
-    target_component: str
-    data: Dict[str, Any]
-    processed: bool
+    """Integration event for component communication"""
+    
+    def __init__(self, event_type, source, target, data=None, priority=0):
+        self.event_type = event_type
+        self.source = source
+        self.target = target
+        self.data = data or {}
+        self.priority = priority
+        self.timestamp = datetime.now()
+        self.event_id = str(uuid.uuid4())
+    
+    def __lt__(self, other):
+        """Enable event comparison for priority-based processing"""
+        if not isinstance(other, IntegrationEvent):
+            return False
+        return self.priority < other.priority
+    
+    def __eq__(self, other):
+        """Enable event equality comparison"""
+        if not isinstance(other, IntegrationEvent):
+            return False
+        return (self.event_type == other.event_type and 
+                self.source == other.source and 
+                self.target == other.target and
+                self.event_id == other.event_id)
+    
+    def __hash__(self):
+        """Enable event hashing for storage"""
+        return hash(self.event_id)
+    
+    def __repr__(self):
+        return f"IntegrationEvent({self.event_type}, {self.source}->{self.target}, priority={self.priority})"
 
 @dataclass
 class ComponentInterface:

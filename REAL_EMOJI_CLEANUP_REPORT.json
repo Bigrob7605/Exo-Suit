@@ -1,0 +1,19 @@
+{
+  "cleanup_summary": {
+    "start_time": "2025-08-17T13:56:44.027745",
+    "end_time": "2025-08-17T13:56:55.053342",
+    "duration_seconds": 11.025597,
+    "project_root": "C:\\My Projects\\Agent Exo-Suit"
+  },
+  "statistics": {
+    "files_scanned": 783,
+    "files_processed": 783,
+    "files_cleaned": 0,
+    "total_emojis_removed": 0,
+    "errors": 0
+  },
+  "performance": {
+    "files_per_second": 71.02,
+    "emojis_per_second": 0.0
+  }
+}

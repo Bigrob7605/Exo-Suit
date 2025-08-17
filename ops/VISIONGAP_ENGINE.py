@@ -81,6 +81,44 @@ class VisionGapEngine:
         # Only apply toolbox filtering when analyzing the main workspace
         return any(marker in str(path) for marker in self.toolbox_markers)
 
+    def detect_project_boundaries(self):
+        """Detect project boundaries for autonomous operation"""
+        try:
+            # Look for project indicators in current directory
+            current_dir = Path('.')
+            project_indicators = [
+                'README.md',
+                'AGENT_STATUS.md', 
+                'ops/',
+                'context/',
+                'requirements.txt',
+                'AgentExoSuitV5.ps1'
+            ]
+            
+            main_project_roots = []
+            toolbox_roots = []
+            
+            # Check if current directory is the main project
+            if any((current_dir / indicator).exists() for indicator in project_indicators):
+                main_project_roots.append(str(current_dir.absolute()))
+                self.logger.info(f"Main project identified: Agent Exo-Suit (current directory)")
+            
+            # Check parent directory for toolbox indicators
+            parent_dir = current_dir.parent
+            if parent_dir.exists():
+                toolbox_indicators = ['toolbox', 'scratch', 'temp', 'test']
+                if any(toolbox_indicator in parent_dir.name.lower() for toolbox_indicator in toolbox_indicators):
+                    toolbox_roots.append(str(parent_dir.absolute()))
+                    self.logger.info(f"Toolbox system identified: {parent_dir.name}")
+            
+            self.logger.info(f"Project boundaries detected: {len(main_project_roots)} main project roots, {len(toolbox_roots)} toolbox roots")
+            
+            return main_project_roots, toolbox_roots
+            
+        except Exception as e:
+            self.logger.error(f"Failed to detect project boundaries: {e}")
+            return [], []
+
     ###########################################################################
     # Dream Reader
     ###########################################################################
