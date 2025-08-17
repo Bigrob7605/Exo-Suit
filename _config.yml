@@ -1,101 +1,95 @@
 # Jekyll Configuration for Agent Exo-Suit V5.0
-# This file configures what Jekyll processes during GitHub Pages builds
+# Clean, minimal configuration to fix GitHub Pages build issues
 
 # Site settings
-title: "Agent Exo-Suit V5.0 - Builder of Dreams"
-description: "Revolutionary AI Agent Collaboration System for Project Healing and Code Generation"
-url: "https://bigrob7605.github.io/Exo-Suit"
+title: "Agent Exo-Suit V5.0 - Revolutionary AI Development Platform"
+description: "Revolutionary AI-powered development tools featuring 43 operational components with enterprise-grade performance, security, and automation"
+url: "https://bigrob7605.github.io"
 baseurl: "/Exo-Suit"
 
 # Build settings
 markdown: kramdown
 highlighter: rouge
 permalink: pretty
+encoding: utf-8
 
-# Exclude files and directories from processing
+# Exclude problematic files and directories
 exclude:
-  # Large log files that cause build hangs
-  - "*.log"
-  - "emoji_sentinel_v4.log"
-  - "current_emoji_scan.txt"
-  - "current_emoji_scan.json"
-  
-  # Cleanup and testing directories
-  - "Cleanup - Old MD Files/"
-  - "Cleanup - Testing Data/"
-  - "Testing_Tools/"
-  - "Universal Open Science Toolbox With Kai (The Real Test)/"
-  
-  # Temporary and cache directories
-  - "temp/"
-  - "cache/"
-  - "backup/"
+  # System and build files
+  - ".git/"
   - ".venv/"
-  - "gpu_rag_env/"
+  - "node_modules/"
+  - "vendor/"
   
-  # Large data directories
-  - "vision_gap_data/"
-  - "scan_results/"
+  # Large data and log files
+  - "*.log"
+  - "*.tgz"
+  - "*.zip"
+  - "*.tar"
   - "logs/"
-  - "generated_code/"
+  - "cache/"
+  - "temp/"
   
-  # PowerShell and Python files
+  # Source code and scripts (not needed for docs)
   - "*.ps1"
   - "*.py"
   - "*.bat"
-  - "requirements*.txt"
+  - "*.sh"
+  - "*.js"
+  - "*.ts"
+  - "*.json"
+  - "*.xml"
+  - "*.yml"
+  - "*.yaml"
   
-  # Configuration and environment files
-  - "config/"
-  - "rag/"
+  # Directories with source code
   - "ops/"
+  - "rag/"
+  - "context/"
   - "mermaid/"
   - "cursor/"
-  - "DeepSpeed ZeRO-Infinity/"
+  - "config/"
+  - "generated_code/"
+  - "system_backups/"
+  - "archive/"
+  - "legacy/"
   
-  # Status and report files that aren't documentation
-  - "current_*.json"
-  - "current_*.txt"
-  - "post_repair_*.txt"
-  - "post_repair_*.json"
+  # Requirements and config files
+  - "requirements*.txt"
+  - "package*.json"
+  - "*.lock"
+  - ".env*"
+  
+  # Test and temporary files
+  - "test*/"
+  - "temp*/"
+  - "backup*/"
+  - "*.test"
+  - "*.spec"
 
 # Include only essential documentation
 include:
   - "README.md"
-  - "AGENT_STATUS.md"
-  - "AGENT_TASK_CHECKLIST.md"
-  - "ARCHITECTURE.md"
-  - "VISION.md"
-  - "License.md"
-  - "docs/"
-  - "Project White Papers/"
   - "*.md"
 
-# Collections
+# Collections (simplified)
 collections:
-  white_papers:
+  docs:
     output: true
-    permalink: /white-papers/:name/
+    permalink: /docs/:name/
 
 # Plugins (minimal for GitHub Pages compatibility)
-plugins:
-  - jekyll-seo-tag
-  - jekyll-sitemap
+plugins: []
 
-# Defaults for pages
+# Defaults (simplified)
 defaults:
   - scope:
       path: ""
       type: "pages"
     values:
       layout: "default"
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
-  - scope:
-      path: "Project White Papers"
-      type: "white_papers"
-    values:
-      layout: "white_paper"
+
+# Build optimization
+incremental: false
+relative_links: false
+future: false
