@@ -111,7 +111,7 @@ class ChaosEngine:
         self.chaos_thread = threading.Thread(target=self._chaos_loop, daemon=True)
         self.chaos_thread.start()
         
-        logging.info(f"🚀 CHAOS ENGINE STARTED at {level or self.config['chaos_level']} level!")
+        logging.info(f"CHAOS ENGINE STARTED at {level or self.config['chaos_level']} level!")
         logging.info(f"V5 will now be tested under extreme conditions every {self.config['cycle_interval']} seconds")
     
     def stop_chaos(self):
@@ -120,7 +120,7 @@ class ChaosEngine:
         if self.chaos_thread:
             self.chaos_thread.join(timeout=5)
         
-        logging.info("🛑 CHAOS ENGINE STOPPED")
+        logging.info("CHAOS ENGINE STOPPED")
         self._generate_chaos_report()
     
     def _chaos_loop(self):
@@ -130,7 +130,7 @@ class ChaosEngine:
         while self.running:
             try:
                 cycle += 1
-                logging.info(f"🔄 Chaos Cycle {cycle} - Testing V5 robustness...")
+                logging.info(f"CHAOS CYCLE {cycle} - Testing V5 robustness...")
                 
                 # Determine if we should inject chaos this cycle
                 chaos_probability = self.chaos_levels.get(self.config['chaos_level'], 0.05)
@@ -155,7 +155,7 @@ class ChaosEngine:
         failures_this_cycle = 0
         max_failures = self.config['max_failures_per_cycle']
         
-        logging.warning(f"🔥 INJECTING CHAOS in cycle {cycle}!")
+        logging.warning(f"INJECTING CHAOS in cycle {cycle}!")
         
         # Randomly select chaos types to inject
         chaos_types = []
@@ -186,11 +186,11 @@ class ChaosEngine:
                 if chaos_func():
                     failures_this_cycle += 1
                     self.failure_count += 1
-                    logging.error(f"💥 Chaos injection successful: {chaos_func.__name__}")
+                    logging.error(f"CHAOS INJECTION SUCCESSFUL: {chaos_func.__name__}")
             except Exception as e:
                 logging.error(f"Chaos injection failed: {chaos_func.__name__} - {e}")
         
-        logging.info(f"🎯 Injected {failures_this_cycle} failures in cycle {cycle}")
+        logging.info(f"INJECTED {failures_this_cycle} failures in cycle {cycle}")
     
     def _corrupt_random_file(self) -> bool:
         """Randomly corrupt a file to test Phoenix Recovery"""
@@ -224,7 +224,7 @@ class ChaosEngine:
             with open(target_file, 'wb') as f:
                 corruption_func(f)
             
-            logging.warning(f"💀 Corrupted file: {target_file}")
+            logging.warning(f"CORRUPTED FILE: {target_file}")
             return True
             
         except Exception as e:
@@ -244,7 +244,7 @@ class ChaosEngine:
             
             self._memory_leaks.append(leak_data)
             
-            logging.warning(f"💧 Injected memory leak: {leak_size} bytes")
+            logging.warning(f"INJECTED MEMORY LEAK: {leak_size} bytes")
             return True
             
         except Exception as e:
@@ -260,7 +260,7 @@ class ChaosEngine:
             else:
                 self._gpu_starvation = 1
             
-            logging.warning(f"🔥 GPU starvation level: {self._gpu_starvation}")
+            logging.warning(f"GPU STARVATION LEVEL: {self._gpu_starvation}")
             return True
             
         except Exception as e:
@@ -285,7 +285,7 @@ class ChaosEngine:
             if v5_processes:
                 # Don't actually kill processes, just simulate
                 target_pid = random.choice(v5_processes)
-                logging.warning(f"💥 Simulated crash of V5 process: {target_pid}")
+                logging.warning(f"SIMULATED CRASH of V5 process: {target_pid}")
                 return True
             else:
                 logging.info("No V5 processes found to simulate crash")
@@ -299,7 +299,7 @@ class ChaosEngine:
         """Simulate network partition for distributed testing"""
         try:
             # Simulate network issues
-            logging.warning("🌐 Simulating network partition")
+            logging.warning("SIMULATING NETWORK PARTITION")
             return True
             
         except Exception as e:
@@ -321,11 +321,11 @@ class ChaosEngine:
                     top_stats = stats[:3]
                     for stat in top_stats:
                         if stat.size_diff > 1024:  # 1KB increase
-                            logging.warning(f"🚨 Potential memory leak detected: {stat}")
+                            logging.warning(f"ALERT: Potential memory leak detected: {stat}")
             
             # Log health metrics
             if cycle % 10 == 0:  # Every 10 cycles
-                logging.info(f"📊 Health Check - CPU: {cpu}%, Memory: {memory.percent}%")
+                logging.info(f"HEALTH CHECK - CPU: {cpu}%, Memory: {memory.percent}%")
                 
         except Exception as e:
             logging.error(f"Health monitoring failed: {e}")
@@ -375,8 +375,8 @@ class ChaosEngine:
             with open(report_path, 'w') as f:
                 json.dump(report, f, indent=2)
             
-            logging.info(f"📋 Chaos report generated: {report_path}")
-            logging.info(f"🏆 V5 Robustness Score: {report['chaos_session']['system_robustness_score']:.1f}%")
+            logging.info(f"CHAOS REPORT GENERATED: {report_path}")
+            logging.info(f"V5 ROBUSTNESS SCORE: {report['chaos_session']['system_robustness_score']:.1f}%")
             
         except Exception as e:
             logging.error(f"Report generation failed: {e}")
@@ -425,7 +425,7 @@ class ChaosEngine:
 
 def main():
     """Main function to run chaos engineering"""
-    print("🚀 CHAOSE_ENGINE - Making V5 Unfuckwithable!")
+            print("CHAOSE_ENGINE - Making V5 Unfuckwithable!")
     print("=" * 50)
     
     # Initialize chaos engine
@@ -442,15 +442,15 @@ def main():
         
         while True:
             time.sleep(10)
-            print(f"🔥 Chaos Status: {chaos.failure_count} failures injected, {chaos.recovery_count} recoveries")
+            print(f"CHAOS STATUS: {chaos.failure_count} failures injected, {chaos.recovery_count} recoveries")
             
     except KeyboardInterrupt:
-        print("\n🛑 Stopping chaos engine...")
+        print("\nSTOPPING CHAOS ENGINE...")
         chaos.stop_chaos()
         print("Chaos engineering complete! Check the generated report.")
         
     except Exception as e:
-        print(f"❌ Chaos engine error: {e}")
+        print(f"CHAOS ENGINE ERROR: {e}")
         chaos.stop_chaos()
 
 if __name__ == "__main__":
