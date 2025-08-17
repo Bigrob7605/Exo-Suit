@@ -1,8 +1,3 @@
----
-layout: default
-title: "Agent Exo-Suit V5.0 - Revolutionary AI Development Platform"
----
-
 # 🚀 Welcome to Agent Exo-Suit V5.0
 
 **Revolutionary AI-powered development tools featuring 43 operational components with enterprise-grade performance, security, and automation.**

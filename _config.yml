@@ -70,13 +70,10 @@ exclude:
 # Include only essential documentation
 include:
   - "README.md"
-  - "*.md"
+  - "index.md"
 
-# Collections (simplified)
-collections:
-  docs:
-    output: true
-    permalink: /docs/:name/
+# No collections - this was causing the /docs/ redirect issue
+# collections: []
 
 # Plugins (minimal for GitHub Pages compatibility)
 plugins: []
