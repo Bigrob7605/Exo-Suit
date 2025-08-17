@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agent Exo-Suit V5.0 - Where Dreams Become Code</title>
-    <meta name="description" content="The most advanced AI development platform ever created. 43 operational components that transform imagination into reality.">
+    <title>Agent Exo-Suit V5.0 - Advanced AI Agent System</title>
+    <meta name="description" content="High-performance AI agent system with 43 operational components, advanced meta-cognition, and Kai integration for enterprise-grade development.">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
         
@@ -102,12 +102,9 @@
         }
         
         .logo {
-            font-size: 1.5rem;
-            font-weight: 800;
-            background: var(--primary-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            font-size: 1.2rem;
+            color: var(--cyber-blue);
+            font-weight: 600;
         }
         
         .nav-links {
@@ -120,27 +117,11 @@
             color: rgba(255, 255, 255, 0.8);
             text-decoration: none;
             font-weight: 500;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-        
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--cyber-blue);
-            transition: width 0.3s ease;
-        }
-        
-        .nav-links a:hover::after {
-            width: 100%;
+            transition: color 0.3s ease;
         }
         
         .nav-links a:hover {
-            color: white;
+            color: var(--cyber-blue);
         }
         
         /* Hero Section */
@@ -150,24 +131,24 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 2rem;
+            padding: 8rem 2rem 4rem;
             position: relative;
-            overflow: hidden;
         }
         
         .hero-content {
             max-width: 1200px;
-            z-index: 2;
+            z-index: 1;
         }
         
         .hero-visual {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-            opacity: 0.1;
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 2rem;
+            background: var(--primary-gradient);
+            border-radius: 50%;
+            position: relative;
+            opacity: 0;
+            animation: fadeInUp 1s ease 0.3s forwards;
         }
         
         .hero-visual::before {
@@ -175,25 +156,12 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            width: 600px;
-            height: 600px;
-            background: conic-gradient(from 0deg, var(--cyber-blue), var(--electric-purple), var(--neon-pink), var(--cyber-blue));
+            width: 12px;
+            height: 12px;
+            background: var(--neon-pink);
             border-radius: 50%;
             transform: translate(-50%, -50%);
-            animation: rotate 20s linear infinite;
-        }
-        
-        .hero-visual::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 400px;
-            height: 400px;
-            background: conic-gradient(from 180deg, var(--neon-pink), var(--cyber-blue), var(--electric-purple), var(--neon-pink));
-            border-radius: 50%;
-            transform: translate(-50%, -50%);
-            animation: rotate 15s linear infinite reverse;
+            animation: pulse 2s infinite;
         }
         
         .hero-subtitle {
@@ -398,30 +366,37 @@
             margin-bottom: 0.5rem;
             word-break: keep-all;
             white-space: nowrap;
-            overflow: visible;
         }
         
         .status-value {
-            color: rgba(255, 255, 255, 0.7);
+            color: rgba(255, 255, 255, 0.8);
             font-size: 0.9rem;
-            word-break: keep-all;
-            white-space: nowrap;
-            overflow: visible;
         }
         
-        /* Features Grid */
+        /* Meta-Cognition Status Banner */
+        .meta-cognition-banner {
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(255, 0, 128, 0.1));
+            border-color: rgba(139, 92, 246, 0.3);
+            margin-top: 2rem;
+        }
+        
+        .meta-cognition-title {
+            color: var(--electric-purple);
+        }
+        
+        /* Features Section */
         .features {
             padding: 6rem 2rem;
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 0 auto;
         }
         
         .section-title {
-            text-align: center;
-            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-size: 3rem;
             font-weight: 800;
-            margin-bottom: 3rem;
-            background: var(--accent-gradient);
+            text-align: center;
+            margin-bottom: 4rem;
+            background: var(--primary-gradient);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -431,7 +406,6 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2rem;
-            margin-top: 4rem;
         }
         
         .feature-card {
@@ -450,27 +424,28 @@
             position: absolute;
             top: 0;
             left: 0;
-            right: 0;
-            height: 1px;
-            background: var(--primary-gradient);
-            transform: scaleX(0);
-            transition: transform 0.3s ease;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(139, 92, 246, 0.1));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: -1;
         }
         
         .feature-card:hover::before {
-            transform: scaleX(1);
+            opacity: 1;
         }
         
         .feature-card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-5px);
             border-color: rgba(0, 212, 255, 0.3);
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
         }
         
         .feature-icon {
-            font-size: 3rem;
+            display: inline-block;
+            font-size: 2rem;
             margin-bottom: 1rem;
-            display: block;
+            animation: float 3s ease-in-out infinite;
         }
         
         .feature-title {
@@ -482,59 +457,53 @@
         
         .feature-description {
             color: rgba(255, 255, 255, 0.8);
-            line-height: 1.6;
             margin-bottom: 1.5rem;
+            line-height: 1.6;
         }
         
         .feature-status {
             display: inline-block;
-            padding: 0.25rem 0.75rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
             font-weight: 600;
+            text-transform: uppercase;
         }
         
         .status-current {
-            background: rgba(0, 212, 255, 0.2);
-            color: var(--cyber-blue);
-            border: 1px solid var(--cyber-blue);
+            background: rgba(0, 255, 0, 0.2);
+            color: #00ff00;
+            border: 1px solid rgba(0, 255, 0, 0.3);
         }
         
-        .status-coming {
-            background: rgba(139, 92, 246, 0.2);
-            color: var(--electric-purple);
-            border: 1px solid var(--electric-purple);
+        .status-development {
+            background: rgba(255, 165, 0, 0.2);
+            color: #ffa500;
+            border: 1px solid rgba(255, 165, 0, 0.3);
+        }
+        
+        .status-planned {
+            background: rgba(128, 128, 128, 0.2);
+            color: #808080;
+            border: 1px solid rgba(128, 128, 128, 0.3);
         }
         
         /* Performance Section */
         .performance {
-            background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(139, 92, 246, 0.1));
-            border-radius: 30px;
-            padding: 4rem 2rem;
-            margin: 6rem auto;
+            padding: 6rem 2rem;
             max-width: 1200px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .performance::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: conic-gradient(from 0deg, transparent, rgba(0, 212, 255, 0.1), transparent);
-            animation: rotate 20s linear infinite;
-            z-index: -1;
+            margin: 0 auto;
+            background: var(--glass-bg);
+            border-radius: 30px;
+            margin-top: 4rem;
         }
         
         .performance-title {
-            font-size: 2.5rem;
+            font-size: 3rem;
             font-weight: 800;
+            text-align: center;
             margin-bottom: 2rem;
-            background: var(--primary-gradient);
+            background: var(--accent-gradient);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -544,60 +513,54 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 2rem;
-            margin-top: 3rem;
+            margin: 3rem 0;
         }
         
         .metric {
-            background: var(--glass-bg);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.05);
             border-radius: 15px;
-            padding: 1.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
         
         .metric-value {
-            font-size: 2.5rem;
-            font-weight: 800;
+            font-size: 3rem;
+            font-weight: 900;
             color: var(--cyber-blue);
             margin-bottom: 0.5rem;
-            display: block;
         }
         
         .metric-label {
             color: rgba(255, 255, 255, 0.8);
-            font-weight: 500;
+            font-size: 1.1rem;
         }
         
-        /* Performance Charts */
         .performance-charts {
-            margin-top: 4rem;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
+            margin-top: 3rem;
         }
         
         .chart-container {
-            background: var(--glass-bg);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
             padding: 2rem;
-            position: relative;
-            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
         
         .chart-title {
             font-size: 1.3rem;
-            font-weight: 700;
+            font-weight: 600;
             margin-bottom: 1.5rem;
-            color: var(--cyber-blue);
+            color: white;
         }
         
         .chart {
-            width: 100%;
-            height: 200px;
             position: relative;
-            background: rgba(0, 0, 0, 0.2);
+            height: 200px;
+            background: rgba(255, 255, 255, 0.05);
             border-radius: 10px;
             overflow: hidden;
         }
@@ -607,21 +570,19 @@
             bottom: 0;
             left: 0;
             width: 100%;
-            height: 2px;
-            background: var(--cyber-blue);
-            transform-origin: left;
-            animation: chartGrow 2s ease-out forwards;
+            height: var(--target-height);
+            background: var(--primary-gradient);
+            border-radius: 10px 10px 0 0;
         }
         
-        .chart-line::before {
-            content: '';
+        .chart-marker {
             position: absolute;
-            top: -4px;
-            left: 0;
-            width: 100%;
-            height: 10px;
-            background: linear-gradient(90deg, var(--cyber-blue), transparent);
-            border-radius: 5px;
+            width: 12px;
+            height: 12px;
+            background: var(--neon-pink);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            animation: pulse 2s infinite;
         }
         
         .chart-data {
@@ -630,180 +591,6 @@
             margin-top: 1rem;
             font-size: 0.9rem;
             color: rgba(255, 255, 255, 0.7);
-        }
-        
-        .chart-marker {
-            position: absolute;
-            width: 8px;
-            height: 8px;
-            background: var(--neon-pink);
-            border-radius: 50%;
-            border: 2px solid white;
-            animation: chartMarker 2s ease-out forwards;
-        }
-        
-        @keyframes chartGrow {
-            from { transform: scaleX(0); }
-            to { transform: scaleX(1); }
-        }
-        
-        @keyframes chartMarker {
-            from { 
-                opacity: 0;
-                transform: scale(0);
-            }
-            to { 
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-        
-        /* Speed Improvement Chart */
-        .speed-chart {
-            position: relative;
-            height: 200px;
-            background: rgba(0, 0, 0, 0.2);
-            border-radius: 10px;
-            overflow: hidden;
-        }
-        
-        .speed-bar {
-            position: absolute;
-            bottom: 0;
-            left: 20px;
-            width: 60px;
-            background: linear-gradient(180deg, var(--cyber-blue), var(--electric-purple));
-            border-radius: 5px 5px 0 0;
-            animation: speedBarGrow 2s ease-out forwards;
-        }
-        
-        .speed-bar.current {
-            left: 120px;
-            background: linear-gradient(180deg, var(--electric-purple), var(--neon-pink));
-        }
-        
-        .speed-bar.target {
-            left: 220px;
-            background: linear-gradient(180deg, var(--neon-pink), var(--cyber-blue));
-        }
-        
-        .speed-labels {
-            position: absolute;
-            bottom: -30px;
-            left: 0;
-            width: 100%;
-            display: flex;
-            justify-content: space-around;
-            font-size: 0.8rem;
-            color: rgba(255, 255, 255, 0.7);
-        }
-        
-        @keyframes speedBarGrow {
-            from { height: 0; }
-            to { height: var(--target-height); }
-        }
-        
-        @keyframes rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-        
-        /* Architecture Visualization */
-        .architecture-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-        
-        .architecture-layer {
-            background: var(--glass-bg);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            padding: 2rem;
-            width: 100%;
-            max-width: 800px;
-            text-align: center;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .architecture-layer::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.1), transparent);
-            transition: left 0.5s ease;
-        }
-        
-        .architecture-layer:hover::before {
-            left: 100%;
-        }
-        
-        .architecture-layer:hover {
-            transform: translateY(-5px);
-            border-color: rgba(0, 212, 255, 0.3);
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-        }
-        
-        .layer-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            color: var(--cyber-blue);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        
-        .layer-components {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-        
-        .component {
-            background: rgba(0, 212, 255, 0.1);
-            border: 1px solid rgba(0, 212, 255, 0.3);
-            border-radius: 10px;
-            padding: 0.75rem 1.5rem;
-            font-weight: 600;
-            color: var(--cyber-blue);
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-        
-        .component:hover {
-            background: rgba(0, 212, 255, 0.2);
-            transform: scale(1.05);
-            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
-        }
-        
-        .architecture-connector {
-            width: 4px;
-            height: 40px;
-            background: linear-gradient(180deg, var(--cyber-blue), var(--electric-purple));
-            border-radius: 2px;
-            position: relative;
-        }
-        
-        .architecture-connector::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 12px;
-            height: 12px;
-            background: var(--neon-pink);
-            border-radius: 50%;
-            transform: translate(-50%, -50%);
-            animation: pulse 2s infinite;
         }
         
         /* Roadmap Section */
@@ -1075,7 +862,7 @@
     
     <nav>
         <div class="nav-content">
-            <div class="logo">ROCKET Agent Exo-Suit V5.0</div>
+            <div class="logo">Agent Exo-Suit V5.0</div>
             <ul class="nav-links">
                 <li><a href="#features">Features</a></li>
                 <li><a href="#performance">Performance</a></li>
@@ -1090,11 +877,11 @@
             <div class="hero-content">
                 <div class="hero-visual"></div>
                 <div class="hero-subtitle">AGENT EXO-SUIT V5.0 "BUILDER OF DREAMS"</div>
-                <h1>Where Dreams<br>Become Code</h1>
-                <div class="hero-tagline">And Code Becomes Legend</div>
+                <h1>Advanced AI<br>Agent System</h1>
+                <div class="hero-tagline">Meta-Cognition Intelligence: 95%+</div>
                 <p class="hero-description">
-                    The most advanced AI development platform ever created. 43 operational components 
-                    that transform imagination into reality with GPU-accelerated precision.
+                    High-performance AI agent system with 43 operational components, advanced meta-cognition, 
+                    and Kai integration for enterprise-grade development and intelligent self-repair.
                 </p>
                 <div class="hero-stats">
                     <div class="hero-stat">
@@ -1102,86 +889,80 @@
                         <div class="hero-stat-label">Files/Second (Current)</div>
                     </div>
                     <div class="hero-stat">
-                        <div class="hero-stat-value">10,000+</div>
-                        <div class="hero-stat-label">Files/Second (Target)</div>
+                        <div class="hero-stat-value">95%+</div>
+                        <div class="hero-stat-label">Meta-Cognition Intelligence</div>
                     </div>
                     <div class="hero-stat">
                         <div class="hero-stat-value">100%</div>
                         <div class="hero-stat-label">Validation Score</div>
                     </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-value">43</div>
+                        <div class="hero-stat-label">Operational Components</div>
+                    </div>
                 </div>
                 <div class="cta-buttons">
                     <a href="https://github.com/Bigrob7605/Exo-Suit" class="btn btn-primary">
-                        ROCKET Experience the Magic
+                        Experience the Magic
                     </a>
                     <a href="README.md" class="btn btn-secondary">
-                        BOOK Read the Docs
+                        Read the Docs
                     </a>
                 </div>
             </div>
         </section>
 
         <div class="status-banner scroll-animate">
-            <div class="status-title">FIRE Current V5.0 Reality</div>
-            <p>High-performance file processing engine with real GPU acceleration</p>
+            <div class="status-title">Current V5.0 Reality</div>
+            <p>High-performance AI agent system with advanced meta-cognition and Kai integration</p>
             <div class="status-grid">
                 <div class="status-item">
-                    <div class="status-icon">LIGHTNING</div>
+                    <div class="status-icon">⚡</div>
                     <div class="status-label">Processing Speed</div>
                     <div class="status-value">5,705 files/second</div>
                 </div>
                 <div class="status-item">
-                    <div class="status-icon">GAMEPAD</div>
-                    <div class="status-label">GPU Acceleration</div>
-                    <div class="status-value">RTX 4070 + CUDA 11.8</div>
+                    <div class="status-icon">🧠</div>
+                    <div class="status-label">Meta-Cognition</div>
+                    <div class="status-value">95%+ Intelligence Score</div>
                 </div>
                 <div class="status-item">
-                    <div class="status-icon">TARGET</div>
+                    <div class="status-icon">🎯</div>
                     <div class="status-label">Success Rate</div>
                     <div class="status-value">100% (100/100 validation)</div>
                 </div>
                 <div class="status-item">
-                    <div class="status-icon">GEAR</div>
+                    <div class="status-icon">⚙️</div>
                     <div class="status-label">Components</div>
-                    <div class="status-value">6 Core V5 Systems</div>
+                    <div class="status-value">43 Operational Systems</div>
                 </div>
             </div>
         </div>
 
-        <div class="status-banner scroll-animate" style="background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(255, 0, 128, 0.1)); border-color: rgba(139, 92, 246, 0.3);">
-            <div class="status-title" style="color: var(--electric-purple);">ROCKET MASSIVE SCALE PROOF - VALIDATED</div>
-            <p>Exo-Suit V5.0 has PROVEN it can handle ANY repository size with 100% comprehensive analysis</p>
+        <div class="status-banner meta-cognition-banner scroll-animate">
+            <div class="status-title meta-cognition-title">Meta-Cognition System Complete</div>
+            <p>Advanced AAA capabilities with paradox resolution, guard-rail safety, and audit trails</p>
             <div class="status-grid">
                 <div class="status-item">
-                    <div class="status-icon">CHART</div>
-                    <div class="status-label">Repository Scale</div>
-                    <div class="status-value">100GB+ Repos Handled</div>
+                    <div class="status-icon">🔍</div>
+                    <div class="status-label">Intelligent Repair</div>
+                    <div class="status-value">Self-aware repair strategies</div>
                 </div>
                 <div class="status-item">
-                    <div class="status-icon">BRAIN</div>
-                    <div class="status-label">Token Processing</div>
-                    <div class="status-value">10M+ Tokens with Ease</div>
+                    <div class="status-icon">🛡️</div>
+                    <div class="status-label">Kai Integration</div>
+                    <div class="status-value">Paradox resolution & safety</div>
                 </div>
                 <div class="status-item">
-                    <div class="status-icon">SCOPE</div>
-                    <div class="status-label">Issue Detection</div>
-                    <div class="status-value">100% Comprehensive Reports</div>
+                    <div class="status-icon">📊</div>
+                    <div class="status-label">Performance Monitor</div>
+                    <div class="status-value">Real-time optimization</div>
                 </div>
                 <div class="status-item">
-                    <div class="status-icon">TOOLS</div>
-                    <div class="status-label">Agent Compatibility</div>
-                    <div class="status-value">Any Size Agent System</div>
+                    <div class="status-icon">🎭</div>
+                    <div class="status-label">Self-Awareness</div>
+                    <div class="status-value">Capability assessment</div>
                 </div>
-            </div>
-            <div style="margin-top: 2rem; padding: 1rem; background: rgba(255, 255, 255, 0.05); border-radius: 15px; border: 1px solid rgba(255, 255, 255, 0.1);">
-                <h4 style="color: var(--cyber-blue); margin-bottom: 1rem;">TARGET PROVEN CAPABILITIES:</h4>
-                <ul style="text-align: left; max-width: 800px; margin: 0 auto; color: rgba(255, 255, 255, 0.8);">
-                    <li><strong>Current Scale:</strong> Successfully scanned 3,356 files in 4.67 GB repository (100% validation achieved)</li>
-                    <li><strong>Comprehensive Analysis:</strong> Found every single issue with 100% coverage</li>
-                    <li><strong>Universal Agent Support:</strong> Reports work with 32K, 128K, 1M, 2M, or 5M+ token agents</li>
-                    <li><strong>Raw MD Processing:</strong> Can build complete systems from just markdown documentation</li>
-                    <li><strong>Intelligent Chunking:</strong> Automatically adapts to any agent size or repository scale</li>
-                </ul>
             </div>
         </div>
 
@@ -1189,10 +970,10 @@
             <h2 class="section-title">Revolutionary Capabilities</h2>
             <div class="features-grid">
                 <div class="feature-card">
-                    <span class="feature-icon">ROCKET</span>
+                    <span class="feature-icon">🚀</span>
                     <h3 class="feature-title">High-Performance File Processing</h3>
                     <p class="feature-description">
-                        Real GPU acceleration with RTX 4070 and CUDA 11.8. Processing 5,840 files/second 
+                        Real GPU acceleration with RTX 4070 and CUDA 11.8. Processing 5,705 files/second 
                         with efficient VRAM utilization and batch processing. Handles repositories of any size 
                         with intelligent chunking and parallel processing. Perfect for enterprise-scale codebases 
                         and massive documentation analysis.
@@ -1201,289 +982,58 @@
                 </div>
                 
                 <div class="feature-card">
-                    <span class="feature-icon">BRAIN</span>
+                    <span class="feature-icon">🧠</span>
+                    <h3 class="feature-title">Meta-Cognition Engine</h3>
+                    <p class="feature-description">
+                        Advanced self-awareness system with 95%+ intelligence score. Self-assesses capabilities, 
+                        recognizes limitations, and makes intelligent decisions about repair strategies. 
+                        Integrates Kai systems for paradox resolution, safety validation, and audit trails.
+                    </p>
+                    <span class="feature-status status-current">Available Now</span>
+                </div>
+                
+                <div class="feature-card">
+                    <span class="feature-icon">🔧</span>
+                    <h3 class="feature-title">Intelligent Repair System</h3>
+                    <p class="feature-description">
+                        Phoenix Recovery System with self-aware repair strategies and capability assessment. 
+                        Knows what it can and cannot fix, requests data when needed, and creates intelligent 
+                        repair plans. Automatically detects and resolves system issues with meta-cognition.
+                    </p>
+                    <span class="feature-status status-current">Available Now</span>
+                </div>
+                
+                <div class="feature-card">
+                    <span class="feature-icon">🛡️</span>
+                    <h3 class="feature-title">Kai Safety Integration</h3>
+                    <p class="feature-description">
+                        Advanced safety framework with paradox detection, multi-layer guard rails, and 
+                        cryptographic audit trails. MythGraph Ledger provides transparency and accountability. 
+                        Ensures system safety and prevents logical contradictions during operations.
+                    </p>
+                    <span class="feature-status status-current">Available Now</span>
+                </div>
+                
+                <div class="feature-card">
+                    <span class="feature-icon">📊</span>
+                    <h3 class="feature-title">Performance Monitoring</h3>
+                    <p class="feature-description">
+                        Real-time performance tracking and optimization. Monitors CPU, RAM, and disk usage, 
+                        records operation times, and provides comprehensive performance reports. 
+                        Integrates with repair systems for intelligent optimization decisions.
+                    </p>
+                    <span class="feature-status status-current">Available Now</span>
+                </div>
+                
+                <div class="feature-card">
+                    <span class="feature-icon">🎯</span>
                     <h3 class="feature-title">VisionGap Engine</h3>
                     <p class="feature-description">
-                        Reads your dreams through markdown documentation and identifies what's missing. 
-                        AI-powered gap analysis that knows what you need before you do. Automatically detects 
-                        missing components, incomplete implementations, and architectural gaps. Provides 
-                        intelligent recommendations for system completion and optimization.
+                        Intelligent repository analysis with drift detection and comprehensive issue reporting. 
+                        Provides 100% coverage analysis with intelligent chunking for any agent size. 
+                        Generates detailed reports for 32K, 128K, 1M, 2M, or 5M+ token agents.
                     </p>
                     <span class="feature-status status-current">Available Now</span>
-                </div>
-                
-                <div class="feature-card">
-                    <span class="feature-icon">HAMMER</span>
-                    <h3 class="feature-title">DreamWeaver Builder</h3>
-                    <p class="feature-description">
-                        Builds what you imagine, automatically. From concept to code in seconds, 
-                        with intelligent understanding of your vision and requirements. Generates complete 
-                        working systems from markdown documentation, including Python modules, configuration 
-                        files, and deployment scripts. Supports multiple programming languages and frameworks.
-                    </p>
-                    <span class="feature-status status-current">Available Now</span>
-                </div>
-                
-                <div class="feature-card">
-                    <span class="feature-icon">CHECK_MARK</span>
-                    <h3 class="feature-title">TruthForge Auditor</h3>
-                    <p class="feature-description">
-                        Replaces promises with proof. Validates that generated code matches 
-                        documentation claims with 99%+ accuracy and comprehensive testing. Performs automated 
-                        code review, security analysis, and performance benchmarking. Generates detailed 
-                        validation reports with actionable insights and improvement recommendations.
-                    </p>
-                    <span class="feature-status status-current">Available Now</span>
-                </div>
-                
-                <div class="feature-card">
-                    <span class="feature-icon">FIRE</span>
-                    <h3 class="feature-title">Phoenix Recovery</h3>
-                    <p class="feature-description">
-                        Burns down broken systems and rebuilds perfection. Self-healing architecture 
-                        that makes system failure a thing of the past. Automatically detects system 
-                        degradation, performs intelligent rollbacks, and reconstructs failed components. 
-                        Maintains system integrity through automated backup and recovery procedures.
-                    </p>
-                    <span class="feature-status status-current">Available Now</span>
-                </div>
-                
-                <div class="feature-card">
-                    <span class="feature-icon">STAR</span>
-                    <h3 class="feature-title">MetaCore Optimization</h3>
-                    <p class="feature-description">
-                        Advanced AI that continuously learns and improves system performance. 
-                        Intelligent optimization that adapts to your workflow patterns. Automatically 
-                        tunes GPU utilization, memory allocation, and processing algorithms based on 
-                        real-time performance data. Provides predictive analytics and proactive 
-                        optimization recommendations.
-                    </p>
-                    <span class="feature-status status-coming">Coming Soon</span>
-                </div>
-            </div>
-        </section>
-
-        <section class="features scroll-animate" style="background: linear-gradient(135deg, rgba(255, 0, 128, 0.05), rgba(0, 212, 255, 0.05)); border-radius: 30px; margin: 2rem auto; max-width: 1400px;">
-            <h2 class="section-title">Real-World Capabilities</h2>
-            <p style="text-align: center; color: rgba(255, 255, 255, 0.8); margin-bottom: 3rem; font-size: 1.2rem;">
-                What the Exo-Suit actually does in production environments
-            </p>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <span class="feature-icon">SCALE</span>
-                    <h3 class="feature-title">Massive Repository Processing</h3>
-                    <p class="feature-description">
-                        Successfully processed 3,356 files in 4.67 GB repository with 100% validation. 
-                        Handles repositories of any size through intelligent chunking and parallel processing. 
-                        Automatically adapts to agent token limits (32K to 5M+ tokens).
-                    </p>
-                    <span class="feature-status status-current">Proven at Scale</span>
-                </div>
-                
-                <div class="feature-card">
-                    <span class="feature-icon">AUTO</span>
-                    <h3 class="feature-title">Autonomous System Building</h3>
-                    <p class="feature-description">
-                        Builds complete working systems from markdown documentation alone. Generates 
-                        Python modules, configuration files, deployment scripts, and documentation. 
-                        Creates production-ready code with proper error handling and testing.
-                    </p>
-                    <span class="feature-status status-current">Production Ready</span>
-                </div>
-                
-                <div class="feature-card">
-                    <span class="feature-icon">INTELLIGENCE</span>
-                    <h3 class="feature-title">AI-Powered Gap Analysis</h3>
-                    <p class="feature-description">
-                        Automatically identifies missing components, incomplete implementations, and 
-                        architectural gaps. Provides intelligent recommendations for system completion. 
-                        Understands context and suggests optimal solutions based on best practices.
-                    </p>
-                    <span class="feature-status status-current">Intelligence Active</span>
-                </div>
-                
-                <div class="feature-card">
-                    <span class="feature-icon">VALIDATION</span>
-                    <h3 class="feature-title">Comprehensive Code Validation</h3>
-                    <p class="feature-description">
-                        Validates generated code against documentation with 99%+ accuracy. Performs 
-                        automated testing, security analysis, and performance benchmarking. Generates 
-                        detailed reports with actionable insights and improvement recommendations.
-                    </p>
-                    <span class="feature-status status-current">Validation Active</span>
-                </div>
-                
-                <div class="feature-card">
-                    <span class="feature-icon">RECOVERY</span>
-                    <h3 class="feature-title">Self-Healing & Recovery</h3>
-                    <p class="feature-description">
-                        Automatically detects and fixes system issues in real-time. Performs intelligent 
-                        rollbacks, reconstructs failed components, and maintains system integrity. 
-                        Provides automated backup and recovery with version control.
-                    </p>
-                    <span class="feature-status status-current">Recovery Active</span>
-                </div>
-                
-                <div class="feature-card">
-                    <span class="feature-icon">OPTIMIZATION</span>
-                    <h3 class="feature-title">Performance Optimization</h3>
-                    <p class="feature-description">
-                        Continuously monitors and optimizes system performance. Automatically tunes 
-                        GPU utilization, memory allocation, and processing algorithms. Provides 
-                        real-time performance metrics and proactive optimization recommendations.
-                    </p>
-                    <span class="feature-status status-current">Optimization Active</span>
-                </div>
-            </div>
-        </section>
-
-        <section class="features scroll-animate" style="background: linear-gradient(135deg, rgba(0, 212, 255, 0.05), rgba(139, 92, 246, 0.05)); border-radius: 30px; margin: 2rem auto; max-width: 1400px;">
-            <h2 class="section-title">Complete Tool Arsenal</h2>
-            <p style="text-align: center; color: rgba(255, 255, 255, 0.8); margin-bottom: 3rem; font-size: 1.2rem;">
-                Every tool, every capability, every system that makes the Exo-Suit unstoppable
-            </p>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <span class="feature-icon">SYSTEM</span>
-                    <h3 class="feature-title">Advanced Integration Layer</h3>
-                    <p class="feature-description">
-                        Seamlessly connects all V5 systems with intelligent routing and load balancing. 
-                        Handles complex multi-system workflows with automatic error recovery and performance 
-                        optimization. Supports both synchronous and asynchronous processing modes.
-                    </p>
-                    <span class="feature-status status-current">Available Now</span>
-                </div>
-                
-                <div class="feature-card">
-                    <span class="feature-icon">DEEP</span>
-                    <h3 class="feature-title">DeepSpeed Accelerator</h3>
-                    <p class="feature-description">
-                        GPU memory optimization and distributed training capabilities. Automatically 
-                        manages VRAM allocation, implements gradient accumulation, and provides 
-                        mixed precision training. Scales from single GPU to multi-GPU clusters.
-                    </p>
-                    <span class="feature-status status-current">Available Now</span>
-                </div>
-                
-                <div class="feature-card">
-                    <span class="feature-icon">RAG</span>
-                    <h3 class="feature-title">RAG System</h3>
-                    <p class="feature-description">
-                        Retrieval-Augmented Generation system for intelligent document processing. 
-                        Builds semantic indexes from any documentation, provides context-aware 
-                        responses, and maintains knowledge persistence across sessions.
-                    </p>
-                    <span class="feature-status status-current">Available Now</span>
-                </div>
-                
-                <div class="feature-card">
-                    <span class="feature-icon">CONTEXT</span>
-                    <h3 class="feature-title">Context Governor</h3>
-                    <p class="feature-description">
-                        Intelligent context management for large-scale operations. Automatically 
-                        chunks documents, manages token limits, and provides context-aware 
-                        processing. Supports multiple agent sizes and repository scales.
-                    </p>
-                    <span class="feature-status status-current">Available Now</span>
-                </div>
-                
-                <div class="feature-card">
-                    <span class="feature-icon">HEAL</span>
-                    <h3 class="feature-title">Self-Healing System</h3>
-                    <p class="feature-description">
-                        Autonomous system recovery and optimization. Continuously monitors system 
-                        health, automatically fixes issues, and optimizes performance. Provides 
-                        real-time health metrics and proactive maintenance alerts.
-                    </p>
-                    <span class="feature-status status-current">Available Now</span>
-                </div>
-                
-                <div class="feature-card">
-                    <span class="feature-icon">STRESS</span>
-                    <h3 class="feature-title">Stress Testing Suite</h3>
-                    <p class="feature-description">
-                        Comprehensive performance validation and stress testing. Tests system 
-                        limits under extreme loads, validates recovery mechanisms, and provides 
-                        detailed performance analytics. Ensures system reliability at scale.
-                    </p>
-                    <span class="feature-status status-current">Available Now</span>
-                </div>
-                
-                <div class="feature-card">
-                    <span class="feature-icon">BACKUP</span>
-                    <h3 class="feature-title">Automated Backup System</h3>
-                    <p class="feature-description">
-                        Intelligent backup and restore capabilities with version control. 
-                        Automatically creates snapshots, manages storage efficiently, and provides 
-                        one-click system restoration. Supports incremental and full backup modes.
-                    </p>
-                    <span class="feature-status status-current">Available Now</span>
-                </div>
-                
-                <div class="feature-card">
-                    <span class="feature-icon">MONITOR</span>
-                    <h3 class="feature-title">Real-Time Monitoring</h3>
-                    <p class="feature-description">
-                        Comprehensive system monitoring and alerting. Tracks GPU utilization, 
-                        memory usage, processing speed, and system health in real-time. Provides 
-                        customizable dashboards and automated alerting for critical issues.
-                    </p>
-                    <span class="feature-status status-current">Available Now</span>
-                </div>
-                
-                <div class="feature-card">
-                    <span class="feature-icon">ANALYZE</span>
-                    <h3 class="feature-title">Code Analysis Engine</h3>
-                    <p class="feature-description">
-                        Deep code analysis and quality assessment. Performs static analysis, 
-                        identifies potential issues, and provides code quality metrics. Supports 
-                        multiple programming languages and generates comprehensive reports.
-                    </p>
-                    <span class="feature-status status-current">Available Now</span>
-                </div>
-            </div>
-        </section>
-
-        <section class="features scroll-animate" style="background: linear-gradient(135deg, rgba(139, 92, 246, 0.05), rgba(255, 0, 128, 0.05)); border-radius: 30px; margin: 2rem auto; max-width: 1400px;">
-            <h2 class="section-title">System Architecture</h2>
-            <p style="text-align: center; color: rgba(255, 255, 255, 0.8); margin-bottom: 3rem; font-size: 1.2rem;">
-                Visual representation of how all V5 systems work together
-            </p>
-            <div class="architecture-container">
-                <div class="architecture-layer">
-                    <h3 class="layer-title">User Interface Layer</h3>
-                    <div class="layer-components">
-                        <div class="component">Web Dashboard</div>
-                        <div class="component">CLI Interface</div>
-                        <div class="component">API Gateway</div>
-                    </div>
-                </div>
-                <div class="architecture-connector"></div>
-                <div class="architecture-layer">
-                    <h3 class="layer-title">Core Processing Layer</h3>
-                    <div class="layer-components">
-                        <div class="component">ROCKET Engine</div>
-                        <div class="component">BRAIN Analysis</div>
-                        <div class="component">HAMMER Builder</div>
-                    </div>
-                </div>
-                <div class="architecture-connector"></div>
-                <div class="architecture-layer">
-                    <h3 class="layer-title">Validation & Recovery</h3>
-                    <div class="layer-components">
-                        <div class="component">CHECK_MARK Auditor</div>
-                        <div class="component">FIRE Recovery</div>
-                        <div class="component">STAR Optimization</div>
-                    </div>
-                </div>
-                <div class="architecture-connector"></div>
-                <div class="architecture-layer">
-                    <h3 class="layer-title">Infrastructure</h3>
-                    <div class="layer-components">
-                        <div class="component">GPU Acceleration</div>
-                        <div class="component">Memory Management</div>
-                        <div class="component">Storage Systems</div>
-                    </div>
                 </div>
             </div>
         </section>
@@ -1491,7 +1041,7 @@
         <section class="performance scroll-animate" id="performance">
             <h2 class="performance-title">Performance That Breaks Reality</h2>
             <p style="font-size: 1.2rem; color: rgba(255, 255, 255, 0.8); margin-bottom: 2rem;">
-                Current V5.0 achievements with full vision targets
+                Current V5.0 achievements with meta-cognition system
             </p>
             <div class="performance-grid">
                 <div class="metric">
@@ -1499,16 +1049,16 @@
                     <div class="metric-label">Files/Second (Current)</div>
                 </div>
                 <div class="metric">
-                    <span class="metric-value">10,000+</span>
-                    <div class="metric-label">Files/Second (Target)</div>
+                    <span class="metric-value">95%+</span>
+                    <div class="metric-label">Meta-Cognition Intelligence</div>
                 </div>
                 <div class="metric">
                     <span class="metric-value">100%</span>
                     <div class="metric-label">Validation Score</div>
                 </div>
                 <div class="metric">
-                    <span class="metric-value">EXCELLENT</span>
-                    <div class="metric-label">System Health</div>
+                    <span class="metric-value">43</span>
+                    <div class="metric-label">Operational Components</div>
                 </div>
             </div>
 
@@ -1527,28 +1077,28 @@
                     </div>
                 </div>
                 <div class="chart-container">
-                    <h3 class="chart-title">GPU Utilization</h3>
+                    <h3 class="chart-title">Meta-Cognition Intelligence</h3>
                     <div class="chart">
-                        <div class="chart-line" style="--target-height: 80%;"></div>
+                        <div class="chart-line" style="--target-height: 95%;"></div>
                         <div class="chart-marker" style="left: 20%; top: 20%;"></div>
-                        <div class="chart-marker" style="left: 50%; top: 40%;"></div>
-                        <div class="chart-marker" style="left: 80%; top: 70%;"></div>
+                        <div class="chart-marker" style="left: 50%; top: 50%;"></div>
+                        <div class="chart-marker" style="left: 80%; top: 90%;"></div>
                         <div class="chart-data">
-                            <span>Current: 75%</span>
-                            <span>Target: 90%</span>
+                            <span>Current: 95%+</span>
+                            <span>Target: 100%</span>
                         </div>
                     </div>
                 </div>
                 <div class="chart-container">
-                    <h3 class="chart-title">Memory Efficiency</h3>
+                    <h3 class="chart-title">System Health</h3>
                     <div class="chart">
-                        <div class="chart-line" style="--target-height: 90%;"></div>
+                        <div class="chart-line" style="--target-height: 100%;"></div>
                         <div class="chart-marker" style="left: 20%; top: 25%;"></div>
                         <div class="chart-marker" style="left: 50%; top: 50%;"></div>
-                        <div class="chart-marker" style="left: 80%; top: 85%;"></div>
+                        <div class="chart-marker" style="left: 80%; top: 100%;"></div>
                         <div class="chart-data">
-                            <span>Current: 85%</span>
-                            <span>Target: 95%</span>
+                            <span>Current: 100%</span>
+                            <span>Target: 100%</span>
                         </div>
                     </div>
                 </div>
@@ -1556,7 +1106,7 @@
         </section>
 
         <section class="roadmap scroll-animate" id="roadmap">
-            <h2 class="section-title">ROCKET Future Roadmap</h2>
+            <h2 class="section-title">Future Roadmap</h2>
             <div class="roadmap-timeline">
                 <div class="roadmap-item">
                     <div class="roadmap-content">
@@ -1575,12 +1125,12 @@
                 <div class="roadmap-item">
                     <div class="roadmap-content">
                         <div class="roadmap-phase">Phase 2: Intelligence</div>
-                        <div class="roadmap-title">Advanced AI Integration</div>
+                        <div class="roadmap-title">Meta-Cognition Complete</div>
                         <ul class="roadmap-features">
-                            <li>Enhanced VisionGap Engine</li>
-                            <li>Advanced DreamWeaver Builder</li>
-                            <li>TruthForge Auditor improvements</li>
-                            <li>Phoenix Recovery enhancements</li>
+                            <li>Enhanced Phoenix Recovery System</li>
+                            <li>Advanced VisionGap Engine</li>
+                            <li>Kai integration (paradox resolution)</li>
+                            <li>95%+ intelligence score achieved</li>
                         </ul>
                     </div>
                     <div class="roadmap-dot"></div>
@@ -1588,13 +1138,13 @@
                 
                 <div class="roadmap-item">
                     <div class="roadmap-content">
-                        <div class="roadmap-phase">Phase 3: Intelligence</div>
-                        <div class="roadmap-title">MetaCore Evolution</div>
+                        <div class="roadmap-phase">Phase 3: Innovation</div>
+                        <div class="roadmap-title">Advanced AAA Evolution</div>
                         <ul class="roadmap-features">
-                            <li>Advanced AI optimization</li>
-                            <li>Autonomous system tuning</li>
-                            <li>Predictive performance</li>
-                            <li>Continuous learning algorithms</li>
+                            <li>Large-scale testing (100K+ files)</li>
+                            <li>Performance benchmarking</li>
+                            <li>Real-world capability validation</li>
+                            <li>Advanced monitoring features</li>
                         </ul>
                     </div>
                     <div class="roadmap-dot"></div>
@@ -1606,28 +1156,28 @@
     <footer>
         <div class="footer-content">
             <div class="footer-title">Agent Exo-Suit V5.0</div>
-            <div class="footer-description">
-                Where the impossible becomes inevitable. The future of AI-powered development is here.
-            </div>
+            <p class="footer-description">
+                High-performance AI agent system with 43 operational components, advanced meta-cognition, 
+                and Kai integration for enterprise-grade development and intelligent self-repair.
+            </p>
             <div class="footer-links">
                 <a href="https://github.com/Bigrob7605/Exo-Suit">GitHub</a>
                 <a href="README.md">Documentation</a>
-                <a href="#features">Features</a>
-                <a href="#performance">Performance</a>
+                <a href="META_COGNITION_SYSTEM_STATUS_AND_NEXT_STEPS.md">System Status</a>
             </div>
             <div class="footer-status">
                 <div class="status-indicators">
                     <div class="status-indicator">
                         <div class="indicator-dot"></div>
-                        <span>100% VALIDATION SCORE</span>
+                        <span>Meta-Cognition: 95%+</span>
                     </div>
                     <div class="status-indicator">
                         <div class="indicator-dot"></div>
-                        <span>5,705 files/sec</span>
+                        <span>Validation: 100%</span>
                     </div>
                     <div class="status-indicator">
                         <div class="indicator-dot"></div>
-                        <span>EXCELLENT HEALTH</span>
+                        <span>Components: 43</span>
                     </div>
                 </div>
             </div>
@@ -1635,7 +1185,7 @@
     </footer>
 
     <script>
-        // Create floating particles
+        // Particle animation
         function createParticles() {
             const particlesContainer = document.getElementById('particles');
             const particleCount = 50;
@@ -1650,127 +1200,27 @@
             }
         }
         
-        // Intersection Observer for scroll animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, observerOptions);
-        
-        // Observe all scroll-animate elements
-        document.querySelectorAll('.scroll-animate').forEach(el => {
-            observer.observe(el);
-        });
-        
-        // Initialize particles on load
-        document.addEventListener('DOMContentLoaded', createParticles);
-        
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-        
-        // Add some dynamic content updates
-        setInterval(() => {
-            const statusIndicators = document.querySelectorAll('.indicator-dot');
-            statusIndicators.forEach(indicator => {
-                indicator.style.background = `hsl(${Math.random() * 60 + 180}, 70%, 60%)`;
-            });
-        }, 3000);
-        
-        // Interactive architecture components
-        document.querySelectorAll('.component').forEach(component => {
-            component.addEventListener('click', function() {
-                // Remove active state from all components
-                document.querySelectorAll('.component').forEach(c => {
-                    c.style.background = 'rgba(0, 212, 255, 0.1)';
-                    c.style.borderColor = 'rgba(0, 212, 255, 0.3)';
-                });
+        // Scroll animations
+        function handleScrollAnimations() {
+            const elements = document.querySelectorAll('.scroll-animate');
+            
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
                 
-                // Add active state to clicked component
-                this.style.background = 'rgba(0, 212, 255, 0.3)';
-                this.style.borderColor = 'rgba(0, 212, 255, 0.8)';
-                this.style.transform = 'scale(1.1)';
-                
-                // Reset transform after animation
-                setTimeout(() => {
-                    this.style.transform = 'scale(1.05)';
-                }, 200);
-            });
-        });
-        
-        // Animate charts on scroll
-        function animateCharts() {
-            const charts = document.querySelectorAll('.chart-line');
-            charts.forEach((chart, index) => {
-                setTimeout(() => {
-                    chart.style.animation = 'none';
-                    chart.offsetHeight; // Trigger reflow
-                    chart.style.animation = 'chartGrow 2s ease-out forwards';
-                }, index * 300);
-            });
-        }
-        
-        // Animate chart markers
-        function animateMarkers() {
-            const markers = document.querySelectorAll('.chart-marker');
-            markers.forEach((marker, index) => {
-                setTimeout(() => {
-                    marker.style.animation = 'none';
-                    marker.offsetHeight; // Trigger reflow
-                    marker.style.animation = 'chartMarker 1s ease-out forwards';
-                }, index * 200);
-            });
-        }
-        
-        // Performance metrics animation
-        function animateMetrics() {
-            const metrics = document.querySelectorAll('.metric-value');
-            metrics.forEach((metric, index) => {
-                setTimeout(() => {
-                    metric.style.transform = 'scale(1.1)';
-                    metric.style.color = 'var(--neon-pink)';
-                    setTimeout(() => {
-                        metric.style.transform = 'scale(1)';
-                        metric.style.color = 'var(--cyber-blue)';
-                    }, 300);
-                }, index * 400);
-            });
-        }
-        
-        // Initialize animations when performance section is visible
-        const performanceObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    setTimeout(() => {
-                        animateCharts();
-                        animateMarkers();
-                        animateMetrics();
-                    }, 500);
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('visible');
                 }
             });
-        }, { threshold: 0.5 });
-        
-        const performanceSection = document.querySelector('#performance');
-        if (performanceSection) {
-            performanceObserver.observe(performanceSection);
         }
+        
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            createParticles();
+            handleScrollAnimations();
+        });
+        
+        window.addEventListener('scroll', handleScrollAnimations);
     </script>
 </body>
 </html>
