@@ -160,6 +160,42 @@
             z-index: 2;
         }
         
+        .hero-visual {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            opacity: 0.1;
+        }
+        
+        .hero-visual::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 600px;
+            height: 600px;
+            background: conic-gradient(from 0deg, var(--cyber-blue), var(--electric-purple), var(--neon-pink), var(--cyber-blue));
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            animation: rotate 20s linear infinite;
+        }
+        
+        .hero-visual::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 400px;
+            height: 400px;
+            background: conic-gradient(from 180deg, var(--neon-pink), var(--cyber-blue), var(--electric-purple), var(--neon-pink));
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            animation: rotate 15s linear infinite reverse;
+        }
+        
         .hero-subtitle {
             font-size: 1.2rem;
             color: var(--cyber-blue);
@@ -204,6 +240,36 @@
             margin-right: auto;
             opacity: 0;
             animation: fadeInUp 1s ease 1.2s forwards;
+        }
+        
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+            opacity: 0;
+            animation: fadeInUp 1s ease 1.5s forwards;
+        }
+        
+        .hero-stat {
+            text-align: center;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+        
+        .hero-stat-value {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--cyber-blue);
+            margin-bottom: 0.5rem;
+        }
+        
+        .hero-stat-label {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
         }
         
         @keyframes gradientFlow {
@@ -464,11 +530,6 @@
             z-index: -1;
         }
         
-        @keyframes rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-        
         .performance-title {
             font-size: 2.5rem;
             font-weight: 800;
@@ -505,6 +566,244 @@
         .metric-label {
             color: rgba(255, 255, 255, 0.8);
             font-weight: 500;
+        }
+        
+        /* Performance Charts */
+        .performance-charts {
+            margin-top: 4rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+        }
+        
+        .chart-container {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .chart-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: var(--cyber-blue);
+        }
+        
+        .chart {
+            width: 100%;
+            height: 200px;
+            position: relative;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .chart-line {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--cyber-blue);
+            transform-origin: left;
+            animation: chartGrow 2s ease-out forwards;
+        }
+        
+        .chart-line::before {
+            content: '';
+            position: absolute;
+            top: -4px;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            background: linear-gradient(90deg, var(--cyber-blue), transparent);
+            border-radius: 5px;
+        }
+        
+        .chart-data {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        .chart-marker {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: var(--neon-pink);
+            border-radius: 50%;
+            border: 2px solid white;
+            animation: chartMarker 2s ease-out forwards;
+        }
+        
+        @keyframes chartGrow {
+            from { transform: scaleX(0); }
+            to { transform: scaleX(1); }
+        }
+        
+        @keyframes chartMarker {
+            from { 
+                opacity: 0;
+                transform: scale(0);
+            }
+            to { 
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        /* Speed Improvement Chart */
+        .speed-chart {
+            position: relative;
+            height: 200px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .speed-bar {
+            position: absolute;
+            bottom: 0;
+            left: 20px;
+            width: 60px;
+            background: linear-gradient(180deg, var(--cyber-blue), var(--electric-purple));
+            border-radius: 5px 5px 0 0;
+            animation: speedBarGrow 2s ease-out forwards;
+        }
+        
+        .speed-bar.current {
+            left: 120px;
+            background: linear-gradient(180deg, var(--electric-purple), var(--neon-pink));
+        }
+        
+        .speed-bar.target {
+            left: 220px;
+            background: linear-gradient(180deg, var(--neon-pink), var(--cyber-blue));
+        }
+        
+        .speed-labels {
+            position: absolute;
+            bottom: -30px;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        @keyframes speedBarGrow {
+            from { height: 0; }
+            to { height: var(--target-height); }
+        }
+        
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Architecture Visualization */
+        .architecture-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .architecture-layer {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2rem;
+            width: 100%;
+            max-width: 800px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .architecture-layer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .architecture-layer:hover::before {
+            left: 100%;
+        }
+        
+        .architecture-layer:hover {
+            transform: translateY(-5px);
+            border-color: rgba(0, 212, 255, 0.3);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+        
+        .layer-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: var(--cyber-blue);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .layer-components {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .component {
+            background: rgba(0, 212, 255, 0.1);
+            border: 1px solid rgba(0, 212, 255, 0.3);
+            border-radius: 10px;
+            padding: 0.75rem 1.5rem;
+            font-weight: 600;
+            color: var(--cyber-blue);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .component:hover {
+            background: rgba(0, 212, 255, 0.2);
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
+        }
+        
+        .architecture-connector {
+            width: 4px;
+            height: 40px;
+            background: linear-gradient(180deg, var(--cyber-blue), var(--electric-purple));
+            border-radius: 2px;
+            position: relative;
+        }
+        
+        .architecture-connector::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 12px;
+            height: 12px;
+            background: var(--neon-pink);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            animation: pulse 2s infinite;
         }
         
         /* Roadmap Section */
@@ -789,6 +1088,7 @@
     <main>
         <section class="hero">
             <div class="hero-content">
+                <div class="hero-visual"></div>
                 <div class="hero-subtitle">AGENT EXO-SUIT V5.0 "BUILDER OF DREAMS"</div>
                 <h1>Where Dreams<br>Become Code</h1>
                 <div class="hero-tagline">And Code Becomes Legend</div>
@@ -796,6 +1096,20 @@
                     The most advanced AI development platform ever created. 43 operational components 
                     that transform imagination into reality with GPU-accelerated precision.
                 </p>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <div class="hero-stat-value">5,705</div>
+                        <div class="hero-stat-label">Files/Second (Current)</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-value">10,000+</div>
+                        <div class="hero-stat-label">Files/Second (Target)</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-value">100%</div>
+                        <div class="hero-stat-label">Validation Score</div>
+                    </div>
+                </div>
                 <div class="cta-buttons">
                     <a href="https://github.com/Bigrob7605/Exo-Suit" class="btn btn-primary">
                         ROCKET Experience the Magic
@@ -1130,6 +1444,50 @@
             </div>
         </section>
 
+        <section class="features scroll-animate" style="background: linear-gradient(135deg, rgba(139, 92, 246, 0.05), rgba(255, 0, 128, 0.05)); border-radius: 30px; margin: 2rem auto; max-width: 1400px;">
+            <h2 class="section-title">System Architecture</h2>
+            <p style="text-align: center; color: rgba(255, 255, 255, 0.8); margin-bottom: 3rem; font-size: 1.2rem;">
+                Visual representation of how all V5 systems work together
+            </p>
+            <div class="architecture-container">
+                <div class="architecture-layer">
+                    <h3 class="layer-title">User Interface Layer</h3>
+                    <div class="layer-components">
+                        <div class="component">Web Dashboard</div>
+                        <div class="component">CLI Interface</div>
+                        <div class="component">API Gateway</div>
+                    </div>
+                </div>
+                <div class="architecture-connector"></div>
+                <div class="architecture-layer">
+                    <h3 class="layer-title">Core Processing Layer</h3>
+                    <div class="layer-components">
+                        <div class="component">ROCKET Engine</div>
+                        <div class="component">BRAIN Analysis</div>
+                        <div class="component">HAMMER Builder</div>
+                    </div>
+                </div>
+                <div class="architecture-connector"></div>
+                <div class="architecture-layer">
+                    <h3 class="layer-title">Validation & Recovery</h3>
+                    <div class="layer-components">
+                        <div class="component">CHECK_MARK Auditor</div>
+                        <div class="component">FIRE Recovery</div>
+                        <div class="component">STAR Optimization</div>
+                    </div>
+                </div>
+                <div class="architecture-connector"></div>
+                <div class="architecture-layer">
+                    <h3 class="layer-title">Infrastructure</h3>
+                    <div class="layer-components">
+                        <div class="component">GPU Acceleration</div>
+                        <div class="component">Memory Management</div>
+                        <div class="component">Storage Systems</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="performance scroll-animate" id="performance">
             <h2 class="performance-title">Performance That Breaks Reality</h2>
             <p style="font-size: 1.2rem; color: rgba(255, 255, 255, 0.8); margin-bottom: 2rem;">
@@ -1151,6 +1509,48 @@
                 <div class="metric">
                     <span class="metric-value">EXCELLENT</span>
                     <div class="metric-label">System Health</div>
+                </div>
+            </div>
+
+            <div class="performance-charts">
+                <div class="chart-container">
+                    <h3 class="chart-title">Processing Speed Improvement</h3>
+                    <div class="chart">
+                        <div class="chart-line" style="--target-height: 100%;"></div>
+                        <div class="chart-marker" style="left: 20%; top: 30%;"></div>
+                        <div class="chart-marker" style="left: 50%; top: 60%;"></div>
+                        <div class="chart-marker" style="left: 80%; top: 80%;"></div>
+                        <div class="chart-data">
+                            <span>Current: 5,705 files/sec</span>
+                            <span>Target: 10,000+ files/sec</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="chart-container">
+                    <h3 class="chart-title">GPU Utilization</h3>
+                    <div class="chart">
+                        <div class="chart-line" style="--target-height: 80%;"></div>
+                        <div class="chart-marker" style="left: 20%; top: 20%;"></div>
+                        <div class="chart-marker" style="left: 50%; top: 40%;"></div>
+                        <div class="chart-marker" style="left: 80%; top: 70%;"></div>
+                        <div class="chart-data">
+                            <span>Current: 75%</span>
+                            <span>Target: 90%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="chart-container">
+                    <h3 class="chart-title">Memory Efficiency</h3>
+                    <div class="chart">
+                        <div class="chart-line" style="--target-height: 90%;"></div>
+                        <div class="chart-marker" style="left: 20%; top: 25%;"></div>
+                        <div class="chart-marker" style="left: 50%; top: 50%;"></div>
+                        <div class="chart-marker" style="left: 80%; top: 85%;"></div>
+                        <div class="chart-data">
+                            <span>Current: 85%</span>
+                            <span>Target: 95%</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -1293,6 +1693,84 @@
                 indicator.style.background = `hsl(${Math.random() * 60 + 180}, 70%, 60%)`;
             });
         }, 3000);
+        
+        // Interactive architecture components
+        document.querySelectorAll('.component').forEach(component => {
+            component.addEventListener('click', function() {
+                // Remove active state from all components
+                document.querySelectorAll('.component').forEach(c => {
+                    c.style.background = 'rgba(0, 212, 255, 0.1)';
+                    c.style.borderColor = 'rgba(0, 212, 255, 0.3)';
+                });
+                
+                // Add active state to clicked component
+                this.style.background = 'rgba(0, 212, 255, 0.3)';
+                this.style.borderColor = 'rgba(0, 212, 255, 0.8)';
+                this.style.transform = 'scale(1.1)';
+                
+                // Reset transform after animation
+                setTimeout(() => {
+                    this.style.transform = 'scale(1.05)';
+                }, 200);
+            });
+        });
+        
+        // Animate charts on scroll
+        function animateCharts() {
+            const charts = document.querySelectorAll('.chart-line');
+            charts.forEach((chart, index) => {
+                setTimeout(() => {
+                    chart.style.animation = 'none';
+                    chart.offsetHeight; // Trigger reflow
+                    chart.style.animation = 'chartGrow 2s ease-out forwards';
+                }, index * 300);
+            });
+        }
+        
+        // Animate chart markers
+        function animateMarkers() {
+            const markers = document.querySelectorAll('.chart-marker');
+            markers.forEach((marker, index) => {
+                setTimeout(() => {
+                    marker.style.animation = 'none';
+                    marker.offsetHeight; // Trigger reflow
+                    marker.style.animation = 'chartMarker 1s ease-out forwards';
+                }, index * 200);
+            });
+        }
+        
+        // Performance metrics animation
+        function animateMetrics() {
+            const metrics = document.querySelectorAll('.metric-value');
+            metrics.forEach((metric, index) => {
+                setTimeout(() => {
+                    metric.style.transform = 'scale(1.1)';
+                    metric.style.color = 'var(--neon-pink)';
+                    setTimeout(() => {
+                        metric.style.transform = 'scale(1)';
+                        metric.style.color = 'var(--cyber-blue)';
+                    }, 300);
+                }, index * 400);
+            });
+        }
+        
+        // Initialize animations when performance section is visible
+        const performanceObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        animateCharts();
+                        animateMarkers();
+                        animateMetrics();
+                    }, 500);
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        const performanceSection = document.querySelector('#performance');
+        if (performanceSection) {
+            performanceObserver.observe(performanceSection);
+        }
     </script>
 </body>
 </html>
