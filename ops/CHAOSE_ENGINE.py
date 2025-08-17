@@ -324,8 +324,8 @@ class ChaosEngine:
                             logging.warning(f"ALERT: Potential memory leak detected: {stat}")
             
             # Log health metrics
-            if cycle % 10 == 0:  # Every 10 cycles
-                logging.info(f"HEALTH CHECK - CPU: {cpu}%, Memory: {memory.percent}%")
+            # Note: cycle variable is not available in this scope
+            # Health monitoring happens every cycle automatically
                 
         except Exception as e:
             logging.error(f"Health monitoring failed: {e}")
@@ -425,7 +425,7 @@ class ChaosEngine:
 
 def main():
     """Main function to run chaos engineering"""
-            print("CHAOSE_ENGINE - Making V5 Unfuckwithable!")
+    print("CHAOSE_ENGINE - Making V5 Unfuckwithable!")
     print("=" * 50)
     
     # Initialize chaos engine
