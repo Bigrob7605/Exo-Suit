@@ -1,5 +1,5 @@
-# Jekyll Configuration for Agent Exo-Suit V5.0
-# Clean, minimal configuration to fix GitHub Pages build issues
+# Minimal Jekyll Configuration for Agent Exo-Suit V5.0
+# This configuration prevents Jekyll processing and serves files directly
 
 # Site settings
 title: "Agent Exo-Suit V5.0 - Revolutionary AI Development Platform"
@@ -7,86 +7,16 @@ description: "Revolutionary AI-powered development tools featuring 43 operationa
 url: "https://bigrob7605.github.io"
 baseurl: "/Exo-Suit"
 
-# Build settings
+# Disable Jekyll processing
+exclude: ["*"]
+include: []
+
+# No plugins, no collections, no processing
+plugins: []
+collections: {}
+defaults: []
+
+# Build settings (minimal)
 markdown: kramdown
 highlighter: rouge
-permalink: pretty
 encoding: utf-8
-
-# Exclude problematic files and directories
-exclude:
-  # System and build files
-  - ".git/"
-  - ".venv/"
-  - "node_modules/"
-  - "vendor/"
-  
-  # Large data and log files
-  - "*.log"
-  - "*.tgz"
-  - "*.zip"
-  - "*.tar"
-  - "logs/"
-  - "cache/"
-  - "temp/"
-  
-  # Source code and scripts (not needed for docs)
-  - "*.ps1"
-  - "*.py"
-  - "*.bat"
-  - "*.sh"
-  - "*.js"
-  - "*.ts"
-  - "*.json"
-  - "*.xml"
-  - "*.yml"
-  - "*.yaml"
-  
-  # Directories with source code
-  - "ops/"
-  - "rag/"
-  - "context/"
-  - "mermaid/"
-  - "cursor/"
-  - "config/"
-  - "generated_code/"
-  - "system_backups/"
-  - "archive/"
-  - "legacy/"
-  
-  # Requirements and config files
-  - "requirements*.txt"
-  - "package*.json"
-  - "*.lock"
-  - ".env*"
-  
-  # Test and temporary files
-  - "test*/"
-  - "temp*/"
-  - "backup*/"
-  - "*.test"
-  - "*.spec"
-
-# Include only essential documentation
-include:
-  - "README.md"
-  - "index.md"
-
-# No collections - this was causing the /docs/ redirect issue
-# collections: []
-
-# Plugins (minimal for GitHub Pages compatibility)
-plugins: []
-
-# Defaults (simplified)
-defaults:
-  - scope:
-      path: ""
-      type: "pages"
-    values:
-      layout: "default"
-
-# Build optimization
-incremental: false
-relative_links: false
-future: false
