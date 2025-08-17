@@ -1,0 +1,25 @@
+{
+  "timestamp": 1755362068.2640262,
+  "performance_metrics": {
+    "cpu_processing": {
+      "time_seconds": 0.002,
+      "speed_files_per_sec": 600817.07,
+      "files_processed": 1000,
+      "improvement_percent": 352.45
+    },
+    "gpu_processing": {
+      "time_seconds": 0.114,
+      "speed_files_per_sec": 8746.31,
+      "files_processed": 1000,
+      "improvement_percent": -93.41
+    },
+    "hybrid_processing": {
+      "time_seconds": 0.002,
+      "speed_files_per_sec": 437271.06,
+      "files_processed": 1000,
+      "improvement_percent": 229.29
+    }
+  },
+  "optimization_results": {},
+  "performance_score": 175
+}

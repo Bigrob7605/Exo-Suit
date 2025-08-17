@@ -49,7 +49,7 @@ $PerformanceProfiles = @{
 }
 
 # ===== SYSTEM DETECTION =====
-Write-Host "🚀 Speed-Boost-V4.0 Initializing..." -ForegroundColor Cyan
+Write-Host " Speed-Boost-V4.0 Initializing..." -ForegroundColor Cyan
 
 $SystemInfo = @{
     CPU_Cores = (Get-WmiObject -Class Win32_Processor).NumberOfCores
@@ -67,32 +67,32 @@ try {
         $SystemInfo.GPU_Available = $true
         $SystemInfo.GPU_Memory = [int]($nvidiaOutput -split ',')[1]
         $SystemInfo.CUDA_Available = $true
-        Write-Host "✅ NVIDIA GPU detected: $($nvidiaOutput -split ',')[0]" -ForegroundColor Green
+        Write-Host " NVIDIA GPU detected: $($nvidiaOutput -split ',')[0]" -ForegroundColor Green
         Write-Host "   Memory: $($SystemInfo.GPU_Memory) MB | Driver: $($nvidiaOutput -split ',')[2]" -ForegroundColor Green
     }
 } catch {
-    Write-Host "⚠️  NVIDIA GPU not detected" -ForegroundColor Yellow
+    Write-Host "  NVIDIA GPU not detected" -ForegroundColor Yellow
 }
 
-Write-Host "📊 System Specs: $($SystemInfo.CPU_Cores)C/$($SystemInfo.CPU_Threads)T | $($SystemInfo.RAM_GB)GB RAM" -ForegroundColor Cyan
+Write-Host " System Specs: $($SystemInfo.CPU_Cores)C/$($SystemInfo.CPU_Threads)T | $($SystemInfo.RAM_GB)GB RAM" -ForegroundColor Cyan
 
 # ===== PERFORMANCE OPTIMIZATION =====
 function Optimize-SystemPerformance {
     param([hashtable]$Profile)
     
-    Write-Host "⚡ Applying $Mode performance profile..." -ForegroundColor Yellow
+    Write-Host " Applying $Mode performance profile..." -ForegroundColor Yellow
     
     # CPU Optimization
     try {
         if ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator") {
             powercfg -change -processor-min-state-ac $Profile.CPU_Min
             powercfg -change -processor-max-state-ac $Profile.CPU_Max
-            Write-Host "✅ CPU optimized: Min $($Profile.CPU_Min)%, Max $($Profile.CPU_Max)%" -ForegroundColor Green
+            Write-Host " CPU optimized: Min $($Profile.CPU_Min)%, Max $($Profile.CPU_Max)%" -ForegroundColor Green
         } else {
-            Write-Host "⚠️  CPU optimization requires admin privileges" -ForegroundColor Yellow
+            Write-Host "  CPU optimization requires admin privileges" -ForegroundColor Yellow
         }
     } catch {
-        Write-Host "❌ CPU optimization failed: $($_.Exception.Message)" -ForegroundColor Red
+        Write-Host " CPU optimization failed: $($_.Exception.Message)" -ForegroundColor Red
     }
     
     # Memory Optimization
@@ -108,9 +108,9 @@ function Optimize-SystemPerformance {
             }
         }
         
-        Write-Host "✅ Memory cache optimized: $($Profile.Cache_Size)MB" -ForegroundColor Green
+        Write-Host " Memory cache optimized: $($Profile.Cache_Size)MB" -ForegroundColor Green
     } catch {
-        Write-Host "❌ Memory optimization failed: $($_.Exception.Message)" -ForegroundColor Red
+        Write-Host " Memory optimization failed: $($_.Exception.Message)" -ForegroundColor Red
     }
     
     # GPU Optimization
@@ -121,9 +121,9 @@ function Optimize-SystemPerformance {
             $env:TORCH_CUDA_ARCH_LIST = "8.6"
             $env:CUDA_MEMORY_FRACTION = $Profile.GPU_Memory_Fraction
             
-            Write-Host "✅ GPU optimized: Memory fraction $($Profile.GPU_Memory_Fraction)" -ForegroundColor Green
+            Write-Host " GPU optimized: Memory fraction $($Profile.GPU_Memory_Fraction)" -ForegroundColor Green
         } catch {
-            Write-Host "❌ GPU optimization failed: $($_.Exception.Message)" -ForegroundColor Red
+            Write-Host " GPU optimization failed: $($_.Exception.Message)" -ForegroundColor Red
         }
     }
 }
@@ -132,7 +132,7 @@ function Optimize-SystemPerformance {
 function Optimize-RAGSystem {
     param([hashtable]$Profile)
     
-    Write-Host "🧠 Optimizing RAG system..." -ForegroundColor Yellow
+    Write-Host " Optimizing RAG system..." -ForegroundColor Yellow
     
     # Update hybrid config
     $configPath = "rag\hybrid_config_v4.yaml"
@@ -146,9 +146,9 @@ function Optimize-RAGSystem {
             $config = $config -replace 'memory_threshold: [\d.]+', "memory_threshold: $($Profile.Memory_Threshold)"
             
             Set-Content $configPath $config
-            Write-Host "✅ RAG config optimized for $Mode mode" -ForegroundColor Green
+            Write-Host " RAG config optimized for $Mode mode" -ForegroundColor Green
         } catch {
-            Write-Host "❌ RAG config update failed: $($_.Exception.Message)" -ForegroundColor Red
+            Write-Host " RAG config update failed: $($_.Exception.Message)" -ForegroundColor Red
         }
     }
 }
@@ -157,7 +157,7 @@ function Optimize-RAGSystem {
 function Optimize-PythonEnvironment {
     param([hashtable]$Profile)
     
-    Write-Host "🐍 Optimizing Python environment..." -ForegroundColor Yellow
+    Write-Host " Optimizing Python environment..." -ForegroundColor Yellow
     
     try {
         # Set environment variables for Python performance
@@ -170,40 +170,40 @@ function Optimize-PythonEnvironment {
         $env:VECLIB_MAXIMUM_THREADS = $Profile.Workers
         $env:NUMEXPR_NUM_THREADS = $Profile.Workers
         
-        Write-Host "✅ Python environment optimized" -ForegroundColor Green
+        Write-Host " Python environment optimized" -ForegroundColor Green
     } catch {
-        Write-Host "❌ Python optimization failed: $($_.Exception.Message)" -ForegroundColor Red
+        Write-Host " Python optimization failed: $($_.Exception.Message)" -ForegroundColor Red
     }
 }
 
 # ===== PERFORMANCE MONITORING =====
 function Start-PerformanceMonitoring {
-    Write-Host "📊 Starting performance monitoring..." -ForegroundColor Cyan
+    Write-Host " Starting performance monitoring..." -ForegroundColor Cyan
     
     $monitorScript = @"
-    while (`$true) {
-        `$cpu = (Get-Counter '\Processor(_Total)\% Processor Time').CounterSamples[0].CookedValue
-        `$ram = (Get-Counter '\Memory\Available MBytes').CounterSamples[0].CookedValue
-        `$ramTotal = [math]::Round((Get-WmiObject -Class Win32_ComputerSystem).TotalPhysicalMemory / 1MB, 0)
-        `$ramUsed = `$ramTotal - `$ram
-        `$ramPercent = [math]::Round((`$ramUsed / `$ramTotal) * 100, 1)
+    while ($true) {
+        $cpu = (Get-Counter '\Processor(_Total)\% Processor Time').CounterSamples[0].CookedValue
+        $ram = (Get-Counter '\Memory\Available MBytes').CounterSamples[0].CookedValue
+        $ramTotal = [math]::Round((Get-WmiObject -Class Win32_ComputerSystem).TotalPhysicalMemory / 1MB, 0)
+        $ramUsed = $ramTotal - $ram
+        $ramPercent = [math]::Round(($ramUsed / $ramTotal) * 100, 1)
         
-        if (`$SystemInfo.GPU_Available) {
+        if ($SystemInfo.GPU_Available) {
             try {
-                `$gpu = nvidia-smi --query-gpu=utilization.gpu,memory.used,memory.total,temperature.gpu --format=csv,noheader,nounits 2>`$null
-                if (`$gpu) {
-                    `$gpuParts = `$gpu -split ','
-                    `$gpuUtil = `$gpuParts[0]
-                    `$gpuMemUsed = `$gpuParts[1]
-                    `$gpuMemTotal = `$gpuParts[2]
-                    `$gpuTemp = `$gpuParts[3]
-                    Write-Host "CPU: `$([math]::Round(`$cpu,1))% | RAM: `$ramPercent% | GPU: `$gpuUtil% | GPU Mem: `$gpuMemUsed/`$gpuMemTotal MB | Temp: `$gpuTemp°C" -ForegroundColor Green
+                $gpu = nvidia-smi --query-gpu=utilization.gpu,memory.used,memory.total,temperature.gpu --format=csv,noheader,nounits 2>$null
+                if ($gpu) {
+                    $gpuParts = $gpu -split ','
+                    $gpuUtil = $gpuParts[0]
+                    $gpuMemUsed = $gpuParts[1]
+                    $gpuMemTotal = $gpuParts[2]
+                    $gpuTemp = $gpuParts[3]
+                    Write-Host "CPU: $([math]::Round($cpu,1))% | RAM: $ramPercent% | GPU: $gpuUtil% | GPU Mem: $gpuMemUsed/$gpuMemTotal MB | Temp: $gpuTempC" -ForegroundColor Green
                 }
             } catch {
-                Write-Host "CPU: `$([math]::Round(`$cpu,1))% | RAM: `$ramPercent% | GPU: Error" -ForegroundColor Yellow
+                Write-Host "CPU: $([math]::Round($cpu,1))% | RAM: $ramPercent% | GPU: Error" -ForegroundColor Yellow
             }
         } else {
-            Write-Host "CPU: `$([math]::Round(`$cpu,1))% | RAM: `$ramPercent%" -ForegroundColor Green
+            Write-Host "CPU: $([math]::Round($cpu,1))% | RAM: $ramPercent%" -ForegroundColor Green
         }
         
         Start-Sleep -Seconds 2
@@ -211,12 +211,12 @@ function Start-PerformanceMonitoring {
 "@
     
     Start-Job -ScriptBlock ([ScriptBlock]::Create($monitorScript)) | Out-Null
-    Write-Host "✅ Performance monitoring started (Press Ctrl+C to stop)" -ForegroundColor Green
+    Write-Host " Performance monitoring started (Press Ctrl+C to stop)" -ForegroundColor Green
 }
 
 # ===== PERFORMANCE BENCHMARKING =====
 function Run-PerformanceBenchmark {
-    Write-Host "🏁 Running performance benchmark..." -ForegroundColor Cyan
+    Write-Host " Running performance benchmark..." -ForegroundColor Cyan
     
     $startTime = Get-Date
     
@@ -224,18 +224,18 @@ function Run-PerformanceBenchmark {
     try {
         $ragTest = python "rag\test_hybrid_comprehensive_v4.py" 2>$null
         $ragTime = (Get-Date) - $startTime
-        Write-Host "✅ RAG benchmark completed in $($ragTime.TotalSeconds.ToString('F2')) seconds" -ForegroundColor Green
+        Write-Host " RAG benchmark completed in $($ragTime.TotalSeconds.ToString('F2')) seconds" -ForegroundColor Green
     } catch {
-        Write-Host "❌ RAG benchmark failed" -ForegroundColor Red
+        Write-Host " RAG benchmark failed" -ForegroundColor Red
     }
     
     # Test GPU performance
     if ($SystemInfo.GPU_Available) {
         try {
             $gpuTest = python -c "import torch; print('GPU Memory:', torch.cuda.get_device_properties(0).total_memory / 1024**3, 'GB')" 2>$null
-            Write-Host "✅ GPU benchmark completed" -ForegroundColor Green
+            Write-Host " GPU benchmark completed" -ForegroundColor Green
         } catch {
-            Write-Host "❌ GPU benchmark failed" -ForegroundColor Red
+            Write-Host " GPU benchmark failed" -ForegroundColor Red
         }
     }
 }
@@ -244,14 +244,14 @@ function Run-PerformanceBenchmark {
 try {
     switch ($Mode) {
         'Restore' {
-            Write-Host "🔄 Restoring normal performance mode..." -ForegroundColor Yellow
+            Write-Host " Restoring normal performance mode..." -ForegroundColor Yellow
             
             # Restore balanced power plan
             try {
                 powercfg -setactive 381b4222-f694-41f0-9685-ff5bb260df2e
-                Write-Host "✅ Balanced power plan restored" -ForegroundColor Green
+                Write-Host " Balanced power plan restored" -ForegroundColor Green
             } catch {
-                Write-Host "⚠️  Could not restore power plan" -ForegroundColor Yellow
+                Write-Host "  Could not restore power plan" -ForegroundColor Yellow
             }
             
             # Clear environment variables
@@ -264,7 +264,7 @@ try {
             Remove-Item Env:VECLIB_MAXIMUM_THREADS -ErrorAction SilentlyContinue
             Remove-Item Env:NUMEXPR_NUM_THREADS -ErrorAction SilentlyContinue
             
-            Write-Host "✅ Normal performance mode restored" -ForegroundColor Green
+            Write-Host " Normal performance mode restored" -ForegroundColor Green
         }
         default {
             $profile = $PerformanceProfiles[$Mode]
@@ -272,14 +272,14 @@ try {
                 throw "Invalid performance mode: $Mode"
             }
             
-            Write-Host "🚀 Applying $Mode performance profile..." -ForegroundColor Cyan
+            Write-Host " Applying $Mode performance profile..." -ForegroundColor Cyan
             Write-Host "   Batch Size: $($profile.Batch_Size) | Workers: $($profile.Workers) | Prefetch: $($profile.Prefetch)" -ForegroundColor Cyan
             
             Optimize-SystemPerformance -Profile $profile
             Optimize-RAGSystem -Profile $profile
             Optimize-PythonEnvironment -Profile $profile
             
-            Write-Host "✅ $Mode performance mode activated!" -ForegroundColor Green
+            Write-Host " $Mode performance mode activated!" -ForegroundColor Green
             
             if ($Benchmark) {
                 Run-PerformanceBenchmark
@@ -292,9 +292,9 @@ try {
     }
     
 } catch {
-    Write-Host "❌ Speed-Boost-V4.0 failed: $($_.Exception.Message)" -ForegroundColor Red
+    Write-Host " Speed-Boost-V4.0 failed: $($_.Exception.Message)" -ForegroundColor Red
     exit 1
 }
 
-Write-Host "🎯 Speed-Boost-V4.0 completed successfully!" -ForegroundColor Green
+Write-Host " Speed-Boost-V4.0 completed successfully!" -ForegroundColor Green
 exit 0

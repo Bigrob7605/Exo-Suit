@@ -1,0 +1,36 @@
+{
+  "chunk_type": "legacy_integration",
+  "chunk_id": "legacy_v1_v4_systems",
+  "title": "Legacy V1-V4 Systems",
+  "description": "Legacy PowerShell systems being integrated into V5",
+  "content": {
+    "legacy_files": [
+      "AgentExoSuitV4.ps1",
+      "ops\\Drift-Guard-V4.ps1",
+      "ops\\GPU-Monitor-V4.ps1",
+      "ops\\GPU-RAG-V4.ps1",
+      "ops\\Import-Indexer-V4.ps1",
+      "ops\\Performance-Test-Suite-V4.ps1",
+      "ops\\Placeholder-Scanner-V4.ps1",
+      "ops\\Power-Management-V4.ps1",
+      "ops\\Project-Health-Scanner-V4.ps1",
+      "ops\\Scan-Secrets-V4.ps1",
+      "ops\\Speed-Boost-V4.ps1",
+      "ops\\Symbol-Indexer-V4.ps1",
+      "ops\\Ultimate-Speed-Boost-V4.ps1"
+    ],
+    "total_legacy_files": 13,
+    "key_legacy_systems": [
+      "GPU-RAG-V4.ps1 - GPU-accelerated RAG system",
+      "gpu-accelerator.ps1 - GPU optimization",
+      "AgentExoSuitV4.ps1 - Main system controller",
+      "emoji-sentinel-v4.ps1 - Emoji detection",
+      "Scan-Secrets-V4.ps1 - Security scanning"
+    ]
+  },
+  "estimated_tokens": 16.900000000000002,
+  "related_chunks": [
+    "v5_core_systems",
+    "dependencies"
+  ]
+}

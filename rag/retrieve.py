@@ -207,16 +207,23 @@ class DualModeRAGRetrieverV4:
         logger.info(f"Searching for top {topk} results...")
         
         # Strategy: Use GPU-accelerated search if available
-        if 'gpu' in self.models and hasattr(faiss, 'StandardGpuResources'):
+        if 'gpu' in self.models:
             try:
-                logger.info("Using GPU-accelerated search")
-                res = faiss.StandardGpuResources()
-                gpu_index = faiss.index_cpu_to_gpu(res, 0, self.index)
+                logger.info("Attempting GPU-accelerated search")
+                from faiss_gpu_compat import faiss_gpu
                 
-                scores, indices = gpu_index.search(query_emb, topk)
-                logger.info("GPU search completed")
-                return scores, indices
-                
+                if faiss_gpu.has_gpu_resources():
+                    res = faiss_gpu.create_gpu_resources()
+                    if res:
+                        gpu_index = faiss_gpu.index_cpu_to_gpu(res, 0, self.index)
+                        scores, indices = gpu_index.search(query_emb, topk)
+                        logger.info("GPU search completed")
+                        return scores, indices
+                    else:
+                        logger.info("GPU resources not available, using CPU search")
+                else:
+                    logger.info("GPU FAISS features not available, using CPU search")
+                    
             except Exception as e:
                 logger.warning(f"GPU search failed: {e}")
                 logger.info("Falling back to CPU search")

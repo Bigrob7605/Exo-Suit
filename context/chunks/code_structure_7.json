@@ -1,0 +1,2990 @@
+{
+  "chunk_type": "code_samples",
+  "chunk_id": "code_structure_7",
+  "title": "Code Structure Analysis - Part 7",
+  "description": "Code analysis for files 301-350",
+  "content": {
+    "files_analyzed": [
+      "ops\\consolidation_backups\\pre_consolidation_20250817_054429\\PHASE_3_SMART_OPTIMIZATION_ENGINE.py",
+      "ops\\consolidation_backups\\pre_consolidation_20250817_054429\\PHASE_3_ULTIMATE_10K_PUSH.py",
+      "ops\\consolidation_backups\\pre_consolidation_20250817_054429\\PHASE_3_ULTRA_TURBO_V5_UPGRADE.py",
+      "ops\\consolidation_backups\\pre_consolidation_20250817_054429\\PROJECT_HEALING_SYSTEM.py",
+      "ops\\consolidation_backups\\pre_consolidation_20250817_054429\\REAL_CONSOLIDATION_EXECUTOR.py",
+      "ops\\consolidation_backups\\pre_consolidation_20250817_054429\\REAL_DATA_1M_TOKEN_PROCESSOR.py",
+      "ops\\consolidation_backups\\pre_consolidation_20250817_054429\\REPOSITORY-DEVOURER.py",
+      "ops\\consolidation_backups\\pre_consolidation_20250817_054429\\SCALABLE_SCANNER.py",
+      "ops\\consolidation_backups\\pre_consolidation_20250817_054429\\SIMPLE_APPEND_INTEGRATION.py",
+      "ops\\consolidation_backups\\pre_consolidation_20250817_054429\\SIMPLE_INTEGRATION.py",
+      "ops\\consolidation_backups\\pre_consolidation_20250817_054429\\TOOLBOX-TOKEN-PROCESSOR.py",
+      "ops\\consolidation_backups\\pre_consolidation_20250817_054429\\V5.0_DREAM_BUILDING_PIPELINE.py",
+      "ops\\consolidation_backups\\pre_consolidation_20250817_054429\\VISION_GAP_ENGINE.py",
+      "ops\\consolidation_backups\\pre_consolidation_20250817_054429\\VISION_GAP_ENGINE_CLEAN.py",
+      "ops\\consolidation_backups\\pre_consolidation_20250817_054429\\VISION_GAP_ENGINE_INTELLIGENT.py",
+      "ops\\consolidation_backups\\pre_consolidation_20250817_054429\\VISION_GAP_ENGINE_ULTRA_INTELLIGENT.py",
+      "context\\chunks\\architecture_overview.json",
+      "context\\chunks\\code_structure_1.json",
+      "context\\chunks\\code_structure_10.json",
+      "context\\chunks\\code_structure_100.json",
+      "context\\chunks\\code_structure_101.json",
+      "context\\chunks\\code_structure_102.json",
+      "context\\chunks\\code_structure_103.json",
+      "context\\chunks\\code_structure_104.json",
+      "context\\chunks\\code_structure_105.json",
+      "context\\chunks\\code_structure_106.json",
+      "context\\chunks\\code_structure_107.json",
+      "context\\chunks\\code_structure_108.json",
+      "context\\chunks\\code_structure_109.json",
+      "context\\chunks\\code_structure_11.json",
+      "context\\chunks\\code_structure_110.json",
+      "context\\chunks\\code_structure_111.json",
+      "context\\chunks\\code_structure_112.json",
+      "context\\chunks\\code_structure_113.json",
+      "context\\chunks\\code_structure_114.json",
+      "context\\chunks\\code_structure_115.json",
+      "context\\chunks\\code_structure_116.json",
+      "context\\chunks\\code_structure_117.json",
+      "context\\chunks\\code_structure_118.json",
+      "context\\chunks\\code_structure_119.json",
+      "context\\chunks\\code_structure_12.json",
+      "context\\chunks\\code_structure_120.json",
+      "context\\chunks\\code_structure_121.json",
+      "context\\chunks\\code_structure_122.json",
+      "context\\chunks\\code_structure_123.json",
+      "context\\chunks\\code_structure_124.json",
+      "context\\chunks\\code_structure_125.json",
+      "context\\chunks\\code_structure_126.json",
+      "context\\chunks\\code_structure_127.json",
+      "context\\chunks\\code_structure_128.json"
+    ],
+    "structure_data": {
+      "ops\\consolidation_backups\\pre_consolidation_20250817_054429\\PHASE_3_SMART_OPTIMIZATION_ENGINE.py": {
+        "type": "python",
+        "imports": [
+          "os",
+          "time",
+          "threading",
+          "concurrent.futures",
+          "pathlib.Path",
+          "logging",
+          "json",
+          "hashlib",
+          "re",
+          "mmap",
+          "collections.defaultdict",
+          "psutil",
+          "torch",
+          "numpy",
+          "concurrent.futures.ThreadPoolExecutor",
+          "concurrent.futures.as_completed"
+        ],
+        "functions": [
+          {
+            "name": "main",
+            "line": 587,
+            "args": []
+          },
+          {
+            "name": "__init__",
+            "line": 38,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_compile_smart_patterns",
+            "line": 59,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "process_file_smart",
+            "line": 86,
+            "args": [
+              "self",
+              "file_path"
+            ]
+          },
+          {
+            "name": "_process_with_memory_mapping",
+            "line": 106,
+            "args": [
+              "self",
+              "file_path"
+            ]
+          },
+          {
+            "name": "_process_small_file",
+            "line": 118,
+            "args": [
+              "self",
+              "file_path"
+            ]
+          },
+          {
+            "name": "_process_medium_file",
+            "line": 125,
+            "args": [
+              "self",
+              "file_path"
+            ]
+          },
+          {
+            "name": "_process_large_file",
+            "line": 136,
+            "args": [
+              "self",
+              "file_path"
+            ]
+          },
+          {
+            "name": "_detect_file_type",
+            "line": 176,
+            "args": [
+              "self",
+              "file_path"
+            ]
+          },
+          {
+            "name": "_calculate_efficient_hash",
+            "line": 190,
+            "args": [
+              "self",
+              "file_path"
+            ]
+          },
+          {
+            "name": "_analyze_content_smart",
+            "line": 210,
+            "args": [
+              "self",
+              "content",
+              "file_path"
+            ]
+          },
+          {
+            "name": "process_gpu_batch_smart",
+            "line": 261,
+            "args": [
+              "self",
+              "file_paths"
+            ]
+          },
+          {
+            "name": "__init__",
+            "line": 324,
+            "args": [
+              "self",
+              "max_workers"
+            ]
+          },
+          {
+            "name": "process_files_smart",
+            "line": 332,
+            "args": [
+              "self",
+              "file_paths",
+              "batch_size"
+            ]
+          },
+          {
+            "name": "_process_batch_smart",
+            "line": 358,
+            "args": [
+              "self",
+              "file_paths"
+            ]
+          },
+          {
+            "name": "shutdown",
+            "line": 390,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "__init__",
+            "line": 398,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "collect_real_data_files",
+            "line": 405,
+            "args": [
+              "self",
+              "max_files"
+            ]
+          },
+          {
+            "name": "run_smart_test",
+            "line": 436,
+            "args": [
+              "self",
+              "num_files"
+            ]
+          },
+          {
+            "name": "save_results",
+            "line": 525,
+            "args": [
+              "self",
+              "results",
+              "filename"
+            ]
+          },
+          {
+            "name": "print_summary",
+            "line": 537,
+            "args": [
+              "self",
+              "results"
+            ]
+          }
+        ],
+        "classes": [
+          {
+            "name": "SmartProcessor",
+            "line": 35,
+            "methods": [
+              "__init__",
+              "_compile_smart_patterns",
+              "process_file_smart",
+              "_process_with_memory_mapping",
+              "_process_small_file",
+              "_process_medium_file",
+              "_process_large_file",
+              "_detect_file_type",
+              "_calculate_efficient_hash",
+              "_analyze_content_smart",
+              "process_gpu_batch_smart"
+            ]
+          },
+          {
+            "name": "SmartParallelProcessor",
+            "line": 321,
+            "methods": [
+              "__init__",
+              "process_files_smart",
+              "_process_batch_smart",
+              "shutdown"
+            ]
+          },
+          {
+            "name": "SmartOptimizationEngine",
+            "line": 395,
+            "methods": [
+              "__init__",
+              "collect_real_data_files",
+              "run_smart_test",
+              "save_results",
+              "print_summary"
+            ]
+          }
+        ],
+        "line_count": 637
+      },
+      "ops\\consolidation_backups\\pre_consolidation_20250817_054429\\PHASE_3_ULTIMATE_10K_PUSH.py": {
+        "type": "python",
+        "imports": [
+          "os",
+          "sys",
+          "time",
+          "json",
+          "logging",
+          "tempfile",
+          "shutil",
+          "pathlib.Path",
+          "concurrent.futures.ThreadPoolExecutor",
+          "concurrent.futures.ProcessPoolExecutor",
+          "typing.List",
+          "typing.Dict",
+          "typing.Any",
+          "typing.Optional",
+          "psutil",
+          "torch",
+          "numpy",
+          "datetime.datetime"
+        ],
+        "functions": [
+          {
+            "name": "main",
+            "line": 420,
+            "args": []
+          },
+          {
+            "name": "__init__",
+            "line": 41,
+            "args": [
+              "self",
+              "max_files"
+            ]
+          },
+          {
+            "name": "create_ram_disk",
+            "line": 47,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "load_files_to_ram",
+            "line": 58,
+            "args": [
+              "self",
+              "file_paths"
+            ]
+          },
+          {
+            "name": "cleanup",
+            "line": 101,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "__init__",
+            "line": 117,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "process_file",
+            "line": 120,
+            "args": [
+              "self",
+              "file_path"
+            ]
+          },
+          {
+            "name": "__init__",
+            "line": 152,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "process_ram_files_parallel",
+            "line": 185,
+            "args": [
+              "self",
+              "file_paths",
+              "batch_size"
+            ]
+          },
+          {
+            "name": "__init__",
+            "line": 225,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "collect_real_data_files",
+            "line": 231,
+            "args": [
+              "self",
+              "target_count"
+            ]
+          },
+          {
+            "name": "run_ultimate_test",
+            "line": 264,
+            "args": [
+              "self",
+              "file_count"
+            ]
+          },
+          {
+            "name": "display_results",
+            "line": 364,
+            "args": [
+              "self",
+              "results"
+            ]
+          }
+        ],
+        "classes": [
+          {
+            "name": "UltimateRAMDiskManager",
+            "line": 38,
+            "methods": [
+              "__init__",
+              "create_ram_disk",
+              "load_files_to_ram",
+              "cleanup"
+            ]
+          },
+          {
+            "name": "UltimateRAMDiskProcessor",
+            "line": 114,
+            "methods": [
+              "__init__",
+              "process_file"
+            ]
+          },
+          {
+            "name": "UltimateRAMDiskParallelProcessor",
+            "line": 149,
+            "methods": [
+              "__init__",
+              "process_ram_files_parallel"
+            ]
+          },
+          {
+            "name": "UltimateRAMDiskTestEngine",
+            "line": 222,
+            "methods": [
+              "__init__",
+              "collect_real_data_files",
+              "run_ultimate_test",
+              "display_results"
+            ]
+          }
+        ],
+        "line_count": 472
+      },
+      "ops\\consolidation_backups\\pre_consolidation_20250817_054429\\PHASE_3_ULTRA_TURBO_V5_UPGRADE.py": {
+        "type": "python",
+        "imports": [
+          "__future__.annotations",
+          "os",
+          "re",
+          "time",
+          "mmap",
+          "shutil",
+          "logging",
+          "hashlib",
+          "tempfile",
+          "threading",
+          "concurrent.futures",
+          "json",
+          "pathlib.Path",
+          "collections.defaultdict",
+          "typing.List",
+          "typing.Dict",
+          "typing.Any",
+          "psutil",
+          "numpy",
+          "torch",
+          "gc"
+        ],
+        "functions": [
+          {
+            "name": "main",
+            "line": 940,
+            "args": []
+          },
+          {
+            "name": "__init__",
+            "line": 73,
+            "args": [
+              "self",
+              "max_files"
+            ]
+          },
+          {
+            "name": "create_ram_disk",
+            "line": 81,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "load_files_to_ram",
+            "line": 84,
+            "args": [
+              "self",
+              "paths"
+            ]
+          },
+          {
+            "name": "_ultra_fast_copy",
+            "line": 205,
+            "args": [
+              "self",
+              "src",
+              "tgt",
+              "idx"
+            ]
+          },
+          {
+            "name": "cleanup",
+            "line": 256,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "__init__",
+            "line": 276,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "process_file",
+            "line": 281,
+            "args": [
+              "self",
+              "meta"
+            ]
+          },
+          {
+            "name": "__init__",
+            "line": 359,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "process_ram_files_parallel",
+            "line": 378,
+            "args": [
+              "self",
+              "ram_files",
+              "batch_size",
+              "system_monitor"
+            ]
+          },
+          {
+            "name": "shutdown",
+            "line": 488,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "__init__",
+            "line": 495,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "collect_real_data_files",
+            "line": 507,
+            "args": [
+              "self",
+              "n"
+            ]
+          },
+          {
+            "name": "run_ultra_turbo_test",
+            "line": 567,
+            "args": [
+              "self",
+              "num_files"
+            ]
+          },
+          {
+            "name": "save_results",
+            "line": 647,
+            "args": [
+              "self",
+              "results",
+              "filename"
+            ]
+          },
+          {
+            "name": "print_summary",
+            "line": 654,
+            "args": [
+              "self",
+              "r"
+            ]
+          },
+          {
+            "name": "__init__",
+            "line": 675,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "start_monitoring",
+            "line": 680,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "stop_monitoring",
+            "line": 687,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_monitor_loop",
+            "line": 694,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "__init__",
+            "line": 735,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "record_performance",
+            "line": 740,
+            "args": [
+              "self",
+              "batch_size",
+              "workers",
+              "speed",
+              "memory_usage"
+            ]
+          },
+          {
+            "name": "suggest_optimizations",
+            "line": 754,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "__init__",
+            "line": 777,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "log_system_state",
+            "line": 781,
+            "args": [
+              "self",
+              "batch_id",
+              "files_in_batch",
+              "batch_start_time"
+            ]
+          },
+          {
+            "name": "get_performance_analysis",
+            "line": 873,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "save_metrics",
+            "line": 914,
+            "args": [
+              "self",
+              "output_dir"
+            ]
+          },
+          {
+            "name": "copy_file_batch",
+            "line": 92,
+            "args": [
+              "file_batch"
+            ]
+          },
+          {
+            "name": "ultra_fast_load",
+            "line": 129,
+            "args": [
+              "file_batch"
+            ]
+          },
+          {
+            "name": "should_skip_path",
+            "line": 533,
+            "args": [
+              "path"
+            ]
+          }
+        ],
+        "classes": [
+          {
+            "name": "UltraTurboRAMDiskManager",
+            "line": 71,
+            "methods": [
+              "__init__",
+              "create_ram_disk",
+              "load_files_to_ram",
+              "_ultra_fast_copy",
+              "cleanup"
+            ]
+          },
+          {
+            "name": "UltraTurboRAMDiskProcessor",
+            "line": 266,
+            "methods": [
+              "__init__",
+              "process_file"
+            ]
+          },
+          {
+            "name": "UltraTurboRAMDiskParallelProcessor",
+            "line": 358,
+            "methods": [
+              "__init__",
+              "process_ram_files_parallel",
+              "shutdown"
+            ]
+          },
+          {
+            "name": "UltraTurboRAMDiskTestEngine",
+            "line": 494,
+            "methods": [
+              "__init__",
+              "collect_real_data_files",
+              "run_ultra_turbo_test",
+              "save_results",
+              "print_summary"
+            ]
+          },
+          {
+            "name": "SystemPerformanceMonitor",
+            "line": 672,
+            "methods": [
+              "__init__",
+              "start_monitoring",
+              "stop_monitoring",
+              "_monitor_loop"
+            ]
+          },
+          {
+            "name": "PerformanceTuner",
+            "line": 732,
+            "methods": [
+              "__init__",
+              "record_performance",
+              "suggest_optimizations"
+            ]
+          },
+          {
+            "name": "TurboSystemMonitor",
+            "line": 774,
+            "methods": [
+              "__init__",
+              "log_system_state",
+              "get_performance_analysis",
+              "save_metrics"
+            ]
+          }
+        ],
+        "line_count": 1016
+      },
+      "ops\\consolidation_backups\\pre_consolidation_20250817_054429\\PROJECT_HEALING_SYSTEM.py": {
+        "type": "python",
+        "imports": [
+          "os",
+          "sys",
+          "json",
+          "time",
+          "logging",
+          "psutil",
+          "pathlib.Path",
+          "typing.List",
+          "typing.Dict",
+          "typing.Any",
+          "typing.Tuple",
+          "hashlib",
+          "re"
+        ],
+        "functions": [
+          {
+            "name": "main",
+            "line": 855,
+            "args": []
+          },
+          {
+            "name": "__init__",
+            "line": 30,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "analyze_project_structure",
+            "line": 50,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "assess_project_health",
+            "line": 102,
+            "args": [
+              "self",
+              "structure_analysis"
+            ]
+          },
+          {
+            "name": "_generate_health_recommendations",
+            "line": 183,
+            "args": [
+              "self",
+              "score",
+              "issues"
+            ]
+          },
+          {
+            "name": "classify_project_damage",
+            "line": 215,
+            "args": [
+              "self",
+              "health_assessment",
+              "structure_analysis"
+            ]
+          },
+          {
+            "name": "generate_healing_roadmap",
+            "line": 263,
+            "args": [
+              "self",
+              "health_assessment",
+              "damage_classification"
+            ]
+          },
+          {
+            "name": "create_core_md_files",
+            "line": 389,
+            "args": [
+              "self",
+              "health_assessment",
+              "roadmap"
+            ]
+          },
+          {
+            "name": "_generate_readme_content",
+            "line": 418,
+            "args": [
+              "self",
+              "health_assessment",
+              "roadmap"
+            ]
+          },
+          {
+            "name": "_generate_vision_content",
+            "line": 446,
+            "args": [
+              "self",
+              "health_assessment",
+              "roadmap"
+            ]
+          },
+          {
+            "name": "_generate_architecture_content",
+            "line": 480,
+            "args": [
+              "self",
+              "health_assessment",
+              "roadmap"
+            ]
+          },
+          {
+            "name": "_generate_roadmap_content",
+            "line": 530,
+            "args": [
+              "self",
+              "roadmap"
+            ]
+          },
+          {
+            "name": "_generate_healing_status_content",
+            "line": 585,
+            "args": [
+              "self",
+              "health_assessment",
+              "roadmap"
+            ]
+          },
+          {
+            "name": "save_core_files",
+            "line": 635,
+            "args": [
+              "self",
+              "core_files"
+            ]
+          },
+          {
+            "name": "generate_healing_report",
+            "line": 647,
+            "args": [
+              "self",
+              "structure_analysis",
+              "health_assessment",
+              "damage_classification",
+              "roadmap"
+            ]
+          },
+          {
+            "name": "run_project_healing",
+            "line": 806,
+            "args": [
+              "self"
+            ]
+          }
+        ],
+        "classes": [
+          {
+            "name": "ProjectHealingSystem",
+            "line": 29,
+            "methods": [
+              "__init__",
+              "analyze_project_structure",
+              "assess_project_health",
+              "_generate_health_recommendations",
+              "classify_project_damage",
+              "generate_healing_roadmap",
+              "create_core_md_files",
+              "_generate_readme_content",
+              "_generate_vision_content",
+              "_generate_architecture_content",
+              "_generate_roadmap_content",
+              "_generate_healing_status_content",
+              "save_core_files",
+              "generate_healing_report",
+              "run_project_healing"
+            ]
+          }
+        ],
+        "line_count": 871
+      },
+      "ops\\consolidation_backups\\pre_consolidation_20250817_054429\\REAL_CONSOLIDATION_EXECUTOR.py": {
+        "type": "python",
+        "imports": [
+          "os",
+          "sys",
+          "shutil",
+          "subprocess",
+          "pathlib.Path",
+          "datetime.datetime",
+          "logging"
+        ],
+        "functions": [
+          {
+            "name": "main",
+            "line": 367,
+            "args": []
+          },
+          {
+            "name": "__init__",
+            "line": 21,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "setup_logging",
+            "line": 94,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "backup_before_consolidation",
+            "line": 114,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "consolidate_phase3_scripts",
+            "line": 130,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "consolidate_vision_scripts",
+            "line": 166,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "consolidate_performance_scripts",
+            "line": 202,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "consolidate_utility_scripts",
+            "line": 238,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "remove_consolidated_scripts",
+            "line": 274,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "create_consolidation_summary",
+            "line": 297,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "execute_real_consolidation",
+            "line": 337,
+            "args": [
+              "self"
+            ]
+          }
+        ],
+        "classes": [
+          {
+            "name": "RealConsolidationExecutor",
+            "line": 18,
+            "methods": [
+              "__init__",
+              "setup_logging",
+              "backup_before_consolidation",
+              "consolidate_phase3_scripts",
+              "consolidate_vision_scripts",
+              "consolidate_performance_scripts",
+              "consolidate_utility_scripts",
+              "remove_consolidated_scripts",
+              "create_consolidation_summary",
+              "execute_real_consolidation"
+            ]
+          }
+        ],
+        "line_count": 381
+      },
+      "ops\\consolidation_backups\\pre_consolidation_20250817_054429\\REAL_DATA_1M_TOKEN_PROCESSOR.py": {
+        "type": "python",
+        "imports": [
+          "os",
+          "sys",
+          "json",
+          "time",
+          "logging",
+          "psutil",
+          "threading",
+          "pathlib.Path",
+          "typing.List",
+          "typing.Dict",
+          "typing.Any",
+          "typing.Tuple",
+          "numpy",
+          "hashlib",
+          "torch",
+          "faiss",
+          "sentence_transformers.SentenceTransformer"
+        ],
+        "functions": [
+          {
+            "name": "main",
+            "line": 366,
+            "args": []
+          },
+          {
+            "name": "__init__",
+            "line": 42,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "get_system_resources",
+            "line": 62,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "log_system_status",
+            "line": 86,
+            "args": [
+              "self",
+              "phase"
+            ]
+          },
+          {
+            "name": "scan_toolbox_files",
+            "line": 104,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "estimate_tokens_for_file",
+            "line": 129,
+            "args": [
+              "self",
+              "file_path"
+            ]
+          },
+          {
+            "name": "process_file_content",
+            "line": 143,
+            "args": [
+              "self",
+              "file_path"
+            ]
+          },
+          {
+            "name": "select_files_for_1m_tokens",
+            "line": 170,
+            "args": [
+              "self",
+              "files"
+            ]
+          },
+          {
+            "name": "process_files_to_build_context",
+            "line": 200,
+            "args": [
+              "self",
+              "selected_files"
+            ]
+          },
+          {
+            "name": "create_real_context_index",
+            "line": 230,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "validate_1m_token_achievement",
+            "line": 272,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "run_real_data_processing",
+            "line": 298,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "generate_real_data_report",
+            "line": 331,
+            "args": [
+              "self",
+              "success",
+              "context_summary"
+            ]
+          }
+        ],
+        "classes": [
+          {
+            "name": "RealData1MTokenProcessor",
+            "line": 41,
+            "methods": [
+              "__init__",
+              "get_system_resources",
+              "log_system_status",
+              "scan_toolbox_files",
+              "estimate_tokens_for_file",
+              "process_file_content",
+              "select_files_for_1m_tokens",
+              "process_files_to_build_context",
+              "create_real_context_index",
+              "validate_1m_token_achievement",
+              "run_real_data_processing",
+              "generate_real_data_report"
+            ]
+          }
+        ],
+        "line_count": 383
+      },
+      "ops\\consolidation_backups\\pre_consolidation_20250817_054429\\REPOSITORY-DEVOURER.py": {
+        "type": "python",
+        "imports": [
+          "os",
+          "sys",
+          "json",
+          "time",
+          "logging",
+          "psutil",
+          "hashlib",
+          "ast",
+          "re",
+          "pathlib.Path",
+          "typing.List",
+          "typing.Dict",
+          "typing.Any",
+          "typing.Tuple",
+          "typing.Optional",
+          "numpy",
+          "datetime.datetime",
+          "collections.defaultdict",
+          "torch",
+          "faiss",
+          "sentence_transformers.SentenceTransformer"
+        ],
+        "functions": [
+          {
+            "name": "main",
+            "line": 682,
+            "args": []
+          },
+          {
+            "name": "__init__",
+            "line": 52,
+            "args": [
+              "self",
+              "repository_path"
+            ]
+          },
+          {
+            "name": "initialize_model",
+            "line": 87,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "get_system_resources",
+            "line": 97,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "log_system_status",
+            "line": 121,
+            "args": [
+              "self",
+              "phase"
+            ]
+          },
+          {
+            "name": "scan_repository_structure",
+            "line": 138,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "build_directory_tree",
+            "line": 192,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "analyze_file_content",
+            "line": 209,
+            "args": [
+              "self",
+              "file_path"
+            ]
+          },
+          {
+            "name": "analyze_code_file",
+            "line": 247,
+            "args": [
+              "self",
+              "content",
+              "file_type"
+            ]
+          },
+          {
+            "name": "analyze_documentation_file",
+            "line": 319,
+            "args": [
+              "self",
+              "content"
+            ]
+          },
+          {
+            "name": "analyze_config_file",
+            "line": 340,
+            "args": [
+              "self",
+              "content",
+              "file_type"
+            ]
+          },
+          {
+            "name": "analyze_web_file",
+            "line": 362,
+            "args": [
+              "self",
+              "content",
+              "file_type"
+            ]
+          },
+          {
+            "name": "calculate_complexity_score",
+            "line": 390,
+            "args": [
+              "self",
+              "content"
+            ]
+          },
+          {
+            "name": "calculate_readability_score",
+            "line": 408,
+            "args": [
+              "self",
+              "content"
+            ]
+          },
+          {
+            "name": "analyze_json_config_security",
+            "line": 423,
+            "args": [
+              "self",
+              "config_data"
+            ]
+          },
+          {
+            "name": "process_repository_files",
+            "line": 447,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "generate_comprehensive_report",
+            "line": 483,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "aggregate_analysis_results",
+            "line": 574,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "generate_fix_recommendations",
+            "line": 614,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "run_repository_analysis",
+            "line": 654,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "check_for_secrets",
+            "line": 428,
+            "args": [
+              "obj",
+              "path"
+            ]
+          }
+        ],
+        "classes": [
+          {
+            "name": "RepositoryDevourer",
+            "line": 51,
+            "methods": [
+              "__init__",
+              "initialize_model",
+              "get_system_resources",
+              "log_system_status",
+              "scan_repository_structure",
+              "build_directory_tree",
+              "analyze_file_content",
+              "analyze_code_file",
+              "analyze_documentation_file",
+              "analyze_config_file",
+              "analyze_web_file",
+              "calculate_complexity_score",
+              "calculate_readability_score",
+              "analyze_json_config_security",
+              "process_repository_files",
+              "generate_comprehensive_report",
+              "aggregate_analysis_results",
+              "generate_fix_recommendations",
+              "run_repository_analysis"
+            ]
+          }
+        ],
+        "line_count": 699
+      },
+      "ops\\consolidation_backups\\pre_consolidation_20250817_054429\\SCALABLE_SCANNER.py": {
+        "type": "python",
+        "imports": [
+          "os",
+          "sys",
+          "json",
+          "time",
+          "logging",
+          "re",
+          "threading",
+          "pathlib.Path",
+          "typing.List",
+          "typing.Dict",
+          "typing.Any",
+          "typing.Tuple",
+          "typing.Set",
+          "hashlib",
+          "collections.defaultdict"
+        ],
+        "functions": [
+          {
+            "name": "main",
+            "line": 433,
+            "args": []
+          },
+          {
+            "name": "__init__",
+            "line": 30,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_detect_project_boundaries",
+            "line": 65,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_identify_main_project",
+            "line": 75,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_is_toolbox_file",
+            "line": 81,
+            "args": [
+              "self",
+              "file_path"
+            ]
+          },
+          {
+            "name": "_start_progress_indicator",
+            "line": 89,
+            "args": [
+              "self",
+              "scan_name"
+            ]
+          },
+          {
+            "name": "_stop_progress_indicator",
+            "line": 96,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_progress_animation",
+            "line": 104,
+            "args": [
+              "self",
+              "scan_name"
+            ]
+          },
+          {
+            "name": "_get_all_scannable_files",
+            "line": 120,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "run_unicode_scan",
+            "line": 137,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "run_content_scan",
+            "line": 237,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "run_comprehensive_scan",
+            "line": 333,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_generate_comprehensive_report",
+            "line": 354,
+            "args": [
+              "self",
+              "unicode_results",
+              "content_results"
+            ]
+          }
+        ],
+        "classes": [
+          {
+            "name": "ScalableScanner",
+            "line": 29,
+            "methods": [
+              "__init__",
+              "_detect_project_boundaries",
+              "_identify_main_project",
+              "_is_toolbox_file",
+              "_start_progress_indicator",
+              "_stop_progress_indicator",
+              "_progress_animation",
+              "_get_all_scannable_files",
+              "run_unicode_scan",
+              "run_content_scan",
+              "run_comprehensive_scan",
+              "_generate_comprehensive_report"
+            ]
+          }
+        ],
+        "line_count": 450
+      },
+      "ops\\consolidation_backups\\pre_consolidation_20250817_054429\\SIMPLE_APPEND_INTEGRATION.py": {
+        "type": "python",
+        "imports": [
+          "os",
+          "sys",
+          "pathlib.Path"
+        ],
+        "functions": [
+          {
+            "name": "append_sentinel_mesh",
+            "line": 14,
+            "args": []
+          },
+          {
+            "name": "append_self_healing",
+            "line": 69,
+            "args": []
+          },
+          {
+            "name": "append_health_checker",
+            "line": 124,
+            "args": []
+          },
+          {
+            "name": "append_ensemble_system",
+            "line": 179,
+            "args": []
+          },
+          {
+            "name": "main",
+            "line": 234,
+            "args": []
+          }
+        ],
+        "classes": [],
+        "line_count": 265
+      },
+      "ops\\consolidation_backups\\pre_consolidation_20250817_054429\\SIMPLE_INTEGRATION.py": {
+        "type": "python",
+        "imports": [
+          "os",
+          "sys",
+          "pathlib.Path"
+        ],
+        "functions": [
+          {
+            "name": "integrate_toolbox_gems",
+            "line": 14,
+            "args": []
+          }
+        ],
+        "classes": [],
+        "line_count": 290
+      },
+      "ops\\consolidation_backups\\pre_consolidation_20250817_054429\\TOOLBOX-TOKEN-PROCESSOR.py": {
+        "type": "python",
+        "imports": [
+          "os",
+          "sys",
+          "json",
+          "time",
+          "logging",
+          "psutil",
+          "hashlib",
+          "pathlib.Path",
+          "typing.List",
+          "typing.Dict",
+          "typing.Any",
+          "typing.Tuple",
+          "numpy",
+          "datetime.datetime",
+          "torch",
+          "faiss",
+          "sentence_transformers.SentenceTransformer"
+        ],
+        "functions": [
+          {
+            "name": "main",
+            "line": 464,
+            "args": []
+          },
+          {
+            "name": "__init__",
+            "line": 41,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "initialize_model",
+            "line": 72,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "get_system_resources",
+            "line": 88,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "log_system_status",
+            "line": 112,
+            "args": [
+              "self",
+              "phase"
+            ]
+          },
+          {
+            "name": "scan_toolbox_files",
+            "line": 131,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "estimate_tokens_for_file",
+            "line": 156,
+            "args": [
+              "self",
+              "file_path"
+            ]
+          },
+          {
+            "name": "process_file_content",
+            "line": 169,
+            "args": [
+              "self",
+              "file_path"
+            ]
+          },
+          {
+            "name": "create_memory_intensive_tensors",
+            "line": 196,
+            "args": [
+              "self",
+              "target_gb"
+            ]
+          },
+          {
+            "name": "process_files_in_batches",
+            "line": 232,
+            "args": [
+              "self",
+              "files"
+            ]
+          },
+          {
+            "name": "build_context_index",
+            "line": 293,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "search_context",
+            "line": 317,
+            "args": [
+              "self",
+              "query",
+              "top_k"
+            ]
+          },
+          {
+            "name": "run_processing_pipeline",
+            "line": 345,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "generate_processing_report",
+            "line": 415,
+            "args": [
+              "self",
+              "duration"
+            ]
+          }
+        ],
+        "classes": [
+          {
+            "name": "ToolboxTokenProcessor",
+            "line": 40,
+            "methods": [
+              "__init__",
+              "initialize_model",
+              "get_system_resources",
+              "log_system_status",
+              "scan_toolbox_files",
+              "estimate_tokens_for_file",
+              "process_file_content",
+              "create_memory_intensive_tensors",
+              "process_files_in_batches",
+              "build_context_index",
+              "search_context",
+              "run_processing_pipeline",
+              "generate_processing_report"
+            ]
+          }
+        ],
+        "line_count": 481
+      },
+      "ops\\consolidation_backups\\pre_consolidation_20250817_054429\\V5.0_DREAM_BUILDING_PIPELINE.py": {
+        "type": "python",
+        "imports": [
+          "os",
+          "sys",
+          "time",
+          "json",
+          "subprocess",
+          "threading",
+          "pathlib.Path",
+          "concurrent.futures.ThreadPoolExecutor",
+          "concurrent.futures.as_completed",
+          "typing.Dict",
+          "typing.List",
+          "typing.Any",
+          "typing.Optional",
+          "logging"
+        ],
+        "functions": [
+          {
+            "name": "main",
+            "line": 387,
+            "args": []
+          },
+          {
+            "name": "__init__",
+            "line": 46,
+            "args": [
+              "self",
+              "project_root"
+            ]
+          },
+          {
+            "name": "run_vision_gap_analysis",
+            "line": 71,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "run_dreamweaver_builder",
+            "line": 113,
+            "args": [
+              "self",
+              "specification_file"
+            ]
+          },
+          {
+            "name": "run_truthforge_auditor",
+            "line": 157,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "execute_dream_building_cycle",
+            "line": 198,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "run_continuous_dream_building",
+            "line": 241,
+            "args": [
+              "self",
+              "max_cycles"
+            ]
+          },
+          {
+            "name": "_extract_gaps_count",
+            "line": 287,
+            "args": [
+              "self",
+              "output"
+            ]
+          },
+          {
+            "name": "_extract_requirements_count",
+            "line": 297,
+            "args": [
+              "self",
+              "output"
+            ]
+          },
+          {
+            "name": "_extract_files_generated",
+            "line": 307,
+            "args": [
+              "self",
+              "output"
+            ]
+          },
+          {
+            "name": "_extract_validation_score",
+            "line": 317,
+            "args": [
+              "self",
+              "output"
+            ]
+          },
+          {
+            "name": "_calculate_performance_gain",
+            "line": 327,
+            "args": [
+              "self",
+              "vision_result",
+              "dreamweaver_result",
+              "truthforge_result",
+              "cycle_time"
+            ]
+          },
+          {
+            "name": "generate_pipeline_report",
+            "line": 347,
+            "args": [
+              "self"
+            ]
+          }
+        ],
+        "classes": [
+          {
+            "name": "V5DreamBuildingPipeline",
+            "line": 40,
+            "methods": [
+              "__init__",
+              "run_vision_gap_analysis",
+              "run_dreamweaver_builder",
+              "run_truthforge_auditor",
+              "execute_dream_building_cycle",
+              "run_continuous_dream_building",
+              "_extract_gaps_count",
+              "_extract_requirements_count",
+              "_extract_files_generated",
+              "_extract_validation_score",
+              "_calculate_performance_gain",
+              "generate_pipeline_report"
+            ]
+          }
+        ],
+        "line_count": 422
+      },
+      "ops\\consolidation_backups\\pre_consolidation_20250817_054429\\VISION_GAP_ENGINE.py": {
+        "type": "python",
+        "imports": [
+          "os",
+          "re",
+          "pathlib.Path",
+          "datetime.datetime",
+          "typing.Dict",
+          "typing.List",
+          "typing.Any",
+          "typing.Tuple"
+        ],
+        "functions": [
+          {
+            "name": "main",
+            "line": 438,
+            "args": []
+          },
+          {
+            "name": "__init__",
+            "line": 14,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "scan_project_gaps",
+            "line": 32,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_scan_task_checklist",
+            "line": 71,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_scan_content_gaps",
+            "line": 100,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_analyze_file_content",
+            "line": 129,
+            "args": [
+              "self",
+              "file_path",
+              "content"
+            ]
+          },
+          {
+            "name": "_has_meaningful_content",
+            "line": 196,
+            "args": [
+              "self",
+              "content"
+            ]
+          },
+          {
+            "name": "_scan_implementation_gaps",
+            "line": 221,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_is_in_code_block",
+            "line": 273,
+            "args": [
+              "self",
+              "context",
+              "match_pos"
+            ]
+          },
+          {
+            "name": "_is_positive_context",
+            "line": 280,
+            "args": [
+              "self",
+              "context",
+              "match"
+            ]
+          },
+          {
+            "name": "_generate_recommendations",
+            "line": 294,
+            "args": [
+              "self",
+              "gaps"
+            ]
+          },
+          {
+            "name": "_create_gap_summary",
+            "line": 329,
+            "args": [
+              "self",
+              "gaps"
+            ]
+          },
+          {
+            "name": "_determine_overall_status",
+            "line": 350,
+            "args": [
+              "self",
+              "gaps"
+            ]
+          },
+          {
+            "name": "_save_gap_report",
+            "line": 366,
+            "args": [
+              "self",
+              "gaps"
+            ]
+          },
+          {
+            "name": "_format_gap_report",
+            "line": 376,
+            "args": [
+              "self",
+              "gaps"
+            ]
+          }
+        ],
+        "classes": [
+          {
+            "name": "VisionGapEngine",
+            "line": 13,
+            "methods": [
+              "__init__",
+              "scan_project_gaps",
+              "_scan_task_checklist",
+              "_scan_content_gaps",
+              "_analyze_file_content",
+              "_has_meaningful_content",
+              "_scan_implementation_gaps",
+              "_is_in_code_block",
+              "_is_positive_context",
+              "_generate_recommendations",
+              "_create_gap_summary",
+              "_determine_overall_status",
+              "_save_gap_report",
+              "_format_gap_report"
+            ]
+          }
+        ],
+        "line_count": 452
+      },
+      "ops\\consolidation_backups\\pre_consolidation_20250817_054429\\VISION_GAP_ENGINE_CLEAN.py": {
+        "type": "python",
+        "imports": [
+          "os",
+          "re",
+          "pathlib.Path",
+          "datetime.datetime",
+          "typing.Dict",
+          "typing.List",
+          "typing.Any",
+          "typing.Tuple"
+        ],
+        "functions": [
+          {
+            "name": "main",
+            "line": 444,
+            "args": []
+          },
+          {
+            "name": "__init__",
+            "line": 14,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "should_scan_directory",
+            "line": 41,
+            "args": [
+              "self",
+              "path"
+            ]
+          },
+          {
+            "name": "get_active_markdown_files",
+            "line": 48,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "scan_project_gaps",
+            "line": 58,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_scan_task_checklist",
+            "line": 97,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_scan_content_gaps",
+            "line": 126,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_analyze_file_content",
+            "line": 157,
+            "args": [
+              "self",
+              "file_path",
+              "content"
+            ]
+          },
+          {
+            "name": "_scan_implementation_gaps",
+            "line": 207,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_is_in_code_block",
+            "line": 260,
+            "args": [
+              "self",
+              "context",
+              "match_pos"
+            ]
+          },
+          {
+            "name": "_is_positive_context",
+            "line": 267,
+            "args": [
+              "self",
+              "context",
+              "match"
+            ]
+          },
+          {
+            "name": "_generate_recommendations",
+            "line": 281,
+            "args": [
+              "self",
+              "gaps"
+            ]
+          },
+          {
+            "name": "_create_gap_summary",
+            "line": 316,
+            "args": [
+              "self",
+              "gaps"
+            ]
+          },
+          {
+            "name": "_determine_overall_status",
+            "line": 336,
+            "args": [
+              "self",
+              "gaps"
+            ]
+          },
+          {
+            "name": "_save_gap_report",
+            "line": 353,
+            "args": [
+              "self",
+              "gaps"
+            ]
+          },
+          {
+            "name": "_generate_report_content",
+            "line": 364,
+            "args": [
+              "self",
+              "gaps"
+            ]
+          }
+        ],
+        "classes": [
+          {
+            "name": "VisionGapEngineClean",
+            "line": 13,
+            "methods": [
+              "__init__",
+              "should_scan_directory",
+              "get_active_markdown_files",
+              "scan_project_gaps",
+              "_scan_task_checklist",
+              "_scan_content_gaps",
+              "_analyze_file_content",
+              "_scan_implementation_gaps",
+              "_is_in_code_block",
+              "_is_positive_context",
+              "_generate_recommendations",
+              "_create_gap_summary",
+              "_determine_overall_status",
+              "_save_gap_report",
+              "_generate_report_content"
+            ]
+          }
+        ],
+        "line_count": 461
+      },
+      "ops\\consolidation_backups\\pre_consolidation_20250817_054429\\VISION_GAP_ENGINE_INTELLIGENT.py": {
+        "type": "python",
+        "imports": [
+          "os",
+          "re",
+          "pathlib.Path",
+          "datetime.datetime",
+          "typing.Dict",
+          "typing.List",
+          "typing.Any",
+          "typing.Tuple"
+        ],
+        "functions": [
+          {
+            "name": "main",
+            "line": 591,
+            "args": []
+          },
+          {
+            "name": "__init__",
+            "line": 14,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "should_scan_directory",
+            "line": 86,
+            "args": [
+              "self",
+              "path"
+            ]
+          },
+          {
+            "name": "get_active_markdown_files",
+            "line": 93,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "is_false_positive",
+            "line": 103,
+            "args": [
+              "self",
+              "content",
+              "match_start",
+              "match_end"
+            ]
+          },
+          {
+            "name": "_is_in_code_block",
+            "line": 135,
+            "args": [
+              "self",
+              "context",
+              "match_pos"
+            ]
+          },
+          {
+            "name": "_is_in_resolved_section",
+            "line": 142,
+            "args": [
+              "self",
+              "context"
+            ]
+          },
+          {
+            "name": "scan_project_gaps",
+            "line": 159,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_scan_task_checklist",
+            "line": 199,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_scan_content_gaps_intelligent",
+            "line": 228,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_analyze_file_content_intelligent",
+            "line": 261,
+            "args": [
+              "self",
+              "file_path",
+              "content"
+            ]
+          },
+          {
+            "name": "_is_section_false_positive",
+            "line": 323,
+            "args": [
+              "self",
+              "section_content",
+              "section_title"
+            ]
+          },
+          {
+            "name": "_scan_implementation_gaps_intelligent",
+            "line": 350,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_generate_intelligent_recommendations",
+            "line": 398,
+            "args": [
+              "self",
+              "gaps"
+            ]
+          },
+          {
+            "name": "_create_intelligent_gap_summary",
+            "line": 439,
+            "args": [
+              "self",
+              "gaps"
+            ]
+          },
+          {
+            "name": "_determine_intelligent_status",
+            "line": 460,
+            "args": [
+              "self",
+              "gaps"
+            ]
+          },
+          {
+            "name": "_save_intelligent_gap_report",
+            "line": 477,
+            "args": [
+              "self",
+              "gaps"
+            ]
+          },
+          {
+            "name": "_generate_intelligent_report_content",
+            "line": 488,
+            "args": [
+              "self",
+              "gaps"
+            ]
+          }
+        ],
+        "classes": [
+          {
+            "name": "VisionGapEngineIntelligent",
+            "line": 13,
+            "methods": [
+              "__init__",
+              "should_scan_directory",
+              "get_active_markdown_files",
+              "is_false_positive",
+              "_is_in_code_block",
+              "_is_in_resolved_section",
+              "scan_project_gaps",
+              "_scan_task_checklist",
+              "_scan_content_gaps_intelligent",
+              "_analyze_file_content_intelligent",
+              "_is_section_false_positive",
+              "_scan_implementation_gaps_intelligent",
+              "_generate_intelligent_recommendations",
+              "_create_intelligent_gap_summary",
+              "_determine_intelligent_status",
+              "_save_intelligent_gap_report",
+              "_generate_intelligent_report_content"
+            ]
+          }
+        ],
+        "line_count": 609
+      },
+      "ops\\consolidation_backups\\pre_consolidation_20250817_054429\\VISION_GAP_ENGINE_ULTRA_INTELLIGENT.py": {
+        "type": "python",
+        "imports": [
+          "os",
+          "re",
+          "pathlib.Path",
+          "datetime.datetime",
+          "typing.Dict",
+          "typing.List",
+          "typing.Any",
+          "typing.Tuple"
+        ],
+        "functions": [
+          {
+            "name": "main",
+            "line": 365,
+            "args": []
+          },
+          {
+            "name": "__init__",
+            "line": 14,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "should_scan_directory",
+            "line": 52,
+            "args": [
+              "self",
+              "path"
+            ]
+          },
+          {
+            "name": "get_active_markdown_files",
+            "line": 59,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "is_ultra_false_positive",
+            "line": 67,
+            "args": [
+              "self",
+              "content",
+              "section_content",
+              "section_title"
+            ]
+          },
+          {
+            "name": "scan_project_gaps",
+            "line": 96,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_scan_task_checklist",
+            "line": 132,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_scan_content_ultra_intelligent",
+            "line": 156,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_analyze_file_ultra_intelligent",
+            "line": 186,
+            "args": [
+              "self",
+              "file_path",
+              "content"
+            ]
+          },
+          {
+            "name": "_generate_ultra_recommendations",
+            "line": 210,
+            "args": [
+              "self",
+              "gaps"
+            ]
+          },
+          {
+            "name": "_create_ultra_summary",
+            "line": 231,
+            "args": [
+              "self",
+              "gaps"
+            ]
+          },
+          {
+            "name": "_determine_ultra_status",
+            "line": 247,
+            "args": [
+              "self",
+              "gaps"
+            ]
+          },
+          {
+            "name": "_save_ultra_report",
+            "line": 264,
+            "args": [
+              "self",
+              "gaps"
+            ]
+          },
+          {
+            "name": "_generate_ultra_report_content",
+            "line": 275,
+            "args": [
+              "self",
+              "gaps"
+            ]
+          }
+        ],
+        "classes": [
+          {
+            "name": "VisionGapEngineUltraIntelligent",
+            "line": 13,
+            "methods": [
+              "__init__",
+              "should_scan_directory",
+              "get_active_markdown_files",
+              "is_ultra_false_positive",
+              "scan_project_gaps",
+              "_scan_task_checklist",
+              "_scan_content_ultra_intelligent",
+              "_analyze_file_ultra_intelligent",
+              "_generate_ultra_recommendations",
+              "_create_ultra_summary",
+              "_determine_ultra_status",
+              "_save_ultra_report",
+              "_generate_ultra_report_content"
+            ]
+          }
+        ],
+        "line_count": 383
+      },
+      "context\\chunks\\architecture_overview.json": {
+        "type": "json",
+        "keys": [
+          "chunk_type",
+          "chunk_id",
+          "title",
+          "description",
+          "content",
+          "estimated_tokens",
+          "related_chunks"
+        ],
+        "line_count": 26
+      },
+      "context\\chunks\\code_structure_1.json": {
+        "type": "json",
+        "keys": [
+          "chunk_type",
+          "chunk_id",
+          "title",
+          "description",
+          "content",
+          "estimated_tokens",
+          "related_chunks"
+        ],
+        "line_count": 2083
+      },
+      "context\\chunks\\code_structure_10.json": {
+        "type": "json",
+        "keys": [
+          "chunk_type",
+          "chunk_id",
+          "title",
+          "description",
+          "content",
+          "estimated_tokens",
+          "related_chunks"
+        ],
+        "line_count": 717
+      },
+      "context\\chunks\\code_structure_100.json": {
+        "type": "json",
+        "keys": [
+          "chunk_type",
+          "chunk_id",
+          "title",
+          "description",
+          "content",
+          "estimated_tokens",
+          "related_chunks"
+        ],
+        "line_count": 817
+      },
+      "context\\chunks\\code_structure_101.json": {
+        "type": "json",
+        "keys": [
+          "chunk_type",
+          "chunk_id",
+          "title",
+          "description",
+          "content",
+          "estimated_tokens",
+          "related_chunks"
+        ],
+        "line_count": 817
+      },
+      "context\\chunks\\code_structure_102.json": {
+        "type": "json",
+        "keys": [
+          "chunk_type",
+          "chunk_id",
+          "title",
+          "description",
+          "content",
+          "estimated_tokens",
+          "related_chunks"
+        ],
+        "line_count": 823
+      },
+      "context\\chunks\\code_structure_103.json": {
+        "type": "json",
+        "keys": [
+          "chunk_type",
+          "chunk_id",
+          "title",
+          "description",
+          "content",
+          "estimated_tokens",
+          "related_chunks"
+        ],
+        "line_count": 917
+      },
+      "context\\chunks\\code_structure_104.json": {
+        "type": "json",
+        "keys": [
+          "chunk_type",
+          "chunk_id",
+          "title",
+          "description",
+          "content",
+          "estimated_tokens",
+          "related_chunks"
+        ],
+        "line_count": 917
+      },
+      "context\\chunks\\code_structure_105.json": {
+        "type": "json",
+        "keys": [
+          "chunk_type",
+          "chunk_id",
+          "title",
+          "description",
+          "content",
+          "estimated_tokens",
+          "related_chunks"
+        ],
+        "line_count": 911
+      },
+      "context\\chunks\\code_structure_106.json": {
+        "type": "json",
+        "keys": [
+          "chunk_type",
+          "chunk_id",
+          "title",
+          "description",
+          "content",
+          "estimated_tokens",
+          "related_chunks"
+        ],
+        "line_count": 817
+      },
+      "context\\chunks\\code_structure_107.json": {
+        "type": "json",
+        "keys": [
+          "chunk_type",
+          "chunk_id",
+          "title",
+          "description",
+          "content",
+          "estimated_tokens",
+          "related_chunks"
+        ],
+        "line_count": 987
+      },
+      "context\\chunks\\code_structure_108.json": {
+        "type": "json",
+        "keys": [
+          "chunk_type",
+          "chunk_id",
+          "title",
+          "description",
+          "content",
+          "estimated_tokens",
+          "related_chunks"
+        ],
+        "line_count": 803
+      },
+      "context\\chunks\\code_structure_109.json": {
+        "type": "json",
+        "keys": [
+          "chunk_type",
+          "chunk_id",
+          "title",
+          "description",
+          "content",
+          "estimated_tokens",
+          "related_chunks"
+        ],
+        "line_count": 2403
+      },
+      "context\\chunks\\code_structure_11.json": {
+        "type": "json",
+        "keys": [
+          "chunk_type",
+          "chunk_id",
+          "title",
+          "description",
+          "content",
+          "estimated_tokens",
+          "related_chunks"
+        ],
+        "line_count": 717
+      },
+      "context\\chunks\\code_structure_110.json": {
+        "type": "json",
+        "keys": [
+          "chunk_type",
+          "chunk_id",
+          "title",
+          "description",
+          "content",
+          "estimated_tokens",
+          "related_chunks"
+        ],
+        "line_count": 4470
+      },
+      "context\\chunks\\code_structure_111.json": {
+        "type": "json",
+        "keys": [
+          "chunk_type",
+          "chunk_id",
+          "title",
+          "description",
+          "content",
+          "estimated_tokens",
+          "related_chunks"
+        ],
+        "line_count": 2363
+      },
+      "context\\chunks\\code_structure_112.json": {
+        "type": "json",
+        "keys": [
+          "chunk_type",
+          "chunk_id",
+          "title",
+          "description",
+          "content",
+          "estimated_tokens",
+          "related_chunks"
+        ],
+        "line_count": 817
+      },
+      "context\\chunks\\code_structure_113.json": {
+        "type": "json",
+        "keys": [
+          "chunk_type",
+          "chunk_id",
+          "title",
+          "description",
+          "content",
+          "estimated_tokens",
+          "related_chunks"
+        ],
+        "line_count": 817
+      },
+      "context\\chunks\\code_structure_114.json": {
+        "type": "json",
+        "keys": [
+          "chunk_type",
+          "chunk_id",
+          "title",
+          "description",
+          "content",
+          "estimated_tokens",
+          "related_chunks"
+        ],
+        "line_count": 817
+      },
+      "context\\chunks\\code_structure_115.json": {
+        "type": "json",
+        "keys": [
+          "chunk_type",
+          "chunk_id",
+          "title",
+          "description",
+          "content",
+          "estimated_tokens",
+          "related_chunks"
+        ],
+        "line_count": 817
+      },
+      "context\\chunks\\code_structure_116.json": {
+        "type": "json",
+        "keys": [
+          "chunk_type",
+          "chunk_id",
+          "title",
+          "description",
+          "content",
+          "estimated_tokens",
+          "related_chunks"
+        ],
+        "line_count": 863
+      },
+      "context\\chunks\\code_structure_117.json": {
+        "type": "json",
+        "keys": [
+          "chunk_type",
+          "chunk_id",
+          "title",
+          "description",
+          "content",
+          "estimated_tokens",
+          "related_chunks"
+        ],
+        "line_count": 917
+      },
+      "context\\chunks\\code_structure_118.json": {
+        "type": "json",
+        "keys": [
+          "chunk_type",
+          "chunk_id",
+          "title",
+          "description",
+          "content",
+          "estimated_tokens",
+          "related_chunks"
+        ],
+        "line_count": 917
+      },
+      "context\\chunks\\code_structure_119.json": {
+        "type": "json",
+        "keys": [
+          "chunk_type",
+          "chunk_id",
+          "title",
+          "description",
+          "content",
+          "estimated_tokens",
+          "related_chunks"
+        ],
+        "line_count": 871
+      },
+      "context\\chunks\\code_structure_12.json": {
+        "type": "json",
+        "keys": [
+          "chunk_type",
+          "chunk_id",
+          "title",
+          "description",
+          "content",
+          "estimated_tokens",
+          "related_chunks"
+        ],
+        "line_count": 717
+      },
+      "context\\chunks\\code_structure_120.json": {
+        "type": "json",
+        "keys": [
+          "chunk_type",
+          "chunk_id",
+          "title",
+          "description",
+          "content",
+          "estimated_tokens",
+          "related_chunks"
+        ],
+        "line_count": 837
+      },
+      "context\\chunks\\code_structure_121.json": {
+        "type": "json",
+        "keys": [
+          "chunk_type",
+          "chunk_id",
+          "title",
+          "description",
+          "content",
+          "estimated_tokens",
+          "related_chunks"
+        ],
+        "line_count": 977
+      },
+      "context\\chunks\\code_structure_122.json": {
+        "type": "json",
+        "keys": [
+          "chunk_type",
+          "chunk_id",
+          "title",
+          "description",
+          "content",
+          "estimated_tokens",
+          "related_chunks"
+        ],
+        "line_count": 753
+      },
+      "context\\chunks\\code_structure_123.json": {
+        "type": "json",
+        "keys": [
+          "chunk_type",
+          "chunk_id",
+          "title",
+          "description",
+          "content",
+          "estimated_tokens",
+          "related_chunks"
+        ],
+        "line_count": 4816
+      },
+      "context\\chunks\\code_structure_124.json": {
+        "type": "json",
+        "keys": [
+          "chunk_type",
+          "chunk_id",
+          "title",
+          "description",
+          "content",
+          "estimated_tokens",
+          "related_chunks"
+        ],
+        "line_count": 2849
+      },
+      "context\\chunks\\code_structure_125.json": {
+        "type": "json",
+        "keys": [
+          "chunk_type",
+          "chunk_id",
+          "title",
+          "description",
+          "content",
+          "estimated_tokens",
+          "related_chunks"
+        ],
+        "line_count": 1611
+      },
+      "context\\chunks\\code_structure_126.json": {
+        "type": "json",
+        "keys": [
+          "chunk_type",
+          "chunk_id",
+          "title",
+          "description",
+          "content",
+          "estimated_tokens",
+          "related_chunks"
+        ],
+        "line_count": 817
+      },
+      "context\\chunks\\code_structure_127.json": {
+        "type": "json",
+        "keys": [
+          "chunk_type",
+          "chunk_id",
+          "title",
+          "description",
+          "content",
+          "estimated_tokens",
+          "related_chunks"
+        ],
+        "line_count": 817
+      },
+      "context\\chunks\\code_structure_128.json": {
+        "type": "json",
+        "keys": [
+          "chunk_type",
+          "chunk_id",
+          "title",
+          "description",
+          "content",
+          "estimated_tokens",
+          "related_chunks"
+        ],
+        "line_count": 817
+      }
+    }
+  },
+  "estimated_tokens": 65.0,
+  "related_chunks": [
+    "v5_core_systems",
+    "legacy_v1_v4_systems"
+  ]
+}

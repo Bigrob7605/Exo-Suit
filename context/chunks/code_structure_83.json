@@ -1,0 +1,3039 @@
+{
+  "chunk_type": "code_samples",
+  "chunk_id": "code_structure_83",
+  "title": "Code Structure Analysis - Part 83",
+  "description": "Code analysis for files 4101-4150",
+  "content": {
+    "files_analyzed": [
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\kai_core\\llm_config.json",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\kai_core\\llm_integration.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\kai_core\\lockdown_config.json",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\kai_core\\mmh_config.json",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\kai_core\\mmh_integration.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\kai_core\\mmh_rs_config.json",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\kai_core\\mmh_rs_wrapper.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\kai_core\\orchestrator_config.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\kai_core\\regression_tester.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\kai_core\\restored_safe_config.json",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\kai_core\\ril_v7_integration.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\kai_core\\safety_system.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\kai_core\\safe_advanced_ai_config.json",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\kai_core\\session_manager.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\kai_core\\stability_config.json",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\kai_core\\validator.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\kai_core\\__init__.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\models\\agent_archetypes.json",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\models\\kai_core_models.json",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\receipts\\SAMPLE_VALIDATION_RESULT.json",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\scripts\\cli_wizard.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\scripts\\create_savepoint.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\scripts\\create_savepoint_simple.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\scripts\\drift_protection.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\scripts\\drift_protection_log.json",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\scripts\\final_qa_master.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\scripts\\final_qa_platinum.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\scripts\\final_qa_simple.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\scripts\\fresh_install.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\scripts\\get_assets.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\scripts\\health_check.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\scripts\\kai_core_cli.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\scripts\\launch_server.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\scripts\\preflight_check.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\scripts\\restore_savepoint.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\scripts\\system_test.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\scripts\\test_ensemble_debug.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\scripts\\test_system.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\scripts\\update_white_papers.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\scripts\\verify_models.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\validation\\comprehensive_validation_final.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\validation\\comprehensive_validation_simple.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\validation\\final_validation.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\validation\\simple_test.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\validation\\simple_validation.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\validation\\simple_wsgi_validation.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\validation\\test_agents.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\validation\\test_agent_personalities.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\validation\\test_dynamic_personality.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\validation\\test_enhanced_agent_personalities.py"
+    ],
+    "structure_data": {
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\kai_core\\llm_config.json": {
+        "type": "json",
+        "keys": [
+          "provider",
+          "ensemble_mode",
+          "models",
+          "cross_domain_reasoning",
+          "auto_correct",
+          "consensus_required",
+          "total_models"
+        ],
+        "line_count": 54
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\kai_core\\llm_integration.py": {
+        "type": "python",
+        "imports": [
+          "os",
+          "json",
+          "hashlib",
+          "subprocess",
+          "tempfile",
+          "time",
+          "asyncio",
+          "datetime.datetime",
+          "typing.Dict",
+          "typing.List",
+          "typing.Any",
+          "typing.Optional",
+          "typing.Tuple",
+          "pathlib.Path",
+          "logging",
+          "re",
+          "transformers.AutoTokenizer",
+          "transformers.AutoModelForCausalLM",
+          "torch"
+        ],
+        "functions": [
+          {
+            "name": "__init__",
+            "line": 46,
+            "args": [
+              "self",
+              "toolbox_path"
+            ]
+          },
+          {
+            "name": "_load_llm_config",
+            "line": 65,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_initialize_ensemble_models",
+            "line": 122,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_initialize_kai_orchestrator",
+            "line": 152,
+            "args": [
+              "self",
+              "config"
+            ]
+          },
+          {
+            "name": "_initialize_ollama_model",
+            "line": 161,
+            "args": [
+              "self",
+              "config"
+            ]
+          },
+          {
+            "name": "_initialize_transformers_model",
+            "line": 195,
+            "args": [
+              "self",
+              "config"
+            ]
+          },
+          {
+            "name": "_initialize_mock_model",
+            "line": 227,
+            "args": [
+              "self",
+              "config"
+            ]
+          },
+          {
+            "name": "get_ensemble_status",
+            "line": 449,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_generate",
+            "line": 399,
+            "args": []
+          }
+        ],
+        "classes": [
+          {
+            "name": "LLMIntegration",
+            "line": 33,
+            "methods": [
+              "__init__",
+              "_load_llm_config",
+              "_initialize_ensemble_models",
+              "_initialize_kai_orchestrator",
+              "_initialize_ollama_model",
+              "_initialize_transformers_model",
+              "_initialize_mock_model",
+              "get_ensemble_status"
+            ]
+          }
+        ],
+        "line_count": 464
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\kai_core\\lockdown_config.json": {
+        "type": "json",
+        "keys": [
+          "mode",
+          "llm_provider",
+          "auto_merge",
+          "challenge_self",
+          "max_cycles_per_day",
+          "domains_to_focus",
+          "test_templates",
+          "llm_enabled",
+          "cross_domain_reasoning",
+          "self_audit",
+          "auto_correct",
+          "mmh_enabled",
+          "agent_evolution",
+          "recursive_audit",
+          "stability_mode",
+          "prevent_self_modification",
+          "read_only_mode",
+          "max_agent_mutations",
+          "genome_lock",
+          "emergency_lockdown",
+          "safety_system",
+          "advanced_ai_capabilities",
+          "safety_guarantees",
+          "emergency_restoration"
+        ],
+        "line_count": 94
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\kai_core\\mmh_config.json": {
+        "type": "json",
+        "keys": [
+          "default_chunk_bits",
+          "dedup_enabled",
+          "codec",
+          "compression_level",
+          "fec_type",
+          "redundancy"
+        ],
+        "line_count": 8
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\kai_core\\mmh_integration.py": {
+        "type": "python",
+        "imports": [
+          "os",
+          "sys",
+          "json",
+          "hashlib",
+          "tempfile",
+          "subprocess",
+          "time",
+          "datetime.datetime",
+          "typing.Dict",
+          "typing.List",
+          "typing.Any",
+          "typing.Optional",
+          "typing.Union",
+          "typing.Tuple",
+          "pathlib.Path",
+          "logging",
+          "mmh_rs_wrapper.MMHRSEngine",
+          "mmh_rs_wrapper.MMHConfig",
+          "mmh_rs_wrapper.SeedInfo",
+          "mmh_rs_wrapper.AgentGenome",
+          "mmh_rs_wrapper.CodecType",
+          "mmh_rs_wrapper.FECType",
+          "mmh_rs_wrapper.SafetyLevel"
+        ],
+        "functions": [
+          {
+            "name": "__init__",
+            "line": 47,
+            "args": [
+              "self",
+              "toolbox_path"
+            ]
+          },
+          {
+            "name": "_load_config",
+            "line": 64,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "fold_data",
+            "line": 91,
+            "args": [
+              "self",
+              "data",
+              "name"
+            ]
+          },
+          {
+            "name": "unfold_data",
+            "line": 104,
+            "args": [
+              "self",
+              "seed"
+            ]
+          },
+          {
+            "name": "verify_data",
+            "line": 116,
+            "args": [
+              "self",
+              "seed",
+              "data"
+            ]
+          },
+          {
+            "name": "get_seed_info",
+            "line": 129,
+            "args": [
+              "self",
+              "seed"
+            ]
+          },
+          {
+            "name": "register_agent",
+            "line": 141,
+            "args": [
+              "self",
+              "genome"
+            ]
+          },
+          {
+            "name": "register_agent_genome",
+            "line": 153,
+            "args": [
+              "self",
+              "agent_name",
+              "description"
+            ]
+          },
+          {
+            "name": "get_agent_genome",
+            "line": 179,
+            "args": [
+              "self",
+              "agent_name"
+            ]
+          },
+          {
+            "name": "evolve_agent",
+            "line": 191,
+            "args": [
+              "self",
+              "agent_name",
+              "mutations"
+            ]
+          },
+          {
+            "name": "cross_domain_reasoning",
+            "line": 204,
+            "args": [
+              "self",
+              "source_insights",
+              "target_domain",
+              "source_domain"
+            ]
+          },
+          {
+            "name": "create_audit_chain",
+            "line": 232,
+            "args": [
+              "self",
+              "operation_name",
+              "operation_data"
+            ]
+          },
+          {
+            "name": "get_status",
+            "line": 252,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "benchmark_compression",
+            "line": 267,
+            "args": [
+              "self",
+              "test_data"
+            ]
+          },
+          {
+            "name": "test_mmh_functionality",
+            "line": 306,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "get_comprehensive_status",
+            "line": 380,
+            "args": [
+              "self"
+            ]
+          }
+        ],
+        "classes": [
+          {
+            "name": "MMHIntegration",
+            "line": 39,
+            "methods": [
+              "__init__",
+              "_load_config",
+              "fold_data",
+              "unfold_data",
+              "verify_data",
+              "get_seed_info",
+              "register_agent",
+              "register_agent_genome",
+              "get_agent_genome",
+              "evolve_agent",
+              "cross_domain_reasoning",
+              "create_audit_chain",
+              "get_status",
+              "benchmark_compression",
+              "test_mmh_functionality",
+              "get_comprehensive_status"
+            ]
+          }
+        ],
+        "line_count": 401
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\kai_core\\mmh_rs_config.json": {
+        "type": "json",
+        "keys": [
+          "codec",
+          "fec_type",
+          "compression_level",
+          "chunk_size",
+          "max_seed_size",
+          "dedup_enabled",
+          "redundancy"
+        ],
+        "line_count": 9
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\kai_core\\mmh_rs_wrapper.py": {
+        "type": "python",
+        "imports": [
+          "hashlib",
+          "json",
+          "logging",
+          "os",
+          "subprocess",
+          "tempfile",
+          "time",
+          "dataclasses.dataclass",
+          "dataclasses.field",
+          "enum.Enum",
+          "typing.Any",
+          "typing.Dict",
+          "typing.List",
+          "typing.Optional",
+          "typing.Union",
+          "zlib",
+          "zlib"
+        ],
+        "functions": [
+          {
+            "name": "__init__",
+            "line": 108,
+            "args": [
+              "self",
+              "toolbox_path",
+              "mmh_rs_path"
+            ]
+          },
+          {
+            "name": "_load_config",
+            "line": 137,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "fold",
+            "line": 182,
+            "args": [
+              "self",
+              "data",
+              "name"
+            ]
+          },
+          {
+            "name": "unfold",
+            "line": 279,
+            "args": [
+              "self",
+              "seed"
+            ]
+          },
+          {
+            "name": "verify",
+            "line": 349,
+            "args": [
+              "self",
+              "seed",
+              "data"
+            ]
+          },
+          {
+            "name": "info",
+            "line": 376,
+            "args": [
+              "self",
+              "seed"
+            ]
+          },
+          {
+            "name": "register_agent",
+            "line": 399,
+            "args": [
+              "self",
+              "genome"
+            ]
+          },
+          {
+            "name": "get_agent_genome",
+            "line": 438,
+            "args": [
+              "self",
+              "agent_name"
+            ]
+          },
+          {
+            "name": "evolve_agent",
+            "line": 493,
+            "args": [
+              "self",
+              "agent_name",
+              "mutations"
+            ]
+          },
+          {
+            "name": "cross_domain_reasoning",
+            "line": 533,
+            "args": [
+              "self",
+              "source_insights",
+              "target_domain"
+            ]
+          },
+          {
+            "name": "create_audit_chain",
+            "line": 587,
+            "args": [
+              "self",
+              "operation_data"
+            ]
+          },
+          {
+            "name": "_fallback_fold",
+            "line": 618,
+            "args": [
+              "self",
+              "data_bytes",
+              "name"
+            ]
+          },
+          {
+            "name": "_fallback_unfold",
+            "line": 650,
+            "args": [
+              "self",
+              "seed"
+            ]
+          },
+          {
+            "name": "get_status",
+            "line": 674,
+            "args": [
+              "self"
+            ]
+          }
+        ],
+        "classes": [
+          {
+            "name": "CodecType",
+            "line": 34,
+            "methods": []
+          },
+          {
+            "name": "FECType",
+            "line": 45,
+            "methods": []
+          },
+          {
+            "name": "SafetyLevel",
+            "line": 53,
+            "methods": []
+          },
+          {
+            "name": "MMHConfig",
+            "line": 63,
+            "methods": []
+          },
+          {
+            "name": "SeedInfo",
+            "line": 76,
+            "methods": []
+          },
+          {
+            "name": "AgentGenome",
+            "line": 88,
+            "methods": []
+          },
+          {
+            "name": "MMHRSEngine",
+            "line": 100,
+            "methods": [
+              "__init__",
+              "_load_config",
+              "fold",
+              "unfold",
+              "verify",
+              "info",
+              "register_agent",
+              "get_agent_genome",
+              "evolve_agent",
+              "cross_domain_reasoning",
+              "create_audit_chain",
+              "_fallback_fold",
+              "_fallback_unfold",
+              "get_status"
+            ]
+          }
+        ],
+        "line_count": 692
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\kai_core\\orchestrator_config.py": {
+        "type": "python",
+        "imports": [
+          "os",
+          "dataclasses.asdict",
+          "dataclasses.dataclass",
+          "pathlib.Path",
+          "typing.Any",
+          "typing.Dict",
+          "typing.List",
+          "typing.Optional",
+          "yaml",
+          "traceback"
+        ],
+        "functions": [
+          {
+            "name": "create_default_config",
+            "line": 459,
+            "args": [
+              "config_path"
+            ]
+          },
+          {
+            "name": "validate_model_signatures",
+            "line": 466,
+            "args": [
+              "config"
+            ]
+          },
+          {
+            "name": "test_config",
+            "line": 490,
+            "args": []
+          },
+          {
+            "name": "__init__",
+            "line": 132,
+            "args": [
+              "self",
+              "config_path"
+            ]
+          },
+          {
+            "name": "_load_config",
+            "line": 145,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_parse_config",
+            "line": 154,
+            "args": [
+              "self",
+              "config_data"
+            ]
+          },
+          {
+            "name": "_create_default_config",
+            "line": 180,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_validate_config",
+            "line": 268,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_save_config",
+            "line": 295,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "get_enabled_models",
+            "line": 310,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "get_model_config",
+            "line": 314,
+            "args": [
+              "self",
+              "model_name"
+            ]
+          },
+          {
+            "name": "update_model_config",
+            "line": 318,
+            "args": [
+              "self",
+              "model_name"
+            ]
+          },
+          {
+            "name": "add_model",
+            "line": 326,
+            "args": [
+              "self",
+              "model_config"
+            ]
+          },
+          {
+            "name": "remove_model",
+            "line": 331,
+            "args": [
+              "self",
+              "model_name"
+            ]
+          },
+          {
+            "name": "get_config_summary",
+            "line": 337,
+            "args": [
+              "self"
+            ]
+          }
+        ],
+        "classes": [
+          {
+            "name": "ModelConfig",
+            "line": 23,
+            "methods": []
+          },
+          {
+            "name": "GuardrailConfig",
+            "line": 42,
+            "methods": []
+          },
+          {
+            "name": "TelemetryConfig",
+            "line": 58,
+            "methods": []
+          },
+          {
+            "name": "CacheConfig",
+            "line": 72,
+            "methods": []
+          },
+          {
+            "name": "EnsembleConfig",
+            "line": 84,
+            "methods": []
+          },
+          {
+            "name": "SecurityConfig",
+            "line": 96,
+            "methods": []
+          },
+          {
+            "name": "SLIConfig",
+            "line": 109,
+            "methods": []
+          },
+          {
+            "name": "OrchestratorConfig",
+            "line": 119,
+            "methods": [
+              "__init__",
+              "_load_config",
+              "_parse_config",
+              "_create_default_config",
+              "_validate_config",
+              "_save_config",
+              "get_enabled_models",
+              "get_model_config",
+              "update_model_config",
+              "add_model",
+              "remove_model",
+              "get_config_summary"
+            ]
+          }
+        ],
+        "line_count": 521
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\kai_core\\regression_tester.py": {
+        "type": "python",
+        "imports": [
+          "ast",
+          "hashlib",
+          "json",
+          "logging",
+          "os",
+          "subprocess",
+          "tempfile",
+          "dataclasses.dataclass",
+          "datetime.datetime",
+          "typing.Any",
+          "typing.Dict",
+          "typing.List",
+          "typing.Tuple"
+        ],
+        "functions": [
+          {
+            "name": "__init__",
+            "line": 55,
+            "args": [
+              "self",
+              "toolbox_path"
+            ]
+          },
+          {
+            "name": "_load_golden_results",
+            "line": 71,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_save_golden_results",
+            "line": 93,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_get_prompt_hash",
+            "line": 109,
+            "args": [
+              "self",
+              "prompt"
+            ]
+          },
+          {
+            "name": "_get_ast_fingerprint",
+            "line": 113,
+            "args": [
+              "self",
+              "code"
+            ]
+          },
+          {
+            "name": "_execute_code_safely",
+            "line": 123,
+            "args": [
+              "self",
+              "code"
+            ]
+          },
+          {
+            "name": "add_golden_test",
+            "line": 153,
+            "args": [
+              "self",
+              "prompt",
+              "code",
+              "domain"
+            ]
+          },
+          {
+            "name": "run_regression_test",
+            "line": 178,
+            "args": [
+              "self",
+              "prompt",
+              "code",
+              "domain"
+            ]
+          },
+          {
+            "name": "_save_test_result",
+            "line": 226,
+            "args": [
+              "self",
+              "result"
+            ]
+          },
+          {
+            "name": "run_diff_regression_tests",
+            "line": 236,
+            "args": [
+              "self",
+              "old_prompt",
+              "new_prompt",
+              "domain"
+            ]
+          },
+          {
+            "name": "get_regression_stats",
+            "line": 296,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_get_latest_test_results",
+            "line": 307,
+            "args": [
+              "self"
+            ]
+          }
+        ],
+        "classes": [
+          {
+            "name": "TestResult",
+            "line": 28,
+            "methods": []
+          },
+          {
+            "name": "RegressionTest",
+            "line": 40,
+            "methods": []
+          },
+          {
+            "name": "RegressionTester",
+            "line": 50,
+            "methods": [
+              "__init__",
+              "_load_golden_results",
+              "_save_golden_results",
+              "_get_prompt_hash",
+              "_get_ast_fingerprint",
+              "_execute_code_safely",
+              "add_golden_test",
+              "run_regression_test",
+              "_save_test_result",
+              "run_diff_regression_tests",
+              "get_regression_stats",
+              "_get_latest_test_results"
+            ]
+          }
+        ],
+        "line_count": 324
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\kai_core\\restored_safe_config.json": {
+        "type": "json",
+        "keys": [
+          "mode",
+          "llm_provider",
+          "auto_merge",
+          "challenge_self",
+          "max_cycles_per_day",
+          "domains_to_focus",
+          "test_templates",
+          "llm_enabled",
+          "cross_domain_reasoning",
+          "self_audit",
+          "auto_correct",
+          "mmh_enabled",
+          "agent_evolution",
+          "recursive_audit",
+          "stability_mode",
+          "prevent_self_modification",
+          "read_only_mode",
+          "max_agent_mutations",
+          "genome_lock",
+          "safety_system",
+          "advanced_ai_capabilities",
+          "safety_guarantees",
+          "restoration_status"
+        ],
+        "line_count": 97
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\kai_core\\ril_v7_integration.py": {
+        "type": "python",
+        "imports": [
+          "dataclasses.dataclass",
+          "datetime.datetime",
+          "typing.Any",
+          "typing.Dict",
+          "typing.List",
+          "kai_core.mmh_integration.AgentGenome",
+          "kai_core.mmh_integration.MMHIntegration",
+          "kai_core.mmh_integration.SafetyLevel"
+        ],
+        "functions": [
+          {
+            "name": "to_genome",
+            "line": 30,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "__init__",
+            "line": 84,
+            "args": [
+              "self",
+              "toolbox_path"
+            ]
+          },
+          {
+            "name": "register_ril_agent",
+            "line": 90,
+            "args": [
+              "self",
+              "agent"
+            ]
+          },
+          {
+            "name": "recursive_reasoning",
+            "line": 105,
+            "args": [
+              "self",
+              "agent_name",
+              "input_data",
+              "depth"
+            ]
+          },
+          {
+            "name": "_perform_level_reasoning",
+            "line": 163,
+            "args": [
+              "self",
+              "agent",
+              "input_data",
+              "level"
+            ]
+          },
+          {
+            "name": "self_modify_agent",
+            "line": 192,
+            "args": [
+              "self",
+              "agent_name",
+              "modifications"
+            ]
+          },
+          {
+            "name": "cross_domain_ril_reasoning",
+            "line": 237,
+            "args": [
+              "self",
+              "source_domain",
+              "target_domain",
+              "ril_insights"
+            ]
+          },
+          {
+            "name": "get_status",
+            "line": 284,
+            "args": [
+              "self"
+            ]
+          }
+        ],
+        "classes": [
+          {
+            "name": "RILv7Agent",
+            "line": 18,
+            "methods": [
+              "to_genome"
+            ]
+          },
+          {
+            "name": "RILv7Integration",
+            "line": 73,
+            "methods": [
+              "__init__",
+              "register_ril_agent",
+              "recursive_reasoning",
+              "_perform_level_reasoning",
+              "self_modify_agent",
+              "cross_domain_ril_reasoning",
+              "get_status"
+            ]
+          }
+        ],
+        "line_count": 344
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\kai_core\\safety_system.py": {
+        "type": "python",
+        "imports": [
+          "hashlib",
+          "json",
+          "logging",
+          "os",
+          "shutil",
+          "dataclasses.dataclass",
+          "datetime.datetime",
+          "enum.Enum",
+          "typing.Any",
+          "typing.Dict",
+          "typing.List",
+          "typing.Set",
+          "re"
+        ],
+        "functions": [
+          {
+            "name": "__init__",
+            "line": 47,
+            "args": [
+              "self",
+              "toolbox_path"
+            ]
+          },
+          {
+            "name": "_get_protected_files",
+            "line": 60,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_load_safety_rules",
+            "line": 92,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_ensure_safety_dirs",
+            "line": 202,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_initialize_safety_checks",
+            "line": 213,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_create_baseline_backup",
+            "line": 218,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_validate_system_integrity",
+            "line": 235,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "check_operation_safety",
+            "line": 267,
+            "args": [
+              "self",
+              "operation",
+              "target",
+              "content"
+            ]
+          },
+          {
+            "name": "_matches_rule",
+            "line": 317,
+            "args": [
+              "self",
+              "operation",
+              "target",
+              "content",
+              "rule"
+            ]
+          },
+          {
+            "name": "_log_blocked_operation",
+            "line": 337,
+            "args": [
+              "self",
+              "operation",
+              "target",
+              "rule"
+            ]
+          },
+          {
+            "name": "_log_safety_check",
+            "line": 371,
+            "args": [
+              "self",
+              "operation",
+              "target",
+              "result"
+            ]
+          },
+          {
+            "name": "enforce_safety",
+            "line": 400,
+            "args": [
+              "self",
+              "operation",
+              "target",
+              "content"
+            ]
+          },
+          {
+            "name": "get_safety_status",
+            "line": 426,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "restore_from_backup",
+            "line": 438,
+            "args": [
+              "self",
+              "file_path"
+            ]
+          }
+        ],
+        "classes": [
+          {
+            "name": "SafetyLevel",
+            "line": 23,
+            "methods": []
+          },
+          {
+            "name": "SafetyRule",
+            "line": 31,
+            "methods": []
+          },
+          {
+            "name": "KaiSafetySystem",
+            "line": 41,
+            "methods": [
+              "__init__",
+              "_get_protected_files",
+              "_load_safety_rules",
+              "_ensure_safety_dirs",
+              "_initialize_safety_checks",
+              "_create_baseline_backup",
+              "_validate_system_integrity",
+              "check_operation_safety",
+              "_matches_rule",
+              "_log_blocked_operation",
+              "_log_safety_check",
+              "enforce_safety",
+              "get_safety_status",
+              "restore_from_backup"
+            ]
+          }
+        ],
+        "line_count": 460
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\kai_core\\safe_advanced_ai_config.json": {
+        "type": "json",
+        "keys": [
+          "mode",
+          "llm_provider",
+          "auto_merge",
+          "challenge_self",
+          "max_cycles_per_day",
+          "domains_to_focus",
+          "test_templates",
+          "llm_enabled",
+          "cross_domain_reasoning",
+          "self_audit",
+          "auto_correct",
+          "mmh_enabled",
+          "agent_evolution",
+          "recursive_audit",
+          "stability_mode",
+          "prevent_self_modification",
+          "read_only_mode",
+          "max_agent_mutations",
+          "genome_lock",
+          "safety_system",
+          "advanced_ai_capabilities",
+          "safety_guarantees"
+        ],
+        "line_count": 84
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\kai_core\\session_manager.py": {
+        "type": "python",
+        "imports": [
+          "datetime.datetime",
+          "typing.Dict",
+          "typing.Any",
+          "kai_core.agent_personality_engine.DynamicPersonalityEngine"
+        ],
+        "functions": [
+          {
+            "name": "__init__",
+            "line": 6,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "get_session",
+            "line": 9,
+            "args": [
+              "self",
+              "session_id"
+            ]
+          },
+          {
+            "name": "update_session",
+            "line": 21,
+            "args": [
+              "self",
+              "session_id",
+              "agent_id",
+              "message",
+              "response"
+            ]
+          },
+          {
+            "name": "get_session_stats",
+            "line": 45,
+            "args": [
+              "self",
+              "session_id"
+            ]
+          },
+          {
+            "name": "cleanup_old_sessions",
+            "line": 55,
+            "args": [
+              "self",
+              "max_age_hours"
+            ]
+          }
+        ],
+        "classes": [
+          {
+            "name": "SessionManager",
+            "line": 5,
+            "methods": [
+              "__init__",
+              "get_session",
+              "update_session",
+              "get_session_stats",
+              "cleanup_old_sessions"
+            ]
+          }
+        ],
+        "line_count": 68
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\kai_core\\stability_config.json": {
+        "type": "json",
+        "keys": [
+          "mode",
+          "llm_provider",
+          "auto_merge",
+          "challenge_self",
+          "max_cycles_per_day",
+          "domains_to_focus",
+          "test_templates",
+          "llm_enabled",
+          "cross_domain_reasoning",
+          "self_audit",
+          "auto_correct",
+          "mmh_enabled",
+          "agent_evolution",
+          "recursive_audit",
+          "stability_mode",
+          "prevent_self_modification",
+          "read_only_mode",
+          "max_agent_mutations",
+          "genome_lock"
+        ],
+        "line_count": 23
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\kai_core\\validator.py": {
+        "type": "python",
+        "imports": [
+          "ast",
+          "os",
+          "subprocess",
+          "tempfile",
+          "enum.Enum",
+          "typing.Any",
+          "typing.Dict",
+          "typing.List",
+          "re",
+          "re"
+        ],
+        "functions": [
+          {
+            "name": "__init__",
+            "line": 27,
+            "args": [
+              "self",
+              "toolbox_path"
+            ]
+          },
+          {
+            "name": "_load_safety_patterns",
+            "line": 32,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_load_security_patterns",
+            "line": 65,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "validate_syntax",
+            "line": 97,
+            "args": [
+              "self",
+              "code"
+            ]
+          },
+          {
+            "name": "validate_safety",
+            "line": 109,
+            "args": [
+              "self",
+              "code"
+            ]
+          },
+          {
+            "name": "validate_security",
+            "line": 128,
+            "args": [
+              "self",
+              "code"
+            ]
+          },
+          {
+            "name": "validate_functionality",
+            "line": 147,
+            "args": [
+              "self",
+              "code"
+            ]
+          },
+          {
+            "name": "run_test_validation",
+            "line": 169,
+            "args": [
+              "self",
+              "code"
+            ]
+          },
+          {
+            "name": "comprehensive_validation",
+            "line": 199,
+            "args": [
+              "self",
+              "code"
+            ]
+          },
+          {
+            "name": "_generate_recommendations",
+            "line": 224,
+            "args": [
+              "self",
+              "results"
+            ]
+          }
+        ],
+        "classes": [
+          {
+            "name": "ValidationLevel",
+            "line": 15,
+            "methods": []
+          },
+          {
+            "name": "CodeValidator",
+            "line": 22,
+            "methods": [
+              "__init__",
+              "_load_safety_patterns",
+              "_load_security_patterns",
+              "validate_syntax",
+              "validate_safety",
+              "validate_security",
+              "validate_functionality",
+              "run_test_validation",
+              "comprehensive_validation",
+              "_generate_recommendations"
+            ]
+          }
+        ],
+        "line_count": 249
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\kai_core\\__init__.py": {
+        "type": "python",
+        "imports": [],
+        "functions": [],
+        "classes": [],
+        "line_count": 5
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\models\\agent_archetypes.json": {
+        "type": "json",
+        "keys": [
+          "archetypes"
+        ],
+        "line_count": 19
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\models\\kai_core_models.json": {
+        "type": "json",
+        "keys": [
+          "models"
+        ],
+        "line_count": 9
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\receipts\\SAMPLE_VALIDATION_RESULT.json": {
+        "type": "json",
+        "keys": [
+          "validation_timestamp",
+          "validation_type",
+          "status",
+          "checks",
+          "note"
+        ],
+        "line_count": 12
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\scripts\\cli_wizard.py": {
+        "type": "python",
+        "imports": [
+          "argparse",
+          "sys",
+          "os",
+          "json",
+          "pathlib.Path",
+          "typing.Dict",
+          "typing.Any",
+          "typing.List",
+          "typing.Optional",
+          "numpy",
+          "pandas",
+          "BULLETPROOF_PIPELINE.BulletproofPipeline",
+          "test_suite.universal_test_functions.get_available_tests",
+          "download_public_data.PublicDataDownloader",
+          "test_suite.universal_test_functions.AVAILABLE_TESTS"
+        ],
+        "functions": [
+          {
+            "name": "main",
+            "line": 312,
+            "args": []
+          },
+          {
+            "name": "__init__",
+            "line": 27,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "print_banner",
+            "line": 32,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "interactive_mode",
+            "line": 41,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "select_data",
+            "line": 73,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "select_existing_file",
+            "line": 98,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "download_sample_data",
+            "line": 115,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "list_available_datasets",
+            "line": 150,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "select_test",
+            "line": 162,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "run_test",
+            "line": 188,
+            "args": [
+              "self",
+              "data_path",
+              "test_name"
+            ]
+          },
+          {
+            "name": "show_results",
+            "line": 216,
+            "args": [
+              "self",
+              "result"
+            ]
+          },
+          {
+            "name": "save_results",
+            "line": 248,
+            "args": [
+              "self",
+              "result"
+            ]
+          },
+          {
+            "name": "command_line_mode",
+            "line": 265,
+            "args": [
+              "self",
+              "args"
+            ]
+          },
+          {
+            "name": "list_tests",
+            "line": 274,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "run_command_line_test",
+            "line": 284,
+            "args": [
+              "self",
+              "args"
+            ]
+          }
+        ],
+        "classes": [
+          {
+            "name": "UniversalScienceWizard",
+            "line": 24,
+            "methods": [
+              "__init__",
+              "print_banner",
+              "interactive_mode",
+              "select_data",
+              "select_existing_file",
+              "download_sample_data",
+              "list_available_datasets",
+              "select_test",
+              "run_test",
+              "show_results",
+              "save_results",
+              "command_line_mode",
+              "list_tests",
+              "run_command_line_test"
+            ]
+          }
+        ],
+        "line_count": 362
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\scripts\\create_savepoint.py": {
+        "type": "python",
+        "imports": [
+          "os",
+          "sys",
+          "json",
+          "shutil",
+          "hashlib",
+          "datetime",
+          "argparse",
+          "pathlib.Path",
+          "typing.Dict",
+          "typing.List",
+          "typing.Optional"
+        ],
+        "functions": [
+          {
+            "name": "calculate_file_hash",
+            "line": 31,
+            "args": [
+              "file_path"
+            ]
+          },
+          {
+            "name": "get_file_info",
+            "line": 43,
+            "args": [
+              "file_path"
+            ]
+          },
+          {
+            "name": "create_savepoint",
+            "line": 57,
+            "args": [
+              "reason",
+              "trigger",
+              "auto"
+            ]
+          },
+          {
+            "name": "main",
+            "line": 316,
+            "args": []
+          }
+        ],
+        "classes": [],
+        "line_count": 363
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\scripts\\create_savepoint_simple.py": {
+        "type": "python",
+        "imports": [
+          "os",
+          "sys",
+          "json",
+          "shutil",
+          "argparse",
+          "datetime.datetime",
+          "pathlib.Path"
+        ],
+        "functions": [
+          {
+            "name": "create_savepoint",
+            "line": 16,
+            "args": [
+              "reason",
+              "trigger",
+              "auto"
+            ]
+          },
+          {
+            "name": "main",
+            "line": 204,
+            "args": []
+          }
+        ],
+        "classes": [],
+        "line_count": 224
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\scripts\\drift_protection.py": {
+        "type": "python",
+        "imports": [
+          "os",
+          "sys",
+          "json",
+          "hashlib",
+          "subprocess",
+          "pathlib.Path",
+          "typing.Dict",
+          "typing.List",
+          "typing.Any",
+          "typing.Tuple",
+          "datetime.datetime"
+        ],
+        "functions": [
+          {
+            "name": "calculate_file_hash",
+            "line": 57,
+            "args": [
+              "filepath"
+            ]
+          },
+          {
+            "name": "get_repository_stats",
+            "line": 68,
+            "args": []
+          },
+          {
+            "name": "load_previous_stats",
+            "line": 131,
+            "args": []
+          },
+          {
+            "name": "save_stats",
+            "line": 141,
+            "args": [
+              "stats"
+            ]
+          },
+          {
+            "name": "detect_drift",
+            "line": 149,
+            "args": [
+              "current_stats",
+              "previous_stats"
+            ]
+          },
+          {
+            "name": "check_git_status",
+            "line": 191,
+            "args": []
+          },
+          {
+            "name": "main",
+            "line": 222,
+            "args": []
+          }
+        ],
+        "classes": [],
+        "line_count": 288
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\scripts\\drift_protection_log.json": {
+        "type": "json",
+        "keys": [
+          "timestamp",
+          "total_size_bytes",
+          "file_count",
+          "critical_files",
+          "critical_dirs",
+          "missing_critical",
+          "size_warning"
+        ],
+        "line_count": 111
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\scripts\\final_qa_master.py": {
+        "type": "python",
+        "imports": [
+          "os",
+          "sys",
+          "subprocess",
+          "json",
+          "time",
+          "requests",
+          "pathlib.Path"
+        ],
+        "functions": [
+          {
+            "name": "run_command",
+            "line": 25,
+            "args": [
+              "cmd",
+              "description"
+            ]
+          },
+          {
+            "name": "test_fresh_install",
+            "line": 43,
+            "args": []
+          },
+          {
+            "name": "test_server_and_validation",
+            "line": 69,
+            "args": []
+          },
+          {
+            "name": "test_rollback_functionality",
+            "line": 99,
+            "args": []
+          },
+          {
+            "name": "test_security",
+            "line": 146,
+            "args": []
+          },
+          {
+            "name": "test_documentation_accuracy",
+            "line": 188,
+            "args": []
+          },
+          {
+            "name": "test_drift_protection",
+            "line": 236,
+            "args": []
+          },
+          {
+            "name": "main",
+            "line": 249,
+            "args": []
+          }
+        ],
+        "classes": [],
+        "line_count": 298
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\scripts\\final_qa_platinum.py": {
+        "type": "python",
+        "imports": [
+          "os",
+          "sys",
+          "subprocess",
+          "json",
+          "time",
+          "requests",
+          "pathlib.Path"
+        ],
+        "functions": [
+          {
+            "name": "run_command",
+            "line": 21,
+            "args": [
+              "cmd",
+              "description",
+              "timeout",
+              "capture_output"
+            ]
+          },
+          {
+            "name": "start_server",
+            "line": 36,
+            "args": []
+          },
+          {
+            "name": "stop_server",
+            "line": 40,
+            "args": [
+              "proc"
+            ]
+          },
+          {
+            "name": "test_fresh_install",
+            "line": 48,
+            "args": []
+          },
+          {
+            "name": "test_server_and_validation",
+            "line": 62,
+            "args": []
+          },
+          {
+            "name": "test_agent_script_execution",
+            "line": 72,
+            "args": []
+          },
+          {
+            "name": "test_rollback_functionality",
+            "line": 173,
+            "args": []
+          },
+          {
+            "name": "test_security",
+            "line": 211,
+            "args": []
+          },
+          {
+            "name": "test_documentation_accuracy",
+            "line": 249,
+            "args": []
+          },
+          {
+            "name": "test_drift_protection",
+            "line": 289,
+            "args": []
+          },
+          {
+            "name": "test_notebook_ui",
+            "line": 357,
+            "args": []
+          },
+          {
+            "name": "main",
+            "line": 401,
+            "args": []
+          }
+        ],
+        "classes": [],
+        "line_count": 452
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\scripts\\final_qa_simple.py": {
+        "type": "python",
+        "imports": [
+          "os",
+          "sys",
+          "subprocess",
+          "json",
+          "time",
+          "requests",
+          "pathlib.Path"
+        ],
+        "functions": [
+          {
+            "name": "run_command",
+            "line": 25,
+            "args": [
+              "cmd",
+              "description"
+            ]
+          },
+          {
+            "name": "test_fresh_install",
+            "line": 43,
+            "args": []
+          },
+          {
+            "name": "test_server_and_validation",
+            "line": 63,
+            "args": []
+          },
+          {
+            "name": "test_rollback_functionality",
+            "line": 93,
+            "args": []
+          },
+          {
+            "name": "test_security",
+            "line": 140,
+            "args": []
+          },
+          {
+            "name": "test_documentation_accuracy",
+            "line": 182,
+            "args": []
+          },
+          {
+            "name": "test_drift_protection",
+            "line": 230,
+            "args": []
+          },
+          {
+            "name": "main",
+            "line": 243,
+            "args": []
+          }
+        ],
+        "classes": [],
+        "line_count": 292
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\scripts\\fresh_install.py": {
+        "type": "python",
+        "imports": [
+          "os",
+          "sys",
+          "subprocess",
+          "time",
+          "pathlib.Path",
+          "web_interface.server"
+        ],
+        "functions": [
+          {
+            "name": "run_command",
+            "line": 20,
+            "args": [
+              "command",
+              "description",
+              "optional"
+            ]
+          },
+          {
+            "name": "check_file_exists",
+            "line": 49,
+            "args": [
+              "filepath"
+            ]
+          },
+          {
+            "name": "main",
+            "line": 53,
+            "args": []
+          }
+        ],
+        "classes": [],
+        "line_count": 175
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\scripts\\get_assets.py": {
+        "type": "python",
+        "imports": [
+          "os",
+          "sys",
+          "json",
+          "hashlib",
+          "requests",
+          "argparse",
+          "pathlib.Path",
+          "typing.Dict",
+          "typing.Optional",
+          "create_savepoint.create_savepoint",
+          "subprocess"
+        ],
+        "functions": [
+          {
+            "name": "create_savepoint_before_upgrade",
+            "line": 26,
+            "args": []
+          },
+          {
+            "name": "download_file",
+            "line": 49,
+            "args": [
+              "url",
+              "local_path",
+              "expected_hash"
+            ]
+          },
+          {
+            "name": "verify_ollama_models",
+            "line": 87,
+            "args": []
+          },
+          {
+            "name": "create_fallback_files",
+            "line": 128,
+            "args": []
+          },
+          {
+            "name": "main",
+            "line": 221,
+            "args": []
+          }
+        ],
+        "classes": [],
+        "line_count": 285
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\scripts\\health_check.py": {
+        "type": "python",
+        "imports": [
+          "sys",
+          "os",
+          "time",
+          "pathlib.Path",
+          "kai_core.kai_orchestrator.KaiOrchestrator",
+          "kai_core.agent_chat.EnhancedAgentChat",
+          "kai_core.agent_personality_engine.DynamicPersonalityEngine",
+          "web_interface.app.app",
+          "kai_core.agent_chat.EnhancedAgentChat",
+          "kai_core.agent_personality_engine.DynamicPersonalityEngine"
+        ],
+        "functions": [
+          {
+            "name": "test_imports",
+            "line": 18,
+            "args": []
+          },
+          {
+            "name": "test_agent_chat",
+            "line": 52,
+            "args": []
+          },
+          {
+            "name": "test_personality_engine",
+            "line": 74,
+            "args": []
+          },
+          {
+            "name": "main",
+            "line": 96,
+            "args": []
+          }
+        ],
+        "classes": [],
+        "line_count": 127
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\scripts\\kai_core_cli.py": {
+        "type": "python",
+        "imports": [
+          "argparse",
+          "sys",
+          "os",
+          "json",
+          "pathlib.Path",
+          "typing.Dict",
+          "typing.Any",
+          "kai_core.KaiCoreAgent"
+        ],
+        "functions": [
+          {
+            "name": "print_banner",
+            "line": 20,
+            "args": []
+          },
+          {
+            "name": "run_cycle",
+            "line": 30,
+            "args": [
+              "agent"
+            ]
+          },
+          {
+            "name": "run_challenge",
+            "line": 57,
+            "args": [
+              "agent"
+            ]
+          },
+          {
+            "name": "show_status",
+            "line": 75,
+            "args": [
+              "agent"
+            ]
+          },
+          {
+            "name": "show_health",
+            "line": 102,
+            "args": [
+              "agent"
+            ]
+          },
+          {
+            "name": "export_audit",
+            "line": 127,
+            "args": [
+              "agent",
+              "output_path"
+            ]
+          },
+          {
+            "name": "interactive_mode",
+            "line": 142,
+            "args": [
+              "agent"
+            ]
+          },
+          {
+            "name": "main",
+            "line": 177,
+            "args": []
+          }
+        ],
+        "classes": [],
+        "line_count": 254
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\scripts\\launch_server.py": {
+        "type": "python",
+        "imports": [
+          "sys",
+          "os",
+          "time",
+          "logging",
+          "pathlib.Path",
+          "matplotlib",
+          "numpy",
+          "PIL",
+          "web_interface.server.wsgi_app",
+          "wsgiref.simple_server.make_server"
+        ],
+        "functions": [
+          {
+            "name": "check_dependencies",
+            "line": 26,
+            "args": []
+          },
+          {
+            "name": "check_web_interface",
+            "line": 41,
+            "args": []
+          },
+          {
+            "name": "start_server",
+            "line": 56,
+            "args": []
+          }
+        ],
+        "classes": [],
+        "line_count": 105
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\scripts\\preflight_check.py": {
+        "type": "python",
+        "imports": [
+          "os",
+          "sys",
+          "json",
+          "hashlib",
+          "subprocess",
+          "importlib",
+          "pathlib.Path",
+          "typing.Dict",
+          "typing.List",
+          "typing.Any",
+          "typing.Tuple"
+        ],
+        "functions": [
+          {
+            "name": "check_ollama_available",
+            "line": 67,
+            "args": []
+          },
+          {
+            "name": "get_installed_ollama_models",
+            "line": 86,
+            "args": []
+          },
+          {
+            "name": "test_ollama_model",
+            "line": 111,
+            "args": [
+              "model_config"
+            ]
+          },
+          {
+            "name": "check_config_file",
+            "line": 171,
+            "args": [
+              "config"
+            ]
+          },
+          {
+            "name": "check_python_package",
+            "line": 212,
+            "args": [
+              "package_name"
+            ]
+          },
+          {
+            "name": "check_requirements_file",
+            "line": 228,
+            "args": []
+          },
+          {
+            "name": "main",
+            "line": 252,
+            "args": []
+          }
+        ],
+        "classes": [],
+        "line_count": 314
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\scripts\\restore_savepoint.py": {
+        "type": "python",
+        "imports": [
+          "os",
+          "sys",
+          "json",
+          "shutil",
+          "argparse",
+          "datetime",
+          "pathlib.Path",
+          "typing.Dict",
+          "typing.List",
+          "typing.Optional",
+          "create_savepoint.create_savepoint"
+        ],
+        "functions": [
+          {
+            "name": "get_savepoints_index",
+            "line": 27,
+            "args": []
+          },
+          {
+            "name": "list_savepoints",
+            "line": 35,
+            "args": []
+          },
+          {
+            "name": "get_savepoint_info",
+            "line": 61,
+            "args": [
+              "timestamp"
+            ]
+          },
+          {
+            "name": "validate_savepoint",
+            "line": 101,
+            "args": [
+              "timestamp"
+            ]
+          },
+          {
+            "name": "create_backup_before_restore",
+            "line": 140,
+            "args": []
+          },
+          {
+            "name": "restore_savepoint",
+            "line": 164,
+            "args": [
+              "timestamp",
+              "force"
+            ]
+          },
+          {
+            "name": "get_latest_savepoint",
+            "line": 286,
+            "args": []
+          },
+          {
+            "name": "main",
+            "line": 293,
+            "args": []
+          }
+        ],
+        "classes": [],
+        "line_count": 349
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\scripts\\system_test.py": {
+        "type": "python",
+        "imports": [
+          "sys",
+          "os",
+          "time",
+          "pathlib.Path",
+          "kai_core.kai_orchestrator.KaiOrchestrator",
+          "kai_core.agent_chat.EnhancedAgentChat",
+          "kai_core.agent_personality_engine.DynamicPersonalityEngine",
+          "web_interface.app.app",
+          "kai_core.agent_chat.EnhancedAgentChat",
+          "kai_core.agent_personality_engine.DynamicPersonalityEngine"
+        ],
+        "functions": [
+          {
+            "name": "test_imports",
+            "line": 18,
+            "args": []
+          },
+          {
+            "name": "test_agent_chat",
+            "line": 52,
+            "args": []
+          },
+          {
+            "name": "test_personality_engine",
+            "line": 74,
+            "args": []
+          },
+          {
+            "name": "main",
+            "line": 96,
+            "args": []
+          }
+        ],
+        "classes": [],
+        "line_count": 127
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\scripts\\test_ensemble_debug.py": {
+        "type": "python",
+        "imports": [
+          "asyncio",
+          "sys",
+          "os",
+          "kai_core.kai_orchestrator.KaiOrchestrator",
+          "traceback"
+        ],
+        "functions": [],
+        "classes": [],
+        "line_count": 56
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\scripts\\test_system.py": {
+        "type": "python",
+        "imports": [
+          "sys",
+          "os",
+          "time",
+          "pathlib.Path",
+          "kai_core.kai_orchestrator.KaiOrchestrator",
+          "kai_core.agent_chat.EnhancedAgentChat",
+          "kai_core.agent_personality_engine.DynamicPersonalityEngine",
+          "web_interface.server.wsgi_app",
+          "kai_core.agent_chat.EnhancedAgentChat",
+          "kai_core.agent_personality_engine.DynamicPersonalityEngine"
+        ],
+        "functions": [
+          {
+            "name": "test_imports",
+            "line": 18,
+            "args": []
+          },
+          {
+            "name": "test_agent_chat",
+            "line": 52,
+            "args": []
+          },
+          {
+            "name": "test_personality_engine",
+            "line": 74,
+            "args": []
+          },
+          {
+            "name": "main",
+            "line": 96,
+            "args": []
+          }
+        ],
+        "classes": [],
+        "line_count": 127
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\scripts\\update_white_papers.py": {
+        "type": "python",
+        "imports": [
+          "os",
+          "re",
+          "pathlib.Path",
+          "datetime.datetime"
+        ],
+        "functions": [
+          {
+            "name": "update_file_content",
+            "line": 35,
+            "args": [
+              "content",
+              "updates"
+            ]
+          },
+          {
+            "name": "update_project_status",
+            "line": 48,
+            "args": []
+          },
+          {
+            "name": "update_master_documentation",
+            "line": 71,
+            "args": []
+          },
+          {
+            "name": "update_qa_standards",
+            "line": 94,
+            "args": []
+          },
+          {
+            "name": "update_api_reference",
+            "line": 117,
+            "args": []
+          },
+          {
+            "name": "update_deployment_guide",
+            "line": 139,
+            "args": []
+          },
+          {
+            "name": "update_scientific_domains",
+            "line": 160,
+            "args": []
+          },
+          {
+            "name": "update_readme",
+            "line": 182,
+            "args": []
+          },
+          {
+            "name": "main",
+            "line": 205,
+            "args": []
+          }
+        ],
+        "classes": [],
+        "line_count": 238
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\scripts\\verify_models.py": {
+        "type": "python",
+        "imports": [
+          "os",
+          "sys",
+          "subprocess",
+          "json",
+          "time",
+          "pathlib.Path"
+        ],
+        "functions": [
+          {
+            "name": "check_ollama_installed",
+            "line": 45,
+            "args": []
+          },
+          {
+            "name": "get_installed_models",
+            "line": 60,
+            "args": []
+          },
+          {
+            "name": "test_model_response",
+            "line": 80,
+            "args": [
+              "model_name",
+              "prompt"
+            ]
+          },
+          {
+            "name": "verify_model_keywords",
+            "line": 107,
+            "args": [
+              "response",
+              "expected_keywords"
+            ]
+          },
+          {
+            "name": "main",
+            "line": 126,
+            "args": []
+          }
+        ],
+        "classes": [],
+        "line_count": 192
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\validation\\comprehensive_validation_final.py": {
+        "type": "python",
+        "imports": [
+          "requests",
+          "json",
+          "time",
+          "sys",
+          "datetime.datetime"
+        ],
+        "functions": [
+          {
+            "name": "login",
+            "line": 34,
+            "args": []
+          },
+          {
+            "name": "test_endpoint",
+            "line": 74,
+            "args": [
+              "endpoint",
+              "method",
+              "data",
+              "expected_fields"
+            ]
+          },
+          {
+            "name": "test_server_connection",
+            "line": 109,
+            "args": []
+          },
+          {
+            "name": "test_v1_compatibility",
+            "line": 127,
+            "args": []
+          },
+          {
+            "name": "test_v2_features",
+            "line": 208,
+            "args": []
+          },
+          {
+            "name": "test_never_repeat_personality",
+            "line": 249,
+            "args": []
+          },
+          {
+            "name": "test_agent_personalities",
+            "line": 319,
+            "args": []
+          },
+          {
+            "name": "test_visualization_types",
+            "line": 354,
+            "args": []
+          },
+          {
+            "name": "main",
+            "line": 384,
+            "args": []
+          }
+        ],
+        "classes": [],
+        "line_count": 466
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\validation\\comprehensive_validation_simple.py": {
+        "type": "python",
+        "imports": [
+          "requests",
+          "json",
+          "time",
+          "sys"
+        ],
+        "functions": [
+          {
+            "name": "test_server_connection",
+            "line": 18,
+            "args": []
+          },
+          {
+            "name": "test_login",
+            "line": 26,
+            "args": []
+          },
+          {
+            "name": "test_v1_compatibility",
+            "line": 37,
+            "args": []
+          },
+          {
+            "name": "test_v2_features",
+            "line": 65,
+            "args": []
+          },
+          {
+            "name": "test_agent_personalities",
+            "line": 87,
+            "args": []
+          },
+          {
+            "name": "test_visualization",
+            "line": 118,
+            "args": []
+          },
+          {
+            "name": "main",
+            "line": 144,
+            "args": []
+          }
+        ],
+        "classes": [],
+        "line_count": 207
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\validation\\final_validation.py": {
+        "type": "python",
+        "imports": [
+          "requests",
+          "json",
+          "time",
+          "random",
+          "threading",
+          "datetime.datetime",
+          "pathlib.Path"
+        ],
+        "functions": [
+          {
+            "name": "log_validation",
+            "line": 21,
+            "args": [
+              "test_name",
+              "result",
+              "details"
+            ]
+          },
+          {
+            "name": "test_v1_compatibility",
+            "line": 39,
+            "args": []
+          },
+          {
+            "name": "test_agent_personalities",
+            "line": 72,
+            "args": []
+          },
+          {
+            "name": "test_memory_system",
+            "line": 133,
+            "args": []
+          },
+          {
+            "name": "test_visualization_system",
+            "line": 179,
+            "args": []
+          },
+          {
+            "name": "test_edge_cases",
+            "line": 209,
+            "args": []
+          },
+          {
+            "name": "test_load_scenarios",
+            "line": 257,
+            "args": []
+          },
+          {
+            "name": "run_comprehensive_validation",
+            "line": 293,
+            "args": []
+          },
+          {
+            "name": "rapid_request",
+            "line": 265,
+            "args": []
+          }
+        ],
+        "classes": [],
+        "line_count": 377
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\validation\\simple_test.py": {
+        "type": "python",
+        "imports": [
+          "sys",
+          "os",
+          "kai_core.agent_personality_engine.DynamicPersonalityEngine",
+          "kai_core.agent_chat.EnhancedAgentChat",
+          "kai_core.session_manager.SessionManager",
+          "traceback"
+        ],
+        "functions": [],
+        "classes": [],
+        "line_count": 38
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\validation\\simple_validation.py": {
+        "type": "python",
+        "imports": [
+          "os",
+          "sys",
+          "json",
+          "importlib",
+          "pathlib.Path"
+        ],
+        "functions": [
+          {
+            "name": "test_imports",
+            "line": 24,
+            "args": []
+          },
+          {
+            "name": "test_file_structure",
+            "line": 51,
+            "args": []
+          },
+          {
+            "name": "test_configuration",
+            "line": 99,
+            "args": []
+          },
+          {
+            "name": "test_models_and_data",
+            "line": 140,
+            "args": []
+          },
+          {
+            "name": "test_validation_scripts",
+            "line": 171,
+            "args": []
+          },
+          {
+            "name": "main",
+            "line": 190,
+            "args": []
+          }
+        ],
+        "classes": [],
+        "line_count": 239
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\validation\\simple_wsgi_validation.py": {
+        "type": "python",
+        "imports": [
+          "requests",
+          "json",
+          "time",
+          "sys",
+          "datetime.datetime"
+        ],
+        "functions": [
+          {
+            "name": "test_server_connection",
+            "line": 18,
+            "args": []
+          },
+          {
+            "name": "test_endpoint",
+            "line": 36,
+            "args": [
+              "endpoint",
+              "method",
+              "data",
+              "expected_fields"
+            ]
+          },
+          {
+            "name": "test_basic_endpoints",
+            "line": 61,
+            "args": []
+          },
+          {
+            "name": "test_error_handling",
+            "line": 87,
+            "args": []
+          },
+          {
+            "name": "main",
+            "line": 100,
+            "args": []
+          }
+        ],
+        "classes": [],
+        "line_count": 133
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\validation\\test_agents.py": {
+        "type": "python",
+        "imports": [
+          "requests",
+          "json",
+          "time",
+          "os",
+          "datetime.datetime",
+          "base64",
+          "pathlib.Path"
+        ],
+        "functions": [
+          {
+            "name": "log_test",
+            "line": 75,
+            "args": [
+              "test_data"
+            ]
+          },
+          {
+            "name": "test_agent_chat",
+            "line": 87,
+            "args": [
+              "agent_id",
+              "message"
+            ]
+          },
+          {
+            "name": "test_agent_memory",
+            "line": 105,
+            "args": [
+              "agent_id"
+            ]
+          },
+          {
+            "name": "test_visualization",
+            "line": 117,
+            "args": [
+              "data_type"
+            ]
+          },
+          {
+            "name": "run_comprehensive_test",
+            "line": 145,
+            "args": []
+          }
+        ],
+        "classes": [],
+        "line_count": 281
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\validation\\test_agent_personalities.py": {
+        "type": "python",
+        "imports": [
+          "requests",
+          "json",
+          "time",
+          "os",
+          "datetime.datetime",
+          "hashlib"
+        ],
+        "functions": [
+          {
+            "name": "create_test_directory",
+            "line": 82,
+            "args": []
+          },
+          {
+            "name": "test_agent_response",
+            "line": 88,
+            "args": [
+              "agent_id",
+              "message",
+              "test_type"
+            ]
+          },
+          {
+            "name": "analyze_response_quality",
+            "line": 129,
+            "args": [
+              "response_text",
+              "agent_name",
+              "test_type"
+            ]
+          },
+          {
+            "name": "run_comprehensive_tests",
+            "line": 180,
+            "args": []
+          }
+        ],
+        "classes": [],
+        "line_count": 342
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\validation\\test_dynamic_personality.py": {
+        "type": "python",
+        "imports": [
+          "sys",
+          "os",
+          "asyncio",
+          "json",
+          "datetime.datetime",
+          "kai_core.agent_personality_engine.DynamicPersonalityEngine",
+          "kai_core.agent_chat.EnhancedAgentChat",
+          "kai_core.session_manager.SessionManager"
+        ],
+        "functions": [
+          {
+            "name": "test_dynamic_personality_engine",
+            "line": 22,
+            "args": []
+          },
+          {
+            "name": "test_personality_drops",
+            "line": 114,
+            "args": []
+          },
+          {
+            "name": "test_fresh_response_generation",
+            "line": 132,
+            "args": []
+          },
+          {
+            "name": "main",
+            "line": 159,
+            "args": []
+          }
+        ],
+        "classes": [],
+        "line_count": 203
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_080921\\validation\\test_enhanced_agent_personalities.py": {
+        "type": "python",
+        "imports": [
+          "requests",
+          "json",
+          "time",
+          "os",
+          "datetime.datetime",
+          "hashlib"
+        ],
+        "functions": [
+          {
+            "name": "test_agent_response",
+            "line": 112,
+            "args": [
+              "agent_id",
+              "message",
+              "session_id"
+            ]
+          },
+          {
+            "name": "analyze_enhanced_response_quality",
+            "line": 142,
+            "args": [
+              "agent_id",
+              "responses",
+              "test_type"
+            ]
+          },
+          {
+            "name": "run_enhanced_comprehensive_tests",
+            "line": 229,
+            "args": []
+          }
+        ],
+        "classes": [],
+        "line_count": 352
+      }
+    }
+  },
+  "estimated_tokens": 1170.0,
+  "related_chunks": [
+    "v5_core_systems",
+    "legacy_v1_v4_systems"
+  ]
+}

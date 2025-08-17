@@ -1,0 +1,71 @@
+{
+  "timestamp": "2025-08-16T11:36:31.887672",
+  "total_tests": 10,
+  "passed_tests": 8,
+  "failed_tests": 2,
+  "test_details": [
+    {
+      "test_name": "Component Availability",
+      "status": "PASSED",
+      "details": "All 3 components available",
+      "timestamp": "2025-08-16T11:36:31.888447"
+    },
+    {
+      "test_name": "Component Initialization",
+      "status": "PASSED",
+      "details": "All 3 components initialized successfully",
+      "timestamp": "2025-08-16T11:36:31.889749"
+    },
+    {
+      "test_name": "Health Monitoring",
+      "status": "PASSED",
+      "details": "All 3 components healthy",
+      "timestamp": "2025-08-16T11:36:31.892723"
+    },
+    {
+      "test_name": "Performance Optimization",
+      "status": "PASSED",
+      "details": "4/4 optimizations successful",
+      "timestamp": "2025-08-16T11:36:31.892938"
+    },
+    {
+      "test_name": "Auto Recovery",
+      "status": "PASSED",
+      "details": "4/4 recoveries successful",
+      "timestamp": "2025-08-16T11:36:31.893062"
+    },
+    {
+      "test_name": "Component Integration",
+      "status": "FAILED",
+      "details": "Only 3/4 integrations successful",
+      "timestamp": "2025-08-16T11:36:31.893210"
+    },
+    {
+      "test_name": "Event Processing",
+      "status": "FAILED",
+      "details": "Only 3/4 events processed successfully",
+      "timestamp": "2025-08-16T11:36:31.893327"
+    },
+    {
+      "test_name": "Dependency Management",
+      "status": "PASSED",
+      "details": "4/4 dependencies managed successfully",
+      "timestamp": "2025-08-16T11:36:31.893459"
+    },
+    {
+      "test_name": "System Stability",
+      "status": "PASSED",
+      "details": "4/4 stability tests passed",
+      "timestamp": "2025-08-16T11:36:31.893554"
+    },
+    {
+      "test_name": "End-to-End Workflow",
+      "status": "PASSED",
+      "details": "7/8 workflow steps successful",
+      "timestamp": "2025-08-16T11:36:31.893697"
+    }
+  ],
+  "integration_status": "good",
+  "overall_score": 80.0,
+  "test_duration": 0.005527973175048828
+}

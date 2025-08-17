@@ -1,0 +1,917 @@
+{
+  "chunk_type": "code_samples",
+  "chunk_id": "code_structure_289",
+  "title": "Code Structure Analysis - Part 289",
+  "description": "Code analysis for files 14401-14450",
+  "content": {
+    "files_analyzed": [
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_172734.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_172736.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_172739.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_172741.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_172744.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_172747.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_172749.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_172752.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_173946.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_173948.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_173951.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_173953.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_173956.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_173958.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_174001.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_174003.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_174106.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_174107.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_174109.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_174110.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_174111.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_174113.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_174114.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_174115.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_174304.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_174306.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_174307.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_174308.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_174309.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_174310.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_174311.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_174313.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_174335.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_174336.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_174337.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_174339.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_174340.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_174341.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_174342.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_174343.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_174426.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_174427.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_174428.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_174429.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_174431.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_174432.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_174433.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_174434.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_175815.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_175921.py"
+    ],
+    "structure_data": {
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_172734.py": {
+        "type": "python",
+        "imports": [
+          "time"
+        ],
+        "functions": [
+          {
+            "name": "performance_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_172736.py": {
+        "type": "python",
+        "imports": [
+          "time"
+        ],
+        "functions": [
+          {
+            "name": "performance_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_172739.py": {
+        "type": "python",
+        "imports": [
+          "time"
+        ],
+        "functions": [
+          {
+            "name": "performance_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_172741.py": {
+        "type": "python",
+        "imports": [
+          "time"
+        ],
+        "functions": [
+          {
+            "name": "performance_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_172744.py": {
+        "type": "python",
+        "imports": [
+          "time"
+        ],
+        "functions": [
+          {
+            "name": "performance_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_172747.py": {
+        "type": "python",
+        "imports": [
+          "time"
+        ],
+        "functions": [
+          {
+            "name": "performance_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_172749.py": {
+        "type": "python",
+        "imports": [
+          "time"
+        ],
+        "functions": [
+          {
+            "name": "performance_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_172752.py": {
+        "type": "python",
+        "imports": [
+          "time"
+        ],
+        "functions": [
+          {
+            "name": "performance_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_173946.py": {
+        "type": "python",
+        "imports": [
+          "time"
+        ],
+        "functions": [
+          {
+            "name": "performance_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_173948.py": {
+        "type": "python",
+        "imports": [
+          "time"
+        ],
+        "functions": [
+          {
+            "name": "performance_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_173951.py": {
+        "type": "python",
+        "imports": [
+          "time"
+        ],
+        "functions": [
+          {
+            "name": "performance_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_173953.py": {
+        "type": "python",
+        "imports": [
+          "time"
+        ],
+        "functions": [
+          {
+            "name": "performance_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_173956.py": {
+        "type": "python",
+        "imports": [
+          "time"
+        ],
+        "functions": [
+          {
+            "name": "performance_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_173958.py": {
+        "type": "python",
+        "imports": [
+          "time"
+        ],
+        "functions": [
+          {
+            "name": "performance_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_174001.py": {
+        "type": "python",
+        "imports": [
+          "time"
+        ],
+        "functions": [
+          {
+            "name": "performance_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_174003.py": {
+        "type": "python",
+        "imports": [
+          "time"
+        ],
+        "functions": [
+          {
+            "name": "performance_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_174106.py": {
+        "type": "python",
+        "imports": [
+          "time"
+        ],
+        "functions": [
+          {
+            "name": "performance_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_174107.py": {
+        "type": "python",
+        "imports": [
+          "time"
+        ],
+        "functions": [
+          {
+            "name": "performance_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_174109.py": {
+        "type": "python",
+        "imports": [
+          "time"
+        ],
+        "functions": [
+          {
+            "name": "performance_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_174110.py": {
+        "type": "python",
+        "imports": [
+          "time"
+        ],
+        "functions": [
+          {
+            "name": "performance_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_174111.py": {
+        "type": "python",
+        "imports": [
+          "time"
+        ],
+        "functions": [
+          {
+            "name": "performance_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_174113.py": {
+        "type": "python",
+        "imports": [
+          "time"
+        ],
+        "functions": [
+          {
+            "name": "performance_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_174114.py": {
+        "type": "python",
+        "imports": [
+          "time"
+        ],
+        "functions": [
+          {
+            "name": "performance_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_174115.py": {
+        "type": "python",
+        "imports": [
+          "time"
+        ],
+        "functions": [
+          {
+            "name": "performance_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_174304.py": {
+        "type": "python",
+        "imports": [
+          "time"
+        ],
+        "functions": [
+          {
+            "name": "performance_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_174306.py": {
+        "type": "python",
+        "imports": [
+          "time"
+        ],
+        "functions": [
+          {
+            "name": "performance_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_174307.py": {
+        "type": "python",
+        "imports": [
+          "time"
+        ],
+        "functions": [
+          {
+            "name": "performance_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_174308.py": {
+        "type": "python",
+        "imports": [
+          "time"
+        ],
+        "functions": [
+          {
+            "name": "performance_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_174309.py": {
+        "type": "python",
+        "imports": [
+          "time"
+        ],
+        "functions": [
+          {
+            "name": "performance_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_174310.py": {
+        "type": "python",
+        "imports": [
+          "time"
+        ],
+        "functions": [
+          {
+            "name": "performance_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_174311.py": {
+        "type": "python",
+        "imports": [
+          "time"
+        ],
+        "functions": [
+          {
+            "name": "performance_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_174313.py": {
+        "type": "python",
+        "imports": [
+          "time"
+        ],
+        "functions": [
+          {
+            "name": "performance_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_174335.py": {
+        "type": "python",
+        "imports": [
+          "time"
+        ],
+        "functions": [
+          {
+            "name": "performance_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_174336.py": {
+        "type": "python",
+        "imports": [
+          "time"
+        ],
+        "functions": [
+          {
+            "name": "performance_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_174337.py": {
+        "type": "python",
+        "imports": [
+          "time"
+        ],
+        "functions": [
+          {
+            "name": "performance_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_174339.py": {
+        "type": "python",
+        "imports": [
+          "time"
+        ],
+        "functions": [
+          {
+            "name": "performance_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_174340.py": {
+        "type": "python",
+        "imports": [
+          "time"
+        ],
+        "functions": [
+          {
+            "name": "performance_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_174341.py": {
+        "type": "python",
+        "imports": [
+          "time"
+        ],
+        "functions": [
+          {
+            "name": "performance_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_174342.py": {
+        "type": "python",
+        "imports": [
+          "time"
+        ],
+        "functions": [
+          {
+            "name": "performance_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_174343.py": {
+        "type": "python",
+        "imports": [
+          "time"
+        ],
+        "functions": [
+          {
+            "name": "performance_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_174426.py": {
+        "type": "python",
+        "imports": [
+          "time"
+        ],
+        "functions": [
+          {
+            "name": "performance_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_174427.py": {
+        "type": "python",
+        "imports": [
+          "time"
+        ],
+        "functions": [
+          {
+            "name": "performance_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_174428.py": {
+        "type": "python",
+        "imports": [
+          "time"
+        ],
+        "functions": [
+          {
+            "name": "performance_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_174429.py": {
+        "type": "python",
+        "imports": [
+          "time"
+        ],
+        "functions": [
+          {
+            "name": "performance_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_174431.py": {
+        "type": "python",
+        "imports": [
+          "time"
+        ],
+        "functions": [
+          {
+            "name": "performance_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_174432.py": {
+        "type": "python",
+        "imports": [
+          "time"
+        ],
+        "functions": [
+          {
+            "name": "performance_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_174433.py": {
+        "type": "python",
+        "imports": [
+          "time"
+        ],
+        "functions": [
+          {
+            "name": "performance_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_174434.py": {
+        "type": "python",
+        "imports": [
+          "time"
+        ],
+        "functions": [
+          {
+            "name": "performance_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_175815.py": {
+        "type": "python",
+        "imports": [
+          "time"
+        ],
+        "functions": [
+          {
+            "name": "performance_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_104127\\kai_core\\challenges\\performance_challenge_import n_20250805_175921.py": {
+        "type": "python",
+        "imports": [
+          "time"
+        ],
+        "functions": [
+          {
+            "name": "performance_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      }
+    }
+  },
+  "estimated_tokens": 1235.0,
+  "related_chunks": [
+    "v5_core_systems",
+    "legacy_v1_v4_systems"
+  ]
+}

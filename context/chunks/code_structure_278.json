@@ -1,0 +1,1017 @@
+{
+  "chunk_type": "code_samples",
+  "chunk_id": "code_structure_278",
+  "title": "Code Structure Analysis - Part 278",
+  "description": "Code analysis for files 13851-13900",
+  "content": {
+    "files_analyzed": [
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\74c74d68-0115-462c-b696-7c50d58dabdf.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\7746bdc3-f833-4bdb-8242-398396737ce4.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\77482b04-2af2-4ddc-ba58-07461a0ff6ab.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\79df2285-5e64-4a61-8a91-901420902bea.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\7a100dba-7135-433d-8fd7-2536f7681f56.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\7bb76eaf-4ba7-4bd9-b37e-e5acc8dff9d4.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\7d69d0e5-f78e-493d-b668-042f44a2e419.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\8152faf9-99c7-44dd-b71f-b84ed2eebbda.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\815b25bf-4e2a-47ac-80bd-3deb58db5270.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\81d81d4b-7370-4bc0-9050-e9f73f1b55b5.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\820d8d2c-e5ed-4a44-98a7-647a3265dd3f.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\8314de55-1900-406f-bf4b-9e27a09acd0b.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\8360bd5f-315c-4358-b1d9-238c126cecff.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\83daeb5a-5bb3-43b2-aeaf-9606499df227.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\85928665-1fcc-474a-886e-dd008f7535e2.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\85c07ceb-f6e4-4581-951c-39dda9bbf610.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\86362d52-ce04-4be9-adfa-318732b860d5.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\887cd856-a1ea-4ed8-8ae7-5d34a67d343d.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\8997c20e-cf82-4cf5-b524-bb08fdca002a.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\89d17c2d-90ad-421e-9017-cf07435b6164.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\8a8e4e21-32f4-4eab-8567-9db30fa129ac.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\8c5df6cf-31af-4645-a997-05feaac382d4.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\8d15a7d9-7dc7-40f6-ade4-da9bd3e4a5d6.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\8dd90b7b-4f41-4d7c-b8e3-1dab7beb8636.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\8e1c190d-ca66-418d-aa64-1d6590dbc858.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\8f47f167-df43-4eb6-858b-529b28315282.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\8f826db2-3978-4594-a340-7635a02a63ce.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\90175e2c-5656-40e3-87cd-7a323bc150a2.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\92cb4be6-0471-4ae6-beb8-d5b70e1b4af7.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\92ff7fb6-0e46-4533-9cf5-37d1032fb058.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\954482b6-3b29-4c33-8ad3-c0211eff282b.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\964a6f0e-35ca-462c-8cfd-e409127f19e9.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\96d9b6cf-714a-4628-a0d5-b131f92fbe77.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\9775c8e9-998f-4757-bbe4-a0556df0a450.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\99c743a0-858d-4ebf-a025-de9ef5b59876.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\9aae8381-0a0a-4054-a22a-88caec541aa6.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\9ae472fb-cd42-4c29-866d-0a1d0e438650.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\9c17d2d0-6d32-46de-a428-3a7540bb42a7.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\9d24a9e9-2b79-41c6-b62a-98ced20b6a70.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\a00a1596-0081-4f84-a023-2c0b11bead03.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\a32b502f-b9c0-4ccf-acf2-84329477f4e0.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\a360546a-fedf-4ab7-905e-cfa6f82cd822.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\a378f7de-d0c6-4cd0-8e9f-02ecaf5aaf85.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\a39d0ff2-5163-4d19-be02-acfac8a9fdfb.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\a65a67b4-1e28-42b1-826f-f6dc21fa749c.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\abec0861-78d3-49aa-b2bc-50d977b95d97.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\aea383c9-7fbc-4c30-ace0-95194ec2f11a.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\b2bca695-fd45-48e0-86a4-5c3e0e3bc929.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\b520312d-fc0c-4ea8-86cf-e9f12dc40924.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\b72066e6-8a29-4cc2-84e7-2386af9fc069.json"
+    ],
+    "structure_data": {
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\74c74d68-0115-462c-b696-7c50d58dabdf.json": {
+        "type": "json",
+        "keys": [
+          "proposal_id",
+          "title",
+          "description",
+          "code_patch",
+          "affected_files",
+          "risk_level",
+          "estimated_impact",
+          "submitted_by",
+          "submitted_at",
+          "status",
+          "reviews",
+          "consensus_required",
+          "total_reviews"
+        ],
+        "line_count": 17
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\7746bdc3-f833-4bdb-8242-398396737ce4.json": {
+        "type": "json",
+        "keys": [
+          "proposal_id",
+          "title",
+          "description",
+          "code_patch",
+          "affected_files",
+          "risk_level",
+          "estimated_impact",
+          "submitted_by",
+          "submitted_at",
+          "status",
+          "reviews",
+          "consensus_required",
+          "total_reviews"
+        ],
+        "line_count": 83
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\77482b04-2af2-4ddc-ba58-07461a0ff6ab.json": {
+        "type": "json",
+        "keys": [
+          "proposal_id",
+          "title",
+          "description",
+          "code_patch",
+          "affected_files",
+          "risk_level",
+          "estimated_impact",
+          "submitted_by",
+          "submitted_at",
+          "status",
+          "reviews",
+          "consensus_required",
+          "total_reviews"
+        ],
+        "line_count": 17
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\79df2285-5e64-4a61-8a91-901420902bea.json": {
+        "type": "json",
+        "keys": [
+          "proposal_id",
+          "title",
+          "description",
+          "code_patch",
+          "affected_files",
+          "risk_level",
+          "estimated_impact",
+          "submitted_by",
+          "submitted_at",
+          "status",
+          "reviews",
+          "consensus_required",
+          "total_reviews"
+        ],
+        "line_count": 17
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\7a100dba-7135-433d-8fd7-2536f7681f56.json": {
+        "type": "json",
+        "keys": [
+          "proposal_id",
+          "title",
+          "description",
+          "code_patch",
+          "affected_files",
+          "risk_level",
+          "estimated_impact",
+          "submitted_by",
+          "submitted_at",
+          "status",
+          "reviews",
+          "consensus_required",
+          "total_reviews"
+        ],
+        "line_count": 17
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\7bb76eaf-4ba7-4bd9-b37e-e5acc8dff9d4.json": {
+        "type": "json",
+        "keys": [
+          "proposal_id",
+          "title",
+          "description",
+          "code_patch",
+          "affected_files",
+          "risk_level",
+          "estimated_impact",
+          "submitted_by",
+          "submitted_at",
+          "status",
+          "reviews",
+          "consensus_required",
+          "total_reviews"
+        ],
+        "line_count": 17
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\7d69d0e5-f78e-493d-b668-042f44a2e419.json": {
+        "type": "json",
+        "keys": [
+          "proposal_id",
+          "title",
+          "description",
+          "code_patch",
+          "affected_files",
+          "risk_level",
+          "estimated_impact",
+          "submitted_by",
+          "submitted_at",
+          "status",
+          "reviews",
+          "consensus_required",
+          "total_reviews"
+        ],
+        "line_count": 17
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\8152faf9-99c7-44dd-b71f-b84ed2eebbda.json": {
+        "type": "json",
+        "keys": [
+          "proposal_id",
+          "title",
+          "description",
+          "code_patch",
+          "affected_files",
+          "risk_level",
+          "estimated_impact",
+          "submitted_by",
+          "submitted_at",
+          "status",
+          "reviews",
+          "consensus_required",
+          "total_reviews"
+        ],
+        "line_count": 83
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\815b25bf-4e2a-47ac-80bd-3deb58db5270.json": {
+        "type": "json",
+        "keys": [
+          "proposal_id",
+          "title",
+          "description",
+          "code_patch",
+          "affected_files",
+          "risk_level",
+          "estimated_impact",
+          "submitted_by",
+          "submitted_at",
+          "status",
+          "reviews",
+          "consensus_required",
+          "total_reviews"
+        ],
+        "line_count": 17
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\81d81d4b-7370-4bc0-9050-e9f73f1b55b5.json": {
+        "type": "json",
+        "keys": [
+          "proposal_id",
+          "title",
+          "description",
+          "code_patch",
+          "affected_files",
+          "risk_level",
+          "estimated_impact",
+          "submitted_by",
+          "submitted_at",
+          "status",
+          "reviews",
+          "consensus_required",
+          "total_reviews"
+        ],
+        "line_count": 17
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\820d8d2c-e5ed-4a44-98a7-647a3265dd3f.json": {
+        "type": "json",
+        "keys": [
+          "proposal_id",
+          "title",
+          "description",
+          "code_patch",
+          "affected_files",
+          "risk_level",
+          "estimated_impact",
+          "submitted_by",
+          "submitted_at",
+          "status",
+          "reviews",
+          "consensus_required",
+          "total_reviews"
+        ],
+        "line_count": 17
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\8314de55-1900-406f-bf4b-9e27a09acd0b.json": {
+        "type": "json",
+        "keys": [
+          "proposal_id",
+          "title",
+          "description",
+          "code_patch",
+          "affected_files",
+          "risk_level",
+          "estimated_impact",
+          "submitted_by",
+          "submitted_at",
+          "status",
+          "reviews",
+          "consensus_required",
+          "total_reviews"
+        ],
+        "line_count": 17
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\8360bd5f-315c-4358-b1d9-238c126cecff.json": {
+        "type": "json",
+        "keys": [
+          "proposal_id",
+          "title",
+          "description",
+          "code_patch",
+          "affected_files",
+          "risk_level",
+          "estimated_impact",
+          "submitted_by",
+          "submitted_at",
+          "status",
+          "reviews",
+          "consensus_required",
+          "total_reviews"
+        ],
+        "line_count": 83
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\83daeb5a-5bb3-43b2-aeaf-9606499df227.json": {
+        "type": "json",
+        "keys": [
+          "proposal_id",
+          "title",
+          "description",
+          "code_patch",
+          "affected_files",
+          "risk_level",
+          "estimated_impact",
+          "submitted_by",
+          "submitted_at",
+          "status",
+          "reviews",
+          "consensus_required",
+          "total_reviews"
+        ],
+        "line_count": 17
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\85928665-1fcc-474a-886e-dd008f7535e2.json": {
+        "type": "json",
+        "keys": [
+          "proposal_id",
+          "title",
+          "description",
+          "code_patch",
+          "affected_files",
+          "risk_level",
+          "estimated_impact",
+          "submitted_by",
+          "submitted_at",
+          "status",
+          "reviews",
+          "consensus_required",
+          "total_reviews"
+        ],
+        "line_count": 17
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\85c07ceb-f6e4-4581-951c-39dda9bbf610.json": {
+        "type": "json",
+        "keys": [
+          "proposal_id",
+          "title",
+          "description",
+          "code_patch",
+          "affected_files",
+          "risk_level",
+          "estimated_impact",
+          "submitted_by",
+          "submitted_at",
+          "status",
+          "reviews",
+          "consensus_required",
+          "total_reviews"
+        ],
+        "line_count": 17
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\86362d52-ce04-4be9-adfa-318732b860d5.json": {
+        "type": "json",
+        "keys": [
+          "proposal_id",
+          "title",
+          "description",
+          "code_patch",
+          "affected_files",
+          "risk_level",
+          "estimated_impact",
+          "submitted_by",
+          "submitted_at",
+          "status",
+          "reviews",
+          "consensus_required",
+          "total_reviews"
+        ],
+        "line_count": 17
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\887cd856-a1ea-4ed8-8ae7-5d34a67d343d.json": {
+        "type": "json",
+        "keys": [
+          "proposal_id",
+          "title",
+          "description",
+          "code_patch",
+          "affected_files",
+          "risk_level",
+          "estimated_impact",
+          "submitted_by",
+          "submitted_at",
+          "status",
+          "reviews",
+          "consensus_required",
+          "total_reviews"
+        ],
+        "line_count": 17
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\8997c20e-cf82-4cf5-b524-bb08fdca002a.json": {
+        "type": "json",
+        "keys": [
+          "proposal_id",
+          "title",
+          "description",
+          "code_patch",
+          "affected_files",
+          "risk_level",
+          "estimated_impact",
+          "submitted_by",
+          "submitted_at",
+          "status",
+          "reviews",
+          "consensus_required",
+          "total_reviews"
+        ],
+        "line_count": 17
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\89d17c2d-90ad-421e-9017-cf07435b6164.json": {
+        "type": "json",
+        "keys": [
+          "proposal_id",
+          "title",
+          "description",
+          "code_patch",
+          "affected_files",
+          "risk_level",
+          "estimated_impact",
+          "submitted_by",
+          "submitted_at",
+          "status",
+          "reviews",
+          "consensus_required",
+          "total_reviews"
+        ],
+        "line_count": 17
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\8a8e4e21-32f4-4eab-8567-9db30fa129ac.json": {
+        "type": "json",
+        "keys": [
+          "proposal_id",
+          "title",
+          "description",
+          "code_patch",
+          "affected_files",
+          "risk_level",
+          "estimated_impact",
+          "submitted_by",
+          "submitted_at",
+          "status",
+          "reviews",
+          "consensus_required",
+          "total_reviews"
+        ],
+        "line_count": 17
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\8c5df6cf-31af-4645-a997-05feaac382d4.json": {
+        "type": "json",
+        "keys": [
+          "proposal_id",
+          "title",
+          "description",
+          "code_patch",
+          "affected_files",
+          "risk_level",
+          "estimated_impact",
+          "submitted_by",
+          "submitted_at",
+          "status",
+          "reviews",
+          "consensus_required",
+          "total_reviews"
+        ],
+        "line_count": 17
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\8d15a7d9-7dc7-40f6-ade4-da9bd3e4a5d6.json": {
+        "type": "json",
+        "keys": [
+          "proposal_id",
+          "title",
+          "description",
+          "code_patch",
+          "affected_files",
+          "risk_level",
+          "estimated_impact",
+          "submitted_by",
+          "submitted_at",
+          "status",
+          "reviews",
+          "consensus_required",
+          "total_reviews"
+        ],
+        "line_count": 17
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\8dd90b7b-4f41-4d7c-b8e3-1dab7beb8636.json": {
+        "type": "json",
+        "keys": [
+          "proposal_id",
+          "title",
+          "description",
+          "code_patch",
+          "affected_files",
+          "risk_level",
+          "estimated_impact",
+          "submitted_by",
+          "submitted_at",
+          "status",
+          "reviews",
+          "consensus_required",
+          "total_reviews"
+        ],
+        "line_count": 17
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\8e1c190d-ca66-418d-aa64-1d6590dbc858.json": {
+        "type": "json",
+        "keys": [
+          "proposal_id",
+          "title",
+          "description",
+          "code_patch",
+          "affected_files",
+          "risk_level",
+          "estimated_impact",
+          "submitted_by",
+          "submitted_at",
+          "status",
+          "reviews",
+          "consensus_required",
+          "total_reviews"
+        ],
+        "line_count": 17
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\8f47f167-df43-4eb6-858b-529b28315282.json": {
+        "type": "json",
+        "keys": [
+          "proposal_id",
+          "title",
+          "description",
+          "code_patch",
+          "affected_files",
+          "risk_level",
+          "estimated_impact",
+          "submitted_by",
+          "submitted_at",
+          "status",
+          "reviews",
+          "consensus_required",
+          "total_reviews"
+        ],
+        "line_count": 17
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\8f826db2-3978-4594-a340-7635a02a63ce.json": {
+        "type": "json",
+        "keys": [
+          "proposal_id",
+          "title",
+          "description",
+          "code_patch",
+          "affected_files",
+          "risk_level",
+          "estimated_impact",
+          "submitted_by",
+          "submitted_at",
+          "status",
+          "reviews",
+          "consensus_required",
+          "total_reviews"
+        ],
+        "line_count": 17
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\90175e2c-5656-40e3-87cd-7a323bc150a2.json": {
+        "type": "json",
+        "keys": [
+          "proposal_id",
+          "title",
+          "description",
+          "code_patch",
+          "affected_files",
+          "risk_level",
+          "estimated_impact",
+          "submitted_by",
+          "submitted_at",
+          "status",
+          "reviews",
+          "consensus_required",
+          "total_reviews"
+        ],
+        "line_count": 83
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\92cb4be6-0471-4ae6-beb8-d5b70e1b4af7.json": {
+        "type": "json",
+        "keys": [
+          "proposal_id",
+          "title",
+          "description",
+          "code_patch",
+          "affected_files",
+          "risk_level",
+          "estimated_impact",
+          "submitted_by",
+          "submitted_at",
+          "status",
+          "reviews",
+          "consensus_required",
+          "total_reviews"
+        ],
+        "line_count": 17
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\92ff7fb6-0e46-4533-9cf5-37d1032fb058.json": {
+        "type": "json",
+        "keys": [
+          "proposal_id",
+          "title",
+          "description",
+          "code_patch",
+          "affected_files",
+          "risk_level",
+          "estimated_impact",
+          "submitted_by",
+          "submitted_at",
+          "status",
+          "reviews",
+          "consensus_required",
+          "total_reviews"
+        ],
+        "line_count": 17
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\954482b6-3b29-4c33-8ad3-c0211eff282b.json": {
+        "type": "json",
+        "keys": [
+          "proposal_id",
+          "title",
+          "description",
+          "code_patch",
+          "affected_files",
+          "risk_level",
+          "estimated_impact",
+          "submitted_by",
+          "submitted_at",
+          "status",
+          "reviews",
+          "consensus_required",
+          "total_reviews"
+        ],
+        "line_count": 17
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\964a6f0e-35ca-462c-8cfd-e409127f19e9.json": {
+        "type": "json",
+        "keys": [
+          "proposal_id",
+          "title",
+          "description",
+          "code_patch",
+          "affected_files",
+          "risk_level",
+          "estimated_impact",
+          "submitted_by",
+          "submitted_at",
+          "status",
+          "reviews",
+          "consensus_required",
+          "total_reviews"
+        ],
+        "line_count": 17
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\96d9b6cf-714a-4628-a0d5-b131f92fbe77.json": {
+        "type": "json",
+        "keys": [
+          "proposal_id",
+          "title",
+          "description",
+          "code_patch",
+          "affected_files",
+          "risk_level",
+          "estimated_impact",
+          "submitted_by",
+          "submitted_at",
+          "status",
+          "reviews",
+          "consensus_required",
+          "total_reviews"
+        ],
+        "line_count": 17
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\9775c8e9-998f-4757-bbe4-a0556df0a450.json": {
+        "type": "json",
+        "keys": [
+          "proposal_id",
+          "title",
+          "description",
+          "code_patch",
+          "affected_files",
+          "risk_level",
+          "estimated_impact",
+          "submitted_by",
+          "submitted_at",
+          "status",
+          "reviews",
+          "consensus_required",
+          "total_reviews"
+        ],
+        "line_count": 17
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\99c743a0-858d-4ebf-a025-de9ef5b59876.json": {
+        "type": "json",
+        "keys": [
+          "proposal_id",
+          "title",
+          "description",
+          "code_patch",
+          "affected_files",
+          "risk_level",
+          "estimated_impact",
+          "submitted_by",
+          "submitted_at",
+          "status",
+          "reviews",
+          "consensus_required",
+          "total_reviews"
+        ],
+        "line_count": 17
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\9aae8381-0a0a-4054-a22a-88caec541aa6.json": {
+        "type": "json",
+        "keys": [
+          "proposal_id",
+          "title",
+          "description",
+          "code_patch",
+          "affected_files",
+          "risk_level",
+          "estimated_impact",
+          "submitted_by",
+          "submitted_at",
+          "status",
+          "reviews",
+          "consensus_required",
+          "total_reviews"
+        ],
+        "line_count": 17
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\9ae472fb-cd42-4c29-866d-0a1d0e438650.json": {
+        "type": "json",
+        "keys": [
+          "proposal_id",
+          "title",
+          "description",
+          "code_patch",
+          "affected_files",
+          "risk_level",
+          "estimated_impact",
+          "submitted_by",
+          "submitted_at",
+          "status",
+          "reviews",
+          "consensus_required",
+          "total_reviews"
+        ],
+        "line_count": 17
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\9c17d2d0-6d32-46de-a428-3a7540bb42a7.json": {
+        "type": "json",
+        "keys": [
+          "proposal_id",
+          "title",
+          "description",
+          "code_patch",
+          "affected_files",
+          "risk_level",
+          "estimated_impact",
+          "submitted_by",
+          "submitted_at",
+          "status",
+          "reviews",
+          "consensus_required",
+          "total_reviews"
+        ],
+        "line_count": 83
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\9d24a9e9-2b79-41c6-b62a-98ced20b6a70.json": {
+        "type": "json",
+        "keys": [
+          "proposal_id",
+          "title",
+          "description",
+          "code_patch",
+          "affected_files",
+          "risk_level",
+          "estimated_impact",
+          "submitted_by",
+          "submitted_at",
+          "status",
+          "reviews",
+          "consensus_required",
+          "total_reviews"
+        ],
+        "line_count": 17
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\a00a1596-0081-4f84-a023-2c0b11bead03.json": {
+        "type": "json",
+        "keys": [
+          "proposal_id",
+          "title",
+          "description",
+          "code_patch",
+          "affected_files",
+          "risk_level",
+          "estimated_impact",
+          "submitted_by",
+          "submitted_at",
+          "status",
+          "reviews",
+          "consensus_required",
+          "total_reviews"
+        ],
+        "line_count": 17
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\a32b502f-b9c0-4ccf-acf2-84329477f4e0.json": {
+        "type": "json",
+        "keys": [
+          "proposal_id",
+          "title",
+          "description",
+          "code_patch",
+          "affected_files",
+          "risk_level",
+          "estimated_impact",
+          "submitted_by",
+          "submitted_at",
+          "status",
+          "reviews",
+          "consensus_required",
+          "total_reviews"
+        ],
+        "line_count": 17
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\a360546a-fedf-4ab7-905e-cfa6f82cd822.json": {
+        "type": "json",
+        "keys": [
+          "proposal_id",
+          "title",
+          "description",
+          "code_patch",
+          "affected_files",
+          "risk_level",
+          "estimated_impact",
+          "submitted_by",
+          "submitted_at",
+          "status",
+          "reviews",
+          "consensus_required",
+          "total_reviews"
+        ],
+        "line_count": 17
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\a378f7de-d0c6-4cd0-8e9f-02ecaf5aaf85.json": {
+        "type": "json",
+        "keys": [
+          "proposal_id",
+          "title",
+          "description",
+          "code_patch",
+          "affected_files",
+          "risk_level",
+          "estimated_impact",
+          "submitted_by",
+          "submitted_at",
+          "status",
+          "reviews",
+          "consensus_required",
+          "total_reviews"
+        ],
+        "line_count": 17
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\a39d0ff2-5163-4d19-be02-acfac8a9fdfb.json": {
+        "type": "json",
+        "keys": [
+          "proposal_id",
+          "title",
+          "description",
+          "code_patch",
+          "affected_files",
+          "risk_level",
+          "estimated_impact",
+          "submitted_by",
+          "submitted_at",
+          "status",
+          "reviews",
+          "consensus_required",
+          "total_reviews"
+        ],
+        "line_count": 17
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\a65a67b4-1e28-42b1-826f-f6dc21fa749c.json": {
+        "type": "json",
+        "keys": [
+          "proposal_id",
+          "title",
+          "description",
+          "code_patch",
+          "affected_files",
+          "risk_level",
+          "estimated_impact",
+          "submitted_by",
+          "submitted_at",
+          "status",
+          "reviews",
+          "consensus_required",
+          "total_reviews"
+        ],
+        "line_count": 83
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\abec0861-78d3-49aa-b2bc-50d977b95d97.json": {
+        "type": "json",
+        "keys": [
+          "proposal_id",
+          "title",
+          "description",
+          "code_patch",
+          "affected_files",
+          "risk_level",
+          "estimated_impact",
+          "submitted_by",
+          "submitted_at",
+          "status",
+          "reviews",
+          "consensus_required",
+          "total_reviews"
+        ],
+        "line_count": 17
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\aea383c9-7fbc-4c30-ace0-95194ec2f11a.json": {
+        "type": "json",
+        "keys": [
+          "proposal_id",
+          "title",
+          "description",
+          "code_patch",
+          "affected_files",
+          "risk_level",
+          "estimated_impact",
+          "submitted_by",
+          "submitted_at",
+          "status",
+          "reviews",
+          "consensus_required",
+          "total_reviews"
+        ],
+        "line_count": 17
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\b2bca695-fd45-48e0-86a4-5c3e0e3bc929.json": {
+        "type": "json",
+        "keys": [
+          "proposal_id",
+          "title",
+          "description",
+          "code_patch",
+          "affected_files",
+          "risk_level",
+          "estimated_impact",
+          "submitted_by",
+          "submitted_at",
+          "status",
+          "reviews",
+          "consensus_required",
+          "total_reviews"
+        ],
+        "line_count": 17
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\b520312d-fc0c-4ea8-86cf-e9f12dc40924.json": {
+        "type": "json",
+        "keys": [
+          "proposal_id",
+          "title",
+          "description",
+          "code_patch",
+          "affected_files",
+          "risk_level",
+          "estimated_impact",
+          "submitted_by",
+          "submitted_at",
+          "status",
+          "reviews",
+          "consensus_required",
+          "total_reviews"
+        ],
+        "line_count": 17
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\web_interface\\proposals\\b72066e6-8a29-4cc2-84e7-2386af9fc069.json": {
+        "type": "json",
+        "keys": [
+          "proposal_id",
+          "title",
+          "description",
+          "code_patch",
+          "affected_files",
+          "risk_level",
+          "estimated_impact",
+          "submitted_by",
+          "submitted_at",
+          "status",
+          "reviews",
+          "consensus_required",
+          "total_reviews"
+        ],
+        "line_count": 17
+      }
+    }
+  },
+  "estimated_tokens": 1170.0,
+  "related_chunks": [
+    "v5_core_systems",
+    "legacy_v1_v4_systems"
+  ]
+}

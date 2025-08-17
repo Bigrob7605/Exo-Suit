@@ -1,0 +1,1151 @@
+{
+  "chunk_type": "code_samples",
+  "chunk_id": "code_structure_163",
+  "title": "Code Structure Analysis - Part 163",
+  "description": "Code analysis for files 8101-8150",
+  "content": {
+    "files_analyzed": [
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\proposals\\proposal_d541cf9a.json",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\proposals\\proposal_db0dcb52.json",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\proposals\\proposal_e004b99a.json",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\proposals\\proposal_e0226133.json",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\proposals\\proposal_e14e6465.json",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\proposals\\proposal_e74d8d58.json",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\seeds\\068ed992f3cd071f.json",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\seeds\\13fb58f350db6889.json",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\seeds\\145fd9881cf97850.json",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\seeds\\151a1376d8578740.json",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\seeds\\1a0b7445bdacefa1.json",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\seeds\\3530f27e663f2fb7.json",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\seeds\\40e7518f7db063a1.json",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\seeds\\4beb1a6bda333c0b.json",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\seeds\\528a5c8fad58a0a7.json",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\seeds\\55390ef6df774a3a.json",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\seeds\\587976561ccb53f3.json",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\seeds\\5a93226e099d9adc.json",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\seeds\\60cb24af5c6095be.json",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\seeds\\6cf549cbbb7b9972.json",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\seeds\\7133108af4ad51d6.json",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\seeds\\715568a945555724.json",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\seeds\\77972b70c33a2998.json",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\seeds\\7c6f028a13c9f3f1.json",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\seeds\\832d221ebca74f61.json",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\seeds\\83c8823f5313fc71.json",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\seeds\\89b7dc8271858982.json",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\seeds\\a404204b3cb98ffe.json",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\seeds\\afcc8209ea46c2d6.json",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\seeds\\b34c0f3a43f6a4c6.json",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\seeds\\b531a915a914ed53.json",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\seeds\\bd4b7f7ab8dfd4d3.json",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\seeds\\c137c16f64568bb2.json",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\seeds\\cec987079e3319b7.json",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\seeds\\d114ce1278bd7049.json",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\seeds\\d15572c2a1fa76b5.json",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\seeds\\d3af4d4eaa0b7133.json",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\seeds\\d3b3b476f769a64a.json",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\seeds\\d3e8efabbdef94a3.json",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\seeds\\f20cbdc4280ae875.json",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\seeds\\f4f38d3bf056d750.json",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\seeds\\f9e3b7343c66a051.json",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\safety\\audit\\safety_audit.json",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141101\\domain\\astronomy.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141101\\domain\\bio.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141101\\domain\\chemistry.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141101\\domain\\climate.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141101\\domain\\coding.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141101\\domain\\coding_agentic.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141101\\domain\\math.py"
+    ],
+    "structure_data": {
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\proposals\\proposal_d541cf9a.json": {
+        "type": "json",
+        "keys": [
+          "hash",
+          "timestamp",
+          "domain",
+          "type",
+          "code",
+          "description",
+          "status",
+          "reviewer",
+          "approved"
+        ],
+        "line_count": 11
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\proposals\\proposal_db0dcb52.json": {
+        "type": "json",
+        "keys": [
+          "hash",
+          "timestamp",
+          "domain",
+          "type",
+          "code",
+          "description",
+          "status",
+          "reviewer",
+          "approved"
+        ],
+        "line_count": 11
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\proposals\\proposal_e004b99a.json": {
+        "type": "json",
+        "keys": [
+          "hash",
+          "timestamp",
+          "domain",
+          "type",
+          "code",
+          "description",
+          "status",
+          "reviewer",
+          "approved"
+        ],
+        "line_count": 11
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\proposals\\proposal_e0226133.json": {
+        "type": "json",
+        "keys": [
+          "hash",
+          "timestamp",
+          "domain",
+          "type",
+          "code",
+          "description",
+          "status",
+          "reviewer",
+          "approved"
+        ],
+        "line_count": 11
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\proposals\\proposal_e14e6465.json": {
+        "type": "json",
+        "keys": [
+          "hash",
+          "timestamp",
+          "domain",
+          "type",
+          "code",
+          "description",
+          "status",
+          "reviewer",
+          "approved"
+        ],
+        "line_count": 11
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\proposals\\proposal_e74d8d58.json": {
+        "type": "json",
+        "keys": [
+          "hash",
+          "timestamp",
+          "domain",
+          "type",
+          "code",
+          "description",
+          "status",
+          "reviewer",
+          "approved"
+        ],
+        "line_count": 11
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\seeds\\068ed992f3cd071f.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "original_size",
+          "compressed_size",
+          "compression_ratio",
+          "codec",
+          "created_at",
+          "data_type"
+        ],
+        "line_count": 9
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\seeds\\13fb58f350db6889.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "original_size",
+          "compressed_size",
+          "compression_ratio",
+          "codec",
+          "created_at",
+          "data_type"
+        ],
+        "line_count": 9
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\seeds\\145fd9881cf97850.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "original_size",
+          "compressed_size",
+          "compression_ratio",
+          "codec",
+          "created_at",
+          "data_type"
+        ],
+        "line_count": 9
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\seeds\\151a1376d8578740.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "original_size",
+          "compressed_size",
+          "compression_ratio",
+          "codec",
+          "created_at",
+          "data_type"
+        ],
+        "line_count": 9
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\seeds\\1a0b7445bdacefa1.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "original_size",
+          "compressed_size",
+          "compression_ratio",
+          "codec",
+          "created_at",
+          "data_type"
+        ],
+        "line_count": 9
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\seeds\\3530f27e663f2fb7.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "original_size",
+          "compressed_size",
+          "compression_ratio",
+          "codec",
+          "created_at",
+          "data_type"
+        ],
+        "line_count": 9
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\seeds\\40e7518f7db063a1.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "original_size",
+          "compressed_size",
+          "compression_ratio",
+          "codec",
+          "created_at",
+          "data_type"
+        ],
+        "line_count": 9
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\seeds\\4beb1a6bda333c0b.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "original_size",
+          "compressed_size",
+          "compression_ratio",
+          "codec",
+          "created_at",
+          "data_type"
+        ],
+        "line_count": 9
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\seeds\\528a5c8fad58a0a7.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "original_size",
+          "compressed_size",
+          "compression_ratio",
+          "codec",
+          "created_at",
+          "data_type"
+        ],
+        "line_count": 9
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\seeds\\55390ef6df774a3a.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "original_size",
+          "compressed_size",
+          "compression_ratio",
+          "codec",
+          "created_at",
+          "data_type"
+        ],
+        "line_count": 9
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\seeds\\587976561ccb53f3.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "original_size",
+          "compressed_size",
+          "compression_ratio",
+          "codec",
+          "created_at",
+          "data_type"
+        ],
+        "line_count": 9
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\seeds\\5a93226e099d9adc.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "original_size",
+          "compressed_size",
+          "compression_ratio",
+          "codec",
+          "created_at",
+          "data_type"
+        ],
+        "line_count": 9
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\seeds\\60cb24af5c6095be.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "original_size",
+          "compressed_size",
+          "compression_ratio",
+          "codec",
+          "created_at",
+          "data_type"
+        ],
+        "line_count": 9
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\seeds\\6cf549cbbb7b9972.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "original_size",
+          "compressed_size",
+          "compression_ratio",
+          "codec",
+          "created_at",
+          "data_type"
+        ],
+        "line_count": 9
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\seeds\\7133108af4ad51d6.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "original_size",
+          "compressed_size",
+          "compression_ratio",
+          "codec",
+          "created_at",
+          "data_type"
+        ],
+        "line_count": 9
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\seeds\\715568a945555724.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "original_size",
+          "compressed_size",
+          "compression_ratio",
+          "codec",
+          "created_at",
+          "data_type"
+        ],
+        "line_count": 9
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\seeds\\77972b70c33a2998.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "original_size",
+          "compressed_size",
+          "compression_ratio",
+          "codec",
+          "created_at",
+          "data_type"
+        ],
+        "line_count": 9
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\seeds\\7c6f028a13c9f3f1.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "original_size",
+          "compressed_size",
+          "compression_ratio",
+          "codec",
+          "created_at",
+          "data_type"
+        ],
+        "line_count": 9
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\seeds\\832d221ebca74f61.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "original_size",
+          "compressed_size",
+          "compression_ratio",
+          "codec",
+          "created_at",
+          "data_type"
+        ],
+        "line_count": 9
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\seeds\\83c8823f5313fc71.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "original_size",
+          "compressed_size",
+          "compression_ratio",
+          "codec",
+          "created_at",
+          "data_type"
+        ],
+        "line_count": 9
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\seeds\\89b7dc8271858982.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "original_size",
+          "compressed_size",
+          "compression_ratio",
+          "codec",
+          "created_at",
+          "data_type"
+        ],
+        "line_count": 9
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\seeds\\a404204b3cb98ffe.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "original_size",
+          "compressed_size",
+          "compression_ratio",
+          "codec",
+          "created_at",
+          "data_type"
+        ],
+        "line_count": 9
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\seeds\\afcc8209ea46c2d6.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "original_size",
+          "compressed_size",
+          "compression_ratio",
+          "codec",
+          "created_at",
+          "data_type"
+        ],
+        "line_count": 9
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\seeds\\b34c0f3a43f6a4c6.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "original_size",
+          "compressed_size",
+          "compression_ratio",
+          "codec",
+          "created_at",
+          "data_type"
+        ],
+        "line_count": 9
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\seeds\\b531a915a914ed53.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "original_size",
+          "compressed_size",
+          "compression_ratio",
+          "codec",
+          "created_at",
+          "data_type"
+        ],
+        "line_count": 9
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\seeds\\bd4b7f7ab8dfd4d3.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "original_size",
+          "compressed_size",
+          "compression_ratio",
+          "codec",
+          "created_at",
+          "data_type"
+        ],
+        "line_count": 9
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\seeds\\c137c16f64568bb2.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "original_size",
+          "compressed_size",
+          "compression_ratio",
+          "codec",
+          "created_at",
+          "data_type"
+        ],
+        "line_count": 9
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\seeds\\cec987079e3319b7.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "original_size",
+          "compressed_size",
+          "compression_ratio",
+          "codec",
+          "created_at",
+          "data_type"
+        ],
+        "line_count": 9
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\seeds\\d114ce1278bd7049.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "original_size",
+          "compressed_size",
+          "compression_ratio",
+          "codec",
+          "created_at",
+          "data_type"
+        ],
+        "line_count": 9
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\seeds\\d15572c2a1fa76b5.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "original_size",
+          "compressed_size",
+          "compression_ratio",
+          "codec",
+          "created_at",
+          "data_type"
+        ],
+        "line_count": 9
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\seeds\\d3af4d4eaa0b7133.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "original_size",
+          "compressed_size",
+          "compression_ratio",
+          "codec",
+          "created_at",
+          "data_type"
+        ],
+        "line_count": 9
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\seeds\\d3b3b476f769a64a.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "original_size",
+          "compressed_size",
+          "compression_ratio",
+          "codec",
+          "created_at",
+          "data_type"
+        ],
+        "line_count": 9
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\seeds\\d3e8efabbdef94a3.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "original_size",
+          "compressed_size",
+          "compression_ratio",
+          "codec",
+          "created_at",
+          "data_type"
+        ],
+        "line_count": 9
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\seeds\\f20cbdc4280ae875.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "original_size",
+          "compressed_size",
+          "compression_ratio",
+          "codec",
+          "created_at",
+          "data_type"
+        ],
+        "line_count": 9
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\seeds\\f4f38d3bf056d750.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "original_size",
+          "compressed_size",
+          "compression_ratio",
+          "codec",
+          "created_at",
+          "data_type"
+        ],
+        "line_count": 9
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\seeds\\f9e3b7343c66a051.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "original_size",
+          "compressed_size",
+          "compression_ratio",
+          "codec",
+          "created_at",
+          "data_type"
+        ],
+        "line_count": 9
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\safety\\audit\\safety_audit.json": {
+        "type": "json",
+        "keys": [],
+        "line_count": 1649
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141101\\domain\\astronomy.py": {
+        "type": "python",
+        "imports": [
+          "numpy",
+          "pandas",
+          "typing.Dict",
+          "typing.List",
+          "typing.Optional",
+          "typing.Tuple",
+          "typing.Any",
+          "logging",
+          "datetime.datetime"
+        ],
+        "functions": [
+          {
+            "name": "ensure_json_serializable",
+            "line": 37,
+            "args": [
+              "obj"
+            ]
+          },
+          {
+            "name": "create_truth_table",
+            "line": 55,
+            "args": [
+              "test_name",
+              "pass_fail",
+              "metrics",
+              "evidence",
+              "falsification_notes"
+            ]
+          },
+          {
+            "name": "stellar_evolution_analysis",
+            "line": 75,
+            "args": [
+              "stellar_data"
+            ]
+          },
+          {
+            "name": "exoplanet_detection_analysis",
+            "line": 153,
+            "args": [
+              "exoplanet_data"
+            ]
+          },
+          {
+            "name": "cosmic_phenomena_analysis",
+            "line": 231,
+            "args": [
+              "cosmic_data"
+            ]
+          },
+          {
+            "name": "galactic_structure_analysis",
+            "line": 306,
+            "args": [
+              "galactic_data"
+            ]
+          },
+          {
+            "name": "get_astronomy_functions",
+            "line": 382,
+            "args": []
+          },
+          {
+            "name": "run_astronomy_test_battery",
+            "line": 392,
+            "args": [
+              "test_data_dir"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 472
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141101\\domain\\bio.py": {
+        "type": "python",
+        "imports": [
+          "os",
+          "sys",
+          "json",
+          "yaml",
+          "numpy",
+          "pandas",
+          "datetime.datetime",
+          "pathlib.Path",
+          "typing.Dict",
+          "typing.List",
+          "typing.Optional",
+          "typing.Tuple",
+          "typing.Any",
+          "logging",
+          "Bio.SeqIO",
+          "Bio.Seq.Seq",
+          "Bio.SeqUtils.molecular_weight",
+          "matplotlib.pyplot"
+        ],
+        "functions": [
+          {
+            "name": "ensure_json_serializable",
+            "line": 47,
+            "args": [
+              "obj"
+            ]
+          },
+          {
+            "name": "create_truth_table",
+            "line": 65,
+            "args": [
+              "test_name",
+              "pass_fail",
+              "metrics",
+              "evidence",
+              "falsification_notes"
+            ]
+          },
+          {
+            "name": "enzyme_sequence_analysis",
+            "line": 85,
+            "args": [
+              "fasta_file"
+            ]
+          },
+          {
+            "name": "enzyme_structure_validation",
+            "line": 218,
+            "args": [
+              "pdb_file"
+            ]
+          },
+          {
+            "name": "enzyme_mutation_analysis",
+            "line": 331,
+            "args": [
+              "wild_type_fasta",
+              "mutant_fasta"
+            ]
+          },
+          {
+            "name": "enzyme_activity_prediction",
+            "line": 451,
+            "args": [
+              "sequence_data",
+              "structure_data"
+            ]
+          },
+          {
+            "name": "get_enzyme_functions",
+            "line": 574,
+            "args": []
+          },
+          {
+            "name": "run_enzyme_test_battery",
+            "line": 579,
+            "args": [
+              "test_data_dir"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 663
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141101\\domain\\chemistry.py": {
+        "type": "python",
+        "imports": [
+          "numpy",
+          "pandas",
+          "typing.Dict",
+          "typing.List",
+          "typing.Optional",
+          "typing.Tuple",
+          "typing.Any",
+          "logging",
+          "datetime.datetime"
+        ],
+        "functions": [
+          {
+            "name": "ensure_json_serializable",
+            "line": 32,
+            "args": [
+              "obj"
+            ]
+          },
+          {
+            "name": "create_truth_table",
+            "line": 50,
+            "args": [
+              "test_name",
+              "pass_fail",
+              "metrics",
+              "evidence",
+              "falsification_notes"
+            ]
+          },
+          {
+            "name": "molecular_property_analysis",
+            "line": 70,
+            "args": [
+              "molecular_data"
+            ]
+          },
+          {
+            "name": "reaction_kinetics_analysis",
+            "line": 135,
+            "args": [
+              "kinetic_data"
+            ]
+          },
+          {
+            "name": "equilibrium_analysis",
+            "line": 203,
+            "args": [
+              "equilibrium_data"
+            ]
+          },
+          {
+            "name": "chemical_synthesis_analysis",
+            "line": 265,
+            "args": [
+              "synthesis_data"
+            ]
+          },
+          {
+            "name": "get_chemistry_functions",
+            "line": 326,
+            "args": []
+          },
+          {
+            "name": "run_chemistry_test_battery",
+            "line": 336,
+            "args": [
+              "test_data_dir"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 414
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141101\\domain\\climate.py": {
+        "type": "python",
+        "imports": [
+          "numpy",
+          "pandas",
+          "typing.Dict",
+          "typing.Any",
+          "typing.Tuple",
+          "scipy.stats",
+          "scipy.signal.detrend",
+          "statsmodels.tsa.seasonal.seasonal_decompose",
+          "statsmodels.tsa.stattools.adfuller",
+          "warnings",
+          "scipy.stats.kendalltau"
+        ],
+        "functions": [
+          {
+            "name": "ensure_json_serializable",
+            "line": 36,
+            "args": [
+              "obj"
+            ]
+          },
+          {
+            "name": "create_truth_table",
+            "line": 54,
+            "args": [
+              "test_name",
+              "pass_fail",
+              "metrics",
+              "evidence",
+              "falsification_notes"
+            ]
+          },
+          {
+            "name": "climate_trend_analysis",
+            "line": 72,
+            "args": [
+              "data"
+            ]
+          },
+          {
+            "name": "climate_change_detection",
+            "line": 276,
+            "args": [
+              "data"
+            ]
+          },
+          {
+            "name": "seasonal_climate_analysis",
+            "line": 419,
+            "args": [
+              "data"
+            ]
+          },
+          {
+            "name": "get_climate_functions",
+            "line": 568,
+            "args": []
+          }
+        ],
+        "classes": [],
+        "line_count": 574
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141101\\domain\\coding.py": {
+        "type": "python",
+        "imports": [
+          "numpy",
+          "hashlib",
+          "sys",
+          "platform",
+          "typing.Dict",
+          "typing.Any",
+          "typing.Optional",
+          "warnings",
+          "sklearn.model_selection.train_test_split",
+          "sklearn.ensemble.RandomForestClassifier",
+          "sklearn.metrics.accuracy_score"
+        ],
+        "functions": [
+          {
+            "name": "coding_bulletproof_test",
+            "line": 23,
+            "args": [
+              "data"
+            ]
+          },
+          {
+            "name": "get_coding_tests",
+            "line": 129,
+            "args": []
+          }
+        ],
+        "classes": [],
+        "line_count": 133
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141101\\domain\\coding_agentic.py": {
+        "type": "python",
+        "imports": [
+          "os",
+          "sys",
+          "tempfile",
+          "subprocess",
+          "hashlib",
+          "json",
+          "shutil",
+          "datetime.datetime",
+          "typing.Dict",
+          "typing.Any",
+          "typing.List",
+          "typing.Optional",
+          "numpy",
+          "warnings"
+        ],
+        "functions": [
+          {
+            "name": "coding_agentic_test",
+            "line": 36,
+            "args": [
+              "data"
+            ]
+          },
+          {
+            "name": "_generate_analysis_code",
+            "line": 131,
+            "args": [
+              "data",
+              "temp_dir"
+            ]
+          },
+          {
+            "name": "_execute_sandboxed",
+            "line": 241,
+            "args": [
+              "temp_dir",
+              "code_file",
+              "data_file"
+            ]
+          },
+          {
+            "name": "_verify_reproducibility",
+            "line": 311,
+            "args": [
+              "temp_dir",
+              "code_hash",
+              "data_hash",
+              "execution_result"
+            ]
+          },
+          {
+            "name": "_generate_audit_trail",
+            "line": 348,
+            "args": [
+              "workspace_hash",
+              "code_hash",
+              "data_hash",
+              "execution_result"
+            ]
+          },
+          {
+            "name": "_verify_anti_tamper",
+            "line": 379,
+            "args": [
+              "temp_dir",
+              "execution_result"
+            ]
+          },
+          {
+            "name": "get_coding_agentic_tests",
+            "line": 418,
+            "args": []
+          }
+        ],
+        "classes": [],
+        "line_count": 422
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141101\\domain\\math.py": {
+        "type": "python",
+        "imports": [
+          "numpy",
+          "typing.Dict",
+          "typing.Any",
+          "typing.List",
+          "typing.Tuple",
+          "typing.Callable",
+          "typing.Optional",
+          "typing.Union",
+          "pydantic.BaseModel",
+          "pydantic.Field",
+          "warnings",
+          "json",
+          "pathlib.Path",
+          "hashlib",
+          "datetime",
+          "sympy.satisfiable",
+          "sympy.to_cnf",
+          "sympy.Symbol",
+          "sympy.parsing.sympy_parser.parse_expr",
+          "sympy.sympify",
+          "sympy.SympifyError",
+          "sympy.Expr",
+          "sympy.sympify"
+        ],
+        "functions": [
+          {
+            "name": "check_numerical_robustness",
+            "line": 118,
+            "args": [
+              "func",
+              "grid",
+              "tol"
+            ]
+          },
+          {
+            "name": "verify_theorem",
+            "line": 174,
+            "args": [
+              "hypotheses",
+              "conclusion",
+              "symbols"
+            ]
+          },
+          {
+            "name": "symbolic_validation",
+            "line": 239,
+            "args": [
+              "data"
+            ]
+          },
+          {
+            "name": "numerical_robustness_analysis",
+            "line": 312,
+            "args": [
+              "data"
+            ]
+          },
+          {
+            "name": "proof_verification",
+            "line": 397,
+            "args": [
+              "data"
+            ]
+          },
+          {
+            "name": "get_math_tests",
+            "line": 446,
+            "args": []
+          },
+          {
+            "name": "validate",
+            "line": 35,
+            "args": [
+              "self"
+            ]
+          }
+        ],
+        "classes": [
+          {
+            "name": "SymbolicValidator",
+            "line": 27,
+            "methods": [
+              "validate"
+            ]
+          },
+          {
+            "name": "SymbolicReport",
+            "line": 98,
+            "methods": []
+          },
+          {
+            "name": "NumericRobustnessReport",
+            "line": 108,
+            "methods": []
+          },
+          {
+            "name": "ProofReport",
+            "line": 165,
+            "methods": []
+          }
+        ],
+        "line_count": 452
+      }
+    }
+  },
+  "estimated_tokens": 1170.0,
+  "related_chunks": [
+    "v5_core_systems",
+    "legacy_v1_v4_systems"
+  ]
+}

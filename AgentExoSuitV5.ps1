@@ -244,10 +244,10 @@ function Initialize-V5DeepSpeedLayer {
         if (Test-Path $V5Module) {
             Write-Log "DeepSpeed Accelerator V5.0 found - initializing..." "INFO"
             
-            $DeepSpeedResult = & $V5Module -Mode "Initialize" `
-                -EnableGDS:$EnableDeepSpeedGDS `
-                -EnableMonitoring:$EnableDeepSpeedMonitoring `
-                -StagingBufferGB $DeepSpeedStagingBufferGB `
+            $DeepSpeedResult = & $V5Module -Mode "Initialize" 
+                -EnableGDS:$EnableDeepSpeedGDS 
+                -EnableMonitoring:$EnableDeepSpeedMonitoring 
+                -StagingBufferGB $DeepSpeedStagingBufferGB 
                 -NumStreams $DeepSpeedStreams
             
             $SystemStatus.Components.DeepSpeedAccelerator = $DeepSpeedResult -eq 0
@@ -305,7 +305,7 @@ function Validate-V5System {
         # Component status report
         Write-Log "Component Status Report:" "INFO"
         foreach ($Component in $SystemStatus.Components.GetEnumerator()) {
-            $StatusIcon = if ($Component.Value) { "✅" } else { "❌" }
+            $StatusIcon = if ($Component.Value) { "" } else { "" }
             Write-Log "  $StatusIcon $($Component.Key): $(if($Component.Value){'OK'}else{'FAILED'})" "INFO"
         }
         
@@ -313,7 +313,7 @@ function Validate-V5System {
         if ($SystemStatus.Performance.Count -gt 0) {
             Write-Log "Performance Report:" "INFO"
             foreach ($Perf in $SystemStatus.Performance.GetEnumerator()) {
-                Write-Log "  📊 $($Perf.Key): $($Perf.Value)" "INFO"
+                Write-Log "   $($Perf.Key): $($Perf.Value)" "INFO"
             }
         }
         

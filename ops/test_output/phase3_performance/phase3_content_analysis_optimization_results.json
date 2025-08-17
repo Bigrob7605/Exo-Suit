@@ -1,0 +1,50 @@
+{
+  "timestamp": 1755362958.8036666,
+  "test_type": "CONTENT_ANALYSIS_OPTIMIZATION_PHASE_2",
+  "files_processed": 50000,
+  "processing_time_seconds": 85.878,
+  "total_time_seconds": 85.878,
+  "speed_files_per_sec": 582.22,
+  "baseline_speed": 7893,
+  "improvement_percent": -92.62,
+  "target_speed": 10000,
+  "target_achieved": false,
+  "phase_1_completed": false,
+  "phase_2_success": false,
+  "optimizations_applied": [
+    "Parallel content parsing",
+    "Intelligent result caching",
+    "Advanced regex optimization",
+    "File-type specific processors",
+    "Streaming large file processing",
+    "GPU batch operations",
+    "Incremental content analysis"
+  ],
+  "hardware_challenge": {
+    "workers_used": 20,
+    "cpu_cores": 16,
+    "gpu_available": true,
+    "gpu_device": "cuda"
+  },
+  "content_analysis": {
+    "total_content_size_bytes": 852190005,
+    "file_types_processed": {
+      "json": 2458,
+      "log": 29,
+      "python": 45928,
+      "markdown": 482,
+      "text": 722,
+      "unknown": 376
+    },
+    "average_file_size_bytes": 17043.8,
+    "cache_hits": "Enabled",
+    "parallel_parsing": "Enabled"
+  },
+  "performance_metrics": {
+    "files_per_second": 582.22,
+    "megabytes_per_second": 9.46,
+    "efficiency_score": 7.38,
+    "phase_1_target_achieved": false,
+    "phase_2_target_achieved": false
+  }
+}

@@ -44,22 +44,22 @@ $ValidationRules = @{
     "python" = @{
         "class_pattern" = 'class\s+(\w+)'
         "function_pattern" = 'def\s+(\w+)\s*\('
-        "import_pattern" = '^import\s+(\w+)|^from\s+(\w+)\s+import'
+        "import_pattern" = 'import\s+(\w+)|from\s+(\w+)\s+import'
         "docstring_pattern" = '"""(.*?)"""|''''''(.*?)'''''''
         "comment_pattern" = '#\s*(.+)'
     }
     "powershell" = @{
         "function_pattern" = 'function\s+(\w+)'
-        "param_pattern" = 'param\s*\(([^)]+)\)'
+        "param_pattern" = 'param\s*\(([)]+)\)'
         "comment_pattern" = '#\s*(.+)|<#(.+?)#>'
         "help_pattern" = '\.SYNOPSIS|\.DESCRIPTION|\.PARAMETER|\.EXAMPLE'
     }
     "javascript" = @{
         "class_pattern" = 'class\s+(\w+)'
-        "function_pattern" = 'function\s+(\w+)|(\w+)\s*[:=]\s*function|(\w+)\s*[:=]\s*\([^)]*\)\s*=>'
-        "import_pattern" = '^import\s+.*from|^const\s+\w+\s*=\s*require|^require\s*\('
-        "comment_pattern" = '//\s*(.+)|/\*([^*]+)\*/'
-        "jsdoc_pattern" = '/\*\*([^*]+)\*/'
+        "function_pattern" = 'function\s+(\w+)|(\w+)\s*[:=]\s*function|(\w+)\s*[:=]\s*\([)]*\)\s*=>'
+        "import_pattern" = 'import\s+.*from|const\s+\w+\s*=\s*require|require\s*\('
+        "comment_pattern" = '//\s*(.+)|/\*([*]+)\*/'
+        "jsdoc_pattern" = '/\*\*([*]+)\*/'
     }
 }
 
@@ -187,7 +187,7 @@ function Analyze-CodeFile {
             FilePath = $File.FullName
             Language = $language
             FileSize = $File.Length
-            LineCount = ($content -split "`n").Count
+            LineCount = ($content -split "n").Count
             CharacterCount = $content.Length
             LastModified = $File.LastWriteTime
         }
@@ -252,24 +252,24 @@ function Analyze-DocumentationFile {
             FileName = $File.Name
             FilePath = $File.FullName
             FileSize = $File.Length
-            LineCount = ($content -split "`n").Count
+            LineCount = ($content -split "n").Count
             CharacterCount = $content.Length
             LastModified = $File.LastWriteTime
         }
         
         # Extract title
-        $titleMatch = [regex]::Match($content, '^#\s+(.+)$', [System.Text.RegularExpressions.RegexOptions]::Multiline)
+        $titleMatch = [regex]::Match($content, '#\s+(.+)$', [System.Text.RegularExpressions.RegexOptions]::Multiline)
         if ($titleMatch.Success) {
             $analysis.Title = $titleMatch.Groups[1].Value.Trim()
         }
         
         # Extract headers
-        $headers = [regex]::Matches($content, '^#{1,6}\s+(.+)$', [System.Text.RegularExpressions.RegexOptions]::Multiline)
+        $headers = [regex]::Matches($content, '#{1,6}\s+(.+)$', [System.Text.RegularExpressions.RegexOptions]::Multiline)
         $analysis.Headers = $headers | ForEach-Object { $_.Groups[1].Value.Trim() }
         $analysis.HeaderCount = $headers.Count
         
         # Extract code blocks
-        $codeBlocks = [regex]::Matches($content, '```[\w]*\n(.*?)\n```', [System.Text.RegularExpressions.RegexOptions]::Singleline)
+        $codeBlocks = [regex]::Matches($content, '[\w]*\n(.*?)\n', [System.Text.RegularExpressions.RegexOptions]::Singleline)
         $analysis.CodeBlocks = $codeBlocks | ForEach-Object { $_.Groups[1].Value.Trim() }
         $analysis.CodeBlockCount = $codeBlocks.Count
         
@@ -446,7 +446,7 @@ function Generate-TestCases {
                 $testContent = ""
                 
                 # Extract function name and description
-                $funcName = [regex]::Match($funcDesc, '^(\w+)').Groups[1].Value
+                $funcName = [regex]::Match($funcDesc, '(\w+)').Groups[1].Value
                 $description = $funcDesc.Trim()
                 
                 # Generate test based on language
@@ -569,7 +569,7 @@ function Generate-ValidationReport {
 ## Executive Summary
 
 **Overall Score**: $($Validation.OverallScore)%  
-**Status**: $(if ($Validation.OverallScore -ge 80) { "✅ GOOD" } elseif ($Validation.OverallScore -ge 60) { "⚠️ FAIR" } else { "❌ POOR" })  
+**Status**: $(if ($Validation.OverallScore -ge 80) { " GOOD" } elseif ($Validation.OverallScore -ge 60) { " FAIR" } else { " POOR" })  
 **Checks Passed**: $($Validation.PassedChecks)/$($Validation.TotalChecks)  
 
 ## Code Analysis
@@ -593,10 +593,10 @@ function Generate-ValidationReport {
 
     if ($Validation.Issues.Count -gt 0) {
         foreach ($issue in $Validation.Issues) {
-            $report += "`n- $issue"
+            $report += "n- $issue"
         }
     } else {
-        $report += "`n- No issues found - excellent consistency!"
+        $report += "n- No issues found - excellent consistency!"
     }
     
     $report += @"
@@ -606,10 +606,10 @@ function Generate-ValidationReport {
 
     if ($Validation.Recommendations.Count -gt 0) {
         foreach ($rec in $Validation.Recommendations) {
-            $report += "`n- $rec"
+            $report += "n- $rec"
         }
     } else {
-        $report += "`n- No recommendations - system is well-maintained!"
+        $report += "n- No recommendations - system is well-maintained!"
     }
     
     if ($TestCases.Count -gt 0) {
@@ -626,7 +626,7 @@ function Generate-ValidationReport {
 "@
         
         foreach ($test in $TestCases) {
-            $report += "`n| $($test.FileName) | $($test.FunctionName) | $($test.Description) |"
+            $report += "n| $($test.FileName) | $($test.FunctionName) | $($test.Description) |"
         }
         
         if ($TestResults) {
@@ -635,7 +635,7 @@ function Generate-ValidationReport {
 ## Test Execution Results
 
 **Tests Passed**: $($TestResults.Summary.PassedTests)/$($TestResults.Summary.TotalTests)  
-**Status**: $(if ($TestResults.Success) { "✅ SUCCESS" } else { "❌ FAILED" })  
+**Status**: $(if ($TestResults.Success) { " SUCCESS" } else { " FAILED" })  
 
 ### Test Results
 | Test File | Status | Message |
@@ -643,7 +643,7 @@ function Generate-ValidationReport {
 "@
             
             foreach ($result in $TestResults.Results) {
-                $report += "`n| $($result.FileName) | $($result.Status) | $($result.Message) |"
+                $report += "n| $($result.FileName) | $($result.Status) | $($result.Message) |"
             }
         }
     }
@@ -658,7 +658,7 @@ function Generate-ValidationReport {
 "@
 
     foreach ($codeFile in $CodeAnalyses) {
-        $report += "`n| $($codeFile.FileName) | $($codeFile.Language) | $($codeFile.FunctionCount) | $($codeFile.ClassCount) | $($codeFile.ImportCount) |"
+        $report += "n| $($codeFile.FileName) | $($codeFile.Language) | $($codeFile.FunctionCount) | $($codeFile.ClassCount) | $($codeFile.ImportCount) |"
     }
     
     $report += @"
@@ -669,7 +669,7 @@ function Generate-ValidationReport {
 "@
 
     foreach ($docFile in $DocAnalyses) {
-        $report += "`n| $($docFile.FileName) | $($docFile.HeaderCount) | $($docFile.RequirementCount) | $($docFile.FunctionDescriptionCount) |"
+        $report += "n| $($docFile.FileName) | $($docFile.HeaderCount) | $($docFile.RequirementCount) | $($docFile.FunctionDescriptionCount) |"
     }
     
     $report += @"
@@ -834,7 +834,7 @@ if ($MyInvocation.InvocationName -ne ".") {
     $results = Main
     
     if ($results) {
-        Write-Host "`nTruth Validation Complete!" -ForegroundColor Green
+        Write-Host "nTruth Validation Complete!" -ForegroundColor Green
         Write-Host "Code Files Analyzed: $($results.Summary.CodeFilesAnalyzed)" -ForegroundColor Cyan
         Write-Host "Documentation Files Analyzed: $($results.Summary.DocFilesAnalyzed)" -ForegroundColor Cyan
         Write-Host "Validation Score: $($results.Summary.ValidationScore)%" -ForegroundColor $(if ($results.Summary.ValidationScore -ge 80) { 'Green' } elseif ($results.Summary.ValidationScore -ge 60) { 'Yellow' } else { 'Red' })
@@ -842,10 +842,10 @@ if ($MyInvocation.InvocationName -ne ".") {
         Write-Host "Tests Passed: $($results.Summary.TestsPassed)/$($results.Summary.TestsPassed + $results.Summary.TestsFailed)" -ForegroundColor $(if ($results.Summary.TestsFailed -eq 0) { 'Green' } else { 'Yellow' })
         
         if ($results.ReportFile) {
-            Write-Host "`nValidation report generated: $($results.ReportFile)" -ForegroundColor Green
+            Write-Host "nValidation report generated: $($results.ReportFile)" -ForegroundColor Green
         }
         
-        Write-Host "`nValidation results are in: $OutputPath" -ForegroundColor Green
+        Write-Host "nValidation results are in: $OutputPath" -ForegroundColor Green
     } else {
         Write-Host "Truth validation failed!" -ForegroundColor Red
         exit 1

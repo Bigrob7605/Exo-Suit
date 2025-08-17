@@ -235,7 +235,7 @@ function Parse-MarkdownSpecification {
         }
         
         # Extract title
-        $titleMatch = [regex]::Match($content, '^#\s+(.+)$', [System.Text.RegularExpressions.RegexOptions]::Multiline)
+        $titleMatch = [regex]::Match($content, '#\s+(.+)$', [System.Text.RegularExpressions.RegexOptions]::Multiline)
         if ($titleMatch.Success) {
             $spec.Title = $titleMatch.Groups[1].Value.Trim()
         }
@@ -256,7 +256,7 @@ function Parse-MarkdownSpecification {
         $classMatches = [regex]::Matches($content, '###\s*Class:\s*(.+?)(?=\n###|\n##|\n$)', [System.Text.RegularExpressions.RegexOptions]::Singleline)
         foreach ($match in $classMatches) {
             $classContent = $match.Groups[1].Value.Trim()
-            $className = [regex]::Match($classContent, '^(.+?)(?:\n|$)').Groups[1].Value.Trim()
+            $className = [regex]::Match($classContent, '(.+?)(?:\n|$)').Groups[1].Value.Trim()
             $spec.Classes += @{
                 Name = $className
                 Content = $classContent
@@ -267,7 +267,7 @@ function Parse-MarkdownSpecification {
         $funcMatches = [regex]::Matches($content, '###\s*Function:\s*(.+?)(?=\n###|\n##|\n$)', [System.Text.RegularExpressions.RegexOptions]::Singleline)
         foreach ($match in $funcMatches) {
             $funcContent = $match.Groups[1].Value.Trim()
-            $funcName = [regex]::Match($funcContent, '^(.+?)(?:\n|$)').Groups[1].Value.Trim()
+            $funcName = [regex]::Match($funcContent, '(.+?)(?:\n|$)').Groups[1].Value.Trim()
             $spec.Functions += @{
                 Name = $funcName
                 Content = $funcContent
@@ -329,7 +329,7 @@ function Generate-CodeFromSpec {
             $classCode = $classCode -replace "{Description}", $class.Content
             $classCode = $classCode -replace "{ConstructorParams}", ""
             $classCode = $classCode -replace "{ConstructorBody}", "        pass"
-            $classCode = $classCode -replace "{Methods}", "    def example_method(self):`n        pass"
+            $classCode = $classCode -replace "{Methods}", "    def example_method(self):n        pass"
             
             $generatedCode += @{
                 FileName = $class.Name + "." + (Get-FileExtension $Language)
@@ -589,7 +589,7 @@ function Generate-BuildReport {
 
 ## Build Summary
 
-**Status**: $(if ($Validation.Valid) { "✅ SUCCESS" } else { "❌ FAILED" })  
+**Status**: $(if ($Validation.Valid) { " SUCCESS" } else { " FAILED" })  
 **Files Generated**: $($GeneratedCode.Count)  
 **Test Files**: $($TestFiles.Count)  
 **Validation**: $(if ($Validation.Valid) { "PASSED" } else { "FAILED" })  
@@ -609,7 +609,7 @@ function Generate-BuildReport {
 "@
 
     foreach ($codeFile in $GeneratedCode) {
-        $report += "`n| $($codeFile.FileName) | $($codeFile.Type) | $([math]::Round($codeFile.Content.Length/1KB, 1))KB |"
+        $report += "n| $($codeFile.FileName) | $($codeFile.Type) | $([math]::Round($codeFile.Content.Length/1KB, 1))KB |"
     }
     
     if ($TestFiles.Count -gt 0) {
@@ -621,7 +621,7 @@ function Generate-BuildReport {
 |------|------|------|
 "@
         foreach ($testFile in $TestFiles) {
-            $report += "`n| $($testFile.FileName) | $($testFile.Type) | $([math]::Round($testFile.Size/1KB, 1))KB |"
+            $report += "n| $($testFile.FileName) | $($testFile.Type) | $([math]::Round($testFile.Size/1KB, 1))KB |"
         }
     }
     
@@ -632,9 +632,9 @@ function Generate-BuildReport {
 
 "@
         foreach ($issue in $Validation.Issues) {
-            $report += "`n### $($issue.FileName)`n"
+            $report += "n### $($issue.FileName)n"
             foreach ($problem in $issue.Issues) {
-                $report += "- $problem`n"
+                $report += "- $problemn"
             }
         }
     }
@@ -760,16 +760,16 @@ if ($MyInvocation.InvocationName -ne ".") {
     $results = Main
     
     if ($results) {
-        Write-Host "`nCode Generation Complete!" -ForegroundColor Green
+        Write-Host "nCode Generation Complete!" -ForegroundColor Green
         Write-Host "Files Generated: $($results.Summary.FilesGenerated)" -ForegroundColor Cyan
         Write-Host "Test Files: $($results.Summary.TestFilesGenerated)" -ForegroundColor Cyan
         Write-Host "Validation: $(if ($results.Summary.ValidationPassed) { 'PASSED' } else { 'FAILED' })" -ForegroundColor $(if ($results.Summary.ValidationPassed) { 'Green' } else { 'Red' })
         
         if ($results.ReportFile) {
-            Write-Host "`nBuild report generated: $($results.ReportFile)" -ForegroundColor Green
+            Write-Host "nBuild report generated: $($results.ReportFile)" -ForegroundColor Green
         }
         
-        Write-Host "`nGenerated files are in: $OutputPath" -ForegroundColor Green
+        Write-Host "nGenerated files are in: $OutputPath" -ForegroundColor Green
     } else {
         Write-Host "Code generation failed!" -ForegroundColor Red
         exit 1

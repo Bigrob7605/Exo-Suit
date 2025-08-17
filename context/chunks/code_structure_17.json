@@ -1,0 +1,590 @@
+{
+  "chunk_type": "code_samples",
+  "chunk_id": "code_structure_17",
+  "title": "Code Structure Analysis - Part 17",
+  "description": "Code analysis for files 801-841",
+  "content": {
+    "files_analyzed": [
+      "context\\chunks\\code_structure_66.json",
+      "context\\chunks\\code_structure_67.json",
+      "context\\chunks\\code_structure_68.json",
+      "context\\chunks\\code_structure_69.json",
+      "context\\chunks\\code_structure_7.json",
+      "context\\chunks\\code_structure_70.json",
+      "context\\chunks\\code_structure_71.json",
+      "context\\chunks\\code_structure_72.json",
+      "context\\chunks\\code_structure_73.json",
+      "context\\chunks\\code_structure_74.json",
+      "context\\chunks\\code_structure_75.json",
+      "context\\chunks\\code_structure_76.json",
+      "context\\chunks\\code_structure_77.json",
+      "context\\chunks\\code_structure_78.json",
+      "context\\chunks\\code_structure_79.json",
+      "context\\chunks\\code_structure_8.json",
+      "context\\chunks\\code_structure_80.json",
+      "context\\chunks\\code_structure_81.json",
+      "context\\chunks\\code_structure_82.json",
+      "context\\chunks\\code_structure_83.json",
+      "context\\chunks\\code_structure_84.json",
+      "context\\chunks\\code_structure_85.json",
+      "context\\chunks\\code_structure_86.json",
+      "context\\chunks\\code_structure_87.json",
+      "context\\chunks\\code_structure_88.json",
+      "context\\chunks\\code_structure_89.json",
+      "context\\chunks\\code_structure_9.json",
+      "context\\chunks\\code_structure_90.json",
+      "context\\chunks\\code_structure_91.json",
+      "context\\chunks\\code_structure_92.json",
+      "context\\chunks\\code_structure_93.json",
+      "context\\chunks\\code_structure_94.json",
+      "context\\chunks\\code_structure_95.json",
+      "context\\chunks\\code_structure_96.json",
+      "context\\chunks\\code_structure_97.json",
+      "context\\chunks\\code_structure_98.json",
+      "context\\chunks\\code_structure_99.json",
+      "context\\chunks\\legacy_v1_v4_systems.json",
+      "context\\chunks\\NAVIGATION_INDEX.json",
+      "context\\chunks\\system_dependencies.json",
+      "context\\chunks\\system_overview.json"
+    ],
+    "structure_data": {
+      "context\\chunks\\code_structure_66.json": {
+        "type": "json",
+        "keys": [
+          "chunk_type",
+          "chunk_id",
+          "title",
+          "description",
+          "content",
+          "estimated_tokens",
+          "related_chunks"
+        ],
+        "line_count": 967
+      },
+      "context\\chunks\\code_structure_67.json": {
+        "type": "json",
+        "keys": [
+          "chunk_type",
+          "chunk_id",
+          "title",
+          "description",
+          "content",
+          "estimated_tokens",
+          "related_chunks"
+        ],
+        "line_count": 831
+      },
+      "context\\chunks\\code_structure_68.json": {
+        "type": "json",
+        "keys": [
+          "chunk_type",
+          "chunk_id",
+          "title",
+          "description",
+          "content",
+          "estimated_tokens",
+          "related_chunks"
+        ],
+        "line_count": 2137
+      },
+      "context\\chunks\\code_structure_69.json": {
+        "type": "json",
+        "keys": [
+          "chunk_type",
+          "chunk_id",
+          "title",
+          "description",
+          "content",
+          "estimated_tokens",
+          "related_chunks"
+        ],
+        "line_count": 4741
+      },
+      "context\\chunks\\code_structure_7.json": {
+        "type": "json",
+        "keys": [
+          "chunk_type",
+          "chunk_id",
+          "title",
+          "description",
+          "content",
+          "estimated_tokens",
+          "related_chunks"
+        ],
+        "line_count": 2775
+      },
+      "context\\chunks\\code_structure_70.json": {
+        "type": "json",
+        "keys": [
+          "chunk_type",
+          "chunk_id",
+          "title",
+          "description",
+          "content",
+          "estimated_tokens",
+          "related_chunks"
+        ],
+        "line_count": 2588
+      },
+      "context\\chunks\\code_structure_71.json": {
+        "type": "json",
+        "keys": [
+          "chunk_type",
+          "chunk_id",
+          "title",
+          "description",
+          "content",
+          "estimated_tokens",
+          "related_chunks"
+        ],
+        "line_count": 806
+      },
+      "context\\chunks\\code_structure_72.json": {
+        "type": "json",
+        "keys": [
+          "chunk_type",
+          "chunk_id",
+          "title",
+          "description",
+          "content",
+          "estimated_tokens",
+          "related_chunks"
+        ],
+        "line_count": 817
+      },
+      "context\\chunks\\code_structure_73.json": {
+        "type": "json",
+        "keys": [
+          "chunk_type",
+          "chunk_id",
+          "title",
+          "description",
+          "content",
+          "estimated_tokens",
+          "related_chunks"
+        ],
+        "line_count": 817
+      },
+      "context\\chunks\\code_structure_74.json": {
+        "type": "json",
+        "keys": [
+          "chunk_type",
+          "chunk_id",
+          "title",
+          "description",
+          "content",
+          "estimated_tokens",
+          "related_chunks"
+        ],
+        "line_count": 817
+      },
+      "context\\chunks\\code_structure_75.json": {
+        "type": "json",
+        "keys": [
+          "chunk_type",
+          "chunk_id",
+          "title",
+          "description",
+          "content",
+          "estimated_tokens",
+          "related_chunks"
+        ],
+        "line_count": 847
+      },
+      "context\\chunks\\code_structure_76.json": {
+        "type": "json",
+        "keys": [
+          "chunk_type",
+          "chunk_id",
+          "title",
+          "description",
+          "content",
+          "estimated_tokens",
+          "related_chunks"
+        ],
+        "line_count": 917
+      },
+      "context\\chunks\\code_structure_77.json": {
+        "type": "json",
+        "keys": [
+          "chunk_type",
+          "chunk_id",
+          "title",
+          "description",
+          "content",
+          "estimated_tokens",
+          "related_chunks"
+        ],
+        "line_count": 917
+      },
+      "context\\chunks\\code_structure_78.json": {
+        "type": "json",
+        "keys": [
+          "chunk_type",
+          "chunk_id",
+          "title",
+          "description",
+          "content",
+          "estimated_tokens",
+          "related_chunks"
+        ],
+        "line_count": 887
+      },
+      "context\\chunks\\code_structure_79.json": {
+        "type": "json",
+        "keys": [
+          "chunk_type",
+          "chunk_id",
+          "title",
+          "description",
+          "content",
+          "estimated_tokens",
+          "related_chunks"
+        ],
+        "line_count": 817
+      },
+      "context\\chunks\\code_structure_8.json": {
+        "type": "json",
+        "keys": [
+          "chunk_type",
+          "chunk_id",
+          "title",
+          "description",
+          "content",
+          "estimated_tokens",
+          "related_chunks"
+        ],
+        "line_count": 717
+      },
+      "context\\chunks\\code_structure_80.json": {
+        "type": "json",
+        "keys": [
+          "chunk_type",
+          "chunk_id",
+          "title",
+          "description",
+          "content",
+          "estimated_tokens",
+          "related_chunks"
+        ],
+        "line_count": 997
+      },
+      "context\\chunks\\code_structure_81.json": {
+        "type": "json",
+        "keys": [
+          "chunk_type",
+          "chunk_id",
+          "title",
+          "description",
+          "content",
+          "estimated_tokens",
+          "related_chunks"
+        ],
+        "line_count": 769
+      },
+      "context\\chunks\\code_structure_82.json": {
+        "type": "json",
+        "keys": [
+          "chunk_type",
+          "chunk_id",
+          "title",
+          "description",
+          "content",
+          "estimated_tokens",
+          "related_chunks"
+        ],
+        "line_count": 4182
+      },
+      "context\\chunks\\code_structure_83.json": {
+        "type": "json",
+        "keys": [
+          "chunk_type",
+          "chunk_id",
+          "title",
+          "description",
+          "content",
+          "estimated_tokens",
+          "related_chunks"
+        ],
+        "line_count": 3039
+      },
+      "context\\chunks\\code_structure_84.json": {
+        "type": "json",
+        "keys": [
+          "chunk_type",
+          "chunk_id",
+          "title",
+          "description",
+          "content",
+          "estimated_tokens",
+          "related_chunks"
+        ],
+        "line_count": 2064
+      },
+      "context\\chunks\\code_structure_85.json": {
+        "type": "json",
+        "keys": [
+          "chunk_type",
+          "chunk_id",
+          "title",
+          "description",
+          "content",
+          "estimated_tokens",
+          "related_chunks"
+        ],
+        "line_count": 817
+      },
+      "context\\chunks\\code_structure_86.json": {
+        "type": "json",
+        "keys": [
+          "chunk_type",
+          "chunk_id",
+          "title",
+          "description",
+          "content",
+          "estimated_tokens",
+          "related_chunks"
+        ],
+        "line_count": 817
+      },
+      "context\\chunks\\code_structure_87.json": {
+        "type": "json",
+        "keys": [
+          "chunk_type",
+          "chunk_id",
+          "title",
+          "description",
+          "content",
+          "estimated_tokens",
+          "related_chunks"
+        ],
+        "line_count": 817
+      },
+      "context\\chunks\\code_structure_88.json": {
+        "type": "json",
+        "keys": [
+          "chunk_type",
+          "chunk_id",
+          "title",
+          "description",
+          "content",
+          "estimated_tokens",
+          "related_chunks"
+        ],
+        "line_count": 817
+      },
+      "context\\chunks\\code_structure_89.json": {
+        "type": "json",
+        "keys": [
+          "chunk_type",
+          "chunk_id",
+          "title",
+          "description",
+          "content",
+          "estimated_tokens",
+          "related_chunks"
+        ],
+        "line_count": 883
+      },
+      "context\\chunks\\code_structure_9.json": {
+        "type": "json",
+        "keys": [
+          "chunk_type",
+          "chunk_id",
+          "title",
+          "description",
+          "content",
+          "estimated_tokens",
+          "related_chunks"
+        ],
+        "line_count": 717
+      },
+      "context\\chunks\\code_structure_90.json": {
+        "type": "json",
+        "keys": [
+          "chunk_type",
+          "chunk_id",
+          "title",
+          "description",
+          "content",
+          "estimated_tokens",
+          "related_chunks"
+        ],
+        "line_count": 917
+      },
+      "context\\chunks\\code_structure_91.json": {
+        "type": "json",
+        "keys": [
+          "chunk_type",
+          "chunk_id",
+          "title",
+          "description",
+          "content",
+          "estimated_tokens",
+          "related_chunks"
+        ],
+        "line_count": 917
+      },
+      "context\\chunks\\code_structure_92.json": {
+        "type": "json",
+        "keys": [
+          "chunk_type",
+          "chunk_id",
+          "title",
+          "description",
+          "content",
+          "estimated_tokens",
+          "related_chunks"
+        ],
+        "line_count": 851
+      },
+      "context\\chunks\\code_structure_93.json": {
+        "type": "json",
+        "keys": [
+          "chunk_type",
+          "chunk_id",
+          "title",
+          "description",
+          "content",
+          "estimated_tokens",
+          "related_chunks"
+        ],
+        "line_count": 887
+      },
+      "context\\chunks\\code_structure_94.json": {
+        "type": "json",
+        "keys": [
+          "chunk_type",
+          "chunk_id",
+          "title",
+          "description",
+          "content",
+          "estimated_tokens",
+          "related_chunks"
+        ],
+        "line_count": 927
+      },
+      "context\\chunks\\code_structure_95.json": {
+        "type": "json",
+        "keys": [
+          "chunk_type",
+          "chunk_id",
+          "title",
+          "description",
+          "content",
+          "estimated_tokens",
+          "related_chunks"
+        ],
+        "line_count": 995
+      },
+      "context\\chunks\\code_structure_96.json": {
+        "type": "json",
+        "keys": [
+          "chunk_type",
+          "chunk_id",
+          "title",
+          "description",
+          "content",
+          "estimated_tokens",
+          "related_chunks"
+        ],
+        "line_count": 5131
+      },
+      "context\\chunks\\code_structure_97.json": {
+        "type": "json",
+        "keys": [
+          "chunk_type",
+          "chunk_id",
+          "title",
+          "description",
+          "content",
+          "estimated_tokens",
+          "related_chunks"
+        ],
+        "line_count": 2776
+      },
+      "context\\chunks\\code_structure_98.json": {
+        "type": "json",
+        "keys": [
+          "chunk_type",
+          "chunk_id",
+          "title",
+          "description",
+          "content",
+          "estimated_tokens",
+          "related_chunks"
+        ],
+        "line_count": 1127
+      },
+      "context\\chunks\\code_structure_99.json": {
+        "type": "json",
+        "keys": [
+          "chunk_type",
+          "chunk_id",
+          "title",
+          "description",
+          "content",
+          "estimated_tokens",
+          "related_chunks"
+        ],
+        "line_count": 817
+      },
+      "context\\chunks\\legacy_v1_v4_systems.json": {
+        "type": "json",
+        "keys": [
+          "chunk_type",
+          "chunk_id",
+          "title",
+          "description",
+          "content",
+          "estimated_tokens",
+          "related_chunks"
+        ],
+        "line_count": 36
+      },
+      "context\\chunks\\NAVIGATION_INDEX.json": {
+        "type": "json",
+        "keys": [
+          "index_timestamp",
+          "total_chunks",
+          "chunk_categories",
+          "recommended_reading_order",
+          "chunks_by_category",
+          "chunk_details"
+        ],
+        "line_count": 49555
+      },
+      "context\\chunks\\system_dependencies.json": {
+        "type": "json",
+        "keys": [
+          "chunk_type",
+          "chunk_id",
+          "title",
+          "description",
+          "content",
+          "estimated_tokens",
+          "related_chunks"
+        ],
+        "line_count": 15956
+      },
+      "context\\chunks\\system_overview.json": {
+        "type": "json",
+        "keys": [
+          "chunk_type",
+          "chunk_id",
+          "title",
+          "description",
+          "content",
+          "estimated_tokens",
+          "related_chunks"
+        ],
+        "line_count": 36
+      }
+    }
+  },
+  "estimated_tokens": 53.300000000000004,
+  "related_chunks": [
+    "v5_core_systems",
+    "legacy_v1_v4_systems"
+  ]
+}

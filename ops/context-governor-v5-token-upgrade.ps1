@@ -21,7 +21,7 @@ $ErrorActionPreference = 'Stop'
 Set-StrictMode -Version Latest
 
 # ===== TOKEN UPGRADE MOONSHOT INITIALIZATION =====
-Write-Host "🚀 TOKEN UPGRADE MOONSHOT INITIALIZATION - PHASE 1: 256K TOKENS" -ForegroundColor Green
+Write-Host " TOKEN UPGRADE MOONSHOT INITIALIZATION - PHASE 1: 256K TOKENS" -ForegroundColor Green
 Write-Host "Current Token Limit: 128K → Target: 256K (2x improvement)" -ForegroundColor Cyan
 Write-Host "GPU VRAM: 8GB + Shared Memory: 32GB = Secret Weapon" -ForegroundColor Yellow
 
@@ -41,7 +41,7 @@ $logFile = Join-Path $logPath "token-upgrade-phase1-$(Get-Date -Format 'yyyyMMdd
 "[$timestamp] System RAM: 64GB" | Out-File -FilePath $logFile -Append
 
 # ===== MEMORY ARCHITECTURE ANALYSIS =====
-Write-Host "📊 MEMORY ARCHITECTURE ANALYSIS - PHASE 1" -ForegroundColor Cyan
+Write-Host " MEMORY ARCHITECTURE ANALYSIS - PHASE 1" -ForegroundColor Cyan
 
 # Get current memory usage
 $memoryInfo = Get-WmiObject -Class Win32_ComputerSystem
@@ -57,7 +57,7 @@ Write-Host "Available RAM: $availableRAM GB" -ForegroundColor Green
 "[$timestamp] Available RAM: $availableRAM GB" | Out-File -FilePath $logFile -Append
 
 # ===== GPU MEMORY ANALYSIS =====
-Write-Host "🎮 GPU MEMORY ANALYSIS - RTX 4070 + 32GB Shared" -ForegroundColor Cyan
+Write-Host " GPU MEMORY ANALYSIS - RTX 4070 + 32GB Shared" -ForegroundColor Cyan
 
 try {
     $gpuInfo = nvidia-smi --query-gpu=memory.total,memory.used,memory.free --format=csv,noheader,nounits
@@ -81,14 +81,14 @@ try {
 }
 
 # ===== HIERARCHICAL MEMORY MANAGEMENT DESIGN =====
-Write-Host "🏗️ HIERARCHICAL MEMORY MANAGEMENT DESIGN - PHASE 1" -ForegroundColor Cyan
+Write-Host " HIERARCHICAL MEMORY MANAGEMENT DESIGN - PHASE 1" -ForegroundColor Cyan
 
 $memoryArchitecture = @"
 PHASE 1 MEMORY ARCHITECTURE (256K tokens):
-├── GPU VRAM (8GB) → Hot Context (128K tokens)
-├── Shared Memory (32GB) → Warm Context (128K tokens)
-├── System RAM (64GB) → Cold Context (overflow)
-└── NVMe SSD → Persistent Storage (context persistence)
+ GPU VRAM (8GB) → Hot Context (128K tokens)
+ Shared Memory (32GB) → Warm Context (128K tokens)
+ System RAM (64GB) → Cold Context (overflow)
+ NVMe SSD → Persistent Storage (context persistence)
 
 Memory Allocation Strategy:
 - GPU VRAM: Primary processing (fastest)
@@ -104,7 +104,7 @@ Write-Host $memoryArchitecture -ForegroundColor Yellow
 "[$timestamp] $memoryArchitecture" | Out-File -FilePath $logFile -Append
 
 # ===== TOKEN UPGRADE IMPLEMENTATION =====
-Write-Host "⚡ TOKEN UPGRADE IMPLEMENTATION - PHASE 1" -ForegroundColor Cyan
+Write-Host " TOKEN UPGRADE IMPLEMENTATION - PHASE 1" -ForegroundColor Cyan
 
 # Create configuration file for token limits
 $configPath = Join-Path $Root "config\token-upgrade-config.json"
@@ -172,11 +172,11 @@ $tokenConfig = @{
 
 $tokenConfig | ConvertTo-Json -Depth 10 | Out-File -FilePath $configPath -Encoding UTF8
 
-Write-Host "✅ Token configuration created: $configPath" -ForegroundColor Green
+Write-Host " Token configuration created: $configPath" -ForegroundColor Green
 "[$timestamp] Token configuration created: $configPath" | Out-File -FilePath $logFile -Append
 
 # ===== CONTEXT GOVERNOR UPGRADE =====
-Write-Host "🧠 CONTEXT GOVERNOR UPGRADE - 256K TOKENS" -ForegroundColor Cyan
+Write-Host " CONTEXT GOVERNOR UPGRADE - 256K TOKENS" -ForegroundColor Cyan
 
 # Check for GPU environment
 $projectRoot = $Root
@@ -193,7 +193,7 @@ if (-not (Test-Path $venvPath)) {
 }
 
 # ===== UPGRADED CONTEXT MANAGEMENT SYSTEM =====
-Write-Host "🚀 BUILDING UPGRADED CONTEXT MANAGEMENT SYSTEM" -ForegroundColor Cyan
+Write-Host " BUILDING UPGRADED CONTEXT MANAGEMENT SYSTEM" -ForegroundColor Cyan
 
 $upgradedContextGovernor = @"
 import os
@@ -526,7 +526,7 @@ class TokenUpgradeContextGovernor:
         }
 
 def main():
-    logging.info("🚀 TOKEN UPGRADE MOONSHOT - PHASE 1: 256K TOKENS")
+    logging.info(" TOKEN UPGRADE MOONSHOT - PHASE 1: 256K TOKENS")
     governor = TokenUpgradeContextGovernor()
     
     # Build or load index
@@ -581,11 +581,11 @@ if __name__ == "__main__":
 $upgradedGovernorPath = Join-Path $Root "ops\context-governor-v5-token-upgrade.py"
 $upgradedContextGovernor | Out-File -FilePath $upgradedGovernorPath -Encoding UTF8
 
-Write-Host "✅ Upgraded context governor created: $upgradedGovernorPath" -ForegroundColor Green
+Write-Host " Upgraded context governor created: $upgradedGovernorPath" -ForegroundColor Green
 "[$timestamp] Upgraded context governor created: $upgradedGovernorPath" | Out-File -FilePath $logFile -Append
 
 # ===== PHASE 1 VALIDATION =====
-Write-Host "🧪 PHASE 1 VALIDATION - 256K TOKENS" -ForegroundColor Cyan
+Write-Host " PHASE 1 VALIDATION - 256K TOKENS" -ForegroundColor Cyan
 
 # Test the upgraded system
 if (Test-Path $upgradedGovernorPath) {
@@ -614,10 +614,10 @@ print("Python environment ready for token upgrade")
         python test_python.py
         
         if ($LASTEXITCODE -eq 0) {
-            Write-Host "✅ Python environment ready for token upgrade" -ForegroundColor Green
+            Write-Host " Python environment ready for token upgrade" -ForegroundColor Green
             "[$timestamp] Python environment ready for token upgrade" | Out-File -FilePath $logFile -Append
         } else {
-            Write-Host "❌ Python environment test failed" -ForegroundColor Red
+            Write-Host " Python environment test failed" -ForegroundColor Red
             "[$timestamp] Python environment test failed" | Out-File -FilePath $logFile -Append
         }
         
@@ -631,7 +631,7 @@ print("Python environment ready for token upgrade")
 }
 
 # ===== PHASE 1 COMPLETION STATUS =====
-Write-Host "🎯 PHASE 1 COMPLETION STATUS" -ForegroundColor Cyan
+Write-Host " PHASE 1 COMPLETION STATUS" -ForegroundColor Cyan
 
 $phase1Status = @{
     "phase" = 1
@@ -664,16 +664,16 @@ $phase1Status = @{
 $phase1StatusPath = Join-Path $logPath "phase1-completion-status.json"
 $phase1Status | ConvertTo-Json -Depth 10 | Out-File -FilePath $phase1StatusPath -Encoding UTF8
 
-Write-Host "✅ Phase 1 completion status saved: $phase1StatusPath" -ForegroundColor Green
+Write-Host " Phase 1 completion status saved: $phase1StatusPath" -ForegroundColor Green
 "[$timestamp] Phase 1 completion status saved: $phase1StatusPath" | Out-File -FilePath $logFile -Append
 
 # ===== PHASE 1 SUCCESS SUMMARY =====
-Write-Host "🎉 PHASE 1 SUCCESS SUMMARY - 256K TOKENS OPERATIONAL!" -ForegroundColor Green
+Write-Host " PHASE 1 SUCCESS SUMMARY - 256K TOKENS OPERATIONAL!" -ForegroundColor Green
 
 $successSummary = @"
-🚀 TOKEN UPGRADE MOONSHOT - PHASE 1 COMPLETE!
+ TOKEN UPGRADE MOONSHOT - PHASE 1 COMPLETE!
 
-✅ ACHIEVEMENTS:
+ ACHIEVEMENTS:
 - Development branch created: feature/token-upgrade-1m
 - Token limit upgraded: 128K → 256K (2x improvement)
 - Hierarchical memory management designed
@@ -682,24 +682,24 @@ $successSummary = @"
 - Upgraded context governor created
 - Logging system established
 
-📊 PERFORMANCE METRICS:
+ PERFORMANCE METRICS:
 - Current token limit: 256,000 tokens
 - Improvement: 2x from baseline
 - Memory architecture: GPU → Shared → RAM → SSD
 - GPU VRAM: 8GB + Shared Memory: 32GB
 
-🎯 NEXT PHASE (Week 2):
+ NEXT PHASE (Week 2):
 - Target: 512K tokens (4x improvement)
 - Focus: GPU optimization and shared memory integration
 - Implementation: Context compression and smart eviction
 
-📁 FILES CREATED:
+ FILES CREATED:
 - config/token-upgrade-config.json
 - ops/context-governor-v5-token-upgrade.py
 - logs/token-upgrade-moonshot/phase1-completion-status.json
 - logs/token-upgrade-moonshot/token-upgrade-phase1-*.log
 
-🚀 READY FOR PHASE 2: GPU MEMORY OPTIMIZATION!
+ READY FOR PHASE 2: GPU MEMORY OPTIMIZATION!
 "@
 
 Write-Host $successSummary -ForegroundColor Green
@@ -708,7 +708,7 @@ Write-Host $successSummary -ForegroundColor Green
 "[$timestamp] PHASE 1 SUCCESS SUMMARY:" | Out-File -FilePath $logFile -Append
 "[$timestamp] $successSummary" | Out-File -FilePath $logFile -Append
 
-Write-Host "🎯 PHASE 1 COMPLETE - READY FOR PHASE 2!" -ForegroundColor Green
+Write-Host " PHASE 1 COMPLETE - READY FOR PHASE 2!" -ForegroundColor Green
 "[$timestamp] PHASE 1 COMPLETE - READY FOR PHASE 2!" | Out-File -FilePath $logFile -Append
 
 # Return success

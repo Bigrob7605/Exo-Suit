@@ -1,0 +1,242 @@
+{
+  "timestamp": "20250816_114101",
+  "components": {
+    "vision_gap_engine": {
+      "status": "present",
+      "size": 17422,
+      "hash": "97852f67844dd48a33753763ecc7f9857480810f4ac27e790d81628eb2c91d5f",
+      "priority": "critical"
+    },
+    "dreamweaver_builder": {
+      "status": "present",
+      "size": 24094,
+      "hash": "b7ba4d74bd100813453895886a079041864560f2002b17aa3328ec6896136b3b",
+      "priority": "critical"
+    },
+    "truthforge_auditor": {
+      "status": "present",
+      "size": 32224,
+      "hash": "26082c389a0245d77d1193107adeb163191a023b1ca9aacc3b77f1b3a7552a97",
+      "priority": "critical"
+    },
+    "rag_system": {
+      "status": "present",
+      "file_count": 39,
+      "priority": "high"
+    },
+    "testing_framework": {
+      "status": "missing",
+      "priority": "medium"
+    }
+  },
+  "system_health": {
+    "overall_health": "degraded",
+    "issues_found": [
+      {
+        "component": "rag_system",
+        "issue": "Missing critical files: __init__.py, main.py, index.py, README.md",
+        "priority": "high"
+      },
+      {
+        "component": "testing_framework",
+        "issue": "Component file/directory not found",
+        "priority": "medium"
+      }
+    ],
+    "component_status": {
+      "vision_gap_engine": {
+        "status": "healthy",
+        "issue": null,
+        "severity": "none"
+      },
+      "dreamweaver_builder": {
+        "status": "healthy",
+        "issue": null,
+        "severity": "none"
+      },
+      "truthforge_auditor": {
+        "status": "healthy",
+        "issue": null,
+        "severity": "none"
+      },
+      "rag_system": {
+        "status": "incomplete",
+        "issue": "Missing critical files: __init__.py, main.py, index.py, README.md",
+        "severity": "medium"
+      },
+      "testing_framework": {
+        "status": "missing",
+        "issue": "Component file/directory not found",
+        "severity": "high"
+      }
+    },
+    "recommendations": [
+      "Recovery recommended for high-priority components"
+    ]
+  },
+  "recovery_config": {
+    "system_name": "Phoenix Recovery System V5.0",
+    "version": "5.0.0",
+    "description": "Auto-rebuilds broken systems to specification with intelligent recovery capabilities",
+    "last_updated": "2025-08-16T11:45:00Z",
+    "recovery_settings": {
+      "auto_recovery_enabled": true,
+      "recovery_timeout": 300,
+      "max_recovery_attempts": 3,
+      "backup_retention_days": 30,
+      "snapshot_interval_hours": 24
+    },
+    "component_recovery": {
+      "vision_gap_engine": {
+        "priority": "critical",
+        "recovery_strategies": [
+          "file_restore",
+          "backup_restore",
+          "code_regeneration"
+        ],
+        "health_checks": [
+          "file_exists",
+          "executable",
+          "output_validation"
+        ],
+        "backup_locations": [
+          "ops/backups/",
+          "system_backups/"
+        ]
+      },
+      "dreamweaver_builder": {
+        "priority": "critical",
+        "recovery_strategies": [
+          "file_restore",
+          "backup_restore",
+          "code_regeneration"
+        ],
+        "health_checks": [
+          "file_exists",
+          "executable",
+          "output_validation"
+        ],
+        "backup_locations": [
+          "ops/backups/",
+          "system_backups/"
+        ]
+      },
+      "truthforge_auditor": {
+        "priority": "critical",
+        "recovery_strategies": [
+          "file_restore",
+          "backup_restore",
+          "code_regeneration"
+        ],
+        "health_checks": [
+          "file_exists",
+          "executable",
+          "output_validation"
+        ],
+        "backup_locations": [
+          "ops/backups/",
+          "system_backups/"
+        ]
+      },
+      "rag_system": {
+        "priority": "high",
+        "recovery_strategies": [
+          "index_rebuild",
+          "backup_restore",
+          "configuration_reset"
+        ],
+        "health_checks": [
+          "index_exists",
+          "query_response",
+          "performance_check"
+        ],
+        "backup_locations": [
+          "rag/backups/",
+          "system_backups/"
+        ]
+      },
+      "testing_framework": {
+        "priority": "medium",
+        "recovery_strategies": [
+          "file_restore",
+          "backup_restore",
+          "test_regeneration"
+        ],
+        "health_checks": [
+          "test_execution",
+          "coverage_check",
+          "performance_validation"
+        ],
+        "backup_locations": [
+          "Testing_Tools/backups/",
+          "system_backups/"
+        ]
+      }
+    },
+    "recovery_strategies": {
+      "file_corruption": {
+        "enabled": true,
+        "methods": [
+          "checksum_validation",
+          "backup_restore",
+          "code_regeneration"
+        ],
+        "priority": "high"
+      },
+      "missing_file": {
+        "enabled": true,
+        "methods": [
+          "backup_restore",
+          "code_regeneration",
+          "dependency_check"
+        ],
+        "priority": "critical"
+      },
+      "system_failure": {
+        "enabled": true,
+        "methods": [
+          "process_restart",
+          "service_recovery",
+          "full_system_restore"
+        ],
+        "priority": "critical"
+      },
+      "performance_degradation": {
+        "enabled": true,
+        "methods": [
+          "optimization_apply",
+          "resource_cleanup",
+          "configuration_tune"
+        ],
+        "priority": "medium"
+      },
+      "integration_failure": {
+        "enabled": true,
+        "methods": [
+          "dependency_resolve",
+          "interface_repair",
+          "communication_restore"
+        ],
+        "priority": "high"
+      }
+    },
+    "monitoring": {
+      "health_check_interval": 60,
+      "performance_threshold": 0.8,
+      "alert_on_failure": true,
+      "log_recovery_actions": true
+    },
+    "backup_settings": {
+      "auto_backup_enabled": true,
+      "backup_schedule": "daily",
+      "compression_enabled": true,
+      "encryption_enabled": false
+    },
+    "logging": {
+      "level": "INFO",
+      "file_rotation": true,
+      "max_log_size_mb": 100,
+      "retention_days": 90
+    }
+  }
+}

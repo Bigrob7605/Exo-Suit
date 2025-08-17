@@ -49,7 +49,7 @@ $RTX4070Profiles = @{
 }
 
 # ===== GPU DETECTION & VALIDATION =====
-Write-Host "🚀 RTX-4070 Optimizer Initializing..." -ForegroundColor Cyan
+Write-Host " RTX-4070 Optimizer Initializing..." -ForegroundColor Cyan
 
 $GPUInfo = @{
     Name = ""
@@ -72,19 +72,19 @@ try {
         $GPUInfo.Power = [double]($parts[4])
         $GPUInfo.Utilization = [int]($parts[5])
         
-        Write-Host "✅ GPU Detected: $($GPUInfo.Name)" -ForegroundColor Green
+        Write-Host " GPU Detected: $($GPUInfo.Name)" -ForegroundColor Green
         Write-Host "   Memory: $($GPUInfo.Memory) MB | Driver: $($GPUInfo.Driver)" -ForegroundColor Green
-        Write-Host "   Current: $($GPUInfo.Temperature)°C | $($GPUInfo.Power)W | $($GPUInfo.Utilization)%" -ForegroundColor Green
+        Write-Host "   Current: $($GPUInfo.Temperature)C | $($GPUInfo.Power)W | $($GPUInfo.Utilization)%" -ForegroundColor Green
         
         # Verify it's an RTX 4070
         if ($GPUInfo.Name -notmatch "RTX 4070") {
-            Write-Host "⚠️  Warning: This script is optimized for RTX 4070. Current GPU: $($GPUInfo.Name)" -ForegroundColor Yellow
+            Write-Host "  Warning: This script is optimized for RTX 4070. Current GPU: $($GPUInfo.Name)" -ForegroundColor Yellow
         }
     } else {
         throw "No NVIDIA GPU detected"
     }
 } catch {
-    Write-Host "❌ GPU detection failed: $($_.Exception.Message)" -ForegroundColor Red
+    Write-Host " GPU detection failed: $($_.Exception.Message)" -ForegroundColor Red
     exit 1
 }
 
@@ -92,7 +92,7 @@ try {
 function Optimize-GPUSettings {
     param([hashtable]$Profile)
     
-    Write-Host "⚡ Applying $Mode optimization profile..." -ForegroundColor Yellow
+    Write-Host " Applying $Mode optimization profile..." -ForegroundColor Yellow
     
     # Set CUDA environment variables
     $env:CUDA_VISIBLE_DEVICES = "0"
@@ -107,7 +107,7 @@ function Optimize-GPUSettings {
         New-Item -ItemType Directory -Force -Path $env:CUDA_CACHE_PATH | Out-Null
     }
     
-    Write-Host "✅ CUDA environment optimized" -ForegroundColor Green
+    Write-Host " CUDA environment optimized" -ForegroundColor Green
     
     # Set PyTorch optimizations
     $env:TORCH_CUDNN_V8_API_ENABLED = "1"
@@ -115,41 +115,41 @@ function Optimize-GPUSettings {
     $env:TORCH_USE_CUDA_DSA = "1"
     $env:TORCH_CUDA_ARCH_LIST = $Profile.CUDA_Arch
     
-    Write-Host "✅ PyTorch optimizations applied" -ForegroundColor Green
+    Write-Host " PyTorch optimizations applied" -ForegroundColor Green
 }
 
 function Optimize-PowerManagement {
     param([hashtable]$Profile)
     
-    Write-Host "⚡ Optimizing power management..." -ForegroundColor Yellow
+    Write-Host " Optimizing power management..." -ForegroundColor Yellow
     
     try {
         # Set power limit (requires admin privileges)
         if (([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")) {
             # Note: nvidia-smi power limit changes require admin privileges
-            Write-Host "✅ Power management optimized (Admin mode)" -ForegroundColor Green
+            Write-Host " Power management optimized (Admin mode)" -ForegroundColor Green
         } else {
-            Write-Host "⚠️  Power management optimization requires admin privileges" -ForegroundColor Yellow
+            Write-Host "  Power management optimization requires admin privileges" -ForegroundColor Yellow
         }
         
         # Set Windows power plan for GPU
         try {
             powercfg -setacvalueindex SCHEME_CURRENT SUB_VIDEO VIDEOCONLOCK 0
             powercfg -setacvalueindex SCHEME_CURRENT SUB_VIDEO VIDEOIDLE 0
-            Write-Host "✅ Windows GPU power settings optimized" -ForegroundColor Green
+            Write-Host " Windows GPU power settings optimized" -ForegroundColor Green
         } catch {
-            Write-Host "⚠️  Windows GPU power settings require admin privileges" -ForegroundColor Yellow
+            Write-Host "  Windows GPU power settings require admin privileges" -ForegroundColor Yellow
         }
         
     } catch {
-        Write-Host "❌ Power management optimization failed: $($_.Exception.Message)" -ForegroundColor Red
+        Write-Host " Power management optimization failed: $($_.Exception.Message)" -ForegroundColor Red
     }
 }
 
 function Optimize-MemoryManagement {
     param([hashtable]$Profile)
     
-    Write-Host "🧠 Optimizing memory management..." -ForegroundColor Yellow
+    Write-Host " Optimizing memory management..." -ForegroundColor Yellow
     
     try {
         # Set memory management environment variables
@@ -161,17 +161,17 @@ function Optimize-MemoryManagement {
         $env:TORCH_CUDA_MEMORY_POOL = "1"
         $env:TORCH_CUDA_MEMORY_POOL_SIZE = "6442450944"
         
-        Write-Host "✅ Memory management optimized" -ForegroundColor Green
+        Write-Host " Memory management optimized" -ForegroundColor Green
         
     } catch {
-        Write-Host "❌ Memory management optimization failed: $($_.Exception.Message)" -ForegroundColor Red
+        Write-Host " Memory management optimization failed: $($_.Exception.Message)" -ForegroundColor Red
     }
 }
 
 function Update-RAGConfiguration {
     param([hashtable]$Profile)
     
-    Write-Host "🧠 Updating RAG configuration..." -ForegroundColor Yellow
+    Write-Host " Updating RAG configuration..." -ForegroundColor Yellow
     
     $configPath = "rag\hybrid_config_v4.yaml"
     if (Test-Path $configPath) {
@@ -202,34 +202,34 @@ rtx4070_optimizations:
             }
             
             Set-Content $configPath $config
-            Write-Host "✅ RAG configuration updated for RTX 4070" -ForegroundColor Green
+            Write-Host " RAG configuration updated for RTX 4070" -ForegroundColor Green
             
         } catch {
-            Write-Host "❌ RAG configuration update failed: $($_.Exception.Message)" -ForegroundColor Red
+            Write-Host " RAG configuration update failed: $($_.Exception.Message)" -ForegroundColor Red
         }
     }
 }
 
 function Start-GPUMonitoring {
-    Write-Host "📊 Starting RTX 4070 monitoring..." -ForegroundColor Cyan
+    Write-Host " Starting RTX 4070 monitoring..." -ForegroundColor Cyan
     
     $monitorScript = @"
-    while (`$true) {
+    while ($true) {
         try {
-            `$gpu = nvidia-smi --query-gpu=utilization.gpu,memory.used,memory.total,temperature.gpu,power.draw,clocks.current.graphics,clocks.current.memory --format=csv,noheader,nounits 2>`$null
-            if (`$gpu) {
-                `$parts = `$gpu -split ','
-                `$util = `$parts[0]
-                `$memUsed = `$parts[1]
-                `$memTotal = `$parts[2]
-                `$temp = `$parts[3]
-                `$power = `$parts[4]
-                `$coreClock = `$parts[5]
-                `$memClock = `$parts[6]
+            $gpu = nvidia-smi --query-gpu=utilization.gpu,memory.used,memory.total,temperature.gpu,power.draw,clocks.current.graphics,clocks.current.memory --format=csv,noheader,nounits 2>$null
+            if ($gpu) {
+                $parts = $gpu -split ','
+                $util = $parts[0]
+                $memUsed = $parts[1]
+                $memTotal = $parts[2]
+                $temp = $parts[3]
+                $power = $parts[4]
+                $coreClock = $parts[5]
+                $memClock = $parts[6]
                 
-                `$memPercent = [math]::Round((`$memUsed / `$memTotal) * 100, 1)
+                $memPercent = [math]::Round(($memUsed / $memTotal) * 100, 1)
                 
-                Write-Host "RTX 4070: `$util% | Mem: `$memPercent% (`$memUsed/`$memTotal MB) | Temp: `$temp°C | Power: `$power W | Core: `$coreClock MHz | Mem: `$memClock MHz" -ForegroundColor Green
+                Write-Host "RTX 4070: $util% | Mem: $memPercent% ($memUsed/$memTotal MB) | Temp: $tempC | Power: $power W | Core: $coreClock MHz | Mem: $memClock MHz" -ForegroundColor Green
             }
         } catch {
             Write-Host "GPU monitoring error" -ForegroundColor Red
@@ -240,47 +240,47 @@ function Start-GPUMonitoring {
 "@
     
     Start-Job -ScriptBlock ([ScriptBlock]::Create($monitorScript)) | Out-Null
-    Write-Host "✅ RTX 4070 monitoring started (Press Ctrl+C to stop)" -ForegroundColor Green
+    Write-Host " RTX 4070 monitoring started (Press Ctrl+C to stop)" -ForegroundColor Green
 }
 
 function Run-GPUBenchmark {
-    Write-Host "🏁 Running RTX 4070 benchmark..." -ForegroundColor Cyan
+    Write-Host " Running RTX 4070 benchmark..." -ForegroundColor Cyan
     
     $startTime = Get-Date
     
     # Test CUDA availability
     try {
         $cudaTest = python -c "import torch; print('CUDA:', torch.cuda.is_available()); print('Device Count:', torch.cuda.device_count()); print('Current Device:', torch.cuda.current_device()); print('Device Name:', torch.cuda.get_device_name(0))" 2>$null
-        Write-Host "✅ CUDA test completed" -ForegroundColor Green
+        Write-Host " CUDA test completed" -ForegroundColor Green
     } catch {
-        Write-Host "❌ CUDA test failed" -ForegroundColor Red
+        Write-Host " CUDA test failed" -ForegroundColor Red
     }
     
     # Test PyTorch GPU operations
     try {
         $torchTest = python -c "import torch; x = torch.randn(1000, 1000).cuda(); y = torch.mm(x, x.t()); print('Matrix multiplication test passed')" 2>$null
-        Write-Host "✅ PyTorch GPU test completed" -ForegroundColor Green
+        Write-Host " PyTorch GPU test completed" -ForegroundColor Green
     } catch {
-        Write-Host "❌ PyTorch GPU test failed" -ForegroundColor Red
+        Write-Host " PyTorch GPU test failed" -ForegroundColor Red
     }
     
     # Test RAG system with GPU
     try {
         $ragTest = python "rag\test_gpu_only.py" 2>$null
-        Write-Host "✅ RAG GPU test completed" -ForegroundColor Green
+        Write-Host " RAG GPU test completed" -ForegroundColor Green
     } catch {
-        Write-Host "❌ RAG GPU test failed" -ForegroundColor Red
+        Write-Host " RAG GPU test failed" -ForegroundColor Red
     }
     
     $totalTime = (Get-Date) - $startTime
-    Write-Host "✅ RTX 4070 benchmark completed in $($totalTime.TotalSeconds.ToString('F2')) seconds" -ForegroundColor Green
+    Write-Host " RTX 4070 benchmark completed in $($totalTime.TotalSeconds.ToString('F2')) seconds" -ForegroundColor Green
 }
 
 # ===== MAIN EXECUTION =====
 try {
     switch ($Mode) {
         'Restore' {
-            Write-Host "🔄 Restoring default GPU settings..." -ForegroundColor Yellow
+            Write-Host " Restoring default GPU settings..." -ForegroundColor Yellow
             
             # Clear environment variables
             Remove-Item Env:CUDA_MEMORY_FRACTION -ErrorAction SilentlyContinue
@@ -290,7 +290,7 @@ try {
             Remove-Item Env:TORCH_CUDA_MEMORY_POOL -ErrorAction SilentlyContinue
             Remove-Item Env:TORCH_CUDA_MEMORY_POOL_SIZE -ErrorAction SilentlyContinue
             
-            Write-Host "✅ Default GPU settings restored" -ForegroundColor Green
+            Write-Host " Default GPU settings restored" -ForegroundColor Green
         }
         default {
             $profile = $RTX4070Profiles[$Mode]
@@ -298,7 +298,7 @@ try {
                 throw "Invalid optimization mode: $Mode"
             }
             
-            Write-Host "🚀 Applying $Mode optimization for RTX 4070..." -ForegroundColor Cyan
+            Write-Host " Applying $Mode optimization for RTX 4070..." -ForegroundColor Cyan
             Write-Host "   Power: $($profile.PowerLimit)W | Memory: $($profile.MemoryClock) MHz | Core: $($profile.CoreClock) MHz" -ForegroundColor Cyan
             Write-Host "   Batch: $($profile.Batch_Size) | Workers: $($profile.Workers) | Memory Fraction: $($profile.Memory_Fraction)" -ForegroundColor Cyan
             
@@ -307,7 +307,7 @@ try {
             Optimize-MemoryManagement -Profile $profile
             Update-RAGConfiguration -Profile $profile
             
-            Write-Host "✅ RTX 4070 $Mode optimization completed!" -ForegroundColor Green
+            Write-Host " RTX 4070 $Mode optimization completed!" -ForegroundColor Green
             
             if ($Benchmark) {
                 Run-GPUBenchmark
@@ -320,9 +320,9 @@ try {
     }
     
 } catch {
-    Write-Host "❌ RTX-4070 Optimizer failed: $($_.Exception.Message)" -ForegroundColor Red
+    Write-Host " RTX-4070 Optimizer failed: $($_.Exception.Message)" -ForegroundColor Red
     exit 1
 }
 
-Write-Host "🎯 RTX-4070 Optimizer completed successfully!" -ForegroundColor Green
+Write-Host " RTX-4070 Optimizer completed successfully!" -ForegroundColor Green
 exit 0

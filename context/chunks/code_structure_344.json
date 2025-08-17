@@ -1,0 +1,817 @@
+{
+  "chunk_type": "code_samples",
+  "chunk_id": "code_structure_344",
+  "title": "Code Structure Analysis - Part 344",
+  "description": "Code analysis for files 17151-17200",
+  "content": {
+    "files_analyzed": [
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\challenges\\security_challenge_import n_20250805_174343.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\challenges\\security_challenge_import n_20250805_174426.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\challenges\\security_challenge_import n_20250805_174427.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\challenges\\security_challenge_import n_20250805_174428.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\challenges\\security_challenge_import n_20250805_174429.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\challenges\\security_challenge_import n_20250805_174431.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\challenges\\security_challenge_import n_20250805_174432.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\challenges\\security_challenge_import n_20250805_174433.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\challenges\\security_challenge_import n_20250805_174434.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\challenges\\security_challenge_import n_20250805_175815.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\challenges\\security_challenge_import n_20250805_175921.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\challenges\\security_challenge_import n_20250805_180051.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\challenges\\security_challenge_import n_20250805_180125.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\challenges\\security_challenge_import n_20250805_181015.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\challenges\\security_challenge_import n_20250805_182458.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\challenges\\security_challenge_import n_20250805_182537.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\challenges\\security_challenge_import n_20250805_182716.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\challenges\\security_challenge_import n_20250805_182804.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\challenges\\security_challenge_import n_20250805_182844.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\challenges\\security_challenge_import n_20250805_183024.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\challenges\\security_challenge_import n_20250805_183448.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\challenges\\security_challenge_import n_20250805_183528.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\challenges\\security_challenge_import n_20250805_183615.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\challenges\\security_challenge_import n_20250805_183644.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\challenges\\security_challenge_import n_20250805_183752.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\challenges\\security_challenge_import n_20250805_183845.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\challenges\\security_challenge_import n_20250805_183938.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\challenges\\security_challenge_import n_20250805_184345.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\challenges\\security_challenge_import n_20250805_184436.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\challenges\\security_challenge_import n_20250805_184636.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\genomes\\comprehensive_ril_agent.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\genomes\\math_ril_agent.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\genomes\\physics_ril_agent.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\genomes\\psychology_ril_agent.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\genomes\\simple_test_agent.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\genomes\\test_ril_agent.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\proposals\\proposal_0d158b8c.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\proposals\\proposal_1a177a23.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\proposals\\proposal_1ec05bd8.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\proposals\\proposal_207f9a3a.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\proposals\\proposal_298a7a54.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\proposals\\proposal_2a18f945.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\proposals\\proposal_2ce822e5.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\proposals\\proposal_303cd819.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\proposals\\proposal_335482b3.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\proposals\\proposal_392dec17.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\proposals\\proposal_495d75d9.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\proposals\\proposal_4be3ce41.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\proposals\\proposal_52153947.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\proposals\\proposal_56062d50.json"
+    ],
+    "structure_data": {
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\challenges\\security_challenge_import n_20250805_174343.py": {
+        "type": "python",
+        "imports": [],
+        "functions": [
+          {
+            "name": "security_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\challenges\\security_challenge_import n_20250805_174426.py": {
+        "type": "python",
+        "imports": [],
+        "functions": [
+          {
+            "name": "security_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\challenges\\security_challenge_import n_20250805_174427.py": {
+        "type": "python",
+        "imports": [],
+        "functions": [
+          {
+            "name": "security_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\challenges\\security_challenge_import n_20250805_174428.py": {
+        "type": "python",
+        "imports": [],
+        "functions": [
+          {
+            "name": "security_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\challenges\\security_challenge_import n_20250805_174429.py": {
+        "type": "python",
+        "imports": [],
+        "functions": [
+          {
+            "name": "security_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\challenges\\security_challenge_import n_20250805_174431.py": {
+        "type": "python",
+        "imports": [],
+        "functions": [
+          {
+            "name": "security_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\challenges\\security_challenge_import n_20250805_174432.py": {
+        "type": "python",
+        "imports": [],
+        "functions": [
+          {
+            "name": "security_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\challenges\\security_challenge_import n_20250805_174433.py": {
+        "type": "python",
+        "imports": [],
+        "functions": [
+          {
+            "name": "security_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\challenges\\security_challenge_import n_20250805_174434.py": {
+        "type": "python",
+        "imports": [],
+        "functions": [
+          {
+            "name": "security_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\challenges\\security_challenge_import n_20250805_175815.py": {
+        "type": "python",
+        "imports": [],
+        "functions": [
+          {
+            "name": "security_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\challenges\\security_challenge_import n_20250805_175921.py": {
+        "type": "python",
+        "imports": [],
+        "functions": [
+          {
+            "name": "security_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\challenges\\security_challenge_import n_20250805_180051.py": {
+        "type": "python",
+        "imports": [],
+        "functions": [
+          {
+            "name": "security_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\challenges\\security_challenge_import n_20250805_180125.py": {
+        "type": "python",
+        "imports": [],
+        "functions": [
+          {
+            "name": "security_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\challenges\\security_challenge_import n_20250805_181015.py": {
+        "type": "python",
+        "imports": [],
+        "functions": [
+          {
+            "name": "security_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\challenges\\security_challenge_import n_20250805_182458.py": {
+        "type": "python",
+        "imports": [],
+        "functions": [
+          {
+            "name": "security_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\challenges\\security_challenge_import n_20250805_182537.py": {
+        "type": "python",
+        "imports": [],
+        "functions": [
+          {
+            "name": "security_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\challenges\\security_challenge_import n_20250805_182716.py": {
+        "type": "python",
+        "imports": [],
+        "functions": [
+          {
+            "name": "security_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\challenges\\security_challenge_import n_20250805_182804.py": {
+        "type": "python",
+        "imports": [],
+        "functions": [
+          {
+            "name": "security_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\challenges\\security_challenge_import n_20250805_182844.py": {
+        "type": "python",
+        "imports": [],
+        "functions": [
+          {
+            "name": "security_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\challenges\\security_challenge_import n_20250805_183024.py": {
+        "type": "python",
+        "imports": [],
+        "functions": [
+          {
+            "name": "security_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\challenges\\security_challenge_import n_20250805_183448.py": {
+        "type": "python",
+        "imports": [],
+        "functions": [
+          {
+            "name": "security_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\challenges\\security_challenge_import n_20250805_183528.py": {
+        "type": "python",
+        "imports": [],
+        "functions": [
+          {
+            "name": "security_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\challenges\\security_challenge_import n_20250805_183615.py": {
+        "type": "python",
+        "imports": [],
+        "functions": [
+          {
+            "name": "security_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\challenges\\security_challenge_import n_20250805_183644.py": {
+        "type": "python",
+        "imports": [],
+        "functions": [
+          {
+            "name": "security_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\challenges\\security_challenge_import n_20250805_183752.py": {
+        "type": "python",
+        "imports": [],
+        "functions": [
+          {
+            "name": "security_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\challenges\\security_challenge_import n_20250805_183845.py": {
+        "type": "python",
+        "imports": [],
+        "functions": [
+          {
+            "name": "security_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\challenges\\security_challenge_import n_20250805_183938.py": {
+        "type": "python",
+        "imports": [],
+        "functions": [
+          {
+            "name": "security_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\challenges\\security_challenge_import n_20250805_184345.py": {
+        "type": "python",
+        "imports": [],
+        "functions": [
+          {
+            "name": "security_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\challenges\\security_challenge_import n_20250805_184436.py": {
+        "type": "python",
+        "imports": [],
+        "functions": [
+          {
+            "name": "security_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\challenges\\security_challenge_import n_20250805_184636.py": {
+        "type": "python",
+        "imports": [],
+        "functions": [
+          {
+            "name": "security_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\genomes\\comprehensive_ril_agent.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "description",
+          "instructions",
+          "tools",
+          "handoffs",
+          "safety_level",
+          "model_settings",
+          "created_at",
+          "version"
+        ],
+        "line_count": 39
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\genomes\\math_ril_agent.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "description",
+          "instructions",
+          "tools",
+          "handoffs",
+          "safety_level",
+          "model_settings",
+          "created_at",
+          "version"
+        ],
+        "line_count": 41
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\genomes\\physics_ril_agent.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "description",
+          "instructions",
+          "tools",
+          "handoffs",
+          "safety_level",
+          "model_settings",
+          "created_at",
+          "version"
+        ],
+        "line_count": 41
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\genomes\\psychology_ril_agent.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "description",
+          "instructions",
+          "tools",
+          "handoffs",
+          "safety_level",
+          "model_settings",
+          "created_at",
+          "version"
+        ],
+        "line_count": 41
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\genomes\\simple_test_agent.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "description",
+          "instructions",
+          "tools",
+          "handoffs",
+          "safety_level",
+          "model_settings",
+          "created_at",
+          "version"
+        ],
+        "line_count": 39
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\genomes\\test_ril_agent.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "description",
+          "instructions",
+          "tools",
+          "handoffs",
+          "safety_level",
+          "model_settings",
+          "created_at",
+          "version"
+        ],
+        "line_count": 39
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\proposals\\proposal_0d158b8c.json": {
+        "type": "json",
+        "keys": [
+          "hash",
+          "timestamp",
+          "domain",
+          "type",
+          "code",
+          "description",
+          "status",
+          "reviewer",
+          "approved"
+        ],
+        "line_count": 11
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\proposals\\proposal_1a177a23.json": {
+        "type": "json",
+        "keys": [
+          "hash",
+          "timestamp",
+          "domain",
+          "type",
+          "code",
+          "description",
+          "status",
+          "reviewer",
+          "approved"
+        ],
+        "line_count": 11
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\proposals\\proposal_1ec05bd8.json": {
+        "type": "json",
+        "keys": [
+          "hash",
+          "timestamp",
+          "domain",
+          "type",
+          "code",
+          "description",
+          "status",
+          "reviewer",
+          "approved"
+        ],
+        "line_count": 11
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\proposals\\proposal_207f9a3a.json": {
+        "type": "json",
+        "keys": [
+          "hash",
+          "timestamp",
+          "domain",
+          "type",
+          "code",
+          "description",
+          "status",
+          "reviewer",
+          "approved"
+        ],
+        "line_count": 11
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\proposals\\proposal_298a7a54.json": {
+        "type": "json",
+        "keys": [
+          "hash",
+          "timestamp",
+          "domain",
+          "type",
+          "code",
+          "description",
+          "status",
+          "reviewer",
+          "approved"
+        ],
+        "line_count": 11
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\proposals\\proposal_2a18f945.json": {
+        "type": "json",
+        "keys": [
+          "hash",
+          "timestamp",
+          "domain",
+          "type",
+          "code",
+          "description",
+          "status",
+          "reviewer",
+          "approved"
+        ],
+        "line_count": 11
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\proposals\\proposal_2ce822e5.json": {
+        "type": "json",
+        "keys": [
+          "hash",
+          "timestamp",
+          "domain",
+          "type",
+          "code",
+          "description",
+          "status",
+          "reviewer",
+          "approved"
+        ],
+        "line_count": 11
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\proposals\\proposal_303cd819.json": {
+        "type": "json",
+        "keys": [
+          "hash",
+          "timestamp",
+          "domain",
+          "type",
+          "code",
+          "description",
+          "status",
+          "reviewer",
+          "approved"
+        ],
+        "line_count": 11
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\proposals\\proposal_335482b3.json": {
+        "type": "json",
+        "keys": [
+          "hash",
+          "timestamp",
+          "domain",
+          "type",
+          "code",
+          "description",
+          "status",
+          "reviewer",
+          "approved"
+        ],
+        "line_count": 11
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\proposals\\proposal_392dec17.json": {
+        "type": "json",
+        "keys": [
+          "hash",
+          "timestamp",
+          "domain",
+          "type",
+          "code",
+          "description",
+          "status",
+          "reviewer",
+          "approved"
+        ],
+        "line_count": 11
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\proposals\\proposal_495d75d9.json": {
+        "type": "json",
+        "keys": [
+          "hash",
+          "timestamp",
+          "domain",
+          "type",
+          "code",
+          "description",
+          "status",
+          "reviewer",
+          "approved"
+        ],
+        "line_count": 11
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\proposals\\proposal_4be3ce41.json": {
+        "type": "json",
+        "keys": [
+          "hash",
+          "timestamp",
+          "domain",
+          "type",
+          "code",
+          "description",
+          "status",
+          "reviewer",
+          "approved"
+        ],
+        "line_count": 11
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\proposals\\proposal_52153947.json": {
+        "type": "json",
+        "keys": [
+          "hash",
+          "timestamp",
+          "domain",
+          "type",
+          "code",
+          "description",
+          "status",
+          "reviewer",
+          "approved"
+        ],
+        "line_count": 11
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_081602\\kai_core\\proposals\\proposal_56062d50.json": {
+        "type": "json",
+        "keys": [
+          "hash",
+          "timestamp",
+          "domain",
+          "type",
+          "code",
+          "description",
+          "status",
+          "reviewer",
+          "approved"
+        ],
+        "line_count": 11
+      }
+    }
+  },
+  "estimated_tokens": 1209.0,
+  "related_chunks": [
+    "v5_core_systems",
+    "legacy_v1_v4_systems"
+  ]
+}

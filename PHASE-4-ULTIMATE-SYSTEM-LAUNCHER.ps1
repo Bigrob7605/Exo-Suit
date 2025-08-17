@@ -23,7 +23,7 @@ Write-Host "================================================" -ForegroundColor C
 Write-Host "PHASE 4: ULTIMATE SYSTEM LAUNCHER" -ForegroundColor Cyan
 Write-Host "================================================" -ForegroundColor Cyan
 Write-Host ""
-Write-Host "🚀 BUILDING THE ULTIMATE 1M TOKEN POWERHOUSE 🚀" -ForegroundColor Yellow
+Write-Host " BUILDING THE ULTIMATE 1M TOKEN POWERHOUSE " -ForegroundColor Yellow
 Write-Host ""
 Write-Host "This will transform your system into a BEAST that can:" -ForegroundColor White
 Write-Host "• EAT ENTIRE REPOSITORIES in single passes" -ForegroundColor Green
@@ -58,13 +58,13 @@ try {
     $duration = ($endTime - $startTime).TotalSeconds
     
     Write-Host ""
-    Write-Host "✅ PHASE 4A COMPLETE!" -ForegroundColor Green
+    Write-Host " PHASE 4A COMPLETE!" -ForegroundColor Green
     Write-Host "Memory Distribution Engine finished in $([math]::Round($duration, 1)) seconds" -ForegroundColor Green
     Write-Host ""
     
     # Check if memory distribution report was generated
     if (Test-Path "logs/MEMORY-DISTRIBUTION-REPORT.md") {
-        Write-Host "📊 Memory Distribution Report generated:" -ForegroundColor Yellow
+        Write-Host " Memory Distribution Report generated:" -ForegroundColor Yellow
         Get-Content "logs/MEMORY-DISTRIBUTION-REPORT.md" | Select-Object -First 20 | ForEach-Object {
             Write-Host "  $_" -ForegroundColor Gray
         }
@@ -72,7 +72,7 @@ try {
     }
     
 } catch {
-    Write-Host "❌ PHASE 4A FAILED!" -ForegroundColor Red
+    Write-Host " PHASE 4A FAILED!" -ForegroundColor Red
     Write-Host "Error: $($_.Exception.Message)" -ForegroundColor Red
     Write-Host ""
     Write-Host "Press any key to continue to Phase 4B anyway..." -ForegroundColor Yellow
@@ -96,13 +96,13 @@ try {
     $duration = ($endTime - $startTime).TotalSeconds
     
     Write-Host ""
-    Write-Host "✅ PHASE 4B COMPLETE!" -ForegroundColor Green
+    Write-Host " PHASE 4B COMPLETE!" -ForegroundColor Green
     Write-Host "Repository Devourer finished in $([math]::Round($duration, 1)) seconds" -ForegroundColor Green
     Write-Host ""
     
     # Check if repository analysis report was generated
     if (Test-Path "logs/REPOSITORY-DEVOURER-REPORT.md") {
-        Write-Host "📊 Repository Analysis Report generated:" -ForegroundColor Yellow
+        Write-Host " Repository Analysis Report generated:" -ForegroundColor Yellow
         Get-Content "logs/REPOSITORY-DEVOURER-REPORT.md" | Select-Object -First 20 | ForEach-Object {
             Write-Host "  $_" -ForegroundColor Gray
         }
@@ -114,14 +114,14 @@ try {
         $analysisData = Get-Content "logs/repository_analysis_data.json" | ConvertFrom-Json
         $totalFiles = $analysisData.repository_info.total_files
         $totalSize = $analysisData.repository_info.total_size_gb
-        Write-Host "📁 Repository Analysis Summary:" -ForegroundColor Yellow
+        Write-Host " Repository Analysis Summary:" -ForegroundColor Yellow
         Write-Host "  Total Files: $totalFiles" -ForegroundColor White
         Write-Host "  Total Size: $([math]::Round($totalSize, 2)) GB" -ForegroundColor White
         Write-Host ""
     }
     
 } catch {
-    Write-Host "❌ PHASE 4B FAILED!" -ForegroundColor Red
+    Write-Host " PHASE 4B FAILED!" -ForegroundColor Red
     Write-Host "Error: $($_.Exception.Message)" -ForegroundColor Red
     Write-Host ""
     Write-Host "Press any key to continue to Phase 4C anyway..." -ForegroundColor Yellow
@@ -145,13 +145,13 @@ try {
     $duration = ($endTime - $startTime).TotalSeconds
     
     Write-Host ""
-    Write-Host "✅ PHASE 4C COMPLETE!" -ForegroundColor Green
+    Write-Host " PHASE 4C COMPLETE!" -ForegroundColor Green
     Write-Host "Intelligent Fix Engine finished in $([math]::Round($duration, 1)) seconds" -ForegroundColor Green
     Write-Host ""
     
     # Check if fix report was generated
     if (Test-Path "logs/INTELLIGENT-FIX-REPORT.md") {
-        Write-Host "📊 Intelligent Fix Report generated:" -ForegroundColor Yellow
+        Write-Host " Intelligent Fix Report generated:" -ForegroundColor Yellow
         Get-Content "logs/INTELLIGENT-FIX-REPORT.md" | Select-Object -First 20 | ForEach-Object {
             Write-Host "  $_" -ForegroundColor Gray
         }
@@ -159,22 +159,22 @@ try {
     }
     
 } catch {
-    Write-Host "❌ PHASE 4C FAILED!" -ForegroundColor Red
+    Write-Host " PHASE 4C FAILED!" -ForegroundColor Red
     Write-Host "Error: $($_.Exception.Message)" -ForegroundColor Red
     Write-Host ""
 }
 
 Write-Host ""
 Write-Host "================================================" -ForegroundColor Green
-Write-Host "🎯 PHASE 4 COMPLETE! 🎯" -ForegroundColor Green
+Write-Host " PHASE 4 COMPLETE! " -ForegroundColor Green
 Write-Host "================================================" -ForegroundColor Green
 Write-Host ""
-Write-Host "🚀 YOUR SYSTEM IS NOW A 1M TOKEN POWERHOUSE! 🚀" -ForegroundColor Yellow
+Write-Host " YOUR SYSTEM IS NOW A 1M TOKEN POWERHOUSE! " -ForegroundColor Yellow
 Write-Host ""
 Write-Host "What you've achieved:" -ForegroundColor White
-Write-Host "✅ Memory Distribution: Processing spread across all memory tiers" -ForegroundColor Green
-Write-Host "✅ Repository Devouring: Can process entire codebases" -ForegroundColor Green
-Write-Host "✅ Intelligent Fixing: Automatically fixes code issues" -ForegroundColor Green
+Write-Host " Memory Distribution: Processing spread across all memory tiers" -ForegroundColor Green
+Write-Host " Repository Devouring: Can process entire codebases" -ForegroundColor Green
+Write-Host " Intelligent Fixing: Automatically fixes code issues" -ForegroundColor Green
 Write-Host ""
 Write-Host "System Capabilities:" -ForegroundColor White
 Write-Host "• Memory Utilization: 80GB+ across GPU, shared, and system RAM" -ForegroundColor Cyan
@@ -192,9 +192,9 @@ $reports = @(
 
 foreach ($report in $reports) {
     if (Test-Path $report) {
-        Write-Host "  ✅ $report" -ForegroundColor Green
+        Write-Host "   $report" -ForegroundColor Green
     } else {
-        Write-Host "  ❌ $report (not generated)" -ForegroundColor Red
+        Write-Host "   $report (not generated)" -ForegroundColor Red
     }
 }
 
@@ -205,7 +205,7 @@ Write-Host "2. Test your improved codebase" -ForegroundColor White
 Write-Host "3. Monitor system performance improvements" -ForegroundColor White
 Write-Host "4. Use your new 1M token system for massive projects!" -ForegroundColor White
 Write-Host ""
-Write-Host "🎉 CONGRATULATIONS! YOU NOW HAVE A BEAST OF A SYSTEM! 🎉" -ForegroundColor Magenta
+Write-Host " CONGRATULATIONS! YOU NOW HAVE A BEAST OF A SYSTEM! " -ForegroundColor Magenta
 Write-Host ""
 Write-Host "Press any key to exit..." -ForegroundColor Gray
 $null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")

@@ -39,7 +39,7 @@ if (-not $isAdmin) {
 
 # Full System Mode - V4.0 Perfection
 if ($FullSystem) {
-    Write-Host "🚀 Agent Exo-Suit V4.0 'Perfection' - Full System Activation" -ForegroundColor Green
+    Write-Host " Agent Exo-Suit V4.0 'Perfection' - Full System Activation" -ForegroundColor Green
     Write-Host "Production Ready - Full V4 Feature Set" -ForegroundColor Cyan
     
     if ($LimitedMode) {
@@ -47,36 +47,36 @@ if ($FullSystem) {
     }
     
     # Activate all V4.0 systems
-    Write-Status 'Activating Drift-Gate V4...' '🔄'
+    Write-Status 'Activating Drift-Gate V4...' ''
     if (Test-Path ".\ops\Drift-Guard-V4.ps1") {
         & ".\ops\Drift-Guard-V4.ps1" -Path ".\" -Output "drift_report.json"
     }
     
-    Write-Status 'Activating Health Scanner V4...' '📊'
+    Write-Status 'Activating Health Scanner V4...' ''
     if (Test-Path ".\ops\Project-Health-Scanner-V4.ps1") {
         & ".\ops\Project-Health-Scanner-V4.ps1" -Path ".\" -Output "health_report.json"
     }
     
-    Write-Status 'Activating Emoji Sentinel V4...' '🔒'
+    Write-Status 'Activating Emoji Sentinel V4...' ''
     if (Test-Path ".\ops\emoji-sentinel-v4.ps1") {
         & ".\ops\emoji-sentinel-v4.ps1" -Path ".\" -Output "emoji_report.json"
     }
     
-    Write-Status 'Activating GPU Accelerator...' '⚡'
+    Write-Status 'Activating GPU Accelerator...' ''
     if (Test-Path ".\ops\gpu-accelerator.ps1") {
         & ".\ops\gpu-accelerator.ps1"
     }
     
-    Write-Status 'Activating Context Governor...' '🧠'
+    Write-Status 'Activating Context Governor...' ''
     if (Test-Path ".\ops\context-governor.ps1") {
         & ".\ops\context-governor.ps1"
     }
     
     if ($LimitedMode) {
-        Write-Host "⚠️  Limited Mode: Performance tuning features disabled" -ForegroundColor Yellow
-        Write-Host "✅ Agent Exo-Suit V4.0 'Perfection' - Core systems activated (Limited Mode)!" -ForegroundColor Green
+        Write-Host "  Limited Mode: Performance tuning features disabled" -ForegroundColor Yellow
+        Write-Host " Agent Exo-Suit V4.0 'Perfection' - Core systems activated (Limited Mode)!" -ForegroundColor Green
     } else {
-        Write-Host "✅ Agent Exo-Suit V4.0 'Perfection' - All systems activated!" -ForegroundColor Green
+        Write-Host " Agent Exo-Suit V4.0 'Perfection' - All systems activated!" -ForegroundColor Green
     }
     exit 0
 }
@@ -169,9 +169,9 @@ if ($Status) {
     
     foreach ($component in $v4Components) {
         if (Test-Path ".\ops\$component") {
-            Write-Host "    ✅ $component" -ForegroundColor Green
+            Write-Host "     $component" -ForegroundColor Green
         } else {
-            Write-Host "    ❌ $component" -ForegroundColor Red
+            Write-Host "     $component" -ForegroundColor Red
         }
     }
     
@@ -184,13 +184,13 @@ if ($Benchmark) {
     
     # GPU benchmark
     if (Test-Path ".\ops\GPU-Monitor-V4.ps1") {
-        Write-Status 'Running GPU benchmark...' '⚡'
+        Write-Status 'Running GPU benchmark...' ''
         & ".\ops\GPU-Monitor-V4.ps1" -Benchmark -Duration 30
     }
     
     # RAG benchmark
     if (Test-Path ".\rag\hybrid_rag_v4.py") {
-        Write-Status 'Running RAG benchmark...' '🧠'
+        Write-Status 'Running RAG benchmark...' ''
         python ".\rag\hybrid_rag_v4.py" --benchmark
     }
     
@@ -198,7 +198,7 @@ if ($Benchmark) {
 }
 
 # Default mode - Ultimate Performance
-Write-Host "🚀 Agent Exo-Suit V4.0 'Perfection' - Ultimate Performance Mode" -ForegroundColor Green
+Write-Host " Agent Exo-Suit V4.0 'Perfection' - Ultimate Performance Mode" -ForegroundColor Green
 Write-Host "Production Ready - Full V4 Feature Set" -ForegroundColor Cyan
 
 # Create scratch directory
@@ -264,6 +264,6 @@ try {
     Write-Host "  GPU: Unable to detect" -ForegroundColor Red
 }
 
-Write-Host "✅ Agent Exo-Suit V4.0 'Perfection' - Ultimate Performance Mode Activated!" -ForegroundColor Green
+Write-Host " Agent Exo-Suit V4.0 'Perfection' - Ultimate Performance Mode Activated!" -ForegroundColor Green
 Write-Host "Production Ready - Full V4 Feature Set" -ForegroundColor Cyan
 Write-Host "Use -FullSystem to activate all V4.0 components" -ForegroundColor Yellow

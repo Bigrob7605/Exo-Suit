@@ -1,0 +1,997 @@
+{
+  "chunk_type": "code_samples",
+  "chunk_id": "code_structure_148",
+  "title": "Code Structure Analysis - Part 148",
+  "description": "Code analysis for files 7351-7400",
+  "content": {
+    "files_analyzed": [
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\challenges\\security_challenge_import n_20250805_183845.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\challenges\\security_challenge_import n_20250805_183938.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\challenges\\security_challenge_import n_20250805_184345.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\challenges\\security_challenge_import n_20250805_184436.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\challenges\\security_challenge_import n_20250805_184636.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\generated_tests\\astronomy_test_20250805_192225.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\generated_tests\\bio_test_20250805_172246.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\generated_tests\\bio_test_20250805_172303.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\generated_tests\\bio_test_20250805_172454.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\generated_tests\\bio_test_20250805_185504.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\generated_tests\\bio_test_20250805_190442.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\generated_tests\\bio_test_20250805_191743.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\generated_tests\\bio_test_20250805_192407.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\generated_tests\\chemistry_test_20250805_192140.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\generated_tests\\climate_test_20250805_185546.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\generated_tests\\climate_test_20250805_190531.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\generated_tests\\climate_test_20250805_191818.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\generated_tests\\climate_test_20250805_192448.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\generated_tests\\coding_agentic_test_20250805_185627.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\generated_tests\\coding_agentic_test_20250805_190616.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\generated_tests\\coding_agentic_test_20250805_191900.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\generated_tests\\coding_agentic_test_20250805_192526.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\generated_tests\\math_adversarial_test_20250805_185755.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\generated_tests\\math_adversarial_test_20250805_190737.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\generated_tests\\math_adversarial_test_20250805_192650.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\generated_tests\\math_cli_test_20250805_185826.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\generated_tests\\math_cli_test_20250805_190821.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\generated_tests\\math_cli_test_20250805_192734.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\generated_tests\\math_test_20250805_185710.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\generated_tests\\math_test_20250805_190658.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\generated_tests\\math_test_20250805_191700.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\generated_tests\\math_test_20250805_192056.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\generated_tests\\math_test_20250805_192600.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\generated_tests\\physics_test_20250805_185907.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\generated_tests\\physics_test_20250805_190913.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\generated_tests\\physics_test_20250805_191936.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\generated_tests\\physics_test_20250805_192819.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\generated_tests\\seismology_test_20250805_185943.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\generated_tests\\seismology_test_20250805_190953.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\generated_tests\\seismology_test_20250805_192020.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\generated_tests\\seismology_test_20250805_192903.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\genomes\\comprehensive_ril_agent.json",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\genomes\\math_ril_agent.json",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\genomes\\physics_ril_agent.json",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\genomes\\psychology_ril_agent.json",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\genomes\\simple_test_agent.json",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\genomes\\test_ril_agent.json",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\proposals\\proposal_0d158b8c.json",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\proposals\\proposal_1a177a23.json",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\proposals\\proposal_1ec05bd8.json"
+    ],
+    "structure_data": {
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\challenges\\security_challenge_import n_20250805_183845.py": {
+        "type": "python",
+        "imports": [],
+        "functions": [
+          {
+            "name": "security_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\challenges\\security_challenge_import n_20250805_183938.py": {
+        "type": "python",
+        "imports": [],
+        "functions": [
+          {
+            "name": "security_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\challenges\\security_challenge_import n_20250805_184345.py": {
+        "type": "python",
+        "imports": [],
+        "functions": [
+          {
+            "name": "security_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\challenges\\security_challenge_import n_20250805_184436.py": {
+        "type": "python",
+        "imports": [],
+        "functions": [
+          {
+            "name": "security_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\challenges\\security_challenge_import n_20250805_184636.py": {
+        "type": "python",
+        "imports": [],
+        "functions": [
+          {
+            "name": "security_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 59
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\generated_tests\\astronomy_test_20250805_192225.py": {
+        "type": "python",
+        "imports": [
+          "hashlib",
+          "typing.Any",
+          "typing.Dict",
+          "numpy"
+        ],
+        "functions": [
+          {
+            "name": "astronomy_bulletproof_test",
+            "line": 7,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 63
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\generated_tests\\bio_test_20250805_172246.py": {
+        "type": "python",
+        "imports": [
+          "hashlib",
+          "typing.Any",
+          "typing.Dict",
+          "numpy"
+        ],
+        "functions": [
+          {
+            "name": "bio_bulletproof_test",
+            "line": 7,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 63
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\generated_tests\\bio_test_20250805_172303.py": {
+        "type": "python",
+        "imports": [
+          "hashlib",
+          "typing.Any",
+          "typing.Dict",
+          "numpy"
+        ],
+        "functions": [
+          {
+            "name": "bio_bulletproof_test",
+            "line": 7,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 63
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\generated_tests\\bio_test_20250805_172454.py": {
+        "type": "python",
+        "imports": [
+          "hashlib",
+          "typing.Any",
+          "typing.Dict",
+          "numpy"
+        ],
+        "functions": [
+          {
+            "name": "bio_bulletproof_test",
+            "line": 7,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 63
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\generated_tests\\bio_test_20250805_185504.py": {
+        "type": "python",
+        "imports": [
+          "hashlib",
+          "typing.Any",
+          "typing.Dict",
+          "numpy"
+        ],
+        "functions": [
+          {
+            "name": "bio_bulletproof_test",
+            "line": 7,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 63
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\generated_tests\\bio_test_20250805_190442.py": {
+        "type": "python",
+        "imports": [
+          "hashlib",
+          "typing.Any",
+          "typing.Dict",
+          "numpy"
+        ],
+        "functions": [
+          {
+            "name": "bio_bulletproof_test",
+            "line": 7,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 63
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\generated_tests\\bio_test_20250805_191743.py": {
+        "type": "python",
+        "imports": [
+          "hashlib",
+          "typing.Any",
+          "typing.Dict",
+          "numpy"
+        ],
+        "functions": [
+          {
+            "name": "bio_bulletproof_test",
+            "line": 7,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 63
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\generated_tests\\bio_test_20250805_192407.py": {
+        "type": "python",
+        "imports": [
+          "hashlib",
+          "typing.Any",
+          "typing.Dict",
+          "numpy"
+        ],
+        "functions": [
+          {
+            "name": "bio_bulletproof_test",
+            "line": 7,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 63
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\generated_tests\\chemistry_test_20250805_192140.py": {
+        "type": "python",
+        "imports": [
+          "hashlib",
+          "typing.Any",
+          "typing.Dict",
+          "numpy"
+        ],
+        "functions": [
+          {
+            "name": "chemistry_bulletproof_test",
+            "line": 7,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 63
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\generated_tests\\climate_test_20250805_185546.py": {
+        "type": "python",
+        "imports": [
+          "hashlib",
+          "typing.Any",
+          "typing.Dict",
+          "numpy"
+        ],
+        "functions": [
+          {
+            "name": "climate_bulletproof_test",
+            "line": 7,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 63
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\generated_tests\\climate_test_20250805_190531.py": {
+        "type": "python",
+        "imports": [
+          "hashlib",
+          "typing.Any",
+          "typing.Dict",
+          "numpy"
+        ],
+        "functions": [
+          {
+            "name": "climate_bulletproof_test",
+            "line": 7,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 63
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\generated_tests\\climate_test_20250805_191818.py": {
+        "type": "python",
+        "imports": [
+          "hashlib",
+          "typing.Any",
+          "typing.Dict",
+          "numpy"
+        ],
+        "functions": [
+          {
+            "name": "climate_bulletproof_test",
+            "line": 7,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 63
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\generated_tests\\climate_test_20250805_192448.py": {
+        "type": "python",
+        "imports": [
+          "hashlib",
+          "typing.Any",
+          "typing.Dict",
+          "numpy"
+        ],
+        "functions": [
+          {
+            "name": "climate_bulletproof_test",
+            "line": 7,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 63
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\generated_tests\\coding_agentic_test_20250805_185627.py": {
+        "type": "python",
+        "imports": [
+          "hashlib",
+          "typing.Any",
+          "typing.Dict",
+          "numpy"
+        ],
+        "functions": [
+          {
+            "name": "coding_agentic_bulletproof_test",
+            "line": 7,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 63
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\generated_tests\\coding_agentic_test_20250805_190616.py": {
+        "type": "python",
+        "imports": [
+          "hashlib",
+          "typing.Any",
+          "typing.Dict",
+          "numpy"
+        ],
+        "functions": [
+          {
+            "name": "coding_agentic_bulletproof_test",
+            "line": 7,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 63
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\generated_tests\\coding_agentic_test_20250805_191900.py": {
+        "type": "python",
+        "imports": [
+          "hashlib",
+          "typing.Any",
+          "typing.Dict",
+          "numpy"
+        ],
+        "functions": [
+          {
+            "name": "coding_agentic_bulletproof_test",
+            "line": 7,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 63
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\generated_tests\\coding_agentic_test_20250805_192526.py": {
+        "type": "python",
+        "imports": [
+          "hashlib",
+          "typing.Any",
+          "typing.Dict",
+          "numpy"
+        ],
+        "functions": [
+          {
+            "name": "coding_agentic_bulletproof_test",
+            "line": 7,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 63
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\generated_tests\\math_adversarial_test_20250805_185755.py": {
+        "type": "python",
+        "imports": [
+          "hashlib",
+          "typing.Any",
+          "typing.Dict",
+          "numpy"
+        ],
+        "functions": [
+          {
+            "name": "math_adversarial_bulletproof_test",
+            "line": 7,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 63
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\generated_tests\\math_adversarial_test_20250805_190737.py": {
+        "type": "python",
+        "imports": [
+          "hashlib",
+          "typing.Any",
+          "typing.Dict",
+          "numpy"
+        ],
+        "functions": [
+          {
+            "name": "math_adversarial_bulletproof_test",
+            "line": 7,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 63
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\generated_tests\\math_adversarial_test_20250805_192650.py": {
+        "type": "python",
+        "imports": [
+          "hashlib",
+          "typing.Any",
+          "typing.Dict",
+          "numpy"
+        ],
+        "functions": [
+          {
+            "name": "math_adversarial_bulletproof_test",
+            "line": 7,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 63
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\generated_tests\\math_cli_test_20250805_185826.py": {
+        "type": "python",
+        "imports": [
+          "hashlib",
+          "typing.Any",
+          "typing.Dict",
+          "numpy"
+        ],
+        "functions": [
+          {
+            "name": "math_cli_bulletproof_test",
+            "line": 7,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 63
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\generated_tests\\math_cli_test_20250805_190821.py": {
+        "type": "python",
+        "imports": [
+          "hashlib",
+          "typing.Any",
+          "typing.Dict",
+          "numpy"
+        ],
+        "functions": [
+          {
+            "name": "math_cli_bulletproof_test",
+            "line": 7,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 63
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\generated_tests\\math_cli_test_20250805_192734.py": {
+        "type": "python",
+        "imports": [
+          "hashlib",
+          "typing.Any",
+          "typing.Dict",
+          "numpy"
+        ],
+        "functions": [
+          {
+            "name": "math_cli_bulletproof_test",
+            "line": 7,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 63
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\generated_tests\\math_test_20250805_185710.py": {
+        "type": "python",
+        "imports": [
+          "hashlib",
+          "typing.Any",
+          "typing.Dict",
+          "numpy"
+        ],
+        "functions": [
+          {
+            "name": "math_bulletproof_test",
+            "line": 7,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 63
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\generated_tests\\math_test_20250805_190658.py": {
+        "type": "python",
+        "imports": [
+          "hashlib",
+          "typing.Any",
+          "typing.Dict",
+          "numpy"
+        ],
+        "functions": [
+          {
+            "name": "math_bulletproof_test",
+            "line": 7,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 63
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\generated_tests\\math_test_20250805_191700.py": {
+        "type": "python",
+        "imports": [
+          "hashlib",
+          "typing.Any",
+          "typing.Dict",
+          "numpy"
+        ],
+        "functions": [
+          {
+            "name": "math_bulletproof_test",
+            "line": 7,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 63
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\generated_tests\\math_test_20250805_192056.py": {
+        "type": "python",
+        "imports": [
+          "hashlib",
+          "typing.Any",
+          "typing.Dict",
+          "numpy"
+        ],
+        "functions": [
+          {
+            "name": "math_bulletproof_test",
+            "line": 7,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 63
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\generated_tests\\math_test_20250805_192600.py": {
+        "type": "python",
+        "imports": [
+          "hashlib",
+          "typing.Any",
+          "typing.Dict",
+          "numpy"
+        ],
+        "functions": [
+          {
+            "name": "math_bulletproof_test",
+            "line": 7,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 63
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\generated_tests\\physics_test_20250805_185907.py": {
+        "type": "python",
+        "imports": [
+          "hashlib",
+          "typing.Any",
+          "typing.Dict",
+          "numpy"
+        ],
+        "functions": [
+          {
+            "name": "physics_bulletproof_test",
+            "line": 7,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 63
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\generated_tests\\physics_test_20250805_190913.py": {
+        "type": "python",
+        "imports": [
+          "hashlib",
+          "typing.Any",
+          "typing.Dict",
+          "numpy"
+        ],
+        "functions": [
+          {
+            "name": "physics_bulletproof_test",
+            "line": 7,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 63
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\generated_tests\\physics_test_20250805_191936.py": {
+        "type": "python",
+        "imports": [
+          "hashlib",
+          "typing.Any",
+          "typing.Dict",
+          "numpy"
+        ],
+        "functions": [
+          {
+            "name": "physics_bulletproof_test",
+            "line": 7,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 63
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\generated_tests\\physics_test_20250805_192819.py": {
+        "type": "python",
+        "imports": [
+          "hashlib",
+          "typing.Any",
+          "typing.Dict",
+          "numpy"
+        ],
+        "functions": [
+          {
+            "name": "physics_bulletproof_test",
+            "line": 7,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 63
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\generated_tests\\seismology_test_20250805_185943.py": {
+        "type": "python",
+        "imports": [
+          "hashlib",
+          "typing.Any",
+          "typing.Dict",
+          "numpy"
+        ],
+        "functions": [
+          {
+            "name": "seismology_bulletproof_test",
+            "line": 7,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 63
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\generated_tests\\seismology_test_20250805_190953.py": {
+        "type": "python",
+        "imports": [
+          "hashlib",
+          "typing.Any",
+          "typing.Dict",
+          "numpy"
+        ],
+        "functions": [
+          {
+            "name": "seismology_bulletproof_test",
+            "line": 7,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 63
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\generated_tests\\seismology_test_20250805_192020.py": {
+        "type": "python",
+        "imports": [
+          "hashlib",
+          "typing.Any",
+          "typing.Dict",
+          "numpy"
+        ],
+        "functions": [
+          {
+            "name": "seismology_bulletproof_test",
+            "line": 7,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 63
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\generated_tests\\seismology_test_20250805_192903.py": {
+        "type": "python",
+        "imports": [
+          "hashlib",
+          "typing.Any",
+          "typing.Dict",
+          "numpy"
+        ],
+        "functions": [
+          {
+            "name": "seismology_bulletproof_test",
+            "line": 7,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 63
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\genomes\\comprehensive_ril_agent.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "description",
+          "instructions",
+          "tools",
+          "handoffs",
+          "safety_level",
+          "model_settings",
+          "created_at",
+          "version"
+        ],
+        "line_count": 39
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\genomes\\math_ril_agent.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "description",
+          "instructions",
+          "tools",
+          "handoffs",
+          "safety_level",
+          "model_settings",
+          "created_at",
+          "version"
+        ],
+        "line_count": 41
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\genomes\\physics_ril_agent.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "description",
+          "instructions",
+          "tools",
+          "handoffs",
+          "safety_level",
+          "model_settings",
+          "created_at",
+          "version"
+        ],
+        "line_count": 41
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\genomes\\psychology_ril_agent.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "description",
+          "instructions",
+          "tools",
+          "handoffs",
+          "safety_level",
+          "model_settings",
+          "created_at",
+          "version"
+        ],
+        "line_count": 41
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\genomes\\simple_test_agent.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "description",
+          "instructions",
+          "tools",
+          "handoffs",
+          "safety_level",
+          "model_settings",
+          "created_at",
+          "version"
+        ],
+        "line_count": 39
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\genomes\\test_ril_agent.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "description",
+          "instructions",
+          "tools",
+          "handoffs",
+          "safety_level",
+          "model_settings",
+          "created_at",
+          "version"
+        ],
+        "line_count": 39
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\proposals\\proposal_0d158b8c.json": {
+        "type": "json",
+        "keys": [
+          "hash",
+          "timestamp",
+          "domain",
+          "type",
+          "code",
+          "description",
+          "status",
+          "reviewer",
+          "approved"
+        ],
+        "line_count": 11
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\proposals\\proposal_1a177a23.json": {
+        "type": "json",
+        "keys": [
+          "hash",
+          "timestamp",
+          "domain",
+          "type",
+          "code",
+          "description",
+          "status",
+          "reviewer",
+          "approved"
+        ],
+        "line_count": 11
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141606\\kai_core\\proposals\\proposal_1ec05bd8.json": {
+        "type": "json",
+        "keys": [
+          "hash",
+          "timestamp",
+          "domain",
+          "type",
+          "code",
+          "description",
+          "status",
+          "reviewer",
+          "approved"
+        ],
+        "line_count": 11
+      }
+    }
+  },
+  "estimated_tokens": 1176.5,
+  "related_chunks": [
+    "v5_core_systems",
+    "legacy_v1_v4_systems"
+  ]
+}

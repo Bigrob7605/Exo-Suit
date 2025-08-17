@@ -344,7 +344,7 @@ function Main {
                 if ($Status) {
                     Write-Log "DeepSpeed Status Report:" "INFO"
                     $Status.GetEnumerator() | ForEach-Object {
-                        $StatusIcon = if ($_.Value) { "✅" } else { "❌" }
+                        $StatusIcon = if ($_.Value) { "" } else { "" }
                         Write-Log "  $StatusIcon $($_.Key): $($_.Value)" "INFO"
                     }
                 } else {

@@ -56,7 +56,7 @@ $V5Profiles = @{
 
 # ===== V5.0 SYSTEM DETECTION =====
 function Get-V5SystemCapabilities {
-    Write-Host "🔍 V5.0 System Analysis - Detecting Hidden Potential..." -ForegroundColor Cyan
+    Write-Host " V5.0 System Analysis - Detecting Hidden Potential..." -ForegroundColor Cyan
     
     try {
         # CPU Analysis
@@ -86,7 +86,7 @@ function Get-V5SystemCapabilities {
             OptimizableVRAM = 7.5  # GB - leave some for system
         }
         
-        Write-Host "✅ V5.0 System Analysis Complete!" -ForegroundColor Green
+        Write-Host " V5.0 System Analysis Complete!" -ForegroundColor Green
         Write-Host "   CPU: $($cpuInfo.Cores)C/$($cpuInfo.Threads)T @ $($cpuInfo.BaseSpeed)MHz (Max Boost: $($cpuInfo.MaxBoost)MHz)" -ForegroundColor Yellow
         Write-Host "   RAM: $($memoryInfo.TotalGB)GB Total, $($memoryInfo.AvailableGB)GB Available, $($memoryInfo.OptimizableGB)GB Optimizable" -ForegroundColor Yellow
         Write-Host "   GPU: $($gpuInfo.Name) ($($gpuInfo.VRAM)GB VRAM, Compute Cap $($gpuInfo.ComputeCap))" -ForegroundColor Yellow
@@ -98,7 +98,7 @@ function Get-V5SystemCapabilities {
         }
     }
     catch {
-        Write-Host "❌ V5.0 System Analysis Failed: $($_.Exception.Message)" -ForegroundColor Red
+        Write-Host " V5.0 System Analysis Failed: $($_.Exception.Message)" -ForegroundColor Red
         return $null
     }
 }
@@ -107,35 +107,35 @@ function Get-V5SystemCapabilities {
 function Optimize-V5CPUPerformance {
     param($SystemInfo, $Profile)
     
-    Write-Host "🚀 V5.0 CPU Overclocking - Unlocking Hidden Performance..." -ForegroundColor Cyan
+    Write-Host " V5.0 CPU Overclocking - Unlocking Hidden Performance..." -ForegroundColor Cyan
     
     try {
         # Set process priority to maximum
         $process = Get-Process -Id $PID
         $process.PriorityClass = $Profile.Priority
-        Write-Host "   ✅ Process Priority: $($Profile.Priority)" -ForegroundColor Green
+        Write-Host "    Process Priority: $($Profile.Priority)" -ForegroundColor Green
         
         # Optimize CPU affinity for maximum performance
         $cpuCount = $SystemInfo.CPU.Threads
         $process.ProcessorAffinity = [math]::Pow(2, $cpuCount) - 1  # Use all CPU cores
-        Write-Host "   ✅ CPU Affinity: All $cpuCount threads" -ForegroundColor Green
+        Write-Host "    CPU Affinity: All $cpuCount threads" -ForegroundColor Green
         
         # Set thread priority (using valid priority levels)
         $threads = $process.Threads
         foreach ($thread in $threads) {
             try {
                 $thread.PriorityLevel = 15  # Above Normal priority (valid range: 0-31)
-                Write-Host "   ✅ Thread Priority: Above Normal (15)" -ForegroundColor Green
+                Write-Host "    Thread Priority: Above Normal (15)" -ForegroundColor Green
             } catch {
-                Write-Host "   ⚠️  Thread Priority: Normal (priority adjustment not available)" -ForegroundColor Yellow
+                Write-Host "     Thread Priority: Normal (priority adjustment not available)" -ForegroundColor Yellow
             }
         }
         
-        Write-Host "✅ V5.0 CPU Overclocking Complete!" -ForegroundColor Green
+        Write-Host " V5.0 CPU Overclocking Complete!" -ForegroundColor Green
         return $true
     }
     catch {
-        Write-Host "❌ V5.0 CPU Overclocking Failed: $($_.Exception.Message)" -ForegroundColor Red
+        Write-Host " V5.0 CPU Overclocking Failed: $($_.Exception.Message)" -ForegroundColor Red
         return $false
     }
 }
@@ -144,7 +144,7 @@ function Optimize-V5CPUPerformance {
 function Optimize-V5MemoryPerformance {
     param($SystemInfo, $Profile)
     
-    Write-Host "🧠 V5.0 Memory Overclocking - Unleashing RAM Beast Mode..." -ForegroundColor Cyan
+    Write-Host " V5.0 Memory Overclocking - Unleashing RAM Beast Mode..." -ForegroundColor Cyan
     
     try {
         # Calculate optimal cache size (leave 4GB for system for maximum performance)
@@ -158,19 +158,19 @@ function Optimize-V5MemoryPerformance {
             BatchSize = $Profile.Batch_Size
         }
         
-        Write-Host "   ✅ Cache Size: $optimalCache GB" -ForegroundColor Green
-        Write-Host "   ✅ Workers: $($Profile.Workers)" -ForegroundColor Green
-        Write-Host "   ✅ Prefetch: $($Profile.Prefetch)" -ForegroundColor Green
-        Write-Host "   ✅ Batch Size: $($Profile.Batch_Size)" -ForegroundColor Green
+        Write-Host "    Cache Size: $optimalCache GB" -ForegroundColor Green
+        Write-Host "    Workers: $($Profile.Workers)" -ForegroundColor Green
+        Write-Host "    Prefetch: $($Profile.Prefetch)" -ForegroundColor Green
+        Write-Host "    Batch Size: $($Profile.Batch_Size)" -ForegroundColor Green
         
         # Update RAG configuration with V5.0 settings
         Update-V5RAGConfiguration -Settings $memorySettings
         
-        Write-Host "✅ V5.0 Memory Overclocking Complete!" -ForegroundColor Green
+        Write-Host " V5.0 Memory Overclocking Complete!" -ForegroundColor Green
         return $true
     }
     catch {
-        Write-Host "❌ V5.0 Memory Overclocking Failed: $($_.Exception.Message)" -ForegroundColor Red
+        Write-Host " V5.0 Memory Overclocking Failed: $($_.Exception.Message)" -ForegroundColor Red
         return $false
     }
 }
@@ -179,12 +179,12 @@ function Optimize-V5MemoryPerformance {
 function Optimize-V5GPUPerformance {
     param($SystemInfo, $Profile)
     
-    Write-Host "🎮 V5.0 GPU Overclocking - RTX 4070 Beast Mode Activation..." -ForegroundColor Cyan
+    Write-Host " V5.0 GPU Overclocking - RTX 4070 Beast Mode Activation..." -ForegroundColor Cyan
     
     try {
         # Optimize GPU memory fraction
         $gpuMemoryFraction = $Profile.GPU_Memory
-        Write-Host "   ✅ GPU Memory Fraction: $gpuMemoryFraction" -ForegroundColor Green
+        Write-Host "    GPU Memory Fraction: $gpuMemoryFraction" -ForegroundColor Green
         
         # Set CUDA environment variables for maximum performance
         $env:CUDA_VISIBLE_DEVICES = "0"
@@ -193,16 +193,16 @@ function Optimize-V5GPUPerformance {
         $env:CUDA_CACHE_PATH = "C:\CUDA_Cache"
         $env:CUDA_CACHE_MAXSIZE = "2147483648"  # 2GB cache
         
-        Write-Host "   ✅ CUDA Environment Optimized" -ForegroundColor Green
+        Write-Host "    CUDA Environment Optimized" -ForegroundColor Green
         
         # Update RAG configuration for GPU
         Update-V5RAGConfiguration -GPUMode $true -MemoryFraction $gpuMemoryFraction
         
-        Write-Host "✅ V5.0 GPU Overclocking Complete!" -ForegroundColor Green
+        Write-Host " V5.0 GPU Overclocking Complete!" -ForegroundColor Green
         return $true
     }
     catch {
-        Write-Host "❌ V5.0 GPU Overclocking Failed: $($_.Exception.Message)" -ForegroundColor Red
+        Write-Host " V5.0 GPU Overclocking Failed: $($_.Exception.Message)" -ForegroundColor Red
         return $false
     }
 }
@@ -258,11 +258,11 @@ v5_optimizations:
             $config += $v5Section
             Set-Content $configPath $config -Encoding UTF8
             
-            Write-Host "   ✅ RAG Configuration Updated with V5.0 Settings" -ForegroundColor Green
+            Write-Host "    RAG Configuration Updated with V5.0 Settings" -ForegroundColor Green
         }
     }
     catch {
-        Write-Host "   ⚠️  RAG Configuration Update Failed: $($_.Exception.Message)" -ForegroundColor Yellow
+        Write-Host "     RAG Configuration Update Failed: $($_.Exception.Message)" -ForegroundColor Yellow
     }
 }
 
@@ -270,7 +270,7 @@ v5_optimizations:
 function Start-V5PerformanceMonitoring {
     param($Profile)
     
-    Write-Host "📊 V5.0 Performance Monitoring - Real-time Beast Mode Metrics..." -ForegroundColor Cyan
+    Write-Host " V5.0 Performance Monitoring - Real-time Beast Mode Metrics..." -ForegroundColor Cyan
     
     try {
         # Start background monitoring
@@ -289,11 +289,11 @@ function Start-V5PerformanceMonitoring {
             }
         } -ArgumentList $Mode
         
-        Write-Host "✅ V5.0 Performance Monitoring Started (Job ID: $($monitoringJob.Id))" -ForegroundColor Green
+        Write-Host " V5.0 Performance Monitoring Started (Job ID: $($monitoringJob.Id))" -ForegroundColor Green
         return $monitoringJob
     }
     catch {
-        Write-Host "❌ V5.0 Performance Monitoring Failed: $($_.Exception.Message)" -ForegroundColor Red
+        Write-Host " V5.0 Performance Monitoring Failed: $($_.Exception.Message)" -ForegroundColor Red
         return $null
     }
 }
@@ -302,7 +302,7 @@ function Start-V5PerformanceMonitoring {
 function Run-V5PerformanceBenchmark {
     param($SystemInfo, $Profile)
     
-    Write-Host "🏆 V5.0 Performance Benchmark - Measuring Beast Mode Results..." -ForegroundColor Cyan
+    Write-Host " V5.0 Performance Benchmark - Measuring Beast Mode Results..." -ForegroundColor Cyan
     
     try {
         $startTime = Get-Date
@@ -343,7 +343,7 @@ function Run-V5PerformanceBenchmark {
             Overall_Score = [math]::Round((1000000 / $cpuTest.TotalSeconds + 1000000 / $memoryTest.TotalSeconds) / 2, 0)
         }
         
-        Write-Host "✅ V5.0 Performance Benchmark Complete!" -ForegroundColor Green
+        Write-Host " V5.0 Performance Benchmark Complete!" -ForegroundColor Green
         Write-Host "   CPU Score: $($benchmarkResults.Performance_Metrics.CPU_Speed)" -ForegroundColor Yellow
         Write-Host "   Memory Score: $($benchmarkResults.Performance_Metrics.Memory_Speed)" -ForegroundColor Yellow
         Write-Host "   Overall Score: $($benchmarkResults.Performance_Metrics.Overall_Score)" -ForegroundColor Yellow
@@ -353,12 +353,12 @@ function Run-V5PerformanceBenchmark {
         $benchmarkPath = "Testing_Tools\v5_performance_benchmark_$($Mode)_$(Get-Date -Format 'yyyyMMdd_HHmmss').json"
         $benchmarkResults | ConvertTo-Json -Depth 10 | Set-Content $benchmarkPath
         
-        Write-Host "   💾 Benchmark Results Saved: $benchmarkPath" -ForegroundColor Green
+        Write-Host "    Benchmark Results Saved: $benchmarkPath" -ForegroundColor Green
         
         return $benchmarkResults
     }
     catch {
-        Write-Host "❌ V5.0 Performance Benchmark Failed: $($_.Exception.Message)" -ForegroundColor Red
+        Write-Host " V5.0 Performance Benchmark Failed: $($_.Exception.Message)" -ForegroundColor Red
         return $null
     }
 }
@@ -367,7 +367,7 @@ function Run-V5PerformanceBenchmark {
 function Start-V5UltimateOverclock {
     param($Mode)
     
-    Write-Host "🚀 AGENT EXO-SUIT V5.0 'BUILDER OF DREAMS' - ULTIMATE OVERCLOCK SPEED BOOST" -ForegroundColor Magenta
+    Write-Host " AGENT EXO-SUIT V5.0 'BUILDER OF DREAMS' - ULTIMATE OVERCLOCK SPEED BOOST" -ForegroundColor Magenta
     Write-Host "==================================================================================" -ForegroundColor Magenta
     Write-Host "Mode: $Mode | Benchmark: $Benchmark | Monitor: $Monitor" -ForegroundColor Cyan
     Write-Host ""
@@ -375,34 +375,34 @@ function Start-V5UltimateOverclock {
     # Get system capabilities
     $systemInfo = Get-V5SystemCapabilities
     if (-not $systemInfo) {
-        Write-Host "❌ Cannot proceed without system analysis" -ForegroundColor Red
+        Write-Host " Cannot proceed without system analysis" -ForegroundColor Red
         exit 1
     }
     
     # Get profile
     $profile = $V5Profiles[$Mode]
     if (-not $profile) {
-        Write-Host "❌ Invalid mode: $Mode" -ForegroundColor Red
+        Write-Host " Invalid mode: $Mode" -ForegroundColor Red
         exit 1
     }
     
-    Write-Host "🎯 Applying $Mode Mode: $($profile.Description)" -ForegroundColor Yellow
+    Write-Host " Applying $Mode Mode: $($profile.Description)" -ForegroundColor Yellow
     Write-Host ""
     
     # Apply V5.0 optimizations
     $optimizations = @()
     
-    Write-Host "⚡ V5.0 CPU Overclocking..." -ForegroundColor Cyan
+    Write-Host " V5.0 CPU Overclocking..." -ForegroundColor Cyan
     if (Optimize-V5CPUPerformance -SystemInfo $systemInfo -Profile $profile) {
         $optimizations += "CPU Overclocking"
     }
     
-    Write-Host "🧠 V5.0 Memory Overclocking..." -ForegroundColor Cyan
+    Write-Host " V5.0 Memory Overclocking..." -ForegroundColor Cyan
     if (Optimize-V5MemoryPerformance -SystemInfo $systemInfo -Profile $profile) {
         $optimizations += "Memory Overclocking"
     }
     
-    Write-Host "🎮 V5.0 GPU Overclocking..." -ForegroundColor Cyan
+    Write-Host " V5.0 GPU Overclocking..." -ForegroundColor Cyan
     if (Optimize-V5GPUPerformance -SystemInfo $systemInfo -Profile $profile) {
         $optimizations += "GPU Overclocking"
     }
@@ -421,7 +421,7 @@ function Start-V5UltimateOverclock {
     
     # Summary
     Write-Host ""
-    Write-Host "📊 V5.0 Ultimate Overclock Summary" -ForegroundColor Magenta
+    Write-Host " V5.0 Ultimate Overclock Summary" -ForegroundColor Magenta
     Write-Host "=====================================" -ForegroundColor Magenta
     Write-Host "Mode: $Mode" -ForegroundColor Yellow
     $duration = (Get-Date) - $startTime
@@ -431,21 +431,21 @@ function Start-V5UltimateOverclock {
     Write-Host "Warnings: 0" -ForegroundColor Green
     Write-Host ""
     
-    Write-Host "✅ Applied Optimizations:" -ForegroundColor Green
+    Write-Host " Applied Optimizations:" -ForegroundColor Green
     foreach ($opt in $optimizations) {
         Write-Host "   • $opt" -ForegroundColor Green
     }
     
     Write-Host ""
-    Write-Host "🎯 V5.0 Ultimate Overclock Speed Boost completed successfully!" -ForegroundColor Green
+    Write-Host " V5.0 Ultimate Overclock Speed Boost completed successfully!" -ForegroundColor Green
     Write-Host "Your Agent Exo-Suit V5.0 should now be running at $Mode level performance!" -ForegroundColor Green
     Write-Host ""
-    Write-Host "💡 V5.0 Tip: This is just a preview of what's coming. The real V5.0 will be 10x faster." -ForegroundColor Cyan
+    Write-Host " V5.0 Tip: This is just a preview of what's coming. The real V5.0 will be 10x faster." -ForegroundColor Cyan
     
     # Cleanup
     if ($monitoringJob) {
         Write-Host ""
-        Write-Host "📊 Performance monitoring is running in background (Job ID: $($monitoringJob.Id))" -ForegroundColor Yellow
+        Write-Host " Performance monitoring is running in background (Job ID: $($monitoringJob.Id))" -ForegroundColor Yellow
         Write-Host "To stop monitoring: Stop-Job $($monitoringJob.Id)" -ForegroundColor Yellow
     }
     
@@ -470,7 +470,7 @@ try {
     }
 }
 catch {
-    Write-Host "❌ V5.0 Ultimate Overclock Failed: $($_.Exception.Message)" -ForegroundColor Red
+    Write-Host " V5.0 Ultimate Overclock Failed: $($_.Exception.Message)" -ForegroundColor Red
     Write-Host "Stack Trace: $($_.ScriptStackTrace)" -ForegroundColor Red
     exit 1
 }

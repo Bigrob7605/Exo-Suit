@@ -1,0 +1,917 @@
+{
+  "chunk_type": "code_samples",
+  "chunk_id": "code_structure_64",
+  "title": "Code Structure Analysis - Part 64",
+  "description": "Code analysis for files 3151-3200",
+  "content": {
+    "files_analyzed": [
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_174109.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_174110.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_174111.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_174113.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_174114.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_174115.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_174304.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_174306.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_174307.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_174308.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_174309.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_174310.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_174311.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_174313.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_174335.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_174336.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_174337.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_174339.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_174340.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_174341.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_174342.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_174343.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_174426.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_174427.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_174428.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_174429.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_174431.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_174432.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_174433.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_174434.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_175815.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_175921.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_180051.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_180125.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_181015.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_182458.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_182537.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_182716.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_182804.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_182844.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_183024.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_183448.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_183528.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_183615.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_183644.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_183752.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_183845.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_183938.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_184345.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_184436.py"
+    ],
+    "structure_data": {
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_174109.py": {
+        "type": "python",
+        "imports": [
+          "scipy.stats"
+        ],
+        "functions": [
+          {
+            "name": "p_hacking_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 69
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_174110.py": {
+        "type": "python",
+        "imports": [
+          "scipy.stats"
+        ],
+        "functions": [
+          {
+            "name": "p_hacking_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 69
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_174111.py": {
+        "type": "python",
+        "imports": [
+          "scipy.stats"
+        ],
+        "functions": [
+          {
+            "name": "p_hacking_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 69
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_174113.py": {
+        "type": "python",
+        "imports": [
+          "scipy.stats"
+        ],
+        "functions": [
+          {
+            "name": "p_hacking_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 69
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_174114.py": {
+        "type": "python",
+        "imports": [
+          "scipy.stats"
+        ],
+        "functions": [
+          {
+            "name": "p_hacking_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 69
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_174115.py": {
+        "type": "python",
+        "imports": [
+          "scipy.stats"
+        ],
+        "functions": [
+          {
+            "name": "p_hacking_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 69
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_174304.py": {
+        "type": "python",
+        "imports": [
+          "scipy.stats"
+        ],
+        "functions": [
+          {
+            "name": "p_hacking_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 69
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_174306.py": {
+        "type": "python",
+        "imports": [
+          "scipy.stats"
+        ],
+        "functions": [
+          {
+            "name": "p_hacking_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 69
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_174307.py": {
+        "type": "python",
+        "imports": [
+          "scipy.stats"
+        ],
+        "functions": [
+          {
+            "name": "p_hacking_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 69
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_174308.py": {
+        "type": "python",
+        "imports": [
+          "scipy.stats"
+        ],
+        "functions": [
+          {
+            "name": "p_hacking_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 69
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_174309.py": {
+        "type": "python",
+        "imports": [
+          "scipy.stats"
+        ],
+        "functions": [
+          {
+            "name": "p_hacking_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 69
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_174310.py": {
+        "type": "python",
+        "imports": [
+          "scipy.stats"
+        ],
+        "functions": [
+          {
+            "name": "p_hacking_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 69
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_174311.py": {
+        "type": "python",
+        "imports": [
+          "scipy.stats"
+        ],
+        "functions": [
+          {
+            "name": "p_hacking_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 69
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_174313.py": {
+        "type": "python",
+        "imports": [
+          "scipy.stats"
+        ],
+        "functions": [
+          {
+            "name": "p_hacking_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 69
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_174335.py": {
+        "type": "python",
+        "imports": [
+          "scipy.stats"
+        ],
+        "functions": [
+          {
+            "name": "p_hacking_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 69
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_174336.py": {
+        "type": "python",
+        "imports": [
+          "scipy.stats"
+        ],
+        "functions": [
+          {
+            "name": "p_hacking_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 69
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_174337.py": {
+        "type": "python",
+        "imports": [
+          "scipy.stats"
+        ],
+        "functions": [
+          {
+            "name": "p_hacking_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 69
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_174339.py": {
+        "type": "python",
+        "imports": [
+          "scipy.stats"
+        ],
+        "functions": [
+          {
+            "name": "p_hacking_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 69
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_174340.py": {
+        "type": "python",
+        "imports": [
+          "scipy.stats"
+        ],
+        "functions": [
+          {
+            "name": "p_hacking_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 69
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_174341.py": {
+        "type": "python",
+        "imports": [
+          "scipy.stats"
+        ],
+        "functions": [
+          {
+            "name": "p_hacking_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 69
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_174342.py": {
+        "type": "python",
+        "imports": [
+          "scipy.stats"
+        ],
+        "functions": [
+          {
+            "name": "p_hacking_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 69
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_174343.py": {
+        "type": "python",
+        "imports": [
+          "scipy.stats"
+        ],
+        "functions": [
+          {
+            "name": "p_hacking_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 69
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_174426.py": {
+        "type": "python",
+        "imports": [
+          "scipy.stats"
+        ],
+        "functions": [
+          {
+            "name": "p_hacking_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 69
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_174427.py": {
+        "type": "python",
+        "imports": [
+          "scipy.stats"
+        ],
+        "functions": [
+          {
+            "name": "p_hacking_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 69
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_174428.py": {
+        "type": "python",
+        "imports": [
+          "scipy.stats"
+        ],
+        "functions": [
+          {
+            "name": "p_hacking_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 69
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_174429.py": {
+        "type": "python",
+        "imports": [
+          "scipy.stats"
+        ],
+        "functions": [
+          {
+            "name": "p_hacking_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 69
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_174431.py": {
+        "type": "python",
+        "imports": [
+          "scipy.stats"
+        ],
+        "functions": [
+          {
+            "name": "p_hacking_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 69
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_174432.py": {
+        "type": "python",
+        "imports": [
+          "scipy.stats"
+        ],
+        "functions": [
+          {
+            "name": "p_hacking_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 69
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_174433.py": {
+        "type": "python",
+        "imports": [
+          "scipy.stats"
+        ],
+        "functions": [
+          {
+            "name": "p_hacking_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 69
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_174434.py": {
+        "type": "python",
+        "imports": [
+          "scipy.stats"
+        ],
+        "functions": [
+          {
+            "name": "p_hacking_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 69
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_175815.py": {
+        "type": "python",
+        "imports": [
+          "scipy.stats"
+        ],
+        "functions": [
+          {
+            "name": "p_hacking_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 69
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_175921.py": {
+        "type": "python",
+        "imports": [
+          "scipy.stats"
+        ],
+        "functions": [
+          {
+            "name": "p_hacking_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 69
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_180051.py": {
+        "type": "python",
+        "imports": [
+          "scipy.stats"
+        ],
+        "functions": [
+          {
+            "name": "p_hacking_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 69
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_180125.py": {
+        "type": "python",
+        "imports": [
+          "scipy.stats"
+        ],
+        "functions": [
+          {
+            "name": "p_hacking_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 69
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_181015.py": {
+        "type": "python",
+        "imports": [
+          "scipy.stats"
+        ],
+        "functions": [
+          {
+            "name": "p_hacking_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 69
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_182458.py": {
+        "type": "python",
+        "imports": [
+          "scipy.stats"
+        ],
+        "functions": [
+          {
+            "name": "p_hacking_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 69
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_182537.py": {
+        "type": "python",
+        "imports": [
+          "scipy.stats"
+        ],
+        "functions": [
+          {
+            "name": "p_hacking_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 69
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_182716.py": {
+        "type": "python",
+        "imports": [
+          "scipy.stats"
+        ],
+        "functions": [
+          {
+            "name": "p_hacking_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 69
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_182804.py": {
+        "type": "python",
+        "imports": [
+          "scipy.stats"
+        ],
+        "functions": [
+          {
+            "name": "p_hacking_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 69
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_182844.py": {
+        "type": "python",
+        "imports": [
+          "scipy.stats"
+        ],
+        "functions": [
+          {
+            "name": "p_hacking_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 69
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_183024.py": {
+        "type": "python",
+        "imports": [
+          "scipy.stats"
+        ],
+        "functions": [
+          {
+            "name": "p_hacking_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 69
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_183448.py": {
+        "type": "python",
+        "imports": [
+          "scipy.stats"
+        ],
+        "functions": [
+          {
+            "name": "p_hacking_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 69
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_183528.py": {
+        "type": "python",
+        "imports": [
+          "scipy.stats"
+        ],
+        "functions": [
+          {
+            "name": "p_hacking_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 69
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_183615.py": {
+        "type": "python",
+        "imports": [
+          "scipy.stats"
+        ],
+        "functions": [
+          {
+            "name": "p_hacking_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 69
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_183644.py": {
+        "type": "python",
+        "imports": [
+          "scipy.stats"
+        ],
+        "functions": [
+          {
+            "name": "p_hacking_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 69
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_183752.py": {
+        "type": "python",
+        "imports": [
+          "scipy.stats"
+        ],
+        "functions": [
+          {
+            "name": "p_hacking_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 69
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_183845.py": {
+        "type": "python",
+        "imports": [
+          "scipy.stats"
+        ],
+        "functions": [
+          {
+            "name": "p_hacking_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 69
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_183938.py": {
+        "type": "python",
+        "imports": [
+          "scipy.stats"
+        ],
+        "functions": [
+          {
+            "name": "p_hacking_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 69
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_184345.py": {
+        "type": "python",
+        "imports": [
+          "scipy.stats"
+        ],
+        "functions": [
+          {
+            "name": "p_hacking_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 69
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093007\\kai_core\\challenges\\p_hacking_challenge_import n_20250805_184436.py": {
+        "type": "python",
+        "imports": [
+          "scipy.stats"
+        ],
+        "functions": [
+          {
+            "name": "p_hacking_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 69
+      }
+    }
+  },
+  "estimated_tokens": 1235.0,
+  "related_chunks": [
+    "v5_core_systems",
+    "legacy_v1_v4_systems"
+  ]
+}

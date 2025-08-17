@@ -1,0 +1,22 @@
+{
+  "repositories": [
+    {
+      "name": "Universal Open Science Toolbox With Kai",
+      "path": "C:/My Projects/Universal Open Science Toolbox With Kai",
+      "health_check": "python self_heal_protocol.py",
+      "fire_drill": "python weekly_fire_drill_scheduler.py --run-now",
+      "critical_files": [
+        "self_heal_protocol.py",
+        "weekly_fire_drill_scheduler.py",
+        "brutal_checks_with_self_heal.py"
+      ]
+    }
+  ],
+  "dashboard_url": "",
+  "alert_email": "",
+  "check_interval": 3600,
+  "slack_webhook": "",
+  "discord_webhook": "",
+  "auto_fix": false,
+  "evidence_retention_days": 30
+}

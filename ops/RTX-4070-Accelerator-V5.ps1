@@ -432,7 +432,7 @@ function Main {
                 $Capabilities = Test-GPUCapabilities
                 Write-Log "RTX 4070 Status Report:" "INFO"
                 $Capabilities.GetEnumerator() | ForEach-Object {
-                    $StatusIcon = if ($_.Value) { "✅" } else { "❌" }
+                    $StatusIcon = if ($_.Value) { "" } else { "" }
                     Write-Log "  $StatusIcon $($_.Key): $($_.Value)" "INFO"
                 }
                 return $true

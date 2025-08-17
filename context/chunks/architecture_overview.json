@@ -1,0 +1,26 @@
+{
+  "chunk_type": "overview",
+  "chunk_id": "architecture_overview",
+  "title": "System Architecture & Design",
+  "description": "High-level system design and component relationships",
+  "content": {
+    "core_components": [
+      "VisionGap Engine - Gap analysis and project alignment",
+      "GPU Push Engine - GPU acceleration and RAG capabilities",
+      "V5 Consolidation Master - System orchestration",
+      "Phoenix Recovery System - System recovery and health",
+      "Advanced Integration Layer - Legacy system integration"
+    ],
+    "system_layers": [
+      "Visual Layer - Mermaid diagrams and visualization",
+      "Cognitive Layer - RAG engine and AI processing",
+      "Operational Layer - Core operational scripts",
+      "Integration Layer - Cursor IDE integration"
+    ]
+  },
+  "estimated_tokens": 2000,
+  "related_chunks": [
+    "core_systems",
+    "dependencies"
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "monitoring_session": {
+    "start_time": 32866.2493105,
+    "total_batches": 3,
+    "duration_seconds": 7.2161985999991884
+  },
+  "metrics": [
+    {
+      "batch_id": 1,
+      "files_in_batch": 2200,
+      "timestamp": 32872.3555921,
+      "batch_duration": 2.2000021999701858e-06,
+      "system": {
+        "cpu_percent": 27.9,
+        "ram_percent": 28.3,
+        "ram_used_gb": 18.0,
+        "ram_available_gb": 45.63,
+        "disk_percent": 0,
+        "disk_free_gb": 0
+      },
+      "gpu": {
+        "load_percent": 7,
+        "memory_percent": 0.0,
+        "temperature": 0.0
+      },
+      "process": {
+        "cpu_percent": 0.0,
+        "memory_mb": 609.49
+      }
+    },
+    {
+      "batch_id": 2,
+      "files_in_batch": 2200,
+      "timestamp": 32872.8251151,
+      "batch_duration": 2.0000006770715117e-06,
+      "system": {
+        "cpu_percent": 16.3,
+        "ram_percent": 28.3,
+        "ram_used_gb": 18.01,
+        "ram_available_gb": 45.62,
+        "disk_percent": 0,
+        "disk_free_gb": 0
+      },
+      "gpu": {
+        "load_percent": 9,
+        "memory_percent": 0.0,
+        "temperature": 0.0
+      },
+      "process": {
+        "cpu_percent": 0.0,
+        "memory_mb": 623.54
+      }
+    },
+    {
+      "batch_id": 3,
+      "files_in_batch": 1200,
+      "timestamp": 32873.232398,
+      "batch_duration": 7.999988156370819e-07,
+      "system": {
+        "cpu_percent": 19.8,
+        "ram_percent": 28.3,
+        "ram_used_gb": 18.02,
+        "ram_available_gb": 45.62,
+        "disk_percent": 0,
+        "disk_free_gb": 0
+      },
+      "gpu": {
+        "load_percent": 9,
+        "memory_percent": 0.0,
+        "temperature": 0.0
+      },
+      "process": {
+        "cpu_percent": 0.0,
+        "memory_mb": 638.55
+      }
+    }
+  ],
+  "analysis": {
+    "total_batches": 3,
+    "performance_patterns": [],
+    "bottlenecks": [],
+    "recommendations": []
+  }
+}

@@ -1,0 +1,31 @@
+graph TB
+    subgraph "Exo-Suit V5 Core"
+        VG[VisionGap Engine]
+        GPU[GPU Push Engine]
+        V5CM[V5 Consolidation Master]
+        PRS[Phoenix Recovery System]
+        AIL[Advanced Integration Layer]
+    end
+    
+    subgraph "Toolbox Systems"
+        UOST[Universal Open Science Toolbox]
+        TT[Testing Tools]
+        LS[Legacy Systems V1-V4]
+    end
+    
+    subgraph "Support Systems"
+        RAG[RAG Engine]
+        Mermaid[Mermaid Visualization]
+        Context[Context Management]
+    end
+    
+    VG --> GPU
+    VG --> V5CM
+    V5CM --> PRS
+    V5CM --> AIL
+    AIL --> UOST
+    AIL --> TT
+    AIL --> LS
+    GPU --> RAG
+    V5CM --> Mermaid
+    AIL --> Context

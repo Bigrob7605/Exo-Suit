@@ -1,0 +1,61 @@
+{
+  "timestamp": "2025-08-16T11:55:02.929934",
+  "system_info": {
+    "cpu": {
+      "cpu_count": 16,
+      "cpu_percent": 15.6
+    },
+    "memory": {
+      "total_gb": 63.64,
+      "available_gb": 44.46,
+      "percent_used": 30.1
+    },
+    "platform": "nt",
+    "python_version": "3.13.5"
+  },
+  "gpu_info": {
+    "pytorch_cuda": {
+      "available": true,
+      "version": "11.8",
+      "device_count": 1,
+      "current_device": 0,
+      "device_name": "NVIDIA GeForce RTX 4070 Laptop GPU",
+      "device_capability": [
+        8,
+        9
+      ],
+      "memory_allocated_gb": 0.0,
+      "memory_reserved_gb": 0.0,
+      "max_memory_gb": 8.0
+    }
+  },
+  "baseline_tests": {
+    "file_counting": {
+      "total_files": 188697,
+      "time_ms": 1420.993,
+      "files_per_second": 132792.34
+    },
+    "directory_scanning": {
+      "total_dirs": 19100,
+      "time_ms": 1028.908,
+      "dirs_per_second": 18563.37
+    }
+  },
+  "performance_metrics": {
+    "memory_operations": {
+      "allocation_time_ms": 2.818,
+      "access_time_ms": 4.221,
+      "cleanup_time_ms": 0.929,
+      "total_memory_operations_ms": 7.968
+    },
+    "gpu_operations": {
+      "available": true,
+      "allocation_time_ms": 101.67,
+      "computation_time_ms": 88.403,
+      "transfer_time_ms": 1.451,
+      "cleanup_time_ms": 0.041,
+      "total_gpu_operations_ms": 191.566
+    }
+  },
+  "performance_score": 185
+}

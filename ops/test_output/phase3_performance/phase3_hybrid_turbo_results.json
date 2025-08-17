@@ -1,0 +1,60 @@
+{
+  "timestamp": 1755363635.7399867,
+  "test_type": "HYBRID_TURBO_UTILIZE_ALL_HARDWARE",
+  "files_processed": 50000,
+  "processing_time_seconds": 16.219,
+  "total_time_seconds": 16.219,
+  "speed_files_per_sec": 3082.86,
+  "baseline_speed": 7973,
+  "improvement_percent": -61.33,
+  "target_speed": 10000,
+  "target_achieved": false,
+  "phase_1_completed": false,
+  "turbo_success": false,
+  "optimizations_applied": [
+    "Phase 1 I/O optimizations (memory mapping, streaming)",
+    "Simplified content analysis (basic patterns only)",
+    "TURBO GPU batch processing (larger tensors, more operations)",
+    "Maximum worker count (22 \u2192 32 workers)",
+    "Aggressive batch sizes (1,200 \u2192 2,000)",
+    "Memory-intensive operations (utilize 64GB RAM)",
+    "Aggressive GPU utilization (utilize RTX 4070)",
+    "Disk I/O optimization (utilize NVMe SSD)"
+  ],
+  "turbo_features": {
+    "io_optimizations": "Enabled (Phase 1)",
+    "content_analysis": "Simplified (no complex parsing)",
+    "gpu_acceleration": "TURBO batch processing enabled",
+    "system_balance": "Aggressive CPU-GPU-Memory-Disk coordination",
+    "worker_optimization": "32 workers (maximum throughput)",
+    "batch_optimization": "2,000 files per batch (aggressive)",
+    "memory_optimization": "Intensive operations enabled",
+    "gpu_optimization": "Large tensors, multiple operations"
+  },
+  "hardware_challenge": {
+    "workers_used": 32,
+    "cpu_cores": 16,
+    "gpu_available": true,
+    "gpu_device": "cuda"
+  },
+  "content_analysis": {
+    "total_content_size_bytes": 2813818,
+    "file_types_processed": {
+      "log": 8,
+      "python": 6047,
+      "text": 478,
+      "json": 1149,
+      "markdown": 34,
+      "unknown": 37
+    },
+    "average_file_size_bytes": 56.28,
+    "processing_mode": "Hybrid Turbo (Utilize ALL Hardware)"
+  },
+  "performance_metrics": {
+    "files_per_second": 3082.86,
+    "megabytes_per_second": 0.17,
+    "efficiency_score": 38.67,
+    "phase_1_target_achieved": false,
+    "turbo_target_achieved": false
+  }
+}

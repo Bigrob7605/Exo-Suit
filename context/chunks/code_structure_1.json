@@ -1,0 +1,2071 @@
+{
+  "chunk_type": "code_samples",
+  "chunk_id": "code_structure_1",
+  "title": "Code Structure Analysis - Part 1",
+  "description": "Code analysis for files 1-50",
+  "content": {
+    "files_analyzed": [
+      "AgentExoSuitV3.ps1",
+      "AgentExoSuitV4.ps1",
+      "AgentExoSuitV5.ps1",
+      "AgentExoSuitV5_Optimized.ps1",
+      "AgentExoSuitV5_Optimized_Simple.ps1",
+      "analyze_emoji_report.py",
+      "EMOJI_REPORT_20250816_200325.json",
+      "EMOJI_REPORT_20250816_200403.json",
+      "EMOJI_REPORT_20250816_200432.json",
+      "EMOJI_REPORT_20250816_200503.json",
+      "EMOJI_REPORT_20250816_200540.json",
+      "EMOJI_REPORT_20250816_200700.json",
+      "EMOJI_REPORT_20250816_200720.json",
+      "EMOJI_REPORT_20250816_200743.json",
+      "EMOJI_REPORT_20250816_201049.json",
+      "EMOJI_REPORT_20250816_201431.json",
+      "EMOJI_REPORT_20250816_201601.json",
+      "go-big.ps1",
+      "PHASE-4-ULTIMATE-SYSTEM-LAUNCHER.ps1",
+      "PYTHON_EMOJI_REPORT.json",
+      "PYTHON_EMOJI_REPORT_20250816_195050.json",
+      "RUN-ULTIMATE-STRESS-TEST.ps1",
+      "config\\advanced_integration_config.json",
+      "config\\metacore_optimization_config.json",
+      "config\\phoenix_recovery_config.json",
+      "config\\token-upgrade-config.json",
+      "consolidated_work\\MASTER_TASK_LIST.json",
+      "consolidated_work\\PROGRESS_TRACKER.json",
+      "context\\COMPLETE_CONTEXT_20250817_072127.json",
+      "context\\COMPLETE_CONTEXT_20250817_072701.json",
+      "generated_code\\main.py",
+      "generated_code\\SampleClass.py",
+      "generated_code\\sample_function.py",
+      "generated_code\\test_SampleClass.py",
+      "generated_code\\test_sample_function.py",
+      "ops\\ADVANCED_INTEGRATION_LAYER_V5.py",
+      "ops\\context-governor-v5-token-upgrade.ps1",
+      "ops\\context-governor.ps1",
+      "ops\\ContextChunker.py",
+      "ops\\ContextPipeline.py",
+      "ops\\ContextScanner.py",
+      "ops\\ContextValidator.py",
+      "ops\\DeepSpeed-Accelerator-V5.ps1",
+      "ops\\DreamWeaver-Builder-V5.ps1",
+      "ops\\drift-gate.ps1",
+      "ops\\Drift-Guard-V4.ps1",
+      "ops\\emoji-sentinel-v4.ps1",
+      "ops\\emoji-sentinel.ps1",
+      "ops\\gpu-accelerator.ps1",
+      "ops\\GPU-Monitor-V4.ps1"
+    ],
+    "structure_data": {
+      "AgentExoSuitV3.ps1": {
+        "type": "powershell",
+        "imports": [
+          "Microsoft.PowerShell.Utility",
+          "Microsoft.PowerShell.Management"
+        ],
+        "functions": [
+          {
+            "name": "Write-Status",
+            "line": 19
+          }
+        ],
+        "line_count": 244
+      },
+      "AgentExoSuitV4.ps1": {
+        "type": "powershell",
+        "imports": [
+          "Microsoft.PowerShell.Utility",
+          "Microsoft.PowerShell.Management"
+        ],
+        "functions": [
+          {
+            "name": "Write-Status",
+            "line": 24
+          }
+        ],
+        "line_count": 269
+      },
+      "AgentExoSuitV5.ps1": {
+        "type": "powershell",
+        "imports": [],
+        "functions": [
+          {
+            "name": "function",
+            "line": 85
+          },
+          {
+            "name": "Initialize-V5System",
+            "line": 106
+          },
+          {
+            "name": "Check-SystemRequirements",
+            "line": 130
+          },
+          {
+            "name": "Initialize-V4BaseSystems",
+            "line": 178
+          },
+          {
+            "name": "Initialize-V5DeepSpeedLayer",
+            "line": 240
+          },
+          {
+            "name": "Validate-V5System",
+            "line": 287
+          },
+          {
+            "name": "Main",
+            "line": 333
+          },
+          {
+            "name": "if",
+            "line": 353
+          }
+        ],
+        "line_count": 357
+      },
+      "AgentExoSuitV5_Optimized.ps1": {
+        "type": "powershell",
+        "imports": [],
+        "functions": [
+          {
+            "name": "with",
+            "line": 91
+          },
+          {
+            "name": "Write-Log",
+            "line": 92
+          },
+          {
+            "name": "Get-PerformanceMetrics",
+            "line": 120
+          },
+          {
+            "name": "Initialize-MemoryPool",
+            "line": 147
+          },
+          {
+            "name": "Invoke-ParallelModule",
+            "line": 166
+          },
+          {
+            "name": "Invoke-AsyncModule",
+            "line": 213
+          },
+          {
+            "name": "Initialize-V5OptimizedSystem",
+            "line": 284
+          },
+          {
+            "name": "Check-SystemRequirements",
+            "line": 323
+          },
+          {
+            "name": "Initialize-V4BaseSystemsParallel",
+            "line": 377
+          },
+          {
+            "name": "Initialize-V4BaseSystemsSequential",
+            "line": 458
+          },
+          {
+            "name": "Initialize-V5DeepSpeedLayer",
+            "line": 520
+          },
+          {
+            "name": "Validate-V5System",
+            "line": 595
+          }
+        ],
+        "line_count": 678
+      },
+      "AgentExoSuitV5_Optimized_Simple.ps1": {
+        "type": "powershell",
+        "imports": [],
+        "functions": [
+          {
+            "name": "function",
+            "line": 71
+          },
+          {
+            "name": "Get-PerformanceMetrics",
+            "line": 97
+          },
+          {
+            "name": "Invoke-ParallelModule",
+            "line": 124
+          },
+          {
+            "name": "Initialize-V5OptimizedSystem",
+            "line": 182
+          },
+          {
+            "name": "Check-SystemRequirements",
+            "line": 218
+          },
+          {
+            "name": "Initialize-V4BaseSystemsParallel",
+            "line": 272
+          },
+          {
+            "name": "Initialize-V4BaseSystemsSequential",
+            "line": 353
+          },
+          {
+            "name": "Initialize-V5DeepSpeedLayer",
+            "line": 415
+          },
+          {
+            "name": "Validate-V5System",
+            "line": 446
+          }
+        ],
+        "line_count": 526
+      },
+      "analyze_emoji_report.py": {
+        "type": "python",
+        "imports": [
+          "json",
+          "os"
+        ],
+        "functions": [
+          {
+            "name": "analyze_emoji_report",
+            "line": 9,
+            "args": [
+              "report_path"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 75
+      },
+      "EMOJI_REPORT_20250816_200325.json": {
+        "type": "json",
+        "keys": [
+          "summary",
+          "detections"
+        ],
+        "line_count": 59
+      },
+      "EMOJI_REPORT_20250816_200403.json": {
+        "type": "json",
+        "keys": [
+          "summary",
+          "detections"
+        ],
+        "line_count": 59
+      },
+      "EMOJI_REPORT_20250816_200432.json": {
+        "type": "json",
+        "keys": [
+          "summary",
+          "detections"
+        ],
+        "line_count": 59
+      },
+      "EMOJI_REPORT_20250816_200503.json": {
+        "type": "json",
+        "keys": [
+          "summary",
+          "detections"
+        ],
+        "line_count": 59
+      },
+      "EMOJI_REPORT_20250816_200540.json": {
+        "type": "json",
+        "keys": [
+          "summary",
+          "detections"
+        ],
+        "line_count": 59
+      },
+      "EMOJI_REPORT_20250816_200700.json": {
+        "type": "json",
+        "keys": [
+          "summary",
+          "detections"
+        ],
+        "line_count": 59
+      },
+      "EMOJI_REPORT_20250816_200720.json": {
+        "type": "json",
+        "keys": [
+          "summary",
+          "detections"
+        ],
+        "line_count": 59
+      },
+      "EMOJI_REPORT_20250816_200743.json": {
+        "type": "json",
+        "keys": [
+          "summary",
+          "detections"
+        ],
+        "line_count": 59
+      },
+      "EMOJI_REPORT_20250816_201049.json": {
+        "type": "json",
+        "keys": [
+          "summary",
+          "detections"
+        ],
+        "line_count": 133853
+      },
+      "EMOJI_REPORT_20250816_201431.json": {
+        "type": "json",
+        "keys": [
+          "summary",
+          "detections"
+        ],
+        "line_count": 59
+      },
+      "EMOJI_REPORT_20250816_201601.json": {
+        "type": "json",
+        "keys": [
+          "summary",
+          "detections"
+        ],
+        "line_count": 13
+      },
+      "go-big.ps1": {
+        "type": "powershell",
+        "imports": [],
+        "functions": [],
+        "line_count": 78
+      },
+      "PHASE-4-ULTIMATE-SYSTEM-LAUNCHER.ps1": {
+        "type": "powershell",
+        "imports": [],
+        "functions": [],
+        "line_count": 211
+      },
+      "PYTHON_EMOJI_REPORT.json": {
+        "type": "json",
+        "keys": [
+          "Summary",
+          "Detections",
+          "ScanMetadata"
+        ],
+        "line_count": 67
+      },
+      "PYTHON_EMOJI_REPORT_20250816_195050.json": {
+        "type": "json",
+        "keys": [
+          "Summary",
+          "Detections"
+        ],
+        "line_count": 7677
+      },
+      "RUN-ULTIMATE-STRESS-TEST.ps1": {
+        "type": "powershell",
+        "imports": [],
+        "functions": [],
+        "line_count": 102
+      },
+      "config\\advanced_integration_config.json": {
+        "type": "json",
+        "keys": [
+          "system_name",
+          "version",
+          "description",
+          "last_updated",
+          "integration_settings",
+          "component_registry",
+          "event_system",
+          "communication",
+          "health_monitoring",
+          "dependency_management",
+          "performance",
+          "logging"
+        ],
+        "line_count": 131
+      },
+      "config\\metacore_optimization_config.json": {
+        "type": "json",
+        "keys": [
+          "system_name",
+          "version",
+          "description",
+          "last_updated",
+          "optimization_settings",
+          "component_optimization",
+          "optimization_rules",
+          "monitoring",
+          "learning_settings",
+          "logging"
+        ],
+        "line_count": 111
+      },
+      "config\\phoenix_recovery_config.json": {
+        "type": "json",
+        "keys": [
+          "system_name",
+          "version",
+          "description",
+          "last_updated",
+          "recovery_settings",
+          "component_recovery",
+          "recovery_strategies",
+          "monitoring",
+          "backup_settings",
+          "logging"
+        ],
+        "line_count": 96
+      },
+      "config\\token-upgrade-config.json": {
+        "type": "json",
+        "keys": [
+          "current_token_limit",
+          "target_token_limit",
+          "baseline_token_limit",
+          "improvement_multiplier",
+          "last_updated",
+          "version",
+          "memory_layers",
+          "current_phase",
+          "implementation_timeline"
+        ],
+        "line_count": 79
+      },
+      "consolidated_work\\MASTER_TASK_LIST.json": {
+        "type": "json",
+        "keys": [
+          "generated",
+          "total_chunks",
+          "chunks_by_size",
+          "priority_distribution",
+          "estimated_total_time",
+          "work_chunks"
+        ],
+        "line_count": 172
+      },
+      "consolidated_work\\PROGRESS_TRACKER.json": {
+        "type": "json",
+        "keys": [
+          "created",
+          "last_updated",
+          "completed_chunks",
+          "in_progress_chunks",
+          "blocked_chunks",
+          "failed_chunks",
+          "completion_stats",
+          "phase_status",
+          "current_metrics",
+          "next_milestones"
+        ],
+        "line_count": 64
+      },
+      "context\\COMPLETE_CONTEXT_20250817_072127.json": {
+        "type": "json",
+        "keys": [
+          "scan_timestamp",
+          "workspace_root",
+          "file_statistics",
+          "code_statistics",
+          "system_overview",
+          "file_inventory",
+          "code_structure",
+          "dependencies",
+          "relationships"
+        ],
+        "line_count": 9178759
+      },
+      "context\\COMPLETE_CONTEXT_20250817_072701.json": {
+        "type": "json",
+        "keys": [
+          "scan_timestamp",
+          "workspace_root",
+          "file_statistics",
+          "code_statistics",
+          "system_overview",
+          "file_inventory",
+          "code_structure",
+          "dependencies",
+          "relationships"
+        ],
+        "line_count": 59160
+      },
+      "generated_code\\main.py": {
+        "type": "python",
+        "error": "invalid non-printable character U+FEFF (<unknown>, line 1)",
+        "line_count": 0
+      },
+      "generated_code\\SampleClass.py": {
+        "type": "python",
+        "error": "invalid non-printable character U+FEFF (<unknown>, line 1)",
+        "line_count": 0
+      },
+      "generated_code\\sample_function.py": {
+        "type": "python",
+        "error": "invalid non-printable character U+FEFF (<unknown>, line 1)",
+        "line_count": 0
+      },
+      "generated_code\\test_SampleClass.py": {
+        "type": "python",
+        "error": "invalid non-printable character U+FEFF (<unknown>, line 1)",
+        "line_count": 0
+      },
+      "generated_code\\test_sample_function.py": {
+        "type": "python",
+        "error": "invalid non-printable character U+FEFF (<unknown>, line 1)",
+        "line_count": 0
+      },
+      "ops\\ADVANCED_INTEGRATION_LAYER_V5.py": {
+        "type": "python",
+        "imports": [
+          "os",
+          "sys",
+          "json",
+          "time",
+          "asyncio",
+          "threading",
+          "logging",
+          "concurrent.futures",
+          "tempfile",
+          "shutil",
+          "pathlib.Path",
+          "datetime.datetime",
+          "typing.Dict",
+          "typing.List",
+          "typing.Any",
+          "typing.Tuple",
+          "typing.Optional",
+          "typing.Callable",
+          "dataclasses.dataclass",
+          "dataclasses.asdict",
+          "queue",
+          "uuid",
+          "torch",
+          "psutil",
+          "GPUtil",
+          "argparse"
+        ],
+        "functions": [
+          {
+            "name": "main",
+            "line": 691,
+            "args": []
+          },
+          {
+            "name": "main",
+            "line": 1147,
+            "args": []
+          },
+          {
+            "name": "__init__",
+            "line": 88,
+            "args": [
+              "self",
+              "max_files"
+            ]
+          },
+          {
+            "name": "create_ram_disk",
+            "line": 94,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "load_files_to_ram",
+            "line": 105,
+            "args": [
+              "self",
+              "source_files"
+            ]
+          },
+          {
+            "name": "cleanup",
+            "line": 147,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "__init__",
+            "line": 159,
+            "args": [
+              "self",
+              "max_workers"
+            ]
+          },
+          {
+            "name": "process_files_parallel",
+            "line": 195,
+            "args": [
+              "self",
+              "files",
+              "batch_size"
+            ]
+          },
+          {
+            "name": "_process_batch_parallel",
+            "line": 227,
+            "args": [
+              "self",
+              "files"
+            ]
+          },
+          {
+            "name": "_process_single_file",
+            "line": 252,
+            "args": [
+              "self",
+              "file_info"
+            ]
+          },
+          {
+            "name": "shutdown",
+            "line": 280,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "__init__",
+            "line": 285,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "setup_logging",
+            "line": 334,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "initialize_gpu_acceleration",
+            "line": 346,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "register_core_components",
+            "line": 376,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "register_component",
+            "line": 425,
+            "args": [
+              "self",
+              "component_id",
+              "name",
+              "version",
+              "capabilities",
+              "dependencies"
+            ]
+          },
+          {
+            "name": "get_gpu_status",
+            "line": 451,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "get_system_health",
+            "line": 496,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "get_integration_status",
+            "line": 540,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "run_final_push_performance_test",
+            "line": 583,
+            "args": [
+              "self",
+              "num_files"
+            ]
+          },
+          {
+            "name": "stop_integration_layer",
+            "line": 677,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "__init__",
+            "line": 763,
+            "args": [
+              "self",
+              "config_file"
+            ]
+          },
+          {
+            "name": "load_config",
+            "line": 773,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "check_repository_health",
+            "line": 811,
+            "args": [
+              "self",
+              "repo_config"
+            ]
+          },
+          {
+            "name": "send_alert",
+            "line": 914,
+            "args": [
+              "self",
+              "alert_data"
+            ]
+          },
+          {
+            "name": "send_email_alert",
+            "line": 952,
+            "args": [
+              "self",
+              "message",
+              "alert_data"
+            ]
+          },
+          {
+            "name": "send_slack_alert",
+            "line": 973,
+            "args": [
+              "self",
+              "message",
+              "alert_data"
+            ]
+          },
+          {
+            "name": "send_discord_alert",
+            "line": 995,
+            "args": [
+              "self",
+              "message",
+              "alert_data"
+            ]
+          },
+          {
+            "name": "update_dashboard",
+            "line": 1016,
+            "args": [
+              "self",
+              "alert_data"
+            ]
+          },
+          {
+            "name": "auto_fix_repository",
+            "line": 1042,
+            "args": [
+              "self",
+              "repo_config",
+              "alert_data"
+            ]
+          },
+          {
+            "name": "monitor_repositories",
+            "line": 1071,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "save_check_result",
+            "line": 1104,
+            "args": [
+              "self",
+              "result"
+            ]
+          },
+          {
+            "name": "start_monitoring",
+            "line": 1115,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "stop_monitoring",
+            "line": 1124,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "run_single_check",
+            "line": 1132,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "__init__",
+            "line": 1213,
+            "args": [
+              "self",
+              "config_path"
+            ]
+          },
+          {
+            "name": "load_config",
+            "line": 1235,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "get_default_config",
+            "line": 1244,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "save_config",
+            "line": 1289,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "initialize_ensemble",
+            "line": 1294,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "load_local_llm",
+            "line": 1312,
+            "args": [
+              "self",
+              "model_config"
+            ]
+          },
+          {
+            "name": "create_rule_based_model",
+            "line": 1335,
+            "args": [
+              "self",
+              "model_config"
+            ]
+          },
+          {
+            "name": "create_fallback_model",
+            "line": 1345,
+            "args": [
+              "self",
+              "model_config"
+            ]
+          },
+          {
+            "name": "load_safety_rules",
+            "line": 1354,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "setup_safety_systems",
+            "line": 1363,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "check_file_safety",
+            "line": 1374,
+            "args": [
+              "self",
+              "file_path",
+              "content"
+            ]
+          },
+          {
+            "name": "check_code_safety",
+            "line": 1401,
+            "args": [
+              "self",
+              "code"
+            ]
+          },
+          {
+            "name": "check_performance_safety",
+            "line": 1432,
+            "args": [
+              "self",
+              "code"
+            ]
+          },
+          {
+            "name": "check_audit_safety",
+            "line": 1454,
+            "args": [
+              "self",
+              "request"
+            ]
+          },
+          {
+            "name": "generate_code_ensemble",
+            "line": 1475,
+            "args": [
+              "self",
+              "prompt",
+              "language"
+            ]
+          },
+          {
+            "name": "generate_with_llm",
+            "line": 1545,
+            "args": [
+              "self",
+              "model",
+              "prompt",
+              "language"
+            ]
+          },
+          {
+            "name": "generate_with_rules",
+            "line": 1578,
+            "args": [
+              "self",
+              "model",
+              "prompt",
+              "language"
+            ]
+          },
+          {
+            "name": "apply_generation_rules",
+            "line": 1601,
+            "args": [
+              "self",
+              "prompt",
+              "language"
+            ]
+          },
+          {
+            "name": "create_consensus_code",
+            "line": 1618,
+            "args": [
+              "self",
+              "ensemble_results"
+            ]
+          },
+          {
+            "name": "calculate_consensus_confidence",
+            "line": 1639,
+            "args": [
+              "self",
+              "ensemble_results"
+            ]
+          },
+          {
+            "name": "validate_generated_code",
+            "line": 1653,
+            "args": [
+              "self",
+              "code",
+              "language"
+            ]
+          },
+          {
+            "name": "run_safety_checks",
+            "line": 1682,
+            "args": [
+              "self",
+              "request"
+            ]
+          },
+          {
+            "name": "cache_result",
+            "line": 1718,
+            "args": [
+              "self",
+              "trace_id",
+              "result"
+            ]
+          },
+          {
+            "name": "add_to_audit_trail",
+            "line": 1731,
+            "args": [
+              "self",
+              "request",
+              "response"
+            ]
+          },
+          {
+            "name": "save_audit_trail",
+            "line": 1750,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "start_self_improvement",
+            "line": 1759,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "run_self_improvement",
+            "line": 1774,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "analyze_performance",
+            "line": 1797,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "optimize_ensemble_weights",
+            "line": 1809,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "update_safety_rules",
+            "line": 1820,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "get_performance_metrics",
+            "line": 1834,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "emergency_shutdown",
+            "line": 1845,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "improvement_cycle",
+            "line": 1761,
+            "args": []
+          }
+        ],
+        "classes": [
+          {
+            "name": "ComponentInfo",
+            "line": 51,
+            "methods": []
+          },
+          {
+            "name": "IntegrationEvent",
+            "line": 64,
+            "methods": []
+          },
+          {
+            "name": "ComponentInterface",
+            "line": 76,
+            "methods": []
+          },
+          {
+            "name": "FinalPushRAMDiskManager",
+            "line": 85,
+            "methods": [
+              "__init__",
+              "create_ram_disk",
+              "load_files_to_ram",
+              "cleanup"
+            ]
+          },
+          {
+            "name": "FinalPushParallelProcessor",
+            "line": 156,
+            "methods": [
+              "__init__",
+              "process_files_parallel",
+              "_process_batch_parallel",
+              "_process_single_file",
+              "shutdown"
+            ]
+          },
+          {
+            "name": "AdvancedIntegrationLayer",
+            "line": 284,
+            "methods": [
+              "__init__",
+              "setup_logging",
+              "initialize_gpu_acceleration",
+              "register_core_components",
+              "register_component",
+              "get_gpu_status",
+              "get_system_health",
+              "get_integration_status",
+              "run_final_push_performance_test",
+              "stop_integration_layer"
+            ]
+          },
+          {
+            "name": "KaiSentinelMesh",
+            "line": 760,
+            "methods": [
+              "__init__",
+              "load_config",
+              "check_repository_health",
+              "send_alert",
+              "send_email_alert",
+              "send_slack_alert",
+              "send_discord_alert",
+              "update_dashboard",
+              "auto_fix_repository",
+              "monitor_repositories",
+              "save_check_result",
+              "start_monitoring",
+              "stop_monitoring",
+              "run_single_check"
+            ]
+          },
+          {
+            "name": "KaiOrchestratorV2",
+            "line": 1200,
+            "methods": [
+              "__init__",
+              "load_config",
+              "get_default_config",
+              "save_config",
+              "initialize_ensemble",
+              "load_local_llm",
+              "create_rule_based_model",
+              "create_fallback_model",
+              "load_safety_rules",
+              "setup_safety_systems",
+              "check_file_safety",
+              "check_code_safety",
+              "check_performance_safety",
+              "check_audit_safety",
+              "generate_code_ensemble",
+              "generate_with_llm",
+              "generate_with_rules",
+              "apply_generation_rules",
+              "create_consensus_code",
+              "calculate_consensus_confidence",
+              "validate_generated_code",
+              "run_safety_checks",
+              "cache_result",
+              "add_to_audit_trail",
+              "save_audit_trail",
+              "start_self_improvement",
+              "run_self_improvement",
+              "analyze_performance",
+              "optimize_ensemble_weights",
+              "update_safety_rules",
+              "get_performance_metrics",
+              "emergency_shutdown"
+            ]
+          }
+        ],
+        "line_count": 1863
+      },
+      "ops\\context-governor-v5-token-upgrade.ps1": {
+        "type": "powershell",
+        "imports": [],
+        "functions": [],
+        "line_count": 726
+      },
+      "ops\\context-governor.ps1": {
+        "type": "powershell",
+        "imports": [],
+        "functions": [],
+        "line_count": 620
+      },
+      "ops\\ContextChunker.py": {
+        "type": "python",
+        "imports": [
+          "json",
+          "time",
+          "math",
+          "pathlib.Path",
+          "typing.Dict",
+          "typing.List",
+          "typing.Any",
+          "typing.Optional",
+          "hashlib"
+        ],
+        "functions": [
+          {
+            "name": "main",
+            "line": 422,
+            "args": []
+          },
+          {
+            "name": "__init__",
+            "line": 34,
+            "args": [
+              "self",
+              "context_dir"
+            ]
+          },
+          {
+            "name": "chunk_context_file",
+            "line": 55,
+            "args": [
+              "self",
+              "context_file"
+            ]
+          },
+          {
+            "name": "_create_overview_chunks",
+            "line": 83,
+            "args": [
+              "self",
+              "context_data"
+            ]
+          },
+          {
+            "name": "_create_functional_chunks",
+            "line": 135,
+            "args": [
+              "self",
+              "context_data"
+            ]
+          },
+          {
+            "name": "_create_detailed_chunks",
+            "line": 192,
+            "args": [
+              "self",
+              "context_data"
+            ]
+          },
+          {
+            "name": "_create_navigation_index",
+            "line": 242,
+            "args": [
+              "self",
+              "overview_chunks",
+              "functional_chunks",
+              "detailed_chunks"
+            ]
+          },
+          {
+            "name": "_save_chunks",
+            "line": 274,
+            "args": [
+              "self",
+              "overview_chunks",
+              "functional_chunks",
+              "detailed_chunks",
+              "navigation_index"
+            ]
+          },
+          {
+            "name": "_create_human_readable_index",
+            "line": 297,
+            "args": [
+              "self",
+              "navigation_index"
+            ]
+          },
+          {
+            "name": "_format_chunk_list",
+            "line": 369,
+            "args": [
+              "self",
+              "chunk_ids",
+              "chunk_details"
+            ]
+          },
+          {
+            "name": "_estimate_tokens",
+            "line": 382,
+            "args": [
+              "self",
+              "content"
+            ]
+          },
+          {
+            "name": "get_chunk_for_agent",
+            "line": 391,
+            "args": [
+              "self",
+              "agent_context_limit",
+              "chunk_type"
+            ]
+          }
+        ],
+        "classes": [
+          {
+            "name": "ContextChunker",
+            "line": 23,
+            "methods": [
+              "__init__",
+              "chunk_context_file",
+              "_create_overview_chunks",
+              "_create_functional_chunks",
+              "_create_detailed_chunks",
+              "_create_navigation_index",
+              "_save_chunks",
+              "_create_human_readable_index",
+              "_format_chunk_list",
+              "_estimate_tokens",
+              "get_chunk_for_agent"
+            ]
+          }
+        ],
+        "line_count": 467
+      },
+      "ops\\ContextPipeline.py": {
+        "type": "python",
+        "imports": [
+          "time",
+          "subprocess",
+          "sys",
+          "pathlib.Path",
+          "typing.Dict",
+          "typing.Any",
+          "json",
+          "datetime.datetime"
+        ],
+        "functions": [
+          {
+            "name": "main",
+            "line": 282,
+            "args": []
+          },
+          {
+            "name": "__init__",
+            "line": 29,
+            "args": [
+              "self",
+              "workspace_root"
+            ]
+          },
+          {
+            "name": "run_complete_pipeline",
+            "line": 43,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_run_context_scanner",
+            "line": 108,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_run_context_chunker",
+            "line": 132,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_run_context_validator",
+            "line": 156,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_run_emoji_scanner",
+            "line": 180,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_run_vision_gap_analysis",
+            "line": 210,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_generate_pipeline_report",
+            "line": 234,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_calculate_duration",
+            "line": 268,
+            "args": [
+              "self"
+            ]
+          }
+        ],
+        "classes": [
+          {
+            "name": "ContextPipeline",
+            "line": 22,
+            "methods": [
+              "__init__",
+              "run_complete_pipeline",
+              "_run_context_scanner",
+              "_run_context_chunker",
+              "_run_context_validator",
+              "_run_emoji_scanner",
+              "_run_vision_gap_analysis",
+              "_generate_pipeline_report",
+              "_calculate_duration"
+            ]
+          }
+        ],
+        "line_count": 315
+      },
+      "ops\\ContextScanner.py": {
+        "type": "python",
+        "imports": [
+          "os",
+          "json",
+          "time",
+          "hashlib",
+          "pathlib.Path",
+          "typing.Dict",
+          "typing.List",
+          "typing.Any",
+          "typing.Set",
+          "typing.Tuple",
+          "ast",
+          "re"
+        ],
+        "functions": [
+          {
+            "name": "main",
+            "line": 510,
+            "args": []
+          },
+          {
+            "name": "__init__",
+            "line": 35,
+            "args": [
+              "self",
+              "workspace_root"
+            ]
+          },
+          {
+            "name": "scan_entire_workspace",
+            "line": 54,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_scan_file_system",
+            "line": 76,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_analyze_code_structure",
+            "line": 102,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_analyze_python_file",
+            "line": 123,
+            "args": [
+              "self",
+              "file_path",
+              "relative_path"
+            ]
+          },
+          {
+            "name": "_analyze_powershell_file",
+            "line": 176,
+            "args": [
+              "self",
+              "file_path",
+              "relative_path"
+            ]
+          },
+          {
+            "name": "_analyze_javascript_file",
+            "line": 211,
+            "args": [
+              "self",
+              "file_path",
+              "relative_path"
+            ]
+          },
+          {
+            "name": "_analyze_json_file",
+            "line": 248,
+            "args": [
+              "self",
+              "file_path",
+              "relative_path"
+            ]
+          },
+          {
+            "name": "_map_dependencies",
+            "line": 272,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_resolve_import",
+            "line": 288,
+            "args": [
+              "self",
+              "import_name",
+              "source_file"
+            ]
+          },
+          {
+            "name": "_analyze_relationships",
+            "line": 303,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_generate_context_summary",
+            "line": 330,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_get_file_hash",
+            "line": 385,
+            "args": [
+              "self",
+              "file_path"
+            ]
+          },
+          {
+            "name": "generate_mermaid_diagrams",
+            "line": 393,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_create_system_architecture_diagram",
+            "line": 413,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_create_dependency_diagram",
+            "line": 449,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_create_component_relationship_diagram",
+            "line": 476,
+            "args": [
+              "self"
+            ]
+          }
+        ],
+        "classes": [
+          {
+            "name": "ContextScanner",
+            "line": 21,
+            "methods": [
+              "__init__",
+              "scan_entire_workspace",
+              "_scan_file_system",
+              "_analyze_code_structure",
+              "_analyze_python_file",
+              "_analyze_powershell_file",
+              "_analyze_javascript_file",
+              "_analyze_json_file",
+              "_map_dependencies",
+              "_resolve_import",
+              "_analyze_relationships",
+              "_generate_context_summary",
+              "_get_file_hash",
+              "generate_mermaid_diagrams",
+              "_create_system_architecture_diagram",
+              "_create_dependency_diagram",
+              "_create_component_relationship_diagram"
+            ]
+          }
+        ],
+        "line_count": 547
+      },
+      "ops\\ContextValidator.py": {
+        "type": "python",
+        "imports": [
+          "json",
+          "time",
+          "hashlib",
+          "pathlib.Path",
+          "typing.Dict",
+          "typing.List",
+          "typing.Any",
+          "typing.Tuple",
+          "typing.Set",
+          "ast",
+          "re"
+        ],
+        "functions": [
+          {
+            "name": "main",
+            "line": 468,
+            "args": []
+          },
+          {
+            "name": "__init__",
+            "line": 34,
+            "args": [
+              "self",
+              "workspace_root"
+            ]
+          },
+          {
+            "name": "validate_context_three_passes",
+            "line": 74,
+            "args": [
+              "self",
+              "context_file"
+            ]
+          },
+          {
+            "name": "_pass_1_data_integrity",
+            "line": 103,
+            "args": [
+              "self",
+              "context_file"
+            ]
+          },
+          {
+            "name": "_pass_2_cross_reference_validation",
+            "line": 180,
+            "args": [
+              "self",
+              "integrity_results"
+            ]
+          },
+          {
+            "name": "_pass_3_drift_detection",
+            "line": 234,
+            "args": [
+              "self",
+              "cross_ref_results"
+            ]
+          },
+          {
+            "name": "_validate_code_structure",
+            "line": 287,
+            "args": [
+              "self",
+              "file_path",
+              "structure"
+            ]
+          },
+          {
+            "name": "_resolve_import_to_file",
+            "line": 325,
+            "args": [
+              "self",
+              "import_name",
+              "source_file",
+              "file_inventory"
+            ]
+          },
+          {
+            "name": "_detect_drift_artifacts",
+            "line": 337,
+            "args": [
+              "self",
+              "content",
+              "file_path"
+            ]
+          },
+          {
+            "name": "_clean_drift_artifacts",
+            "line": 356,
+            "args": [
+              "self",
+              "content",
+              "artifacts"
+            ]
+          },
+          {
+            "name": "_get_drift_replacement",
+            "line": 379,
+            "args": [
+              "self",
+              "drift_text",
+              "drift_type"
+            ]
+          },
+          {
+            "name": "_generate_validation_report",
+            "line": 406,
+            "args": [
+              "self",
+              "integrity_results",
+              "cross_ref_results",
+              "drift_results"
+            ]
+          },
+          {
+            "name": "_save_validated_context",
+            "line": 421,
+            "args": [
+              "self",
+              "drift_results",
+              "validation_report"
+            ]
+          },
+          {
+            "name": "_get_file_hash",
+            "line": 460,
+            "args": [
+              "self",
+              "file_path"
+            ]
+          }
+        ],
+        "classes": [
+          {
+            "name": "ContextValidator",
+            "line": 23,
+            "methods": [
+              "__init__",
+              "validate_context_three_passes",
+              "_pass_1_data_integrity",
+              "_pass_2_cross_reference_validation",
+              "_pass_3_drift_detection",
+              "_validate_code_structure",
+              "_resolve_import_to_file",
+              "_detect_drift_artifacts",
+              "_clean_drift_artifacts",
+              "_get_drift_replacement",
+              "_generate_validation_report",
+              "_save_validated_context",
+              "_get_file_hash"
+            ]
+          }
+        ],
+        "line_count": 498
+      },
+      "ops\\DeepSpeed-Accelerator-V5.ps1": {
+        "type": "powershell",
+        "imports": [],
+        "functions": [
+          {
+            "name": "function",
+            "line": 44
+          },
+          {
+            "name": "Test-SystemCapabilities",
+            "line": 54
+          },
+          {
+            "name": "Install-DeepSpeedDependencies",
+            "line": 144
+          },
+          {
+            "name": "Initialize-GDSOptimizer",
+            "line": 190
+          },
+          {
+            "name": "Initialize-PerformanceMonitoring",
+            "line": 223
+          },
+          {
+            "name": "Test-DeepSpeedPerformance",
+            "line": 256
+          },
+          {
+            "name": "Main",
+            "line": 287
+          },
+          {
+            "name": "if",
+            "line": 370
+          }
+        ],
+        "line_count": 374
+      },
+      "ops\\DreamWeaver-Builder-V5.ps1": {
+        "type": "powershell",
+        "imports": [
+          "Microsoft.PowerShell.Utility"
+        ],
+        "functions": [
+          {
+            "name": "Write-Log",
+            "line": 173
+          },
+          {
+            "name": "Initialize-Builder",
+            "line": 191
+          },
+          {
+            "name": "Parse-MarkdownSpecification",
+            "line": 217
+          },
+          {
+            "name": "definitions",
+            "line": 266
+          },
+          {
+            "name": "Generate-CodeFromSpec",
+            "line": 289
+          },
+          {
+            "name": "Get-FileExtension",
+            "line": 364
+          },
+          {
+            "name": "Write-GeneratedCode",
+            "line": 385
+          },
+          {
+            "name": "Generate-Tests",
+            "line": 414
+          },
+          {
+            "name": "Validate-GeneratedCode",
+            "line": 507
+          },
+          {
+            "name": "definition",
+            "line": 546
+          },
+          {
+            "name": "Generate-BuildReport",
+            "line": 569
+          },
+          {
+            "name": "Main",
+            "line": 673
+          },
+          {
+            "name": "for",
+            "line": 699
+          }
+        ],
+        "line_count": 780
+      },
+      "ops\\drift-gate.ps1": {
+        "type": "powershell",
+        "imports": [],
+        "functions": [],
+        "line_count": 47
+      },
+      "ops\\Drift-Guard-V4.ps1": {
+        "type": "powershell",
+        "imports": [],
+        "functions": [
+          {
+            "name": "Write-Log",
+            "line": 30
+          },
+          {
+            "name": "Test-SystemRequirements",
+            "line": 49
+          },
+          {
+            "name": "Test-GitRepository",
+            "line": 84
+          },
+          {
+            "name": "Get-GitState",
+            "line": 117
+          },
+          {
+            "name": "Get-GitDrift",
+            "line": 187
+          },
+          {
+            "name": "Apply-GitDrift",
+            "line": 274
+          },
+          {
+            "name": "Restore-GitDrift",
+            "line": 337
+          },
+          {
+            "name": "Write-DriftReport",
+            "line": 377
+          },
+          {
+            "name": "Start-DriftBenchmark",
+            "line": 418
+          },
+          {
+            "name": "Start-DriftGuard",
+            "line": 451
+          }
+        ],
+        "line_count": 582
+      },
+      "ops\\emoji-sentinel-v4.ps1": {
+        "type": "powershell",
+        "imports": [],
+        "functions": [
+          {
+            "name": "Write-Log",
+            "line": 30
+          },
+          {
+            "name": "Test-SystemRequirements",
+            "line": 49
+          },
+          {
+            "name": "Get-SafeAbsolutePath",
+            "line": 77
+          },
+          {
+            "name": "Resolve-ScanPath",
+            "line": 109
+          },
+          {
+            "name": "Test-EmojiInString",
+            "line": 182
+          },
+          {
+            "name": "Get-EmojisInString",
+            "line": 203
+          },
+          {
+            "name": "Test-FileShouldScan",
+            "line": 242
+          },
+          {
+            "name": "Scan-FileForEmojis",
+            "line": 310
+          },
+          {
+            "name": "Start-EmojiScan",
+            "line": 458
+          },
+          {
+            "name": "Test-EmojiInString",
+            "line": 565
+          },
+          {
+            "name": "Start-EmojiBenchmark",
+            "line": 816
+          }
+        ],
+        "line_count": 1067
+      },
+      "ops\\emoji-sentinel.ps1": {
+        "type": "powershell",
+        "imports": [
+          "Microsoft.PowerShell.Utility",
+          "Microsoft.PowerShell.Management"
+        ],
+        "functions": [
+          {
+            "name": "Initialize-EmojiSentinel",
+            "line": 94
+          },
+          {
+            "name": "Test-EmojiInString",
+            "line": 132
+          },
+          {
+            "name": "Get-EmojisInString",
+            "line": 179
+          },
+          {
+            "name": "Scan-FileForEmojis",
+            "line": 240
+          },
+          {
+            "name": "Start-EmojiScan",
+            "line": 332
+          },
+          {
+            "name": "Start-EmojiPurge",
+            "line": 488
+          },
+          {
+            "name": "Show-EmojiReport",
+            "line": 575
+          }
+        ],
+        "line_count": 640
+      },
+      "ops\\gpu-accelerator.ps1": {
+        "type": "powershell",
+        "imports": [],
+        "functions": [],
+        "line_count": 242
+      },
+      "ops\\GPU-Monitor-V4.ps1": {
+        "type": "powershell",
+        "imports": [],
+        "functions": [
+          {
+            "name": "Write-Log",
+            "line": 29
+          },
+          {
+            "name": "Test-SystemRequirements",
+            "line": 48
+          },
+          {
+            "name": "Get-GPUInfo",
+            "line": 70
+          },
+          {
+            "name": "Start-GPUMonitoring",
+            "line": 193
+          },
+          {
+            "name": "Start-GPUBenchmark",
+            "line": 287
+          },
+          {
+            "name": "Optimize-GPUSettings",
+            "line": 327
+          },
+          {
+            "name": "Test-GPUSystem",
+            "line": 390
+          },
+          {
+            "name": "Write-GPUReport",
+            "line": 462
+          },
+          {
+            "name": "Start-GPUMonitor",
+            "line": 501
+          }
+        ],
+        "line_count": 630
+      }
+    }
+  },
+  "estimated_tokens": 65.0,
+  "related_chunks": [
+    "v5_core_systems",
+    "legacy_v1_v4_systems"
+  ]
+}

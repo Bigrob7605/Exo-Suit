@@ -1,0 +1,58 @@
+{
+  "timestamp": 1755363452.303457,
+  "test_type": "SMART_OPTIMIZATION_BUILD_ON_WORKS",
+  "files_processed": 50000,
+  "processing_time_seconds": 6.951,
+  "total_time_seconds": 6.951,
+  "speed_files_per_sec": 7193.38,
+  "baseline_speed": 7973,
+  "improvement_percent": -9.78,
+  "target_speed": 10000,
+  "target_achieved": false,
+  "phase_1_completed": false,
+  "smart_success": false,
+  "optimizations_applied": [
+    "Phase 1 I/O optimizations (memory mapping, streaming)",
+    "Simplified content analysis (basic patterns only)",
+    "Smart GPU batch processing (consistent tensor sizes)",
+    "Fine-tuned worker count (22 \u2192 24 workers)",
+    "Optimized batch sizes (1,200 \u2192 1,300)",
+    "Build on working hybrid approach",
+    "80/20 rule optimization"
+  ],
+  "smart_approach": {
+    "io_optimizations": "Enabled (Phase 1)",
+    "content_analysis": "Simplified (no complex parsing)",
+    "gpu_acceleration": "Smart batch processing enabled",
+    "system_balance": "Fine-tuned CPU-GPU coordination",
+    "worker_optimization": "24 workers (fine-tuned)",
+    "batch_optimization": "1,300 files per batch (fine-tuned)",
+    "strategy": "Build on what works"
+  },
+  "hardware_challenge": {
+    "workers_used": 24,
+    "cpu_cores": 16,
+    "gpu_available": true,
+    "gpu_device": "cuda"
+  },
+  "content_analysis": {
+    "total_content_size_bytes": 2813818,
+    "file_types_processed": {
+      "json": 1149,
+      "log": 8,
+      "text": 478,
+      "python": 6047,
+      "markdown": 34,
+      "unknown": 37
+    },
+    "average_file_size_bytes": 56.28,
+    "processing_mode": "Smart (Build on Working Hybrid)"
+  },
+  "performance_metrics": {
+    "files_per_second": 7193.38,
+    "megabytes_per_second": 0.39,
+    "efficiency_score": 90.22,
+    "phase_1_target_achieved": false,
+    "smart_target_achieved": false
+  }
+}

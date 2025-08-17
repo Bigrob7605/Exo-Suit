@@ -37,7 +37,7 @@ $PerformanceMetrics = @{
 
 # ===== SYSTEM INFORMATION GATHERING =====
 function Get-SystemInformation {
-    Write-Host "📊 Gathering system information..." -ForegroundColor Cyan
+    Write-Host " Gathering system information..." -ForegroundColor Cyan
     
     try {
         $cpu = Get-WmiObject -Class Win32_Processor
@@ -55,15 +55,15 @@ function Get-SystemInformation {
             Uptime_Hours = 0
         }
         
-        Write-Host "✅ System information gathered" -ForegroundColor Green
+        Write-Host " System information gathered" -ForegroundColor Green
         
     } catch {
-        Write-Host "❌ Failed to gather system information: $($_.Exception.Message)" -ForegroundColor Red
+        Write-Host " Failed to gather system information: $($_.Exception.Message)" -ForegroundColor Red
     }
 }
 
 function Get-GPUInformation {
-    Write-Host "🎮 Gathering GPU information..." -ForegroundColor Cyan
+    Write-Host " Gathering GPU information..." -ForegroundColor Cyan
     
     try {
         $nvidiaOutput = nvidia-smi --query-gpu=name,memory.total,driver_version,compute_cap,temperature.gpu,power.draw --format=csv,noheader,nounits 2>$null
@@ -77,19 +77,19 @@ function Get-GPUInformation {
                 Temperature = [int]($parts[4])
                 Power_W = [double]($parts[5])
             }
-            Write-Host "✅ GPU information gathered" -ForegroundColor Green
+            Write-Host " GPU information gathered" -ForegroundColor Green
         } else {
-            Write-Host "⚠️  No NVIDIA GPU detected" -ForegroundColor Yellow
+            Write-Host "  No NVIDIA GPU detected" -ForegroundColor Yellow
         }
         
     } catch {
-        Write-Host "❌ Failed to gather GPU information: $($_.Exception.Message)" -ForegroundColor Red
+        Write-Host " Failed to gather GPU information: $($_.Exception.Message)" -ForegroundColor Red
     }
 }
 
 # ===== PERFORMANCE TESTING FUNCTIONS =====
 function Test-RAGPerformance {
-    Write-Host "🧠 Testing RAG system performance..." -ForegroundColor Yellow
+    Write-Host " Testing RAG system performance..." -ForegroundColor Yellow
     
     $startTime = Get-Date
     
@@ -110,7 +110,7 @@ function Test-RAGPerformance {
             Status = "Success"
         }
         
-        Write-Host "✅ RAG performance test completed" -ForegroundColor Green
+        Write-Host " RAG performance test completed" -ForegroundColor Green
         Write-Host "   GPU: $($gpuTime.TotalSeconds.ToString('F2'))s | Hybrid: $($hybridTime.TotalSeconds.ToString('F2'))s" -ForegroundColor Cyan
         
     } catch {
@@ -118,12 +118,12 @@ function Test-RAGPerformance {
             Status = "Failed"
             Error = $_.Exception.Message
         }
-        Write-Host "❌ RAG performance test failed: $($_.Exception.Message)" -ForegroundColor Red
+        Write-Host " RAG performance test failed: $($_.Exception.Message)" -ForegroundColor Red
     }
 }
 
 function Test-ImportIndexerPerformance {
-    Write-Host "📚 Testing Import Indexer performance..." -ForegroundColor Yellow
+    Write-Host " Testing Import Indexer performance..." -ForegroundColor Yellow
     
     $startTime = Get-Date
     
@@ -166,19 +166,19 @@ def test_function_$i():
             Status = "Success"
         }
         
-        Write-Host "✅ Import Indexer test completed: $($TestConfig.Import_Test_Files) files in $($importTime.TotalSeconds.ToString('F2'))s" -ForegroundColor Green
+        Write-Host " Import Indexer test completed: $($TestConfig.Import_Test_Files) files in $($importTime.TotalSeconds.ToString('F2'))s" -ForegroundColor Green
         
     } catch {
         $PerformanceMetrics.ComponentResults.ImportIndexer = @{
             Status = "Failed"
             Error = $_.Exception.Message
         }
-        Write-Host "❌ Import Indexer test failed: $($_.Exception.Message)" -ForegroundColor Red
+        Write-Host " Import Indexer test failed: $($_.Exception.Message)" -ForegroundColor Red
     }
 }
 
 function Test-SymbolIndexerPerformance {
-    Write-Host "🔍 Testing Symbol Indexer performance..." -ForegroundColor Yellow
+    Write-Host " Testing Symbol Indexer performance..." -ForegroundColor Yellow
     
     $startTime = Get-Date
     
@@ -197,19 +197,19 @@ function Test-SymbolIndexerPerformance {
             Status = "Success"
         }
         
-        Write-Host "✅ Symbol Indexer test completed: $($TestConfig.Symbol_Test_Files) files in $($symbolTime.TotalSeconds.ToString('F2'))s" -ForegroundColor Green
+        Write-Host " Symbol Indexer test completed: $($TestConfig.Symbol_Test_Files) files in $($symbolTime.TotalSeconds.ToString('F2'))s" -ForegroundColor Green
         
     } catch {
         $PerformanceMetrics.ComponentResults.SymbolIndexer = @{
             Status = "Failed"
             Error = $_.Exception.Message
         }
-        Write-Host "❌ Symbol Indexer test failed: $($_.Exception.Message)" -ForegroundColor Red
+        Write-Host " Symbol Indexer test failed: $($_.Exception.Message)" -ForegroundColor Red
     }
 }
 
 function Test-EmojiSentinelPerformance {
-    Write-Host "🚫 Testing Emoji Sentinel performance..." -ForegroundColor Yellow
+    Write-Host " Testing Emoji Sentinel performance..." -ForegroundColor Yellow
     
     $startTime = Get-Date
     
@@ -223,13 +223,13 @@ function Test-EmojiSentinelPerformance {
         # Generate test files with emojis
         for ($i = 1; $i -le $TestConfig.Emoji_Test_Files; $i++) {
             $content = @"
-# Test file $i with emojis 🚀
+# Test file $i with emojis 
 def test_function_$i():
-    # This is a test function with emojis 🎯
-    emoji_list = ["🚀", "🎯", "⚡", "🔥", "💻"]
+    # This is a test function with emojis 
+    emoji_list = ["", "", "", "", ""]
     return emoji_list[$i % 5]
 
-# More emojis for testing 🎮🎲🎪
+# More emojis for testing 
 "@
             Set-Content "$testDir\test_emoji_$i.py" $content
         }
@@ -245,19 +245,19 @@ def test_function_$i():
             Status = "Success"
         }
         
-        Write-Host "✅ Emoji Sentinel test completed: $($TestConfig.Emoji_Test_Files) files in $($emojiTime.TotalSeconds.ToString('F2'))s" -ForegroundColor Green
+        Write-Host " Emoji Sentinel test completed: $($TestConfig.Emoji_Test_Files) files in $($emojiTime.TotalSeconds.ToString('F2'))s" -ForegroundColor Green
         
     } catch {
         $PerformanceMetrics.ComponentResults.EmojiSentinel = @{
             Status = "Failed"
             Error = $_.Exception.Message
         }
-        Write-Host "❌ Emoji Sentinel test failed: $($_.Exception.Message)" -ForegroundColor Red
+        Write-Host " Emoji Sentinel test failed: $($_.Exception.Message)" -ForegroundColor Red
     }
 }
 
 function Test-ProjectHealthScannerPerformance {
-    Write-Host "🏥 Testing Project Health Scanner performance..." -ForegroundColor Yellow
+    Write-Host " Testing Project Health Scanner performance..." -ForegroundColor Yellow
     
     $startTime = Get-Date
     
@@ -271,19 +271,19 @@ function Test-ProjectHealthScannerPerformance {
             Status = "Success"
         }
         
-        Write-Host "✅ Project Health Scanner test completed in $($healthTime.TotalSeconds.ToString('F2'))s" -ForegroundColor Green
+        Write-Host " Project Health Scanner test completed in $($healthTime.TotalSeconds.ToString('F2'))s" -ForegroundColor Green
         
     } catch {
         $PerformanceMetrics.ComponentResults.ProjectHealthScanner = @{
             Status = "Failed"
             Error = $_.Exception.Message
         }
-        Write-Host "❌ Project Health Scanner test failed: $($_.Exception.Message)" -ForegroundColor Red
+        Write-Host " Project Health Scanner test failed: $($_.Exception.Message)" -ForegroundColor Red
     }
 }
 
 function Test-GPUPerformance {
-    Write-Host "🎮 Testing GPU performance..." -ForegroundColor Yellow
+    Write-Host " Testing GPU performance..." -ForegroundColor Yellow
     
     $startTime = Get-Date
     
@@ -318,20 +318,20 @@ print(f'GPU Memory: {memory_allocated:.2f}GB allocated, {memory_reserved:.2f}GB 
             Status = "Success"
         }
         
-        Write-Host "✅ GPU performance test completed in $($gpuTime.TotalSeconds.ToString('F2'))s" -ForegroundColor Green
+        Write-Host " GPU performance test completed in $($gpuTime.TotalSeconds.ToString('F2'))s" -ForegroundColor Green
         
     } catch {
         $PerformanceMetrics.ComponentResults.GPU = @{
             Status = "Failed"
             Error = $_.Exception.Message
         }
-        Write-Host "❌ GPU performance test failed: $($_.Exception.Message)" -ForegroundColor Red
+        Write-Host " GPU performance test failed: $($_.Exception.Message)" -ForegroundColor Red
     }
 }
 
 # ===== MAIN TEST EXECUTION =====
 function Run-PerformanceTests {
-    Write-Host "🚀 Starting Performance Test Suite V4.0..." -ForegroundColor Cyan
+    Write-Host " Starting Performance Test Suite V4.0..." -ForegroundColor Cyan
     Write-Host "Mode: $Mode | Detailed: $Detailed | Save Results: $SaveResults" -ForegroundColor Cyan
     
     $PerformanceMetrics.StartTime = Get-Date
@@ -355,7 +355,7 @@ function Run-PerformanceTests {
     $PerformanceMetrics.EndTime = Get-Date
     $PerformanceMetrics.TotalDuration = $PerformanceMetrics.EndTime - $PerformanceMetrics.StartTime
     
-    Write-Host "✅ All performance tests completed!" -ForegroundColor Green
+    Write-Host " All performance tests completed!" -ForegroundColor Green
     Write-Host "Total duration: $($PerformanceMetrics.TotalDuration.TotalSeconds.ToString('F2')) seconds" -ForegroundColor Cyan
 }
 
@@ -363,7 +363,7 @@ function Run-PerformanceTests {
 function Save-TestResults {
     if (-not $SaveResults) { return }
     
-    Write-Host "💾 Saving test results..." -ForegroundColor Yellow
+    Write-Host " Saving test results..." -ForegroundColor Yellow
     
     try {
         $timestamp = Get-Date -Format "yyyyMMdd_HHmmss"
@@ -380,15 +380,15 @@ function Save-TestResults {
         }
         
         $jsonResults | ConvertTo-Json -Depth 10 | Set-Content $resultsFile
-        Write-Host "✅ Results saved to: $resultsFile" -ForegroundColor Green
+        Write-Host " Results saved to: $resultsFile" -ForegroundColor Green
         
     } catch {
-        Write-Host "❌ Failed to save results: $($_.Exception.Message)" -ForegroundColor Red
+        Write-Host " Failed to save results: $($_.Exception.Message)" -ForegroundColor Red
     }
 }
 
 function Display-TestSummary {
-    Write-Host "📊 Performance Test Summary" -ForegroundColor Cyan
+    Write-Host " Performance Test Summary" -ForegroundColor Cyan
     Write-Host "=========================" -ForegroundColor Cyan
     
     Write-Host "System: $($PerformanceMetrics.SystemInfo.CPU_Name)" -ForegroundColor White
@@ -407,10 +407,10 @@ function Display-TestSummary {
         $result = $PerformanceMetrics.ComponentResults[$component]
         if ($result.Status -eq "Success") {
             $color = "Green"
-            $status = "✅"
+            $status = ""
         } else {
             $color = "Red"
-            $status = "❌"
+            $status = ""
         }
         
         Write-Host "$status $component" -ForegroundColor $color
@@ -427,24 +427,24 @@ function Display-TestSummary {
 try {
     switch ($Mode) {
         'Baseline' {
-            Write-Host "📈 Running baseline performance tests..." -ForegroundColor Yellow
+            Write-Host " Running baseline performance tests..." -ForegroundColor Yellow
             Run-PerformanceTests
             Display-TestSummary
             Save-TestResults
         }
         'Optimized' {
-            Write-Host "🚀 Running optimized performance tests..." -ForegroundColor Yellow
+            Write-Host " Running optimized performance tests..." -ForegroundColor Yellow
             Run-PerformanceTests
             Display-TestSummary
             Save-TestResults
         }
         'Compare' {
-            Write-Host "🔄 Running comparison tests..." -ForegroundColor Yellow
+            Write-Host " Running comparison tests..." -ForegroundColor Yellow
             # This would require loading previous results for comparison
             Write-Host "Comparison mode not yet implemented" -ForegroundColor Yellow
         }
         'Full' {
-            Write-Host "🎯 Running full performance test suite..." -ForegroundColor Yellow
+            Write-Host " Running full performance test suite..." -ForegroundColor Yellow
             Run-PerformanceTests
             Display-TestSummary
             Save-TestResults
@@ -452,9 +452,9 @@ try {
     }
     
 } catch {
-    Write-Host "❌ Performance Test Suite failed: $($_.Exception.Message)" -ForegroundColor Red
+    Write-Host " Performance Test Suite failed: $($_.Exception.Message)" -ForegroundColor Red
     exit 1
 }
 
-Write-Host "🎯 Performance Test Suite V4.0 completed successfully!" -ForegroundColor Green
+Write-Host " Performance Test Suite V4.0 completed successfully!" -ForegroundColor Green
 exit 0

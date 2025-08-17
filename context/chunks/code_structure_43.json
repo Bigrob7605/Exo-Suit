@@ -1,0 +1,1531 @@
+{
+  "chunk_type": "code_samples",
+  "chunk_id": "code_structure_43",
+  "title": "Code Structure Analysis - Part 43",
+  "description": "Code analysis for files 2101-2150",
+  "content": {
+    "files_analyzed": [
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\scripts\\demos\\advanced_ai_demonstration.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\scripts\\demos\\open_science_challenge.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\scripts\\demos\\submit_challenge.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\scripts\\drift_proof\\chain_unicode_fixes.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\scripts\\drift_proof\\cold_start_chaos_test.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\scripts\\drift_proof\\comprehensive_error_scanner.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\scripts\\drift_proof\\debug_brutal_checks.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\scripts\\drift_proof\\fix_brutal_checks_unicode.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\scripts\\drift_proof\\fix_critical_unicode.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\scripts\\drift_proof\\kai_health_report_20250807_164701.json",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\scripts\\drift_proof\\minimal_test.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\scripts\\drift_proof\\run_brutal_reality_checks.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\scripts\\drift_proof\\simple_brutal_test.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\scripts\\drift_proof\\test_unicode_fixes.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\scripts\\drift_proof\\unicode_fixer.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\scripts\\drift_proof\\unicode_scanner.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\scripts\\drift_proof\\weekly_drift_review.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\scripts\\install\\install-kai-os.ps1",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\scripts\\install\\trunk-install.ps1",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\scripts\\launch\\launch_web_interface.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\scripts\\drift_proof\\kai_core\\consensus_agents.json",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\Project White Papers\\self_heal_evidence\\20250809_081454\\recovery_report.json",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\Project White Papers\\self_heal_evidence\\20250809_081642\\after_state.json",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\Project White Papers\\self_heal_evidence\\20250809_081642\\before_state.json",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\Project White Papers\\self_heal_evidence\\20250809_081642\\replay.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\kai_core\\challenges\\data_manipulation_challenge_domain_b_20250804_201604.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\kai_core\\challenges\\data_manipulation_challenge_domain_b_20250804_202328.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\kai_core\\challenges\\data_manipulation_challenge_domain_b_20250804_202743.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\kai_core\\challenges\\data_manipulation_challenge_domain_c_20250804_201604.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\kai_core\\challenges\\data_manipulation_challenge_domain_c_20250804_202328.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\kai_core\\challenges\\data_manipulation_challenge_domain_c_20250804_202743.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\kai_core\\challenges\\data_manipulation_challenge_domain_p_20250804_201604.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\kai_core\\challenges\\data_manipulation_challenge_domain_p_20250804_202328.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\kai_core\\challenges\\data_manipulation_challenge_domain_p_20250804_202743.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\kai_core\\challenges\\data_manipulation_challenge_domain_s_20250804_201604.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\kai_core\\challenges\\data_manipulation_challenge_domain_s_20250804_202328.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\kai_core\\challenges\\data_manipulation_challenge_domain_s_20250804_202743.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\kai_core\\challenges\\data_manipulation_challenge_import n_20250805_172734.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\kai_core\\challenges\\data_manipulation_challenge_import n_20250805_172736.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\kai_core\\challenges\\data_manipulation_challenge_import n_20250805_172739.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\kai_core\\challenges\\data_manipulation_challenge_import n_20250805_172741.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\kai_core\\challenges\\data_manipulation_challenge_import n_20250805_172744.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\kai_core\\challenges\\data_manipulation_challenge_import n_20250805_172747.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\kai_core\\challenges\\data_manipulation_challenge_import n_20250805_172749.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\kai_core\\challenges\\data_manipulation_challenge_import n_20250805_172752.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\kai_core\\challenges\\data_manipulation_challenge_import n_20250805_173946.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\kai_core\\challenges\\data_manipulation_challenge_import n_20250805_173948.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\kai_core\\challenges\\data_manipulation_challenge_import n_20250805_173951.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\kai_core\\challenges\\data_manipulation_challenge_import n_20250805_173953.py",
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\kai_core\\challenges\\data_manipulation_challenge_import n_20250805_173956.py"
+    ],
+    "structure_data": {
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\scripts\\demos\\advanced_ai_demonstration.py": {
+        "type": "python",
+        "imports": [
+          "numpy",
+          "json",
+          "datetime.datetime"
+        ],
+        "functions": [
+          {
+            "name": "main",
+            "line": 361,
+            "args": []
+          },
+          {
+            "name": "__init__",
+            "line": 21,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "demonstrate_novel_hypothesis_generation",
+            "line": 25,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "demonstrate_meta_scientific_reasoning",
+            "line": 79,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "demonstrate_cross_domain_pattern_synthesis",
+            "line": 122,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "demonstrate_adversarial_self_improvement",
+            "line": 165,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "demonstrate_scientific_creativity",
+            "line": 208,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "demonstrate_agentic_coding",
+            "line": 251,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "run_complete_demonstration",
+            "line": 294,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "save_demonstration_results",
+            "line": 346,
+            "args": [
+              "self",
+              "filename"
+            ]
+          }
+        ],
+        "classes": [
+          {
+            "name": "AdvancedAIDemonstration",
+            "line": 18,
+            "methods": [
+              "__init__",
+              "demonstrate_novel_hypothesis_generation",
+              "demonstrate_meta_scientific_reasoning",
+              "demonstrate_cross_domain_pattern_synthesis",
+              "demonstrate_adversarial_self_improvement",
+              "demonstrate_scientific_creativity",
+              "demonstrate_agentic_coding",
+              "run_complete_demonstration",
+              "save_demonstration_results"
+            ]
+          }
+        ],
+        "line_count": 374
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\scripts\\demos\\open_science_challenge.py": {
+        "type": "python",
+        "imports": [
+          "os",
+          "json",
+          "hashlib",
+          "requests",
+          "pandas",
+          "numpy",
+          "datetime.datetime",
+          "typing.Dict",
+          "typing.Any",
+          "typing.List",
+          "typing.Optional",
+          "subprocess",
+          "sys",
+          "argparse",
+          "domain.coding_agentic.coding_agentic_test",
+          "domain.psychology.psychology_bulletproof_test",
+          "domain.social.social_bulletproof_test",
+          "domain.coding.coding_bulletproof_test",
+          "test_suite.universal_test_functions.basic_statistical_analysis"
+        ],
+        "functions": [
+          {
+            "name": "main",
+            "line": 487,
+            "args": []
+          },
+          {
+            "name": "__init__",
+            "line": 52,
+            "args": [
+              "self",
+              "challenge_dir"
+            ]
+          },
+          {
+            "name": "_initialize_files",
+            "line": 61,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_create_leaderboard",
+            "line": 72,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_create_submissions",
+            "line": 86,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_create_bounties",
+            "line": 93,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "submit_challenge",
+            "line": 105,
+            "args": [
+              "self",
+              "challenger_name",
+              "challenge_type",
+              "domain",
+              "dataset_path",
+              "description",
+              "expected_failure",
+              "proof_of_concept"
+            ]
+          },
+          {
+            "name": "_test_challenge",
+            "line": 205,
+            "args": [
+              "self",
+              "submission"
+            ]
+          },
+          {
+            "name": "_test_domain_challenge",
+            "line": 233,
+            "args": [
+              "self",
+              "dataset_path",
+              "domain",
+              "challenge_type"
+            ]
+          },
+          {
+            "name": "_test_coding_agentic_challenge",
+            "line": 294,
+            "args": [
+              "self",
+              "dataset_path",
+              "challenge_type"
+            ]
+          },
+          {
+            "name": "_analyze_challenge_success",
+            "line": 333,
+            "args": [
+              "self",
+              "test_result",
+              "challenge_type"
+            ]
+          },
+          {
+            "name": "_calculate_bounty",
+            "line": 380,
+            "args": [
+              "self",
+              "test_result",
+              "challenge_type"
+            ]
+          },
+          {
+            "name": "_save_submission",
+            "line": 410,
+            "args": [
+              "self",
+              "submission"
+            ]
+          },
+          {
+            "name": "_update_leaderboard",
+            "line": 420,
+            "args": [
+              "self",
+              "submission"
+            ]
+          },
+          {
+            "name": "_award_bounty",
+            "line": 452,
+            "args": [
+              "self",
+              "submission_id",
+              "bounty_amount"
+            ]
+          },
+          {
+            "name": "get_leaderboard",
+            "line": 471,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "get_bounty_status",
+            "line": 476,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "get_submissions",
+            "line": 481,
+            "args": [
+              "self"
+            ]
+          }
+        ],
+        "classes": [
+          {
+            "name": "OpenScienceChallenge",
+            "line": 49,
+            "methods": [
+              "__init__",
+              "_initialize_files",
+              "_create_leaderboard",
+              "_create_submissions",
+              "_create_bounties",
+              "submit_challenge",
+              "_test_challenge",
+              "_test_domain_challenge",
+              "_test_coding_agentic_challenge",
+              "_analyze_challenge_success",
+              "_calculate_bounty",
+              "_save_submission",
+              "_update_leaderboard",
+              "_award_bounty",
+              "get_leaderboard",
+              "get_bounty_status",
+              "get_submissions"
+            ]
+          }
+        ],
+        "line_count": 602
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\scripts\\demos\\submit_challenge.py": {
+        "type": "python",
+        "imports": [
+          "os",
+          "json",
+          "hashlib",
+          "argparse",
+          "datetime.datetime",
+          "typing.Dict",
+          "typing.Any",
+          "typing.Optional",
+          "kai_core.agent.KaiCoreAgent"
+        ],
+        "functions": [
+          {
+            "name": "submit_challenge",
+            "line": 19,
+            "args": [
+              "domain",
+              "challenge",
+              "description",
+              "difficulty"
+            ]
+          },
+          {
+            "name": "list_challenges",
+            "line": 153,
+            "args": []
+          },
+          {
+            "name": "show_challenge",
+            "line": 183,
+            "args": [
+              "challenge_id"
+            ]
+          },
+          {
+            "name": "main",
+            "line": 226,
+            "args": []
+          }
+        ],
+        "classes": [],
+        "line_count": 287
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\scripts\\drift_proof\\chain_unicode_fixes.py": {
+        "type": "python",
+        "imports": [
+          "subprocess",
+          "sys",
+          "pathlib.Path"
+        ],
+        "functions": [
+          {
+            "name": "run_script",
+            "line": 8,
+            "args": [
+              "script_name"
+            ]
+          },
+          {
+            "name": "main",
+            "line": 24,
+            "args": []
+          }
+        ],
+        "classes": [],
+        "line_count": 55
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\scripts\\drift_proof\\cold_start_chaos_test.py": {
+        "type": "python",
+        "imports": [
+          "os",
+          "sys",
+          "time",
+          "subprocess",
+          "signal",
+          "shutil",
+          "tempfile",
+          "json",
+          "random",
+          "pathlib.Path",
+          "typing.Dict",
+          "typing.List",
+          "typing.Tuple"
+        ],
+        "functions": [
+          {
+            "name": "main",
+            "line": 394,
+            "args": []
+          },
+          {
+            "name": "__init__",
+            "line": 27,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "log",
+            "line": 32,
+            "args": [
+              "self",
+              "message",
+              "level"
+            ]
+          },
+          {
+            "name": "run_command",
+            "line": 36,
+            "args": [
+              "self",
+              "cmd",
+              "timeout"
+            ]
+          },
+          {
+            "name": "kill_processes",
+            "line": 48,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "clean_cache",
+            "line": 63,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "test_1_cold_start",
+            "line": 85,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "test_2_web_interface_startup",
+            "line": 107,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "test_3_chaos_breakage",
+            "line": 146,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "test_4_regression_detection",
+            "line": 229,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "test_5_clean_environment",
+            "line": 263,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "run_all_tests",
+            "line": 313,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "generate_report",
+            "line": 339,
+            "args": [
+              "self"
+            ]
+          }
+        ],
+        "classes": [
+          {
+            "name": "ColdStartChaosTest",
+            "line": 26,
+            "methods": [
+              "__init__",
+              "log",
+              "run_command",
+              "kill_processes",
+              "clean_cache",
+              "test_1_cold_start",
+              "test_2_web_interface_startup",
+              "test_3_chaos_breakage",
+              "test_4_regression_detection",
+              "test_5_clean_environment",
+              "run_all_tests",
+              "generate_report"
+            ]
+          }
+        ],
+        "line_count": 431
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\scripts\\drift_proof\\comprehensive_error_scanner.py": {
+        "type": "python",
+        "imports": [
+          "subprocess",
+          "sys",
+          "os",
+          "pathlib.Path",
+          "time"
+        ],
+        "functions": [
+          {
+            "name": "scan_unicode_issues",
+            "line": 10,
+            "args": []
+          },
+          {
+            "name": "test_health_check",
+            "line": 20,
+            "args": []
+          },
+          {
+            "name": "test_brutal_checks",
+            "line": 30,
+            "args": []
+          },
+          {
+            "name": "test_syntax_check",
+            "line": 42,
+            "args": []
+          },
+          {
+            "name": "main",
+            "line": 52,
+            "args": []
+          }
+        ],
+        "classes": [],
+        "line_count": 124
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\scripts\\drift_proof\\debug_brutal_checks.py": {
+        "type": "python",
+        "imports": [
+          "subprocess",
+          "sys",
+          "time",
+          "scripts.drift_proof.run_brutal_reality_checks"
+        ],
+        "functions": [
+          {
+            "name": "debug_brutal_checks",
+            "line": 8,
+            "args": []
+          }
+        ],
+        "classes": [],
+        "line_count": 42
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\scripts\\drift_proof\\fix_brutal_checks_unicode.py": {
+        "type": "python",
+        "imports": [
+          "os",
+          "pathlib.Path"
+        ],
+        "functions": [
+          {
+            "name": "fix_brutal_checks",
+            "line": 38,
+            "args": []
+          }
+        ],
+        "classes": [],
+        "line_count": 69
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\scripts\\drift_proof\\fix_critical_unicode.py": {
+        "type": "python",
+        "imports": [
+          "os",
+          "pathlib.Path"
+        ],
+        "functions": [
+          {
+            "name": "fix_critical_unicode",
+            "line": 23,
+            "args": []
+          }
+        ],
+        "classes": [],
+        "line_count": 55
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\scripts\\drift_proof\\kai_health_report_20250807_164701.json": {
+        "type": "json",
+        "keys": [
+          "timestamp",
+          "total_tests",
+          "passed",
+          "warnings",
+          "failed",
+          "results"
+        ],
+        "line_count": 228
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\scripts\\drift_proof\\minimal_test.py": {
+        "type": "python",
+        "imports": [
+          "subprocess",
+          "sys",
+          "os",
+          "pathlib.Path"
+        ],
+        "functions": [
+          {
+            "name": "test_health_check",
+            "line": 8,
+            "args": []
+          }
+        ],
+        "classes": [],
+        "line_count": 52
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\scripts\\drift_proof\\run_brutal_reality_checks.py": {
+        "type": "python",
+        "imports": [
+          "os",
+          "sys",
+          "time",
+          "subprocess",
+          "signal",
+          "pathlib.Path",
+          "logging",
+          "datetime.datetime"
+        ],
+        "functions": [
+          {
+            "name": "main",
+            "line": 373,
+            "args": []
+          },
+          {
+            "name": "__init__",
+            "line": 33,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "log",
+            "line": 39,
+            "args": [
+              "self",
+              "message",
+              "level"
+            ]
+          },
+          {
+            "name": "run_command_with_timeout",
+            "line": 46,
+            "args": [
+              "self",
+              "cmd",
+              "description",
+              "timeout"
+            ]
+          },
+          {
+            "name": "step_1_health_check",
+            "line": 92,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "step_2_cold_start_test",
+            "line": 110,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "step_3_weekly_review",
+            "line": 125,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "step_4_syntax_check",
+            "line": 140,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "step_5_import_test",
+            "line": 186,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "step_6_git_status",
+            "line": 238,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "step_7_web_interface_test",
+            "line": 248,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "run_all_checks",
+            "line": 258,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "generate_report",
+            "line": 290,
+            "args": [
+              "self"
+            ]
+          }
+        ],
+        "classes": [
+          {
+            "name": "BrutalRealityChecks",
+            "line": 32,
+            "methods": [
+              "__init__",
+              "log",
+              "run_command_with_timeout",
+              "step_1_health_check",
+              "step_2_cold_start_test",
+              "step_3_weekly_review",
+              "step_4_syntax_check",
+              "step_5_import_test",
+              "step_6_git_status",
+              "step_7_web_interface_test",
+              "run_all_checks",
+              "generate_report"
+            ]
+          }
+        ],
+        "line_count": 420
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\scripts\\drift_proof\\simple_brutal_test.py": {
+        "type": "python",
+        "imports": [
+          "subprocess",
+          "sys",
+          "os"
+        ],
+        "functions": [
+          {
+            "name": "test_brutal_checks",
+            "line": 8,
+            "args": []
+          }
+        ],
+        "classes": [],
+        "line_count": 46
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\scripts\\drift_proof\\test_unicode_fixes.py": {
+        "type": "python",
+        "imports": [
+          "subprocess",
+          "sys"
+        ],
+        "functions": [
+          {
+            "name": "test_health_check",
+            "line": 7,
+            "args": []
+          },
+          {
+            "name": "test_brutal_checks",
+            "line": 16,
+            "args": []
+          },
+          {
+            "name": "main",
+            "line": 25,
+            "args": []
+          }
+        ],
+        "classes": [],
+        "line_count": 53
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\scripts\\drift_proof\\unicode_fixer.py": {
+        "type": "python",
+        "imports": [
+          "os",
+          "re",
+          "sys",
+          "pathlib.Path"
+        ],
+        "functions": [
+          {
+            "name": "fix_file",
+            "line": 58,
+            "args": [
+              "file_path"
+            ]
+          },
+          {
+            "name": "fix_directory",
+            "line": 81,
+            "args": [
+              "directory"
+            ]
+          },
+          {
+            "name": "main",
+            "line": 91,
+            "args": []
+          }
+        ],
+        "classes": [],
+        "line_count": 106
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\scripts\\drift_proof\\unicode_scanner.py": {
+        "type": "python",
+        "imports": [
+          "os",
+          "re",
+          "sys",
+          "pathlib.Path"
+        ],
+        "functions": [
+          {
+            "name": "scan_file",
+            "line": 9,
+            "args": [
+              "file_path"
+            ]
+          },
+          {
+            "name": "scan_directory",
+            "line": 30,
+            "args": [
+              "directory"
+            ]
+          },
+          {
+            "name": "main",
+            "line": 41,
+            "args": []
+          }
+        ],
+        "classes": [],
+        "line_count": 64
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\scripts\\drift_proof\\weekly_drift_review.py": {
+        "type": "python",
+        "imports": [
+          "os",
+          "sys",
+          "time",
+          "json",
+          "shutil",
+          "hashlib",
+          "subprocess",
+          "pathlib.Path",
+          "datetime.datetime",
+          "datetime.timedelta",
+          "typing.Dict",
+          "typing.List",
+          "typing.Tuple",
+          "typing.Optional"
+        ],
+        "functions": [
+          {
+            "name": "main",
+            "line": 469,
+            "args": []
+          },
+          {
+            "name": "__init__",
+            "line": 25,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "log",
+            "line": 31,
+            "args": [
+              "self",
+              "message",
+              "level"
+            ]
+          },
+          {
+            "name": "create_archive_structure",
+            "line": 35,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "get_file_hash",
+            "line": 40,
+            "args": [
+              "self",
+              "file_path"
+            ]
+          },
+          {
+            "name": "get_directory_hash",
+            "line": 48,
+            "args": [
+              "self",
+              "dir_path"
+            ]
+          },
+          {
+            "name": "capture_current_state",
+            "line": 59,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "save_baseline",
+            "line": 153,
+            "args": [
+              "self",
+              "state"
+            ]
+          },
+          {
+            "name": "load_previous_baseline",
+            "line": 188,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "compare_states",
+            "line": 201,
+            "args": [
+              "self",
+              "current",
+              "previous"
+            ]
+          },
+          {
+            "name": "generate_weekly_report",
+            "line": 291,
+            "args": [
+              "self",
+              "comparison"
+            ]
+          },
+          {
+            "name": "save_weekly_report",
+            "line": 390,
+            "args": [
+              "self",
+              "report"
+            ]
+          },
+          {
+            "name": "run_weekly_review",
+            "line": 400,
+            "args": [
+              "self"
+            ]
+          }
+        ],
+        "classes": [
+          {
+            "name": "WeeklyDriftReview",
+            "line": 24,
+            "methods": [
+              "__init__",
+              "log",
+              "create_archive_structure",
+              "get_file_hash",
+              "get_directory_hash",
+              "capture_current_state",
+              "save_baseline",
+              "load_previous_baseline",
+              "compare_states",
+              "generate_weekly_report",
+              "save_weekly_report",
+              "run_weekly_review"
+            ]
+          }
+        ],
+        "line_count": 487
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\scripts\\install\\install-kai-os.ps1": {
+        "type": "powershell",
+        "imports": [],
+        "functions": [
+          {
+            "name": "Test-Command",
+            "line": 16
+          },
+          {
+            "name": "Add-ToPath",
+            "line": 20
+          }
+        ],
+        "line_count": 106
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\scripts\\install\\trunk-install.ps1": {
+        "type": "powershell",
+        "imports": [],
+        "functions": [],
+        "line_count": 51
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\scripts\\launch\\launch_web_interface.py": {
+        "type": "python",
+        "imports": [
+          "subprocess",
+          "sys",
+          "os",
+          "time"
+        ],
+        "functions": [
+          {
+            "name": "install_requirements",
+            "line": 15,
+            "args": []
+          },
+          {
+            "name": "start_server",
+            "line": 43,
+            "args": []
+          },
+          {
+            "name": "main",
+            "line": 65,
+            "args": []
+          }
+        ],
+        "classes": [],
+        "line_count": 91
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\scripts\\drift_proof\\kai_core\\consensus_agents.json": {
+        "type": "json",
+        "keys": [],
+        "line_count": 62
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\Project White Papers\\self_heal_evidence\\20250809_081454\\recovery_report.json": {
+        "type": "json",
+        "keys": [
+          "timestamp",
+          "restored_files",
+          "cleared_dirs",
+          "recovery_success"
+        ],
+        "line_count": 9
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\Project White Papers\\self_heal_evidence\\20250809_081642\\after_state.json": {
+        "type": "json",
+        "keys": [
+          "timestamp",
+          "phase",
+          "git_status",
+          "file_hashes",
+          "system_info",
+          "health_check",
+          "process_list"
+        ],
+        "line_count": 56
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\Project White Papers\\self_heal_evidence\\20250809_081642\\before_state.json": {
+        "type": "json",
+        "keys": [
+          "timestamp",
+          "phase",
+          "git_status",
+          "file_hashes",
+          "system_info",
+          "health_check",
+          "process_list"
+        ],
+        "line_count": 56
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\Project White Papers\\self_heal_evidence\\20250809_081642\\replay.py": {
+        "type": "python",
+        "error": "(unicode error) 'unicodeescape' codec can't decode bytes in position 2-3: truncated \\UXXXXXXXX escape (<unknown>, line 19)",
+        "line_count": 0
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\kai_core\\challenges\\data_manipulation_challenge_domain_b_20250804_201604.py": {
+        "type": "python",
+        "imports": [],
+        "functions": [
+          {
+            "name": "data_manipulation_challenge_domain_b",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 85
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\kai_core\\challenges\\data_manipulation_challenge_domain_b_20250804_202328.py": {
+        "type": "python",
+        "imports": [],
+        "functions": [
+          {
+            "name": "data_manipulation_challenge_domain_b",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 85
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\kai_core\\challenges\\data_manipulation_challenge_domain_b_20250804_202743.py": {
+        "type": "python",
+        "imports": [],
+        "functions": [
+          {
+            "name": "data_manipulation_challenge_domain_b",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 85
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\kai_core\\challenges\\data_manipulation_challenge_domain_c_20250804_201604.py": {
+        "type": "python",
+        "imports": [],
+        "functions": [
+          {
+            "name": "data_manipulation_challenge_domain_c",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 85
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\kai_core\\challenges\\data_manipulation_challenge_domain_c_20250804_202328.py": {
+        "type": "python",
+        "imports": [],
+        "functions": [
+          {
+            "name": "data_manipulation_challenge_domain_c",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 85
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\kai_core\\challenges\\data_manipulation_challenge_domain_c_20250804_202743.py": {
+        "type": "python",
+        "imports": [],
+        "functions": [
+          {
+            "name": "data_manipulation_challenge_domain_c",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 85
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\kai_core\\challenges\\data_manipulation_challenge_domain_p_20250804_201604.py": {
+        "type": "python",
+        "imports": [],
+        "functions": [
+          {
+            "name": "data_manipulation_challenge_domain_p",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 85
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\kai_core\\challenges\\data_manipulation_challenge_domain_p_20250804_202328.py": {
+        "type": "python",
+        "imports": [],
+        "functions": [
+          {
+            "name": "data_manipulation_challenge_domain_p",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 85
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\kai_core\\challenges\\data_manipulation_challenge_domain_p_20250804_202743.py": {
+        "type": "python",
+        "imports": [],
+        "functions": [
+          {
+            "name": "data_manipulation_challenge_domain_p",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 85
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\kai_core\\challenges\\data_manipulation_challenge_domain_s_20250804_201604.py": {
+        "type": "python",
+        "imports": [],
+        "functions": [
+          {
+            "name": "data_manipulation_challenge_domain_s",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 85
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\kai_core\\challenges\\data_manipulation_challenge_domain_s_20250804_202328.py": {
+        "type": "python",
+        "imports": [],
+        "functions": [
+          {
+            "name": "data_manipulation_challenge_domain_s",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 85
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\kai_core\\challenges\\data_manipulation_challenge_domain_s_20250804_202743.py": {
+        "type": "python",
+        "imports": [],
+        "functions": [
+          {
+            "name": "data_manipulation_challenge_domain_s",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 85
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\kai_core\\challenges\\data_manipulation_challenge_import n_20250805_172734.py": {
+        "type": "python",
+        "imports": [],
+        "functions": [
+          {
+            "name": "data_manipulation_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 85
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\kai_core\\challenges\\data_manipulation_challenge_import n_20250805_172736.py": {
+        "type": "python",
+        "imports": [],
+        "functions": [
+          {
+            "name": "data_manipulation_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 85
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\kai_core\\challenges\\data_manipulation_challenge_import n_20250805_172739.py": {
+        "type": "python",
+        "imports": [],
+        "functions": [
+          {
+            "name": "data_manipulation_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 85
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\kai_core\\challenges\\data_manipulation_challenge_import n_20250805_172741.py": {
+        "type": "python",
+        "imports": [],
+        "functions": [
+          {
+            "name": "data_manipulation_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 85
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\kai_core\\challenges\\data_manipulation_challenge_import n_20250805_172744.py": {
+        "type": "python",
+        "imports": [],
+        "functions": [
+          {
+            "name": "data_manipulation_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 85
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\kai_core\\challenges\\data_manipulation_challenge_import n_20250805_172747.py": {
+        "type": "python",
+        "imports": [],
+        "functions": [
+          {
+            "name": "data_manipulation_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 85
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\kai_core\\challenges\\data_manipulation_challenge_import n_20250805_172749.py": {
+        "type": "python",
+        "imports": [],
+        "functions": [
+          {
+            "name": "data_manipulation_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 85
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\kai_core\\challenges\\data_manipulation_challenge_import n_20250805_172752.py": {
+        "type": "python",
+        "imports": [],
+        "functions": [
+          {
+            "name": "data_manipulation_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 85
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\kai_core\\challenges\\data_manipulation_challenge_import n_20250805_173946.py": {
+        "type": "python",
+        "imports": [],
+        "functions": [
+          {
+            "name": "data_manipulation_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 85
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\kai_core\\challenges\\data_manipulation_challenge_import n_20250805_173948.py": {
+        "type": "python",
+        "imports": [],
+        "functions": [
+          {
+            "name": "data_manipulation_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 85
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\kai_core\\challenges\\data_manipulation_challenge_import n_20250805_173951.py": {
+        "type": "python",
+        "imports": [],
+        "functions": [
+          {
+            "name": "data_manipulation_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 85
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\kai_core\\challenges\\data_manipulation_challenge_import n_20250805_173953.py": {
+        "type": "python",
+        "imports": [],
+        "functions": [
+          {
+            "name": "data_manipulation_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 85
+      },
+      "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250809_093954\\kai_core\\challenges\\data_manipulation_challenge_import n_20250805_173956.py": {
+        "type": "python",
+        "imports": [],
+        "functions": [
+          {
+            "name": "data_manipulation_challenge_import_n",
+            "line": 1,
+            "args": [
+              "data"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 85
+      }
+    }
+  },
+  "estimated_tokens": 1197.3,
+  "related_chunks": [
+    "v5_core_systems",
+    "legacy_v1_v4_systems"
+  ]
+}

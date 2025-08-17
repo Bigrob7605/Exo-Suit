@@ -91,9 +91,9 @@ foreach ($report in $reports) {
     if (Test-Path $report) {
         $size = (Get-Item $report).Length
         $sizeKB = [math]::Round($size / 1KB, 2)
-        Write-Host "✓ $report ($sizeKB KB)" -ForegroundColor Green
+        Write-Host " $report ($sizeKB KB)" -ForegroundColor Green
     } else {
-        Write-Host "✗ $report (MISSING)" -ForegroundColor Red
+        Write-Host " $report (MISSING)" -ForegroundColor Red
     }
 }
 

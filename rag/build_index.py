@@ -220,14 +220,26 @@ class DualModeRAGBuilder:
         if self.device == "cuda":
             # GPU index
             try:
-                res = faiss.StandardGpuResources()
-                index = faiss.IndexFlatIP(dimension)
-                gpu_index = faiss.index_cpu_to_gpu(res, 0, index)
-                gpu_index.add(all_embeddings.astype('float32'))
+                from faiss_gpu_compat import faiss_gpu
                 
-                # Convert back to CPU for saving
-                index = faiss.index_gpu_to_cpu(gpu_index)
-                print("GPU index created successfully")
+                if faiss_gpu.has_gpu_resources():
+                    res = faiss_gpu.create_gpu_resources()
+                    if res:
+                        index = faiss.IndexFlatIP(dimension)
+                        gpu_index = faiss_gpu.index_cpu_to_gpu(res, 0, index)
+                        gpu_index.add(all_embeddings.astype('float32'))
+                        
+                        # Convert back to CPU for saving
+                        index = faiss_gpu.index_gpu_to_cpu(gpu_index)
+                        print("GPU index created successfully")
+                    else:
+                        print("GPU resources not available, using CPU index...")
+                        index = faiss.IndexFlatIP(dimension)
+                        index.add(all_embeddings.astype('float32'))
+                else:
+                    print("GPU FAISS features not available, using CPU index...")
+                    index = faiss.IndexFlatIP(dimension)
+                    index.add(all_embeddings.astype('float32'))
             except Exception as e:
                 print(f"GPU index conversion failed, using CPU: {e}")
                 index = faiss.IndexFlatIP(dimension)

@@ -68,7 +68,7 @@ $SystemStatus = @{
 function Optimize-SystemPower {
     param([hashtable]$Profile)
     
-    Write-Host "⚡ Optimizing system power settings..." -ForegroundColor Yellow
+    Write-Host " Optimizing system power settings..." -ForegroundColor Yellow
     
     try {
         if (([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")) {
@@ -106,23 +106,23 @@ function Optimize-SystemPower {
             powercfg -change -disk-timeout-dc 0
             
             $SystemStatus.Optimizations_Applied += "System Power Settings"
-            Write-Host "✅ System power optimized: $($Profile.Power_Plan)" -ForegroundColor Green
+            Write-Host " System power optimized: $($Profile.Power_Plan)" -ForegroundColor Green
             
         } else {
             $SystemStatus.Warnings += "Power optimization requires admin privileges"
-            Write-Host "⚠️  Power optimization requires admin privileges" -ForegroundColor Yellow
+            Write-Host "  Power optimization requires admin privileges" -ForegroundColor Yellow
         }
         
     } catch {
         $SystemStatus.Errors_Encountered += "Power optimization failed: $($_.Exception.Message)"
-        Write-Host "❌ Power optimization failed: $($_.Exception.Message)" -ForegroundColor Red
+        Write-Host " Power optimization failed: $($_.Exception.Message)" -ForegroundColor Red
     }
 }
 
 function Optimize-MemoryAndCache {
     param([hashtable]$Profile)
     
-    Write-Host "🧠 Optimizing memory and cache settings..." -ForegroundColor Yellow
+    Write-Host " Optimizing memory and cache settings..." -ForegroundColor Yellow
     
     try {
         # Set memory optimization environment variables
@@ -149,18 +149,18 @@ function Optimize-MemoryAndCache {
         $env:NUMEXPR_NUM_THREADS = $Profile.Workers
         
         $SystemStatus.Optimizations_Applied += "Memory and Cache Settings"
-        Write-Host "✅ Memory and cache optimized: $($Profile.Cache_Size)MB cache, $($Profile.Workers) workers" -ForegroundColor Green
+        Write-Host " Memory and cache optimized: $($Profile.Cache_Size)MB cache, $($Profile.Workers) workers" -ForegroundColor Green
         
     } catch {
         $SystemStatus.Errors_Encountered += "Memory optimization failed: $($_.Exception.Message)"
-        Write-Host "❌ Memory optimization failed: $($_.Exception.Message)" -ForegroundColor Red
+        Write-Host " Memory optimization failed: $($_.Exception.Message)" -ForegroundColor Red
     }
 }
 
 function Optimize-GPUSettings {
     param([hashtable]$Profile)
     
-    Write-Host "🎮 Optimizing GPU settings..." -ForegroundColor Yellow
+    Write-Host " Optimizing GPU settings..." -ForegroundColor Yellow
     
     try {
         # Check GPU availability
@@ -182,23 +182,23 @@ function Optimize-GPUSettings {
             $env:TORCH_CUDA_MEMORY_POOL_SIZE = "6442450944"
             
             $SystemStatus.Optimizations_Applied += "GPU Settings"
-            Write-Host "✅ GPU optimized: Memory fraction $($Profile.GPU_Memory_Fraction)" -ForegroundColor Green
+            Write-Host " GPU optimized: Memory fraction $($Profile.GPU_Memory_Fraction)" -ForegroundColor Green
             
         } else {
             $SystemStatus.Warnings += "No NVIDIA GPU detected"
-            Write-Host "⚠️  No NVIDIA GPU detected" -ForegroundColor Yellow
+            Write-Host "  No NVIDIA GPU detected" -ForegroundColor Yellow
         }
         
     } catch {
         $SystemStatus.Errors_Encountered += "GPU optimization failed: $($_.Exception.Message)"
-        Write-Host "❌ GPU optimization failed: $($_.Exception.Message)" -ForegroundColor Red
+        Write-Host " GPU optimization failed: $($_.Exception.Message)" -ForegroundColor Red
     }
 }
 
 function Update-RAGConfiguration {
     param([hashtable]$Profile)
     
-    Write-Host "🧠 Updating RAG configuration..." -ForegroundColor Yellow
+    Write-Host " Updating RAG configuration..." -ForegroundColor Yellow
     
     try {
         $configPath = "rag\hybrid_config_v4.yaml"
@@ -233,61 +233,61 @@ ultimate_speed_boost:
             
             Set-Content $configPath $config
             $SystemStatus.Optimizations_Applied += "RAG Configuration"
-            Write-Host "✅ RAG configuration updated for $Mode mode" -ForegroundColor Green
+            Write-Host " RAG configuration updated for $Mode mode" -ForegroundColor Green
             
         } else {
             $SystemStatus.Warnings += "RAG configuration file not found"
-            Write-Host "⚠️  RAG configuration file not found" -ForegroundColor Yellow
+            Write-Host "  RAG configuration file not found" -ForegroundColor Yellow
         }
         
     } catch {
         $SystemStatus.Errors_Encountered += "RAG configuration update failed: $($_.Exception.Message)"
-        Write-Host "❌ RAG configuration update failed: $($_.Exception.Message)" -ForegroundColor Red
+        Write-Host " RAG configuration update failed: $($_.Exception.Message)" -ForegroundColor Red
     }
 }
 
 function Run-PerformanceBenchmark {
-    Write-Host "🏁 Running performance benchmark..." -ForegroundColor Cyan
+    Write-Host " Running performance benchmark..." -ForegroundColor Cyan
     
     try {
         if (-not $SkipTests) {
             $benchmarkResult = & ".\ops\Performance-Test-Suite-V4.ps1" -Mode "Optimized" -SaveResults
             $SystemStatus.Optimizations_Applied += "Performance Benchmark"
-            Write-Host "✅ Performance benchmark completed" -ForegroundColor Green
+            Write-Host " Performance benchmark completed" -ForegroundColor Green
         } else {
-            Write-Host "⏭️  Performance tests skipped" -ForegroundColor Yellow
+            Write-Host "  Performance tests skipped" -ForegroundColor Yellow
         }
         
     } catch {
         $SystemStatus.Errors_Encountered += "Performance benchmark failed: $($_.Exception.Message)"
-        Write-Host "❌ Performance benchmark failed: $($_.Exception.Message)" -ForegroundColor Red
+        Write-Host " Performance benchmark failed: $($_.Exception.Message)" -ForegroundColor Red
     }
 }
 
 function Start-PerformanceMonitoring {
     if (-not $Monitor) { return }
     
-    Write-Host "📊 Starting performance monitoring..." -ForegroundColor Cyan
+    Write-Host " Starting performance monitoring..." -ForegroundColor Cyan
     
     try {
         $monitorResult = & ".\ops\RTX-4070-Optimizer.ps1" -Mode "AI" -Monitor
         $SystemStatus.Optimizations_Applied += "Performance Monitoring"
-        Write-Host "✅ Performance monitoring started" -ForegroundColor Green
+        Write-Host " Performance monitoring started" -ForegroundColor Green
         
     } catch {
         $SystemStatus.Errors_Encountered += "Performance monitoring failed: $($_.Exception.Message)"
-        Write-Host "❌ Performance monitoring failed: $($_.Exception.Message)" -ForegroundColor Red
+        Write-Host " Performance monitoring failed: $($_.Exception.Message)" -ForegroundColor Red
     }
 }
 
 function Restore-NormalSettings {
-    Write-Host "🔄 Restoring normal performance settings..." -ForegroundColor Yellow
+    Write-Host " Restoring normal performance settings..." -ForegroundColor Yellow
     
     try {
         # Restore balanced power plan
         if (([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")) {
             powercfg -setactive 381b4222-f694-41f0-9685-ff5bb260df2e
-            Write-Host "✅ Balanced power plan restored" -ForegroundColor Green
+            Write-Host " Balanced power plan restored" -ForegroundColor Green
         }
         
         # Clear environment variables
@@ -305,11 +305,11 @@ function Restore-NormalSettings {
         }
         
         $SystemStatus.Optimizations_Applied += "Settings Restored"
-        Write-Host "✅ Normal performance settings restored" -ForegroundColor Green
+        Write-Host " Normal performance settings restored" -ForegroundColor Green
         
     } catch {
         $SystemStatus.Errors_Encountered += "Settings restoration failed: $($_.Exception.Message)"
-        Write-Host "❌ Settings restoration failed: $($_.Exception.Message)" -ForegroundColor Red
+        Write-Host " Settings restoration failed: $($_.Exception.Message)" -ForegroundColor Red
     }
 }
 
@@ -317,12 +317,12 @@ function Restore-NormalSettings {
 try {
     $SystemStatus.StartTime = Get-Date
     
-    Write-Host "🚀 Ultimate Speed Boost V4.0 Initializing..." -ForegroundColor Cyan
+    Write-Host " Ultimate Speed Boost V4.0 Initializing..." -ForegroundColor Cyan
     Write-Host "Mode: $Mode | Benchmark: $Benchmark | Monitor: $Monitor" -ForegroundColor Cyan
     
     switch ($Mode) {
         'Restore' {
-            Write-Host "🔄 Restoring normal performance mode..." -ForegroundColor Yellow
+            Write-Host " Restoring normal performance mode..." -ForegroundColor Yellow
             Restore-NormalSettings
         }
         default {
@@ -331,7 +331,7 @@ try {
                 throw "Invalid performance mode: $Mode"
             }
             
-            Write-Host "🎯 Applying $Mode performance profile..." -ForegroundColor Cyan
+            Write-Host " Applying $Mode performance profile..." -ForegroundColor Cyan
             Write-Host "Description: $($profile.Description)" -ForegroundColor Cyan
             Write-Host "CPU: $($profile.CPU_Min)-$($profile.CPU_Max)% | GPU Memory: $($profile.GPU_Memory_Fraction)" -ForegroundColor Cyan
             Write-Host "Batch: $($profile.Batch_Size) | Workers: $($profile.Workers) | Prefetch: $($profile.Prefetch)" -ForegroundColor Cyan
@@ -350,7 +350,7 @@ try {
                 Start-PerformanceMonitoring
             }
             
-            Write-Host "✅ $Mode performance mode activated!" -ForegroundColor Green
+            Write-Host " $Mode performance mode activated!" -ForegroundColor Green
         }
     }
     
@@ -359,7 +359,7 @@ try {
     
     # Display summary
     Write-Host ""
-    Write-Host "📊 Ultimate Speed Boost V4.0 Summary" -ForegroundColor Cyan
+    Write-Host " Ultimate Speed Boost V4.0 Summary" -ForegroundColor Cyan
     Write-Host "====================================" -ForegroundColor Cyan
     Write-Host "Mode: $Mode" -ForegroundColor White
     Write-Host "Duration: $($duration.TotalSeconds.ToString('F2')) seconds" -ForegroundColor White
@@ -369,7 +369,7 @@ try {
     
     if ($SystemStatus.Optimizations_Applied.Count -gt 0) {
         Write-Host ""
-        Write-Host "✅ Applied Optimizations:" -ForegroundColor Green
+        Write-Host " Applied Optimizations:" -ForegroundColor Green
         foreach ($opt in $SystemStatus.Optimizations_Applied) {
             Write-Host "   • $opt" -ForegroundColor Gray
         }
@@ -377,7 +377,7 @@ try {
     
     if ($SystemStatus.Errors_Encountered.Count -gt 0) {
         Write-Host ""
-        Write-Host "❌ Errors Encountered:" -ForegroundColor Red
+        Write-Host " Errors Encountered:" -ForegroundColor Red
         foreach ($error in $SystemStatus.Errors_Encountered) {
             Write-Host "   • $error" -ForegroundColor Gray
         }
@@ -385,18 +385,18 @@ try {
     
     if ($SystemStatus.Warnings.Count -gt 0) {
         Write-Host ""
-        Write-Host "⚠️  Warnings:" -ForegroundColor Yellow
+        Write-Host "  Warnings:" -ForegroundColor Yellow
         foreach ($warning in $SystemStatus.Warnings) {
             Write-Host "   • $warning" -ForegroundColor Gray
         }
     }
     
 } catch {
-    Write-Host "❌ Ultimate Speed Boost V4.0 failed: $($_.Exception.Message)" -ForegroundColor Red
+    Write-Host " Ultimate Speed Boost V4.0 failed: $($_.Exception.Message)" -ForegroundColor Red
     exit 1
 }
 
 Write-Host ""
-Write-Host "🎯 Ultimate Speed Boost V4.0 completed successfully!" -ForegroundColor Green
+Write-Host " Ultimate Speed Boost V4.0 completed successfully!" -ForegroundColor Green
 Write-Host "Your Agent Exo-Suit V4.0 should now be running significantly faster!" -ForegroundColor Green
 exit 0

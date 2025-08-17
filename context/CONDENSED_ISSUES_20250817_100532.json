@@ -1,0 +1,78 @@
+{
+  "scan_timestamp": "2025-08-17 10:05:32",
+  "workspace_root": "C:\\My Projects\\Agent Exo-Suit",
+  "scale_mode": "massive",
+  "performance_metrics": {
+    "start_time": 1755439198.173469,
+    "end_time": 0,
+    "total_files_processed": 277278,
+    "total_size_processed_gb": 25.053637620061636,
+    "files_per_second": 0,
+    "ram_disk_transfer_time": 0,
+    "vram_processing_time": 0,
+    "gpu_utilization": 0,
+    "cpu_utilization": 0,
+    "memory_utilization": 0,
+    "issue_density": 2.885191035711452e-05
+  },
+  "summary": {
+    "total_files_processed": 277278,
+    "total_size_gb": 25.053637620061636,
+    "total_issues_found": 8,
+    "issue_density": 2.885191035711452e-05
+  },
+  "issues_by_category": {
+    "oversized": {
+      "count": 8,
+      "files": [
+        {
+          "file": "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\backups\\pre-recovery_.tgz",
+          "size_mb": 18954.84375,
+          "issue": "File too large for analysis"
+        },
+        {
+          "file": "archive\\testing_artifacts\\Universal Open Science Toolbox With Kai (The Real Test)\\.git\\objects\\pack\\pack-f2138f2b9a52f2957463bba6a327cbbf40364c56.pack",
+          "size_mb": 6900.964285850525,
+          "issue": "File too large for analysis"
+        },
+        {
+          "file": "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\.git\\objects\\pack\\pack-f2138f2b9a52f2957463bba6a327cbbf40364c56.pack",
+          "size_mb": 6900.964285850525,
+          "issue": "File too large for analysis"
+        },
+        {
+          "file": "archive\\testing_artifacts\\Universal Open Science Toolbox With Kai (The Real Test)\\backups\\pre-recovery_.tgz",
+          "size_mb": 18954.84375,
+          "issue": "File too large for analysis"
+        },
+        {
+          "file": "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\.git\\objects\\pack\\pack-f2138f2b9a52f2957463bba6a327cbbf40364c56.pack",
+          "size_mb": 6900.964285850525,
+          "issue": "File too large for analysis"
+        },
+        {
+          "file": "temp_ram_disk\\toolbox_workspace\\backups\\pre-recovery_.tgz",
+          "size_mb": 18954.84375,
+          "issue": "File too large for analysis"
+        },
+        {
+          "file": "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\backups\\pre-recovery_.tgz",
+          "size_mb": 18954.84375,
+          "issue": "File too large for analysis"
+        },
+        {
+          "file": ".git\\objects\\pack\\pack-0ce9ac1f674fcb89449ede620ae7e09bebd606b7.pack",
+          "size_mb": 3459.780565261841,
+          "issue": "File too large for analysis"
+        }
+      ]
+    }
+  },
+  "actionable_items": [
+    {
+      "priority": "MEDIUM",
+      "action": "Split large files into manageable chunks",
+      "files_affected": 8
+    }
+  ]
+}

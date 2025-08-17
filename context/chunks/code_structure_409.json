@@ -1,0 +1,5140 @@
+{
+  "chunk_type": "code_samples",
+  "chunk_id": "code_structure_409",
+  "title": "Code Structure Analysis - Part 409",
+  "description": "Code analysis for files 20401-20450",
+  "content": {
+    "files_analyzed": [
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\domain\\chemistry.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\domain\\climate.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\domain\\coding.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\domain\\coding_agentic.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\domain\\math.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\domain\\mathematics.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\domain\\math_adversarial.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\domain\\math_cli.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\domain\\physics.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\domain\\psychology.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\domain\\seismology.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\domain\\social.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\domain\\__init__.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\agent.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\agent_chat.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\agent_consensus_system.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\agent_personality_engine.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\challenger.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\codegen.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\config.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\consensus_agents.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\consensus_cli.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\deepseek_coder_upgrade.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\deepseek_coder_upgrade_hybrid.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\deepseek_coder_upgrade_simple.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\deterministic_llm.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\docs_sync.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\enhanced_safety.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\history.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\history.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\kai_cli.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\kai_core_audit_20250804_201609.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\kai_orchestrator.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\kai_orchestrator_fixed.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\kai_orchestrator_v2.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\llm_config.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\llm_integration.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\lockdown_config.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\mmh_config.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\mmh_integration.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\mmh_rs_config.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\mmh_rs_wrapper.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\orchestrator_config.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\restored_safe_config.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\ril_v7_integration.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\safety_system.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\safe_advanced_ai_config.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\session_manager.py",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\stability_config.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\validator.py"
+    ],
+    "structure_data": {
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\domain\\chemistry.py": {
+        "type": "python",
+        "imports": [
+          "numpy",
+          "pandas",
+          "typing.Dict",
+          "typing.List",
+          "typing.Optional",
+          "typing.Tuple",
+          "typing.Any",
+          "logging",
+          "datetime.datetime"
+        ],
+        "functions": [
+          {
+            "name": "ensure_json_serializable",
+            "line": 32,
+            "args": [
+              "obj"
+            ]
+          },
+          {
+            "name": "create_truth_table",
+            "line": 50,
+            "args": [
+              "test_name",
+              "pass_fail",
+              "metrics",
+              "evidence",
+              "falsification_notes"
+            ]
+          },
+          {
+            "name": "molecular_property_analysis",
+            "line": 70,
+            "args": [
+              "molecular_data"
+            ]
+          },
+          {
+            "name": "reaction_kinetics_analysis",
+            "line": 135,
+            "args": [
+              "kinetic_data"
+            ]
+          },
+          {
+            "name": "equilibrium_analysis",
+            "line": 203,
+            "args": [
+              "equilibrium_data"
+            ]
+          },
+          {
+            "name": "chemical_synthesis_analysis",
+            "line": 265,
+            "args": [
+              "synthesis_data"
+            ]
+          },
+          {
+            "name": "get_chemistry_functions",
+            "line": 326,
+            "args": []
+          },
+          {
+            "name": "run_chemistry_test_battery",
+            "line": 336,
+            "args": [
+              "test_data_dir"
+            ]
+          }
+        ],
+        "classes": [],
+        "line_count": 414
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\domain\\climate.py": {
+        "type": "python",
+        "imports": [
+          "numpy",
+          "pandas",
+          "typing.Dict",
+          "typing.Any",
+          "typing.Tuple",
+          "scipy.stats",
+          "scipy.signal.detrend",
+          "statsmodels.tsa.seasonal.seasonal_decompose",
+          "statsmodels.tsa.stattools.adfuller",
+          "warnings",
+          "scipy.stats.kendalltau"
+        ],
+        "functions": [
+          {
+            "name": "ensure_json_serializable",
+            "line": 36,
+            "args": [
+              "obj"
+            ]
+          },
+          {
+            "name": "create_truth_table",
+            "line": 54,
+            "args": [
+              "test_name",
+              "pass_fail",
+              "metrics",
+              "evidence",
+              "falsification_notes"
+            ]
+          },
+          {
+            "name": "climate_trend_analysis",
+            "line": 72,
+            "args": [
+              "data"
+            ]
+          },
+          {
+            "name": "climate_change_detection",
+            "line": 276,
+            "args": [
+              "data"
+            ]
+          },
+          {
+            "name": "seasonal_climate_analysis",
+            "line": 419,
+            "args": [
+              "data"
+            ]
+          },
+          {
+            "name": "get_climate_functions",
+            "line": 568,
+            "args": []
+          }
+        ],
+        "classes": [],
+        "line_count": 574
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\domain\\coding.py": {
+        "type": "python",
+        "imports": [
+          "numpy",
+          "hashlib",
+          "sys",
+          "platform",
+          "typing.Dict",
+          "typing.Any",
+          "typing.Optional",
+          "warnings",
+          "sklearn.model_selection.train_test_split",
+          "sklearn.ensemble.RandomForestClassifier",
+          "sklearn.metrics.accuracy_score"
+        ],
+        "functions": [
+          {
+            "name": "coding_bulletproof_test",
+            "line": 23,
+            "args": [
+              "data"
+            ]
+          },
+          {
+            "name": "get_coding_tests",
+            "line": 129,
+            "args": []
+          }
+        ],
+        "classes": [],
+        "line_count": 133
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\domain\\coding_agentic.py": {
+        "type": "python",
+        "imports": [
+          "os",
+          "sys",
+          "tempfile",
+          "subprocess",
+          "hashlib",
+          "json",
+          "shutil",
+          "datetime.datetime",
+          "typing.Dict",
+          "typing.Any",
+          "typing.List",
+          "typing.Optional",
+          "numpy",
+          "warnings"
+        ],
+        "functions": [
+          {
+            "name": "coding_agentic_test",
+            "line": 36,
+            "args": [
+              "data"
+            ]
+          },
+          {
+            "name": "_generate_analysis_code",
+            "line": 131,
+            "args": [
+              "data",
+              "temp_dir"
+            ]
+          },
+          {
+            "name": "_execute_sandboxed",
+            "line": 241,
+            "args": [
+              "temp_dir",
+              "code_file",
+              "data_file"
+            ]
+          },
+          {
+            "name": "_verify_reproducibility",
+            "line": 311,
+            "args": [
+              "temp_dir",
+              "code_hash",
+              "data_hash",
+              "execution_result"
+            ]
+          },
+          {
+            "name": "_generate_audit_trail",
+            "line": 348,
+            "args": [
+              "workspace_hash",
+              "code_hash",
+              "data_hash",
+              "execution_result"
+            ]
+          },
+          {
+            "name": "_verify_anti_tamper",
+            "line": 379,
+            "args": [
+              "temp_dir",
+              "execution_result"
+            ]
+          },
+          {
+            "name": "get_coding_agentic_tests",
+            "line": 418,
+            "args": []
+          }
+        ],
+        "classes": [],
+        "line_count": 422
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\domain\\math.py": {
+        "type": "python",
+        "imports": [
+          "numpy",
+          "typing.Dict",
+          "typing.Any",
+          "typing.List",
+          "typing.Tuple",
+          "typing.Callable",
+          "typing.Optional",
+          "typing.Union",
+          "pydantic.BaseModel",
+          "pydantic.Field",
+          "warnings",
+          "json",
+          "pathlib.Path",
+          "hashlib",
+          "datetime",
+          "sympy.satisfiable",
+          "sympy.to_cnf",
+          "sympy.Symbol",
+          "sympy.parsing.sympy_parser.parse_expr",
+          "sympy.sympify",
+          "sympy.SympifyError",
+          "sympy.Expr",
+          "sympy.sympify"
+        ],
+        "functions": [
+          {
+            "name": "check_numerical_robustness",
+            "line": 118,
+            "args": [
+              "func",
+              "grid",
+              "tol"
+            ]
+          },
+          {
+            "name": "verify_theorem",
+            "line": 174,
+            "args": [
+              "hypotheses",
+              "conclusion",
+              "symbols"
+            ]
+          },
+          {
+            "name": "symbolic_validation",
+            "line": 239,
+            "args": [
+              "data"
+            ]
+          },
+          {
+            "name": "numerical_robustness_analysis",
+            "line": 312,
+            "args": [
+              "data"
+            ]
+          },
+          {
+            "name": "proof_verification",
+            "line": 397,
+            "args": [
+              "data"
+            ]
+          },
+          {
+            "name": "get_math_tests",
+            "line": 446,
+            "args": []
+          },
+          {
+            "name": "validate",
+            "line": 35,
+            "args": [
+              "self"
+            ]
+          }
+        ],
+        "classes": [
+          {
+            "name": "SymbolicValidator",
+            "line": 27,
+            "methods": [
+              "validate"
+            ]
+          },
+          {
+            "name": "SymbolicReport",
+            "line": 98,
+            "methods": []
+          },
+          {
+            "name": "NumericRobustnessReport",
+            "line": 108,
+            "methods": []
+          },
+          {
+            "name": "ProofReport",
+            "line": 165,
+            "methods": []
+          }
+        ],
+        "line_count": 452
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\domain\\mathematics.py": {
+        "type": "python",
+        "imports": [
+          "math.*"
+        ],
+        "functions": [],
+        "classes": [],
+        "line_count": 2
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\domain\\math_adversarial.py": {
+        "type": "python",
+        "imports": [
+          "numpy",
+          "random",
+          "string",
+          "typing.Dict",
+          "typing.Any",
+          "typing.List",
+          "typing.Generator",
+          "typing.Tuple",
+          "json",
+          "pathlib.Path",
+          "domain.math.symbolic_validation",
+          "domain.math.numerical_robustness_analysis",
+          "domain.math.proof_verification"
+        ],
+        "functions": [
+          {
+            "name": "generate_symbolic_edge_cases",
+            "line": 69,
+            "args": []
+          },
+          {
+            "name": "generate_numerical_instability_cases",
+            "line": 101,
+            "args": []
+          },
+          {
+            "name": "generate_proof_counter_examples",
+            "line": 139,
+            "args": []
+          },
+          {
+            "name": "generate_random_symbolic_expressions",
+            "line": 188,
+            "args": [
+              "num_cases"
+            ]
+          },
+          {
+            "name": "adversarial_symbolic_test",
+            "line": 229,
+            "args": [
+              "validator_func"
+            ]
+          },
+          {
+            "name": "adversarial_numerical_test",
+            "line": 269,
+            "args": [
+              "robustness_func"
+            ]
+          },
+          {
+            "name": "adversarial_proof_test",
+            "line": 296,
+            "args": [
+              "proof_func"
+            ]
+          },
+          {
+            "name": "run_math_adversarial_tests",
+            "line": 323,
+            "args": []
+          }
+        ],
+        "classes": [],
+        "line_count": 342
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\domain\\math_cli.py": {
+        "type": "python",
+        "imports": [
+          "json",
+          "typer",
+          "rich.console.Console",
+          "rich.panel.Panel",
+          "rich.table.Table",
+          "typing.Optional",
+          "domain.math_validation.symbolic_validation",
+          "domain.math_validation.numerical_robustness_analysis",
+          "domain.math_validation.proof_verification",
+          "domain.math_validation.get_math_tests",
+          "domain.math_adversarial.run_math_adversarial_tests"
+        ],
+        "functions": [
+          {
+            "name": "validate_formula",
+            "line": 26,
+            "args": [
+              "expression",
+              "test_cases",
+              "output"
+            ]
+          },
+          {
+            "name": "check_robustness",
+            "line": 79,
+            "args": [
+              "function",
+              "grid",
+              "tolerance",
+              "output"
+            ]
+          },
+          {
+            "name": "verify_proof",
+            "line": 157,
+            "args": [
+              "proof",
+              "axioms",
+              "output"
+            ]
+          },
+          {
+            "name": "adversarial",
+            "line": 206,
+            "args": [
+              "function",
+              "epsilon",
+              "iterations",
+              "output"
+            ]
+          },
+          {
+            "name": "run_challenge",
+            "line": 276,
+            "args": [
+              "challenge",
+              "difficulty",
+              "timeout",
+              "output"
+            ]
+          },
+          {
+            "name": "list_tests",
+            "line": 333,
+            "args": []
+          },
+          {
+            "name": "info",
+            "line": 367,
+            "args": []
+          }
+        ],
+        "classes": [],
+        "line_count": 385
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\domain\\physics.py": {
+        "type": "python",
+        "imports": [
+          "numpy",
+          "scipy.stats",
+          "scipy.signal.find_peaks",
+          "typing.Dict",
+          "typing.Any",
+          "typing.Optional",
+          "warnings"
+        ],
+        "functions": [
+          {
+            "name": "ligo_strain_analysis",
+            "line": 24,
+            "args": [
+              "data"
+            ]
+          },
+          {
+            "name": "particle_physics_analysis",
+            "line": 147,
+            "args": [
+              "data"
+            ]
+          },
+          {
+            "name": "cosmology_analysis",
+            "line": 240,
+            "args": [
+              "data"
+            ]
+          },
+          {
+            "name": "get_physics_tests",
+            "line": 345,
+            "args": []
+          }
+        ],
+        "classes": [],
+        "line_count": 351
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\domain\\psychology.py": {
+        "type": "python",
+        "imports": [
+          "numpy",
+          "scipy.stats",
+          "statsmodels.stats.power.TTestPower",
+          "typing.Dict",
+          "typing.Any",
+          "typing.Optional",
+          "warnings",
+          "hashlib"
+        ],
+        "functions": [
+          {
+            "name": "psychology_bulletproof_test",
+            "line": 24,
+            "args": [
+              "data"
+            ]
+          },
+          {
+            "name": "get_psychology_tests",
+            "line": 119,
+            "args": []
+          }
+        ],
+        "classes": [],
+        "line_count": 123
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\domain\\seismology.py": {
+        "type": "python",
+        "imports": [
+          "numpy",
+          "pandas",
+          "typing.Dict",
+          "typing.Any",
+          "typing.Tuple",
+          "typing.List",
+          "scipy.stats",
+          "scipy.spatial.distance.cdist",
+          "warnings"
+        ],
+        "functions": [
+          {
+            "name": "ensure_json_serializable",
+            "line": 42,
+            "args": [
+              "obj"
+            ]
+          },
+          {
+            "name": "create_truth_table",
+            "line": 60,
+            "args": [
+              "test_name",
+              "pass_fail",
+              "metrics",
+              "evidence",
+              "falsification_notes"
+            ]
+          },
+          {
+            "name": "heat_warning_correlation_index",
+            "line": 78,
+            "args": [
+              "data"
+            ]
+          },
+          {
+            "name": "stress_perturbation_analysis",
+            "line": 196,
+            "args": [
+              "data"
+            ]
+          },
+          {
+            "name": "seismic_modulator_analysis",
+            "line": 366,
+            "args": [
+              "data"
+            ]
+          },
+          {
+            "name": "get_seismology_functions",
+            "line": 531,
+            "args": []
+          }
+        ],
+        "classes": [],
+        "line_count": 537
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\domain\\social.py": {
+        "type": "python",
+        "imports": [
+          "numpy",
+          "scipy.stats",
+          "statsmodels.stats.power.TTestPower",
+          "typing.Dict",
+          "typing.Any",
+          "typing.Optional",
+          "warnings",
+          "hashlib"
+        ],
+        "functions": [
+          {
+            "name": "social_bulletproof_test",
+            "line": 24,
+            "args": [
+              "data"
+            ]
+          },
+          {
+            "name": "get_social_tests",
+            "line": 132,
+            "args": []
+          }
+        ],
+        "classes": [],
+        "line_count": 136
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\domain\\__init__.py": {
+        "type": "python",
+        "imports": [],
+        "functions": [],
+        "classes": [],
+        "line_count": 1
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\agent.py": {
+        "type": "python",
+        "imports": [
+          "subprocess",
+          "tempfile",
+          "logging",
+          "datetime.datetime",
+          "typing.Dict",
+          "typing.List",
+          "typing.Any",
+          "typing.Optional",
+          "pathlib.Path",
+          "sys",
+          "os",
+          "json",
+          "hashlib",
+          "time",
+          "codegen.CodeGenerator",
+          "validator.CodeValidator",
+          "challenger.ChallengeGenerator",
+          "docs_sync.DocumentationSync",
+          "history.ChangeHistory",
+          "llm_integration.LLMIntegration",
+          "mmh_integration.MMHIntegration",
+          "mmh_integration.AgentGenome",
+          "mmh_integration.SafetyLevel",
+          "omega_kill_switch_package.setup_omega_protection",
+          "omega_kill_switch_package.execute_agent_safely",
+          "omega_kill_switch_package.validate_agent_code",
+          "omega_kill_switch_package.mbrsc_monitor",
+          "railguard_system.kai_railguard",
+          "railguard_system.external_railguard",
+          "railguard_system.get_railguard_for_agent",
+          "enhanced_safety.enhanced_omega",
+          "enhanced_safety.recursive_safety",
+          "enhanced_safety.performance_monitor",
+          "enhanced_safety.tamper_detector",
+          "enhanced_safety.CircuitBreaker"
+        ],
+        "functions": [
+          {
+            "name": "__init__",
+            "line": 95,
+            "args": [
+              "self",
+              "toolbox_path"
+            ]
+          },
+          {
+            "name": "_load_config",
+            "line": 184,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_ensure_directories",
+            "line": 219,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_register_core_agent",
+            "line": 232,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "scan_documentation_gaps",
+            "line": 293,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_get_existing_domains",
+            "line": 342,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "llm_generate_test",
+            "line": 355,
+            "args": [
+              "self",
+              "gap"
+            ]
+          },
+          {
+            "name": "_log_llm_generation",
+            "line": 392,
+            "args": [
+              "self",
+              "llm_result"
+            ]
+          },
+          {
+            "name": "_build_generation_prompt",
+            "line": 419,
+            "args": [
+              "self",
+              "gap",
+              "template"
+            ]
+          },
+          {
+            "name": "run_self_test",
+            "line": 537,
+            "args": [
+              "self",
+              "code"
+            ]
+          },
+          {
+            "name": "log_change",
+            "line": 681,
+            "args": [
+              "self",
+              "code",
+              "passed",
+              "gap"
+            ]
+          },
+          {
+            "name": "auto_challenge",
+            "line": 703,
+            "args": [
+              "self",
+              "change_hash",
+              "code"
+            ]
+          },
+          {
+            "name": "submit_pull_request",
+            "line": 725,
+            "args": [
+              "self",
+              "change_hash",
+              "code",
+              "gap"
+            ]
+          },
+          {
+            "name": "full_loop",
+            "line": 756,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_apply_cross_domain_insights",
+            "line": 829,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_evolve_agent_capabilities",
+            "line": 878,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_log_cross_domain_insights",
+            "line": 925,
+            "args": [
+              "self",
+              "insights"
+            ]
+          },
+          {
+            "name": "challenge_self",
+            "line": 943,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "get_status",
+            "line": 973,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "validate_external_request",
+            "line": 1011,
+            "args": [
+              "self",
+              "agent_id",
+              "request",
+              "context"
+            ]
+          },
+          {
+            "name": "get_external_session_status",
+            "line": 1049,
+            "args": [
+              "self",
+              "agent_id"
+            ]
+          },
+          {
+            "name": "generate_kai_audit_report",
+            "line": 1064,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "get_enhanced_health_status",
+            "line": 1076,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "generate_enhanced_audit_report",
+            "line": 1118,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "emergency_shutdown",
+            "line": 1202,
+            "args": [
+              "self",
+              "reason"
+            ]
+          },
+          {
+            "name": "test_code",
+            "line": 638,
+            "args": []
+          }
+        ],
+        "classes": [
+          {
+            "name": "KaiCoreAgent",
+            "line": 68,
+            "methods": [
+              "__init__",
+              "_load_config",
+              "_ensure_directories",
+              "_register_core_agent",
+              "scan_documentation_gaps",
+              "_get_existing_domains",
+              "llm_generate_test",
+              "_log_llm_generation",
+              "_build_generation_prompt",
+              "run_self_test",
+              "log_change",
+              "auto_challenge",
+              "submit_pull_request",
+              "full_loop",
+              "_apply_cross_domain_insights",
+              "_evolve_agent_capabilities",
+              "_log_cross_domain_insights",
+              "challenge_self",
+              "get_status",
+              "validate_external_request",
+              "get_external_session_status",
+              "generate_kai_audit_report",
+              "get_enhanced_health_status",
+              "generate_enhanced_audit_report",
+              "emergency_shutdown"
+            ]
+          }
+        ],
+        "line_count": 1230
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\agent_chat.py": {
+        "type": "python",
+        "imports": [
+          "random",
+          "datetime.datetime",
+          "typing.Dict",
+          "typing.Any",
+          "kai_core.agent_personality_engine.DynamicPersonalityEngine"
+        ],
+        "functions": [
+          {
+            "name": "__init__",
+            "line": 7,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_classify_message_type",
+            "line": 10,
+            "args": [
+              "self",
+              "message"
+            ]
+          },
+          {
+            "name": "_process_serious_query",
+            "line": 49,
+            "args": [
+              "self",
+              "agent_id",
+              "message",
+              "context"
+            ]
+          },
+          {
+            "name": "get_agent_response",
+            "line": 117,
+            "args": [
+              "self",
+              "agent_id",
+              "message",
+              "context"
+            ]
+          }
+        ],
+        "classes": [
+          {
+            "name": "EnhancedAgentChat",
+            "line": 6,
+            "methods": [
+              "__init__",
+              "_classify_message_type",
+              "_process_serious_query",
+              "get_agent_response"
+            ]
+          }
+        ],
+        "line_count": 139
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\agent_consensus_system.py": {
+        "type": "python",
+        "imports": [
+          "json",
+          "hashlib",
+          "os",
+          "time",
+          "uuid",
+          "datetime.datetime",
+          "pathlib.Path",
+          "typing.Dict",
+          "typing.List",
+          "typing.Optional",
+          "typing.Tuple",
+          "typing.Any",
+          "dataclasses.dataclass",
+          "dataclasses.asdict",
+          "enum.Enum",
+          "logging"
+        ],
+        "functions": [
+          {
+            "name": "submit_upgrade_proposal",
+            "line": 451,
+            "args": [
+              "title",
+              "description",
+              "code_patch",
+              "affected_files"
+            ]
+          },
+          {
+            "name": "get_proposal_status",
+            "line": 464,
+            "args": [
+              "proposal_id"
+            ]
+          },
+          {
+            "name": "list_pending_proposals",
+            "line": 469,
+            "args": []
+          },
+          {
+            "name": "get_approval_count",
+            "line": 75,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "get_rejection_count",
+            "line": 78,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "is_approved",
+            "line": 81,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "is_rejected",
+            "line": 84,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "get_consensus_status",
+            "line": 87,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "__init__",
+            "line": 103,
+            "args": [
+              "self",
+              "base_path"
+            ]
+          },
+          {
+            "name": "_load_agents",
+            "line": 120,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_save_agents_config",
+            "line": 176,
+            "args": [
+              "self",
+              "agents"
+            ]
+          },
+          {
+            "name": "_initialize_audit_trail",
+            "line": 186,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "submit_proposal",
+            "line": 199,
+            "args": [
+              "self",
+              "title",
+              "description",
+              "code_patch",
+              "affected_files",
+              "risk_level",
+              "estimated_impact",
+              "submitted_by"
+            ]
+          },
+          {
+            "name": "review_proposal",
+            "line": 251,
+            "args": [
+              "self",
+              "proposal_id",
+              "agent_id",
+              "result",
+              "reasoning",
+              "confidence",
+              "security_analysis",
+              "performance_analysis",
+              "bug_analysis"
+            ]
+          },
+          {
+            "name": "get_proposal_status",
+            "line": 335,
+            "args": [
+              "self",
+              "proposal_id"
+            ]
+          },
+          {
+            "name": "list_proposals",
+            "line": 344,
+            "args": [
+              "self",
+              "status_filter"
+            ]
+          },
+          {
+            "name": "approve_proposal",
+            "line": 357,
+            "args": [
+              "self",
+              "proposal_id"
+            ]
+          },
+          {
+            "name": "_hash_review",
+            "line": 392,
+            "args": [
+              "self",
+              "agent_id",
+              "result",
+              "reasoning"
+            ]
+          },
+          {
+            "name": "_log_audit_entry",
+            "line": 397,
+            "args": [
+              "self",
+              "action",
+              "data"
+            ]
+          },
+          {
+            "name": "get_system_status",
+            "line": 426,
+            "args": [
+              "self"
+            ]
+          }
+        ],
+        "classes": [
+          {
+            "name": "ReviewResult",
+            "line": 32,
+            "methods": []
+          },
+          {
+            "name": "AgentType",
+            "line": 38,
+            "methods": []
+          },
+          {
+            "name": "AgentReview",
+            "line": 45,
+            "methods": []
+          },
+          {
+            "name": "UpgradeProposal",
+            "line": 60,
+            "methods": [
+              "get_approval_count",
+              "get_rejection_count",
+              "is_approved",
+              "is_rejected",
+              "get_consensus_status"
+            ]
+          },
+          {
+            "name": "AgentConsensusSystem",
+            "line": 98,
+            "methods": [
+              "__init__",
+              "_load_agents",
+              "_save_agents_config",
+              "_initialize_audit_trail",
+              "submit_proposal",
+              "review_proposal",
+              "get_proposal_status",
+              "list_proposals",
+              "approve_proposal",
+              "_hash_review",
+              "_log_audit_entry",
+              "get_system_status"
+            ]
+          }
+        ],
+        "line_count": 471
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\agent_personality_engine.py": {
+        "type": "python",
+        "imports": [
+          "random",
+          "hashlib",
+          "datetime.datetime",
+          "typing.Dict",
+          "typing.List",
+          "typing.Set",
+          "typing.Any"
+        ],
+        "functions": [
+          {
+            "name": "__init__",
+            "line": 9,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "get_dynamic_response",
+            "line": 252,
+            "args": [
+              "self",
+              "agent_id",
+              "response_type",
+              "context"
+            ]
+          },
+          {
+            "name": "_generate_fresh_response",
+            "line": 304,
+            "args": [
+              "self",
+              "agent_id",
+              "context"
+            ]
+          },
+          {
+            "name": "_get_personality_drop",
+            "line": 371,
+            "args": [
+              "self",
+              "agent_id"
+            ]
+          },
+          {
+            "name": "_generate_fresh_personality_drop",
+            "line": 427,
+            "args": [
+              "self",
+              "agent_id",
+              "context"
+            ]
+          }
+        ],
+        "classes": [
+          {
+            "name": "DynamicPersonalityEngine",
+            "line": 6,
+            "methods": [
+              "__init__",
+              "get_dynamic_response",
+              "_generate_fresh_response",
+              "_get_personality_drop",
+              "_generate_fresh_personality_drop"
+            ]
+          }
+        ],
+        "line_count": 492
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\challenger.py": {
+        "type": "python",
+        "imports": [
+          "hashlib",
+          "json",
+          "os",
+          "random",
+          "datetime.datetime",
+          "enum.Enum",
+          "typing.Any",
+          "typing.Dict",
+          "typing.List",
+          "typing.Optional"
+        ],
+        "functions": [
+          {
+            "name": "__init__",
+            "line": 30,
+            "args": [
+              "self",
+              "toolbox_path"
+            ]
+          },
+          {
+            "name": "_load_challenge_templates",
+            "line": 38,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_get_edge_case_template",
+            "line": 49,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_get_p_hacking_template",
+            "line": 149,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_get_data_manipulation_template",
+            "line": 226,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_get_logical_paradox_template",
+            "line": 308,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_get_performance_template",
+            "line": 370,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_get_security_template",
+            "line": 437,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "generate_challenges",
+            "line": 498,
+            "args": [
+              "self",
+              "target_hash",
+              "code",
+              "challenge_types"
+            ]
+          },
+          {
+            "name": "challenge_existing_code",
+            "line": 544,
+            "args": [
+              "self"
+            ]
+          }
+        ],
+        "classes": [
+          {
+            "name": "ChallengeType",
+            "line": 16,
+            "methods": []
+          },
+          {
+            "name": "ChallengeGenerator",
+            "line": 25,
+            "methods": [
+              "__init__",
+              "_load_challenge_templates",
+              "_get_edge_case_template",
+              "_get_p_hacking_template",
+              "_get_data_manipulation_template",
+              "_get_logical_paradox_template",
+              "_get_performance_template",
+              "_get_security_template",
+              "generate_challenges",
+              "challenge_existing_code"
+            ]
+          }
+        ],
+        "line_count": 564
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\codegen.py": {
+        "type": "python",
+        "imports": [
+          "os",
+          "json",
+          "hashlib",
+          "subprocess",
+          "tempfile",
+          "datetime.datetime",
+          "typing.Dict",
+          "typing.List",
+          "typing.Any",
+          "typing.Optional",
+          "pathlib.Path"
+        ],
+        "functions": [
+          {
+            "name": "__init__",
+            "line": 22,
+            "args": [
+              "self",
+              "toolbox_path"
+            ]
+          },
+          {
+            "name": "_load_templates",
+            "line": 34,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_get_psychology_template",
+            "line": 44,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_get_social_template",
+            "line": 135,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_get_coding_template",
+            "line": 235,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_get_default_template",
+            "line": 343,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "generate_test_function",
+            "line": 405,
+            "args": [
+              "self",
+              "domain",
+              "template",
+              "prompt"
+            ]
+          },
+          {
+            "name": "validate_generated_code",
+            "line": 455,
+            "args": [
+              "self",
+              "code"
+            ]
+          }
+        ],
+        "classes": [
+          {
+            "name": "CodeGenerator",
+            "line": 17,
+            "methods": [
+              "__init__",
+              "_load_templates",
+              "_get_psychology_template",
+              "_get_social_template",
+              "_get_coding_template",
+              "_get_default_template",
+              "generate_test_function",
+              "validate_generated_code"
+            ]
+          }
+        ],
+        "line_count": 477
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\config.json": {
+        "type": "json",
+        "keys": [
+          "mode",
+          "llm_provider",
+          "auto_merge",
+          "challenge_self",
+          "max_cycles_per_day",
+          "domains_to_focus",
+          "test_templates",
+          "llm_enabled",
+          "cross_domain_reasoning",
+          "self_audit",
+          "auto_correct",
+          "mmh_enabled",
+          "agent_evolution",
+          "recursive_audit",
+          "stability_mode",
+          "prevent_self_modification",
+          "read_only_mode",
+          "max_agent_mutations",
+          "genome_lock",
+          "safety_system",
+          "advanced_ai_capabilities",
+          "safety_guarantees",
+          "restoration_status"
+        ],
+        "line_count": 97
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\consensus_agents.json": {
+        "type": "json",
+        "keys": [],
+        "line_count": 62
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\consensus_cli.py": {
+        "type": "python",
+        "imports": [
+          "argparse",
+          "sys",
+          "pathlib.Path",
+          "typing.Any",
+          "typing.Dict",
+          "kai_core.agent_consensus_system.ReviewResult",
+          "kai_core.agent_consensus_system.consensus_system"
+        ],
+        "functions": [
+          {
+            "name": "print_proposal",
+            "line": 21,
+            "args": [
+              "proposal",
+              "detailed"
+            ]
+          },
+          {
+            "name": "list_proposals",
+            "line": 52,
+            "args": [
+              "args"
+            ]
+          },
+          {
+            "name": "show_proposal",
+            "line": 66,
+            "args": [
+              "args"
+            ]
+          },
+          {
+            "name": "submit_review",
+            "line": 76,
+            "args": [
+              "args"
+            ]
+          },
+          {
+            "name": "approve_proposal",
+            "line": 105,
+            "args": [
+              "args"
+            ]
+          },
+          {
+            "name": "system_status",
+            "line": 115,
+            "args": [
+              "args"
+            ]
+          },
+          {
+            "name": "list_agents",
+            "line": 132,
+            "args": [
+              "args"
+            ]
+          },
+          {
+            "name": "main",
+            "line": 152,
+            "args": []
+          }
+        ],
+        "classes": [],
+        "line_count": 237
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\deepseek_coder_upgrade.py": {
+        "type": "python",
+        "imports": [
+          "ast",
+          "hashlib",
+          "os",
+          "pickle",
+          "subprocess",
+          "time",
+          "typing.Dict",
+          "typing.List",
+          "typing.Optional",
+          "black",
+          "ray",
+          "torch",
+          "transformers.AutoModelForCausalLM",
+          "transformers.AutoTokenizer"
+        ],
+        "functions": [
+          {
+            "name": "__init__",
+            "line": 29,
+            "args": [
+              "self",
+              "model_path",
+              "cache_dir",
+              "mesh_mode"
+            ]
+          },
+          {
+            "name": "setup_model",
+            "line": 42,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "setup_speculative_decoding",
+            "line": 65,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "setup_cache",
+            "line": 80,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "setup_guardrails",
+            "line": 85,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "get_cache_key",
+            "line": 94,
+            "args": [
+              "self",
+              "prompt",
+              "seed"
+            ]
+          },
+          {
+            "name": "get_cached_response",
+            "line": 98,
+            "args": [
+              "self",
+              "prompt",
+              "seed"
+            ]
+          },
+          {
+            "name": "cache_response",
+            "line": 115,
+            "args": [
+              "self",
+              "prompt",
+              "response",
+              "seed"
+            ]
+          },
+          {
+            "name": "speculative_generate",
+            "line": 123,
+            "args": [
+              "self",
+              "prompt",
+              "max_length"
+            ]
+          },
+          {
+            "name": "standard_generate",
+            "line": 148,
+            "args": [
+              "self",
+              "prompt",
+              "max_length"
+            ]
+          },
+          {
+            "name": "generate_code",
+            "line": 163,
+            "args": [
+              "self",
+              "prompt",
+              "max_length",
+              "use_cache",
+              "seed"
+            ]
+          },
+          {
+            "name": "apply_guardrails",
+            "line": 196,
+            "args": [
+              "self",
+              "code"
+            ]
+          },
+          {
+            "name": "run_humaneval_test",
+            "line": 222,
+            "args": [
+              "self",
+              "test_case"
+            ]
+          },
+          {
+            "name": "benchmark_humaneval",
+            "line": 239,
+            "args": [
+              "self",
+              "test_cases"
+            ]
+          },
+          {
+            "name": "setup_mesh_mode",
+            "line": 260,
+            "args": [
+              "self",
+              "num_workers"
+            ]
+          },
+          {
+            "name": "mesh_generate",
+            "line": 278,
+            "args": [
+              "self",
+              "prompts"
+            ]
+          },
+          {
+            "name": "get_stats",
+            "line": 291,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "__init__",
+            "line": 267,
+            "args": [
+              "self",
+              "worker_id"
+            ]
+          },
+          {
+            "name": "process_batch",
+            "line": 271,
+            "args": [
+              "self",
+              "batch"
+            ]
+          }
+        ],
+        "classes": [
+          {
+            "name": "DeepSeekCoderUpgrade",
+            "line": 18,
+            "methods": [
+              "__init__",
+              "setup_model",
+              "setup_speculative_decoding",
+              "setup_cache",
+              "setup_guardrails",
+              "get_cache_key",
+              "get_cached_response",
+              "cache_response",
+              "speculative_generate",
+              "standard_generate",
+              "generate_code",
+              "apply_guardrails",
+              "run_humaneval_test",
+              "benchmark_humaneval",
+              "setup_mesh_mode",
+              "mesh_generate",
+              "get_stats"
+            ]
+          },
+          {
+            "name": "MeshWorker",
+            "line": 266,
+            "methods": [
+              "__init__",
+              "process_batch"
+            ]
+          }
+        ],
+        "line_count": 340
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\deepseek_coder_upgrade_hybrid.py": {
+        "type": "python",
+        "imports": [
+          "hashlib",
+          "os",
+          "pickle",
+          "time",
+          "typing.Dict",
+          "typing.Optional",
+          "black",
+          "llama_cpp.Llama"
+        ],
+        "functions": [
+          {
+            "name": "test_deepseek_upgrade_hybrid",
+            "line": 211,
+            "args": []
+          },
+          {
+            "name": "__init__",
+            "line": 40,
+            "args": [
+              "self",
+              "model_path",
+              "cache_dir",
+              "gpu_layers",
+              "context_size"
+            ]
+          },
+          {
+            "name": "setup_model",
+            "line": 55,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "setup_cache",
+            "line": 89,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "setup_guardrails",
+            "line": 94,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "get_cached_response",
+            "line": 98,
+            "args": [
+              "self",
+              "prompt",
+              "seed"
+            ]
+          },
+          {
+            "name": "cache_response",
+            "line": 117,
+            "args": [
+              "self",
+              "prompt",
+              "response",
+              "seed"
+            ]
+          },
+          {
+            "name": "generate_code",
+            "line": 138,
+            "args": [
+              "self",
+              "prompt",
+              "max_tokens",
+              "use_cache",
+              "seed"
+            ]
+          },
+          {
+            "name": "apply_guardrails",
+            "line": 177,
+            "args": [
+              "self",
+              "code"
+            ]
+          },
+          {
+            "name": "get_stats",
+            "line": 189,
+            "args": [
+              "self"
+            ]
+          }
+        ],
+        "classes": [
+          {
+            "name": "DeepSeekCoderUpgradeHybrid",
+            "line": 30,
+            "methods": [
+              "__init__",
+              "setup_model",
+              "setup_cache",
+              "setup_guardrails",
+              "get_cached_response",
+              "cache_response",
+              "generate_code",
+              "apply_guardrails",
+              "get_stats"
+            ]
+          }
+        ],
+        "line_count": 247
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\deepseek_coder_upgrade_simple.py": {
+        "type": "python",
+        "imports": [
+          "hashlib",
+          "os",
+          "pickle",
+          "time",
+          "typing.Dict",
+          "typing.Optional",
+          "black",
+          "torch",
+          "transformers.AutoModelForCausalLM",
+          "transformers.AutoTokenizer"
+        ],
+        "functions": [
+          {
+            "name": "test_deepseek_upgrade",
+            "line": 185,
+            "args": []
+          },
+          {
+            "name": "__init__",
+            "line": 32,
+            "args": [
+              "self",
+              "model_path",
+              "cache_dir"
+            ]
+          },
+          {
+            "name": "setup_model",
+            "line": 41,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "setup_cache",
+            "line": 60,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "setup_guardrails",
+            "line": 65,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "get_cached_response",
+            "line": 69,
+            "args": [
+              "self",
+              "prompt",
+              "seed"
+            ]
+          },
+          {
+            "name": "cache_response",
+            "line": 88,
+            "args": [
+              "self",
+              "prompt",
+              "response",
+              "seed"
+            ]
+          },
+          {
+            "name": "generate_code",
+            "line": 109,
+            "args": [
+              "self",
+              "prompt",
+              "max_length",
+              "use_cache",
+              "seed"
+            ]
+          },
+          {
+            "name": "apply_guardrails",
+            "line": 153,
+            "args": [
+              "self",
+              "code"
+            ]
+          },
+          {
+            "name": "get_stats",
+            "line": 165,
+            "args": [
+              "self"
+            ]
+          }
+        ],
+        "classes": [
+          {
+            "name": "DeepSeekCoderUpgradeSimple",
+            "line": 22,
+            "methods": [
+              "__init__",
+              "setup_model",
+              "setup_cache",
+              "setup_guardrails",
+              "get_cached_response",
+              "cache_response",
+              "generate_code",
+              "apply_guardrails",
+              "get_stats"
+            ]
+          }
+        ],
+        "line_count": 220
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\deterministic_llm.py": {
+        "type": "python",
+        "imports": [
+          "ast",
+          "asyncio",
+          "hashlib",
+          "json",
+          "logging",
+          "uuid",
+          "dataclasses.dataclass",
+          "datetime.datetime",
+          "typing.Any",
+          "typing.Dict",
+          "typing.List",
+          "typing.Optional"
+        ],
+        "functions": [
+          {
+            "name": "__init__",
+            "line": 46,
+            "args": [
+              "self",
+              "base_llm_integration",
+              "config"
+            ]
+          },
+          {
+            "name": "_load_golden_asts",
+            "line": 58,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_get_ast_fingerprint",
+            "line": 83,
+            "args": [
+              "self",
+              "code"
+            ]
+          },
+          {
+            "name": "_generate_deterministic_uuid",
+            "line": 94,
+            "args": [
+              "self",
+              "domain"
+            ]
+          },
+          {
+            "name": "_add_uuid_fingerprint",
+            "line": 101,
+            "args": [
+              "self",
+              "prompt",
+              "domain"
+            ]
+          },
+          {
+            "name": "_validate_uuid_fingerprint",
+            "line": 110,
+            "args": [
+              "self",
+              "response",
+              "domain"
+            ]
+          },
+          {
+            "name": "_add_structured_output_instructions",
+            "line": 118,
+            "args": [
+              "self",
+              "prompt"
+            ]
+          },
+          {
+            "name": "_parse_structured_response",
+            "line": 140,
+            "args": [
+              "self",
+              "response"
+            ]
+          },
+          {
+            "name": "_validate_token_budget",
+            "line": 159,
+            "args": [
+              "self",
+              "prompt",
+              "response"
+            ]
+          },
+          {
+            "name": "_validate_ast_fingerprint",
+            "line": 177,
+            "args": [
+              "self",
+              "code",
+              "domain"
+            ]
+          },
+          {
+            "name": "_referee_ensemble_results",
+            "line": 240,
+            "args": [
+              "self",
+              "results"
+            ]
+          },
+          {
+            "name": "generate_code",
+            "line": 254,
+            "args": [
+              "self",
+              "prompt",
+              "domain",
+              "template"
+            ]
+          },
+          {
+            "name": "get_status",
+            "line": 349,
+            "args": [
+              "self"
+            ]
+          }
+        ],
+        "classes": [
+          {
+            "name": "DeterministicConfig",
+            "line": 28,
+            "methods": []
+          },
+          {
+            "name": "DeterministicLLM",
+            "line": 41,
+            "methods": [
+              "__init__",
+              "_load_golden_asts",
+              "_get_ast_fingerprint",
+              "_generate_deterministic_uuid",
+              "_add_uuid_fingerprint",
+              "_validate_uuid_fingerprint",
+              "_add_structured_output_instructions",
+              "_parse_structured_response",
+              "_validate_token_budget",
+              "_validate_ast_fingerprint",
+              "_referee_ensemble_results",
+              "generate_code",
+              "get_status"
+            ]
+          }
+        ],
+        "line_count": 362
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\docs_sync.py": {
+        "type": "python",
+        "imports": [
+          "os",
+          "re",
+          "datetime.datetime"
+        ],
+        "functions": [
+          {
+            "name": "__init__",
+            "line": 17,
+            "args": [
+              "self",
+              "toolbox_path"
+            ]
+          },
+          {
+            "name": "update_api_reference",
+            "line": 22,
+            "args": [
+              "self",
+              "new_domain",
+              "function_name",
+              "description"
+            ]
+          },
+          {
+            "name": "_create_api_reference",
+            "line": 72,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "update_examples_gallery",
+            "line": 91,
+            "args": [
+              "self",
+              "new_domain",
+              "function_name"
+            ]
+          },
+          {
+            "name": "_create_examples_gallery",
+            "line": 127,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "create_domain_documentation",
+            "line": 146,
+            "args": [
+              "self",
+              "domain",
+              "function_name",
+              "code"
+            ]
+          },
+          {
+            "name": "_extract_docstring",
+            "line": 200,
+            "args": [
+              "self",
+              "code"
+            ]
+          },
+          {
+            "name": "update_changelog",
+            "line": 208,
+            "args": [
+              "self",
+              "change_hash",
+              "domain",
+              "function_name",
+              "description"
+            ]
+          },
+          {
+            "name": "_create_changelog",
+            "line": 252,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "sync_all_documentation",
+            "line": 275,
+            "args": [
+              "self",
+              "change_hash",
+              "domain",
+              "function_name",
+              "description",
+              "code"
+            ]
+          }
+        ],
+        "classes": [
+          {
+            "name": "DocumentationSync",
+            "line": 12,
+            "methods": [
+              "__init__",
+              "update_api_reference",
+              "_create_api_reference",
+              "update_examples_gallery",
+              "_create_examples_gallery",
+              "create_domain_documentation",
+              "_extract_docstring",
+              "update_changelog",
+              "_create_changelog",
+              "sync_all_documentation"
+            ]
+          }
+        ],
+        "line_count": 298
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\enhanced_safety.py": {
+        "type": "python",
+        "imports": [
+          "hashlib",
+          "json",
+          "logging",
+          "threading",
+          "time",
+          "datetime.datetime",
+          "datetime.timedelta",
+          "typing.Dict",
+          "typing.List",
+          "typing.Any",
+          "typing.Optional",
+          "typing.Callable",
+          "atexit",
+          "signal",
+          "sys"
+        ],
+        "functions": [
+          {
+            "name": "__init__",
+            "line": 32,
+            "args": [
+              "self",
+              "agent_id"
+            ]
+          },
+          {
+            "name": "create_monitor",
+            "line": 47,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_emergency_shutdown",
+            "line": 56,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_signal_handler",
+            "line": 78,
+            "args": [
+              "self",
+              "signum",
+              "frame"
+            ]
+          },
+          {
+            "name": "__init__",
+            "line": 87,
+            "args": [
+              "self",
+              "agent_id",
+              "monitor_interval",
+              "threshold_violations",
+              "emergency_shutdown"
+            ]
+          },
+          {
+            "name": "start_monitoring",
+            "line": 106,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_monitor_loop",
+            "line": 116,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "record_violation",
+            "line": 144,
+            "args": [
+              "self",
+              "violation_type",
+              "details"
+            ]
+          },
+          {
+            "name": "__init__",
+            "line": 164,
+            "args": [
+              "self",
+              "max_depth",
+              "max_evolutions_per_hour"
+            ]
+          },
+          {
+            "name": "check_recursion_depth",
+            "line": 174,
+            "args": [
+              "self",
+              "agent_id"
+            ]
+          },
+          {
+            "name": "check_evolution_rate",
+            "line": 187,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "record_evolution",
+            "line": 209,
+            "args": [
+              "self",
+              "evolution_type",
+              "details"
+            ]
+          },
+          {
+            "name": "__init__",
+            "line": 230,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "update_metrics",
+            "line": 251,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "get_health_status",
+            "line": 268,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_generate_recommendations",
+            "line": 302,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_check_alerts",
+            "line": 337,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "__init__",
+            "line": 363,
+            "args": [
+              "self",
+              "failure_threshold",
+              "recovery_timeout",
+              "expected_exception"
+            ]
+          },
+          {
+            "name": "call",
+            "line": 379,
+            "args": [
+              "self",
+              "func"
+            ]
+          },
+          {
+            "name": "_on_success",
+            "line": 396,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_on_failure",
+            "line": 404,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_should_attempt_reset",
+            "line": 415,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "__init__",
+            "line": 428,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "add_entry",
+            "line": 435,
+            "args": [
+              "self",
+              "entry_id",
+              "content"
+            ]
+          },
+          {
+            "name": "verify_integrity",
+            "line": 457,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "get_audit_summary",
+            "line": 487,
+            "args": [
+              "self"
+            ]
+          }
+        ],
+        "classes": [
+          {
+            "name": "EnhancedOmegaProtection",
+            "line": 29,
+            "methods": [
+              "__init__",
+              "create_monitor",
+              "_emergency_shutdown",
+              "_signal_handler"
+            ]
+          },
+          {
+            "name": "OmegaMonitor",
+            "line": 84,
+            "methods": [
+              "__init__",
+              "start_monitoring",
+              "_monitor_loop",
+              "record_violation"
+            ]
+          },
+          {
+            "name": "RecursiveSafetyLayer",
+            "line": 161,
+            "methods": [
+              "__init__",
+              "check_recursion_depth",
+              "check_evolution_rate",
+              "record_evolution"
+            ]
+          },
+          {
+            "name": "PerformanceMonitor",
+            "line": 227,
+            "methods": [
+              "__init__",
+              "update_metrics",
+              "get_health_status",
+              "_generate_recommendations",
+              "_check_alerts"
+            ]
+          },
+          {
+            "name": "CircuitBreaker",
+            "line": 360,
+            "methods": [
+              "__init__",
+              "call",
+              "_on_success",
+              "_on_failure",
+              "_should_attempt_reset"
+            ]
+          },
+          {
+            "name": "TamperDetector",
+            "line": 425,
+            "methods": [
+              "__init__",
+              "add_entry",
+              "verify_integrity",
+              "get_audit_summary"
+            ]
+          }
+        ],
+        "line_count": 502
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\history.json": {
+        "type": "json",
+        "keys": [
+          "version",
+          "created",
+          "changes",
+          "challenges",
+          "cycles",
+          "metrics"
+        ],
+        "line_count": 951
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\history.py": {
+        "type": "python",
+        "imports": [
+          "json",
+          "os",
+          "datetime.datetime",
+          "typing.Any",
+          "typing.Dict",
+          "typing.List",
+          "typing.Optional"
+        ],
+        "functions": [
+          {
+            "name": "__init__",
+            "line": 18,
+            "args": [
+              "self",
+              "history_file"
+            ]
+          },
+          {
+            "name": "_load_history",
+            "line": 22,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_save_history",
+            "line": 44,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "log_change",
+            "line": 50,
+            "args": [
+              "self",
+              "change_entry"
+            ]
+          },
+          {
+            "name": "log_challenge",
+            "line": 69,
+            "args": [
+              "self",
+              "challenge_entry"
+            ]
+          },
+          {
+            "name": "log_cycle",
+            "line": 84,
+            "args": [
+              "self",
+              "cycle_entry"
+            ]
+          },
+          {
+            "name": "get_last_cycle_time",
+            "line": 99,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "get_total_changes",
+            "line": 105,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "get_successful_tests",
+            "line": 109,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "get_failed_tests",
+            "line": 113,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "get_pending_reviews",
+            "line": 117,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "get_changes",
+            "line": 125,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "add_change",
+            "line": 129,
+            "args": [
+              "self",
+              "change_record"
+            ]
+          },
+          {
+            "name": "get_changes_by_domain",
+            "line": 133,
+            "args": [
+              "self",
+              "domain"
+            ]
+          },
+          {
+            "name": "get_challenges_by_type",
+            "line": 142,
+            "args": [
+              "self",
+              "challenge_type"
+            ]
+          },
+          {
+            "name": "get_recent_changes",
+            "line": 150,
+            "args": [
+              "self",
+              "limit"
+            ]
+          },
+          {
+            "name": "get_recent_challenges",
+            "line": 154,
+            "args": [
+              "self",
+              "limit"
+            ]
+          },
+          {
+            "name": "get_cycle_summary",
+            "line": 158,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "export_audit_report",
+            "line": 185,
+            "args": [
+              "self",
+              "output_path"
+            ]
+          },
+          {
+            "name": "_get_domain_breakdown",
+            "line": 214,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_get_challenge_breakdown",
+            "line": 237,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "get_system_health",
+            "line": 259,
+            "args": [
+              "self"
+            ]
+          }
+        ],
+        "classes": [
+          {
+            "name": "ChangeHistory",
+            "line": 13,
+            "methods": [
+              "__init__",
+              "_load_history",
+              "_save_history",
+              "log_change",
+              "log_challenge",
+              "log_cycle",
+              "get_last_cycle_time",
+              "get_total_changes",
+              "get_successful_tests",
+              "get_failed_tests",
+              "get_pending_reviews",
+              "get_changes",
+              "add_change",
+              "get_changes_by_domain",
+              "get_challenges_by_type",
+              "get_recent_changes",
+              "get_recent_challenges",
+              "get_cycle_summary",
+              "export_audit_report",
+              "_get_domain_breakdown",
+              "_get_challenge_breakdown",
+              "get_system_health"
+            ]
+          }
+        ],
+        "line_count": 280
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\kai_cli.py": {
+        "type": "python",
+        "imports": [
+          "argparse",
+          "asyncio",
+          "os",
+          "sys",
+          "typing.Any",
+          "typing.Dict",
+          "kai_core.kai_orchestrator.KaiOrchestrator"
+        ],
+        "functions": [
+          {
+            "name": "__init__",
+            "line": 25,
+            "args": [
+              "self",
+              "toolbox_path"
+            ]
+          },
+          {
+            "name": "_explain_result",
+            "line": 76,
+            "args": [
+              "self",
+              "result"
+            ]
+          },
+          {
+            "name": "_trace_result",
+            "line": 126,
+            "args": [
+              "self",
+              "result"
+            ]
+          }
+        ],
+        "classes": [
+          {
+            "name": "KaiCLI",
+            "line": 22,
+            "methods": [
+              "__init__",
+              "_explain_result",
+              "_trace_result"
+            ]
+          }
+        ],
+        "line_count": 314
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\kai_core_audit_20250804_201609.json": {
+        "type": "json",
+        "keys": [
+          "audit_timestamp",
+          "history_summary",
+          "recent_changes",
+          "recent_challenges",
+          "cycle_summary",
+          "domain_breakdown",
+          "challenge_breakdown"
+        ],
+        "line_count": 17
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\kai_orchestrator.py": {
+        "type": "python",
+        "imports": [
+          "asyncio",
+          "hashlib",
+          "logging",
+          "time",
+          "traceback",
+          "datetime.datetime",
+          "typing.Any",
+          "typing.Dict",
+          "typing.List",
+          "llm_integration.LLMIntegration",
+          "agent_consensus_system.AgentConsensusSystem"
+        ],
+        "functions": [
+          {
+            "name": "__init__",
+            "line": 40,
+            "args": [
+              "self",
+              "toolbox_path"
+            ]
+          },
+          {
+            "name": "_initialize_components",
+            "line": 54,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_combine_sub_agent_solutions",
+            "line": 666,
+            "args": [
+              "self",
+              "solutions",
+              "original_prompt"
+            ]
+          },
+          {
+            "name": "_generate_request_id",
+            "line": 704,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_create_audit_entry",
+            "line": 710,
+            "args": [
+              "self",
+              "request_id",
+              "prompt",
+              "ensemble_results",
+              "synthesis_result",
+              "consensus_result",
+              "final_result",
+              "processing_time"
+            ]
+          },
+          {
+            "name": "_hash_audit_entry",
+            "line": 748,
+            "args": [
+              "self",
+              "request_id",
+              "prompt",
+              "final_result"
+            ]
+          },
+          {
+            "name": "get_status",
+            "line": 756,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "get_audit_log",
+            "line": 767,
+            "args": [
+              "self",
+              "limit"
+            ]
+          }
+        ],
+        "classes": [
+          {
+            "name": "KaiOrchestrator",
+            "line": 27,
+            "methods": [
+              "__init__",
+              "_initialize_components",
+              "_combine_sub_agent_solutions",
+              "_generate_request_id",
+              "_create_audit_entry",
+              "_hash_audit_entry",
+              "get_status",
+              "get_audit_log"
+            ]
+          }
+        ],
+        "line_count": 799
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\kai_orchestrator_fixed.py": {
+        "type": "python",
+        "imports": [
+          "ast",
+          "asyncio",
+          "hashlib",
+          "json",
+          "logging",
+          "re",
+          "time",
+          "traceback",
+          "datetime.datetime",
+          "pathlib.Path",
+          "typing.Any",
+          "typing.Dict",
+          "typing.List",
+          "typing.Optional",
+          "typing.Tuple"
+        ],
+        "functions": [
+          {
+            "name": "test_main_v1_orchestrator",
+            "line": 237,
+            "args": []
+          },
+          {
+            "name": "__init__",
+            "line": 38,
+            "args": [
+              "self",
+              "toolbox_path"
+            ]
+          },
+          {
+            "name": "generate_code",
+            "line": 45,
+            "args": [
+              "self",
+              "prompt",
+              "domain"
+            ]
+          },
+          {
+            "name": "_mock_ensemble_response",
+            "line": 115,
+            "args": [
+              "self",
+              "prompt",
+              "domain"
+            ]
+          },
+          {
+            "name": "_generate_mock_code",
+            "line": 133,
+            "args": [
+              "self",
+              "prompt",
+              "domain"
+            ]
+          },
+          {
+            "name": "get_status",
+            "line": 222,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "get_audit_log",
+            "line": 232,
+            "args": [
+              "self",
+              "limit"
+            ]
+          }
+        ],
+        "classes": [
+          {
+            "name": "KaiOrchestratorFixed",
+            "line": 26,
+            "methods": [
+              "__init__",
+              "generate_code",
+              "_mock_ensemble_response",
+              "_generate_mock_code",
+              "get_status",
+              "get_audit_log"
+            ]
+          }
+        ],
+        "line_count": 263
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\kai_orchestrator_v2.py": {
+        "type": "python",
+        "imports": [
+          "hashlib",
+          "pickle",
+          "os",
+          "time",
+          "subprocess",
+          "json",
+          "ast",
+          "uuid",
+          "typing.Dict",
+          "typing.List",
+          "typing.Optional",
+          "typing.Tuple",
+          "typing.Any",
+          "dataclasses.dataclass",
+          "dataclasses.asdict",
+          "datetime.datetime",
+          "threading",
+          "queue",
+          "logging",
+          "pathlib.Path",
+          "black",
+          "ruff",
+          "ast_comments",
+          "transformers.pipeline",
+          "semgrep",
+          "llama_cpp.Llama",
+          "traceback"
+        ],
+        "functions": [
+          {
+            "name": "test_kai_orchestrator_v2",
+            "line": 1407,
+            "args": []
+          },
+          {
+            "name": "__post_init__",
+            "line": 65,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "__init__",
+            "line": 110,
+            "args": [
+              "self",
+              "models_config"
+            ]
+          },
+          {
+            "name": "route_request",
+            "line": 116,
+            "args": [
+              "self",
+              "request"
+            ]
+          },
+          {
+            "name": "_extract_features",
+            "line": 135,
+            "args": [
+              "self",
+              "prompt"
+            ]
+          },
+          {
+            "name": "_get_model_score",
+            "line": 147,
+            "args": [
+              "self",
+              "features",
+              "model_name"
+            ]
+          },
+          {
+            "name": "_select_models",
+            "line": 166,
+            "args": [
+              "self",
+              "scores"
+            ]
+          },
+          {
+            "name": "_estimate_complexity",
+            "line": 180,
+            "args": [
+              "self",
+              "prompt"
+            ]
+          },
+          {
+            "name": "_detect_language_hints",
+            "line": 203,
+            "args": [
+              "self",
+              "prompt"
+            ]
+          },
+          {
+            "name": "_log_routing_decision",
+            "line": 220,
+            "args": [
+              "self",
+              "request",
+              "scores",
+              "selected"
+            ]
+          },
+          {
+            "name": "__init__",
+            "line": 243,
+            "args": [
+              "self",
+              "models"
+            ]
+          },
+          {
+            "name": "generate_ensemble",
+            "line": 248,
+            "args": [
+              "self",
+              "request",
+              "selected_models"
+            ]
+          },
+          {
+            "name": "_generate_fallback",
+            "line": 275,
+            "args": [
+              "self",
+              "request",
+              "model_name",
+              "error"
+            ]
+          },
+          {
+            "name": "_generate_from_model",
+            "line": 296,
+            "args": [
+              "self",
+              "request",
+              "model_name"
+            ]
+          },
+          {
+            "name": "_generate_smart_response",
+            "line": 350,
+            "args": [
+              "self",
+              "prompt",
+              "model_name"
+            ]
+          },
+          {
+            "name": "_generate_safety_response",
+            "line": 418,
+            "args": [
+              "self",
+              "prompt"
+            ]
+          },
+          {
+            "name": "_generate_physics_response",
+            "line": 442,
+            "args": [
+              "self",
+              "prompt"
+            ]
+          },
+          {
+            "name": "_generate_math_response",
+            "line": 464,
+            "args": [
+              "self",
+              "prompt"
+            ]
+          },
+          {
+            "name": "_generate_bio_response",
+            "line": 496,
+            "args": [
+              "self",
+              "prompt"
+            ]
+          },
+          {
+            "name": "_generate_chemistry_response",
+            "line": 523,
+            "args": [
+              "self",
+              "prompt"
+            ]
+          },
+          {
+            "name": "_generate_climate_response",
+            "line": 547,
+            "args": [
+              "self",
+              "prompt"
+            ]
+          },
+          {
+            "name": "_generate_coding_response",
+            "line": 579,
+            "args": [
+              "self",
+              "prompt"
+            ]
+          },
+          {
+            "name": "_generate_social_response",
+            "line": 608,
+            "args": [
+              "self",
+              "prompt"
+            ]
+          },
+          {
+            "name": "_generate_psychology_response",
+            "line": 644,
+            "args": [
+              "self",
+              "prompt"
+            ]
+          },
+          {
+            "name": "_generate_seismology_response",
+            "line": 681,
+            "args": [
+              "self",
+              "prompt"
+            ]
+          },
+          {
+            "name": "_generate_astronomy_response",
+            "line": 707,
+            "args": [
+              "self",
+              "prompt"
+            ]
+          },
+          {
+            "name": "_generate_generic_calculation_response",
+            "line": 738,
+            "args": [
+              "self",
+              "prompt"
+            ]
+          },
+          {
+            "name": "_generate_generic_response",
+            "line": 759,
+            "args": [
+              "self",
+              "prompt"
+            ]
+          },
+          {
+            "name": "_apply_enhanced_guardrails",
+            "line": 777,
+            "args": [
+              "self",
+              "code",
+              "prompt"
+            ]
+          },
+          {
+            "name": "_calculate_response_confidence",
+            "line": 817,
+            "args": [
+              "self",
+              "code",
+              "prompt",
+              "reward_score"
+            ]
+          },
+          {
+            "name": "_analyze_consensus",
+            "line": 850,
+            "args": [
+              "self",
+              "responses"
+            ]
+          },
+          {
+            "name": "_check_safety_issues",
+            "line": 895,
+            "args": [
+              "self",
+              "responses"
+            ]
+          },
+          {
+            "name": "_compare_asts",
+            "line": 926,
+            "args": [
+              "self",
+              "asts"
+            ]
+          },
+          {
+            "name": "_calculate_ensemble_confidence",
+            "line": 940,
+            "args": [
+              "self",
+              "responses",
+              "ast_similar",
+              "all_tests_pass"
+            ]
+          },
+          {
+            "name": "_identify_disagreements",
+            "line": 958,
+            "args": [
+              "self",
+              "responses"
+            ]
+          },
+          {
+            "name": "_load_reward_model",
+            "line": 990,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_calculate_reward",
+            "line": 995,
+            "args": [
+              "self",
+              "code",
+              "prompt"
+            ]
+          },
+          {
+            "name": "__init__",
+            "line": 1051,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "apply_guardrails",
+            "line": 1060,
+            "args": [
+              "self",
+              "code",
+              "language"
+            ]
+          },
+          {
+            "name": "_validate_ast",
+            "line": 1087,
+            "args": [
+              "self",
+              "code",
+              "language"
+            ]
+          },
+          {
+            "name": "_check_syntax",
+            "line": 1095,
+            "args": [
+              "self",
+              "code",
+              "language"
+            ]
+          },
+          {
+            "name": "_format_code",
+            "line": 1103,
+            "args": [
+              "self",
+              "code",
+              "language"
+            ]
+          },
+          {
+            "name": "_security_scan",
+            "line": 1111,
+            "args": [
+              "self",
+              "code",
+              "language"
+            ]
+          },
+          {
+            "name": "_sandbox_test",
+            "line": 1139,
+            "args": [
+              "self",
+              "code",
+              "language"
+            ]
+          },
+          {
+            "name": "__init__",
+            "line": 1154,
+            "args": [
+              "self",
+              "cache_dir"
+            ]
+          },
+          {
+            "name": "get_cached_response",
+            "line": 1159,
+            "args": [
+              "self",
+              "request"
+            ]
+          },
+          {
+            "name": "cache_response",
+            "line": 1179,
+            "args": [
+              "self",
+              "request",
+              "response"
+            ]
+          },
+          {
+            "name": "_generate_cache_key",
+            "line": 1198,
+            "args": [
+              "self",
+              "request"
+            ]
+          },
+          {
+            "name": "_calculate_integrity_hash",
+            "line": 1203,
+            "args": [
+              "self",
+              "request",
+              "response"
+            ]
+          },
+          {
+            "name": "_verify_cache_integrity",
+            "line": 1210,
+            "args": [
+              "self",
+              "cached_data",
+              "request"
+            ]
+          },
+          {
+            "name": "__init__",
+            "line": 1230,
+            "args": [
+              "self",
+              "telemetry_dir"
+            ]
+          },
+          {
+            "name": "log_request",
+            "line": 1246,
+            "args": [
+              "self",
+              "request"
+            ]
+          },
+          {
+            "name": "log_response",
+            "line": 1251,
+            "args": [
+              "self",
+              "response"
+            ]
+          },
+          {
+            "name": "log_ensemble_result",
+            "line": 1256,
+            "args": [
+              "self",
+              "result"
+            ]
+          },
+          {
+            "name": "log_error",
+            "line": 1261,
+            "args": [
+              "self",
+              "error",
+              "context"
+            ]
+          },
+          {
+            "name": "get_latest_logs",
+            "line": 1273,
+            "args": [
+              "self",
+              "limit"
+            ]
+          },
+          {
+            "name": "clear_logs",
+            "line": 1295,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_save_telemetry",
+            "line": 1304,
+            "args": [
+              "self",
+              "event_type",
+              "data"
+            ]
+          },
+          {
+            "name": "__init__",
+            "line": 1331,
+            "args": [
+              "self",
+              "config"
+            ]
+          },
+          {
+            "name": "generate_code",
+            "line": 1342,
+            "args": [
+              "self",
+              "prompt"
+            ]
+          },
+          {
+            "name": "_initialize_models",
+            "line": 1385,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_default_config",
+            "line": 1391,
+            "args": [
+              "self"
+            ]
+          }
+        ],
+        "classes": [
+          {
+            "name": "CodeRequest",
+            "line": 53,
+            "methods": [
+              "__post_init__"
+            ]
+          },
+          {
+            "name": "CodeResponse",
+            "line": 73,
+            "methods": []
+          },
+          {
+            "name": "EnsembleResult",
+            "line": 91,
+            "methods": []
+          },
+          {
+            "name": "ProvableRouter",
+            "line": 102,
+            "methods": [
+              "__init__",
+              "route_request",
+              "_extract_features",
+              "_get_model_score",
+              "_select_models",
+              "_estimate_complexity",
+              "_detect_language_hints",
+              "_log_routing_decision"
+            ]
+          },
+          {
+            "name": "ByzantineEnsemble",
+            "line": 235,
+            "methods": [
+              "__init__",
+              "generate_ensemble",
+              "_generate_fallback",
+              "_generate_from_model",
+              "_generate_smart_response",
+              "_generate_safety_response",
+              "_generate_physics_response",
+              "_generate_math_response",
+              "_generate_bio_response",
+              "_generate_chemistry_response",
+              "_generate_climate_response",
+              "_generate_coding_response",
+              "_generate_social_response",
+              "_generate_psychology_response",
+              "_generate_seismology_response",
+              "_generate_astronomy_response",
+              "_generate_generic_calculation_response",
+              "_generate_generic_response",
+              "_apply_enhanced_guardrails",
+              "_calculate_response_confidence",
+              "_analyze_consensus",
+              "_check_safety_issues",
+              "_compare_asts",
+              "_calculate_ensemble_confidence",
+              "_identify_disagreements",
+              "_load_reward_model",
+              "_calculate_reward"
+            ]
+          },
+          {
+            "name": "DefenseInDepth",
+            "line": 1041,
+            "methods": [
+              "__init__",
+              "apply_guardrails",
+              "_validate_ast",
+              "_check_syntax",
+              "_format_code",
+              "_security_scan",
+              "_sandbox_test"
+            ]
+          },
+          {
+            "name": "DeterministicCache",
+            "line": 1146,
+            "methods": [
+              "__init__",
+              "get_cached_response",
+              "cache_response",
+              "_generate_cache_key",
+              "_calculate_integrity_hash",
+              "_verify_cache_integrity"
+            ]
+          },
+          {
+            "name": "TelemetrySystem",
+            "line": 1221,
+            "methods": [
+              "__init__",
+              "log_request",
+              "log_response",
+              "log_ensemble_result",
+              "log_error",
+              "get_latest_logs",
+              "clear_logs",
+              "_save_telemetry"
+            ]
+          },
+          {
+            "name": "KaiOrchestratorV2",
+            "line": 1317,
+            "methods": [
+              "__init__",
+              "generate_code",
+              "_initialize_models",
+              "_default_config"
+            ]
+          }
+        ],
+        "line_count": 1440
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\llm_config.json": {
+        "type": "json",
+        "keys": [
+          "provider",
+          "ensemble_mode",
+          "models",
+          "cross_domain_reasoning",
+          "auto_correct",
+          "consensus_required",
+          "total_models"
+        ],
+        "line_count": 54
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\llm_integration.py": {
+        "type": "python",
+        "imports": [
+          "os",
+          "json",
+          "hashlib",
+          "subprocess",
+          "tempfile",
+          "time",
+          "asyncio",
+          "datetime.datetime",
+          "typing.Dict",
+          "typing.List",
+          "typing.Any",
+          "typing.Optional",
+          "typing.Tuple",
+          "pathlib.Path",
+          "logging",
+          "re",
+          "transformers.AutoTokenizer",
+          "transformers.AutoModelForCausalLM",
+          "torch"
+        ],
+        "functions": [
+          {
+            "name": "__init__",
+            "line": 46,
+            "args": [
+              "self",
+              "toolbox_path"
+            ]
+          },
+          {
+            "name": "_load_llm_config",
+            "line": 65,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_initialize_ensemble_models",
+            "line": 122,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_initialize_kai_orchestrator",
+            "line": 152,
+            "args": [
+              "self",
+              "config"
+            ]
+          },
+          {
+            "name": "_initialize_ollama_model",
+            "line": 161,
+            "args": [
+              "self",
+              "config"
+            ]
+          },
+          {
+            "name": "_initialize_transformers_model",
+            "line": 188,
+            "args": [
+              "self",
+              "config"
+            ]
+          },
+          {
+            "name": "_initialize_mock_model",
+            "line": 220,
+            "args": [
+              "self",
+              "config"
+            ]
+          },
+          {
+            "name": "get_ensemble_status",
+            "line": 435,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_generate",
+            "line": 385,
+            "args": []
+          }
+        ],
+        "classes": [
+          {
+            "name": "LLMIntegration",
+            "line": 33,
+            "methods": [
+              "__init__",
+              "_load_llm_config",
+              "_initialize_ensemble_models",
+              "_initialize_kai_orchestrator",
+              "_initialize_ollama_model",
+              "_initialize_transformers_model",
+              "_initialize_mock_model",
+              "get_ensemble_status"
+            ]
+          }
+        ],
+        "line_count": 450
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\lockdown_config.json": {
+        "type": "json",
+        "keys": [
+          "mode",
+          "llm_provider",
+          "auto_merge",
+          "challenge_self",
+          "max_cycles_per_day",
+          "domains_to_focus",
+          "test_templates",
+          "llm_enabled",
+          "cross_domain_reasoning",
+          "self_audit",
+          "auto_correct",
+          "mmh_enabled",
+          "agent_evolution",
+          "recursive_audit",
+          "stability_mode",
+          "prevent_self_modification",
+          "read_only_mode",
+          "max_agent_mutations",
+          "genome_lock",
+          "emergency_lockdown",
+          "safety_system",
+          "advanced_ai_capabilities",
+          "safety_guarantees",
+          "emergency_restoration"
+        ],
+        "line_count": 94
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\mmh_config.json": {
+        "type": "json",
+        "keys": [
+          "default_chunk_bits",
+          "dedup_enabled",
+          "codec",
+          "compression_level",
+          "fec_type",
+          "redundancy"
+        ],
+        "line_count": 8
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\mmh_integration.py": {
+        "type": "python",
+        "imports": [
+          "os",
+          "sys",
+          "json",
+          "hashlib",
+          "tempfile",
+          "subprocess",
+          "time",
+          "datetime.datetime",
+          "typing.Dict",
+          "typing.List",
+          "typing.Any",
+          "typing.Optional",
+          "typing.Union",
+          "typing.Tuple",
+          "pathlib.Path",
+          "logging",
+          "mmh_rs_wrapper.MMHRSEngine",
+          "mmh_rs_wrapper.MMHConfig",
+          "mmh_rs_wrapper.SeedInfo",
+          "mmh_rs_wrapper.AgentGenome",
+          "mmh_rs_wrapper.CodecType",
+          "mmh_rs_wrapper.FECType",
+          "mmh_rs_wrapper.SafetyLevel"
+        ],
+        "functions": [
+          {
+            "name": "__init__",
+            "line": 47,
+            "args": [
+              "self",
+              "toolbox_path"
+            ]
+          },
+          {
+            "name": "_load_config",
+            "line": 64,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "fold_data",
+            "line": 91,
+            "args": [
+              "self",
+              "data",
+              "name"
+            ]
+          },
+          {
+            "name": "unfold_data",
+            "line": 104,
+            "args": [
+              "self",
+              "seed"
+            ]
+          },
+          {
+            "name": "verify_data",
+            "line": 116,
+            "args": [
+              "self",
+              "seed",
+              "data"
+            ]
+          },
+          {
+            "name": "get_seed_info",
+            "line": 129,
+            "args": [
+              "self",
+              "seed"
+            ]
+          },
+          {
+            "name": "register_agent",
+            "line": 141,
+            "args": [
+              "self",
+              "genome"
+            ]
+          },
+          {
+            "name": "register_agent_genome",
+            "line": 153,
+            "args": [
+              "self",
+              "agent_name",
+              "description"
+            ]
+          },
+          {
+            "name": "get_agent_genome",
+            "line": 179,
+            "args": [
+              "self",
+              "agent_name"
+            ]
+          },
+          {
+            "name": "evolve_agent",
+            "line": 191,
+            "args": [
+              "self",
+              "agent_name",
+              "mutations"
+            ]
+          },
+          {
+            "name": "cross_domain_reasoning",
+            "line": 204,
+            "args": [
+              "self",
+              "source_insights",
+              "target_domain",
+              "source_domain"
+            ]
+          },
+          {
+            "name": "create_audit_chain",
+            "line": 232,
+            "args": [
+              "self",
+              "operation_name",
+              "operation_data"
+            ]
+          },
+          {
+            "name": "get_status",
+            "line": 252,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "benchmark_compression",
+            "line": 267,
+            "args": [
+              "self",
+              "test_data"
+            ]
+          },
+          {
+            "name": "test_mmh_functionality",
+            "line": 306,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "get_comprehensive_status",
+            "line": 380,
+            "args": [
+              "self"
+            ]
+          }
+        ],
+        "classes": [
+          {
+            "name": "MMHIntegration",
+            "line": 39,
+            "methods": [
+              "__init__",
+              "_load_config",
+              "fold_data",
+              "unfold_data",
+              "verify_data",
+              "get_seed_info",
+              "register_agent",
+              "register_agent_genome",
+              "get_agent_genome",
+              "evolve_agent",
+              "cross_domain_reasoning",
+              "create_audit_chain",
+              "get_status",
+              "benchmark_compression",
+              "test_mmh_functionality",
+              "get_comprehensive_status"
+            ]
+          }
+        ],
+        "line_count": 401
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\mmh_rs_config.json": {
+        "type": "json",
+        "keys": [
+          "codec",
+          "fec_type",
+          "compression_level",
+          "chunk_size",
+          "max_seed_size",
+          "dedup_enabled",
+          "redundancy"
+        ],
+        "line_count": 9
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\mmh_rs_wrapper.py": {
+        "type": "python",
+        "imports": [
+          "hashlib",
+          "json",
+          "logging",
+          "os",
+          "subprocess",
+          "tempfile",
+          "time",
+          "dataclasses.dataclass",
+          "dataclasses.field",
+          "enum.Enum",
+          "typing.Any",
+          "typing.Dict",
+          "typing.List",
+          "typing.Optional",
+          "typing.Union",
+          "zlib",
+          "zlib"
+        ],
+        "functions": [
+          {
+            "name": "__init__",
+            "line": 108,
+            "args": [
+              "self",
+              "toolbox_path",
+              "mmh_rs_path"
+            ]
+          },
+          {
+            "name": "_load_config",
+            "line": 137,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "fold",
+            "line": 182,
+            "args": [
+              "self",
+              "data",
+              "name"
+            ]
+          },
+          {
+            "name": "unfold",
+            "line": 279,
+            "args": [
+              "self",
+              "seed"
+            ]
+          },
+          {
+            "name": "verify",
+            "line": 349,
+            "args": [
+              "self",
+              "seed",
+              "data"
+            ]
+          },
+          {
+            "name": "info",
+            "line": 376,
+            "args": [
+              "self",
+              "seed"
+            ]
+          },
+          {
+            "name": "register_agent",
+            "line": 399,
+            "args": [
+              "self",
+              "genome"
+            ]
+          },
+          {
+            "name": "get_agent_genome",
+            "line": 438,
+            "args": [
+              "self",
+              "agent_name"
+            ]
+          },
+          {
+            "name": "evolve_agent",
+            "line": 493,
+            "args": [
+              "self",
+              "agent_name",
+              "mutations"
+            ]
+          },
+          {
+            "name": "cross_domain_reasoning",
+            "line": 533,
+            "args": [
+              "self",
+              "source_insights",
+              "target_domain"
+            ]
+          },
+          {
+            "name": "create_audit_chain",
+            "line": 587,
+            "args": [
+              "self",
+              "operation_data"
+            ]
+          },
+          {
+            "name": "_fallback_fold",
+            "line": 618,
+            "args": [
+              "self",
+              "data_bytes",
+              "name"
+            ]
+          },
+          {
+            "name": "_fallback_unfold",
+            "line": 650,
+            "args": [
+              "self",
+              "seed"
+            ]
+          },
+          {
+            "name": "get_status",
+            "line": 674,
+            "args": [
+              "self"
+            ]
+          }
+        ],
+        "classes": [
+          {
+            "name": "CodecType",
+            "line": 34,
+            "methods": []
+          },
+          {
+            "name": "FECType",
+            "line": 45,
+            "methods": []
+          },
+          {
+            "name": "SafetyLevel",
+            "line": 53,
+            "methods": []
+          },
+          {
+            "name": "MMHConfig",
+            "line": 63,
+            "methods": []
+          },
+          {
+            "name": "SeedInfo",
+            "line": 76,
+            "methods": []
+          },
+          {
+            "name": "AgentGenome",
+            "line": 88,
+            "methods": []
+          },
+          {
+            "name": "MMHRSEngine",
+            "line": 100,
+            "methods": [
+              "__init__",
+              "_load_config",
+              "fold",
+              "unfold",
+              "verify",
+              "info",
+              "register_agent",
+              "get_agent_genome",
+              "evolve_agent",
+              "cross_domain_reasoning",
+              "create_audit_chain",
+              "_fallback_fold",
+              "_fallback_unfold",
+              "get_status"
+            ]
+          }
+        ],
+        "line_count": 692
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\orchestrator_config.py": {
+        "type": "python",
+        "imports": [
+          "os",
+          "dataclasses.asdict",
+          "dataclasses.dataclass",
+          "pathlib.Path",
+          "typing.Any",
+          "typing.Dict",
+          "typing.List",
+          "typing.Optional",
+          "yaml",
+          "traceback"
+        ],
+        "functions": [
+          {
+            "name": "create_default_config",
+            "line": 459,
+            "args": [
+              "config_path"
+            ]
+          },
+          {
+            "name": "validate_model_signatures",
+            "line": 466,
+            "args": [
+              "config"
+            ]
+          },
+          {
+            "name": "test_config",
+            "line": 490,
+            "args": []
+          },
+          {
+            "name": "__init__",
+            "line": 132,
+            "args": [
+              "self",
+              "config_path"
+            ]
+          },
+          {
+            "name": "_load_config",
+            "line": 145,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_parse_config",
+            "line": 154,
+            "args": [
+              "self",
+              "config_data"
+            ]
+          },
+          {
+            "name": "_create_default_config",
+            "line": 180,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_validate_config",
+            "line": 268,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_save_config",
+            "line": 295,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "get_enabled_models",
+            "line": 310,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "get_model_config",
+            "line": 314,
+            "args": [
+              "self",
+              "model_name"
+            ]
+          },
+          {
+            "name": "update_model_config",
+            "line": 318,
+            "args": [
+              "self",
+              "model_name"
+            ]
+          },
+          {
+            "name": "add_model",
+            "line": 326,
+            "args": [
+              "self",
+              "model_config"
+            ]
+          },
+          {
+            "name": "remove_model",
+            "line": 331,
+            "args": [
+              "self",
+              "model_name"
+            ]
+          },
+          {
+            "name": "get_config_summary",
+            "line": 337,
+            "args": [
+              "self"
+            ]
+          }
+        ],
+        "classes": [
+          {
+            "name": "ModelConfig",
+            "line": 23,
+            "methods": []
+          },
+          {
+            "name": "GuardrailConfig",
+            "line": 42,
+            "methods": []
+          },
+          {
+            "name": "TelemetryConfig",
+            "line": 58,
+            "methods": []
+          },
+          {
+            "name": "CacheConfig",
+            "line": 72,
+            "methods": []
+          },
+          {
+            "name": "EnsembleConfig",
+            "line": 84,
+            "methods": []
+          },
+          {
+            "name": "SecurityConfig",
+            "line": 96,
+            "methods": []
+          },
+          {
+            "name": "SLIConfig",
+            "line": 109,
+            "methods": []
+          },
+          {
+            "name": "OrchestratorConfig",
+            "line": 119,
+            "methods": [
+              "__init__",
+              "_load_config",
+              "_parse_config",
+              "_create_default_config",
+              "_validate_config",
+              "_save_config",
+              "get_enabled_models",
+              "get_model_config",
+              "update_model_config",
+              "add_model",
+              "remove_model",
+              "get_config_summary"
+            ]
+          }
+        ],
+        "line_count": 521
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\restored_safe_config.json": {
+        "type": "json",
+        "keys": [
+          "mode",
+          "llm_provider",
+          "auto_merge",
+          "challenge_self",
+          "max_cycles_per_day",
+          "domains_to_focus",
+          "test_templates",
+          "llm_enabled",
+          "cross_domain_reasoning",
+          "self_audit",
+          "auto_correct",
+          "mmh_enabled",
+          "agent_evolution",
+          "recursive_audit",
+          "stability_mode",
+          "prevent_self_modification",
+          "read_only_mode",
+          "max_agent_mutations",
+          "genome_lock",
+          "safety_system",
+          "advanced_ai_capabilities",
+          "safety_guarantees",
+          "restoration_status"
+        ],
+        "line_count": 97
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\ril_v7_integration.py": {
+        "type": "python",
+        "imports": [
+          "dataclasses.dataclass",
+          "datetime.datetime",
+          "typing.Any",
+          "typing.Dict",
+          "typing.List",
+          "kai_core.mmh_integration.AgentGenome",
+          "kai_core.mmh_integration.MMHIntegration",
+          "kai_core.mmh_integration.SafetyLevel"
+        ],
+        "functions": [
+          {
+            "name": "to_genome",
+            "line": 30,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "__init__",
+            "line": 84,
+            "args": [
+              "self",
+              "toolbox_path"
+            ]
+          },
+          {
+            "name": "register_ril_agent",
+            "line": 90,
+            "args": [
+              "self",
+              "agent"
+            ]
+          },
+          {
+            "name": "recursive_reasoning",
+            "line": 105,
+            "args": [
+              "self",
+              "agent_name",
+              "input_data",
+              "depth"
+            ]
+          },
+          {
+            "name": "_perform_level_reasoning",
+            "line": 163,
+            "args": [
+              "self",
+              "agent",
+              "input_data",
+              "level"
+            ]
+          },
+          {
+            "name": "self_modify_agent",
+            "line": 192,
+            "args": [
+              "self",
+              "agent_name",
+              "modifications"
+            ]
+          },
+          {
+            "name": "cross_domain_ril_reasoning",
+            "line": 237,
+            "args": [
+              "self",
+              "source_domain",
+              "target_domain",
+              "ril_insights"
+            ]
+          },
+          {
+            "name": "get_status",
+            "line": 284,
+            "args": [
+              "self"
+            ]
+          }
+        ],
+        "classes": [
+          {
+            "name": "RILv7Agent",
+            "line": 18,
+            "methods": [
+              "to_genome"
+            ]
+          },
+          {
+            "name": "RILv7Integration",
+            "line": 73,
+            "methods": [
+              "__init__",
+              "register_ril_agent",
+              "recursive_reasoning",
+              "_perform_level_reasoning",
+              "self_modify_agent",
+              "cross_domain_ril_reasoning",
+              "get_status"
+            ]
+          }
+        ],
+        "line_count": 344
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\safety_system.py": {
+        "type": "python",
+        "imports": [
+          "hashlib",
+          "json",
+          "logging",
+          "os",
+          "shutil",
+          "dataclasses.dataclass",
+          "datetime.datetime",
+          "enum.Enum",
+          "typing.Any",
+          "typing.Dict",
+          "typing.List",
+          "typing.Set",
+          "re"
+        ],
+        "functions": [
+          {
+            "name": "__init__",
+            "line": 47,
+            "args": [
+              "self",
+              "toolbox_path"
+            ]
+          },
+          {
+            "name": "_get_protected_files",
+            "line": 60,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_load_safety_rules",
+            "line": 92,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_ensure_safety_dirs",
+            "line": 202,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_initialize_safety_checks",
+            "line": 213,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_create_baseline_backup",
+            "line": 218,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_validate_system_integrity",
+            "line": 235,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "check_operation_safety",
+            "line": 267,
+            "args": [
+              "self",
+              "operation",
+              "target",
+              "content"
+            ]
+          },
+          {
+            "name": "_matches_rule",
+            "line": 317,
+            "args": [
+              "self",
+              "operation",
+              "target",
+              "content",
+              "rule"
+            ]
+          },
+          {
+            "name": "_log_blocked_operation",
+            "line": 337,
+            "args": [
+              "self",
+              "operation",
+              "target",
+              "rule"
+            ]
+          },
+          {
+            "name": "_log_safety_check",
+            "line": 371,
+            "args": [
+              "self",
+              "operation",
+              "target",
+              "result"
+            ]
+          },
+          {
+            "name": "enforce_safety",
+            "line": 400,
+            "args": [
+              "self",
+              "operation",
+              "target",
+              "content"
+            ]
+          },
+          {
+            "name": "get_safety_status",
+            "line": 426,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "restore_from_backup",
+            "line": 438,
+            "args": [
+              "self",
+              "file_path"
+            ]
+          }
+        ],
+        "classes": [
+          {
+            "name": "SafetyLevel",
+            "line": 23,
+            "methods": []
+          },
+          {
+            "name": "SafetyRule",
+            "line": 31,
+            "methods": []
+          },
+          {
+            "name": "KaiSafetySystem",
+            "line": 41,
+            "methods": [
+              "__init__",
+              "_get_protected_files",
+              "_load_safety_rules",
+              "_ensure_safety_dirs",
+              "_initialize_safety_checks",
+              "_create_baseline_backup",
+              "_validate_system_integrity",
+              "check_operation_safety",
+              "_matches_rule",
+              "_log_blocked_operation",
+              "_log_safety_check",
+              "enforce_safety",
+              "get_safety_status",
+              "restore_from_backup"
+            ]
+          }
+        ],
+        "line_count": 460
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\safe_advanced_ai_config.json": {
+        "type": "json",
+        "keys": [
+          "mode",
+          "llm_provider",
+          "auto_merge",
+          "challenge_self",
+          "max_cycles_per_day",
+          "domains_to_focus",
+          "test_templates",
+          "llm_enabled",
+          "cross_domain_reasoning",
+          "self_audit",
+          "auto_correct",
+          "mmh_enabled",
+          "agent_evolution",
+          "recursive_audit",
+          "stability_mode",
+          "prevent_self_modification",
+          "read_only_mode",
+          "max_agent_mutations",
+          "genome_lock",
+          "safety_system",
+          "advanced_ai_capabilities",
+          "safety_guarantees"
+        ],
+        "line_count": 84
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\session_manager.py": {
+        "type": "python",
+        "imports": [
+          "datetime.datetime",
+          "typing.Dict",
+          "typing.Any",
+          "kai_core.agent_personality_engine.DynamicPersonalityEngine"
+        ],
+        "functions": [
+          {
+            "name": "__init__",
+            "line": 6,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "get_session",
+            "line": 9,
+            "args": [
+              "self",
+              "session_id"
+            ]
+          },
+          {
+            "name": "update_session",
+            "line": 21,
+            "args": [
+              "self",
+              "session_id",
+              "agent_id",
+              "message",
+              "response"
+            ]
+          },
+          {
+            "name": "get_session_stats",
+            "line": 45,
+            "args": [
+              "self",
+              "session_id"
+            ]
+          },
+          {
+            "name": "cleanup_old_sessions",
+            "line": 55,
+            "args": [
+              "self",
+              "max_age_hours"
+            ]
+          }
+        ],
+        "classes": [
+          {
+            "name": "SessionManager",
+            "line": 5,
+            "methods": [
+              "__init__",
+              "get_session",
+              "update_session",
+              "get_session_stats",
+              "cleanup_old_sessions"
+            ]
+          }
+        ],
+        "line_count": 68
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\stability_config.json": {
+        "type": "json",
+        "keys": [
+          "mode",
+          "llm_provider",
+          "auto_merge",
+          "challenge_self",
+          "max_cycles_per_day",
+          "domains_to_focus",
+          "test_templates",
+          "llm_enabled",
+          "cross_domain_reasoning",
+          "self_audit",
+          "auto_correct",
+          "mmh_enabled",
+          "agent_evolution",
+          "recursive_audit",
+          "stability_mode",
+          "prevent_self_modification",
+          "read_only_mode",
+          "max_agent_mutations",
+          "genome_lock"
+        ],
+        "line_count": 23
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\savepoints\\20250808_141244\\kai_core\\validator.py": {
+        "type": "python",
+        "imports": [
+          "ast",
+          "os",
+          "subprocess",
+          "tempfile",
+          "enum.Enum",
+          "typing.Any",
+          "typing.Dict",
+          "typing.List",
+          "re",
+          "re"
+        ],
+        "functions": [
+          {
+            "name": "__init__",
+            "line": 27,
+            "args": [
+              "self",
+              "toolbox_path"
+            ]
+          },
+          {
+            "name": "_load_safety_patterns",
+            "line": 32,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_load_security_patterns",
+            "line": 65,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "validate_syntax",
+            "line": 97,
+            "args": [
+              "self",
+              "code"
+            ]
+          },
+          {
+            "name": "validate_safety",
+            "line": 109,
+            "args": [
+              "self",
+              "code"
+            ]
+          },
+          {
+            "name": "validate_security",
+            "line": 128,
+            "args": [
+              "self",
+              "code"
+            ]
+          },
+          {
+            "name": "validate_functionality",
+            "line": 147,
+            "args": [
+              "self",
+              "code"
+            ]
+          },
+          {
+            "name": "run_test_validation",
+            "line": 169,
+            "args": [
+              "self",
+              "code"
+            ]
+          },
+          {
+            "name": "comprehensive_validation",
+            "line": 199,
+            "args": [
+              "self",
+              "code"
+            ]
+          },
+          {
+            "name": "_generate_recommendations",
+            "line": 224,
+            "args": [
+              "self",
+              "results"
+            ]
+          }
+        ],
+        "classes": [
+          {
+            "name": "ValidationLevel",
+            "line": 15,
+            "methods": []
+          },
+          {
+            "name": "CodeValidator",
+            "line": 22,
+            "methods": [
+              "__init__",
+              "_load_safety_patterns",
+              "_load_security_patterns",
+              "validate_syntax",
+              "validate_safety",
+              "validate_security",
+              "validate_functionality",
+              "run_test_validation",
+              "comprehensive_validation",
+              "_generate_recommendations"
+            ]
+          }
+        ],
+        "line_count": 249
+      }
+    }
+  },
+  "estimated_tokens": 1170.0,
+  "related_chunks": [
+    "v5_core_systems",
+    "legacy_v1_v4_systems"
+  ]
+}

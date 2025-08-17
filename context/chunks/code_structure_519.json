@@ -1,0 +1,2309 @@
+{
+  "chunk_type": "code_samples",
+  "chunk_id": "code_structure_519",
+  "title": "Code Structure Analysis - Part 519",
+  "description": "Code analysis for files 25901-25950",
+  "content": {
+    "files_analyzed": [
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\kai_core\\seeds\\145fd9881cf97850.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\kai_core\\seeds\\151a1376d8578740.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\kai_core\\seeds\\1a0b7445bdacefa1.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\kai_core\\seeds\\3530f27e663f2fb7.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\kai_core\\seeds\\40e7518f7db063a1.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\kai_core\\seeds\\4beb1a6bda333c0b.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\kai_core\\seeds\\528a5c8fad58a0a7.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\kai_core\\seeds\\55390ef6df774a3a.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\kai_core\\seeds\\587976561ccb53f3.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\kai_core\\seeds\\5a93226e099d9adc.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\kai_core\\seeds\\60cb24af5c6095be.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\kai_core\\seeds\\6cf549cbbb7b9972.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\kai_core\\seeds\\7133108af4ad51d6.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\kai_core\\seeds\\715568a945555724.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\kai_core\\seeds\\77972b70c33a2998.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\kai_core\\seeds\\7c6f028a13c9f3f1.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\kai_core\\seeds\\832d221ebca74f61.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\kai_core\\seeds\\83c8823f5313fc71.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\kai_core\\seeds\\89b7dc8271858982.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\kai_core\\seeds\\a404204b3cb98ffe.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\kai_core\\seeds\\afcc8209ea46c2d6.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\kai_core\\seeds\\b34c0f3a43f6a4c6.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\kai_core\\seeds\\b531a915a914ed53.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\kai_core\\seeds\\bd4b7f7ab8dfd4d3.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\kai_core\\seeds\\c137c16f64568bb2.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\kai_core\\seeds\\cec987079e3319b7.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\kai_core\\seeds\\d114ce1278bd7049.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\kai_core\\seeds\\d15572c2a1fa76b5.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\kai_core\\seeds\\d3af4d4eaa0b7133.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\kai_core\\seeds\\d3b3b476f769a64a.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\kai_core\\seeds\\d3e8efabbdef94a3.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\kai_core\\seeds\\f20cbdc4280ae875.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\kai_core\\seeds\\f4f38d3bf056d750.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\kai_core\\seeds\\f9e3b7343c66a051.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\kai_core\\safety\\audit\\safety_audit.json",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\cursor_recovery_kit\\cursor_recovery_kit\\ops\\drift-gate.ps1",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\cursor_recovery_kit\\cursor_recovery_kit\\ops\\placeholder-scan.ps1",
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\cursor_recovery_kit\\cursor_recovery_kit\\restore\\RESTORE_MANIFEST.json",
+      "ops\\consolidation_backups\\pre_consolidation_20250817_054429\\ADVANCED_INTEGRATION_LAYER_V5_FINAL_PUSH.py",
+      "ops\\consolidation_backups\\pre_consolidation_20250817_054429\\ADVANCED_INTEGRATION_LAYER_V5_ULTRA_TURBO.py",
+      "ops\\consolidation_backups\\pre_consolidation_20250817_054429\\AGENT_WORK_INTERFACE.py",
+      "ops\\consolidation_backups\\pre_consolidation_20250817_054429\\CHAINED_VISION_ANALYSIS.py",
+      "ops\\consolidation_backups\\pre_consolidation_20250817_054429\\CLEAN_INTEGRATION.py",
+      "ops\\consolidation_backups\\pre_consolidation_20250817_054429\\context-governor-v5-token-upgrade.py",
+      "ops\\consolidation_backups\\pre_consolidation_20250817_054429\\EMOJI_PURIFIER_V5.py",
+      "ops\\consolidation_backups\\pre_consolidation_20250817_054429\\EMOJI_REMOVER.py",
+      "ops\\consolidation_backups\\pre_consolidation_20250817_054429\\GPU-COMPUTE-BLAST-V5.py",
+      "ops\\consolidation_backups\\pre_consolidation_20250817_054429\\INTELLIGENT-FIX-ENGINE.py",
+      "ops\\consolidation_backups\\pre_consolidation_20250817_054429\\INTELLIGENT_SCRIPT_CONSOLIDATION_ENGINE.py",
+      "ops\\consolidation_backups\\pre_consolidation_20250817_054429\\LAYERED_SCANNING_SYSTEM.py"
+    ],
+    "structure_data": {
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\kai_core\\seeds\\145fd9881cf97850.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "original_size",
+          "compressed_size",
+          "compression_ratio",
+          "codec",
+          "created_at",
+          "data_type"
+        ],
+        "line_count": 9
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\kai_core\\seeds\\151a1376d8578740.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "original_size",
+          "compressed_size",
+          "compression_ratio",
+          "codec",
+          "created_at",
+          "data_type"
+        ],
+        "line_count": 9
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\kai_core\\seeds\\1a0b7445bdacefa1.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "original_size",
+          "compressed_size",
+          "compression_ratio",
+          "codec",
+          "created_at",
+          "data_type"
+        ],
+        "line_count": 9
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\kai_core\\seeds\\3530f27e663f2fb7.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "original_size",
+          "compressed_size",
+          "compression_ratio",
+          "codec",
+          "created_at",
+          "data_type"
+        ],
+        "line_count": 9
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\kai_core\\seeds\\40e7518f7db063a1.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "original_size",
+          "compressed_size",
+          "compression_ratio",
+          "codec",
+          "created_at",
+          "data_type"
+        ],
+        "line_count": 9
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\kai_core\\seeds\\4beb1a6bda333c0b.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "original_size",
+          "compressed_size",
+          "compression_ratio",
+          "codec",
+          "created_at",
+          "data_type"
+        ],
+        "line_count": 9
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\kai_core\\seeds\\528a5c8fad58a0a7.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "original_size",
+          "compressed_size",
+          "compression_ratio",
+          "codec",
+          "created_at",
+          "data_type"
+        ],
+        "line_count": 9
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\kai_core\\seeds\\55390ef6df774a3a.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "original_size",
+          "compressed_size",
+          "compression_ratio",
+          "codec",
+          "created_at",
+          "data_type"
+        ],
+        "line_count": 9
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\kai_core\\seeds\\587976561ccb53f3.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "original_size",
+          "compressed_size",
+          "compression_ratio",
+          "codec",
+          "created_at",
+          "data_type"
+        ],
+        "line_count": 9
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\kai_core\\seeds\\5a93226e099d9adc.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "original_size",
+          "compressed_size",
+          "compression_ratio",
+          "codec",
+          "created_at",
+          "data_type"
+        ],
+        "line_count": 9
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\kai_core\\seeds\\60cb24af5c6095be.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "original_size",
+          "compressed_size",
+          "compression_ratio",
+          "codec",
+          "created_at",
+          "data_type"
+        ],
+        "line_count": 9
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\kai_core\\seeds\\6cf549cbbb7b9972.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "original_size",
+          "compressed_size",
+          "compression_ratio",
+          "codec",
+          "created_at",
+          "data_type"
+        ],
+        "line_count": 9
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\kai_core\\seeds\\7133108af4ad51d6.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "original_size",
+          "compressed_size",
+          "compression_ratio",
+          "codec",
+          "created_at",
+          "data_type"
+        ],
+        "line_count": 9
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\kai_core\\seeds\\715568a945555724.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "original_size",
+          "compressed_size",
+          "compression_ratio",
+          "codec",
+          "created_at",
+          "data_type"
+        ],
+        "line_count": 9
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\kai_core\\seeds\\77972b70c33a2998.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "original_size",
+          "compressed_size",
+          "compression_ratio",
+          "codec",
+          "created_at",
+          "data_type"
+        ],
+        "line_count": 9
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\kai_core\\seeds\\7c6f028a13c9f3f1.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "original_size",
+          "compressed_size",
+          "compression_ratio",
+          "codec",
+          "created_at",
+          "data_type"
+        ],
+        "line_count": 9
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\kai_core\\seeds\\832d221ebca74f61.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "original_size",
+          "compressed_size",
+          "compression_ratio",
+          "codec",
+          "created_at",
+          "data_type"
+        ],
+        "line_count": 9
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\kai_core\\seeds\\83c8823f5313fc71.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "original_size",
+          "compressed_size",
+          "compression_ratio",
+          "codec",
+          "created_at",
+          "data_type"
+        ],
+        "line_count": 9
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\kai_core\\seeds\\89b7dc8271858982.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "original_size",
+          "compressed_size",
+          "compression_ratio",
+          "codec",
+          "created_at",
+          "data_type"
+        ],
+        "line_count": 9
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\kai_core\\seeds\\a404204b3cb98ffe.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "original_size",
+          "compressed_size",
+          "compression_ratio",
+          "codec",
+          "created_at",
+          "data_type"
+        ],
+        "line_count": 9
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\kai_core\\seeds\\afcc8209ea46c2d6.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "original_size",
+          "compressed_size",
+          "compression_ratio",
+          "codec",
+          "created_at",
+          "data_type"
+        ],
+        "line_count": 9
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\kai_core\\seeds\\b34c0f3a43f6a4c6.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "original_size",
+          "compressed_size",
+          "compression_ratio",
+          "codec",
+          "created_at",
+          "data_type"
+        ],
+        "line_count": 9
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\kai_core\\seeds\\b531a915a914ed53.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "original_size",
+          "compressed_size",
+          "compression_ratio",
+          "codec",
+          "created_at",
+          "data_type"
+        ],
+        "line_count": 9
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\kai_core\\seeds\\bd4b7f7ab8dfd4d3.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "original_size",
+          "compressed_size",
+          "compression_ratio",
+          "codec",
+          "created_at",
+          "data_type"
+        ],
+        "line_count": 9
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\kai_core\\seeds\\c137c16f64568bb2.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "original_size",
+          "compressed_size",
+          "compression_ratio",
+          "codec",
+          "created_at",
+          "data_type"
+        ],
+        "line_count": 9
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\kai_core\\seeds\\cec987079e3319b7.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "original_size",
+          "compressed_size",
+          "compression_ratio",
+          "codec",
+          "created_at",
+          "data_type"
+        ],
+        "line_count": 9
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\kai_core\\seeds\\d114ce1278bd7049.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "original_size",
+          "compressed_size",
+          "compression_ratio",
+          "codec",
+          "created_at",
+          "data_type"
+        ],
+        "line_count": 9
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\kai_core\\seeds\\d15572c2a1fa76b5.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "original_size",
+          "compressed_size",
+          "compression_ratio",
+          "codec",
+          "created_at",
+          "data_type"
+        ],
+        "line_count": 9
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\kai_core\\seeds\\d3af4d4eaa0b7133.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "original_size",
+          "compressed_size",
+          "compression_ratio",
+          "codec",
+          "created_at",
+          "data_type"
+        ],
+        "line_count": 9
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\kai_core\\seeds\\d3b3b476f769a64a.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "original_size",
+          "compressed_size",
+          "compression_ratio",
+          "codec",
+          "created_at",
+          "data_type"
+        ],
+        "line_count": 9
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\kai_core\\seeds\\d3e8efabbdef94a3.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "original_size",
+          "compressed_size",
+          "compression_ratio",
+          "codec",
+          "created_at",
+          "data_type"
+        ],
+        "line_count": 9
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\kai_core\\seeds\\f20cbdc4280ae875.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "original_size",
+          "compressed_size",
+          "compression_ratio",
+          "codec",
+          "created_at",
+          "data_type"
+        ],
+        "line_count": 9
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\kai_core\\seeds\\f4f38d3bf056d750.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "original_size",
+          "compressed_size",
+          "compression_ratio",
+          "codec",
+          "created_at",
+          "data_type"
+        ],
+        "line_count": 9
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\kai_core\\seeds\\f9e3b7343c66a051.json": {
+        "type": "json",
+        "keys": [
+          "name",
+          "original_size",
+          "compressed_size",
+          "compression_ratio",
+          "codec",
+          "created_at",
+          "data_type"
+        ],
+        "line_count": 9
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\kai_core\\safety\\audit\\safety_audit.json": {
+        "type": "json",
+        "keys": [],
+        "line_count": 1649
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\cursor_recovery_kit\\cursor_recovery_kit\\ops\\drift-gate.ps1": {
+        "type": "powershell",
+        "imports": [],
+        "functions": [],
+        "line_count": 24
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\cursor_recovery_kit\\cursor_recovery_kit\\ops\\placeholder-scan.ps1": {
+        "type": "powershell",
+        "imports": [],
+        "functions": [],
+        "line_count": 12
+      },
+      "ops\\Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)\\cursor_recovery_kit\\cursor_recovery_kit\\restore\\RESTORE_MANIFEST.json": {
+        "type": "json",
+        "keys": [
+          "phase2_targets",
+          "phase3_docs"
+        ],
+        "line_count": 29
+      },
+      "ops\\consolidation_backups\\pre_consolidation_20250817_054429\\ADVANCED_INTEGRATION_LAYER_V5_FINAL_PUSH.py": {
+        "type": "python",
+        "imports": [
+          "os",
+          "sys",
+          "json",
+          "time",
+          "asyncio",
+          "threading",
+          "logging",
+          "concurrent.futures",
+          "tempfile",
+          "shutil",
+          "pathlib.Path",
+          "datetime.datetime",
+          "typing.Dict",
+          "typing.List",
+          "typing.Any",
+          "typing.Tuple",
+          "typing.Optional",
+          "typing.Callable",
+          "dataclasses.dataclass",
+          "dataclasses.asdict",
+          "queue",
+          "uuid",
+          "torch",
+          "psutil",
+          "GPUtil"
+        ],
+        "functions": [
+          {
+            "name": "main",
+            "line": 671,
+            "args": []
+          },
+          {
+            "name": "__init__",
+            "line": 68,
+            "args": [
+              "self",
+              "max_files"
+            ]
+          },
+          {
+            "name": "create_ram_disk",
+            "line": 74,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "load_files_to_ram",
+            "line": 85,
+            "args": [
+              "self",
+              "source_files"
+            ]
+          },
+          {
+            "name": "cleanup",
+            "line": 127,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "__init__",
+            "line": 139,
+            "args": [
+              "self",
+              "max_workers"
+            ]
+          },
+          {
+            "name": "process_files_parallel",
+            "line": 175,
+            "args": [
+              "self",
+              "files",
+              "batch_size"
+            ]
+          },
+          {
+            "name": "_process_batch_parallel",
+            "line": 207,
+            "args": [
+              "self",
+              "files"
+            ]
+          },
+          {
+            "name": "_process_single_file",
+            "line": 232,
+            "args": [
+              "self",
+              "file_info"
+            ]
+          },
+          {
+            "name": "shutdown",
+            "line": 260,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "__init__",
+            "line": 265,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "setup_logging",
+            "line": 314,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "initialize_gpu_acceleration",
+            "line": 326,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "register_core_components",
+            "line": 356,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "register_component",
+            "line": 405,
+            "args": [
+              "self",
+              "component_id",
+              "name",
+              "version",
+              "capabilities",
+              "dependencies"
+            ]
+          },
+          {
+            "name": "get_gpu_status",
+            "line": 431,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "get_system_health",
+            "line": 476,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "get_integration_status",
+            "line": 520,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "run_final_push_performance_test",
+            "line": 563,
+            "args": [
+              "self",
+              "num_files"
+            ]
+          },
+          {
+            "name": "stop_integration_layer",
+            "line": 657,
+            "args": [
+              "self"
+            ]
+          }
+        ],
+        "classes": [
+          {
+            "name": "ComponentInfo",
+            "line": 31,
+            "methods": []
+          },
+          {
+            "name": "IntegrationEvent",
+            "line": 44,
+            "methods": []
+          },
+          {
+            "name": "ComponentInterface",
+            "line": 56,
+            "methods": []
+          },
+          {
+            "name": "FinalPushRAMDiskManager",
+            "line": 65,
+            "methods": [
+              "__init__",
+              "create_ram_disk",
+              "load_files_to_ram",
+              "cleanup"
+            ]
+          },
+          {
+            "name": "FinalPushParallelProcessor",
+            "line": 136,
+            "methods": [
+              "__init__",
+              "process_files_parallel",
+              "_process_batch_parallel",
+              "_process_single_file",
+              "shutdown"
+            ]
+          },
+          {
+            "name": "AdvancedIntegrationLayer",
+            "line": 264,
+            "methods": [
+              "__init__",
+              "setup_logging",
+              "initialize_gpu_acceleration",
+              "register_core_components",
+              "register_component",
+              "get_gpu_status",
+              "get_system_health",
+              "get_integration_status",
+              "run_final_push_performance_test",
+              "stop_integration_layer"
+            ]
+          }
+        ],
+        "line_count": 735
+      },
+      "ops\\consolidation_backups\\pre_consolidation_20250817_054429\\ADVANCED_INTEGRATION_LAYER_V5_ULTRA_TURBO.py": {
+        "type": "python",
+        "imports": [
+          "os",
+          "sys",
+          "json",
+          "time",
+          "asyncio",
+          "threading",
+          "logging",
+          "concurrent.futures",
+          "tempfile",
+          "shutil",
+          "pathlib.Path",
+          "datetime.datetime",
+          "typing.Dict",
+          "typing.List",
+          "typing.Any",
+          "typing.Tuple",
+          "typing.Optional",
+          "typing.Callable",
+          "dataclasses.dataclass",
+          "dataclasses.asdict",
+          "queue",
+          "uuid",
+          "torch",
+          "psutil",
+          "GPUtil"
+        ],
+        "functions": [
+          {
+            "name": "main",
+            "line": 665,
+            "args": []
+          },
+          {
+            "name": "__init__",
+            "line": 68,
+            "args": [
+              "self",
+              "max_files"
+            ]
+          },
+          {
+            "name": "create_ram_disk",
+            "line": 74,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "load_files_to_ram",
+            "line": 85,
+            "args": [
+              "self",
+              "source_files"
+            ]
+          },
+          {
+            "name": "cleanup",
+            "line": 127,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "__init__",
+            "line": 139,
+            "args": [
+              "self",
+              "max_workers"
+            ]
+          },
+          {
+            "name": "process_files_parallel",
+            "line": 175,
+            "args": [
+              "self",
+              "files",
+              "batch_size"
+            ]
+          },
+          {
+            "name": "_process_batch_parallel",
+            "line": 207,
+            "args": [
+              "self",
+              "files"
+            ]
+          },
+          {
+            "name": "_process_single_file",
+            "line": 232,
+            "args": [
+              "self",
+              "file_info"
+            ]
+          },
+          {
+            "name": "shutdown",
+            "line": 260,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "__init__",
+            "line": 265,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "setup_logging",
+            "line": 314,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "initialize_gpu_acceleration",
+            "line": 326,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "register_core_components",
+            "line": 356,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "register_component",
+            "line": 405,
+            "args": [
+              "self",
+              "component_id",
+              "name",
+              "version",
+              "capabilities",
+              "dependencies"
+            ]
+          },
+          {
+            "name": "get_gpu_status",
+            "line": 431,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "get_system_health",
+            "line": 476,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "get_integration_status",
+            "line": 520,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "run_ultra_turbo_performance_test",
+            "line": 563,
+            "args": [
+              "self",
+              "num_files"
+            ]
+          },
+          {
+            "name": "stop_integration_layer",
+            "line": 651,
+            "args": [
+              "self"
+            ]
+          }
+        ],
+        "classes": [
+          {
+            "name": "ComponentInfo",
+            "line": 31,
+            "methods": []
+          },
+          {
+            "name": "IntegrationEvent",
+            "line": 44,
+            "methods": []
+          },
+          {
+            "name": "ComponentInterface",
+            "line": 56,
+            "methods": []
+          },
+          {
+            "name": "UltraTurboRAMDiskManager",
+            "line": 65,
+            "methods": [
+              "__init__",
+              "create_ram_disk",
+              "load_files_to_ram",
+              "cleanup"
+            ]
+          },
+          {
+            "name": "UltraTurboParallelProcessor",
+            "line": 136,
+            "methods": [
+              "__init__",
+              "process_files_parallel",
+              "_process_batch_parallel",
+              "_process_single_file",
+              "shutdown"
+            ]
+          },
+          {
+            "name": "AdvancedIntegrationLayer",
+            "line": 264,
+            "methods": [
+              "__init__",
+              "setup_logging",
+              "initialize_gpu_acceleration",
+              "register_core_components",
+              "register_component",
+              "get_gpu_status",
+              "get_system_health",
+              "get_integration_status",
+              "run_ultra_turbo_performance_test",
+              "stop_integration_layer"
+            ]
+          }
+        ],
+        "line_count": 720
+      },
+      "ops\\consolidation_backups\\pre_consolidation_20250817_054429\\AGENT_WORK_INTERFACE.py": {
+        "type": "python",
+        "imports": [
+          "json",
+          "os",
+          "pathlib.Path",
+          "datetime.datetime",
+          "typing.Dict",
+          "typing.List",
+          "typing.Any"
+        ],
+        "functions": [
+          {
+            "name": "main",
+            "line": 238,
+            "args": []
+          },
+          {
+            "name": "__init__",
+            "line": 14,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "load_data",
+            "line": 23,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "show_available_chunks",
+            "line": 51,
+            "args": [
+              "self",
+              "agent_size"
+            ]
+          },
+          {
+            "name": "get_chunk_status",
+            "line": 84,
+            "args": [
+              "self",
+              "chunk_id"
+            ]
+          },
+          {
+            "name": "pick_work_chunk",
+            "line": 97,
+            "args": [
+              "self",
+              "agent_size",
+              "chunk_index"
+            ]
+          },
+          {
+            "name": "mark_chunk_status",
+            "line": 148,
+            "args": [
+              "self",
+              "chunk_id",
+              "status"
+            ]
+          },
+          {
+            "name": "complete_chunk",
+            "line": 180,
+            "args": [
+              "self",
+              "chunk_id",
+              "completion_notes"
+            ]
+          },
+          {
+            "name": "show_progress_summary",
+            "line": 197,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "save_progress",
+            "line": 220,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "get_agent_size_from_tokens",
+            "line": 225,
+            "args": [
+              "self",
+              "token_limit"
+            ]
+          }
+        ],
+        "classes": [
+          {
+            "name": "AgentWorkInterface",
+            "line": 13,
+            "methods": [
+              "__init__",
+              "load_data",
+              "show_available_chunks",
+              "get_chunk_status",
+              "pick_work_chunk",
+              "mark_chunk_status",
+              "complete_chunk",
+              "show_progress_summary",
+              "save_progress",
+              "get_agent_size_from_tokens"
+            ]
+          }
+        ],
+        "line_count": 312
+      },
+      "ops\\consolidation_backups\\pre_consolidation_20250817_054429\\CHAINED_VISION_ANALYSIS.py": {
+        "type": "python",
+        "imports": [
+          "os",
+          "json",
+          "time",
+          "pathlib.Path",
+          "datetime.datetime",
+          "typing.Dict",
+          "typing.List",
+          "typing.Any",
+          "typing.Tuple",
+          "VISIONGAP_ENGINE.VisionGapEngine"
+        ],
+        "functions": [
+          {
+            "name": "main",
+            "line": 399,
+            "args": []
+          },
+          {
+            "name": "__init__",
+            "line": 16,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "run_chained_analysis",
+            "line": 26,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_load_unicode_scan_results",
+            "line": 50,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_run_vision_gap_analysis",
+            "line": 71,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_synthesize_comprehensive_vision",
+            "line": 91,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_analyze_project_boundaries",
+            "line": 105,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_calculate_health_score",
+            "line": 125,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_identify_critical_issues",
+            "line": 159,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_prioritize_repairs",
+            "line": 195,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_generate_phoenix_report",
+            "line": 231,
+            "args": [
+              "self"
+            ]
+          }
+        ],
+        "classes": [
+          {
+            "name": "ChainedVisionAnalysis",
+            "line": 15,
+            "methods": [
+              "__init__",
+              "run_chained_analysis",
+              "_load_unicode_scan_results",
+              "_run_vision_gap_analysis",
+              "_synthesize_comprehensive_vision",
+              "_analyze_project_boundaries",
+              "_calculate_health_score",
+              "_identify_critical_issues",
+              "_prioritize_repairs",
+              "_generate_phoenix_report"
+            ]
+          }
+        ],
+        "line_count": 412
+      },
+      "ops\\consolidation_backups\\pre_consolidation_20250817_054429\\CLEAN_INTEGRATION.py": {
+        "type": "python",
+        "imports": [
+          "os",
+          "sys",
+          "pathlib.Path"
+        ],
+        "functions": [
+          {
+            "name": "clean_integrate_sentinel_mesh",
+            "line": 14,
+            "args": []
+          },
+          {
+            "name": "clean_integrate_self_healing",
+            "line": 117,
+            "args": []
+          },
+          {
+            "name": "clean_integrate_health_checker",
+            "line": 198,
+            "args": []
+          },
+          {
+            "name": "clean_integrate_ensemble_system",
+            "line": 279,
+            "args": []
+          },
+          {
+            "name": "main",
+            "line": 360,
+            "args": []
+          }
+        ],
+        "classes": [],
+        "line_count": 390
+      },
+      "ops\\consolidation_backups\\pre_consolidation_20250817_054429\\context-governor-v5-token-upgrade.py": {
+        "type": "python",
+        "imports": [
+          "os",
+          "json",
+          "numpy",
+          "pathlib.Path",
+          "re",
+          "typing.List",
+          "typing.Dict",
+          "typing.Tuple",
+          "time",
+          "hashlib",
+          "logging",
+          "datetime.datetime",
+          "torch",
+          "faiss",
+          "sentence_transformers.SentenceTransformer",
+          "numpy"
+        ],
+        "functions": [
+          {
+            "name": "main",
+            "line": 823,
+            "args": []
+          },
+          {
+            "name": "__init__",
+            "line": 43,
+            "args": [
+              "self",
+              "model_name",
+              "device",
+              "max_tokens"
+            ]
+          },
+          {
+            "name": "setup_model",
+            "line": 117,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "initialize_phase2_features",
+            "line": 151,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "initialize_phase3_features",
+            "line": 181,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "setup_logging",
+            "line": 204,
+            "args": [
+              "self",
+              "log_file"
+            ]
+          },
+          {
+            "name": "save_documents_to_disk",
+            "line": 215,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "load_documents_from_disk",
+            "line": 232,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "monitor_performance",
+            "line": 247,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "persist_context_to_ssd",
+            "line": 270,
+            "args": [
+              "self",
+              "context_data",
+              "context_id"
+            ]
+          },
+          {
+            "name": "load_context_from_ssd",
+            "line": 296,
+            "args": [
+              "self",
+              "context_id"
+            ]
+          },
+          {
+            "name": "decompress_context",
+            "line": 320,
+            "args": [
+              "self",
+              "compressed_data",
+              "compression_type"
+            ]
+          },
+          {
+            "name": "advanced_context_caching",
+            "line": 339,
+            "args": [
+              "self",
+              "context_data",
+              "context_id"
+            ]
+          },
+          {
+            "name": "evict_cache_if_needed",
+            "line": 368,
+            "args": [
+              "self",
+              "max_cache_size"
+            ]
+          },
+          {
+            "name": "get_cache_stats",
+            "line": 386,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "compress_context",
+            "line": 402,
+            "args": [
+              "self",
+              "context_data",
+              "compression_type"
+            ]
+          },
+          {
+            "name": "lru_eviction",
+            "line": 428,
+            "args": [
+              "self",
+              "memory_pool",
+              "max_items"
+            ]
+          },
+          {
+            "name": "fifo_eviction",
+            "line": 443,
+            "args": [
+              "self",
+              "memory_pool",
+              "max_items"
+            ]
+          },
+          {
+            "name": "frequency_eviction",
+            "line": 457,
+            "args": [
+              "self",
+              "memory_pool",
+              "max_items"
+            ]
+          },
+          {
+            "name": "optimize_gpu_memory",
+            "line": 472,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "allocate_shared_memory",
+            "line": 505,
+            "args": [
+              "self",
+              "context_data",
+              "priority"
+            ]
+          },
+          {
+            "name": "estimate_tokens",
+            "line": 539,
+            "args": [
+              "self",
+              "text"
+            ]
+          },
+          {
+            "name": "smart_chunk_text",
+            "line": 550,
+            "args": [
+              "self",
+              "text",
+              "chunk_size",
+              "overlap"
+            ]
+          },
+          {
+            "name": "process_file",
+            "line": 586,
+            "args": [
+              "self",
+              "file_path",
+              "chunk_size",
+              "overlap"
+            ]
+          },
+          {
+            "name": "build_index",
+            "line": 630,
+            "args": [
+              "self",
+              "root_path",
+              "chunk_size",
+              "overlap"
+            ]
+          },
+          {
+            "name": "search_with_budget",
+            "line": 769,
+            "args": [
+              "self",
+              "query",
+              "top_k",
+              "max_tokens"
+            ]
+          }
+        ],
+        "classes": [
+          {
+            "name": "TokenUpgradeContextGovernor",
+            "line": 42,
+            "methods": [
+              "__init__",
+              "setup_model",
+              "initialize_phase2_features",
+              "initialize_phase3_features",
+              "setup_logging",
+              "save_documents_to_disk",
+              "load_documents_from_disk",
+              "monitor_performance",
+              "persist_context_to_ssd",
+              "load_context_from_ssd",
+              "decompress_context",
+              "advanced_context_caching",
+              "evict_cache_if_needed",
+              "get_cache_stats",
+              "compress_context",
+              "lru_eviction",
+              "fifo_eviction",
+              "frequency_eviction",
+              "optimize_gpu_memory",
+              "allocate_shared_memory",
+              "estimate_tokens",
+              "smart_chunk_text",
+              "process_file",
+              "build_index",
+              "search_with_budget"
+            ]
+          }
+        ],
+        "line_count": 867
+      },
+      "ops\\consolidation_backups\\pre_consolidation_20250817_054429\\EMOJI_PURIFIER_V5.py": {
+        "type": "python",
+        "imports": [
+          "os",
+          "re",
+          "sys",
+          "pathlib.Path",
+          "typing.List",
+          "typing.Dict",
+          "typing.Tuple",
+          "unicodedata"
+        ],
+        "functions": [
+          {
+            "name": "is_emoji",
+            "line": 14,
+            "args": [
+              "char"
+            ]
+          },
+          {
+            "name": "scan_file_for_emojis",
+            "line": 43,
+            "args": [
+              "file_path"
+            ]
+          },
+          {
+            "name": "remove_emojis_from_file",
+            "line": 79,
+            "args": [
+              "file_path"
+            ]
+          },
+          {
+            "name": "scan_directory",
+            "line": 112,
+            "args": [
+              "directory",
+              "extensions"
+            ]
+          },
+          {
+            "name": "main",
+            "line": 150,
+            "args": []
+          }
+        ],
+        "classes": [],
+        "line_count": 218
+      },
+      "ops\\consolidation_backups\\pre_consolidation_20250817_054429\\EMOJI_REMOVER.py": {
+        "type": "python",
+        "imports": [
+          "os",
+          "re",
+          "json",
+          "unicodedata",
+          "pathlib.Path",
+          "typing.List",
+          "typing.Dict",
+          "typing.Tuple"
+        ],
+        "functions": [
+          {
+            "name": "is_emoji",
+            "line": 14,
+            "args": [
+              "char"
+            ]
+          },
+          {
+            "name": "remove_emojis_from_file",
+            "line": 43,
+            "args": [
+              "file_path"
+            ]
+          },
+          {
+            "name": "process_emoji_report",
+            "line": 76,
+            "args": [
+              "report_path"
+            ]
+          },
+          {
+            "name": "main",
+            "line": 138,
+            "args": []
+          }
+        ],
+        "classes": [],
+        "line_count": 143
+      },
+      "ops\\consolidation_backups\\pre_consolidation_20250817_054429\\GPU-COMPUTE-BLAST-V5.py": {
+        "type": "python",
+        "imports": [
+          "os",
+          "sys",
+          "time",
+          "json",
+          "logging",
+          "psutil",
+          "torch",
+          "numpy",
+          "threading",
+          "concurrent.futures.ThreadPoolExecutor",
+          "concurrent.futures.as_completed",
+          "pathlib.Path",
+          "gc"
+        ],
+        "functions": [
+          {
+            "name": "main",
+            "line": 472,
+            "args": []
+          },
+          {
+            "name": "__init__",
+            "line": 31,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "analyze_system",
+            "line": 38,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "start_gpu_compute_workers",
+            "line": 67,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "matrix_multiplication_worker",
+            "line": 95,
+            "args": [
+              "self",
+              "worker_id"
+            ]
+          },
+          {
+            "name": "convolution_worker",
+            "line": 126,
+            "args": [
+              "self",
+              "worker_id"
+            ]
+          },
+          {
+            "name": "tensor_operations_worker",
+            "line": 160,
+            "args": [
+              "self",
+              "worker_id"
+            ]
+          },
+          {
+            "name": "neural_network_worker",
+            "line": 197,
+            "args": [
+              "self",
+              "worker_id"
+            ]
+          },
+          {
+            "name": "cryptographic_worker",
+            "line": 242,
+            "args": [
+              "self",
+              "worker_id"
+            ]
+          },
+          {
+            "name": "scientific_computation_worker",
+            "line": 277,
+            "args": [
+              "self",
+              "worker_id"
+            ]
+          },
+          {
+            "name": "start_performance_monitoring",
+            "line": 315,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "get_gpu_utilization",
+            "line": 349,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "increase_compute_load",
+            "line": 360,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "execute_gpu_compute_blast",
+            "line": 375,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "generate_gpu_compute_report",
+            "line": 401,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "performance_monitor",
+            "line": 319,
+            "args": []
+          }
+        ],
+        "classes": [
+          {
+            "name": "GPUComputeBlastV5",
+            "line": 30,
+            "methods": [
+              "__init__",
+              "analyze_system",
+              "start_gpu_compute_workers",
+              "matrix_multiplication_worker",
+              "convolution_worker",
+              "tensor_operations_worker",
+              "neural_network_worker",
+              "cryptographic_worker",
+              "scientific_computation_worker",
+              "start_performance_monitoring",
+              "get_gpu_utilization",
+              "increase_compute_load",
+              "execute_gpu_compute_blast",
+              "generate_gpu_compute_report"
+            ]
+          }
+        ],
+        "line_count": 509
+      },
+      "ops\\consolidation_backups\\pre_consolidation_20250817_054429\\INTELLIGENT-FIX-ENGINE.py": {
+        "type": "python",
+        "imports": [
+          "os",
+          "sys",
+          "json",
+          "time",
+          "logging",
+          "psutil",
+          "re",
+          "ast",
+          "shutil",
+          "pathlib.Path",
+          "typing.List",
+          "typing.Dict",
+          "typing.Any",
+          "typing.Tuple",
+          "typing.Optional",
+          "numpy",
+          "datetime.datetime",
+          "collections.defaultdict",
+          "torch",
+          "faiss",
+          "sentence_transformers.SentenceTransformer"
+        ],
+        "functions": [
+          {
+            "name": "main",
+            "line": 528,
+            "args": []
+          },
+          {
+            "name": "__init__",
+            "line": 50,
+            "args": [
+              "self",
+              "analysis_data_path"
+            ]
+          },
+          {
+            "name": "initialize_model",
+            "line": 78,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "load_analysis_results",
+            "line": 88,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "get_system_resources",
+            "line": 101,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "log_system_status",
+            "line": 125,
+            "args": [
+              "self",
+              "phase"
+            ]
+          },
+          {
+            "name": "create_backup",
+            "line": 142,
+            "args": [
+              "self",
+              "file_path"
+            ]
+          },
+          {
+            "name": "apply_security_fixes",
+            "line": 154,
+            "args": [
+              "self",
+              "file_path",
+              "content",
+              "security_issues"
+            ]
+          },
+          {
+            "name": "apply_performance_fixes",
+            "line": 196,
+            "args": [
+              "self",
+              "file_path",
+              "content",
+              "performance_issues"
+            ]
+          },
+          {
+            "name": "apply_code_quality_fixes",
+            "line": 227,
+            "args": [
+              "self",
+              "file_path",
+              "content",
+              "code_quality"
+            ]
+          },
+          {
+            "name": "apply_architecture_fixes",
+            "line": 296,
+            "args": [
+              "self",
+              "file_path",
+              "content",
+              "architecture_patterns"
+            ]
+          },
+          {
+            "name": "fix_file",
+            "line": 324,
+            "args": [
+              "self",
+              "file_path",
+              "analysis"
+            ]
+          },
+          {
+            "name": "process_all_files",
+            "line": 379,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "generate_fix_report",
+            "line": 427,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "run_intelligent_fixing",
+            "line": 503,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "add_type_hints",
+            "line": 306,
+            "args": [
+              "match"
+            ]
+          }
+        ],
+        "classes": [
+          {
+            "name": "IntelligentFixEngine",
+            "line": 49,
+            "methods": [
+              "__init__",
+              "initialize_model",
+              "load_analysis_results",
+              "get_system_resources",
+              "log_system_status",
+              "create_backup",
+              "apply_security_fixes",
+              "apply_performance_fixes",
+              "apply_code_quality_fixes",
+              "apply_architecture_fixes",
+              "fix_file",
+              "process_all_files",
+              "generate_fix_report",
+              "run_intelligent_fixing"
+            ]
+          }
+        ],
+        "line_count": 545
+      },
+      "ops\\consolidation_backups\\pre_consolidation_20250817_054429\\INTELLIGENT_SCRIPT_CONSOLIDATION_ENGINE.py": {
+        "type": "python",
+        "imports": [
+          "os",
+          "sys",
+          "ast",
+          "re",
+          "json",
+          "time",
+          "shutil",
+          "subprocess",
+          "pathlib.Path",
+          "datetime.datetime",
+          "typing.Dict",
+          "typing.List",
+          "typing.Any",
+          "typing.Tuple",
+          "typing.Optional",
+          "typing.Set",
+          "logging"
+        ],
+        "functions": [
+          {
+            "name": "main",
+            "line": 673,
+            "args": []
+          },
+          {
+            "name": "__init__",
+            "line": 32,
+            "args": [
+              "self",
+              "workspace_root"
+            ]
+          },
+          {
+            "name": "setup_logging",
+            "line": 64,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "analyze_script_health",
+            "line": 84,
+            "args": [
+              "self",
+              "script_path"
+            ]
+          },
+          {
+            "name": "repair_syntax_errors",
+            "line": 163,
+            "args": [
+              "self",
+              "script_path"
+            ]
+          },
+          {
+            "name": "create_consolidation_strategy",
+            "line": 238,
+            "args": [
+              "self",
+              "scripts"
+            ]
+          },
+          {
+            "name": "_create_merge_order",
+            "line": 304,
+            "args": [
+              "self",
+              "dependency_graph"
+            ]
+          },
+          {
+            "name": "consolidate_scripts_intelligently",
+            "line": 333,
+            "args": [
+              "self",
+              "scripts",
+              "output_name"
+            ]
+          },
+          {
+            "name": "_consolidate_class_based",
+            "line": 382,
+            "args": [
+              "self",
+              "scripts",
+              "output_name",
+              "strategy"
+            ]
+          },
+          {
+            "name": "_consolidate_function_based",
+            "line": 436,
+            "args": [
+              "self",
+              "scripts",
+              "output_name",
+              "strategy"
+            ]
+          },
+          {
+            "name": "_consolidate_with_repair",
+            "line": 486,
+            "args": [
+              "self",
+              "scripts",
+              "output_name",
+              "strategy"
+            ]
+          },
+          {
+            "name": "_consolidate_simple_append",
+            "line": 501,
+            "args": [
+              "self",
+              "scripts",
+              "output_name",
+              "strategy"
+            ]
+          },
+          {
+            "name": "_find_class_end",
+            "line": 533,
+            "args": [
+              "self",
+              "content",
+              "start_pos"
+            ]
+          },
+          {
+            "name": "_find_function_end",
+            "line": 557,
+            "args": [
+              "self",
+              "content",
+              "start_pos"
+            ]
+          },
+          {
+            "name": "_validate_consolidated_file",
+            "line": 581,
+            "args": [
+              "self",
+              "file_path"
+            ]
+          },
+          {
+            "name": "generate_consolidation_report",
+            "line": 600,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "run_consolidation_example",
+            "line": 642,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "visit",
+            "line": 311,
+            "args": [
+              "node"
+            ]
+          }
+        ],
+        "classes": [
+          {
+            "name": "IntelligentScriptConsolidationEngine",
+            "line": 29,
+            "methods": [
+              "__init__",
+              "setup_logging",
+              "analyze_script_health",
+              "repair_syntax_errors",
+              "create_consolidation_strategy",
+              "_create_merge_order",
+              "consolidate_scripts_intelligently",
+              "_consolidate_class_based",
+              "_consolidate_function_based",
+              "_consolidate_with_repair",
+              "_consolidate_simple_append",
+              "_find_class_end",
+              "_find_function_end",
+              "_validate_consolidated_file",
+              "generate_consolidation_report",
+              "run_consolidation_example"
+            ]
+          }
+        ],
+        "line_count": 698
+      },
+      "ops\\consolidation_backups\\pre_consolidation_20250817_054429\\LAYERED_SCANNING_SYSTEM.py": {
+        "type": "python",
+        "imports": [
+          "os",
+          "sys",
+          "json",
+          "time",
+          "logging",
+          "re",
+          "threading",
+          "pathlib.Path",
+          "typing.List",
+          "typing.Dict",
+          "typing.Any",
+          "typing.Tuple",
+          "typing.Set",
+          "hashlib",
+          "collections.defaultdict",
+          "sys"
+        ],
+        "functions": [
+          {
+            "name": "main",
+            "line": 435,
+            "args": []
+          },
+          {
+            "name": "__init__",
+            "line": 30,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_start_progress_indicator",
+            "line": 64,
+            "args": [
+              "self",
+              "layer_name"
+            ]
+          },
+          {
+            "name": "_stop_progress_indicator",
+            "line": 71,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_progress_animation",
+            "line": 79,
+            "args": [
+              "self",
+              "layer_name"
+            ]
+          },
+          {
+            "name": "_detect_project_boundaries",
+            "line": 125,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_identify_main_project",
+            "line": 135,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_identify_toolbox_system",
+            "line": 141,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_is_toolbox_file",
+            "line": 148,
+            "args": [
+              "self",
+              "file_path"
+            ]
+          },
+          {
+            "name": "run_layer1_unicode_scan",
+            "line": 156,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "run_layer2_content_quality_scan",
+            "line": 239,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "run_comprehensive_scan",
+            "line": 340,
+            "args": [
+              "self"
+            ]
+          },
+          {
+            "name": "_generate_comprehensive_scan_report",
+            "line": 356,
+            "args": [
+              "self"
+            ]
+          }
+        ],
+        "classes": [
+          {
+            "name": "LayeredScanningSystem",
+            "line": 29,
+            "methods": [
+              "__init__",
+              "_start_progress_indicator",
+              "_stop_progress_indicator",
+              "_progress_animation",
+              "_detect_project_boundaries",
+              "_identify_main_project",
+              "_identify_toolbox_system",
+              "_is_toolbox_file",
+              "run_layer1_unicode_scan",
+              "run_layer2_content_quality_scan",
+              "run_comprehensive_scan",
+              "_generate_comprehensive_scan_report"
+            ]
+          }
+        ],
+        "line_count": 451
+      }
+    }
+  },
+  "estimated_tokens": 904.8000000000001,
+  "related_chunks": [
+    "v5_core_systems",
+    "legacy_v1_v4_systems"
+  ]
+}

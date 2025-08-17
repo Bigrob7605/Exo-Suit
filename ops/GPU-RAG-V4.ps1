@@ -309,14 +309,14 @@ def build_index(input_path, output_dir):
         model = SentenceTransformer('all-MiniLM-L6-v2')
         if torch.cuda.is_available():
             model = model.to('cuda')
-            print("✓ Using GPU acceleration for model")
+            print(" Using GPU acceleration for model")
             # Test GPU memory allocation
             test_tensor = torch.randn(1000, 384).cuda()
-            print(f"✓ GPU memory test successful - allocated {test_tensor.numel() * 4 / (1024**2):.1f} MB")
+            print(f" GPU memory test successful - allocated {test_tensor.numel() * 4 / (1024**2):.1f} MB")
             del test_tensor
             torch.cuda.empty_cache()
         else:
-            print("⚠ Using CPU (GPU not available)")
+            print(" Using CPU (GPU not available)")
     except Exception as e:
         print(f"Model initialization failed: {e}")
         return False
@@ -347,7 +347,7 @@ def build_index(input_path, output_dir):
     # Generate embeddings with GPU acceleration
     print("Generating embeddings...")
     if torch.cuda.is_available():
-        print("✓ Using GPU for embedding generation")
+        print(" Using GPU for embedding generation")
         # Process in batches for GPU memory efficiency
         batch_size = 32
         all_embeddings = []
@@ -358,9 +358,9 @@ def build_index(input_path, output_dir):
             print(f"Processed batch {i//batch_size + 1}/{(len(documents) + batch_size - 1)//batch_size}")
         
         embeddings = np.vstack(all_embeddings)
-        print(f"✓ Generated {embeddings.shape[0]} embeddings with GPU acceleration")
+        print(f" Generated {embeddings.shape[0]} embeddings with GPU acceleration")
     else:
-        print("⚠ Using CPU for embedding generation")
+        print(" Using CPU for embedding generation")
         embeddings = model.encode(documents, show_progress_bar=True)
     
     # Build FAISS index (transfer to CPU if needed)
@@ -368,7 +368,7 @@ def build_index(input_path, output_dir):
     if torch.cuda.is_available():
         # Convert to CPU for FAISS processing
         embeddings_cpu = embeddings.cpu().numpy() if hasattr(embeddings, 'cpu') else embeddings
-        print("✓ Transferred embeddings to CPU for FAISS processing")
+        print(" Transferred embeddings to CPU for FAISS processing")
     else:
         embeddings_cpu = embeddings
     
@@ -394,7 +394,7 @@ def build_index(input_path, output_dir):
     # Cleanup GPU memory
     if torch.cuda.is_available():
         torch.cuda.empty_cache()
-        print("✓ GPU memory cleaned up")
+        print(" GPU memory cleaned up")
     
     return True
 
