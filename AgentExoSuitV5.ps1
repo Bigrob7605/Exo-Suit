@@ -52,6 +52,12 @@ param(
     [int]$DeepSpeedStreams = 4
 )
 
+# EMOJI POLICY ENFORCEMENT
+# CRITICAL: NO EMOJIS ALLOWED IN ANY FILES
+# All files must be ASCII-only (no special characters, symbols, or emojis)
+# UTF-8 encoding with ASCII content only
+# This policy is enforced across the entire system
+
 # Script configuration
 $ScriptName = "AgentExoSuitV5"
 $ScriptVersion = "5.0"

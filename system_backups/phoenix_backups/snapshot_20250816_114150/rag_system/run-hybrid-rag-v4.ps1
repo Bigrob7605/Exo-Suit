@@ -309,7 +309,7 @@ function Main {
     
     if ($success) {
         Write-ColorOutput ""
-        Write-ColorOutput "🎉 Hybrid RAG operation completed successfully!" "Green"
+        Write-ColorOutput "EMOJI_1F389 Hybrid RAG operation completed successfully!" "Green"
         Write-ColorOutput ""
         Write-ColorOutput "Next steps:" "Cyan"
         Write-ColorOutput "1. Check output files in $OutputDir" "White"
@@ -317,7 +317,7 @@ function Main {
         Write-ColorOutput "3. Run benchmark mode to test performance" "White"
     } else {
         Write-ColorOutput ""
-        Write-ColorOutput "❌ Hybrid RAG operation failed!" "Red"
+        Write-ColorOutput "EMOJI_274C Hybrid RAG operation failed!" "Red"
         Write-ColorOutput "Check error messages above and try again." "Yellow"
         exit 1
     }

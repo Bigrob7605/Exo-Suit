@@ -103,7 +103,7 @@ powershell
 ##  What Gets Optimized
 
 ### System Level
-- **Power Plans**: High Performance → Ultimate Performance
+- **Power Plans**: High Performance  Ultimate Performance
 - **CPU Settings**: Minimum state set to 80-100%
 - **Sleep/Hibernate**: Disabled for maximum performance
 - **Disk Timeouts**: Optimized for performance

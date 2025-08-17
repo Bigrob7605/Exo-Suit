@@ -13,7 +13,7 @@ from hybrid_rag_v4 import HybridRAGProcessor
 
 def scan_full_project():
     """Scan the entire project using V5.0 hybrid RAG system"""
-    print("🚀 AGENT EXO-SUIT V5.0 'BUILDER OF DREAMS' - FULL PROJECT SCANNER")
+    print("ROCKET AGENT EXO-SUIT V5.0 'BUILDER OF DREAMS' - FULL PROJECT SCANNER")
     print("=" * 80)
     
     start_time = time.time()
@@ -89,7 +89,7 @@ def scan_full_project():
         # Build search index
         print("\nBuilding search index...")
         if processor.build_index(results):
-            print("✅ Search index built successfully!")
+            print("EMOJI_2705 Search index built successfully!")
             
             # Test search functionality
             test_queries = [
@@ -126,14 +126,14 @@ def scan_full_project():
         print("\nCleaning up...")
         processor.cleanup()
         
-        print(f"\n🎯 V5.0 FULL PROJECT SCAN COMPLETED SUCCESSFULLY!")
+        print(f"\nTARGET V5.0 FULL PROJECT SCAN COMPLETED SUCCESSFULLY!")
         print(f"Performance: {files_per_second:.1f} files/second")
         print(f"Efficiency: {len(filtered_files) / total_time:.1f} files/second overall")
         
         return True
         
     except Exception as e:
-        print(f"❌ Scan failed: {e}")
+        print(f"EMOJI_274C Scan failed: {e}")
         import traceback
         traceback.print_exc()
         return False

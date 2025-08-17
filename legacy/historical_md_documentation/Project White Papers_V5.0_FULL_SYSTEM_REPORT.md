@@ -197,7 +197,7 @@ The system successfully processed real project files including:
 - **Total Project Files**: 52,041 files
 - **Batch Size**: 1000 files per batch
 - **Total Batches**: 53 batches
-- **Estimated Total Time**: 53 × 4.55s = **~4 minutes**
+- **Estimated Total Time**: 53  4.55s = **~4 minutes**
 - **Previous CPU Estimate**: ~87 minutes
 - **V5.0 GPU Improvement**: **~22x faster** than estimated!
 

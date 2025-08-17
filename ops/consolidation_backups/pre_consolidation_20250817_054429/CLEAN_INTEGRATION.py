@@ -24,7 +24,7 @@ def clean_integrate_sentinel_mesh():
     integration_file = ops_dir / "ADVANCED_INTEGRATION_LAYER_V5.py"
     
     if not sentinel_file.exists() or not integration_file.exists():
-        print("❌ Files not found")
+        print("EMOJI_274C Files not found")
         return False
     
     # Read sentinel mesh code
@@ -37,7 +37,7 @@ def clean_integrate_sentinel_mesh():
     
     # Check if already integrated
     if "class KaiSentinelMesh:" in integration_content:
-        print("✅ Sentinel mesh already integrated")
+        print("EMOJI_2705 Sentinel mesh already integrated")
         return True
     
     # Extract the KaiSentinelMesh class
@@ -45,7 +45,7 @@ def clean_integrate_sentinel_mesh():
     start_idx = sentinel_code.find(start_marker)
     
     if start_idx == -1:
-        print("❌ Could not find KaiSentinelMesh class")
+        print("EMOJI_274C Could not find KaiSentinelMesh class")
         return False
     
     # Find the next class definition or end of file
@@ -108,10 +108,10 @@ import GPUtil
         with open(integration_file, 'w', encoding='utf-8') as f:
             f.write(enhanced_content)
         
-        print("✅ Sentinel mesh integrated successfully")
+        print("EMOJI_2705 Sentinel mesh integrated successfully")
         return True
     else:
-        print("❌ Could not find class structure")
+        print("EMOJI_274C Could not find class structure")
         return False
 
 def clean_integrate_self_healing():
@@ -127,7 +127,7 @@ def clean_integrate_self_healing():
     phoenix_file = ops_dir / "PHOENIX_RECOVERY_SYSTEM_V5.py"
     
     if not self_healing_file.exists() or not phoenix_file.exists():
-        print("❌ Files not found")
+        print("EMOJI_274C Files not found")
         return False
     
     # Read self-healing code
@@ -140,7 +140,7 @@ def clean_integrate_self_healing():
     
     # Check if already integrated
     if "class FortifiedSelfHealProtocol:" in phoenix_content:
-        print("✅ Self-healing already integrated")
+        print("EMOJI_2705 Self-healing already integrated")
         return True
     
     # Extract the FortifiedSelfHealProtocol class
@@ -148,7 +148,7 @@ def clean_integrate_self_healing():
     start_idx = self_healing_code.find(start_marker)
     
     if start_idx == -1:
-        print("❌ Could not find FortifiedSelfHealProtocol class")
+        print("EMOJI_274C Could not find FortifiedSelfHealProtocol class")
         return False
     
     # Find the next class definition or end of file
@@ -189,10 +189,10 @@ def clean_integrate_self_healing():
         with open(phoenix_file, 'w', encoding='utf-8') as f:
             f.write(enhanced_content)
         
-        print("✅ Self-healing protocol integrated successfully")
+        print("EMOJI_2705 Self-healing protocol integrated successfully")
         return True
     else:
-        print("❌ Could not find class structure")
+        print("EMOJI_274C Could not find class structure")
         return False
 
 def clean_integrate_health_checker():
@@ -208,7 +208,7 @@ def clean_integrate_health_checker():
     vision_file = ops_dir / "VISIONGAP_ENGINE.py"
     
     if not health_file.exists() or not vision_file.exists():
-        print("❌ Files not found")
+        print("EMOJI_274C Files not found")
         return False
     
     # Read health checker code
@@ -221,7 +221,7 @@ def clean_integrate_health_checker():
     
     # Check if already integrated
     if "class KaiHealthChecker:" in vision_content:
-        print("✅ Health checker already integrated")
+        print("EMOJI_2705 Health checker already integrated")
         return True
     
     # Extract the KaiHealthChecker class
@@ -229,7 +229,7 @@ def clean_integrate_health_checker():
     start_idx = health_code.find(start_marker)
     
     if start_idx == -1:
-        print("❌ Could not find KaiHealthChecker class")
+        print("EMOJI_274C Could not find KaiHealthChecker class")
         return False
     
     # Find the next class definition or end of file
@@ -270,10 +270,10 @@ def clean_integrate_health_checker():
         with open(vision_file, 'w', encoding='utf-8') as f:
             f.write(enhanced_content)
         
-        print("✅ Health checker integrated successfully")
+        print("EMOJI_2705 Health checker integrated successfully")
         return True
     else:
-        print("❌ Could not find class structure")
+        print("EMOJI_274C Could not find class structure")
         return False
 
 def clean_integrate_ensemble_system():
@@ -289,7 +289,7 @@ def clean_integrate_ensemble_system():
     gpu_file = ops_dir / "PHASE_3_GPU_PUSH_ENGINE.py"
     
     if not ensemble_file.exists() or not gpu_file.exists():
-        print("❌ Files not found")
+        print("EMOJI_274C Files not found")
         return False
     
     # Read ensemble code
@@ -302,7 +302,7 @@ def clean_integrate_ensemble_system():
     
     # Check if already integrated
     if "class AgentSimulator:" in gpu_content:
-        print("✅ Ensemble system already integrated")
+        print("EMOJI_2705 Ensemble system already integrated")
         return True
     
     # Extract the AgentSimulator class
@@ -310,7 +310,7 @@ def clean_integrate_ensemble_system():
     start_idx = ensemble_code.find(start_marker)
     
     if start_idx == -1:
-        print("❌ Could not find AgentSimulator class")
+        print("EMOJI_274C Could not find AgentSimulator class")
         return False
     
     # Find the next class definition or end of file
@@ -351,10 +351,10 @@ def clean_integrate_ensemble_system():
         with open(gpu_file, 'w', encoding='utf-8') as f:
             f.write(enhanced_content)
         
-        print("✅ Ensemble system integrated successfully")
+        print("EMOJI_2705 Ensemble system integrated successfully")
         return True
     else:
-        print("❌ Could not find class structure")
+        print("EMOJI_274C Could not find class structure")
         return False
 
 def main():
@@ -375,16 +375,16 @@ def main():
     print("=" * 50)
     
     for name, success in results:
-        status = "✅ SUCCESS" if success else "❌ FAILED"
+        status = "EMOJI_2705 SUCCESS" if success else "EMOJI_274C FAILED"
         print(f"{name}: {status}")
     
     success_count = sum(1 for _, success in results if success)
     print(f"\nTotal: {success_count}/4 integrations successful")
     
     if success_count == 4:
-        print("🎯 All toolbox gems integrated successfully!")
+        print("TARGET All toolbox gems integrated successfully!")
     else:
-        print("⚠️ Some integrations failed - check logs above")
+        print("EMOJI_26A0️ Some integrations failed - check logs above")
 
 if __name__ == "__main__":
     main()

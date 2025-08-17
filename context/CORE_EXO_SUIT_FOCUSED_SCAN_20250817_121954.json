@@ -1,0 +1,31 @@
+{
+  "scan_timestamp": "2025-08-17T12:19:54.334069",
+  "scan_type": "CORE_EXO_SUIT_FOCUSED",
+  "workspace_root": "C:\\My Projects\\Agent Exo-Suit",
+  "core_directories_scanned": [
+    "ops",
+    "Project White Papers",
+    "consolidated_work",
+    "config",
+    "documentation",
+    "generated_code",
+    "logs",
+    "rag",
+    "system_backups",
+    "validation_reports",
+    "vision_gap_reports"
+  ],
+  "excluded_directories": [
+    "Test Data Only (DO NOT PUSH TO REPO - DO NOT USE MD FILES AS EXO-SUIT PROJECT FILES)",
+    "archive",
+    "temp_ram_disk",
+    ".git"
+  ],
+  "summary": {
+    "total_core_files": 449,
+    "total_core_size_gb": 0.027222423814237118,
+    "issues_found": 0
+  },
+  "issues_found": [],
+  "actionable_items": []
+}

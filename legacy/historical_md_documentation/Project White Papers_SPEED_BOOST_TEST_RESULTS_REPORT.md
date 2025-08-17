@@ -2,7 +2,7 @@
 
 **Date:** August 11, 2025  
 **System:** 13th Gen Intel(R) Core(TM) i7-13620H, RTX 4070 Laptop GPU  
-**Test Mode:** Small → Big → Bigger Speed Boost Sequence  
+**Test Mode:** Small  Big  Bigger Speed Boost Sequence  
 **Status:**  COMPLETED SUCCESSFULLY  
 
 ---
@@ -160,9 +160,9 @@ The Agent Exo-Suit V4.0 Speed Boost System has been **successfully tested and va
 - **Max**: 0.98 memory fraction
 
 ### **RAG Configuration Updates:**
-- **Batch Size**: 64 → 128 → 256
-- **Workers**: 8 → 12 → 16
-- **Prefetch**: 4 → 8 → 16
+- **Batch Size**: 64  128  256
+- **Workers**: 8  12  16
+- **Prefetch**: 4  8  16
 - **Memory Threshold**: 0.98 (all modes)
 
 ---
@@ -176,12 +176,12 @@ The Agent Exo-Suit V4.0 Speed Boost System has been **successfully tested and va
 
 ### **Memory Utilization:**
 - **Available RAM**: 63.64GB
-- **Cache Allocation**: 8GB → 16GB → 32GB
+- **Cache Allocation**: 8GB  16GB  32GB
 - **Memory Efficiency**: Optimized for AI workloads
 
 ### **GPU Utilization:**
 - **RTX 4070 Laptop**: 8GB VRAM
-- **Memory Fraction**: 0.9 → 0.95 → 0.98
+- **Memory Fraction**: 0.9  0.95  0.98
 - **Temperature**: Stable at 53C during testing
 - **Power Draw**: 16.93W (efficient operation)
 

@@ -32,9 +32,9 @@ The **Agent Exo-Suit V5.0 "Builder of Dreams"** represents a **major evolutionar
 ##  **V5.0 DEEPSPEED ENHANCEMENTS**
 
 ### **1. GPUDirect Storage (GDS) Optimization**
-- **Direct GPU → NVMe communication** (bypasses CPU)
+- **Direct GPU  NVMe communication** (bypasses CPU)
 - **8GB pinned staging buffer** with cudaHostAllocWriteCombined
-- **PCIe 4.0 ×8 bandwidth optimization** (16 GB/s theoretical)
+- **PCIe 4.0 8 bandwidth optimization** (16 GB/s theoretical)
 - **~30% latency reduction** for data transfers
 - **Double-buffering** with CUDA streams for overlap
 

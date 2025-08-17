@@ -569,7 +569,7 @@ function Generate-ValidationReport {
 ## Executive Summary
 
 **Overall Score**: $($Validation.OverallScore)%  
-**Status**: $(if ($Validation.OverallScore -ge 80) { "✅ GOOD" } elseif ($Validation.OverallScore -ge 60) { "⚠️ FAIR" } else { "❌ POOR" })  
+**Status**: $(if ($Validation.OverallScore -ge 80) { "EMOJI_2705 GOOD" } elseif ($Validation.OverallScore -ge 60) { "EMOJI_26A0️ FAIR" } else { "EMOJI_274C POOR" })  
 **Checks Passed**: $($Validation.PassedChecks)/$($Validation.TotalChecks)  
 
 ## Code Analysis
@@ -635,7 +635,7 @@ function Generate-ValidationReport {
 ## Test Execution Results
 
 **Tests Passed**: $($TestResults.Summary.PassedTests)/$($TestResults.Summary.TotalTests)  
-**Status**: $(if ($TestResults.Success) { "✅ SUCCESS" } else { "❌ FAILED" })  
+**Status**: $(if ($TestResults.Success) { "EMOJI_2705 SUCCESS" } else { "EMOJI_274C FAILED" })  
 
 ### Test Results
 | Test File | Status | Message |

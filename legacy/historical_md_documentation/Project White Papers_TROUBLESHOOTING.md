@@ -1,6 +1,6 @@
 #  TROUBLESHOOTING.md - Agent Exo-Suit V5.0 "Builder of Dreams" Enterprise Problem Resolution
 
-** PRODUCTION STANDARD**: This document implements the **Enterprise-Grade AI Agent Development Troubleshooting Standard** - the definitive guide for resolving issues, recovering from failures, and maintaining the world's most advanced AI agent development platform. Every solution, every recovery, every fix leaves auditable evidence. If this system ever drifts, it's not by accident—it's by evidence.
+** PRODUCTION STANDARD**: This document implements the **Enterprise-Grade AI Agent Development Troubleshooting Standard** - the definitive guide for resolving issues, recovering from failures, and maintaining the world's most advanced AI agent development platform. Every solution, every recovery, every fix leaves auditable evidence. If this system ever drifts, it's not by accidentit's by evidence.
 
 ** NO DRIFT SPIN RULE**: If Exo-Suit troubleshooting audit says FAIL, do not claim PASS. You must fix, explain, or document the failure before continuing. Spinning FAILs as PASS is forbidden and will be called out in audit logs.
 

@@ -76,8 +76,8 @@ class VisionGapEngine:
         # If we're analyzing a specific directory, only consider paths within that directory
         if self.root != Path.cwd():
             # We're analyzing a specific directory, so only scan within it
-        return False
-    
+            return False
+        
         # Only apply toolbox filtering when analyzing the main workspace
         return any(marker in str(path) for marker in self.toolbox_markers)
 

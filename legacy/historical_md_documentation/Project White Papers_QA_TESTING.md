@@ -1,6 +1,6 @@
 #  QA_TESTING.md - Agent Exo-Suit V5.0 "Builder of Dreams" Enterprise Quality Assurance
 
-** PRODUCTION STANDARD**: This document implements the **Enterprise-Grade AI Agent Development Quality Assurance Standard** - the definitive guide for testing, validating, and ensuring the world's most advanced AI agent development platform meets production standards. Every test, every validation, every quality metric leaves auditable evidence. If this system ever drifts, it's not by accident—it's by evidence.
+** PRODUCTION STANDARD**: This document implements the **Enterprise-Grade AI Agent Development Quality Assurance Standard** - the definitive guide for testing, validating, and ensuring the world's most advanced AI agent development platform meets production standards. Every test, every validation, every quality metric leaves auditable evidence. If this system ever drifts, it's not by accidentit's by evidence.
 
 ** NO DRIFT SPIN RULE**: If Exo-Suit QA audit says FAIL, do not claim PASS. You must fix, explain, or document the failure before continuing. Spinning FAILs as PASS is forbidden and will be called out in audit logs.
 

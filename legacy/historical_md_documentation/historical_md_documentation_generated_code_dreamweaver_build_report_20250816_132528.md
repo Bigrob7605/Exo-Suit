@@ -1,4 +1,4 @@
-﻿# DreamWeaver Builder V5.0 - Build Report
+# DreamWeaver Builder V5.0 - Build Report
 
 **Generated**: 2025-08-16 13:25:28  
 **Builder**: DreamWeaver-Builder-V5.ps1  
@@ -7,7 +7,7 @@
 
 ## Build Summary
 
-**Status**: âœ… SUCCESS  
+**Status**:  SUCCESS  
 **Files Generated**: 3  
 **Test Files**: 2  
 **Validation**: PASSED  

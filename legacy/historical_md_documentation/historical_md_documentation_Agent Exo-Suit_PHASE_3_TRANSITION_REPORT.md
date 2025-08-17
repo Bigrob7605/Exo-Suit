@@ -34,7 +34,7 @@ We have successfully completed **Phase 1: Basic I/O and Content Analysis Optimiz
    - **Lesson**: Keep content analysis simple
 
 2. **Smart Optimization**: Performance dropped to 7,193 files/sec
-   - **Root Cause**: Fine-tuning workers (22 → 24) hurt performance
+   - **Root Cause**: Fine-tuning workers (22  24) hurt performance
    - **Lesson**: 22 workers is optimal
 
 3. **Turbo Optimization**: Performance crashed to 3,083 files/sec

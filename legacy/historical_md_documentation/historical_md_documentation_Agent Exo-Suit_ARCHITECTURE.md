@@ -13,15 +13,15 @@ This project is being rebuilt with a robust, scalable architecture designed for 
 ## Project Structure
 ```
 Project Root/
-├── README.md (Project Overview)
-├── VISION.md (Project Vision)
-├── ARCHITECTURE.md (This File)
-├── ROADMAP.md (Development Roadmap)
-├── HEALING_STATUS.md (Healing Progress)
-├── docs/ (Documentation)
-├── src/ (Source Code)
-├── tests/ (Testing)
-└── reports/ (Reports and Analytics)
+ README.md (Project Overview)
+ VISION.md (Project Vision)
+ ARCHITECTURE.md (This File)
+ ROADMAP.md (Development Roadmap)
+ HEALING_STATUS.md (Healing Progress)
+ docs/ (Documentation)
+ src/ (Source Code)
+ tests/ (Testing)
+ reports/ (Reports and Analytics)
 ```
 
 ## Quality Standards

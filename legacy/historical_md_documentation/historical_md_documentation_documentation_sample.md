@@ -1,4 +1,4 @@
-﻿# Sample System
+# Sample System
 
 ## Description
 A sample system for demonstration purposes.

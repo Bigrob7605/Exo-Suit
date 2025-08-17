@@ -31,9 +31,9 @@ The Agent Exo-Suit V5.0 "Builder of Dreams" has **shattered all previous perform
 ### **V5.0 Ultimate Overclock System Results**
 - **Extreme Mode**: Unlocked 80% of system potential
 - **Ultimate Mode**: Unlocked 90% of system potential  
-- **Massive Cache Scaling**: 48GB → 53GB (vs 32GB in V4)
-- **Worker Explosion**: 20 → 24 workers (vs 16 in V4)
-- **Batch Size Revolution**: 512 → 1024 (vs 256 in V4)
+- **Massive Cache Scaling**: 48GB  53GB (vs 32GB in V4)
+- **Worker Explosion**: 20  24 workers (vs 16 in V4)
+- **Batch Size Revolution**: 512  1024 (vs 256 in V4)
 - **GPU Memory Optimization**: 99.5% utilization (vs 98% in V4)
 
 ---
@@ -161,9 +161,9 @@ The Agent Exo-Suit V5.0 "Builder of Dreams" has **shattered all previous perform
 
 ### **V5.0 Performance Claims - VALIDATED **
 - **Ultimate Overclock System**: Documented and validated across all files
-- **Massive Cache Scaling**: 32GB → 53GB documented across all files
-- **Worker Explosion**: 16 → 24 workers documented across all files
-- **Batch Size Revolution**: 256 → 1024 documented across all files
+- **Massive Cache Scaling**: 32GB  53GB documented across all files
+- **Worker Explosion**: 16  24 workers documented across all files
+- **Batch Size Revolution**: 256  1024 documented across all files
 - **GPU Beast Mode**: 99.5% VRAM utilization documented across all files
 - **Performance Benchmarking**: CPU Score: 648,209, Memory Score: 620,166 documented across all files
 

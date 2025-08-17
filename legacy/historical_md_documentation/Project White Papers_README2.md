@@ -2,7 +2,7 @@
 
 **Where Dreams Become Code, and Code Becomes Legend**
 
-> ** PRODUCTION STANDARD**: This repository implements the **Enterprise-Grade AI Agent Development Standard** - the template for building, deploying, monitoring, and securing AI agents at scale. Every tool, every scan, every optimization leaves auditable evidence. If this system ever drifts, it's not by accident—it's by evidence.
+> ** PRODUCTION STANDARD**: This repository implements the **Enterprise-Grade AI Agent Development Standard** - the template for building, deploying, monitoring, and securing AI agents at scale. Every tool, every scan, every optimization leaves auditable evidence. If this system ever drifts, it's not by accidentit's by evidence.
 
 > ** NO DRIFT SPIN RULE**: If Exo-Suit audit says FAIL, do not claim PASS. You must fix, explain, or document the failure before continuing. Spinning FAILs as PASS is forbidden and will be called out in audit logs.
 

@@ -589,7 +589,7 @@ function Generate-BuildReport {
 
 ## Build Summary
 
-**Status**: $(if ($Validation.Valid) { "✅ SUCCESS" } else { "❌ FAILED" })  
+**Status**: $(if ($Validation.Valid) { "EMOJI_2705 SUCCESS" } else { "EMOJI_274C FAILED" })  
 **Files Generated**: $($GeneratedCode.Count)  
 **Test Files**: $($TestFiles.Count)  
 **Validation**: $(if ($Validation.Valid) { "PASSED" } else { "FAILED" })  

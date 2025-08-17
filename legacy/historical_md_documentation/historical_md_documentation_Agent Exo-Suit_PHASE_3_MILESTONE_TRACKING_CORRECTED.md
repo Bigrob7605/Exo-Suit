@@ -106,9 +106,9 @@
 
 ### **Dependency Chain**
 ```
-Milestone 1 (GPU) → Milestone 2 (Memory) → Milestone 3 (Parallel) → 
-Milestone 4 (ML) → Milestone 5 (Production) → Milestone 6 (APIs) → 
-Milestone 7 (Optimization) → Milestone 8 (Documentation)
+Milestone 1 (GPU)  Milestone 2 (Memory)  Milestone 3 (Parallel)  
+Milestone 4 (ML)  Milestone 5 (Production)  Milestone 6 (APIs)  
+Milestone 7 (Optimization)  Milestone 8 (Documentation)
 ```
 
 ### **Critical Path Analysis**

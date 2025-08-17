@@ -53,9 +53,9 @@ The original `rag/emoji_scanner.py` had critical performance issues:
 - **Status**: **WORKING**
 
 ### **Improvement**
-- **Performance**: **59% faster** (2.7 → 4.3 files/sec)
-- **Reliability**: **0% → 100%** completion rate
-- **Time**: **Infinite → 69 seconds** total
+- **Performance**: **59% faster** (2.7  4.3 files/sec)
+- **Reliability**: **0%  100%** completion rate
+- **Time**: **Infinite  69 seconds** total
 
 ## **FILES PROCESSED**
 
@@ -126,7 +126,7 @@ The original `rag/emoji_scanner.py` had critical performance issues:
 The emoji scanner performance issues have been **completely resolved**:
 
 - **No more hanging** on individual files
-- **59% performance improvement** (2.7 → 4.3 files/sec)
+- **59% performance improvement** (2.7  4.3 files/sec)
 - **100% reliability** (299/299 files processed)
 - **Proper GPU memory management**
 - **Timeout protection** and error handling

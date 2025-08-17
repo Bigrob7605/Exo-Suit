@@ -701,11 +701,11 @@ def main():
             print(f"Progress: {performance_results['performance_metrics']['final_push_percentage']:.1f}% towards 7K+ target")
             
             if performance_results['final_push_achieved']:
-                print("\n🎉 ULTRA-TURBO STATUS ACHIEVED! 7K+ files/sec target reached!")
-                print("🚀 Agent Exo-Suit V5.0 has achieved LEGENDARY performance!")
+                print("\nEMOJI_1F389 ULTRA-TURBO STATUS ACHIEVED! 7K+ files/sec target reached!")
+                print("ROCKET Agent Exo-Suit V5.0 has achieved LEGENDARY performance!")
             else:
-                print(f"\n📈 Progress made: {performance_results['speed_files_per_sec']:.0f} files/sec")
-                print(f"🎯 Need {7000 - performance_results['speed_files_per_sec']:.0f} more files/sec for 7K+ target")
+                print(f"\nEMOJI_1F4C8 Progress made: {performance_results['speed_files_per_sec']:.0f} files/sec")
+                print(f"TARGET Need {7000 - performance_results['speed_files_per_sec']:.0f} more files/sec for 7K+ target")
         
         # Run for a limited time to demonstrate functionality
         # In production, this would run as a daemon service

@@ -1,4 +1,4 @@
-﻿# TruthForge Auditor V5.0 - Validation Report
+# TruthForge Auditor V5.0 - Validation Report
 
 **Generated**: 2025-08-16 09:40:20  
 **Auditor**: TruthForge-Auditor-V5.ps1  
@@ -7,7 +7,7 @@
 ## Executive Summary
 
 **Overall Score**: 50%  
-**Status**: âŒ POOR  
+**Status**:  POOR  
 **Checks Passed**: 2/4  
 
 ## Code Analysis

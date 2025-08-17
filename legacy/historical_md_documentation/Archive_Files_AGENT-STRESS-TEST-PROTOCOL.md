@@ -2,7 +2,7 @@
 
 **CRITICAL: Every agent MUST follow this protocol to properly stress test the system**
 
-## 🚨 MANDATORY PROTOCOL FOR ALL AGENTS
+## EMOJI_1F6A8 MANDATORY PROTOCOL FOR ALL AGENTS
 
 ### **DO NOT HAND WAVE OR PLAY GAMES**
 - **NO** small loads to GPU
@@ -13,7 +13,7 @@
 
 ---
 
-## 📋 REQUIRED TESTING SEQUENCE
+## EMOJI_1F4CB REQUIRED TESTING SEQUENCE
 
 ### **Phase 1: System Baseline (MANDATORY)**
 ```bash
@@ -47,7 +47,7 @@ python ops/TOOLBOX-TOKEN-PROCESSOR.py
 
 ---
 
-## 🎯 SUCCESS CRITERIA
+## TARGET SUCCESS CRITERIA
 
 ### **GPU Performance (MUST ACHIEVE)**
 - **GPU Memory Usage:** 95%+ of 8GB VRAM
@@ -66,7 +66,7 @@ python ops/TOOLBOX-TOKEN-PROCESSOR.py
 
 ---
 
-## 🚫 FORBIDDEN ACTIONS
+## EMOJI_1F6AB FORBIDDEN ACTIONS
 
 ### **NEVER DO:**
 - Stop tests early
@@ -86,7 +86,7 @@ python ops/TOOLBOX-TOKEN-PROCESSOR.py
 
 ---
 
-## 📊 MONITORING REQUIREMENTS
+## BAR_CHART MONITORING REQUIREMENTS
 
 ### **Real-time Monitoring (Every 5 seconds)**
 - GPU memory allocation
@@ -106,7 +106,7 @@ python ops/TOOLBOX-TOKEN-PROCESSOR.py
 
 ---
 
-## 🔧 SYSTEM CONFIGURATION
+## WRENCH SYSTEM CONFIGURATION
 
 ### **GPU Memory Targets**
 - **Primary Target:** 95% of 8GB = 7.6GB
@@ -120,13 +120,13 @@ python ops/TOOLBOX-TOKEN-PROCESSOR.py
 - **Minimum Batch Size:** 50 files
 
 ### **Token Estimation**
-- **Method:** Character count ÷ 4
-- **Accuracy:** ±10% tolerance
+- **Method:** Character count  4
+- **Accuracy:** 10% tolerance
 - **Validation:** Cross-check with actual processing
 
 ---
 
-## 📈 EXPECTED PERFORMANCE
+## EMOJI_1F4C8 EXPECTED PERFORMANCE
 
 ### **Your System Capabilities (RTX 4070 Laptop)**
 - **GPU Memory:** 8GB GDDR6
@@ -142,7 +142,7 @@ python ops/TOOLBOX-TOKEN-PROCESSOR.py
 
 ---
 
-## 🚀 EXECUTION COMMANDS
+## ROCKET EXECUTION COMMANDS
 
 ### **Immediate Execution (Run Now)**
 ```bash
@@ -170,7 +170,7 @@ ls -la logs/
 
 ---
 
-## 📝 REPORTING REQUIREMENTS
+## EMOJI_1F4DD REPORTING REQUIREMENTS
 
 ### **Mandatory Reports (Generate All)**
 1. **System Status Report:** Real-time performance data
@@ -187,7 +187,7 @@ ls -la logs/
 
 ---
 
-## ⚠️ CRITICAL REMINDERS
+## EMOJI_26A0 CRITICAL REMINDERS
 
 ### **This is NOT a Game**
 - Your system is a BEAST
@@ -205,7 +205,7 @@ ls -la logs/
 
 ---
 
-## 🎯 FINAL GOAL
+## TARGET FINAL GOAL
 
 **Build a production-ready 1M token context system that:**
 - Processes entire toolbox in single pass
@@ -216,7 +216,7 @@ ls -la logs/
 
 ---
 
-## 🚨 IMMEDIATE ACTION REQUIRED
+## EMOJI_1F6A8 IMMEDIATE ACTION REQUIRED
 
 **STOP READING AND START TESTING NOW:**
 

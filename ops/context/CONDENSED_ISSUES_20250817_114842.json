@@ -1,0 +1,26 @@
+{
+  "scan_timestamp": "2025-08-17 11:48:42",
+  "workspace_root": "C:\\My Projects\\Agent Exo-Suit\\ops",
+  "scale_mode": "small",
+  "performance_metrics": {
+    "start_time": 1755445722.5362403,
+    "end_time": 0,
+    "total_files_processed": 9,
+    "total_size_processed_gb": 1.4211051166057587e-05,
+    "files_per_second": 0,
+    "ram_disk_transfer_time": 0,
+    "vram_processing_time": 0,
+    "gpu_utilization": 0,
+    "cpu_utilization": 0,
+    "memory_utilization": 0,
+    "issue_density": 0.0
+  },
+  "summary": {
+    "total_files_processed": 9,
+    "total_size_gb": 1.4211051166057587e-05,
+    "total_issues_found": 0,
+    "issue_density": 0.0
+  },
+  "issues_by_category": {},
+  "actionable_items": []
+}

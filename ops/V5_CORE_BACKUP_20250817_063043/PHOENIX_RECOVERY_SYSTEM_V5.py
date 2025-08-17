@@ -507,7 +507,7 @@ class FortifiedSelfHealProtocol:
             
         replay_script = f"""#!/usr/bin/env python3
 \"\"\"
-🔄 SELF-HEAL REPLAY SCRIPT
+EMOJI_1F504 SELF-HEAL REPLAY SCRIPT
 Replay and verify the self-heal operation from evidence bundle.
 
 Bundle: {self.evidence_bundle_path.name}
@@ -537,10 +537,10 @@ def verify_evidence_bundle():
             missing_files.append(file_path)
     
     if missing_files:
-        print(f"❌ Missing files in evidence bundle: {{missing_files}}")
+        print(f"EMOJI_274C Missing files in evidence bundle: {{missing_files}}")
         return False
     
-    print("✅ Evidence bundle structure verified")
+    print("EMOJI_2705 Evidence bundle structure verified")
     return True
 
 def replay_system_check():
@@ -554,13 +554,13 @@ def replay_system_check():
         with open(bundle_path / "after_state.json", 'r') as f:
             after_state = json.load(f)
         
-        print("📊 System State Comparison:")
+        print("BAR_CHART System State Comparison:")
         print(f"  Before: {{before_state.get('health_check', {{}})}}")
         print(f"  After:  {{after_state.get('health_check', {{}})}}")
         
         return True
     except Exception as e:
-        print(f"❌ Failed to replay system check: {{e}}")
+        print(f"EMOJI_274C Failed to replay system check: {{e}}")
         return False
 
 def verify_git_integrity():
@@ -574,13 +574,13 @@ def verify_git_integrity():
         git_status = after_state.get('git_status', {{}})
         
         if git_status.get('clean', False):
-            print("✅ Git repository integrity maintained")
+            print("EMOJI_2705 Git repository integrity maintained")
             return True
         else:
-            print(f"⚠️  Git repository has changes: {{git_status.get('unexpected_changes', [])}}")
+            print(f"EMOJI_26A0️  Git repository has changes: {{git_status.get('unexpected_changes', [])}}")
             return False
     except Exception as e:
-        print(f"❌ Failed to verify git integrity: {{e}}")
+        print(f"EMOJI_274C Failed to verify git integrity: {{e}}")
         return False
 
 def show_audit_log():
@@ -589,16 +589,16 @@ def show_audit_log():
     log_file = bundle_path / "logs" / "audit.log"
     
     if log_file.exists():
-        print("📝 Audit Log:")
+        print("EMOJI_1F4DD Audit Log:")
         print("-" * 50)
         with open(log_file, 'r') as f:
             print(f.read())
         print("-" * 50)
     else:
-        print("❌ Audit log not found")
+        print("EMOJI_274C Audit log not found")
 
 if __name__ == "__main__":
-    print("🔄 Replaying self-heal evidence bundle...")
+    print("EMOJI_1F504 Replaying self-heal evidence bundle...")
     print(f"Bundle: {{Path('{self.evidence_bundle_path}').name}}")
     print()
     
@@ -618,8 +618,8 @@ if __name__ == "__main__":
     show_audit_log()
     
     print()
-    print("✅ Replay completed successfully")
-    print("📦 Evidence bundle verified and replayable")
+    print("EMOJI_2705 Replay completed successfully")
+    print("EMOJI_1F4E6 Evidence bundle verified and replayable")
 """
         
         replay_path = self.evidence_bundle_path / "replay.py"
@@ -640,14 +640,14 @@ if __name__ == "__main__":
         
         report_content = f"""# Fortified Self-Heal Audit Report - {timestamp}
 
-## 🚨 Executive Summary
+## EMOJI_1F6A8 Executive Summary
 - **Status**: {results['overall_status']}
 - **Dry Run**: {results['dry_run']}
 - **Live Mode**: {results['live_mode']}
 - **Recovery Required**: {self.recovery_required}
 - **Evidence Bundle**: {results.get('evidence_bundle', 'N/A')}
 
-## 📊 Git Integrity Checks
+## BAR_CHART Git Integrity Checks
 
 ### Pre-Operation Check
 - **Clean**: {results['pre_git_check'].get('clean', False)}
@@ -657,17 +657,17 @@ if __name__ == "__main__":
 - **Clean**: {results['post_git_check'].get('clean', False)}
 - **Unexpected Changes**: {len(results['post_git_check'].get('unexpected_changes', []))}
 
-## 📊 Test Results
+## BAR_CHART Test Results
 
 """
         
         for test_name, test_result in results["tests"].items():
-            status_emoji = "✅" if test_result["success"] else "❌"
+            status_emoji = "EMOJI_2705" if test_result["success"] else "EMOJI_274C"
             report_content += f"### {status_emoji} {test_name.replace('_', ' ').title()}\n"
             report_content += f"- **Status**: {'PASS' if test_result['success'] else 'FAIL'}\n"
             report_content += f"- **Details**: {test_result['details']}\n\n"
             
-        report_content += f"""## 📝 Audit Log
+        report_content += f"""## EMOJI_1F4DD Audit Log
 ```
 """
         
@@ -678,7 +678,7 @@ if __name__ == "__main__":
                 
         report_content += """```
 
-## 🔧 Recovery Actions Required
+## WRENCH Recovery Actions Required
 """
         
         if self.recovery_required:
@@ -696,13 +696,13 @@ if __name__ == "__main__":
 """
             
         report_content += f"""
-## 🎯 Recommendations
+## TARGET Recommendations
 - Run weekly fire drills to maintain system resilience
 - Monitor audit logs for patterns
 - Update recovery procedures based on findings
 - Review evidence bundles for optimization opportunities
 
-## 📦 Evidence Bundle Contents
+## EMOJI_1F4E6 Evidence Bundle Contents
 - **Before/After States**: Complete system snapshots
 - **File Hashes**: SHA256 hashes of protected files
 - **Git Status**: Repository integrity checks
@@ -711,7 +711,7 @@ if __name__ == "__main__":
 - **Audit Logs**: Detailed operation logs
 - **Replay Script**: `replay.py` for verification
 
-## 🔄 Replay Instructions
+## EMOJI_1F504 Replay Instructions
 To replay and verify this self-heal operation:
 ```bash
 cd "{self.evidence_bundle_path}"
@@ -725,7 +725,7 @@ python replay.py
         # Write report
         try:
             report_path.write_text(report_content, encoding='utf-8')
-            logging.info(f"📄 Fortified audit report written: {report_path}")
+            logging.info(f"PAGE Fortified audit report written: {report_path}")
             
             # Create replay script
             self.create_replay_script(results)
@@ -735,7 +735,7 @@ python replay.py
             
     def create_user_feedback_hook(self, results: Dict[str, any]):
         """Create user feedback hook for failed self-heal operations."""
-        alert_content = f"""# 🚨 SELF-HEAL FAILURE ALERT
+        alert_content = f"""# EMOJI_1F6A8 SELF-HEAL FAILURE ALERT
 
 ## What Failed
 The self-heal protocol detected issues during execution.
@@ -792,7 +792,7 @@ python self_heal_protocol.py --live
         
         try:
             alert_path.write_text(alert_content, encoding='utf-8')
-            logging.info(f"🚨 User feedback hook created: {alert_path}")
+            logging.info(f"EMOJI_1F6A8 User feedback hook created: {alert_path}")
         except Exception as e:
             logging.error(f"Failed to create user feedback hook: {e}")
             
@@ -800,7 +800,7 @@ python self_heal_protocol.py --live
         """Create enhanced recovery hooks for automatic restoration."""
         recovery_script = """#!/usr/bin/env python3
 \"\"\"
-🔄 FORTIFIED AUTO-RECOVERY HOOKS
+EMOJI_1F504 FORTIFIED AUTO-RECOVERY HOOKS
 Automatic system restoration and recovery procedures with evidence.
 \"\"\"
 
@@ -866,18 +866,18 @@ def verify_recovery():
         # Test if we can import critical modules
         import importlib
         importlib.import_module("web_interface.working_app")
-        print("✅ Recovery verification: Module imports successful")
+        print("EMOJI_2705 Recovery verification: Module imports successful")
         return True
     except Exception as e:
-        print(f"❌ Recovery verification failed: {e}")
+        print(f"EMOJI_274C Recovery verification failed: {e}")
         return False
 
 if __name__ == "__main__":
-    print("🔄 Running fortified auto-recovery...")
+    print("EMOJI_1F504 Running fortified auto-recovery...")
     
     # Create evidence bundle
     evidence_dir = create_recovery_evidence()
-    print(f"📦 Evidence bundle created: {evidence_dir}")
+    print(f"EMOJI_1F4E6 Evidence bundle created: {evidence_dir}")
     
     # Perform recovery
     restored_files = restore_critical_files()
@@ -900,10 +900,10 @@ if __name__ == "__main__":
         json.dump(report, f, indent=2, default=str)
     
     if recovery_success:
-        print("✅ Fortified auto-recovery complete")
+        print("EMOJI_2705 Fortified auto-recovery complete")
         sys.exit(0)
     else:
-        print("❌ Auto-recovery failed - manual intervention required")
+        print("EMOJI_274C Auto-recovery failed - manual intervention required")
         sys.exit(1)
 """
         
@@ -915,7 +915,7 @@ def create_legacy_upgrade_path():
     """Create legacy upgrade path script."""
     upgrade_script = """#!/usr/bin/env python3
 \"\"\"
-🔄 LEGACY UPGRADE PATH SCRIPT
+EMOJI_1F504 LEGACY UPGRADE PATH SCRIPT
 Handles schema and folder layout changes with dry run preview.
 \"\"\"
 

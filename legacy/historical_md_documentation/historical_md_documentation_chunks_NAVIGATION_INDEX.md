@@ -3,7 +3,7 @@
 Generated: 2025-08-17 07:27:34
 Total Chunks: 21
 
-## 🚀 **Recommended Reading Order**
+## ROCKET **Recommended Reading Order**
 
 1. **Exo-Suit V5 System Overview** - Start here for system overview
 2. **System Architecture & Design** - Understand system design
@@ -11,7 +11,7 @@ Total Chunks: 21
 4. **Legacy V1-V4 Systems** - Legacy integration
 5. **System Dependencies & Relationships** - System relationships
 
-## 📁 **Chunks by Category**
+## FOLDER **Chunks by Category**
 
 ### **Overview Chunks**
 - **Exo-Suit V5 System Overview** (`system_overview.json`) - High-level system architecture and statistics
@@ -45,7 +45,7 @@ Total Chunks: 21
 ### **Dependencies**
 - **System Dependencies & Relationships** (`system_dependencies.json`) - Import/export relationships and system dependencies
 
-## 🎯 **Usage Instructions**
+## TARGET **Usage Instructions**
 
 **For 128k Agents:**
 - Start with `system_overview.json` for basic understanding
@@ -57,7 +57,7 @@ Total Chunks: 21
 - Use navigation index for targeted access
 - Combine chunks for comprehensive analysis
 
-## 🔍 **Chunk Details**
+## MAGNIFYING_GLASS **Chunk Details**
 
 Each chunk contains:
 - Clear title and description

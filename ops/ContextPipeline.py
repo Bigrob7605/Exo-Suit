@@ -43,34 +43,34 @@ class ContextPipeline:
     def run_complete_pipeline(self) -> Dict[str, Any]:
         """Run the complete context pipeline."""
         print("="*60)
-        print("🚀 EXO-SUIT CONTEXT PIPELINE - ANTI-HAND WAVE SYSTEM")
+        print("ROCKET: EXO-SUIT CONTEXT PIPELINE - ANTI-HAND WAVE SYSTEM")
         print("="*60)
         
         self.pipeline_status['start_time'] = time.strftime('%Y-%m-%d %H:%M:%S')
         
         try:
             # Step 1: Context Scanning
-            print("\n📊 STEP 1: Context Scanning")
+            print("\nBAR_CHART: STEP 1: Context Scanning")
             print("-" * 40)
             self._run_context_scanner()
             
             # Step 2: Context Chunking
-            print("\n✂️ STEP 2: Context Chunking")
+            print("\nSCISSORS: STEP 2: Context Chunking")
             print("-" * 40)
             self._run_context_chunker()
             
             # Step 3: Context Validation (3-Pass)
-            print("\n🔍 STEP 3: Context Validation (3-Pass)")
+            print("\nMAGNIFYING_GLASS: STEP 3: Context Validation (3-Pass)")
             print("-" * 40)
             self._run_context_validator()
             
             # Step 4: Emoji Scanning & Cleaning
-            print("\n🧹 STEP 4: Emoji Scanning & Cleaning")
+            print("\nBROOM STEP 4: Emoji Scanning & Cleaning")
             print("-" * 40)
             self._run_emoji_scanner()
             
             # Step 5: Vision Gap Analysis
-            print("\n🎯 STEP 5: Vision Gap Analysis")
+            print("\nTARGET: STEP 5: Vision Gap Analysis")
             print("-" * 40)
             self._run_vision_gap_analysis()
             
@@ -88,7 +88,7 @@ class ContextPipeline:
             final_report = self._generate_pipeline_report()
             
             print("\n" + "="*60)
-            print("✅ CONTEXT PIPELINE COMPLETE!")
+            print("SUCCESS: CONTEXT PIPELINE COMPLETE!")
             print("="*60)
             print(f"Start Time: {self.pipeline_status['start_time']}")
             print(f"End Time: {self.pipeline_status['end_time']}")
@@ -102,7 +102,7 @@ class ContextPipeline:
         except Exception as e:
             error_msg = f"Pipeline failed: {str(e)}"
             self.pipeline_status['errors'].append(error_msg)
-            print(f"\n❌ {error_msg}")
+            print(f"\nERROR: {error_msg}")
             raise
     
     def _run_context_scanner(self):
@@ -115,18 +115,18 @@ class ContextPipeline:
             ], capture_output=True, text=True, cwd=self.root)
             
             if result.returncode == 0:
-                print("[PIPELINE] ✅ ContextScanner completed successfully")
+                print("[PIPELINE] SUCCESS: ContextScanner completed successfully")
                 self.pipeline_status['steps_completed'].append('ContextScanner')
             else:
                 error_msg = f"ContextScanner failed: {result.stderr}"
                 self.pipeline_status['errors'].append(error_msg)
-                print(f"[PIPELINE] ❌ {error_msg}")
+                print(f"[PIPELINE] ERROR: {error_msg}")
                 raise RuntimeError(error_msg)
                 
         except Exception as e:
             error_msg = f"ContextScanner execution failed: {str(e)}"
             self.pipeline_status['errors'].append(error_msg)
-            print(f"[PIPELINE] ❌ {error_msg}")
+            print(f"[PIPELINE] ERROR: {error_msg}")
             raise
     
     def _run_context_chunker(self):
@@ -139,18 +139,18 @@ class ContextPipeline:
             ], capture_output=True, text=True, cwd=self.root)
             
             if result.returncode == 0:
-                print("[PIPELINE] ✅ ContextChunker completed successfully")
+                print("[PIPELINE] SUCCESS: ContextChunker completed successfully")
                 self.pipeline_status['steps_completed'].append('ContextChunker')
             else:
                 error_msg = f"ContextChunker failed: {result.stderr}"
                 self.pipeline_status['errors'].append(error_msg)
-                print(f"[PIPELINE] ❌ {error_msg}")
+                print(f"[PIPELINE] ERROR: {error_msg}")
                 raise RuntimeError(error_msg)
                 
         except Exception as e:
             error_msg = f"ContextChunker execution failed: {str(e)}"
             self.pipeline_status['errors'].append(error_msg)
-            print(f"[PIPELINE] ❌ {error_msg}")
+            print(f"[PIPELINE] ERROR: {error_msg}")
             raise
     
     def _run_context_validator(self):
@@ -163,49 +163,114 @@ class ContextPipeline:
             ], capture_output=True, text=True, cwd=self.root)
             
             if result.returncode == 0:
-                print("[PIPELINE] ✅ ContextValidator completed successfully")
+                print("[PIPELINE] SUCCESS: ContextValidator completed successfully")
                 self.pipeline_status['steps_completed'].append('ContextValidator')
             else:
                 error_msg = f"ContextValidator failed: {result.stderr}"
                 self.pipeline_status['errors'].append(error_msg)
-                print(f"[PIPELINE] ❌ {error_msg}")
+                print(f"[PIPELINE] ERROR: {error_msg}")
                 raise RuntimeError(error_msg)
                 
         except Exception as e:
             error_msg = f"ContextValidator execution failed: {str(e)}"
             self.pipeline_status['errors'].append(error_msg)
-            print(f"[PIPELINE] ❌ {error_msg}")
+            print(f"[PIPELINE] ERROR: {error_msg}")
             raise
     
     def _run_emoji_scanner(self):
-        """Run the emoji scanner to clean out emojis."""
-        print("[PIPELINE] Running emoji scanner...")
+        """Run fast emoji scanner to detect and clean emojis in code files."""
+        print("[PIPELINE] Running fast emoji scanner...")
         
         try:
-            # Check if emoji-sentinel-v4.ps1 exists
-            emoji_script = self.ops_dir / "emoji-sentinel-v4.ps1"
-            if emoji_script.exists():
-                # Run PowerShell script
-                result = subprocess.run([
-                    "powershell", "-ExecutionPolicy", "Bypass", "-File", str(emoji_script)
-                ], capture_output=True, text=True, cwd=self.root)
+            # Import and use the fast emoji scanner
+            try:
+                from ops.FastEmojiScanner import FastEmojiScanner
+                scanner = FastEmojiScanner(self.root)
                 
-                if result.returncode == 0:
-                    print("[PIPELINE] ✅ Emoji scanner completed successfully")
+                # Run the fast scan
+                results = scanner.scan_workspace_fast()
+                
+                if results['files_with_emojis']:
+                    print(f"[PIPELINE] Found {len(results['files_with_emojis'])} files with emojis ({results['total_emojis_found']} total)")
+                    
+                    # Clean emojis automatically
+                    cleaning_results = scanner.remove_emojis_from_files(results['files_with_emojis'])
+                    print(f"[PIPELINE] Cleaned {cleaning_results['files_cleaned']} files with {cleaning_results['total_replacements']} replacements")
+                    
                     self.pipeline_status['steps_completed'].append('EmojiScanner')
                 else:
-                    warning_msg = f"Emoji scanner had issues: {result.stderr}"
-                    self.pipeline_status['warnings'].append(warning_msg)
-                    print(f"[PIPELINE] ⚠️ {warning_msg}")
-            else:
-                warning_msg = "Emoji scanner script not found, skipping"
-                self.pipeline_status['warnings'].append(warning_msg)
-                print(f"[PIPELINE] ⚠️ {warning_msg}")
+                    print("[PIPELINE] No emojis found in code files")
+                    self.pipeline_status['steps_completed'].append('EmojiScanner')
+                    
+            except ImportError:
+                # Fallback to simple emoji detection if FastEmojiScanner not available
+                print("[PIPELINE] FastEmojiScanner not available, using fallback method...")
+                self._run_emoji_scanner_fallback()
                 
         except Exception as e:
-            warning_msg = f"Emoji scanner execution failed: {str(e)}"
+            warning_msg = f"Fast emoji scanner execution failed: {str(e)}"
             self.pipeline_status['warnings'].append(warning_msg)
-            print(f"[PIPELINE] ⚠️ {warning_msg}")
+            print(f"[PIPELINE] WARNING: {warning_msg}")
+    
+    def _run_emoji_scanner_fallback(self):
+        """Fallback emoji scanner method."""
+        try:
+            # Simple emoji detection using regex
+            emoji_pattern = re.compile(r'[\U0001F600-\U0001F64F\U0001F300-\U0001F5FF\U0001F680-\U0001F6FF\U0001F1E0-\U0001F1FF\U00002600-\U000027BF\U0001F900-\U0001F9FF]')
+            
+            files_with_emojis = []
+            total_emojis = 0
+            
+            # Scan all Python and PowerShell files
+            for file_path in self.workspace_root.rglob('*.py'):
+                try:
+                    with open(file_path, 'r', encoding='utf-8', errors='ignore') as f:
+                        content = f.read()
+                    
+                    emojis = emoji_pattern.findall(content)
+                    if emojis:
+                        files_with_emojis.append({
+                            'file': str(file_path),
+                            'emojis': emojis,
+                            'count': len(emojis)
+                        })
+                        total_emojis += len(emojis)
+                        
+                except Exception as e:
+                    continue
+            
+            # Scan PowerShell files
+            for file_path in self.workspace_root.rglob('*.ps1'):
+                try:
+                    with open(file_path, 'r', encoding='utf-8', errors='ignore') as f:
+                        content = f.read()
+                    
+                    emojis = emoji_pattern.findall(content)
+                    if emojis:
+                        files_with_emojis.append({
+                            'file': str(file_path),
+                            'emojis': emojis,
+                            'count': len(emojis)
+                        })
+                        total_emojis += len(emojis)
+                        
+                except Exception as e:
+                    continue
+            
+            if files_with_emojis:
+                print(f"[PIPELINE] Found {len(files_with_emojis)} files with emojis ({total_emojis} total)")
+                for file_info in files_with_emojis:
+                    print(f"[PIPELINE] {file_info['file']}: {file_info['count']} emojis")
+                
+                # Clean emojis by replacing with descriptive text
+                self._clean_emojis_from_files(files_with_emojis)
+            else:
+                print("[PIPELINE] No emojis found in code files")
+                
+        except Exception as e:
+            warning_msg = f"Fallback emoji scanner execution failed: {str(e)}"
+            self.pipeline_status['warnings'].append(warning_msg)
+            print(f"[PIPELINE] WARNING: {warning_msg}")
     
     def _run_vision_gap_analysis(self):
         """Run the VisionGap Engine for final analysis."""
@@ -217,18 +282,18 @@ class ContextPipeline:
             ], capture_output=True, text=True, cwd=self.root)
             
             if result.returncode == 0:
-                print("[PIPELINE] ✅ VisionGap analysis completed successfully")
+                print("[PIPELINE] SUCCESS: VisionGap analysis completed successfully")
                 self.pipeline_status['steps_completed'].append('VisionGapAnalysis')
             else:
                 error_msg = f"VisionGap analysis failed: {result.stderr}"
                 self.pipeline_status['errors'].append(error_msg)
-                print(f"[PIPELINE] ❌ {error_msg}")
+                print(f"[PIPELINE] ERROR: {error_msg}")
                 raise RuntimeError(error_msg)
                 
         except Exception as e:
             error_msg = f"VisionGap analysis execution failed: {str(e)}"
             self.pipeline_status['errors'].append(error_msg)
-            print(f"[PIPELINE] ❌ {error_msg}")
+            print(f"[PIPELINE] ERROR: {error_msg}")
             raise
     
     def _generate_pipeline_report(self) -> Dict[str, Any]:
@@ -287,13 +352,13 @@ def main():
         # Run the complete pipeline
         final_report = pipeline.run_complete_pipeline()
         
-        print(f"\n🎯 **PIPELINE RESULTS:**")
-        print(f"✅ Context files: {final_report['output_locations']['context_files']}")
-        print(f"✅ Chunked context: {final_report['output_locations']['chunks']}")
-        print(f"✅ Validated context: {final_report['output_locations']['validated_context']}")
-        print(f"✅ Vision gap reports: {final_report['output_locations']['reports']}")
+        print(f"\nTARGET: **PIPELINE RESULTS:**")
+        print(f"SUCCESS: Context files: {final_report['output_locations']['context_files']}")
+        print(f"SUCCESS: Chunked context: {final_report['output_locations']['chunks']}")
+        print(f"SUCCESS: Validated context: {final_report['output_locations']['validated_context']}")
+        print(f"SUCCESS: Vision gap reports: {final_report['output_locations']['reports']}")
         
-        print(f"\n🚀 **AGENTS NOW HAVE:**")
+        print(f"\nROCKET: **AGENTS NOW HAVE:**")
         print(f"• 100% visibility into Exo-Suit system")
         print(f"• LEGIT VALID DATA (no hand-waving)")
         print(f"• Agent-friendly chunks (128k+ compatible)")
@@ -301,14 +366,14 @@ def main():
         print(f"• Clean, emoji-free codebase")
         print(f"• Accurate gap analysis")
         
-        print(f"\n🎯 **NEXT STEPS:**")
+        print(f"\nTARGET: **NEXT STEPS:**")
         print(f"1. Test context with different agent types")
         print(f"2. Validate chunk accessibility")
         print(f"3. Measure agent comprehension improvement")
         print(f"4. Scale to include toolbox systems")
         
     except Exception as e:
-        print(f"\n❌ Pipeline failed: {e}")
+        print(f"\nERROR: Pipeline failed: {e}")
         sys.exit(1)
 
 if __name__ == "__main__":

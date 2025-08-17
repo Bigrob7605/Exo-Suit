@@ -162,18 +162,18 @@ Review `consolidated_work/MASTER_TASK_LIST.md` for human-readable overview.
 ### File Structure
 ```
 consolidated_work/
-├── MASTER_TASK_LIST.json      # Machine-readable task list
-├── MASTER_TASK_LIST.md        # Human-readable task list
-└── PROGRESS_TRACKER.json      # Progress tracking data
+ MASTER_TASK_LIST.json      # Machine-readable task list
+ MASTER_TASK_LIST.md        # Human-readable task list
+ PROGRESS_TRACKER.json      # Progress tracking data
 ```
 
 ### Data Flow
-1. **Reports Generated** → Various analysis scripts create reports
-2. **Consolidation** → LOG_CONSOLIDATION_CHUNKER.py processes all data
-3. **Chunk Creation** → Work is broken into manageable pieces
-4. **Agent Interface** → Agents pick and work on chunks
-5. **Progress Tracking** → Completion status is tracked and updated
-6. **Continuous Updates** → System can be re-run to update chunks
+1. **Reports Generated**  Various analysis scripts create reports
+2. **Consolidation**  LOG_CONSOLIDATION_CHUNKER.py processes all data
+3. **Chunk Creation**  Work is broken into manageable pieces
+4. **Agent Interface**  Agents pick and work on chunks
+5. **Progress Tracking**  Completion status is tracked and updated
+6. **Continuous Updates**  System can be re-run to update chunks
 
 ### Extensibility
 The system is designed to be easily extended:

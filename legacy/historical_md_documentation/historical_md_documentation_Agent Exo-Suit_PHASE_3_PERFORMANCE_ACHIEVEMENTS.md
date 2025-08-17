@@ -51,10 +51,10 @@ Progress: 87.8% towards turbo goal
 - **Next Level**: Target 2+ GB RAM disk with 160+ workers
 
 ### **Worker Scaling**
-- **Baseline**: CPU × 2 + 8 workers (32 max)
-- **Legendary**: CPU × 4 + 16 workers (80 max)
-- **Turbo**: CPU × 6 + 32 workers (128 max)
-- **Next Level**: CPU × 8 + 48 workers (160+ max)
+- **Baseline**: CPU  2 + 8 workers (32 max)
+- **Legendary**: CPU  4 + 16 workers (80 max)
+- **Turbo**: CPU  6 + 32 workers (128 max)
+- **Next Level**: CPU  8 + 48 workers (160+ max)
 
 ### **GPU Acceleration**
 - **Baseline**: 16 GPU workers

@@ -35,14 +35,14 @@
 
 ### **Phase 1: Eliminate Obsolete Scanning (Immediate)**
 1. **Move obsolete directories to archive**
-   - Cleanup - Old MD Files/ → archive/obsolete_md_files/
-   - Cleanup - Testing Data/ → archive/testing_artifacts/
-   - vision_gap_reports/ → archive/historical_reports/
-   - backup/ → archive/system_backups/
+   - Cleanup - Old MD Files/  archive/obsolete_md_files/
+   - Cleanup - Testing Data/  archive/testing_artifacts/
+   - vision_gap_reports/  archive/historical_reports/
+   - backup/  archive/system_backups/
 
 2. **Clean up temporary files**
-   - temp/ → archive/temp_files/
-   - cache/ → archive/cache_data/
+   - temp/  archive/temp_files/
+   - cache/  archive/cache_data/
 
 3. **Remove historical reports from active scanning**
    - Keep only current gap report
@@ -96,12 +96,12 @@ archive/
 ##  **IMPLEMENTATION DETAILS**
 
 ### **Files to Archive (Obsolete)**
-- **Cleanup - Old MD Files/**: 254+ files → archive/obsolete_md_files/
-- **Cleanup - Testing Data/**: Test artifacts → archive/testing_artifacts/
-- **vision_gap_reports/**: Historical reports → archive/historical_reports/
-- **backup/**: System backups → archive/system_backups/
-- **temp/**: Temporary files → archive/temp_files/
-- **cache/**: Cached data → archive/cache_data/
+- **Cleanup - Old MD Files/**: 254+ files  archive/obsolete_md_files/
+- **Cleanup - Testing Data/**: Test artifacts  archive/testing_artifacts/
+- **vision_gap_reports/**: Historical reports  archive/historical_reports/
+- **backup/**: System backups  archive/system_backups/
+- **temp/**: Temporary files  archive/temp_files/
+- **cache/**: Cached data  archive/cache_data/
 
 ### **Files to Keep Active (Core)**
 - **ops/**: Core operational scripts (60+ files)
@@ -134,9 +134,9 @@ archive/
 - **Status**: EXCELLENT
 
 ### **Improvement**
-- **Gap Reduction**: 100% (2,982 → 0)
-- **Completion Improvement**: +65% (35% → 100%)
-- **Status Improvement**: POOR → EXCELLENT
+- **Gap Reduction**: 100% (2,982  0)
+- **Completion Improvement**: +65% (35%  100%)
+- **Status Improvement**: POOR  EXCELLENT
 
 ---
 

@@ -71,7 +71,7 @@ if len(section.strip()) < 100:  # Very short section
 1. **Threshold Too Low**: 100 characters is unrealistic for section content
 2. **Lack of Context**: Algorithm doesn't consider content quality
 3. **Binary Classification**: Sections are either "complete" or "incomplete"
-4. **No Quality Assessment**: Length ≠ quality or completeness
+4. **No Quality Assessment**: Length  quality or completeness
 
 ### **Content Analysis Limitations**
 1. **No Semantic Analysis**: Can't distinguish between empty and concise content

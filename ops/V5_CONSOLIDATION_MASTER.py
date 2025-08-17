@@ -417,53 +417,53 @@ class V5ConsolidationMaster:
         Single-call activation of Monster-Mode:
         Ultimate Performance, scratch dir, GPU check, V4 components.
         """
-        print("🚀 GO-BIG SYSTEM ACTIVATION - MONSTER MODE")
+        print("ROCKET: GO-BIG SYSTEM ACTIVATION - MONSTER MODE")
         print("=" * 60)
         
         try:
             # Step 1: Activate Ultimate Performance Mode
-            print("\n1️⃣  Activating Ultimate Performance Mode...")
+            print("\n1. Activating Ultimate Performance Mode...")
             if self.system_controller.activate_ultimate_performance_mode():
-                print("✅ Ultimate Performance Mode activated")
+                print("SUCCESS: Ultimate Performance Mode activated")
             else:
-                print("⚠️  Ultimate Performance Mode activation failed (limited mode)")
+                print("WARNING: Ultimate Performance Mode activation failed (limited mode)")
             
             # Step 2: Create scratch directory
-            print("\n2️⃣  Setting up scratch directory...")
+            print("\n2. Setting up scratch directory...")
             if self.system_controller.create_scratch_directory():
-                print("✅ Scratch directory ready")
+                print("SUCCESS: Scratch directory ready")
             else:
-                print("❌ Scratch directory setup failed")
+                print("ERROR: Scratch directory setup failed")
             
             # Step 3: Detect GPU
-            print("\n3️⃣  Detecting GPU capabilities...")
+            print("\n3. Detecting GPU capabilities...")
             if self.system_controller.detect_gpu():
-                print("✅ GPU detected and ready")
+                print("SUCCESS: GPU detected and ready")
             else:
-                print("⚠️  GPU not detected - CPU mode only")
+                print("WARNING: GPU not detected - CPU mode only")
             
             # Step 4: Check V4.0 components
-            print("\n4️⃣  Checking V4.0 component availability...")
+            print("\n4. Checking V4.0 component availability...")
             component_status = self.system_controller.check_v4_components()
             print(f"   Available: {len(component_status['available'])} components")
             print(f"   Missing: {len(component_status['missing'])} components")
             
             # Step 5: Activate full system
-            print("\n5️⃣  Activating full system...")
+            print("\n5. Activating full system...")
             if self.system_controller.activate_full_system():
-                print("✅ Full system activated")
+                print("SUCCESS: Full system activated")
             else:
-                print("⚠️  Full system activation failed")
+                print("WARNING: Full system activation failed")
             
             # Step 6: System status report
-            print("\n6️⃣  System Status Report:")
+            print("\n6. System Status Report:")
             status = self.system_controller.get_system_status()
             print(f"   Performance Mode: {status['performance_mode']}")
             print(f"   Power Plan: {status['power_plan']}")
             print(f"   GPU: {status['gpu_name'] if status['gpu_detected'] else 'Not Available'}")
             print(f"   V4.0 Components: {status['v4_components']['available']}/{status['v4_components']['total']}")
             
-            print("\n🎯 GO-BIG ACTIVATION COMPLETE!")
+            print("\nTARGET: GO-BIG ACTIVATION COMPLETE!")
             print("   System is now running in MONSTER MODE")
             print("   Ultimate Performance enabled")
             print("   All V4.0 components ready for integration")
@@ -471,7 +471,7 @@ class V5ConsolidationMaster:
             return True
             
         except Exception as e:
-            print(f"❌ GO-BIG activation failed: {e}")
+            print(f"ERROR: GO-BIG activation failed: {e}")
             return False
     
     def integrate_toolbox_gems(self) -> Dict[str, bool]:
@@ -629,16 +629,16 @@ def demonstrate_integrated_system():
     print("\n4. V4.0 Component Status:")
     component_status = system_controller.check_v4_components()
     for component in component_status['available']:
-        print(f"   ✅ {component}")
+        print(f"   SUCCESS: {component}")
     for component in component_status['missing']:
-        print(f"   ❌ {component}")
+        print(f"   ERROR: {component}")
     
     # Demonstrate GO-BIG capability
     print("\n5. GO-BIG System Activation Capability:")
-    print("   🚀 Single command system activation (Monster-Mode)")
-    print("   🚀 Ultimate Performance Mode activation")
-    print("   🚀 Full V4.0 system activation")
-    print("   🚀 GPU optimization and scratch directory setup")
+    print("   ROCKET: Single command system activation (Monster-Mode)")
+    print("   ROCKET: Ultimate Performance Mode activation")
+    print("   ROCKET: Full V4.0 system activation")
+    print("   ROCKET: GPU optimization and scratch directory setup")
     
     # Show usage examples
     print("\n6. Usage Examples:")
@@ -674,7 +674,7 @@ def main():
         system_components = demonstrate_integrated_system()
         
         # Show GO-BIG activation option
-        print("\n🎯 READY FOR GO-BIG ACTIVATION!")
+        print("\nTARGET: READY FOR GO-BIG ACTIVATION!")
         print("   Run the following command to activate Monster Mode:")
         print("   v5_master.go_big()")
         print("   ")

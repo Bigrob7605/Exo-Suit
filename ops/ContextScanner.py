@@ -776,30 +776,30 @@ def main():
     
     # Performance metrics
     metrics = context_summary['performance_metrics']
-    print(f"\n🚀 **PERFORMANCE METRICS:**")
+    print(f"\nROCKET: **PERFORMANCE METRICS:**")
     print(f"Processing Speed: {metrics['files_per_second']:.2f} files/sec")
     print(f"Processing Time: {metrics['processing_time']:.2f} seconds")
     print(f"Threading Efficiency: {metrics['threading_efficiency']:.2f}%")
     
     if speed_mode == "local":
         target_achieved = metrics['files_per_second'] >= 1000
-        print(f"1K Target Achieved: {'✅ YES' if target_achieved else '❌ NO'}")
+        print(f"1K Target Achieved: {'SUCCESS YES' if target_achieved else 'ERROR NO'}")
     elif speed_mode == "hybrid":
         target_achieved = metrics['files_per_second'] >= 1000
-        print(f"1K Target Achieved: {'✅ YES' if target_achieved else '❌ NO'}")
+        print(f"1K Target Achieved: {'SUCCESS YES' if target_achieved else 'ERROR NO'}")
     elif speed_mode == "ultra":
         target_achieved = metrics['files_per_second'] >= 1000
-        print(f"1K Target Achieved: {'✅ YES' if target_achieved else '❌ NO'}")
+        print(f"1K Target Achieved: {'SUCCESS YES' if target_achieved else 'ERROR NO'}")
     elif speed_mode == "mega":
         target_achieved = metrics['files_per_second'] >= 1000
-        print(f"1K Target Achieved: {'✅ YES' if target_achieved else '❌ NO'}")
+        print(f"1K Target Achieved: {'SUCCESS YES' if target_achieved else 'ERROR NO'}")
     elif speed_mode == "toolbox":
         # Toolbox mode targets 1 million tokens, so we check for a much higher speed
         target_achieved = metrics['files_per_second'] >= 1000  # Target: 1K+ files/sec
-        print(f"1K Target Achieved: {'✅ YES' if target_achieved else '❌ NO'}")
+        print(f"1K Target Achieved: {'SUCCESS YES' if target_achieved else 'ERROR NO'}")
     else:
         target_achieved = metrics['files_per_second'] >= 3000
-        print(f"3K Target Achieved: {'✅ YES' if target_achieved else '❌ NO'}")
+        print(f"3K Target Achieved: {'SUCCESS YES' if target_achieved else 'ERROR NO'}")
     
     print("="*60)
     
@@ -817,7 +817,7 @@ def main():
     print("This gives agents 100% visibility into the Exo-Suit system at LEGENDARY speeds!")
     
     # Usage instructions
-    print(f"\n📖 **USAGE:**")
+    print(f"\nBOOK **USAGE:**")
     print(f"python ops/ContextScanner.py          # Fast local scanning (1K+ files/sec)")
     print(f"python ops/ContextScanner.py hybrid   # Balanced scanning (1K+ files/sec)")
     print(f"python ops/ContextScanner.py ultra    # Ultra aggressive scanning (1K+ files/sec)")

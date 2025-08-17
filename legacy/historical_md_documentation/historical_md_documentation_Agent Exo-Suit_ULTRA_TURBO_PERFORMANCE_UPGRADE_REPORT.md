@@ -153,7 +153,7 @@
 
 ### **Optimization Techniques**
 1. **RAM Disk**: Memory-based file storage for zero I/O latency
-2. **Worker Scaling**: CPU × 6 + 32 workers for maximum parallelism
+2. **Worker Scaling**: CPU  6 + 32 workers for maximum parallelism
 3. **Batch Processing**: 8K file batches for maximum throughput
 4. **GPU Acceleration**: 63 GPU workers with RTX 4070 optimization
 

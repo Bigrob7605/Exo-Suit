@@ -1,4 +1,4 @@
-# Vision Gap Report – Agent Exo-Suit V5
+# Vision Gap Report  Agent Exo-Suit V5
 
 Generated: 2025-08-17 07:09:22  
 Project: Agent Exo-Suit V5  

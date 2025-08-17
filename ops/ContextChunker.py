@@ -311,7 +311,7 @@ class ContextChunker:
 Generated: {navigation_index['index_timestamp']}
 Total Chunks: {navigation_index['total_chunks']}
 
-## 🚀 **Recommended Reading Order**
+## ROCKET: **Recommended Reading Order**
 
 1. **{system_overview_title}** - Start here for system overview
 2. **{architecture_title}** - Understand system design
@@ -319,7 +319,7 @@ Total Chunks: {navigation_index['total_chunks']}
 4. **{legacy_title}** - Legacy integration
 5. **{deps_title}** - System relationships
 
-## 📁 **Chunks by Category**
+## FOLDER **Chunks by Category**
 
 ### **Overview Chunks**
 {self._format_chunk_list(navigation_index['chunks_by_category']['overview'], chunk_details)}
@@ -336,7 +336,7 @@ Total Chunks: {navigation_index['total_chunks']}
 ### **Dependencies**
 {self._format_chunk_list(navigation_index['chunks_by_category']['dependencies'], chunk_details)}
 
-## 🎯 **Usage Instructions**
+## TARGET: **Usage Instructions**
 
 **For 128k Agents:**
 - Start with `system_overview.json` for basic understanding
@@ -348,7 +348,7 @@ Total Chunks: {navigation_index['total_chunks']}
 - Use navigation index for targeted access
 - Combine chunks for comprehensive analysis
 
-## 🔍 **Chunk Details**
+## MAGNIFYING_GLASS: **Chunk Details**
 
 Each chunk contains:
 - Clear title and description

@@ -78,15 +78,15 @@ def integrate_toolbox_gems():
                     with open(phoenix_file, 'w', encoding='utf-8') as f:
                         f.write(enhanced_content)
                     
-                    print("✅ Self-healing protocol integrated successfully")
+                    print("EMOJI_2705 Self-healing protocol integrated successfully")
                 else:
-                    print("❌ Could not extract self-healing class")
+                    print("EMOJI_274C Could not extract self-healing class")
             else:
-                print("❌ Could not find main class in PHOENIX file")
+                print("EMOJI_274C Could not find main class in PHOENIX file")
         else:
-            print("✅ Self-healing already integrated")
+            print("EMOJI_2705 Self-healing already integrated")
     else:
-        print("❌ Self-healing or PHOENIX file not found")
+        print("EMOJI_274C Self-healing or PHOENIX file not found")
     
     # 2. Integrate sentinel mesh into ADVANCED_INTEGRATION_LAYER_V5.py
     print("Integrating sentinel mesh...")
@@ -143,15 +143,15 @@ def integrate_toolbox_gems():
                     with open(integration_file, 'w', encoding='utf-8') as f:
                         f.write(enhanced_content)
                     
-                    print("✅ Sentinel mesh integrated successfully")
+                    print("EMOJI_2705 Sentinel mesh integrated successfully")
                 else:
-                    print("❌ Could not find main class in integration file")
+                    print("EMOJI_274C Could not find main class in integration file")
             else:
-                print("❌ Could not extract sentinel class")
+                print("EMOJI_274C Could not extract sentinel class")
         else:
-            print("✅ Sentinel mesh already integrated")
+            print("EMOJI_2705 Sentinel mesh already integrated")
     else:
-        print("❌ Sentinel or integration file not found")
+        print("EMOJI_274C Sentinel or integration file not found")
     
     # 3. Integrate health checker into VISIONGAP_ENGINE.py
     print("Integrating health checker...")
@@ -208,15 +208,15 @@ def integrate_toolbox_gems():
                     with open(vision_file, 'w', encoding='utf-8') as f:
                         f.write(enhanced_content)
                     
-                    print("✅ Health checker integrated successfully")
+                    print("EMOJI_2705 Health checker integrated successfully")
                 else:
-                    print("❌ Could not find main class in vision file")
+                    print("EMOJI_274C Could not find main class in vision file")
             else:
-                print("❌ Could not extract health checker class")
+                print("EMOJI_274C Could not extract health checker class")
         else:
-            print("✅ Health checker already integrated")
+            print("EMOJI_2705 Health checker already integrated")
     else:
-        print("❌ Health checker or vision file not found")
+        print("EMOJI_274C Health checker or vision file not found")
     
     # 4. Integrate ensemble system into PHASE_3_GPU_PUSH_ENGINE.py
     print("Integrating ensemble system...")
@@ -273,17 +273,17 @@ def integrate_toolbox_gems():
                     with open(gpu_file, 'w', encoding='utf-8') as f:
                         f.write(enhanced_content)
                     
-                    print("✅ Ensemble system integrated successfully")
+                    print("EMOJI_2705 Ensemble system integrated successfully")
                 else:
-                    print("❌ Could not find main class in GPU file")
+                    print("EMOJI_274C Could not find main class in GPU file")
             else:
-                print("❌ Could not extract ensemble class")
+                print("EMOJI_274C Could not extract ensemble class")
         else:
-            print("✅ Ensemble system already integrated")
+            print("EMOJI_2705 Ensemble system already integrated")
     else:
-        print("❌ Ensemble or GPU file not found")
+        print("EMOJI_274C Ensemble or GPU file not found")
     
-    print("\n🎯 Toolbox gem integration complete!")
+    print("\nTARGET Toolbox gem integration complete!")
     print("All 4 major systems have been integrated into the core V5 files.")
 
 if __name__ == "__main__":

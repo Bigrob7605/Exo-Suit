@@ -75,9 +75,9 @@ The website features:
 
 ### **V5.0 "Builder of Dreams" Coming Soon Features**
 - ** Ultimate Overclock System** - Unlocks 80-90% of system potential (vs 40% in V4)
-- ** Massive Cache Scaling** - 32GB → 53GB cache allocation (+65.6%)
-- ** Worker Explosion** - 16 → 24 workers (+50% processing power)
-- ** Batch Size Revolution** - 256 → 1024 batch size (+300% throughput)
+- ** Massive Cache Scaling** - 32GB  53GB cache allocation (+65.6%)
+- ** Worker Explosion** - 16  24 workers (+50% processing power)
+- ** Batch Size Revolution** - 256  1024 batch size (+300% throughput)
 - ** GPU Beast Mode** - 99.5% VRAM utilization with CUDA optimization
 - ** Performance Benchmarking** - CPU Score: 648,209, Memory Score: 620,166
 - ** Self-Evolving Intelligence** - System that learns and optimizes itself

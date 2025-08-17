@@ -84,7 +84,7 @@ Performance = f(BatchSize) where efficiency increases with scale
 - **Total Project Files**: 52,041 files
 - **Optimal Batch Size**: 2000 files per batch
 - **Total Batches**: 27 batches
-- **Estimated Total Time**: 27 × 3.97s = **~1.8 minutes**
+- **Estimated Total Time**: 27  3.97s = **~1.8 minutes**
 - **Previous CPU Estimate**: ~87 minutes
 - **V5.0 GPU Improvement**: **~48x faster** than estimated!
 
