@@ -1,0 +1,93 @@
+{
+  "timestamp": "2025-08-17T19:15:06.216124",
+  "system_info": {
+    "python_version": "3.13.5 (tags/v3.13.5:6cb20a2, Jun 11 2025, 16:15:46) [MSC v.1943 64 bit (AMD64)]",
+    "platform": "win32",
+    "cpu_count": 16,
+    "memory_total_gb": 63.64,
+    "memory_available_gb": 46.37,
+    "disk_usage": {},
+    "error": "argument 1 (impossible<bad format char>)"
+  },
+  "project_analysis": {
+    "total_files": 77,
+    "total_directories": 9,
+    "file_types": {
+      ".py": 11,
+      ".ps1": 7,
+      ".md": 2,
+      ".backup": 1,
+      ".log": 31,
+      ".json": 4,
+      ".txt": 2,
+      ".pyc": 19
+    },
+    "key_components": [
+      "ops/",
+      "context/",
+      "config/"
+    ],
+    "missing_components": [
+      "README.md",
+      "AGENT_STATUS.md",
+      "requirements.txt"
+    ],
+    "project_size_mb": 2.5504026412963867
+  },
+  "component_health": {
+    "python_scripts": {
+      "ADVANCED_INTEGRATION_LAYER_V5.py": "valid",
+      "CHAOSE_ENGINE.py": "valid",
+      "DreamWeaver_Builder_V5.py": "valid",
+      "PHOENIX_RECOVERY_SYSTEM_V5.py": "valid",
+      "REAL_EMOJI_CLEANUP.py": "valid",
+      "REAL_WORLD_CHAOS_TESTER.py": "valid",
+      "run_integration_tests.py": "valid",
+      "SYSTEM_HEALTH_VALIDATOR.py": "valid",
+      "V5_CONSOLIDATION_ENGINE.py": "valid",
+      "V5_CONSOLIDATION_MASTER.py": "valid"
+    },
+    "powershell_scripts": {
+      "DeepSpeed-Accelerator-V5.ps1": "valid",
+      "DreamWeaver-Builder-V5.ps1": "valid",
+      "launch_monitor_server.ps1": "valid",
+      "RTX-4070-Accelerator-V5.ps1": "valid",
+      "TruthForge-Auditor-V5.ps1": "valid",
+      "Ultimate-Overclock-Speed-Boost-V5.ps1": "valid",
+      "VisionGap-Engine-V5.ps1": "valid"
+    },
+    "configuration_files": {
+      "V5_CONSOLIDATED_STRUCTURE.json": "valid",
+      "context\\CONDENSED_ISSUES_20250817_114842.json": "valid",
+      "context\\CORE_EXO_SUIT_FOCUSED_SCAN_20250817_114419.json": "valid",
+      "restore\\EMOJI_REPORT.json": "valid"
+    },
+    "overall_health": "excellent"
+  },
+  "performance_metrics": {
+    "file_processing_test": {
+      "files_processed": 11,
+      "duration_seconds": 0.0,
+      "files_per_second": 2846.58,
+      "status": "completed"
+    },
+    "memory_usage": {
+      "total_gb": 63.64,
+      "available_gb": 46.36,
+      "used_percent": 27.1,
+      "status": "healthy"
+    },
+    "cpu_usage": {
+      "current_percent": 9.2,
+      "status": "healthy"
+    },
+    "disk_io": {}
+  },
+  "validation_score": 100,
+  "issues_found": [
+    "Missing key components: README.md, AGENT_STATUS.md, requirements.txt"
+  ],
+  "recommendations": [
+    "Create or restore missing key components"
+  ]
+}

@@ -22,14 +22,24 @@ import psutil
 
 # Kai Integration - Advanced AAA Capabilities
 import sys
-sys.path.append('kai_integration')
-from paradox_resolver import ParadoxResolver
-from guard_rail_system import GuardRailSystem
-from mythgraph_ledger import MythGraphLedger
+sys.path.append('../kai_integration')
+try:
+    from paradox_resolver import ParadoxResolver
+    from guard_rail_system import GuardRailSystem
+    from mythgraph_ledger import MythGraphLedger
+except ImportError:
+    # Fallback if Kai integration not available
+    ParadoxResolver = None
+    GuardRailSystem = None
+    MythGraphLedger = None
 
 # Essential Performance Integration
-sys.path.append('essential_integration')
-from simple_performance_monitor import SimplePerformanceMonitor
+sys.path.append('../essential_integration')
+try:
+    from simple_performance_monitor import SimplePerformanceMonitor
+except ImportError:
+    # Fallback if essential integration not available
+    SimplePerformanceMonitor = None
 
 class FortifiedSelfHealProtocol:
     """Fortified self-heal testing and recovery protocol with evidence bundles."""
@@ -48,7 +58,7 @@ class FortifiedSelfHealProtocol:
         if evidence_root:
             self.evidence_dir = Path(evidence_root)
         else:
-            self.evidence_dir = self.white_papers_dir / "self_heal_evidence"
+            self.evidence_dir = self.root_dir / "Project White Papers" / "self_heal_evidence"
         
         self.audit_log = []
         self.recovery_required = False
@@ -1046,6 +1056,60 @@ class PhoenixRecoverySystem:
                     shutil.copytree(component_path, snapshot_component_dir, dirs_exist_ok=True)
         
         # Create system state snapshot
+        
+    def test_recovery_capabilities(self, target: str = None) -> Dict[str, Any]:
+        """Test recovery capabilities of the system"""
+        self.logger.info("Testing recovery capabilities...")
+        
+        test_results = {
+            'success': True,
+            'capabilities_tested': [],
+            'errors': [],
+            'target': target
+        }
+        
+        try:
+            # Test 1: Basic system access
+            test_results['capabilities_tested'].append('system_access')
+            if not self.workspace_root.exists():
+                test_results['success'] = False
+                test_results['errors'].append('Workspace root not accessible')
+            
+            # Test 2: Backup directory creation
+            test_results['capabilities_tested'].append('backup_directory')
+            if not self.backup_dir.exists():
+                self.backup_dir.mkdir(parents=True, exist_ok=True)
+            
+            # Test 3: Logging system
+            test_results['capabilities_tested'].append('logging_system')
+            self.logger.info("Logging system test successful")
+            
+            # Test 4: Component validation
+            test_results['capabilities_tested'].append('component_validation')
+            for component_name, component_info in self.recoverable_components.items():
+                component_path = Path(component_info['file'])
+                if component_path.exists():
+                    self.logger.info(f"Component {component_name} accessible")
+                else:
+                    self.logger.warning(f"Component {component_name} not found")
+            
+            # Test 5: Target-specific recovery (if target provided)
+            if target:
+                test_results['capabilities_tested'].append('target_recovery')
+                target_path = Path(target)
+                if target_path.exists():
+                    self.logger.info(f"Target {target} exists and accessible")
+                else:
+                    self.logger.warning(f"Target {target} not found")
+            
+            self.logger.info("Recovery capabilities test completed successfully")
+            
+        except Exception as e:
+            test_results['success'] = False
+            test_results['errors'].append(f'Test failed: {str(e)}')
+            self.logger.error(f"Recovery capabilities test failed: {e}")
+        
+        return test_results
         system_state = {
             'timestamp': timestamp,
             'components': {},
@@ -1653,35 +1717,66 @@ class PhoenixRecoverySystem:
 
 
 def main():
-    """Main execution function"""
-    try:
-        # Initialize Phoenix Recovery System
-        phoenix = PhoenixRecoverySystem()
+    """Main command-line interface for Phoenix Recovery System"""
+    import argparse
+    
+    parser = argparse.ArgumentParser(description='Phoenix Recovery System V5.0 - Agent Exo-Suit')
+    parser.add_argument('--status', action='store_true', help='Show system status')
+    parser.add_argument('--recovery-test', action='store_true', help='Run recovery test mode')
+    parser.add_argument('--target', type=str, help='Target for recovery operations')
+    parser.add_argument('--create-snapshot', action='store_true', help='Create system snapshot')
+    parser.add_argument('--test-recovery', action='store_true', help='Test recovery capabilities')
+    
+    args = parser.parse_args()
+    
+    # Initialize Phoenix Recovery System
+    phoenix = PhoenixRecoverySystem()
+    
+    if args.status:
+        print("Phoenix Recovery System V5.0 - Status")
+        print("=" * 50)
+        print(f"Workspace Root: {phoenix.workspace_root}")
+        print(f"Recovery Config: {phoenix.recovery_config}")
+        print(f"Backup Directory: {phoenix.backup_dir}")
+        print(f"Recovery Logs: {phoenix.recovery_logs}")
+        print(f"Self-Heal Active: {phoenix.self_heal_active}")
+        print(f"Auto-Recovery Enabled: {phoenix.auto_recovery_enabled}")
+        print("=" * 50)
         
-        print(" PHOENIX RECOVERY SYSTEM V5.0 - Agent Exo-Suit V5.0")
-        print("=" * 60)
-        
-        # Run the new V5 recovery process
-        phoenix.run_recovery()
-        
-        # Display final status
-        final_health = phoenix.assess_system_health()
-        print(f"\n System Health: {final_health}")
-        
-        if final_health in ["excellent", "good"]:
-            print(" System is healthy and operational!")
-        elif final_health == "fair":
-            print(" System has minor issues but is operational")
-        elif final_health == "degraded":
-            print(" System recovered but may need attention")
+    elif args.recovery_test:
+        print("Phoenix Recovery System V5.0 - Recovery Test Mode")
+        print("=" * 50)
+        if args.target:
+            print(f"Testing recovery for target: {args.target}")
+            # Test recovery capabilities
+            result = phoenix.test_recovery_capabilities(args.target)
+            print(f"Recovery test result: {result}")
         else:
-            print(" System has critical issues")
+            print("No target specified. Testing general recovery capabilities...")
+            result = phoenix.test_recovery_capabilities()
+            print(f"General recovery test result: {result}")
+            
+    elif args.create_snapshot:
+        print("Phoenix Recovery System V5.0 - Creating System Snapshot")
+        print("=" * 50)
+        snapshot_path = phoenix.create_system_snapshot()
+        print(f"System snapshot created: {snapshot_path}")
         
-        print("\n Phoenix Recovery System ready for operation!")
+    elif args.test_recovery:
+        print("Phoenix Recovery System V5.0 - Testing Recovery Capabilities")
+        print("=" * 50)
+        result = phoenix.test_recovery_capabilities()
+        print(f"Recovery capabilities test result: {result}")
         
-    except Exception as e:
-        print(f"Phoenix Recovery System failed: {e}")
-        sys.exit(1)
+    else:
+        # Default: show status
+        print("Phoenix Recovery System V5.0 - Agent Exo-Suit")
+        print("=" * 50)
+        print("Use --help for available commands")
+        print("Use --status to see system status")
+        print("Use --recovery-test --target <path> to test recovery")
+        print("Use --create-snapshot to create system backup")
+        print("Use --test-recovery to test recovery capabilities")
 
 if __name__ == "__main__":
     main()

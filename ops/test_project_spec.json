@@ -1,0 +1,10 @@
+{
+  "project_name": "V5_Integration_Test_Project",
+  "description": "Test project for V5 integration validation",
+  "components": [
+    "web_api",
+    "database",
+    "frontend"
+  ],
+  "complexity": "medium"
+}

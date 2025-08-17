@@ -1,8 +1,0 @@
-# Minimal requirements for Exo-Suit Real-Time Monitor
-psutil>=5.8.0
-torch>=1.9.0
-GPUtil>=1.4.0
-
-# Optional web server (comment out if not needed)
-flask>=2.0.0
-flask-cors>=3.0.0
