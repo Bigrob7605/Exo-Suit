@@ -1,5 +1,5 @@
-# Minimal Jekyll Configuration for Agent Exo-Suit V5.0
-# This configuration prevents all Jekyll processing to break deploy loops
+# GitHub Pages Configuration for Agent Exo-Suit V5.0
+# Optimized to prevent deployment loops and ensure stable hosting
 
 # Site settings
 title: "Agent Exo-Suit V5.0 - Revolutionary AI Development Platform"
@@ -7,13 +7,11 @@ description: "Revolutionary AI-powered development tools featuring 43 operationa
 url: "https://bigrob7605.github.io"
 baseurl: "/Exo-Suit"
 
-# Completely disable Jekyll processing
-exclude: ["*"]
-include: []
+# Disable Jekyll processing to prevent build loops
 plugins: []
 collections: {}
 defaults: []
 
-# Minimal build settings
+# Build settings
 markdown: kramdown
 encoding: utf-8

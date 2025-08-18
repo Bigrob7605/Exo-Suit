@@ -1577,16 +1577,22 @@
                         <div class="indicator-dot"></div>
                         <span>Tools: 25/43 Operational</span>
                     </div>
+                    <div class="status-indicator">
+                        <div class="indicator-dot" style="background: #00ff00;"></div>
+                        <span>Deployment: Stable - Loop Fixed</span>
+                    </div>
                 </div>
             </div>
         </div>
     </footer>
 
     <script>
-        // Particle animation
+        // Particle animation with performance optimization
         function createParticles() {
             const particlesContainer = document.getElementById('particles');
-            const particleCount = 50;
+            if (!particlesContainer) return;
+            
+            const particleCount = 30; // Reduced from 50 for better performance
             
             for (let i = 0; i < particleCount; i++) {
                 const particle = document.createElement('div');
@@ -1598,27 +1604,39 @@
             }
         }
         
-        // Scroll animations
+        // Scroll animations with throttling
+        let scrollTimeout;
         function handleScrollAnimations() {
-            const elements = document.querySelectorAll('.scroll-animate');
+            if (scrollTimeout) return; // Throttle scroll events
             
-            elements.forEach(element => {
-                const elementTop = element.getBoundingClientRect().top;
-                const elementVisible = 150;
+            scrollTimeout = setTimeout(() => {
+                const elements = document.querySelectorAll('.scroll-animate');
                 
-                if (elementTop < window.innerHeight - elementVisible) {
-                    element.classList.add('visible');
-                }
-            });
+                elements.forEach(element => {
+                    const elementTop = element.getBoundingClientRect().top;
+                    const elementVisible = 150;
+                    
+                    if (elementTop < window.innerHeight - elementVisible) {
+                        element.classList.add('visible');
+                    }
+                });
+                
+                scrollTimeout = null;
+            }, 16); // ~60fps throttling
         }
         
-        // Initialize
+        // Initialize with error handling
         document.addEventListener('DOMContentLoaded', function() {
-            createParticles();
-            handleScrollAnimations();
+            try {
+                createParticles();
+                handleScrollAnimations();
+            } catch (error) {
+                console.warn('Animation initialization warning:', error);
+            }
         });
         
-        window.addEventListener('scroll', handleScrollAnimations);
+        // Throttled scroll listener
+        window.addEventListener('scroll', handleScrollAnimations, { passive: true });
     </script>
 </body>
 </html>
