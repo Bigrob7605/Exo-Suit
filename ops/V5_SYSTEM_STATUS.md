@@ -35,9 +35,9 @@
 - **Diagnostic Work**: Deep system analysis and problem identification
 
 ### **Performance Metrics (Real Data)**
-- **Current Range**: 207-15K+ files/second (varies by tool)
-- **Average**: ~5,000 files/second across all operational tools
-- **Peak**: 6,007+ files/second achieved by specific tools
+- **Current Range**: 207-3.7K files/second (varies by tool)
+- **Average**: ~1.2K files/second across all operational tools (RTX 4070)
+- **Peak**: 3.7K files/second achieved by specific tools
 - **Tool Variance**: Each tool has unique performance paths and capabilities
 
 ### **Multi-Agent Consensus System**

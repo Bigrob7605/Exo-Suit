@@ -110,9 +110,9 @@
 ## 🚨 PERFORMANCE REALITY - TOOL VARIANCE RULE
 
 ### **Performance Varies by Tool (This is Normal!)**
-- **Range**: 207 files/sec to 15K+ files/sec across different tools
-- **Average**: ~5K files/sec across the system
-- **Peak**: 6,007+ files/sec achieved by specific tools
+- **Range**: 207 files/sec to 3.7K files/sec across different tools
+- **Average**: ~1.2K files/sec across the system (RTX 4070)
+- **Peak**: 3.7K files/sec achieved by specific tools
 - **Tool Variance**: Each tool has unique performance paths and capabilities
 
 ### **Why This Matters**
