@@ -1,5 +1,5 @@
 # GitHub Pages Configuration for Agent Exo-Suit V5.0
-# Optimized to prevent deployment loops and ensure stable hosting
+# Minimal static site configuration - no Jekyll processing
 
 # Site settings
 title: "Agent Exo-Suit V5.0 - Revolutionary AI Development Platform"
@@ -7,11 +7,11 @@ description: "Revolutionary AI-powered development tools featuring 43 operationa
 url: "https://bigrob7605.github.io"
 baseurl: "/Exo-Suit"
 
-# Disable Jekyll processing to prevent build loops
+# Force static site mode - no Jekyll
 plugins: []
 collections: {}
 defaults: []
-
-# Build settings
+exclude: ["*"]
+include: ["index.html"]
 markdown: kramdown
 encoding: utf-8
