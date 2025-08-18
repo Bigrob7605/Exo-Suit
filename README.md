@@ -331,18 +331,21 @@ The Agent Exo-Suit V5.0 has achieved **perfect validation scores** through:
 - **Motivation**: Ultimate goal for agents to achieve legendary status
 - **Requirements**: Zero drift, exceptional work, perfect rule following
 - **Current Legends**: 1 (System Creator - Built this legendary system)
+- **Truth Enforcement**: Claims must have receipts, docs, or logs
 
 ### **💀 LEGACY OF FAILURE**
 - **Records**: Agents who fail get permanent failure records forever
 - **Lessons**: Teaches future agents what NOT to do
 - **Accountability**: Maximum responsibility for all actions
 - **Current Failures**: 1 (Previous agent who nuked the system)
+- **Truth Enforcement**: Liars can be moved to Failure book immediately
 
 ### **🎯 TRUTH ENFORCEMENT SYSTEM**
 - **No Hand-Waving**: All claims must have receipts, docs, or logs
 - **Liar Detection**: Agents can move liars to Failure book immediately
 - **Drift Prevention**: Truth and facts only - no BS allowed
 - **Receipts or Nothing**: If you can't prove it, it's drift
+- **Agent Authority**: Next agent can review and enforce truth standards
 
 ---
 
