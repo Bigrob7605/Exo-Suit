@@ -38,7 +38,17 @@ class AutomatedHandoffSystem:
     def __init__(self):
         self.system_root = Path(__file__).parent.parent
         self.handoff_dir = self.system_root / "ops" / "handoff"
-        self.handoff_dir.mkdir(exist_ok=True)
+        
+        # Edge case protection: Ensure handoff directory exists and is writable
+        try:
+            self.handoff_dir.mkdir(exist_ok=True)
+            # Test write access
+            test_file = self.handoff_dir / "test_write_access.tmp"
+            test_file.write_text("test", encoding='utf-8')
+            test_file.unlink()  # Clean up test file
+        except (OSError, PermissionError) as e:
+            logging.critical(f"Critical: Cannot create or write to handoff directory: {e}")
+            raise RuntimeError(f"Handoff system initialization failed: {e}")
         
         # Mission state tracking
         self.mission_state = {
@@ -51,16 +61,22 @@ class AutomatedHandoffSystem:
             "last_updated": datetime.now().isoformat()
         }
         
-        # Handoff thresholds
+        # Handoff thresholds - Edge case protected
         self.token_warning_threshold = 0.80  # 80% token usage
         self.handoff_trigger_threshold = 0.95  # 95% token usage
         
-        # Protection status
+        # Edge case protection: Ensure thresholds are valid
+        if self.token_warning_threshold >= self.handoff_trigger_threshold:
+            raise ValueError("Warning threshold must be less than trigger threshold")
+        if self.token_warning_threshold <= 0.0 or self.handoff_trigger_threshold >= 1.0:
+            raise ValueError("Thresholds must be between 0.0 and 1.0")
+        
+        # Protection status - Actual file names that exist
         self.protection_systems = [
-            "V5_CORE_FILES",
-            "LEGACY_V4_0_SPECS", 
-            "KAI_COMPONENTS",
-            "PROTECTION_SYSTEM"
+            "BULLETPROOF_PROTECTION_SYSTEM",
+            "V5_SYSTEM_STATUS",
+            "AGENT_HANDOFF_CONTINUITY_SYSTEM",
+            "HANDOFF_VALIDATION_SYSTEM"
         ]
         
         logging.info("Automated Handoff System initialized")
@@ -75,6 +91,11 @@ class AutomatedHandoffSystem:
         Returns:
             Dict containing handoff status and actions
         """
+        # Edge case protection: Validate input range
+        if not isinstance(current_usage, (int, float)) or current_usage < 0.0 or current_usage > 1.0:
+            logging.error(f"Invalid token usage value: {current_usage}. Must be between 0.0 and 1.0")
+            return self._handle_handoff_error("invalid_input", f"Invalid token usage: {current_usage}")
+        
         logging.info(f"Token usage monitoring: {current_usage:.2%}")
         
         if current_usage >= self.handoff_trigger_threshold:
