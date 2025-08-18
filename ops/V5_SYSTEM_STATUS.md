@@ -10,7 +10,21 @@
 
 **Status**: COMPLETE TECHNICAL SPECIFICATIONS DISCOVERED IN LEGACY FILES  
 **Source**: LEGACY TECHNICAL_SPECS.md - Agent Exo-Suit V4.0 "Perfection" Architecture (LEGACY)  
-**Impact**: ALL 43 TOOLS NOW MAPPED - Must be BUILT INTO V5 system core files  
+**Impact**: ALL 43 TOOLS NOW MAPPED - Must be BUILT INTO V5 system core files
+
+### **🚨 COMPREHENSIVE V5 CORE SYSTEM ARCHITECTURE - BULLETPROOF PROTECTION**
+
+**The Agent Exo-Suit V5.0 now features a revolutionary multi-layer protection system:**
+- **Multi-Agent Consensus (3-2-5 Hierarchy)**: 3 sub-agents → 2-out-of-3 consensus → 5 PhD agents
+- **Immune System Response**: Learning from attacks with automatic rollback and agent blacklisting
+- **Bulletproof Protection**: Zero tolerance for system self-destruction
+- **Complete Documentation**: `V5_CORE_SYSTEM_ARCHITECTURE.md` contains all safety mechanisms
+
+**For complete understanding of the bulletproof protection system, read:**
+- **Primary Document**: `V5_CORE_SYSTEM_ARCHITECTURE.md` - Complete safety & protection guide
+- **Contains**: Multi-layer defense, consensus systems, immune response, protection gates
+- **Purpose**: Bulletproof protection against system self-destruction
+- **Requirement**: 100% understanding before any action  
 
 ### 📋 COMPLETE V4.0 FEATURE SET (43 TOOLS)
 1. **Multi-layer Architecture**: Visual, Cognitive, Operational, Integration layers

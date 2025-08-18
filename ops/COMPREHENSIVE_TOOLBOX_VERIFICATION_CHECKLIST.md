@@ -5,6 +5,14 @@
 
 **Status**: IN PROGRESS - Found multiple critical issues the Exo-Suit missed!
 
+### **🚨 COMPREHENSIVE V5 CORE SYSTEM ARCHITECTURE - READ FIRST**
+
+**BEFORE PROCEEDING WITH ANY VERIFICATION OPERATIONS, READ THE COMPLETE V5 CORE SYSTEM ARCHITECTURE:**
+- **Primary Document**: `V5_CORE_SYSTEM_ARCHITECTURE.md` - Complete safety & protection guide
+- **Contains**: Multi-layer defense, consensus systems, immune response, protection gates
+- **Purpose**: Bulletproof protection against system self-destruction
+- **Requirement**: 100% understanding before any action
+
 ---
 
 ## 🚨 CRITICAL ISSUES TO VERIFY (From Previous Session)

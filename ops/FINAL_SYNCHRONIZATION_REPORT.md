@@ -12,6 +12,14 @@
 
 **Final Status**: ✅ **100% SYNCHRONIZED** - All documentation reflects flawless anti-drift system
 
+### **🚨 COMPREHENSIVE V5 CORE SYSTEM ARCHITECTURE - READ FIRST**
+
+**BEFORE PROCEEDING WITH ANY SYNCHRONIZATION OPERATIONS, READ THE COMPLETE V5 CORE SYSTEM ARCHITECTURE:**
+- **Primary Document**: `V5_CORE_SYSTEM_ARCHITECTURE.md` - Complete safety & protection guide
+- **Contains**: Multi-layer defense, consensus systems, immune response, protection gates
+- **Purpose**: Bulletproof protection against system self-destruction
+- **Requirement**: 100% understanding before any action
+
 ---
 
 ## 📋 DOCUMENTATION SYNCHRONIZATION COMPLETED

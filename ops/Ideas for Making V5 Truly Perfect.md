@@ -1,4 +1,13 @@
 Ideas for Making V5 Truly Perfect
+
+### **🚨 COMPREHENSIVE V5 CORE SYSTEM ARCHITECTURE - READ FIRST**
+
+**BEFORE PROCEEDING WITH ANY PERFECTION IDEAS, READ THE COMPLETE V5 CORE SYSTEM ARCHITECTURE:**
+- **Primary Document**: `V5_CORE_SYSTEM_ARCHITECTURE.md` - Complete safety & protection guide
+- **Contains**: Multi-layer defense, consensus systems, immune response, protection gates
+- **Purpose**: Bulletproof protection against system self-destruction
+- **Requirement**: 100% understanding before any action
+
 1. Scale Up Stress Testing
 
 Your roadmap mentions phase 2 includes "Large-scale testing (100K+ files)," but ramp that up with mixed real-world repos—combining code, binaries, documentation, images.

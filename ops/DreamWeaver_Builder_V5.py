@@ -4,6 +4,13 @@ DreamWeaver Builder V5 - Intelligent System Construction Engine
 Purpose: Rebuilds and reconstructs systems using available documentation and intelligence
 Author: Kai (Agent Exo-Suit V5.0)
 Status: META-COGNITION ENABLED
+
+🚨 COMPREHENSIVE V5 CORE SYSTEM ARCHITECTURE - READ FIRST
+BEFORE PROCEEDING WITH ANY RECONSTRUCTION OPERATIONS, READ THE COMPLETE V5 CORE SYSTEM ARCHITECTURE:
+- Primary Document: V5_CORE_SYSTEM_ARCHITECTURE.md - Complete safety & protection guide
+- Contains: Multi-layer defense, consensus systems, immune response, protection gates
+- Purpose: Bulletproof protection against system self-destruction
+- Requirement: 100% understanding before any action
 """
 
 import os

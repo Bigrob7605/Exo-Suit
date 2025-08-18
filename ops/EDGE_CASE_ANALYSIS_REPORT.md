@@ -13,6 +13,14 @@
 
 **Final Status**: ✅ **100% FLAWLESS** - No edge cases remain
 
+### **🚨 COMPREHENSIVE V5 CORE SYSTEM ARCHITECTURE - READ FIRST**
+
+**BEFORE PROCEEDING WITH ANY EDGE CASE ANALYSIS, READ THE COMPLETE V5 CORE SYSTEM ARCHITECTURE:**
+- **Primary Document**: `V5_CORE_SYSTEM_ARCHITECTURE.md` - Complete safety & protection guide
+- **Contains**: Multi-layer defense, consensus systems, immune response, protection gates
+- **Purpose**: Bulletproof protection against system self-destruction
+- **Requirement**: 100% understanding before any action
+
 ---
 
 ## 🚨 CRITICAL EDGE CASES IDENTIFIED AND RESOLVED

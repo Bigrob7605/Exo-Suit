@@ -11,7 +11,15 @@
 
 **Status**: COMPLETE LEGACY TECHNICAL SPECIFICATIONS DISCOVERED  
 **Source**: LEGACY TECHNICAL_SPECS.md - Agent Exo-Suit V4.0 "Perfection" Architecture (LEGACY)  
-**Impact**: ALL 43 LEGACY TOOLS NOW MAPPED - Must be built INTO V5 system core files  
+**Impact**: ALL 43 LEGACY TOOLS NOW MAPPED - Must be built INTO V5 system core files
+
+### **🚨 COMPREHENSIVE V5 CORE SYSTEM ARCHITECTURE - READ FIRST**
+
+**BEFORE PROCEEDING WITH ANY KAI RECOVERY OPERATIONS, READ THE COMPLETE V5 CORE SYSTEM ARCHITECTURE:**
+- **Primary Document**: `V5_CORE_SYSTEM_ARCHITECTURE.md` - Complete safety & protection guide
+- **Contains**: Multi-layer defense, consensus systems, immune response, protection gates
+- **Purpose**: Bulletproof protection against system self-destruction
+- **Requirement**: 100% understanding before any action  
 
 ### 📋 COMPLETE V4.0 LEGACY FEATURE SET (43 TOOLS - for integration INTO V5)
 1. **Multi-layer Architecture**: Legacy V4.0 Visual, Cognitive, Operational, Integration layers (to integrate INTO V5)

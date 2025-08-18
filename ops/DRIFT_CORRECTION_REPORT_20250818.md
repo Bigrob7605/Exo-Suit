@@ -9,6 +9,14 @@
 
 ## 🚨 CRITICAL DRIFT DETECTED
 
+### **🚨 COMPREHENSIVE V5 CORE SYSTEM ARCHITECTURE - READ FIRST**
+
+**BEFORE PROCEEDING WITH ANY DRIFT CORRECTION OPERATIONS, READ THE COMPLETE V5 CORE SYSTEM ARCHITECTURE:**
+- **Primary Document**: `V5_CORE_SYSTEM_ARCHITECTURE.md` - Complete safety & protection guide
+- **Contains**: Multi-layer defense, consensus systems, immune response, protection gates
+- **Purpose**: Bulletproof protection against system self-destruction
+- **Requirement**: 100% understanding before any action
+
 ### **What Was Wrong**
 The previous agent was treating **legacy V4.0 files as if they were production-ready** when they are actually **LEGACY FILES** that need to be **BUILT INTO** the V5 system core files.
 

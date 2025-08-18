@@ -3,6 +3,13 @@
 .SYNOPSIS
     Agent Exo-Suit V5.0 "Builder of Dreams" - RTX 4070 Accelerator
     
+    🚨 COMPREHENSIVE V5 CORE SYSTEM ARCHITECTURE - READ FIRST
+    BEFORE PROCEEDING WITH ANY GPU OPTIMIZATION OPERATIONS, READ THE COMPLETE V5 CORE SYSTEM ARCHITECTURE:
+    - Primary Document: V5_CORE_SYSTEM_ARCHITECTURE.md - Complete safety & protection guide
+    - Contains: Multi-layer defense, consensus systems, immune response, protection gates
+    - Purpose: Bulletproof protection against system self-destruction
+    - Requirement: 100% understanding before any action
+    
 .DESCRIPTION
     Real working V5.0 system using actual working components:
     - PyTorch 2.7.1 with CUDA 11.8

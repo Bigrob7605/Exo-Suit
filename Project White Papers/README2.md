@@ -89,6 +89,20 @@ On **2025-08-18**, the Agent Exo-Suit V5.0 system experienced a **critical drift
 2. **Begin Legacy V4.0 Integration INTO V5** - Build legacy specs into V5 core files
 3. **Achieve 43/43 Tools** - Revolutionary V5.0 system with all capabilities
 
+### **🚨 COMPREHENSIVE V5 CORE SYSTEM ARCHITECTURE - BULLETPROOF PROTECTION**
+
+**The Agent Exo-Suit V5.0 now features a revolutionary multi-layer protection system:**
+- **Multi-Agent Consensus (3-2-5 Hierarchy)**: 3 sub-agents → 2-out-of-3 consensus → 5 PhD agents
+- **Immune System Response**: Learning from attacks with automatic rollback and agent blacklisting
+- **Bulletproof Protection**: Zero tolerance for system self-destruction
+- **Complete Documentation**: `V5_CORE_SYSTEM_ARCHITECTURE.md` contains all safety mechanisms
+
+**For complete understanding of the bulletproof protection system, read:**
+- **Primary Document**: `V5_CORE_SYSTEM_ARCHITECTURE.md` - Complete safety & protection guide
+- **Contains**: Multi-layer defense, consensus systems, immune response, protection gates
+- **Purpose**: Bulletproof protection against system self-destruction
+- **Requirement**: 100% understanding before any action
+
 ### **Why This Makes Us Stronger 💪**
 - **Edge Cases Identified**: We caught the drift before it caused real damage
 - **Protection Systems**: Bulletproof protection now prevents future issues

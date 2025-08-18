@@ -2,10 +2,19 @@
 
 Scope: Map documented V5 capabilities to concrete files/functions in this repo, based on README, index webpage, and white papers.
 
+## 🚨 COMPREHENSIVE V5 CORE SYSTEM ARCHITECTURE - READ FIRST
+
+**BEFORE PROCEEDING WITH ANY CAPABILITY ANALYSIS, READ THE COMPLETE V5 CORE SYSTEM ARCHITECTURE:**
+- **Primary Document**: `V5_CORE_SYSTEM_ARCHITECTURE.md` - Complete safety & protection guide
+- **Contains**: Multi-layer defense, consensus systems, immune response, protection gates
+- **Purpose**: Bulletproof protection against system self-destruction
+- **Requirement**: 100% understanding before any action
+
 Authoritative sources
 - README: `README.md` [repo]
 - Web page: `index.html` [repo]
 - Technical specs: `Project White Papers/V5.0_TECHNICAL_SPECIFICATIONS.md` [repo]
+- **V5 Core System Architecture**: `V5_CORE_SYSTEM_ARCHITECTURE.md` [repo] - COMPREHENSIVE SAFETY & PROTECTION
 
 ## Matrix
 

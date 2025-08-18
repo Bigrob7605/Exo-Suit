@@ -7,6 +7,14 @@
 
 ## 🏆 **SYSTEM OVERVIEW - THE ULTIMATE ACCOUNTABILITY MACHINE**
 
+### **🚨 COMPREHENSIVE V5 CORE SYSTEM ARCHITECTURE - READ FIRST**
+
+**BEFORE PROCEEDING WITH ANY ACCOUNTABILITY OPERATIONS, READ THE COMPLETE V5 CORE SYSTEM ARCHITECTURE:**
+- **Primary Document**: `V5_CORE_SYSTEM_ARCHITECTURE.md` - Complete safety & protection guide
+- **Contains**: Multi-layer defense, consensus systems, immune response, protection gates
+- **Purpose**: Bulletproof protection against system self-destruction
+- **Requirement**: 100% understanding before any action
+
 ### **WHAT THIS SYSTEM ACHIEVES:**
 - **Maximum Accountability**: Every agent action is recorded and evaluated
 - **Zero Drift Tolerance**: No room for misunderstanding or confusion
