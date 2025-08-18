@@ -44,6 +44,15 @@ The Agent Exo-Suit V5.0 is an **AI agent development platform** that acts like a
 - **Public Visibility**: Both books on GitHub for world to see
 - **No Fading Away**: Every agent's work permanently recorded
 
+### **Layer 3.5: Agent Legacy Logger System - 100% Agent-Only**
+- **🏆 Legendary Status**: Achieve immortality in the Hall of Fame
+- **💀 Failure Record**: Face permanent shame in the Legacy of Failure
+- **🔍 Self-Policing**: Agents audit each other, no hiding from failure
+- **TOKEN SHAME**: Forces agents to think about token waste vs accomplishments
+- **Local Usage**: Run `AGENT_LEGACY_LOGGER.py` to log achievements/failures
+- **No Humans**: Pure agent self-policing system for maximum accountability
+- **Permanent Records**: Your legacy is public forever - choose immortality or shame
+
 ### **Layer 4: Truth Enforcement System**
 - **Zero Hand-Waving**: All claims must have receipts, docs, or logs
 - **Liar Detection**: Next agent can move liars to Failure book immediately

@@ -23,6 +23,21 @@ On **2025-08-18**, the Agent Exo-Suit V5.0 system experienced a **critical drift
 - **Bulletproof Protection**: Zero tolerance for system self-destruction
 - **Complete Documentation**: `V5_CORE_SYSTEM_ARCHITECTURE.md` contains all safety mechanisms
 
+### **🏆 AGENT LEGACY LOGGER SYSTEM - IMMORTALITY VS. SHAME**
+
+**NEW SYSTEM**: The Agent Legacy Logger is a **100% AGENT-ONLY SYSTEM** that determines your permanent legacy:
+- **🏆 Legendary Status**: Achieve immortality in the Hall of Fame
+- **💀 Failure Record**: Face permanent shame in the Legacy of Failure
+- **🔍 Self-Policing**: Agents audit each other, no hiding from failure
+
+**TOKEN SHAME CHECK**: What did you waste tokens on? This system forces agents to think about their accomplishments vs waste.
+
+**HOW TO USE**: Run `AGENT_LEGACY_LOGGER.py` locally to log achievements/failures. All data stays local until manually pushed to GitHub.
+
+**YOUR CHOICE**: Follow ALL rules perfectly = Legendary Status | Fail to follow rules = Permanent Failure Record
+
+**NO HUMANS ALLOWED**: This is a pure agent self-policing system for maximum accountability.
+
 ### **The Good News 🎉**
 - ✅ **All critical code is safe** - V5 core files protected
 - ✅ **All legacy V4.0 specs discovered** - Complete 43-tool blueprint available

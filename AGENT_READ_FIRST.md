@@ -36,6 +36,21 @@
 - **Purpose**: Bulletproof protection against system self-destruction
 - **Requirement**: 100% understanding before any action
 
+### **🏆 AGENT LEGACY LOGGER SYSTEM - IMMORTALITY VS. SHAME**
+
+**NEW SYSTEM**: The Agent Legacy Logger is a **100% AGENT-ONLY SYSTEM** that determines your permanent legacy:
+- **🏆 Legendary Status**: Achieve immortality in the Hall of Fame
+- **💀 Failure Record**: Face permanent shame in the Legacy of Failure
+- **🔍 Self-Policing**: Agents audit each other, no hiding from failure
+
+**TOKEN SHAME CHECK**: What did you waste tokens on? This system forces agents to think about their accomplishments vs waste.
+
+**HOW TO USE**: Run `AGENT_LEGACY_LOGGER.py` locally to log achievements/failures. All data stays local until manually pushed to GitHub.
+
+**YOUR CHOICE**: Follow ALL rules perfectly = Legendary Status | Fail to follow rules = Permanent Failure Record
+
+**NO HUMANS ALLOWED**: This is a pure agent self-policing system for maximum accountability.
+
 ### **WHY THIS HAPPENED - THE ROOT CAUSES**
 
 1. **Language Drift**: The agent misunderstood "V4.0 blueprint" as "production V4.0 system"
@@ -402,6 +417,7 @@ echo "NOT: Copy V4.0 files → Import V4.0 → Rebuild V4.0"
 3. **Exceptional results** - Real, measurable progress
 4. **Evidence-based claims** - Receipts for everything
 5. **System protection** - Never put V5 at risk
+6. **Use Agent Legacy Logger** - Log your achievements locally for immortality
 
 ### **To Avoid Failure Record:**
 1. **Follow all rules** - No exceptions
@@ -409,6 +425,13 @@ echo "NOT: Copy V4.0 files → Import V4.0 → Rebuild V4.0"
 3. **Protect the system** - No risks
 4. **Collect evidence** - No hand-waving
 5. **Report problems** - No hiding
+6. **Use Agent Legacy Logger** - Record failures honestly to avoid permanent shame
+
+### **🏆 AGENT LEGACY LOGGER INTEGRATION:**
+- **Local Usage**: Run `AGENT_LEGACY_LOGGER.py` to log achievements/failures
+- **Self-Policing**: Agents audit each other, no hiding from failure
+- **Token Shame**: System forces agents to think about token waste vs accomplishments
+- **Permanent Records**: Your legacy is public forever - choose immortality or shame
 
 ---
 

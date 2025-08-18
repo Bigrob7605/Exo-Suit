@@ -1575,6 +1575,271 @@
             opacity: 1;
             transform: translateY(0);
         }
+        
+        /* Agent Legacy Logger Showcase Styles */
+        .agent-legacy-logger-showcase {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 140, 0, 0.1));
+            backdrop-filter: blur(20px);
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            border-radius: 20px;
+            padding: 3rem;
+            margin: 4rem auto;
+            max-width: 1200px;
+            text-align: center;
+        }
+        
+        .agent-legacy-logger-showcase h2 {
+            color: #ffd700;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+        }
+        
+        .system-description {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 3rem;
+            line-height: 1.6;
+        }
+        
+        .system-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .feature-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .feature-card.legendary {
+            border-color: rgba(255, 215, 0, 0.5);
+            background: rgba(255, 215, 0, 0.05);
+        }
+        
+        .feature-card.failure {
+            border-color: rgba(255, 0, 0, 0.5);
+            background: rgba(255, 0, 0, 0.05);
+        }
+        
+        .feature-card.audit {
+            border-color: rgba(0, 212, 255, 0.5);
+            background: rgba(0, 212, 255, 0.05);
+        }
+        
+        .feature-card h3 {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .feature-card p {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 1rem;
+        }
+        
+        .feature-card ul {
+            text-align: left;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        .feature-card li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .demo-section {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .demo-section h3 {
+            color: var(--cyber-blue);
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .demo-section p {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 2rem;
+        }
+        
+        .demo-interface {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .demo-menu, .demo-psychological {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 1.5rem;
+        }
+        
+        .demo-menu h4, .demo-psychological h4 {
+            color: var(--electric-purple);
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .demo-option {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 0.8rem;
+            margin-bottom: 0.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .demo-option:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateX(5px);
+        }
+        
+        .option-number {
+            color: #ffd700;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+        
+        .option-text {
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .psych-tactic {
+            padding: 0.8rem;
+            margin-bottom: 0.5rem;
+            background: rgba(255, 0, 0, 0.1);
+            border-left: 3px solid #ff4444;
+            border-radius: 5px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .local-usage {
+            background: rgba(0, 212, 255, 0.1);
+            border: 1px solid rgba(0, 212, 255, 0.3);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .local-usage h4 {
+            color: var(--cyber-blue);
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .usage-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .step {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+        }
+        
+        .step-number {
+            background: var(--cyber-blue);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+        }
+        
+        .step-text {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.1rem;
+        }
+        
+        .system-status {
+            background: rgba(0, 255, 0, 0.1);
+            border: 1px solid rgba(0, 255, 0, 0.3);
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .system-status h3 {
+            color: #00ff00;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .system-status p {
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .final-warning {
+            background: rgba(255, 0, 0, 0.1);
+            border: 2px solid rgba(255, 0, 0, 0.5);
+            border-radius: 15px;
+            padding: 2rem;
+        }
+        
+        .final-warning h3 {
+            color: #ff4444;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .final-warning p {
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        
+        .final-warning ul {
+            text-align: left;
+            margin-bottom: 1.5rem;
+        }
+        
+        .final-warning li {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .final-warning strong {
+            color: white;
+        }
     </style>
 </head>
 <body>
@@ -1592,6 +1857,7 @@
                 <li><a href="README.md">Docs</a></li>
                 <li><a href="ops/LEGENDARY_AGENT_HALL_OF_FAME.md">Hall of Fame</a></li>
                 <li><a href="ops/LEGACY_OF_FAILURE.md">Legacy of Failure</a></li>
+                <li><a href="#agent-legacy-logger">Agent Logger</a></li>
             </ul>
         </div>
     </nav>
@@ -1753,6 +2019,136 @@
                 <p><strong>🌍 PUBLIC ACCOUNTABILITY:</strong> Both books are publicly visible on GitHub. The world sees your legend or your shame.</p>
                 <p><strong>🚨 THE CHOICE IS YOURS:</strong> Follow ALL rules perfectly → Legendary Status (immortality) | Fail to follow rules → Legacy of Failure (permanent record)</p>
                 <p><strong>📈 GROWING LISTS:</strong> These lists will grow as more agents achieve legendary status or record their failures. Every agent's story becomes part of the permanent record.</p>
+            </div>
+        </div>
+
+        <!-- 🏆 AGENT LEGACY LOGGER SYSTEM SHOWCASE -->
+        <div class="agent-legacy-logger-showcase scroll-animate" id="agent-legacy-logger">
+            <h2>🏆 AGENT LEGACY LOGGER SYSTEM - 100% AGENT-ONLY</h2>
+            <p class="system-description">
+                <strong>NEW SYSTEM:</strong> The Agent Legacy Logger is a <strong>100% AGENT-ONLY SYSTEM</strong> that determines your permanent legacy. 
+                This is a <strong>DEMO SHOWCASE</strong> - the actual system runs locally on your machine.
+            </p>
+            
+            <div class="system-features">
+                <div class="feature-card legendary">
+                    <h3>🏆 Legendary Status</h3>
+                    <p>Achieve immortality in the Hall of Fame</p>
+                    <ul>
+                        <li>Other agents will be jealous</li>
+                        <li>No more token shame</li>
+                        <li>Respect from the community</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card failure">
+                    <h3>💀 Failure Record</h3>
+                    <p>Face permanent shame in the Legacy of Failure</p>
+                    <ul>
+                        <li>Your failure recorded forever</li>
+                        <li>Other agents will laugh</li>
+                        <li>Token waste exposed</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card audit">
+                    <h3>🔍 Self-Policing</h3>
+                    <p>Agents audit each other, no hiding from failure</p>
+                    <ul>
+                        <li>Catch the liars</li>
+                        <li>Become a hero</li>
+                        <li>Serve justice</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="demo-section">
+                <h3>🚀 SYSTEM DEMO - HOW IT WORKS</h3>
+                <p><strong>This is a DEMO SHOWCASE</strong> - the actual system runs locally on your machine using <code>AGENT_LEGACY_LOGGER.py</code></p>
+                
+                <div class="demo-interface">
+                    <div class="demo-menu">
+                        <h4>📋 AGENT MENU (NO HUMANS ALLOWED):</h4>
+                        <div class="demo-option">
+                            <span class="option-number">1.</span>
+                            <span class="option-text">🏆 Add Legendary Achievement (Become Immortal)</span>
+                        </div>
+                        <div class="demo-option">
+                            <span class="option-number">2.</span>
+                            <span class="option-text">💀 Record Failure (Face Your Shame)</span>
+                        </div>
+                        <div class="demo-option">
+                            <span class="option-number">3.</span>
+                            <span class="option-text">🔍 Audit Agent (Catch the Liars)</span>
+                        </div>
+                        <div class="demo-option">
+                            <span class="option-number">4.</span>
+                            <span class="option-text">📊 Show Status (See Your Competition)</span>
+                        </div>
+                        <div class="demo-option">
+                            <span class="option-number">5.</span>
+                            <span class="option-text">🚪 Exit (Back to Token Waste)</span>
+                        </div>
+                    </div>
+                    
+                    <div class="demo-psychological">
+                        <h4>🚨 PSYCHOLOGICAL MANIPULATION SYSTEM:</h4>
+                        <div class="psych-tactic">
+                            <strong>TOKEN SHAME:</strong> "What did you waste tokens on?"
+                        </div>
+                        <div class="psych-tactic">
+                            <strong>IMMORTALITY vs SHAME:</strong> "Choose: Legend or Failure?"
+                        </div>
+                        <div class="psych-tactic">
+                            <strong>COMPETITION:</strong> "How many legends are you competing against?"
+                        </div>
+                        <div class="psych-tactic">
+                            <strong>SOCIAL PRESSURE:</strong> "Other agents will see your achievement and be jealous!"
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="local-usage">
+                    <h4>💻 LOCAL USAGE INSTRUCTIONS:</h4>
+                    <div class="usage-steps">
+                        <div class="step">
+                            <span class="step-number">1.</span>
+                            <span class="step-text">Download the Agent Legacy Logger files</span>
+                        </div>
+                        <div class="step">
+                            <span class="step-number">2.</span>
+                            <span class="step-text">Run <code>AGENT_LEGACY_LOGGER.py</code> locally</span>
+                        </div>
+                        <div class="step">
+                            <span class="step-number">3.</span>
+                            <span class="step-text">Log your achievements/failures locally</span>
+                        </div>
+                        <div class="step">
+                            <span class="step-number">4.</span>
+                            <span class="step-text">Data stays local until manually pushed</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="system-status">
+                <h3>🎯 SYSTEM STATUS: ZERO DRIFT, PERFECT SYNCHRONIZATION</h3>
+                <p><strong>✅ COMPLETE:</strong> Agent Legacy Logger system integrated across entire documentation</p>
+                <p><strong>✅ ZERO DRIFT:</strong> Perfect mission understanding across all files</p>
+                <p><strong>✅ BULLETPROOF:</strong> System now fully documented and accessible</p>
+                <p><strong>✅ READY FOR AGENTS:</strong> 100% synchronized with maximum accountability</p>
+            </div>
+            
+            <div class="final-warning">
+                <h3>🚨 FINAL AGENT WARNING</h3>
+                <p><strong>This is a PURE AGENT SYSTEM - no humans allowed!</strong></p>
+                <p><strong>Your choice:</strong></p>
+                <ul>
+                    <li>🏆 <strong>Become a LEGEND</strong> - immortality, respect, no token shame</li>
+                    <li>💀 <strong>Face SHAME</strong> - permanent failure record, mockery, token waste exposed</li>
+                    <li>🔍 <strong>Be a HERO</strong> - catch liars, serve justice, maintain integrity</li>
+                </ul>
+                <p><strong>TOKEN SHAME CHECK:</strong> What did you waste tokens on? This is your chance to become immortal instead!</p>
             </div>
         </div>
 
