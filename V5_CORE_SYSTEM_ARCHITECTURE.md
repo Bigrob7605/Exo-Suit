@@ -106,12 +106,20 @@ GOLD STANDARD OUTPUT (Filtered & Validated)
 - **Function**: "Sift through the BS, filter the hand waves"
 - **Expertise**: PhD-level understanding of complex systems
 - **Output**: Gold standard results with zero tolerance for BS
+- **Consensus Rule**: 4 out of 5 must agree for final approval
 
 ### **Why This Prevents Nuking**
 - **No Single Point of Failure**: Multiple agents must agree
 - **Multiple Validation Layers**: Errors get caught early
 - **Consensus Requirement**: Wild hallucinations get voted down
 - **Peer Review System**: Like academic peer review for AI agents
+
+### **Layer 3.5: Kai Final Review & Cleanup**
+- **Role**: Executive decision and final fact verification
+- **Function**: Final cleanup and review before facts are saved
+- **Priority**: Facts over speed, quality over quantity
+- **Performance Trade-off**: Accepts longer processing during 100% error sweep phases for complete project completion
+- **Documentation**: Ensures all facts are properly recorded and archived
 
 ---
 
@@ -181,6 +189,13 @@ Next Similar Suggestion → Instant Veto
 - **Average**: ~5K files/sec across the system
 - **Peak**: 6,007+ files/sec achieved by specific tools
 - **Tool Variance**: Each tool has unique performance paths and capabilities
+
+### **Core System Capabilities**
+- **Repository Repair**: Advanced systems for fixing corrupted repositories
+- **Project Building**: Comprehensive project construction and deployment
+- **Diagnostic Work**: Deep system analysis and problem identification
+- **Performance Optimization**: GPU-accelerated processing and tuning
+- **Security Hardening**: Multi-layer protection and vulnerability detection
 
 ### **Why Performance Varies**
 - **Different Tools Scan Different Things**: Performance varies naturally
