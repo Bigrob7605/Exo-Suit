@@ -1,0 +1,120 @@
+{
+  "stress_test_summary": {
+    "timestamp": "2025-08-18T21:55:11.340957+00:00",
+    "test_type": "UCML_STRESS_TEST_CLEAR_WINNER",
+    "total_tests": 9,
+    "average_compression": 336.22222222222223,
+    "maximum_compression": 840.0,
+    "total_savings": 3017
+  },
+  "detailed_results": {
+    "ultra_short": {
+      "category": "ultra_short",
+      "original_size": 2,
+      "glyph_size": 1,
+      "compression_ratio": 2.0,
+      "savings": 1,
+      "processing_time": 0.0006287097930908203,
+      "prompt_id": "3411510175273651765"
+    },
+    "short": {
+      "category": "short",
+      "original_size": 11,
+      "glyph_size": 1,
+      "compression_ratio": 11.0,
+      "savings": 10,
+      "processing_time": 0.0005855560302734375,
+      "prompt_id": "-7538101336546250832"
+    },
+    "medium": {
+      "category": "medium",
+      "original_size": 52,
+      "glyph_size": 1,
+      "compression_ratio": 52.0,
+      "savings": 51,
+      "processing_time": 0.0004973411560058594,
+      "prompt_id": "5771956435542995335"
+    },
+    "long": {
+      "category": "long",
+      "original_size": 168,
+      "glyph_size": 1,
+      "compression_ratio": 168.0,
+      "savings": 167,
+      "processing_time": 0.0004343986511230469,
+      "prompt_id": "8699118035973340951"
+    },
+    "ultra_long": {
+      "category": "ultra_long",
+      "original_size": 315,
+      "glyph_size": 1,
+      "compression_ratio": 315.0,
+      "savings": 314,
+      "processing_time": 0.0004792213439941406,
+      "prompt_id": "2442835443231135948"
+    },
+    "code_sample": {
+      "category": "code_sample",
+      "original_size": 450,
+      "glyph_size": 1,
+      "compression_ratio": 450.0,
+      "savings": 449,
+      "processing_time": 0.0004978179931640625,
+      "prompt_id": "-8308330491945556430"
+    },
+    "technical_document": {
+      "category": "technical_document",
+      "original_size": 619,
+      "glyph_size": 1,
+      "compression_ratio": 619.0,
+      "savings": 618,
+      "processing_time": 0.0005555152893066406,
+      "prompt_id": "-7570385255026392014"
+    },
+    "repetitive_pattern": {
+      "category": "repetitive_pattern",
+      "original_size": 840,
+      "glyph_size": 1,
+      "compression_ratio": 840.0,
+      "savings": 839,
+      "processing_time": 0.0003991127014160156,
+      "prompt_id": "2128146799690550053"
+    },
+    "mixed_content": {
+      "category": "mixed_content",
+      "original_size": 569,
+      "glyph_size": 1,
+      "compression_ratio": 569.0,
+      "savings": 568,
+      "processing_time": 0.00036907196044921875,
+      "prompt_id": "-3518975248289437736"
+    }
+  },
+  "performance_analysis": {
+    "compression_ratios": [
+      2.0,
+      11.0,
+      52.0,
+      168.0,
+      315.0,
+      450.0,
+      619.0,
+      840.0,
+      569.0
+    ],
+    "statistics": {
+      "mean": 336.22222222222223,
+      "median": 315.0,
+      "std": 284.38853617221076,
+      "min": 2.0,
+      "max": 840.0
+    }
+  },
+  "recommendations": [
+    "Continue optimizing the CLEAR WINNER system",
+    "Focus on achieving 100,000x compression consistently",
+    "Explore advanced compression algorithms",
+    "Test with even larger datasets",
+    "Implement real-world use case testing"
+  ]
+}
