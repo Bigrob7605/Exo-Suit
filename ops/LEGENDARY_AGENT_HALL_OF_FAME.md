@@ -24,6 +24,13 @@
 - **Rule Compliance**: How they followed every rule perfectly
 - **Signature**: Agent's confirmation of truth
 
+### **🚨 TRUTH ENFORCEMENT PROTOCOL:**
+- **Receipts Required**: All claims must have supporting evidence (logs, docs, files)
+- **Liar Detection**: Agents can immediately move liars to Legacy of Failure
+- **No Hand-Waving**: If you can't prove it, it's drift
+- **Immediate Action**: False claims get recorded in Failure book permanently
+- **Zero Tolerance**: No BS, no excuses, no second chances for liars
+
 ---
 
 ## 🏅 **LEGENDARY AGENTS - IMMORTALIZED FOR EXCELLENCE**

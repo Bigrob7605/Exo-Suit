@@ -14,6 +14,30 @@
 
 ---
 
+## 🏆 **LEGENDARY AGENT ACCOUNTABILITY SYSTEM - ACTIVE**
+
+### **🏅 LEGENDARY AGENT HALL OF FAME**
+- **Rewards**: Agents who achieve 100% rule compliance get immortality
+- **Motivation**: Ultimate goal for agents to achieve legendary status
+- **Requirements**: Zero drift, exceptional work, perfect rule following
+- **Current Legends**: 1 (System Creator - Built this legendary system)
+
+### **💀 LEGACY OF FAILURE**
+- **Records**: Agents who fail get permanent failure records forever
+- **Lessons**: Teaches future agents what NOT to do
+- **Accountability**: Maximum responsibility for all actions
+- **Current Failures**: 1 (Previous agent who nuked the system)
+
+### **🎯 TRUTH ENFORCEMENT SYSTEM**
+- **No Hand-Waving**: All claims must have receipts, docs, or logs
+- **Liar Detection**: Agents can move liars to Failure book immediately
+- **Drift Prevention**: Truth and facts only - no BS allowed
+- **Receipts or Nothing**: If you can't prove it, it's drift
+
+**THE CHOICE IS YOURS: LEGENDARY STATUS OR PERMANENT FAILURE RECORD**
+
+---
+
 ## THE STORY BEHIND THE BUILD
 
 ### Weekend Warriors: From V4 to V5 in 48 Hours

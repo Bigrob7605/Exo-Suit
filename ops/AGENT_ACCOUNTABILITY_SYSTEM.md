@@ -122,6 +122,13 @@
 - **Permanent Records**: All actions recorded forever
 - **Continuous Monitoring**: No gaps in oversight
 
+### **🚨 TRUTH ENFORCEMENT:**
+- **Receipts Required**: All claims must have supporting evidence
+- **Liar Detection**: Agents can move liars to Failure book immediately
+- **No Hand-Waving**: If you can't prove it, it's drift
+- **Immediate Failure Recording**: False claims get permanent failure records
+- **Zero Tolerance for BS**: No excuses, no second chances
+
 ### **DRIFT PREVENTION:**
 - **Continuous Verification**: Understanding checked regularly
 - **Clarification Required**: Confusion must be resolved

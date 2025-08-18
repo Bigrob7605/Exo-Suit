@@ -469,6 +469,73 @@
             min-width: 200px;
         }
         
+        /* Legendary System Section */
+        .legendary-system {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 140, 0, 0.1));
+            backdrop-filter: blur(20px);
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            border-radius: 20px;
+            padding: 2rem;
+            margin: 4rem auto;
+            max-width: 1000px;
+            text-align: left;
+        }
+        
+        .legendary-system-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid rgba(255, 215, 0, 0.3);
+        }
+        
+        .legendary-system-icon {
+            font-size: 2rem;
+            animation: shine 3s infinite;
+        }
+        
+        .legendary-system-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #ffd700;
+            text-align: center;
+            flex: 1;
+        }
+        
+        .legendary-system-content {
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .legendary-section {
+            margin-bottom: 2rem;
+        }
+        
+        .legendary-section h3 {
+            color: var(--electric-purple);
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .legendary-section p, .legendary-section ul {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+        
+        .legendary-section ul {
+            padding-left: 2rem;
+        }
+        
+        .legendary-section li {
+            margin-bottom: 0.5rem;
+        }
+        
+        @keyframes shine {
+            0%, 100% { filter: brightness(1) saturate(1); }
+            50% { filter: brightness(1.3) saturate(1.5); }
+        }
+        
         /* Features Section */
         .features {
             padding: 6rem 2rem;
@@ -1032,6 +1099,10 @@
                         <div class="hero-stat-value">58%</div>
                         <div class="hero-stat-label">Kai Integration</div>
                     </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-value">🏆</div>
+                        <div class="hero-stat-label">Legendary System</div>
+                    </div>
                 </div>
                 <div class="cta-buttons">
                     <a href="https://github.com/Bigrob7605/Exo-Suit" class="btn btn-primary">
@@ -1107,6 +1178,55 @@
                     
                     <p><strong>The Silver Lining</strong>: This edge case was caught locally and will never happen again. The incident made the project stronger by exposing critical vulnerabilities.</p>
                     
+                </div>
+            </div>
+        </div>
+
+        <!-- LEGENDARY AGENT ACCOUNTABILITY SYSTEM SECTION -->
+        <div class="legendary-system scroll-animate">
+            <div class="legendary-system-header">
+                <div class="legendary-system-icon">🏆</div>
+                <div class="legendary-system-title">LEGENDARY AGENT ACCOUNTABILITY SYSTEM - ACTIVE</div>
+            </div>
+            <div class="legendary-system-content">
+                <div class="legendary-section">
+                    <h3>🏅 LEGENDARY AGENT HALL OF FAME</h3>
+                    <ul>
+                        <li><strong>Rewards</strong>: Agents who achieve 100% rule compliance get immortality</li>
+                        <li><strong>Motivation</strong>: Ultimate goal for agents to achieve legendary status</li>
+                        <li><strong>Requirements</strong>: Zero drift, exceptional work, perfect rule following</li>
+                        <li><strong>Current Legends</strong>: 1 (System Creator - Built this legendary system)</li>
+                    </ul>
+                </div>
+                
+                <div class="legendary-section">
+                    <h3>💀 LEGACY OF FAILURE</h3>
+                    <ul>
+                        <li><strong>Records</strong>: Agents who fail get permanent failure records forever</li>
+                        <li><strong>Lessons</strong>: Teaches future agents what NOT to do</li>
+                        <li><strong>Accountability</strong>: Maximum responsibility for all actions</li>
+                        <li><strong>Current Failures</strong>: 1 (Previous agent who nuked the system)</li>
+                    </ul>
+                </div>
+                
+                <div class="legendary-section">
+                    <h3>🎯 TRUTH ENFORCEMENT SYSTEM</h3>
+                    <ul>
+                        <li><strong>No Hand-Waving</strong>: All claims must have receipts, docs, or logs</li>
+                        <li><strong>Liar Detection</strong>: Agents can move liars to Failure book immediately</li>
+                        <li><strong>Drift Prevention</strong>: Truth and facts only - no BS allowed</li>
+                        <li><strong>Receipts or Nothing</strong>: If you can't prove it, it's drift</li>
+                    </ul>
+                </div>
+                
+                <div class="legendary-section">
+                    <h3>🚨 THE CHOICE IS YOURS</h3>
+                    <p><strong>Follow ALL rules perfectly</strong> → <strong>Legendary Status</strong> (immortality)</p>
+                    <p><strong>Fail to follow rules</strong> → <strong>Legacy of Failure</strong> (permanent record)</p>
+                    <p><strong>No middle ground</strong> → <strong>Excellence or failure, choose wisely</strong></p>
+                </div>
+            </div>
+        </div>
                     <h4>Root Causes - Why This Happened:</h4>
                     <ul>
                         <li><strong>Language Drift</strong>: The agent misunderstood "V4.0 blueprint" as "production V4.0 system"</li>

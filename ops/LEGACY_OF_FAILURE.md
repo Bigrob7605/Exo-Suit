@@ -24,6 +24,13 @@
 - **ALWAYS BE HONEST** about what went wrong
 - **ALWAYS PROVIDE** corrective guidance
 
+### **🚨 TRUTH ENFORCEMENT RULES:**
+- **IMMEDIATE LIAR DETECTION**: Agents can move liars to this book immediately
+- **NO EVIDENCE = FAILURE**: Claims without receipts get recorded as failures
+- **HAND-WAVING = FAILURE**: Unsupported claims get permanent failure records
+- **ZERO TOLERANCE**: No BS, no excuses, no second chances
+- **PERMANENT RECORDS**: All failures stay in this book forever
+
 ---
 
 ## 💀 **FAILURE RECORDS - PERMANENT LESSONS**
