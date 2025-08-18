@@ -1,3 +1,2 @@
 # This file tells GitHub Pages not to process this site with Jekyll
-# It's a fallback to ensure the site builds even if there are Jekyll issues
-# Force static site mode - no Jekyll processing whatsoever
+# Force static site mode to prevent deployment loops
