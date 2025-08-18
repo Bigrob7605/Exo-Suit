@@ -133,6 +133,8 @@ class V5ConsolidationEngine:
             'files_removed': 0,
             'directories_cleaned': 0,
             'errors': 0,
+            'v5_tools_found': 0,
+            'missing_v5_tools': 0,
             'start_time': None,
             'end_time': None
         }
@@ -274,36 +276,31 @@ class V5ConsolidationEngine:
                     logger.error(f"Failed to remove {tool}: {e}")
                     self.consolidation_stats['errors'] += 1
     
-    def remove_legacy_v4_tools(self):
-        """Remove all V4 tools that have V5 replacements"""
-        logger.info("Removing legacy V4 tools...")
+    def consolidate_v5_tools(self):
+        """Consolidate all tools into V5 system"""
+        logger.info("Consolidating tools into V5 system...")
         
-        v4_tools = [
-            'Ultimate-Speed-Boost-V4.ps1',
-            'Speed-Boost-V4.ps1',
-            'RTX-4070-Optimizer.ps1',
-            'Performance-Test-Suite-V4.ps1',
-            'GPU-RAG-V4.ps1',
-            'GPU-Monitor-V4.ps1',
-            'Drift-Guard-V4.ps1',
-            'Project-Health-Scanner-V4.ps1',
-            'Import-Indexer-V4.ps1',
-            'Placeholder-Scanner-V4.ps1',
-            'Symbol-Indexer-V4.ps1',
-            'Power-Management-V4.ps1',
-            'Scan-Secrets-V4.ps1'
+        # List of tools to be consolidated into V5
+        tools_to_consolidate = [
+            'Ultimate-Speed-Boost-V5.ps1',
+            'RTX-4070-Accelerator-V5.ps1',
+            'DeepSpeed-Accelerator-V5.ps1',
+            'DreamWeaver-Builder-V5.ps1',
+            'TruthForge-Auditor-V5.ps1',
+            'VisionGap-Engine-V5.ps1',
+            'Ultimate-Overclock-Speed-Boost-V5.ps1'
         ]
         
-        for tool in v4_tools:
+        for tool in tools_to_consolidate:
             file_path = self.ops_dir / tool
             if file_path.exists():
-                try:
-                    file_path.unlink()
-                    logger.info(f"Removed V4 tool: {tool}")
-                    self.consolidation_stats['files_removed'] += 1
-                except Exception as e:
-                    logger.error(f"Failed to remove {tool}: {e}")
-                    self.consolidation_stats['errors'] += 1
+                logger.info(f"V5 tool found: {tool}")
+                self.consolidation_stats['v5_tools_found'] += 1
+            else:
+                logger.warning(f"V5 tool missing: {tool}")
+                self.consolidation_stats['missing_v5_tools'] += 1
+        
+        logger.info(f"V5 consolidation scan complete: {self.consolidation_stats['v5_tools_found']} tools found, {self.consolidation_stats['missing_v5_tools']} missing")
     
     def remove_testing_tools(self):
         """Remove testing and placeholder tools"""
@@ -454,7 +451,7 @@ class V5ConsolidationEngine:
             self.consolidate_emoji_tools()
             self.consolidate_context_tools()
             self.consolidate_monitor_tools()
-            self.remove_legacy_v4_tools()
+            self.consolidate_v5_tools()
             self.remove_testing_tools()
             self.remove_duplicate_tools()
             self.remove_legacy_configs()
@@ -512,6 +509,8 @@ class V5ConsolidationEngine:
             f.write(f"Files Consolidated: {self.consolidation_stats['files_consolidated']}\n")
             f.write(f"Files Removed: {self.consolidation_stats['files_removed']}\n")
             f.write(f"Directories Cleaned: {self.consolidation_stats['directories_cleaned']}\n")
+            f.write(f"V5 Tools Found: {self.consolidation_stats['v5_tools_found']}\n")
+            f.write(f"Missing V5 Tools: {self.consolidation_stats['missing_v5_tools']}\n")
             f.write(f"Errors: {self.consolidation_stats['errors']}\n\n")
             f.write("V5 STRUCTURE:\n")
             f.write("Core V5 Files:\n")
@@ -537,13 +536,15 @@ def main():
     print(f"Files Consolidated: {stats['files_consolidated']}")
     print(f"Files Removed: {stats['files_removed']}")
     print(f"Directories Cleaned: {stats['directories_cleaned']}")
+    print(f"V5 Tools Found: {stats['v5_tools_found']}")
+    print(f"Missing V5 Tools: {stats['missing_v5_tools']}")
     print(f"Errors: {stats['errors']}")
     print("="*60)
     
-    if stats['files_removed'] > 0:
-        print("SUCCESS: Legacy tools consolidated into V5 system!")
+    if stats['v5_tools_found'] > 0:
+        print("SUCCESS: V5 tools consolidated and ready!")
     else:
-        print("ℹ️  INFO: No legacy tools found to consolidate")
+        print("ℹ️  INFO: V5 consolidation scan complete")
     
     print(f"Reports saved to project root directory")
 

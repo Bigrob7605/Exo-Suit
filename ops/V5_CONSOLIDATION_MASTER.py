@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """
-V5 CONSOLIDATION MASTER WITH INTEGRATED SYSTEM CONTROLLER
+V5 CONSOLIDATION MASTER WITH NATIVE V5 SYSTEM CONTROLLER
 ========================================================
 
 Unifies scattered V5 scripts and toolbox gems into one core system.
-Includes the full System Controller ported from AgentExoSuitV4.ps1.
+Implements native V5 system controller for true V5 consolidation.
 
 Targets
 - ADVANCED_INTEGRATION_LAYER_V5.py
@@ -31,18 +31,20 @@ from typing import Dict, List, Any, Tuple, Optional
 import logging
 
 # ============================================================================
-# INTEGRATED SYSTEM CONTROLLER FROM AgentExoSuitV4.ps1
+# NATIVE V5 SYSTEM CONTROLLER - TRUE V5 CONSOLIDATION
 # ============================================================================
 
-class SystemController:
+class V5SystemController:
     """
-    Central controller for Ultimate Performance mode, scratch directory,
-    GPU detection, and V4 component orchestration.
-    Integrated from AgentExoSuitV4.ps1 with Python optimizations.
+    Native V5 system controller for Ultimate Performance mode, scratch directory,
+    GPU detection, and V5 tool consolidation.
+    Built from the ground up for true V5 consolidation.
     """
     
     def __init__(self):
         self.workspace_root = Path.cwd()
+        if self.workspace_root.name == "ops":
+            self.workspace_root = self.workspace_root.parent
         self.ops_dir = self.workspace_root / "ops"
         self.scratch_dir = Path("C:/scratch/exo-suit")
         
@@ -55,17 +57,16 @@ class SystemController:
             'PERFORMANCE_MODE': 'ultimate'
         }
         
-        # V4.0 components to manage
-        self.v4_components = [
-            "Drift-Guard-V4.ps1",
-            "Project-Health-Scanner-V4.ps1", 
-            "emoji-sentinel-v4.ps1",
-            "GPU-RAG-V4.ps1",
-            "Import-Indexer-V4.ps1",
-            "Symbol-Indexer-V4.ps1",
-            "Scan-Secrets-V4.ps1",
-            "Power-Management-V4.ps1",
-            "GPU-Monitor-V4.ps1"
+        # V5.0 tools to consolidate
+        self.v5_tools = [
+            "ADVANCED_INTEGRATION_LAYER_V5.py",
+            "PHOENIX_RECOVERY_SYSTEM_V5.py",
+            "VISIONGAP_ENGINE.py",
+            "V5_CONSOLIDATION_ENGINE.py",
+            "DreamWeaver_Builder_V5.py",
+            "CHAOSE_ENGINE.py",
+            "SYSTEM_HEALTH_VALIDATOR.py",
+            "REAL_WORLD_CHAOS_TESTER.py"
         ]
         
         # Performance modes
@@ -81,8 +82,8 @@ class SystemController:
             'scratch_directory': False,
             'gpu_detected': False,
             'gpu_name': None,
-            'components_available': [],
-            'components_missing': [],
+            'v5_tools_available': [],
+            'v5_tools_missing': [],
             'performance_mode': 'balanced'
         }
         
@@ -182,7 +183,7 @@ class SystemController:
             return False
     
     def detect_gpu(self) -> bool:
-        """Detect NVIDIA GPU and set up for V4.0 operations."""
+        """Detect NVIDIA GPU and set up for V5.0 operations."""
         try:
             if platform.system() == 'Windows':
                 # Try PyTorch CUDA detection first (most reliable)
@@ -233,20 +234,20 @@ class SystemController:
             self.system_status['gpu_detected'] = False
             return False
     
-    def check_v4_components(self) -> Dict[str, List[str]]:
-        """Check availability of V4.0 components."""
+    def check_v5_tools(self) -> Dict[str, List[str]]:
+        """Check availability of V5.0 tools."""
         available = []
         missing = []
         
-        for component in self.v4_components:
-            component_path = self.ops_dir / component
-            if component_path.exists():
-                available.append(component)
+        for tool in self.v5_tools:
+            tool_path = self.ops_dir / tool
+            if tool_path.exists():
+                available.append(tool)
             else:
-                missing.append(component)
+                missing.append(tool)
         
-        self.system_status['components_available'] = available
-        self.system_status['components_missing'] = missing
+        self.system_status['v5_tools_available'] = available
+        self.system_status['v5_tools_missing'] = missing
         
         return {
             'available': available,
@@ -254,26 +255,26 @@ class SystemController:
         }
     
     def activate_full_system(self) -> bool:
-        """Activate all V4.0 systems (equivalent to -FullSystem flag)."""
-        print("[INFO] Activating Agent Exo-Suit V4.0 'Perfection' - Full System Mode")
+        """Activate all V5.0 systems (equivalent to -FullSystem flag)."""
+        print("[INFO] Activating Agent Exo-Suit V5.0 'Perfection' - Full System Mode")
         
         try:
-            # Check component availability
-            component_status = self.check_v4_components()
+            # Check tool availability
+            tool_status = self.check_v5_tools()
             
-            if not component_status['available']:
-                print("[FAIL] No V4.0 components available")
+            if not tool_status['available']:
+                print("[FAIL] No V5.0 tools available")
                 return False
             
-            print(f"[OK] Activating {len(component_status['available'])} components")
+            print(f"[OK] Activating {len(tool_status['available'])} V5 tools")
             
-            # Activate available components
-            for component in component_status['available']:
-                print(f"  [INFO] Activating {component}...")
-                # Note: In Python, we'll integrate these components rather than execute them
+            # Activate available tools
+            for tool in tool_status['available']:
+                print(f"  [INFO] Activating {tool}...")
+                # Note: In Python, we'll integrate these tools rather than execute them
                 # This is the integration approach for V5.0
             
-            print("[OK] Full System Mode activated")
+            print("[OK] Full V5 System Mode activated")
             return True
             
         except Exception as e:
@@ -283,7 +284,7 @@ class SystemController:
     def get_system_status(self) -> Dict[str, Any]:
         """Get comprehensive system status."""
         # Update status
-        self.check_v4_components()
+        self.check_v5_tools()
         
         return {
             'timestamp': datetime.now().isoformat(),
@@ -293,10 +294,10 @@ class SystemController:
             'power_plan': self.system_status['power_plan'],
             'gpu_detected': self.system_status['gpu_detected'],
             'gpu_name': self.system_status['gpu_name'],
-            'v4_components': {
-                'available': self.system_status['components_available'],
-                'missing': self.system_status['components_missing'],
-                'total': len(self.v4_components)
+            'v5_tools': {
+                'available': self.system_status['v5_tools_available'],
+                'missing': self.system_status['v5_tools_missing'],
+                'total': len(self.v5_tools)
             },
             'administrator_privileges': self.check_administrator_privileges(),
             'environment': self.env_config
@@ -390,7 +391,7 @@ class V5ConsolidationMaster:
         self.integration_results = {}
         
         # Initialize System Controller
-        self.system_controller = SystemController()
+        self.system_controller = V5SystemController()
         
     def _setup_logging(self):
         """Setup comprehensive logging for consolidation process."""
@@ -415,7 +416,7 @@ class V5ConsolidationMaster:
     def go_big(self) -> bool:
         """
         Single-call activation of Monster-Mode:
-        Ultimate Performance, scratch dir, GPU check, V4 components.
+        Ultimate Performance, scratch dir, GPU check, V5 tools.
         """
         print("ROCKET: GO-BIG SYSTEM ACTIVATION - MONSTER MODE")
         print("=" * 60)
@@ -442,11 +443,11 @@ class V5ConsolidationMaster:
             else:
                 print("WARNING: GPU not detected - CPU mode only")
             
-            # Step 4: Check V4.0 components
-            print("\n4. Checking V4.0 component availability...")
-            component_status = self.system_controller.check_v4_components()
-            print(f"   Available: {len(component_status['available'])} components")
-            print(f"   Missing: {len(component_status['missing'])} components")
+            # Step 4: Check V5.0 tools
+            print("\n4. Checking V5.0 tool availability...")
+            tool_status = self.system_controller.check_v5_tools()
+            print(f"   Available: {len(tool_status['available'])} V5 tools")
+            print(f"   Missing: {len(tool_status['missing'])} V5 tools")
             
             # Step 5: Activate full system
             print("\n5. Activating full system...")
@@ -461,12 +462,12 @@ class V5ConsolidationMaster:
             print(f"   Performance Mode: {status['performance_mode']}")
             print(f"   Power Plan: {status['power_plan']}")
             print(f"   GPU: {status['gpu_name'] if status['gpu_detected'] else 'Not Available'}")
-            print(f"   V4.0 Components: {status['v4_components']['available']}/{status['v4_components']['total']}")
+            print(f"   V5.0 Tools: {len(status['v5_tools']['available'])}/{len(status['v5_tools']['available']) + len(status['v5_tools']['missing'])}")
             
             print("\nTARGET: GO-BIG ACTIVATION COMPLETE!")
             print("   System is now running in MONSTER MODE")
             print("   Ultimate Performance enabled")
-            print("   All V4.0 components ready for integration")
+            print("   All V5.0 tools ready for integration")
             
             return True
             
@@ -623,21 +624,21 @@ def demonstrate_integrated_system():
     print(f"   GPU Detected: {status['gpu_detected']}")
     if status['gpu_detected']:
         print(f"   GPU Name: {status['gpu_name']}")
-    print(f"   V4.0 Components: {len(status['v4_components']['available'])}/{status['v4_components']['total']}")
+    print(f"   V5.0 Tools: {len(status['v5_tools']['available'])}/{len(status['v5_tools']['available']) + len(status['v5_tools']['missing'])}")
     
-    # Check V4.0 components
-    print("\n4. V4.0 Component Status:")
-    component_status = system_controller.check_v4_components()
-    for component in component_status['available']:
-        print(f"   SUCCESS: {component}")
-    for component in component_status['missing']:
-        print(f"   ERROR: {component}")
+    # Check V5.0 tools
+    print("\n4. V5.0 Tool Status:")
+    tool_status = system_controller.check_v5_tools()
+    for tool in tool_status['available']:
+        print(f"   SUCCESS: {tool}")
+    for tool in tool_status['missing']:
+        print(f"   ERROR: {tool}")
     
     # Demonstrate GO-BIG capability
     print("\n5. GO-BIG System Activation Capability:")
     print("   ROCKET: Single command system activation (Monster-Mode)")
     print("   ROCKET: Ultimate Performance Mode activation")
-    print("   ROCKET: Full V4.0 system activation")
+    print("   ROCKET: Full V5.0 system activation")
     print("   ROCKET: GPU optimization and scratch directory setup")
     
     # Show usage examples

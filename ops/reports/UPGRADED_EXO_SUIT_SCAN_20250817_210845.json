@@ -1,0 +1,489 @@
+{
+  "scan_timestamp": "2025-08-17T21:08:45.606543",
+  "target_project": "../Universal Open Science Toolbox With Kai - Copy",
+  "context_data": {
+    "white_papers": [
+      {
+        "filename": "API_REFERENCE.md",
+        "size": 6846,
+        "key_topics": [
+          "\ud83d\udcda API REFERENCE - OSS Platinum Security Edition + V1.0 Enhanced",
+          "Overview",
+          "Authentication",
+          "Login",
+          "Core Endpoints",
+          "\ud83d\udcca Current State Matrix:",
+          "Response:",
+          "Response:",
+          "**36.7s runtime** with 3-model ensemble and 5-agent consensus",
+          "**Zero hallucination** - generated executable code for complex differential equations"
+        ],
+        "status_indicators": [
+          "operational",
+          "critical"
+        ],
+        "architecture_details": [
+          "ensemble_system",
+          "consensus_system",
+          "wsgi_server"
+        ]
+      },
+      {
+        "filename": "AUDIT_TRAIL_PROTECTION_SYSTEM.md",
+        "size": 7990,
+        "key_topics": [
+          "\ud83d\udd12 Audit Trail Protection System",
+          "\ud83c\udfaf **SYSTEM OVERVIEW**",
+          "**\ud83d\udd10 Key Features**",
+          "\ud83d\udccb **SYSTEM COMPONENTS**",
+          "**1. Audit Signature Generator**",
+          "Universal Open Science Toolbox With Kai",
+          "Date:",
+          "Status:",
+          "**Cryptographic Hash Signatures** - SHA256 hash verification",
+          "**Automatic Integration** - Seamless integration with Drift Shield"
+        ],
+        "status_indicators": [
+          "operational",
+          "critical",
+          "in_progress"
+        ],
+        "architecture_details": []
+      },
+      {
+        "filename": "BRUTAL_CHECKS_REPORT_20250809_081646.md",
+        "size": 2586,
+        "key_topics": [
+          "Brutal Checks with Self-Heal Report - 20250809_081646",
+          "\ud83d\udea8 Executive Summary",
+          "\ud83d\udcca Check Results",
+          "\u2705 Server Availability",
+          "\u2705 Model Availability",
+          "Overall Status",
+          "Success Rate",
+          "Timestamp",
+          "**Overall Status**: FAIL",
+          "**Success Rate**: 50.0% (4/8)"
+        ],
+        "status_indicators": [
+          "operational",
+          "failed",
+          "critical"
+        ],
+        "architecture_details": []
+      },
+      {
+        "filename": "BRUTAL_CHECKS_REPORT_20250809_081743.md",
+        "size": 2567,
+        "key_topics": [
+          "Brutal Checks with Self-Heal Report - 20250809_081743",
+          "\ud83d\udea8 Executive Summary",
+          "\ud83d\udcca Check Results",
+          "\u2705 Server Availability",
+          "\u2705 Model Availability",
+          "Overall Status",
+          "Success Rate",
+          "Timestamp",
+          "**Overall Status**: WARN",
+          "**Success Rate**: 62.5% (5/8)"
+        ],
+        "status_indicators": [
+          "operational",
+          "failed",
+          "critical"
+        ],
+        "architecture_details": []
+      },
+      {
+        "filename": "BRUTAL_CHECKS_REPORT_20250809_081827.md",
+        "size": 2567,
+        "key_topics": [
+          "Brutal Checks with Self-Heal Report - 20250809_081827",
+          "\ud83d\udea8 Executive Summary",
+          "\ud83d\udcca Check Results",
+          "\u2705 Server Availability",
+          "\u2705 Model Availability",
+          "Overall Status",
+          "Success Rate",
+          "Timestamp",
+          "**Overall Status**: WARN",
+          "**Success Rate**: 62.5% (5/8)"
+        ],
+        "status_indicators": [
+          "operational",
+          "failed",
+          "critical"
+        ],
+        "architecture_details": []
+      },
+      {
+        "filename": "BRUTAL_CHECKS_REPORT_20250809_081854.md",
+        "size": 2567,
+        "key_topics": [
+          "Brutal Checks with Self-Heal Report - 20250809_081854",
+          "\ud83d\udea8 Executive Summary",
+          "\ud83d\udcca Check Results",
+          "\u2705 Server Availability",
+          "\u2705 Model Availability",
+          "Overall Status",
+          "Success Rate",
+          "Timestamp",
+          "**Overall Status**: WARN",
+          "**Success Rate**: 62.5% (5/8)"
+        ],
+        "status_indicators": [
+          "operational",
+          "failed",
+          "critical"
+        ],
+        "architecture_details": []
+      },
+      {
+        "filename": "BRUTAL_CHECKS_REPORT_20250809_082918.md",
+        "size": 2567,
+        "key_topics": [
+          "Brutal Checks with Self-Heal Report - 20250809_082918",
+          "\ud83d\udea8 Executive Summary",
+          "\ud83d\udcca Check Results",
+          "\u2705 Server Availability",
+          "\u2705 Model Availability",
+          "Overall Status",
+          "Success Rate",
+          "Timestamp",
+          "**Overall Status**: WARN",
+          "**Success Rate**: 62.5% (5/8)"
+        ],
+        "status_indicators": [
+          "operational",
+          "failed",
+          "critical"
+        ],
+        "architecture_details": []
+      },
+      {
+        "filename": "BRUTAL_CHECKS_REPORT_20250809_082947.md",
+        "size": 2567,
+        "key_topics": [
+          "Brutal Checks with Self-Heal Report - 20250809_082947",
+          "\ud83d\udea8 Executive Summary",
+          "\ud83d\udcca Check Results",
+          "\u2705 Server Availability",
+          "\u2705 Model Availability",
+          "Overall Status",
+          "Success Rate",
+          "Timestamp",
+          "**Overall Status**: WARN",
+          "**Success Rate**: 62.5% (5/8)"
+        ],
+        "status_indicators": [
+          "operational",
+          "failed",
+          "critical"
+        ],
+        "architecture_details": []
+      },
+      {
+        "filename": "BRUTAL_CHECKS_REPORT_20250809_083008.md",
+        "size": 2567,
+        "key_topics": [
+          "Brutal Checks with Self-Heal Report - 20250809_083008",
+          "\ud83d\udea8 Executive Summary",
+          "\ud83d\udcca Check Results",
+          "\u2705 Server Availability",
+          "\u2705 Model Availability",
+          "Overall Status",
+          "Success Rate",
+          "Timestamp",
+          "**Overall Status**: WARN",
+          "**Success Rate**: 62.5% (5/8)"
+        ],
+        "status_indicators": [
+          "operational",
+          "failed",
+          "critical"
+        ],
+        "architecture_details": []
+      },
+      {
+        "filename": "BRUTAL_CHECKS_REPORT_20250809_083052.md",
+        "size": 4620,
+        "key_topics": [
+          "Brutal Checks with Self-Heal Report - 20250809_083052",
+          "\ud83d\udea8 Executive Summary",
+          "\ud83d\udcca Check Results",
+          "\u274c Server Availability",
+          "\u2705 Model Availability",
+          "Overall Status",
+          "Success Rate",
+          "Timestamp",
+          "**Overall Status**: FAIL",
+          "**Success Rate**: 50.0% (4/8)"
+        ],
+        "status_indicators": [
+          "operational",
+          "failed",
+          "critical"
+        ],
+        "architecture_details": []
+      },
+      {
+        "filename": "README.md",
+        "size": 9246,
+        "key_topics": [
+          "\ud83d\udee1\ufe0f Universal Open Science Toolbox With Kai",
+          "OSS Platinum Security Edition",
+          "\ud83d\ude80 Quick Start",
+          "Clone and install",
+          "Download assets (with automatic savepoint)",
+          "\ud83d\udcca [CURRENT_STATE_MATRIX.md](Project%20White%20Papers/CURRENT_STATE_MATRIX.md)",
+          "The most secure, self-healing, idiot-proof open-source AI agent system ever built.",
+          "100% validation success rate",
+          "**100% validation success rate** (5/5 WSGI endpoints, 100% pass)",
+          "**Zero drift, zero vaporware, zero test users, zero hidden endpoints**"
+        ],
+        "status_indicators": [
+          "operational",
+          "failed",
+          "critical"
+        ]
+      },
+      {
+        "filename": "AGENT_READ_FIRST.md",
+        "size": 11625,
+        "key_topics": [
+          "\ud83d\udea8 AGENT READ FIRST - CRITICAL SYSTEM STATE",
+          "\ud83d\udea8 **CRITICAL WARNING - NUCLEAR UNINSTALL INCIDENT**",
+          "**WHAT HAPPENED - THE COMPLETE STORY**",
+          "**\ud83d\udea8 WHAT WENT WRONG**",
+          "\u274c **DELETED WHITE PAPERS (CRITICAL)**",
+          "Date:",
+          "Status:",
+          "CRITICAL - READ BEFORE ANY ACTION",
+          "`Project White Papers/PROJECT_STATUS.md` - **MAIN DOCULOCK FILE**",
+          "`Project White Papers/API_REFERENCE.md` - **API DOCUMENTATION**"
+        ],
+        "status_indicators": [
+          "operational",
+          "failed",
+          "critical"
+        ]
+      },
+      {
+        "filename": "ENSEMBLE_SYSTEM_RESTORATION_REPORT.md",
+        "size": 7340,
+        "key_topics": [
+          "\ud83c\udfaf ENSEMBLE SYSTEM RESTORATION REPORT - UNIVERSAL OPEN SCIENCE TOOLBOX",
+          "\ud83c\udfaf **EXECUTIVE SUMMARY**",
+          "\ud83d\udcca **ENSEMBLE SYSTEM RESTORATION ACHIEVEMENTS**",
+          "\u2705 **SYSTEM RESTORATION COMPLETED**",
+          "\u2705 **API ENDPOINT RESTORATION**",
+          "Date:",
+          "Status:",
+          "ENSEMBLE SYSTEM FULLY RESTORED AND OPERATIONAL",
+          "\u2705 Integrated KaiOrchestrator into web interface",
+          "\u2705 Added proper async processing support"
+        ],
+        "status_indicators": [
+          "operational"
+        ]
+      }
+    ],
+    "project_philosophy": "",
+    "system_architecture": "Pure WSGI Server (No Flask Dependencies)",
+    "critical_insights": [],
+    "documentation_quality": "excellent"
+  },
+  "project_stats": {
+    "total_files": 32716,
+    "total_dirs": 2931,
+    "file_types": {
+      "": 1857,
+      ".json": 2093,
+      ".md": 334,
+      ".py": 17861,
+      ".log": 20,
+      ".zip": 2,
+      ".sample": 14,
+      ".idx": 2,
+      ".pack": 2,
+      ".rev": 2,
+      ".mtimes": 1,
+      ".0-final-public": 1,
+      ".TAG": 1,
+      ".cfg": 4,
+      ".pth": 1,
+      ".whl": 1,
+      ".typed": 44,
+      ".pyc": 6739,
+      ".pem": 2,
+      ".txt": 362,
+      ".pyd": 302,
+      ".lib": 135,
+      ".pyi": 423,
+      ".gz": 99,
+      ".c": 15,
+      ".external": 1,
+      ".pkl": 25,
+      ".bz2": 5,
+      ".gzip": 5,
+      ".lzma": 5,
+      ".xz": 5,
+      ".npy": 32,
+      ".z": 3,
+      ".html": 214,
+      ".css": 26,
+      ".js": 24,
+      ".lua": 1,
+      ".afm": 60,
+      ".ttf": 38,
+      ".svg": 19,
+      ".pdf": 11,
+      ".png": 31,
+      ".csv": 305,
+      ".dat": 36,
+      ".xrc": 1,
+      ".npz": 26,
+      ".jpg": 3,
+      ".mplstyle": 29,
+      ".pxd": 44,
+      ".h": 38,
+      ".f90": 61,
+      ".f": 24,
+      ".pyf": 7,
+      ".inc": 1,
+      ".f95": 1,
+      ".template": 1,
+      ".rst": 15,
+      ".pyx": 64,
+      ".build": 26,
+      ".ini": 22,
+      ".pc": 1,
+      ".cpp": 6,
+      ".fits": 1,
+      ".dll": 6,
+      ".APACHE": 4,
+      ".BSD": 4,
+      ".toml": 1,
+      ".tpl": 7,
+      ".exe": 29,
+      ".egg": 1,
+      ".tab": 8,
+      ".zi": 2,
+      ".a": 114,
+      ".arff": 16,
+      ".mat": 124,
+      ".sav": 47,
+      ".nc": 3,
+      ".wav": 22,
+      ".ani": 1,
+      ".tmpl": 2,
+      ".xml": 1,
+      ".tp": 24,
+      ".pxi": 2,
+      ".dta": 6,
+      ".r": 1,
+      ".bat": 116,
+      ".fish": 1,
+      ".ps1": 138,
+      ".1": 1,
+      ".rar": 1,
+      ".tgz": 1,
+      ".sh": 77,
+      ".code-workspace": 20,
+      ".hash": 361,
+      ".jsonl": 2,
+      ".yaml": 19,
+      ".rs": 19,
+      ".backup": 1
+    },
+    "size_bytes": 29479126754,
+    "critical_files": [
+      "README.md",
+      "kai_core/agent_chat.py",
+      "kai_core/kai_orchestrator.py",
+      "Project White Papers/CURRENT_STATE_MATRIX.md",
+      "web_interface/server.py"
+    ],
+    "missing_files": []
+  },
+  "critical_status": {
+    "total_critical": 3,
+    "operational": [
+      "Web Server (WSGI)",
+      "Agent Chat System",
+      "Kai Orchestrator"
+    ],
+    "degraded": [],
+    "failed": []
+  },
+  "functionality_status": {
+    "server_running": true,
+    "endpoints_tested": [
+      "Status Endpoint",
+      "Health Endpoint",
+      "Metrics Endpoint",
+      "Ensemble Endpoint",
+      "Agent Chat Endpoint"
+    ],
+    "issues": [],
+    "working_endpoints": [
+      "Status Endpoint",
+      "Health Endpoint",
+      "Metrics Endpoint",
+      "Ensemble Endpoint",
+      "Agent Chat Endpoint"
+    ],
+    "broken_endpoints": [],
+    "complex_system_notes": [
+      "Ensemble system: 12.15s processing time is NORMAL for multi-model consensus"
+    ]
+  },
+  "recovery_plan": {
+    "priority": "medium",
+    "actions": [
+      {
+        "action": "comprehensive_validation",
+        "description": "Run comprehensive tests to validate full recovery",
+        "priority": "high",
+        "attempts": 0
+      },
+      {
+        "action": "learn_from_context",
+        "description": "Apply insights from project documentation to improve understanding",
+        "priority": "medium",
+        "attempts": 0
+      }
+    ],
+    "estimated_time": "15-30 minutes",
+    "root_cause_analysis": [],
+    "max_attempts": 2,
+    "context_insights": [
+      "System Architecture: Pure WSGI Server (No Flask Dependencies)",
+      "Documentation Quality: Excellent - system is well-documented"
+    ],
+    "system_understanding": ""
+  },
+  "rebuild_status": {
+    "success": true,
+    "actions_completed": [
+      "learn_from_context"
+    ],
+    "errors": [
+      "Failed to execute: comprehensive_validation"
+    ],
+    "start_time": "2025-08-17T21:08:45.603951",
+    "fixes_attempted": [
+      "comprehensive_validation",
+      "learn_from_context"
+    ],
+    "max_retries": 2,
+    "context_learned": true,
+    "insights_applied": [
+      "Multi-model ensemble system for reliability",
+      "Multi-model ensemble system for reliability",
+      "Multi-model ensemble system for reliability",
+      "Consensus-based decision making"
+    ],
+    "end_time": "2025-08-17T21:08:45.606105"
+  }
+}

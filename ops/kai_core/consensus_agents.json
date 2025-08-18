@@ -1,0 +1,62 @@
+[
+  {
+    "id": "security_agent",
+    "name": "Security Specialist Agent",
+    "type": "automated",
+    "focus": [
+      "security",
+      "backdoors",
+      "vulnerabilities"
+    ],
+    "trust_score": 1.0,
+    "description": "Specializes in security analysis and vulnerability detection"
+  },
+  {
+    "id": "performance_agent",
+    "name": "Performance Analysis Agent",
+    "type": "automated",
+    "focus": [
+      "performance",
+      "efficiency",
+      "optimization"
+    ],
+    "trust_score": 1.0,
+    "description": "Analyzes performance impact and resource usage"
+  },
+  {
+    "id": "code_quality_agent",
+    "name": "Code Quality Agent",
+    "type": "automated",
+    "focus": [
+      "code_quality",
+      "maintainability",
+      "best_practices"
+    ],
+    "trust_score": 1.0,
+    "description": "Reviews code quality, style, and maintainability"
+  },
+  {
+    "id": "functionality_agent",
+    "name": "Functionality Testing Agent",
+    "type": "automated",
+    "focus": [
+      "functionality",
+      "testing",
+      "integration"
+    ],
+    "trust_score": 1.0,
+    "description": "Tests functionality and integration compatibility"
+  },
+  {
+    "id": "human_reviewer",
+    "name": "Human Reviewer",
+    "type": "human",
+    "focus": [
+      "overall_assessment",
+      "business_logic",
+      "ethics"
+    ],
+    "trust_score": 1.0,
+    "description": "Human oversight for final approval"
+  }
+]

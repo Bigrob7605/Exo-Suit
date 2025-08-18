@@ -1,23 +1,39 @@
 #!/usr/bin/env python3
 """
-PHOENIX RECOVERY SYSTEM V5.0 - Agent Exo-Suit V5.0
-Auto-rebuilds broken systems to specification with intelligent recovery capabilities
+🚨 FORTIFIED SELF-HEAL AND RECONSTRUCTION PROTOCOL
+Bulletproof system recovery and auto-restoration testing with evidence bundles.
 
-This system represents the revolutionary Phase 2 capability that makes Agent Exo-Suit
-truly self-healing and self-repairing.
+This module implements catastrophic failure simulation and recovery testing
+to ensure the system can auto-heal from various failure scenarios.
+
+SAFETY FIRST: Never touches user data, only generated/cached files.
+TRUST BUT AUDIT: Every operation creates timestamped evidence bundles.
 """
 
 import os
 import sys
-import json
 import shutil
 import subprocess
-import logging
-from pathlib import Path
-from datetime import datetime
-from typing import Dict, List, Any, Tuple, Optional
+import time
+import json
 import hashlib
-import yaml
+import git
+from datetime import datetime
+from pathlib import Path
+from typing import Dict, List, Tuple, Optional, Any
+import logging
+import requests
+import platform
+
+# Configure logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler('self_heal_audit.log', encoding='utf-8'),
+        logging.StreamHandler(sys.stdout)
+    ]
+)
 
 class FortifiedSelfHealProtocol:
     """Fortified self-heal testing and recovery protocol with evidence bundles."""
@@ -27,14 +43,7 @@ class FortifiedSelfHealProtocol:
         self.live_mode = live_mode
         self.root_dir = Path.cwd()
         self.white_papers_dir = self.root_dir / "Project White Papers"
-        
-        # Use environment variable for evidence directory if available
-        evidence_root = os.environ.get("EVIDENCE_ROOT")
-        if evidence_root:
-            self.evidence_dir = Path(evidence_root)
-        else:
-            self.evidence_dir = self.white_papers_dir / "self_heal_evidence"
-        
+        self.evidence_dir = self.white_papers_dir / "self_heal_evidence"
         self.audit_log = []
         self.recovery_required = False
         self.evidence_bundle_path = None
@@ -105,9 +114,6 @@ class FortifiedSelfHealProtocol:
         
     def get_git_status(self) -> Dict[str, Any]:
         """Get git repository status."""
-        if not git:
-            return {"error": "git module not available"}
-            
         try:
             repo = git.Repo(self.root_dir)
             return {
@@ -257,26 +263,24 @@ class FortifiedSelfHealProtocol:
         }
         
         # Check if server is running
-        if requests:
-            try:
-                response = requests.get("http://localhost:5000/api/health", timeout=5)
-                health_status["server_running"] = response.status_code == 200
-                health_status["api_responsive"] = True
-            except:
-                pass
+        try:
+            response = requests.get("http://localhost:5000/api/health", timeout=5)
+            health_status["server_running"] = response.status_code == 200
+            health_status["api_responsive"] = True
+        except:
+            pass
             
         # Check model availability
-        if subprocess:
-            try:
-                result = subprocess.run(
-                    ["ollama", "list"], 
-                    capture_output=True, 
-                    text=True, 
-                    timeout=10
-                )
-                health_status["models_available"] = result.returncode == 0
-            except:
-                pass
+        try:
+            result = subprocess.run(
+                ["ollama", "list"], 
+                capture_output=True, 
+                text=True, 
+                timeout=10
+            )
+            health_status["models_available"] = result.returncode == 0
+        except:
+            pass
             
         # Check critical files
         critical_files = [
@@ -408,9 +412,6 @@ class FortifiedSelfHealProtocol:
             
     def run_git_clean_check(self) -> Dict[str, Any]:
         """Run git clean check before/after operations."""
-        if not git:
-            return {"error": "git module not available"}
-            
         try:
             repo = git.Repo(self.root_dir)
             status = repo.git.status('--porcelain')
@@ -630,13 +631,7 @@ if __name__ == "__main__":
     def generate_fortified_audit_report(self, results: Dict[str, any]):
         """Generate comprehensive fortified audit report."""
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        
-        # Use environment variable for report directory if available
-        report_dir = os.environ.get("EVIDENCE_ROOT", str(self.white_papers_dir))
-        report_path = Path(report_dir) / f"FORTIFIED_SELF_HEAL_AUDIT_{timestamp}.md"
-        
-        # Ensure the directory exists
-        report_path.parent.mkdir(exist_ok=True)
+        report_path = self.white_papers_dir / f"FORTIFIED_SELF_HEAL_AUDIT_{timestamp}.md"
         
         report_content = f"""# Fortified Self-Heal Audit Report - {timestamp}
 
@@ -782,14 +777,6 @@ python self_heal_protocol.py --live
 """
         
         alert_path = self.root_dir / "SELF_HEAL_FAILURE_ALERT.md"
-        
-        # Use environment variable for alert directory if available
-        alert_dir = os.environ.get("EVIDENCE_ROOT", str(self.root_dir))
-        alert_path = Path(alert_dir) / "SELF_HEAL_FAILURE_ALERT.md"
-        
-        # Ensure the directory exists
-        alert_path.parent.mkdir(exist_ok=True)
-        
         try:
             alert_path.write_text(alert_content, encoding='utf-8')
             logging.info(f"🚨 User feedback hook created: {alert_path}")
@@ -927,694 +914,189 @@ from datetime import datetime
 from pathlib import Path
 from typing import Dict, List, Tuple
 
-class PhoenixRecoverySystem:
-    def __init__(self):
-        self.workspace_root = Path.cwd()
-        self.recovery_config = self.workspace_root / "config" / "phoenix_recovery_config.json"
-        self.backup_dir = self.workspace_root / "system_backups" / "phoenix_backups"
-        self.recovery_logs = self.workspace_root / "ops" / "logs" / "phoenix_recovery.log"
+class LegacyUpgradePath:
+    def __init__(self, dry_run: bool = True):
+        self.dry_run = dry_run
+        self.root_dir = Path.cwd()
+        self.upgrade_log = []
         
-        # Ensure directories exist
-        self.backup_dir.mkdir(parents=True, exist_ok=True)
-        self.recovery_logs.parent.mkdir(parents=True, exist_ok=True)
-        
-        # Setup logging
-        self.setup_logging()
-        
-        # Core system components that can be recovered
-        self.recoverable_components = {
-            'vision_gap_engine': {
-                'file': 'ops/VisionGap-Engine-V5.ps1',
-                'backup': 'ops/backups/VisionGap-Engine-V5.ps1.backup',
-                'validation': 'ops/validation/vision_gap_validation.py',
-                'priority': 'critical'
-            },
-            'dreamweaver_builder': {
-                'file': 'ops/DreamWeaver-Builder-V5.ps1',
-                'backup': 'ops/backups/DreamWeaver-Builder-V5.ps1.backup',
-                'validation': 'ops/validation/dreamweaver_validation.py',
-                'priority': 'critical'
-            },
-            'truthforge_auditor': {
-                'file': 'ops/TruthForge-Auditor-V5.ps1',
-                'backup': 'ops/validation/truthforge_validation.py',
-                'validation': 'ops/validation/truthforge_validation.py',
-                'priority': 'critical'
-            },
-            'rag_system': {
-                'file': 'rag/',
-                'backup': 'rag/backups/',
-                'validation': 'rag/validation/rag_validation.py',
-                'priority': 'high'
-            },
-            'testing_framework': {
-                'file': 'Testing_Tools/',
-                'backup': 'Testing_Tools/backups/',
-                'validation': 'Testing_Tools/validation/testing_validation.py',
-                'priority': 'medium'
-            }
+    def log_upgrade_action(self, action: str, source: str, destination: str, status: str):
+        \"\"\"Log an upgrade action.\"\"\"
+        log_entry = {
+            "timestamp": datetime.now().isoformat(),
+            "action": action,
+            "source": source,
+            "destination": destination,
+            "status": status,
+            "dry_run": self.dry_run
         }
+        self.upgrade_log.append(log_entry)
+        print(f"{action}: {source} -> {destination} ({status})")
         
-        # Recovery strategies
-        self.recovery_strategies = {
-            'file_corruption': self.recover_corrupted_file,
-            'missing_file': self.recover_missing_file,
-            'system_failure': self.recover_system_failure,
-            'performance_degradation': self.recover_performance,
-            'integration_failure': self.recover_integration
-        }
-    
-    
-        # Self-healing integration
-        self.self_heal_protocol = FortifiedSelfHealProtocol(dry_run=False, live_mode=True)
-        self.self_heal_active = True
-        self.auto_recovery_enabled = True
-    }  # End of nested PhoenixRecoverySystem class
-
-# End of upgrade script
-"""
+    def find_old_paths(self) -> List[Path]:
+        \"\"\"Find all old paths that need upgrading.\"\"\"
+        old_paths = []
         
-        upgrade_path = Path("legacy_upgrade.py")
-        upgrade_path.write_text(upgrade_script, encoding='utf-8')
-        logging.info(f"Created legacy upgrade path: {upgrade_path}")
-
-# End of create_legacy_upgrade_path function
-
-class PhoenixRecoverySystem:
-    def __init__(self):
-        self.workspace_root = Path.cwd()
-        self.recovery_config = self.workspace_root / "config" / "phoenix_recovery_config.json"
-        self.backup_dir = self.workspace_root / "system_backups" / "phoenix_backups"
-        self.recovery_logs = self.workspace_root / "ops" / "logs" / "phoenix_recovery.log"
-        
-        # Ensure directories exist
-        self.backup_dir.mkdir(parents=True, exist_ok=True)
-        self.recovery_logs.parent.mkdir(parents=True, exist_ok=True)
-        
-        # Setup logging
-        self.setup_logging()
-        
-        # Core system components that can be recovered
-        self.recoverable_components = {
-            'vision_gap_engine': {
-                'file': 'ops/VisionGap-Engine-V5.ps1',
-                'backup': 'ops/backups/VisionGap-Engine-V5.ps1.backup',
-                'validation': 'ops/validation/vision_gap_validation.py',
-                'priority': 'critical'
-            },
-            'dreamweaver_builder': {
-                'file': 'ops/DreamWeaver-Builder-V5.ps1',
-                'backup': 'ops/backups/DreamWeaver-Builder-V5.ps1.backup',
-                'validation': 'ops/validation/dreamweaver_validation.py',
-                'priority': 'critical'
-            },
-            'truthforge_auditor': {
-                'file': 'ops/TruthForge-Auditor-V5.ps1',
-                'backup': 'ops/validation/truthforge_validation.py',
-                'validation': 'ops/validation/truthforge_validation.py',
-                'priority': 'critical'
-            },
-            'rag_system': {
-                'file': 'rag/',
-                'backup': 'rag/backups/',
-                'validation': 'rag/validation/rag_validation.py',
-                'priority': 'high'
-            },
-            'testing_framework': {
-                'file': 'Testing_Tools/',
-                'backup': 'Testing_Tools/backups/',
-                'validation': 'Testing_Tools/validation/testing_validation.py',
-                'priority': 'medium'
-            }
-        }
-        
-        # Recovery strategies
-        self.recovery_strategies = {
-            'file_corruption': self.recover_corrupted_file,
-            'missing_file': self.recover_missing_file,
-            'system_failure': self.recover_system_failure,
-            'performance_degradation': self.recover_performance,
-            'integration_failure': self.recover_integration
-        }
-    
-    
-        # Self-healing integration
-        self.self_heal_protocol = FortifiedSelfHealProtocol(dry_run=False, live_mode=True)
-        self.self_heal_active = True
-        self.auto_recovery_enabled = True
-    
-    def setup_logging(self):
-        """Setup comprehensive logging for recovery operations"""
-        logging.basicConfig(
-            level=logging.INFO,
-            format='%(asctime)s - %(levelname)s - %(message)s',
-            handlers=[
-                logging.FileHandler(self.recovery_logs),
-                logging.StreamHandler(sys.stdout)
-            ]
-        )
-        self.logger = logging.getLogger(__name__)
-    
-    def create_system_snapshot(self) -> str:
-        """Create a comprehensive system snapshot for recovery purposes"""
-        self.logger.info("Creating system snapshot for recovery purposes...")
-        
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        snapshot_dir = self.backup_dir / f"snapshot_{timestamp}"
-        snapshot_dir.mkdir(parents=True, exist_ok=True)
-        
-        # Create component snapshots
-        for component_name, component_info in self.recoverable_components.items():
-            component_path = Path(component_info['file'])
-            if component_path.exists():
-                if component_path.is_file():
-                    # Copy file to snapshot
-                    snapshot_file = snapshot_dir / f"{component_name}_{component_path.name}"
-                    shutil.copy2(component_path, snapshot_file)
-                elif component_path.is_dir():
-                    # Copy directory to snapshot
-                    snapshot_component_dir = snapshot_dir / component_name
-                    shutil.copytree(component_path, snapshot_component_dir, dirs_exist_ok=True)
-        
-        # Create system state snapshot
-        system_state = {
-            'timestamp': timestamp,
-            'components': {},
-            'system_health': self.assess_system_health(),
-            'recovery_config': self.load_recovery_config()
-        }
-        
-        for component_name, component_info in self.recoverable_components.items():
-            component_path = Path(component_info['file'])
-            if component_path.exists():
-                if component_path.is_file():
-                    system_state['components'][component_name] = {
-                        'status': 'present',
-                        'size': component_path.stat().st_size,
-                        'hash': self.calculate_file_hash(component_path),
-                        'priority': component_info['priority']
-                    }
-                elif component_path.is_dir():
-                    system_state['components'][component_name] = {
-                        'status': 'present',
-                        'file_count': len(list(component_path.rglob('*'))),
-                        'priority': component_info['priority']
-                    }
-            else:
-                system_state['components'][component_name] = {
-                    'status': 'missing',
-                    'priority': component_info['priority']
-                }
-        
-        # Save system state
-        state_file = snapshot_dir / "system_state.json"
-        with open(state_file, 'w') as f:
-            json.dump(system_state, f, indent=2)
-        
-        self.logger.info(f"System snapshot created: {snapshot_dir}")
-        return str(snapshot_dir)
-    
-    def calculate_file_hash(self, file_path: Path) -> str:
-        """Calculate SHA-256 hash of a file for integrity verification"""
-        hash_sha256 = hashlib.sha256()
-        with open(file_path, "rb") as f:
-            for chunk in iter(lambda: f.read(4096), b""):
-                hash_sha256.update(chunk)
-        return hash_sha256.hexdigest()
-    
-    def assess_system_health(self) -> Dict[str, Any]:
-        """Assess overall system health and identify issues"""
-        self.logger.info("Assessing system health...")
-        
-        health_status = {
-            'overall_health': 'healthy',
-            'issues_found': [],
-            'component_status': {},
-            'recommendations': []
-        }
-        
-        for component_name, component_info in self.recoverable_components.items():
-            component_path = Path(component_info['file'])
-            component_health = self.assess_component_health(component_name, component_path)
-            health_status['component_status'][component_name] = component_health
-            
-            if component_health['status'] != 'healthy':
-                health_status['issues_found'].append({
-                    'component': component_name,
-                    'issue': component_health['issue'],
-                    'priority': component_info['priority']
-                })
-        
-        # Determine overall health
-        critical_issues = [issue for issue in health_status['issues_found'] 
-                          if issue['priority'] == 'critical']
-        high_issues = [issue for issue in health_status['issues_found'] 
-                      if issue['priority'] == 'high']
-        
-        if critical_issues:
-            health_status['overall_health'] = 'critical'
-            health_status['recommendations'].append('Immediate recovery required for critical components')
-        elif high_issues:
-            health_status['overall_health'] = 'degraded'
-            health_status['recommendations'].append('Recovery recommended for high-priority components')
-        elif health_status['issues_found']:
-            health_status['overall_health'] = 'attention_needed'
-            health_status['recommendations'].append('Minor issues detected, monitoring recommended')
-        
-        self.logger.info(f"System health assessment complete: {health_status['overall_health']}")
-        return health_status
-    
-    def assess_component_health(self, component_name: str, component_path: Path) -> Dict[str, Any]:
-        """Assess health of individual component"""
-        if not component_path.exists():
-            return {
-                'status': 'missing',
-                'issue': 'Component file/directory not found',
-                'severity': 'high'
-            }
-        
-        if component_path.is_file():
-            return self.assess_file_health(component_path)
-        elif component_path.is_dir():
-            return self.assess_directory_health(component_path)
-        else:
-            return {
-                'status': 'unknown',
-                'issue': 'Component path type unknown',
-                'severity': 'medium'
-            }
-    
-    def assess_file_health(self, file_path: Path) -> Dict[str, Any]:
-        """Assess health of individual file"""
-        try:
-            # Check file size
-            file_size = file_path.stat().st_size
-            if file_size == 0:
-                return {
-                    'status': 'corrupted',
-                    'issue': 'File is empty (0 bytes)',
-                    'severity': 'high'
-                }
-            
-            # Check file readability
-            with open(file_path, 'r', encoding='utf-8') as f:
-                content = f.read(1024)  # Read first 1KB
-            
-            if not content.strip():
-                return {
-                    'status': 'corrupted',
-                    'issue': 'File contains no meaningful content',
-                    'severity': 'high'
-                }
-            
-            return {
-                'status': 'healthy',
-                'issue': None,
-                'severity': 'none'
-            }
-            
-        except Exception as e:
-            return {
-                'status': 'corrupted',
-                'issue': f'File access error: {str(e)}',
-                'severity': 'high'
-            }
-    
-    def assess_directory_health(self, dir_path: Path) -> Dict[str, Any]:
-        """Assess health of directory structure"""
-        try:
-            # Count files and subdirectories
-            files = list(dir_path.rglob('*'))
-            if not files:
-                return {
-                    'status': 'empty',
-                    'issue': 'Directory is empty',
-                    'severity': 'medium'
-                }
-            
-            # Check for critical files
-            critical_files = ['__init__.py', 'main.py', 'index.py', 'README.md']
-            missing_critical = []
-            for critical_file in critical_files:
-                if not any(f.name == critical_file for f in files):
-                    missing_critical.append(critical_file)
-            
-            if missing_critical:
-                return {
-                    'status': 'incomplete',
-                    'issue': f'Missing critical files: {", ".join(missing_critical)}',
-                    'severity': 'medium'
-                }
-            
-            return {
-                'status': 'healthy',
-                'issue': None,
-                'severity': 'none'
-            }
-            
-        except Exception as e:
-            return {
-                'status': 'corrupted',
-                'issue': f'Directory access error: {str(e)}',
-                'severity': 'high'
-            }
-    
-    def load_recovery_config(self) -> Dict[str, Any]:
-        """Load recovery configuration"""
-        if self.recovery_config.exists():
-            try:
-                with open(self.recovery_config, 'r') as f:
-                    return json.load(f)
-            except Exception as e:
-                self.logger.warning(f"Failed to load recovery config: {e}")
-        
-        # Default configuration
-        return {
-            'auto_recovery': True,
-            'backup_retention_days': 30,
-            'recovery_timeout_seconds': 300,
-            'max_recovery_attempts': 3,
-            'notify_on_failure': True
-        }
-    
-    def initiate_recovery(self, component_name: str = None, issue_type: str = None) -> bool:
-        """Initiate recovery process for specified component or all components"""
-        self.logger.info(f"Initiating recovery process... Component: {component_name}, Issue: {issue_type}")
-        
-        # Create system snapshot before recovery
-        snapshot_path = self.create_system_snapshot()
-        
-        if component_name:
-            # Recover specific component
-            return self.recover_component(component_name, issue_type)
-        else:
-            # Recover all components with issues
-            return self.recover_all_components()
-    
-    def recover_component(self, component_name: str, issue_type: str = None) -> bool:
-        """Recover specific component"""
-        if component_name not in self.recoverable_components:
-            self.logger.error(f"Unknown component: {component_name}")
-            return False
-        
-        component_info = self.recoverable_components[component_name]
-        component_path = Path(component_info['file'])
-        
-        # Determine issue type if not specified
-        if not issue_type:
-            health = self.assess_component_health(component_name, component_path)
-            issue_type = health.get('issue', 'unknown')
-        
-        # Select recovery strategy
-        if 'corrupt' in issue_type.lower() or 'damage' in issue_type.lower():
-            strategy = 'file_corruption'
-        elif 'missing' in issue_type.lower():
-            strategy = 'missing_file'
-        elif 'performance' in issue_type.lower():
-            strategy = 'performance_degradation'
-        else:
-            strategy = 'system_failure'
-        
-        # Execute recovery
-        try:
-            recovery_func = self.recovery_strategies.get(strategy)
-            if recovery_func:
-                success = recovery_func(component_name, component_info)
-                if success:
-                    self.logger.info(f"Successfully recovered component: {component_name}")
-                    return True
-                else:
-                    self.logger.error(f"Failed to recover component: {component_name}")
-                    return False
-            else:
-                self.logger.error(f"No recovery strategy found for: {strategy}")
-                return False
-        except Exception as e:
-            self.logger.error(f"Recovery error for {component_name}: {e}")
-            return False
-    
-    def recover_all_components(self) -> bool:
-        """Recover all components with issues"""
-        self.logger.info("Initiating recovery for all components with issues...")
-        
-        health_status = self.assess_system_health()
-        issues = health_status.get('issues_found', [])
-        
-        if not issues:
-            self.logger.info("No issues found - system is healthy")
-            return True
-        
-        # Sort issues by priority
-        priority_order = {'critical': 0, 'high': 1, 'medium': 2, 'low': 3}
-        issues.sort(key=lambda x: priority_order.get(x['priority'], 4))
-        
-        recovery_results = {}
-        overall_success = True
-        
-        for issue in issues:
-            component_name = issue['component']
-            self.logger.info(f"Recovering component: {component_name} (Priority: {issue['priority']})")
-            
-            success = self.recover_component(component_name, issue['issue'])
-            recovery_results[component_name] = success
-            
-            if not success and issue['priority'] == 'critical':
-                overall_success = False
-                self.logger.error(f"Critical component recovery failed: {component_name}")
-        
-        # Log recovery summary
-        successful = sum(1 for result in recovery_results.values() if result)
-        total = len(recovery_results)
-        self.logger.info(f"Recovery complete: {successful}/{total} components recovered successfully")
-        
-        return overall_success
-    
-    def recover_corrupted_file(self, component_name: str, component_info: Dict[str, Any]) -> bool:
-        """Recover corrupted file from backup"""
-        self.logger.info(f"Recovering corrupted file: {component_name}")
-        
-        file_path = Path(component_info['file'])
-        backup_path = Path(component_info.get('backup', ''))
-        
-        if backup_path and backup_path.exists():
-            try:
-                # Restore from backup
-                shutil.copy2(backup_path, file_path)
-                self.logger.info(f"Restored {component_name} from backup")
-                return True
-            except Exception as e:
-                self.logger.error(f"Backup restoration failed: {e}")
-                return False
-        else:
-            # Try to regenerate file
-            return self.regenerate_component(component_name, component_info)
-    
-    def recover_missing_file(self, component_name: str, component_info: Dict[str, Any]) -> bool:
-        """Recover missing file"""
-        self.logger.info(f"Recovering missing file: {component_name}")
-        
-        # Try to regenerate component
-        return self.regenerate_component(component_name, component_info)
-    
-    def recover_system_failure(self, component_name: str, component_info: Dict[str, Any]) -> bool:
-        """Recover from system failure"""
-        self.logger.info(f"Recovering from system failure: {component_name}")
-        
-        # Try multiple recovery strategies
-        strategies = [
-            lambda: self.recover_corrupted_file(component_name, component_info),
-            lambda: self.regenerate_component(component_name, component_info),
-            lambda: self.reinstall_component(component_name, component_info)
+        # Define old path patterns
+        old_patterns = [
+            "old_web_interface/",
+            "legacy_kai_core/",
+            "deprecated_tools/",
+            "*.old",
+            "*.backup"
         ]
         
-        for strategy in strategies:
-            try:
-                if strategy():
-                    return True
-            except Exception as e:
-                self.logger.warning(f"Recovery strategy failed: {e}")
-                continue
+        for pattern in old_patterns:
+            for path in self.root_dir.rglob(pattern):
+                if path.exists():
+                    old_paths.append(path)
+                    
+        return old_paths
         
-        return False
-    
-    def recover_performance(self, component_name: str, component_info: Dict[str, Any]) -> bool:
-        """Recover from performance degradation"""
-        self.logger.info(f"Recovering performance for: {component_name}")
+    def determine_upgrade_mapping(self, old_path: Path) -> Tuple[str, Path]:
+        \"\"\"Determine the new path for an old file/directory.\"\"\"
+        # Define upgrade mappings
+        mappings = {
+            "old_web_interface": "web_interface",
+            "legacy_kai_core": "kai_core",
+            "deprecated_tools": "tools"
+        }
         
-        # Performance recovery strategies
-        try:
-            # Clear caches
-            self.clear_component_caches(component_name)
-            
-            # Restart services
-            self.restart_component_services(component_name)
-            
-            # Optimize configuration
-            self.optimize_component_config(component_name)
-            
-            return True
-        except Exception as e:
-            self.logger.error(f"Performance recovery failed: {e}")
-            return False
-    
-    def recover_integration(self, component_name: str, component_info: Dict[str, Any]) -> bool:
-        """Recover from integration failure"""
-        self.logger.info(f"Recovering integration for: {component_name}")
+        relative_path = old_path.relative_to(self.root_dir)
+        path_str = str(relative_path)
         
-        try:
-            # Test component integration
-            integration_test = self.test_component_integration(component_name)
-            
-            if not integration_test:
-                # Attempt to fix integration
-                self.fix_component_integration(component_name)
+        for old_prefix, new_prefix in mappings.items():
+            if path_str.startswith(old_prefix):
+                new_path = self.root_dir / path_str.replace(old_prefix, new_prefix, 1)
+                return "migrate", new_path
                 
-                # Test again
-                integration_test = self.test_component_integration(component_name)
+        # Default: move to archive
+        archive_path = self.root_dir / "archive" / relative_path
+        return "archive", archive_path
+        
+    def execute_upgrade(self, old_path: Path, action: str, new_path: Path) -> bool:
+        \"\"\"Execute the upgrade action.\"\"\"
+        try:
+            if self.dry_run:
+                self.log_upgrade_action("PREVIEW", str(old_path), str(new_path), "DRY_RUN")
+                return True
+                
+            # Create parent directory if needed
+            new_path.parent.mkdir(parents=True, exist_ok=True)
             
-            return integration_test
+            if action == "migrate":
+                if old_path.is_file():
+                    shutil.copy2(old_path, new_path)
+                    old_path.unlink()
+                else:
+                    shutil.move(old_path, new_path)
+                    
+            elif action == "archive":
+                if old_path.is_file():
+                    shutil.copy2(old_path, new_path)
+                    old_path.unlink()
+                else:
+                    shutil.move(old_path, new_path)
+                    
+            self.log_upgrade_action("EXECUTE", str(old_path), str(new_path), "SUCCESS")
+            return True
+            
         except Exception as e:
-            self.logger.error(f"Integration recovery failed: {e}")
+            self.log_upgrade_action("EXECUTE", str(old_path), str(new_path), f"FAILED: {e}")
             return False
-    
-    def regenerate_component(self, component_name: str, component_info: Dict[str, Any]) -> bool:
-        """Regenerate component from source or template"""
-        self.logger.info(f"Regenerating component: {component_name}")
+            
+    def run_upgrade(self) -> Dict[str, any]:
+        \"\"\"Run the complete legacy upgrade process.\"\"\"
+        print(f"🔄 Starting legacy upgrade (DRY_RUN: {self.dry_run})")
         
-        # This would integrate with DreamWeaver Builder to regenerate components
-        # For now, return success as placeholder
-        return True
-    
-    def reinstall_component(self, component_name: str, component_info: Dict[str, Any]) -> bool:
-        """Reinstall component from source"""
-        self.logger.info(f"Reinstalling component: {component_name}")
+        old_paths = self.find_old_paths()
+        print(f"Found {len(old_paths)} old paths to upgrade")
         
-        # This would handle component reinstallation
-        # For now, return success as placeholder
-        return True
-    
-    def clear_component_caches(self, component_name: str):
-        """Clear caches for specific component"""
-        self.logger.info(f"Clearing caches for: {component_name}")
-        # Implementation would clear relevant caches
-    
-    def restart_component_services(self, component_name: str):
-        """Restart services for specific component"""
-        self.logger.info(f"Restarting services for: {component_name}")
-        # Implementation would restart relevant services
-    
-    def optimize_component_config(self, component_name: str):
-        """Optimize configuration for specific component"""
-        self.logger.info(f"Optimizing configuration for: {component_name}")
-        # Implementation would optimize component configuration
-    
-    def test_component_integration(self, component_name: str) -> bool:
-        """Test integration of specific component"""
-        self.logger.info(f"Testing integration for: {component_name}")
-        # Implementation would test component integration
-        return True
-    
-    def fix_component_integration(self, component_name: str):
-        """Fix integration issues for specific component"""
-        self.logger.info(f"Fixing integration for: {component_name}")
-        # Implementation would fix integration issues
-    
-    def generate_recovery_report(self) -> Dict[str, Any]:
-        """Generate comprehensive recovery report"""
-        self.logger.info("Generating recovery report...")
-        
-        report = {
-            'timestamp': datetime.now().isoformat(),
-            'system_health': self.assess_system_health(),
-            'recovery_config': self.load_recovery_config(),
-            'backup_status': self.get_backup_status(),
-            'recovery_history': self.get_recovery_history(),
-            'recommendations': []
+        results = {
+            "timestamp": datetime.now().isoformat(),
+            "dry_run": self.dry_run,
+            "total_paths": len(old_paths),
+            "successful_upgrades": 0,
+            "failed_upgrades": 0,
+            "upgrade_log": self.upgrade_log
         }
         
-        # Generate recommendations based on current status
-        health = report['system_health']
-        if health['overall_health'] == 'critical':
-            report['recommendations'].append('Immediate recovery action required')
-        elif health['overall_health'] == 'degraded':
-            report['recommendations'].append('Schedule recovery maintenance')
-        
-        return report
-    
-    def get_backup_status(self) -> Dict[str, Any]:
-        """Get status of backup system"""
-        backup_files = list(self.backup_dir.glob('*'))
-        return {
-            'total_backups': len(backup_files),
-            'latest_backup': max(backup_files, key=lambda x: x.stat().st_mtime).name if backup_files else None,
-            'backup_directory': str(self.backup_dir)
-        }
-    
-    def get_recovery_history(self) -> List[Dict[str, Any]]:
-        """Get history of recovery operations"""
-        # This would read from recovery logs
-        return []
-    
-    def run_health_check(self) -> Dict[str, Any]:
-        """Run comprehensive health check and return results"""
-        self.logger.info("Running comprehensive health check...")
-        
-        health_status = self.assess_system_health()
-        recovery_needed = health_status['overall_health'] != 'healthy'
-        
-        result = {
-            'timestamp': datetime.now().isoformat(),
-            'health_status': health_status,
-            'recovery_needed': recovery_needed,
-            'auto_recovery_available': self.load_recovery_config().get('auto_recovery', True)
-        }
-        
-        if recovery_needed and result['auto_recovery_available']:
-            self.logger.info("Auto-recovery initiated due to health issues")
-            recovery_success = self.initiate_recovery()
-            result['auto_recovery_executed'] = True
-            result['auto_recovery_success'] = recovery_success
-        else:
-            result['auto_recovery_executed'] = False
-            result['auto_recovery_success'] = None
-        
-        return result
-
-
-# End of PhoenixRecoverySystem class
-
+        for old_path in old_paths:
+            action, new_path = self.determine_upgrade_mapping(old_path)
+            success = self.execute_upgrade(old_path, action, new_path)
+            
+            if success:
+                results["successful_upgrades"] += 1
+            else:
+                results["failed_upgrades"] += 1
+                
+        # Save upgrade report
+        report_path = Path("legacy_upgrade_report.json")
+        with open(report_path, 'w', encoding='utf-8') as f:
+            json.dump(results, f, indent=2, default=str)
+            
+        print(f"✅ Legacy upgrade complete: {results['successful_upgrades']} successful, {results['failed_upgrades']} failed")
+        return results
 
 def main():
-    """Main function for Phoenix Recovery System"""
-    print(" PHOENIX RECOVERY SYSTEM V5.0 - Agent Exo-Suit V5.0")
-    print("=" * 60)
+    \"\"\"Main execution function.\"\"\"
+    import argparse
     
-    phoenix = PhoenixRecoverySystem()
+    parser = argparse.ArgumentParser(description="Legacy Upgrade Path")
+    parser.add_argument("--live", action="store_true", help="Run in live mode (not dry run)")
     
-    # Run health check
-    print(" Running system health check...")
-    health_result = phoenix.run_health_check()
+    args = parser.parse_args()
     
-    print(f" System Health: {health_result['health_status']['overall_health']}")
-    print(f" Issues Found: {len(health_result['health_status']['issues_found'])}")
+    upgrade = LegacyUpgradePath(dry_run=not args.live)
+    results = upgrade.run_upgrade()
     
-    if health_result['recovery_needed']:
-        print("  Recovery needed - initiating auto-recovery...")
-        if health_result['auto_recovery_success']:
-            print(" Auto-recovery completed successfully")
-        else:
-            print(" Auto-recovery failed")
+    if results["failed_upgrades"] == 0:
+        print("✅ Legacy upgrade completed successfully")
+        sys.exit(0)
     else:
-        print(" System is healthy - no recovery needed")
+        print(f"❌ Legacy upgrade completed with {results['failed_upgrades']} failures")
+        sys.exit(1)
+
+if __name__ == "__main__":
+    main()
+"""
     
-    # Generate recovery report
-    print("\n Generating recovery report...")
-    report = phoenix.generate_recovery_report()
+    upgrade_path = Path("upgrade_legacy_layout.py")
+    upgrade_path.write_text(upgrade_script, encoding='utf-8')
+    logging.info(f"Created legacy upgrade path script: {upgrade_path}")
+
+def main():
+    """Main execution function."""
+    import argparse
     
-    print(f" Backup Status: {report['backup_status']['total_backups']} backups available")
-    print(f" Recommendations: {len(report['recommendations'])}")
+    parser = argparse.ArgumentParser(description="Fortified Self-Heal Protocol")
+    parser.add_argument("--live", action="store_true", help="Run in live mode (not dry run)")
+    parser.add_argument("--create-hooks", action="store_true", help="Create recovery hooks")
+    parser.add_argument("--create-upgrade", action="store_true", help="Create legacy upgrade path")
     
-    print("\n Phoenix Recovery System ready for operation!")
+    args = parser.parse_args()
+    
+    # Initialize protocol
+    protocol = FortifiedSelfHealProtocol(dry_run=not args.live, live_mode=args.live)
+    
+    # Create recovery hooks if requested
+    if args.create_hooks:
+        protocol.create_recovery_hooks()
+        
+    # Create legacy upgrade path if requested
+    if args.create_upgrade:
+        create_legacy_upgrade_path()
+        
+    # Run fortified self-heal dry run
+    results = protocol.run_self_heal_dry_run()
+    
+    # Exit with appropriate code
+    if results["overall_status"] == "PASS":
+        print("✅ Fortified self-heal protocol completed successfully")
+        sys.exit(0)
+    else:
+        print("❌ Fortified self-heal protocol detected issues")
+        sys.exit(1)
 
 if __name__ == "__main__":
     main()

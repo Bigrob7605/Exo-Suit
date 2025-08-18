@@ -1,0 +1,13 @@
+{
+  "consolidation_summary": {
+    "start_time": "2025-08-18T07:16:48.340534",
+    "end_time": "2025-08-18T07:16:48.347554",
+    "duration_seconds": 0.00702,
+    "project_root": "C:\\My Projects\\Agent Exo-Suit\\ops"
+  },
+  "statistics": {
+    "files_consolidated": 0,
+    "files_removed": 0,
+    "directories_cleaned": 0,
+    "errors": 0,
+    "start_time": 
