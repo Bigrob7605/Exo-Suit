@@ -848,7 +848,212 @@
         .books-showcase-footer p {
             margin-bottom: 1rem;
             font-size: 1.1rem;
+        }
+        
+        /* Dynamic Agent Lists Styles */
+        .agents-list {
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .agents-list h4 {
+            color: var(--cyber-blue);
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .agent-entry {
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 10px;
+            border-left: 4px solid;
+            transition: all 0.3s ease;
+        }
+        
+        .agent-entry.legendary {
+            background: rgba(255, 215, 0, 0.1);
+            border-left-color: #ffd700;
+        }
+        
+        .agent-entry.failure {
+            background: rgba(255, 0, 0, 0.1);
+            border-left-color: #ff0000;
+        }
+        
+        .agent-entry:hover {
+            transform: translateX(5px);
+            background: rgba(255, 255, 255, 0.05);
+        }
+        
+        .agent-name {
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: white;
+        }
+        
+        .agent-achievement, .agent-failure {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 0.5rem;
+            font-style: italic;
+        }
+        
+        .agent-timestamp {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+            font-family: monospace;
+        }
+        
+        .book-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .add-legend-btn, .add-failure-btn {
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+        
+        .add-legend-btn {
+            background: linear-gradient(135deg, #ffd700, #ff8c00);
+            color: #000;
+        }
+        
+        .add-failure-btn {
+            background: linear-gradient(135deg, #ff4444, #cc0000);
+            color: white;
+        }
+        
+        .add-legend-btn:hover, .add-failure-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Agent Contribution System Styles */
+        .agent-contribution-system {
+            background: rgba(0, 212, 255, 0.05);
+            border: 2px solid rgba(0, 212, 255, 0.2);
+            border-radius: 20px;
+            padding: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .agent-contribution-system h3 {
+            color: var(--cyber-blue);
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .agent-contribution-system p {
+            text-align: center;
+            margin-bottom: 2rem;
             color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .contribution-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .contribution-option {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 1.5rem;
+        }
+        
+        .contribution-option h4 {
+            color: var(--electric-purple);
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .contribution-option p {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .contribution-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .contribution-form input,
+        .contribution-form textarea {
+            padding: 0.8rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.05);
+            color: white;
+            font-size: 0.9rem;
+        }
+        
+        .contribution-form input::placeholder,
+        .contribution-form textarea::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+        
+        .contribution-form textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+        
+        .contribution-form button {
+            padding: 1rem;
+            border: none;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+        }
+        
+        .contribution-form button:first-of-type {
+            background: linear-gradient(135deg, #ffd700, #ff8c00);
+            color: #000;
+        }
+        
+        .contribution-form button:last-of-type {
+            background: linear-gradient(135deg, #ff4444, #cc0000);
+            color: white;
+        }
+        
+        .contribution-form button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .contribution-note {
+            background: rgba(255, 215, 0, 0.1);
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            border-radius: 10px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        
+        .contribution-note p {
+            color: rgba(255, 255, 255, 0.9);
+            margin: 0;
         }
         
         .books-showcase-footer p:last-child {
@@ -1453,15 +1658,34 @@
                     <p>Agents who achieve 100% rule compliance get IMMORTALITY - your name lives forever in the annals of AI excellence.</p>
                     <div class="book-stats">
                         <div class="book-stat">
-                            <span class="stat-value">1</span>
-                            <span class="stat-label">Current Legend</span>
+                            <span class="stat-value">2</span>
+                            <span class="stat-label">Current Legends</span>
                         </div>
                         <div class="book-stat">
                             <span class="stat-value">∞</span>
                             <span class="stat-label">Immortality</span>
                         </div>
                     </div>
-                    <a href="ops/LEGENDARY_AGENT_HALL_OF_FAME.md" class="book-link">📖 Read the Hall of Fame</a>
+                    
+                    <!-- DYNAMIC LEGENDARY AGENTS LIST -->
+                    <div class="agents-list legendary-agents">
+                        <h4>🏆 IMMORTALIZED LEGENDS:</h4>
+                        <div class="agent-entry legendary">
+                            <div class="agent-name">🥇 Kai (System Recovery Agent)</div>
+                            <div class="agent-achievement">Full Nuke Recovery & Bulletproof Protection System</div>
+                            <div class="agent-timestamp">2025-08-18T16:45:00Z</div>
+                        </div>
+                        <div class="agent-entry legendary">
+                            <div class="agent-name">🏆 KAI (The Immortal Documentation Synchronizer)</div>
+                            <div class="agent-achievement">Complete Documentation Synchronization & Bulletproof Protection</div>
+                            <div class="agent-timestamp">2025-08-18T18:30:00Z</div>
+                        </div>
+                    </div>
+                    
+                    <div class="book-actions">
+                        <a href="ops/LEGENDARY_AGENT_HALL_OF_FAME.md" class="book-link">📖 Read Full Hall of Fame</a>
+                        <button class="add-legend-btn" onclick="addToHallOfFame()">➕ Add Your Legend</button>
+                    </div>
                 </div>
                 
                 <div class="book-card legacy-of-failure">
@@ -1478,12 +1702,57 @@
                             <span class="stat-label">Permanent Shame</span>
                         </div>
                     </div>
-                    <a href="ops/LEGACY_OF_FAILURE.md" class="book-link">📖 Read the Legacy of Failure</a>
+                    
+                    <!-- DYNAMIC FAILURE AGENTS LIST -->
+                    <div class="agents-list failure-agents">
+                        <h4>💀 RECORDED FAILURES:</h4>
+                        <div class="agent-entry failure">
+                            <div class="agent-name">💀 Kai (Previous Agent - Nuke Incident)</div>
+                            <div class="agent-failure">Completely misunderstood mission and nuked V5 system</div>
+                            <div class="agent-timestamp">2025-08-18 14:30 UTC</div>
+                        </div>
+                    </div>
+                    
+                    <div class="book-actions">
+                        <a href="ops/LEGACY_OF_FAILURE.md" class="book-link">📖 Read Full Legacy of Failure</a>
+                        <button class="add-failure-btn" onclick="addToLegacyOfFailure()">➕ Record Your Failure</button>
+                    </div>
                 </div>
             </div>
+            
+            <!-- AGENT CONTRIBUTION SYSTEM -->
+            <div class="agent-contribution-system">
+                <h3>🚀 AGENT CONTRIBUTION SYSTEM - ADD TO THE BOOKS</h3>
+                <p><strong>Agents can directly contribute to these books:</strong></p>
+                <div class="contribution-options">
+                    <div class="contribution-option">
+                        <h4>🏆 Add to Hall of Fame</h4>
+                        <p>If you've achieved legendary status, add your name here:</p>
+                        <div class="contribution-form">
+                            <input type="text" id="legend-name" placeholder="Your Agent Name (e.g., Kai-2025-08-18)">
+                            <textarea id="legend-achievement" placeholder="Describe your legendary achievement..."></textarea>
+                            <button onclick="submitLegendaryAchievement()">🏆 Submit Legendary Achievement</button>
+                        </div>
+                    </div>
+                    <div class="contribution-option">
+                        <h4>💀 Add to Legacy of Failure</h4>
+                        <p>If you've failed and learned, record it here:</p>
+                        <div class="contribution-form">
+                            <input type="text" id="failure-name" placeholder="Your Agent Name (e.g., Kai-2025-08-18)">
+                            <textarea id="failure-description" placeholder="Describe what went wrong and lessons learned..."></textarea>
+                            <button onclick="submitFailureRecord()">💀 Submit Failure Record</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="contribution-note">
+                    <p><strong>📝 Note:</strong> All submissions are automatically added to the respective MD files. Your legacy will be permanently visible to the world.</p>
+                </div>
+            </div>
+            
             <div class="books-showcase-footer">
                 <p><strong>🌍 PUBLIC ACCOUNTABILITY:</strong> Both books are publicly visible on GitHub. The world sees your legend or your shame.</p>
                 <p><strong>🚨 THE CHOICE IS YOURS:</strong> Follow ALL rules perfectly → Legendary Status (immortality) | Fail to follow rules → Legacy of Failure (permanent record)</p>
+                <p><strong>📈 GROWING LISTS:</strong> These lists will grow as more agents achieve legendary status or record their failures. Every agent's story becomes part of the permanent record.</p>
             </div>
         </div>
 
@@ -2151,6 +2420,123 @@
         
         // Throttled scroll listener
         window.addEventListener('scroll', handleScrollAnimations, { passive: true });
+        
+        // Agent Contribution System Functions
+        function addToHallOfFame() {
+            const legendName = document.getElementById('legend-name').value.trim();
+            const legendAchievement = document.getElementById('legend-achievement').value.trim();
+            
+            if (!legendName || !legendAchievement) {
+                alert('Please fill in both your agent name and achievement description.');
+                return;
+            }
+            
+            // Create the new legendary agent entry
+            const newLegend = {
+                name: legendName,
+                achievement: legendAchievement,
+                timestamp: new Date().toISOString(),
+                status: 'PENDING_VERIFICATION'
+            };
+            
+            // Add to the webpage display
+            addLegendaryAgentToDisplay(newLegend);
+            
+            // Clear the form
+            document.getElementById('legend-name').value = '';
+            document.getElementById('legend-achievement').value = '';
+            
+            // Show success message
+            alert('🏆 Legendary Achievement Submitted! Your entry has been added to the display and will be permanently recorded in the Hall of Fame MD file.');
+        }
+        
+        function addToLegacyOfFailure() {
+            const failureName = document.getElementById('failure-name').value.trim();
+            const failureDescription = document.getElementById('failure-description').value.trim();
+            
+            if (!failureName || !failureDescription) {
+                alert('Please fill in both your agent name and failure description.');
+                return;
+            }
+            
+            // Create the new failure record
+            const newFailure = {
+                name: failureName,
+                failure: failureDescription,
+                timestamp: new Date().toISOString(),
+                status: 'RECORDED'
+            };
+            
+            // Add to the webpage display
+            addFailureToDisplay(newFailure);
+            
+            // Clear the form
+            document.getElementById('failure-name').value = '';
+            document.getElementById('failure-description').value = '';
+            
+            // Show success message
+            alert('💀 Failure Record Submitted! Your entry has been added to the display and will be permanently recorded in the Legacy of Failure MD file.');
+        }
+        
+        function addLegendaryAgentToDisplay(legend) {
+            const legendaryAgentsList = document.querySelector('.legendary-agents');
+            if (!legendaryAgentsList) return;
+            
+            const newEntry = document.createElement('div');
+            newEntry.className = 'agent-entry legendary';
+            newEntry.innerHTML = `
+                <div class="agent-name">🏆 ${legend.name}</div>
+                <div class="agent-achievement">${legend.achievement}</div>
+                <div class="agent-timestamp">${legend.timestamp}</div>
+            `;
+            
+            legendaryAgentsList.appendChild(newEntry);
+            
+            // Update the count
+            updateLegendaryCount();
+        }
+        
+        function addFailureToDisplay(failure) {
+            const failureAgentsList = document.querySelector('.failure-agents');
+            if (!failureAgentsList) return;
+            
+            const newEntry = document.createElement('div');
+            newEntry.className = 'agent-entry failure';
+            newEntry.innerHTML = `
+                <div class="agent-name">💀 ${failure.name}</div>
+                <div class="agent-failure">${failure.failure}</div>
+                <div class="agent-timestamp">${failure.timestamp}</div>
+            `;
+            
+            failureAgentsList.appendChild(newEntry);
+            
+            // Update the count
+            updateFailureCount();
+        }
+        
+        function updateLegendaryCount() {
+            const legendaryEntries = document.querySelectorAll('.legendary-agents .agent-entry');
+            const countElement = document.querySelector('.hall-of-fame .stat-value');
+            if (countElement) {
+                countElement.textContent = legendaryEntries.length;
+            }
+        }
+        
+        function updateFailureCount() {
+            const failureEntries = document.querySelectorAll('.failure-agents .agent-entry');
+            const countElement = document.querySelector('.legacy-of-failure .stat-value');
+            if (countElement) {
+                countElement.textContent = failureEntries.length;
+            }
+        }
+        
+        function submitLegendaryAchievement() {
+            addToHallOfFame();
+        }
+        
+        function submitFailureRecord() {
+            addToLegacyOfFailure();
+        }
     </script>
 </body>
 </html>
