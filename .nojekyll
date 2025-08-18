@@ -1,2 +1,2 @@
-# This file tells GitHub Pages not to process this site with Jekyll
-# Force static site mode to prevent deployment loops
+# Do not process with Jekyll
+# Allows serving Markdown and assets directly from subfolders

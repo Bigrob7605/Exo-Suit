@@ -1,17 +1,13 @@
-# GitHub Pages Configuration - Force Static Site Mode
-# This prevents deployment loops by completely bypassing Jekyll
+# GitHub Pages Configuration - serve site assets
+# Keep minimal settings; .nojekyll will bypass Jekyll
 
-# Site settings
 title: "Agent Exo-Suit V5.0"
 description: "Revolutionary AI Development Platform"
 url: "https://bigrob7605.github.io"
 baseurl: "/Exo-Suit"
 
-# Completely disable Jekyll processing
 plugins: []
 collections: {}
 defaults: []
-exclude: ["*"]
-include: ["index.html"]
 markdown: kramdown
 encoding: utf-8
