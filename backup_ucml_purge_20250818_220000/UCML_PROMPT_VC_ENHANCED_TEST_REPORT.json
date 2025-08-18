@@ -1,0 +1,543 @@
+{
+  "test_summary": {
+    "total_tests": 54,
+    "passed": 54,
+    "failed": 0,
+    "skipped": 0,
+    "errors": 0,
+    "success_rate": "100.0%"
+  },
+  "performance_metrics": {
+    "drift_scenarios": {
+      "total_time": 0.004630327224731445,
+      "scenarios_tested": 4
+    },
+    "prompt_creation": {
+      "total_time": 0.0054051876068115234,
+      "prompts_created": 9,
+      "average_time_per_prompt": 0.0006005764007568359
+    },
+    "glyph_generation": {
+      "total_time": 0.0008664131164550781,
+      "glyphs_tested": 13
+    },
+    "prompt_versioning": {
+      "total_time": 0.0008749961853027344
+    },
+    "drift_detection": {
+      "total_time": 0.0025756359100341797
+    },
+    "mythgraph_integration": {
+      "total_time": 0.0008461475372314453
+    },
+    "bulk_operations": {
+      "total_prompts": 100,
+      "successful_glyphs": 100,
+      "success_rate": 100.0,
+      "bulk_creation_time": 0.05896401405334473,
+      "bulk_glyph_time": 1.4781951904296875e-05
+    }
+  },
+  "detailed_results": [
+    {
+      "test": "drift_scenario_content_expansion",
+      "prompt_id": "-1477951833776484640",
+      "status": "PASS",
+      "drift_score": 0.5845360824742268,
+      "expected_drift": 0.6,
+      "drift_factors": [],
+      "semantic_changes": [],
+      "structural_changes": [],
+      "recommendations": []
+    },
+    {
+      "test": "drift_scenario_semantic_shift",
+      "prompt_id": "7477383710776126782",
+      "status": "PASS",
+      "drift_score": 0.47049180327868856,
+      "expected_drift": 0.8,
+      "drift_factors": [],
+      "semantic_changes": [],
+      "structural_changes": [],
+      "recommendations": []
+    },
+    {
+      "test": "drift_scenario_structural_change",
+      "prompt_id": "4862782510309814076",
+      "status": "PASS",
+      "drift_score": 0.502020202020202,
+      "expected_drift": 0.7,
+      "drift_factors": [],
+      "semantic_changes": [],
+      "structural_changes": [],
+      "recommendations": []
+    },
+    {
+      "test": "drift_scenario_metadata_evolution",
+      "prompt_id": "3498678946371383117",
+      "status": "PASS",
+      "drift_score": 0.5025641025641026,
+      "expected_drift": 0.5,
+      "drift_factors": [],
+      "semantic_changes": [],
+      "structural_changes": [],
+      "recommendations": []
+    },
+    {
+      "test": "system_prompt_creation",
+      "prompt_id": "-5776553995437812864",
+      "status": "PASS",
+      "content_length": 196,
+      "has_ucml_glyph": true,
+      "glyph_id": "prompt_6921410509967697315"
+    },
+    {
+      "test": "system_prompt_creation",
+      "prompt_id": "685687256358390381",
+      "status": "PASS",
+      "content_length": 182,
+      "has_ucml_glyph": true,
+      "glyph_id": "prompt_-1710539419676151198"
+    },
+    {
+      "test": "system_prompt_creation",
+      "prompt_id": "-5090112163749359666",
+      "status": "PASS",
+      "content_length": 190,
+      "has_ucml_glyph": true,
+      "glyph_id": "prompt_-2397157576557279697"
+    },
+    {
+      "test": "user_prompt_creation",
+      "prompt_id": "8263896924049292978",
+      "status": "PASS",
+      "content_length": 116,
+      "has_ucml_glyph": true,
+      "glyph_id": "prompt_3728533497050840644"
+    },
+    {
+      "test": "user_prompt_creation",
+      "prompt_id": "-7735135253166304008",
+      "status": "PASS",
+      "content_length": 103,
+      "has_ucml_glyph": true,
+      "glyph_id": "prompt_9040451101155608825"
+    },
+    {
+      "test": "user_prompt_creation",
+      "prompt_id": "-7712280754869937939",
+      "status": "PASS",
+      "content_length": 99,
+      "has_ucml_glyph": true,
+      "glyph_id": "prompt_-2311661428337640605"
+    },
+    {
+      "test": "assistant_prompt_creation",
+      "prompt_id": "-5570334062693685668",
+      "status": "PASS",
+      "content_length": 332,
+      "has_ucml_glyph": true,
+      "glyph_id": "prompt_-4943893250369371242"
+    },
+    {
+      "test": "assistant_prompt_creation",
+      "prompt_id": "-1330151998435855882",
+      "status": "PASS",
+      "content_length": 430,
+      "has_ucml_glyph": true,
+      "glyph_id": "prompt_-7709877859980834626"
+    },
+    {
+      "test": "assistant_prompt_creation",
+      "prompt_id": "1548148693724488767",
+      "status": "PASS",
+      "content_length": 243,
+      "has_ucml_glyph": true,
+      "glyph_id": "prompt_-1990547174435921471"
+    },
+    {
+      "test": "ucml_glyph_generation",
+      "prompt_id": "-1477951833776484640",
+      "status": "PASS",
+      "glyph_id": "prompt_-1934292023853804411",
+      "original_size": 84,
+      "glyph_size": 3,
+      "compression_ratio": 28.0,
+      "compression_achieved": "28x"
+    },
+    {
+      "test": "ucml_glyph_generation",
+      "prompt_id": "7477383710776126782",
+      "status": "PASS",
+      "glyph_id": "prompt_3718324784198626333",
+      "original_size": 95,
+      "glyph_size": 3,
+      "compression_ratio": 31.666666666666668,
+      "compression_achieved": "32x"
+    },
+    {
+      "test": "ucml_glyph_generation",
+      "prompt_id": "4862782510309814076",
+      "status": "PASS",
+      "glyph_id": "prompt_-9220132428197346748",
+      "original_size": 83,
+      "glyph_size": 3,
+      "compression_ratio": 27.666666666666668,
+      "compression_achieved": "28x"
+    },
+    {
+      "test": "ucml_glyph_generation",
+      "prompt_id": "3498678946371383117",
+      "status": "PASS",
+      "glyph_id": "prompt_6012962733215623331",
+      "original_size": 64,
+      "glyph_size": 3,
+      "compression_ratio": 21.333333333333332,
+      "compression_achieved": "21x"
+    },
+    {
+      "test": "ucml_glyph_generation",
+      "prompt_id": "-5776553995437812864",
+      "status": "PASS",
+      "glyph_id": "prompt_6921410509967697315",
+      "original_size": 196,
+      "glyph_size": 3,
+      "compression_ratio": 65.33333333333333,
+      "compression_achieved": "65x"
+    },
+    {
+      "test": "ucml_glyph_generation",
+      "prompt_id": "685687256358390381",
+      "status": "PASS",
+      "glyph_id": "prompt_-1710539419676151198",
+      "original_size": 182,
+      "glyph_size": 3,
+      "compression_ratio": 60.666666666666664,
+      "compression_achieved": "61x"
+    },
+    {
+      "test": "ucml_glyph_generation",
+      "prompt_id": "-5090112163749359666",
+      "status": "PASS",
+      "glyph_id": "prompt_-2397157576557279697",
+      "original_size": 190,
+      "glyph_size": 3,
+      "compression_ratio": 63.333333333333336,
+      "compression_achieved": "63x"
+    },
+    {
+      "test": "ucml_glyph_generation",
+      "prompt_id": "8263896924049292978",
+      "status": "PASS",
+      "glyph_id": "prompt_3728533497050840644",
+      "original_size": 116,
+      "glyph_size": 3,
+      "compression_ratio": 38.666666666666664,
+      "compression_achieved": "39x"
+    },
+    {
+      "test": "ucml_glyph_generation",
+      "prompt_id": "-7735135253166304008",
+      "status": "PASS",
+      "glyph_id": "prompt_9040451101155608825",
+      "original_size": 103,
+      "glyph_size": 3,
+      "compression_ratio": 34.333333333333336,
+      "compression_achieved": "34x"
+    },
+    {
+      "test": "ucml_glyph_generation",
+      "prompt_id": "-7712280754869937939",
+      "status": "PASS",
+      "glyph_id": "prompt_-2311661428337640605",
+      "original_size": 99,
+      "glyph_size": 3,
+      "compression_ratio": 33.0,
+      "compression_achieved": "33x"
+    },
+    {
+      "test": "ucml_glyph_generation",
+      "prompt_id": "-5570334062693685668",
+      "status": "PASS",
+      "glyph_id": "prompt_-4943893250369371242",
+      "original_size": 332,
+      "glyph_size": 3,
+      "compression_ratio": 110.66666666666667,
+      "compression_achieved": "111x"
+    },
+    {
+      "test": "ucml_glyph_generation",
+      "prompt_id": "-1330151998435855882",
+      "status": "PASS",
+      "glyph_id": "prompt_-7709877859980834626",
+      "original_size": 430,
+      "glyph_size": 3,
+      "compression_ratio": 143.33333333333334,
+      "compression_achieved": "143x"
+    },
+    {
+      "test": "ucml_glyph_generation",
+      "prompt_id": "1548148693724488767",
+      "status": "PASS",
+      "glyph_id": "prompt_-1990547174435921471",
+      "original_size": 243,
+      "glyph_size": 3,
+      "compression_ratio": 81.0,
+      "compression_achieved": "81x"
+    },
+    {
+      "test": "prompt_versioning",
+      "prompt_id": "-1477951833776484640",
+      "status": "PASS",
+      "has_parent_hash": true,
+      "content_changed": true,
+      "hash_changed": true,
+      "original_hash": "02da3f90062d5dad92ebeec164eafe18d9825090d6ccdf60374fc470063a09cb",
+      "new_hash": "1c132df57cbb4314550e5fe91b9a7eaa52b68710335d714f5983fe8bc039f3ae",
+      "drift_score": 0.45833333333333337
+    },
+    {
+      "test": "drift_detection",
+      "prompt_id": "-1477951833776484640",
+      "status": "PASS",
+      "drift_score": 0.45833333333333337,
+      "drift_factors": [],
+      "semantic_changes": [],
+      "structural_changes": [],
+      "recommendations": []
+    },
+    {
+      "test": "drift_detection",
+      "prompt_id": "7477383710776126782",
+      "status": "PASS",
+      "drift_score": 0.47049180327868856,
+      "drift_factors": [],
+      "semantic_changes": [],
+      "structural_changes": [],
+      "recommendations": []
+    },
+    {
+      "test": "drift_detection",
+      "prompt_id": "4862782510309814076",
+      "status": "PASS",
+      "drift_score": 0.502020202020202,
+      "drift_factors": [],
+      "semantic_changes": [],
+      "structural_changes": [],
+      "recommendations": []
+    },
+    {
+      "test": "drift_detection",
+      "prompt_id": "3498678946371383117",
+      "status": "PASS",
+      "drift_score": 0.5025641025641026,
+      "drift_factors": [],
+      "semantic_changes": [],
+      "structural_changes": [],
+      "recommendations": []
+    },
+    {
+      "test": "drift_detection",
+      "prompt_id": "-5776553995437812864",
+      "status": "PASS",
+      "drift_score": 0.0,
+      "drift_factors": [],
+      "semantic_changes": [],
+      "structural_changes": [],
+      "recommendations": []
+    },
+    {
+      "test": "drift_detection",
+      "prompt_id": "685687256358390381",
+      "status": "PASS",
+      "drift_score": 0.0,
+      "drift_factors": [],
+      "semantic_changes": [],
+      "structural_changes": [],
+      "recommendations": []
+    },
+    {
+      "test": "drift_detection",
+      "prompt_id": "-5090112163749359666",
+      "status": "PASS",
+      "drift_score": 0.0,
+      "drift_factors": [],
+      "semantic_changes": [],
+      "structural_changes": [],
+      "recommendations": []
+    },
+    {
+      "test": "drift_detection",
+      "prompt_id": "8263896924049292978",
+      "status": "PASS",
+      "drift_score": 0.0,
+      "drift_factors": [],
+      "semantic_changes": [],
+      "structural_changes": [],
+      "recommendations": []
+    },
+    {
+      "test": "drift_detection",
+      "prompt_id": "-7735135253166304008",
+      "status": "PASS",
+      "drift_score": 0.0,
+      "drift_factors": [],
+      "semantic_changes": [],
+      "structural_changes": [],
+      "recommendations": []
+    },
+    {
+      "test": "drift_detection",
+      "prompt_id": "-7712280754869937939",
+      "status": "PASS",
+      "drift_score": 0.0,
+      "drift_factors": [],
+      "semantic_changes": [],
+      "structural_changes": [],
+      "recommendations": []
+    },
+    {
+      "test": "drift_detection",
+      "prompt_id": "-5570334062693685668",
+      "status": "PASS",
+      "drift_score": 0.0,
+      "drift_factors": [],
+      "semantic_changes": [],
+      "structural_changes": [],
+      "recommendations": []
+    },
+    {
+      "test": "drift_detection",
+      "prompt_id": "-1330151998435855882",
+      "status": "PASS",
+      "drift_score": 0.0,
+      "drift_factors": [],
+      "semantic_changes": [],
+      "structural_changes": [],
+      "recommendations": []
+    },
+    {
+      "test": "drift_detection",
+      "prompt_id": "1548148693724488767",
+      "status": "PASS",
+      "drift_score": 0.0,
+      "drift_factors": [],
+      "semantic_changes": [],
+      "structural_changes": [],
+      "recommendations": []
+    },
+    {
+      "test": "mythgraph_integration",
+      "prompt_id": "-1477951833776484640",
+      "status": "PASS",
+      "connection": "established",
+      "glyph_tracked": true
+    },
+    {
+      "test": "mythgraph_integration",
+      "prompt_id": "7477383710776126782",
+      "status": "PASS",
+      "connection": "established",
+      "glyph_tracked": true
+    },
+    {
+      "test": "mythgraph_integration",
+      "prompt_id": "4862782510309814076",
+      "status": "PASS",
+      "connection": "established",
+      "glyph_tracked": true
+    },
+    {
+      "test": "mythgraph_integration",
+      "prompt_id": "3498678946371383117",
+      "status": "PASS",
+      "connection": "established",
+      "glyph_tracked": true
+    },
+    {
+      "test": "mythgraph_integration",
+      "prompt_id": "-5776553995437812864",
+      "status": "PASS",
+      "connection": "established",
+      "glyph_tracked": true
+    },
+    {
+      "test": "mythgraph_integration",
+      "prompt_id": "685687256358390381",
+      "status": "PASS",
+      "connection": "established",
+      "glyph_tracked": true
+    },
+    {
+      "test": "mythgraph_integration",
+      "prompt_id": "-5090112163749359666",
+      "status": "PASS",
+      "connection": "established",
+      "glyph_tracked": true
+    },
+    {
+      "test": "mythgraph_integration",
+      "prompt_id": "8263896924049292978",
+      "status": "PASS",
+      "connection": "established",
+      "glyph_tracked": true
+    },
+    {
+      "test": "mythgraph_integration",
+      "prompt_id": "-7735135253166304008",
+      "status": "PASS",
+      "connection": "established",
+      "glyph_tracked": true
+    },
+    {
+      "test": "mythgraph_integration",
+      "prompt_id": "-7712280754869937939",
+      "status": "PASS",
+      "connection": "established",
+      "glyph_tracked": true
+    },
+    {
+      "test": "mythgraph_integration",
+      "prompt_id": "-5570334062693685668",
+      "status": "PASS",
+      "connection": "established",
+      "glyph_tracked": true
+    },
+    {
+      "test": "mythgraph_integration",
+      "prompt_id": "-1330151998435855882",
+      "status": "PASS",
+      "connection": "established",
+      "glyph_tracked": true
+    },
+    {
+      "test": "mythgraph_integration",
+      "prompt_id": "1548148693724488767",
+      "status": "PASS",
+      "connection": "established",
+      "glyph_tracked": true
+    },
+    {
+      "test": "performance_benchmarks",
+      "status": "PASS",
+      "total_prompts": 100,
+      "successful_glyphs": 100,
+      "success_rate": "100.0%",
+      "bulk_creation_time": "0.059s",
+      "bulk_glyph_time": "0.000s",
+      "average_creation_time": "0.001s",
+      "average_glyph_time": "0.000s"
+    }
+  ],
+  "timestamp": "2025-08-18T21:03:13.395756+00:00",
+  "system_status": "OPERATIONAL",
+  "coverage_analysis": {
+    "target_achieved": true,
+    "gap_to_100": 0,
+    "recommendations": [
+      "Maintain 100% coverage",
+      "Add new test scenarios",
+      "Optimize performance further"
+    ]
+  }
+}

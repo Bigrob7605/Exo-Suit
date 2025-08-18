@@ -1,0 +1,141 @@
+[package]
+name = "mmh-rs"
+version = "1.2.5"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[features]
+default = ["std", "zstd"]
+std       = ["builder"]
+# eBPF helpers – **Unix only**
+ebpf      = ["dep:aya", "dep:aya-log"]
+# Unix-only features
+cgroup = ["dep:cgroups-rs"]
+signal-handling = ["dep:signal-hook-tokio"]
+
+# Platform-specific full features
+full-unix = ["std", "cgroup", "signal-handling", "ebpf"]
+full-windows = ["std"]
+# V2 features (GPU+HDD) - NOT YET READY
+v2 = ["gpu-accel", "kai-core"]
+gpu-accel = []  # Placeholder for future GPU acceleration
+kai-core = []   # Placeholder for future Kai Core integration
+
+# Turbo features for hierarchical compression
+parallel = ["rayon"]
+simd = []  # Requires nightly Rust
+streaming = []
+zstd-fallback = ["zstd"]
+# V3 features (GPU+CPU+HDD) - NOT YET READY  
+v3 = ["v2", "ai-integration", "rgig"]
+ai-integration = []  # Placeholder for future AI integration
+rgig = []           # Placeholder for future RGIG integration
+hot-reload = ["dep:notify", "dep:notify-debouncer-mini"]
+metrics = ["dep:metrics", "dep:metrics-exporter-prometheus"]
+simd-json = ["dep:simd-json"]
+otel = ["dep:opentelemetry", "dep:tracing-opentelemetry"]
+bincode = []
+tracing = []
+builder = []
+telemetry = []
+indicatif = []
+
+# Platform-specific features
+[target.'cfg(unix)'.features]
+unix-cgroup = ["cgroup"]
+unix-signal-handling = ["signal-handling"]
+
+[target.'cfg(windows)'.features]
+windows-signal-handling = []  # Windows has different signal handling
+
+[dependencies]
+clap = { version = "4.4", features = ["derive"] }
+tokio = { version = "1.0", features = ["full"] }
+tokio-util = { version = "0.7", features = ["rt", "time"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "json", "time"] }
+opentelemetry = { version = "0.23", optional = true }
+opentelemetry-otlp = { version = "0.16", features = ["tokio", "grpc-tonic"], optional = true }
+tracing-opentelemetry = { version = "0.23", optional = true }
+governor = "0.6"
+notify = { version = "6", optional = true }
+notify-debouncer-mini = { version = "0.4", optional = true }
+figment = { version = "0.10", features = ["env", "toml"] }
+serde = { version = "1.0", features = ["derive"] }
+typed-builder = "0.18"
+regorus = "0.1"
+git2 = "0.18"
+handlebars = "5"
+async-trait = "0.1"
+once_cell = "1"
+walkdir = "2"
+serde_json = "1"
+uuid = { version = "1.0", features = ["v4"] }
+rand = "0.8"
+anyhow = "1.0"
+snafu = "0.7"
+chrono = { version = "0.4", features = ["serde"] }
+regex = "1.0"
+toml = "0.8"
+tempfile = "3.0"
+sysinfo = "0.29"
+sha2 = "0.10"
+zstd = { version = "0.12", optional = true }
+rand_chacha = "0.3"
+
+# Super-charged dependencies
+arc-swap = "1"
+dashmap = "5"
+metrics = { version = "0.21", optional = true }
+metrics-exporter-prometheus = { version = "0.12", optional = true }
+simd-json = { version = "0.13", optional = true }
+
+# Performance optimization dependencies
+rayon = { version = "1.7", optional = true }
+lru = "0.12"
+indicatif = "0.17"
+likely = "0.2"
+mimalloc = "0.1"
+parking_lot = "0.12"
+num_cpus = "1.16"
+
+# Additional dependencies for agent system
+futures = "0.3"
+counter = "0.5"
+wait-timeout = "0.2"
+thiserror = "1"
+ctor = "0.2"
+ctrlc = "3.4"
+
+# Benchmark and automation dependencies
+time = { version = "0.3", features = ["serde", "formatting"] }
+typed-path = "0.9"
+maplit = "1.0"
+indexmap = { version = "2", features = ["serde"] }
+bincode = "1.3"
+lz4 = "1.28.1"
+brotli = "8.0.1"
+blake3 = "1.5"
+
+[target.'cfg(unix)'.dependencies]
+aya     = { version = "0.11", optional = true }
+aya-log = { version = "0.1",  optional = true }
+signal-hook-tokio = { version = "0.3", features = ["futures-v0_3"], optional = true }
+cgroups-rs = { version = "0.3", optional = true }
+
+[dev-dependencies]
+tempfile = "3"
+histogram = "0.6"
+
+# Testing agent dependencies
+glob = "0.3"
+ctor = "0.4.2"
+ctrlc = "3.4"
+
+
+
+[build-dependencies]
+chrono = "0.4"
+
+# Test binaries removed - using main binary only

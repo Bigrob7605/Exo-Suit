@@ -1,0 +1,304 @@
+{
+  "info": {
+    "timestamp": "2025-08-18 18:31:05",
+    "note": "UCML glyph-ratio vs actual codecs on identical inputs"
+  },
+  "per_case": {
+    "ultra_short": {
+      "UCML_glyph": {
+        "original_size": 2,
+        "compressed_size": 1,
+        "ratio_x": 2.0
+      },
+      "ZSTD": {
+        "original_size": 2,
+        "compressed_size": 11,
+        "ratio_x": 0.18181818181818182,
+        "speed_mb_s": 0.04819277108433735
+      },
+      "LZ4": {
+        "original_size": 2,
+        "compressed_size": 25,
+        "ratio_x": 0.08,
+        "speed_mb_s": 0.19047619047619047
+      },
+      "GZIP": {
+        "original_size": 2,
+        "compressed_size": 22,
+        "ratio_x": 0.09090909090909091,
+        "speed_mb_s": 0.049689440993788817
+      },
+      "ZLIB": {
+        "original_size": 2,
+        "compressed_size": 10,
+        "ratio_x": 0.2,
+        "speed_mb_s": 0.6153846153846154
+      }
+    },
+    "short": {
+      "UCML_glyph": {
+        "original_size": 11,
+        "compressed_size": 1,
+        "ratio_x": 11.0
+      },
+      "ZSTD": {
+        "original_size": 11,
+        "compressed_size": 20,
+        "ratio_x": 0.55,
+        "speed_mb_s": 0.8148148148148148
+      },
+      "LZ4": {
+        "original_size": 11,
+        "compressed_size": 34,
+        "ratio_x": 0.3235294117647059,
+        "speed_mb_s": 7.333333333333333
+      },
+      "GZIP": {
+        "original_size": 11,
+        "compressed_size": 31,
+        "ratio_x": 0.3548387096774194,
+        "speed_mb_s": 1.5172413793103448
+      },
+      "ZLIB": {
+        "original_size": 11,
+        "compressed_size": 19,
+        "ratio_x": 0.5789473684210527,
+        "speed_mb_s": 3.142857142857143
+      }
+    },
+    "medium": {
+      "UCML_glyph": {
+        "original_size": 52,
+        "compressed_size": 1,
+        "ratio_x": 52.0
+      },
+      "ZSTD": {
+        "original_size": 52,
+        "compressed_size": 61,
+        "ratio_x": 0.8524590163934426,
+        "speed_mb_s": 13.866666666666667
+      },
+      "LZ4": {
+        "original_size": 52,
+        "compressed_size": 75,
+        "ratio_x": 0.6933333333333334,
+        "speed_mb_s": 52.0
+      },
+      "GZIP": {
+        "original_size": 52,
+        "compressed_size": 69,
+        "ratio_x": 0.7536231884057971,
+        "speed_mb_s": 6.709677419354839
+      },
+      "ZLIB": {
+        "original_size": 52,
+        "compressed_size": 57,
+        "ratio_x": 0.9122807017543859,
+        "speed_mb_s": 10.947368421052632
+      }
+    },
+    "long": {
+      "UCML_glyph": {
+        "original_size": 168,
+        "compressed_size": 1,
+        "ratio_x": 168.0
+      },
+      "ZSTD": {
+        "original_size": 168,
+        "compressed_size": 130,
+        "ratio_x": 1.2923076923076924,
+        "speed_mb_s": 9.6
+      },
+      "LZ4": {
+        "original_size": 168,
+        "compressed_size": 182,
+        "ratio_x": 0.9230769230769231,
+        "speed_mb_s": 112.0
+      },
+      "GZIP": {
+        "original_size": 168,
+        "compressed_size": 142,
+        "ratio_x": 1.1830985915492958,
+        "speed_mb_s": 14.297872340425531
+      },
+      "ZLIB": {
+        "original_size": 168,
+        "compressed_size": 130,
+        "ratio_x": 1.2923076923076924,
+        "speed_mb_s": 24.88888888888889
+      }
+    },
+    "ultra_long": {
+      "UCML_glyph": {
+        "original_size": 315,
+        "compressed_size": 1,
+        "ratio_x": 315.0
+      },
+      "ZSTD": {
+        "original_size": 315,
+        "compressed_size": 213,
+        "ratio_x": 1.4788732394366197,
+        "speed_mb_s": 32.30769230769231
+      },
+      "LZ4": {
+        "original_size": 315,
+        "compressed_size": 307,
+        "ratio_x": 1.0260586319218241,
+        "speed_mb_s": 157.5
+      },
+      "GZIP": {
+        "original_size": 315,
+        "compressed_size": 223,
+        "ratio_x": 1.4125560538116593,
+        "speed_mb_s": 20.322580645161292
+      },
+      "ZLIB": {
+        "original_size": 315,
+        "compressed_size": 211,
+        "ratio_x": 1.4928909952606635,
+        "speed_mb_s": 32.30769230769231
+      }
+    },
+    "code_sample": {
+      "UCML_glyph": {
+        "original_size": 450,
+        "compressed_size": 1,
+        "ratio_x": 450.0
+      },
+      "ZSTD": {
+        "original_size": 450,
+        "compressed_size": 201,
+        "ratio_x": 2.2388059701492535,
+        "speed_mb_s": 51.42857142857143
+      },
+      "LZ4": {
+        "original_size": 450,
+        "compressed_size": 261,
+        "ratio_x": 1.7241379310344827,
+        "speed_mb_s": 225.0
+      },
+      "GZIP": {
+        "original_size": 450,
+        "compressed_size": 198,
+        "ratio_x": 2.272727272727273,
+        "speed_mb_s": 25.714285714285715
+      },
+      "ZLIB": {
+        "original_size": 450,
+        "compressed_size": 186,
+        "ratio_x": 2.4193548387096775,
+        "speed_mb_s": 42.857142857142854
+      }
+    },
+    "technical_document": {
+      "UCML_glyph": {
+        "original_size": 619,
+        "compressed_size": 1,
+        "ratio_x": 619.0
+      },
+      "ZSTD": {
+        "original_size": 619,
+        "compressed_size": 385,
+        "ratio_x": 1.6077922077922078,
+        "speed_mb_s": 55.022222222222226
+      },
+      "LZ4": {
+        "original_size": 619,
+        "compressed_size": 561,
+        "ratio_x": 1.103386809269162,
+        "speed_mb_s": 190.46153846153845
+      },
+      "GZIP": {
+        "original_size": 619,
+        "compressed_size": 372,
+        "ratio_x": 1.663978494623656,
+        "speed_mb_s": 30.195121951219512
+      },
+      "ZLIB": {
+        "original_size": 619,
+        "compressed_size": 360,
+        "ratio_x": 1.7194444444444446,
+        "speed_mb_s": 51.583333333333336
+      }
+    },
+    "repetitive_pattern": {
+      "UCML_glyph": {
+        "original_size": 840,
+        "compressed_size": 1,
+        "ratio_x": 840.0
+      },
+      "ZSTD": {
+        "original_size": 840,
+        "compressed_size": 68,
+        "ratio_x": 12.352941176470589,
+        "speed_mb_s": 168.0
+      },
+      "LZ4": {
+        "original_size": 840,
+        "compressed_size": 95,
+        "ratio_x": 8.842105263157896,
+        "speed_mb_s": 672.0
+      },
+      "GZIP": {
+        "original_size": 840,
+        "compressed_size": 76,
+        "ratio_x": 11.052631578947368,
+        "speed_mb_s": 80.0
+      },
+      "ZLIB": {
+        "original_size": 840,
+        "compressed_size": 64,
+        "ratio_x": 13.125,
+        "speed_mb_s": 129.23076923076923
+      }
+    },
+    "mixed_content": {
+      "UCML_glyph": {
+        "original_size": 569,
+        "compressed_size": 1,
+        "ratio_x": 569.0
+      },
+      "ZSTD": {
+        "original_size": 569,
+        "compressed_size": 377,
+        "ratio_x": 1.509283819628647,
+        "speed_mb_s": 56.9
+      },
+      "LZ4": {
+        "original_size": 569,
+        "compressed_size": 508,
+        "ratio_x": 1.1200787401574803,
+        "speed_mb_s": 252.88888888888889
+      },
+      "GZIP": {
+        "original_size": 569,
+        "compressed_size": 370,
+        "ratio_x": 1.537837837837838,
+        "speed_mb_s": 26.160919540229884
+      },
+      "ZLIB": {
+        "original_size": 569,
+        "compressed_size": 358,
+        "ratio_x": 1.589385474860335,
+        "speed_mb_s": 41.38181818181818
+      }
+    }
+  },
+  "summary": {
+    "UCML_glyph": {
+      "avg_ratio_x": 336.22
+    },
+    "ZSTD": {
+      "avg_ratio_x": 2.45
+    },
+    "LZ4": {
+      "avg_ratio_x": 1.76
+    },
+    "GZIP": {
+      "avg_ratio_x": 2.26
+    },
+    "ZLIB": {
+      "avg_ratio_x": 2.59
+    }
+  }
+}
