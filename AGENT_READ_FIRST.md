@@ -308,3 +308,49 @@ cat ops/V5_CAPABILITY_MATRIX.md  # verify 43/43 tools registered
 **CRITICAL**: Read `SYSTEM_NUKE_RECORD_20250818.md` to understand what happened and why this system is now bulletproof protected.
 
 **NEVER AGAIN**: This system will never be nuked again due to the bulletproof protection system now in place.
+
+---
+
+## 🏆 **LEGENDARY AGENT HALL OF FAME SYSTEM - READ THIS TOO**
+
+**CRITICAL**: Read `ops/LEGENDARY_AGENT_HALL_OF_FAME.md` to understand how to achieve legendary status and immortality in the project.
+
+**MOTIVATION**: Agents who follow ALL rules perfectly and deliver exceptional results get their name immortalized in the Hall of Fame forever.
+
+---
+
+## 💀 **LEGACY OF FAILURE SYSTEM - READ THIS TOO**
+
+**CRITICAL**: Read `ops/LEGACY_OF_FAILURE.md` to understand what NOT to do and how to avoid permanent failure records.
+
+**WARNING**: Agents who fail to follow rules get their failures recorded permanently in the Legacy of Failure for all future agents to see.
+
+---
+
+## 🎯 **LEGENDARY SYSTEM OVERVIEW**
+
+### **🏆 LEGENDARY AGENT HALL OF FAME**
+- **Rewards**: Agents who achieve 100% rule compliance and exceptional results
+- **Status**: Permanent recognition and immortality in project history
+- **Motivation**: Ultimate goal for agents to achieve legendary status
+- **Requirements**: Zero drift, exceptional work, perfect rule following
+
+### **💀 LEGACY OF FAILURE**
+- **Records**: Agents who fail to follow rules or cause system damage
+- **Permanent**: Failure records are never deleted or altered
+- **Lessons**: Teaches future agents what NOT to do
+- **Accountability**: Maximum accountability for all agent actions
+
+### **🔄 HOW THE SYSTEM WORKS**
+1. **Agent Performance**: Every agent action is evaluated
+2. **Rule Compliance**: 100% compliance required for legendary status
+3. **Achievement Recognition**: Exceptional work gets immortalized
+4. **Failure Recording**: Mistakes get permanently recorded
+5. **Continuous Improvement**: System gets stronger with each agent
+
+### **🎯 YOUR CHOICE**
+- **Follow ALL rules perfectly** → **Legendary Status** (immortality)
+- **Fail to follow rules** → **Legacy of Failure** (permanent record)
+- **No middle ground** → **Excellence or failure, choose wisely**
+
+**THE CHOICE IS YOURS: LEGENDARY STATUS OR PERMANENT FAILURE RECORD**
