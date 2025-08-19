@@ -318,6 +318,9 @@
         top: 0;
         z-index: 1000;
         padding: 1rem 2rem;
+        min-height: 80px; /* Ensure consistent height */
+        display: flex;
+        align-items: center;
     }
     
     .nav-content {
@@ -481,6 +484,9 @@
         background: var(--glass-bg);
         border-bottom: 1px solid var(--border-light);
         padding: 12px 0;
+        min-height: 48px; /* Ensure consistent height */
+        display: flex;
+        align-items: center;
     }
     
     .breadcrumb-nav {
@@ -667,7 +673,7 @@
     
     /* Phase 3: 5-Section Layout */
     .phase3-main {
-        padding-top: 20px;
+        padding-top: 160px; /* Account for enhanced-nav + breadcrumb height */
     }
     
     .section-overview, .section-performance, .section-safety, .section-documentation, .section-community {
