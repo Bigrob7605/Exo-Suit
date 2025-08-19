@@ -1,35 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Include head content -->
-    <script>
-        // Load head content dynamically
-        fetch('includes/head.html')
-            .then(response => response.text())
-            .then(html => {
-                // Extract and apply meta tags and styles
-                const parser = new DOMParser();
-                const doc = parser.parseFromString(html, 'text/html');
-                
-                // Apply meta tags
-                doc.querySelectorAll('meta').forEach(meta => {
-                    if (!document.querySelector(`meta[name="${meta.getAttribute('name')}"]`)) {
-                        document.head.appendChild(meta.cloneNode(true));
-                    }
-                });
-                
-                // Apply title
-                if (doc.querySelector('title')) {
-                    document.title = doc.querySelector('title').textContent;
-                }
-                
-                // Apply styles
-                doc.querySelectorAll('style').forEach(style => {
-                    document.head.appendChild(style.cloneNode(true));
-                });
-            })
-            .catch(error => console.error('Error loading head content:', error));
-    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agent Exo-Suit V5.0 - AI Development Platform + MMH-RS Real Compression System</title>
+    <meta name="description" content="AI agent development platform with MMH-RS real compression: 3.37x average compression, 4.29x peak performance, real technology that actually works. 21/43 tools operational with bulletproof protection.">
+    
+    <!-- Core Styles -->
+    <link rel="stylesheet" href="assets/css/core.css">
     
     <!-- Component Loader -->
     <script src="assets/js/component-loader.js"></script>
@@ -41,82 +19,240 @@
     <!-- Floating Particles -->
     <div class="particles" id="particles"></div>
     
-    <!-- Main Container -->
-    <main id="main-container">
-        <!-- Enhanced Header Component Container -->
-        <div id="header-container" data-component="enhanced-hero"></div>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-content">
+            <div class="nav-logo">Agent Exo-Suit V5.0</div>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#kai-integration">Kai Integration</a></li>
+                <li><a href="#performance">Performance</a></li>
+                <li><a href="#roadmap">Roadmap</a></li>
+                <li><a href="README.md">Docs</a></li>
+                <li><a href="Project%20White%20Papers/">White Papers</a></li>
+                <li><a href="#local-security">Security</a></li>
+                <li><a href="ops/LEGENDARY_AGENT_HALL_OF_FAME.md">Hall of Fame</a></li>
+                <li><a href="ops/LEGACY_OF_FAILURE.md">Legacy of Failure</a></li>
+                <li><a href="#agent-legacy-logger">Agent Logger</a></li>
+                <li><a href="#interactive-demos">Interactive Demos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <div id="hero-container" data-component="hero"></div>
         
-        <!-- Project Story Component Container -->
-        <div id="story-container" data-component="project-story"></div>
+        <!-- Features Section -->
+        <div id="features-container" data-component="features"></div>
         
-        <!-- Kai Story Component Container -->
-        <div id="kai-story-container" data-component="kai-story"></div>
+        <!-- Performance Section -->
+        <div id="performance-container" data-component="performance"></div>
         
-        <!-- Tool Ecosystem Component Container -->
-        <div id="ecosystem-container" data-component="tool-ecosystem"></div>
+        <!-- Security Section -->
+        <div id="security-container" data-component="security"></div>
         
-        <!-- Performance Showcase Component Container -->
-        <div id="performance-container" data-component="performance-showcase"></div>
+        <!-- Interactive Demos Section -->
+        <div id="interactive-demos-container" data-component="interactive-demos"></div>
         
-        <!-- MMH-RS Showcase Component Container -->
-        <div id="mmh-rs-container" data-component="mmh-rs-showcase"></div>
+        <!-- White Papers Section -->
+        <div id="white-papers-container" data-component="white-papers"></div>
         
-        <!-- Tools Showcase Component Container -->
-        <div id="tools-container" data-component="tools-showcase"></div>
+        <!-- Kai Integration Section -->
+        <div id="kai-integration-container" data-component="kai-integration"></div>
         
-        <!-- Performance Metrics Component Container -->
-        <div id="performance-container" data-component="performance-metrics"></div>
+        <!-- Roadmap Section -->
+        <div id="roadmap-container" data-component="roadmap"></div>
         
-        <!-- Kai Integration Component Container -->
-        <div id="kai-container" data-component="kai-integration"></div>
-        
-        <!-- Paradox Resolver Component Container -->
-        <div id="paradox-container" data-component="paradox-resolver"></div>
-        
-        <!-- Guard Rail System Component Container -->
-        <div id="guard-rail-container" data-component="guard-rail-system"></div>
-        
-        <!-- Interactive Demos Component Container -->
-        <div id="demo-container" data-component="interactive-demos"></div>
-        
-        <!-- News Updates Component Container -->
-        <div id="news-container" data-component="news-updates"></div>
-        
-        <!-- Immortalization Component Container -->
-        <div id="immortalization-container" data-component="immortalization"></div>
-        
-        <!-- System Status Component Container -->
-        <div id="system-status-container" data-component="system-status"></div>
-        
-        <!-- Legendary List Component Container -->
-        <div id="legendary-container" data-component="legendary-list"></div>
-        
-        <!-- Footer Component Container -->
-        <div id="footer-container" data-component="footer"></div>
+                       <!-- Agent Legacy Logger Section -->
+               <div id="agent-legacy-logger-container" data-component="agent-legacy-logger"></div>
+               
+               <!-- Hall of Fame Section -->
+               <div id="hall-of-fame-container" data-component="hall-of-fame"></div>
+               
+               <!-- Legacy of Failure Section -->
+               <div id="legacy-of-failure-container" data-component="legacy-of-failure"></div>
     </main>
-    
-    <!-- Particle Animation Script -->
-    <script>
-        // Create floating particles
-        function createParticles() {
-            const particlesContainer = document.getElementById('particles');
-            const particleCount = 50;
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Agent Exo-Suit V5.0</h3>
+                    <p>AI agent development platform with MMH-RS real compression technology</p>
+                    <div class="footer-status">
+                        <span class="status-indicator">🔒 Maximum Security Active</span>
+                        <span class="status-indicator">21/43 Tools Operational (49%)</span>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Documentation</h4>
+                    <ul>
+                        <li><a href="README.md">Main README</a></li>
+                        <li><a href="AGENT_READ_FIRST.md">Agent Guide</a></li>
+                        <li><a href="Project%20White%20Papers/">White Papers</a></li>
+                        <li><a href="LOCAL_SECURITY_README.md">Security Guide</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Security</h4>
+                    <ul>
+                        <li><a href="LOCAL_SECURITY_README.md">Local Security</a></li>
+                        <li><a href="Project%20White%20Papers/V5.0_LOCAL_SECURITY_SPECIFICATIONS.md">Security Specs</a></li>
+                        <li><a href="test-security-config.py">Security Testing</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Development</h4>
+                    <ul>
+                        <li><a href="https://github.com/Bigrob7605/Exo-Suit">GitHub Repository</a></li>
+                        <li><a href="#interactive-demos">Interactive Demos</a></li>
+                        <li><a href="ops/">Operations</a></li>
+                    </ul>
+                </div>
+            </div>
             
-            for (let i = 0; i < particleCount; i++) {
-                const particle = document.createElement('div');
-                particle.className = 'particle';
-                particle.style.left = Math.random() * 100 + '%';
-                particle.style.animationDelay = Math.random() * 20 + 's';
-                particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
-                particlesContainer.appendChild(particle);
-            }
+            <div class="footer-bottom">
+                <p>&copy; 2025 Agent Exo-Suit V5.0 - Maximum Security, Real Performance</p>
+                <p><strong>Status:</strong> 🔒 MAXIMUM PROTECTION ACTIVE | 21/43 Tools Operational (49% Complete)</p>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+    /* Footer Styles */
+    .footer {
+        background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+        border-top: 1px solid var(--border-light);
+        padding: 3rem 0 1rem;
+        margin-top: 4rem;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .footer-section h3,
+    .footer-section h4 {
+        color: var(--text-primary);
+        margin-bottom: 1rem;
+        font-weight: 600;
+    }
+    
+    .footer-section h3 {
+        font-size: 1.5rem;
+        background: var(--primary-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    
+    .footer-section p {
+        color: var(--text-secondary);
+        margin-bottom: 1rem;
+        line-height: 1.6;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+    }
+    
+    .footer-section li {
+        margin-bottom: 0.5rem;
+    }
+    
+    .footer-section a {
+        color: var(--text-secondary);
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+    
+    .footer-section a:hover {
+        color: var(--cyber-blue);
+    }
+    
+    .footer-status {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-top: 1rem;
+    }
+    
+    .status-indicator {
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        background: rgba(0, 255, 0, 0.1);
+        border: 1px solid rgba(0, 255, 0, 0.3);
+        border-radius: 20px;
+        color: var(--success-green);
+        font-size: 0.9rem;
+        font-weight: 600;
+        text-align: center;
+    }
+    
+    .footer-bottom {
+        border-top: 1px solid var(--border-light);
+        padding-top: 2rem;
+        text-align: center;
+    }
+    
+    .footer-bottom p {
+        color: var(--text-secondary);
+        margin-bottom: 0.5rem;
+    }
+    
+    .footer-bottom strong {
+        color: var(--text-primary);
+    }
+    
+    /* Responsive Footer */
+    @media (max-width: 768px) {
+        .footer {
+            padding: 2rem 0 1rem;
         }
         
-        // Initialize when DOM is ready
-        document.addEventListener('DOMContentLoaded', () => {
-            createParticles();
-            console.log('Modular Exo-Suit V5.0 webpage loaded');
-        });
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+        
+        .footer-section {
+            text-align: center;
+        }
+    }
+    </style>
+
+    <script>
+    // Initialize particles
+    function createParticles() {
+        const particlesContainer = document.getElementById('particles');
+        const particleCount = 50;
+        
+        for (let i = 0; i < particleCount; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.animationDelay = Math.random() * 20 + 's';
+            particle.style.animationDuration = (Math.random() * 10 + 15) + 's';
+            particlesContainer.appendChild(particle);
+        }
+    }
+    
+    // Initialize when DOM is ready
+    document.addEventListener('DOMContentLoaded', function() {
+        createParticles();
+        console.log('Agent Exo-Suit V5.0 - Modular Architecture Loaded');
+        console.log('Component Loader Status:', window.componentLoader.getStatus());
+    });
     </script>
 </body>
 </html>
