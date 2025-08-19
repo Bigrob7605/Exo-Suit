@@ -91,6 +91,12 @@ chaos_test_repos/
 *.bin
 *.safetensors
 
+# Large Tensor Files (NumPy arrays)
+*.npy
+generated_tensors/
+tensor_cache/
+model_weights/
+
 # Cache and Temporary Files
 .cache/
 *.tmp
