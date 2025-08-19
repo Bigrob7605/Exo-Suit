@@ -32,7 +32,14 @@ class ComponentLoader {
             }
 
             // Fetch component from server
-            const response = await fetch(`components/${componentName}.html`);
+            let componentPath = `components/${componentName}.html`;
+            
+            // Special handling for interactive-demos component
+            if (componentName === 'interactive-demos') {
+                componentPath = `${componentName}.html`;
+            }
+            
+            const response = await fetch(componentPath);
             if (!response.ok) {
                 throw new Error(`Failed to load component ${componentName}: ${response.status}`);
             }
