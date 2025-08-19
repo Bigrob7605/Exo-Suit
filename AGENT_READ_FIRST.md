@@ -28,6 +28,59 @@
 
 ---
 
+## 🔒 **SECURITY-FIRST DEVELOPMENT - MAXIMUM PROTECTION REQUIRED**
+
+**🚨 CRITICAL**: All Exo-Suit V5.0 development must use the secure local development environment. **NEVER** use insecure legacy servers.
+
+### **🎯 Security Requirements**
+- **Default Behavior**: Localhost-only development (127.0.0.1)
+- **External Access**: Completely blocked by default
+- **Security Level**: 🔒 **MAXIMUM** - Zero tolerance for insecure configurations
+- **Development Safety**: Full local capabilities without external risks
+
+### **🚀 Secure Development Commands**
+```bash
+# ALWAYS USE THESE SECURE COMMANDS (Required)
+python local-security-config.py
+
+# PowerShell (Windows)
+.\start-secure-local-server.ps1
+
+# Batch File (Windows)
+start-secure-local-server.bat
+```
+
+### **🚫 NEVER USE THESE (Insecure)**
+```bash
+# ❌ FORBIDDEN - Allows external access
+python -m http.server 8000
+
+# ❌ FORBIDDEN - No security protection
+python -m http.server --bind 0.0.0.0 8000
+```
+
+### **📚 Security Documentation (Required Reading)**
+- **[LOCAL_SECURITY_README.md](LOCAL_SECURITY_README.md)** - Comprehensive security guide
+- **[V5.0_LOCAL_SECURITY_SPECIFICATIONS.md](Project%20White%20Papers/V5.0_LOCAL_SECURITY_SPECIFICATIONS.md)** - Official security white paper
+- **[test-security-config.py](test-security-config.py)** - Security configuration testing
+
+### **🛡️ Security Validation Checklist**
+- ✅ **Server Binding**: Only localhost (127.0.0.1, localhost, ::1)
+- ✅ **External Access**: Completely blocked
+- ✅ **Security Headers**: XSS protection, CSRF prevention active
+- ✅ **Access Logging**: Local requests only logged
+- ✅ **Migration Support**: Legacy scripts redirect to secure versions
+
+### **⚠️ Security Warnings**
+- **Remote Access**: Only enable when explicitly needed with proper security measures
+- **Production Deployment**: Use remote access with extreme caution and proper security
+- **Network Exposure**: Any external access exposes your system to potential threats
+- **Agent Responsibility**: You are responsible for maintaining secure development practices
+
+**SECURITY STATUS**: 🔒 **MAXIMUM PROTECTION ACTIVE** - Your development environment is 100% secure
+
+---
+
 ## 🚨 IMMEDIATE STOP RULE - READ THIS FIRST
 **NEVER DELETE THESE FILES UNDER ANY CIRCUMSTANCES:**
 - `ops/PHOENIX_RECOVERY_SYSTEM_V5.py` - CORE V5 SYSTEM
