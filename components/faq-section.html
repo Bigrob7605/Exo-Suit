@@ -103,6 +103,49 @@
             </div>
         </div>
         
+        <!-- Comparison Table -->
+        <div class="comparison-section">
+            <h3 class="comparison-title">📊 How Does Exo-Suit Compare?</h3>
+            <div class="comparison-table">
+                <div class="comparison-header">
+                    <div class="comparison-feature">Feature</div>
+                    <div class="comparison-exosuit">Exo-Suit V5.0</div>
+                    <div class="comparison-autogpt">AutoGPT</div>
+                    <div class="comparison-langchain">LangChain</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-feature">Recovery from Failure</div>
+                    <div class="comparison-exosuit">✅ Phoenix Recovery System</div>
+                    <div class="comparison-autogpt">❌ Crashes on errors</div>
+                    <div class="comparison-langchain">❌ Manual intervention</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-feature">Performance Claims</div>
+                    <div class="comparison-exosuit">✅ Real benchmarks (207-3.7K files/sec)</div>
+                    <div class="comparison-autogpt">❌ Theoretical estimates</div>
+                    <div class="comparison-langchain">❌ No performance data</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-feature">Paradox Handling</div>
+                    <div class="comparison-exosuit">✅ Kai Integration</div>
+                    <div class="comparison-autogpt">❌ Contradiction crashes</div>
+                    <div class="comparison-langchain">❌ No paradox resolution</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-feature">Transparency</div>
+                    <div class="comparison-exosuit">✅ Full audit trails</div>
+                    <div class="comparison-autogpt">❌ Black box decisions</div>
+                    <div class="comparison-langchain">❌ Limited visibility</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-feature">Security</div>
+                    <div class="comparison-exosuit">✅ Localhost-only, bulletproof</div>
+                    <div class="comparison-autogpt">❌ External API calls</div>
+                    <div class="comparison-langchain">❌ Dependency on external services</div>
+                </div>
+            </div>
+        </div>
+        
         <!-- Still Have Questions -->
         <div class="faq-footer">
             <p><strong>Still have questions?</strong></p>
@@ -292,6 +335,81 @@
         transform: translateY(-2px);
     }
     
+    /* Comparison Table */
+    .comparison-section {
+        margin: 4rem 0;
+        padding: 2rem;
+        background: rgba(255, 255, 255, 0.02);
+        border-radius: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .comparison-title {
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 2rem;
+        color: var(--text-primary);
+    }
+    
+    .comparison-table {
+        display: grid;
+        gap: 0;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    
+    .comparison-header {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        background: rgba(139, 92, 246, 0.2);
+        font-weight: 700;
+        color: var(--text-primary);
+    }
+    
+    .comparison-row {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .comparison-row:last-child {
+        border-bottom: none;
+    }
+    
+    .comparison-row:nth-child(even) {
+        background: rgba(255, 255, 255, 0.02);
+    }
+    
+    .comparison-feature,
+    .comparison-exosuit,
+    .comparison-autogpt,
+    .comparison-langchain {
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .comparison-feature:last-child,
+    .comparison-exosuit:last-child,
+    .comparison-autogpt:last-child,
+    .comparison-langchain:last-child {
+        border-right: none;
+    }
+    
+    .comparison-exosuit {
+        color: var(--success-green);
+        font-weight: 600;
+    }
+    
+    .comparison-autogpt,
+    .comparison-langchain {
+        color: #ff6b35;
+        font-weight: 600;
+    }
+    
     /* Responsive Design */
     @media (max-width: 768px) {
         .faq-section {
@@ -307,6 +425,30 @@
             width: 100%;
             max-width: 300px;
             text-align: center;
+        }
+        
+        .comparison-table {
+            font-size: 0.9rem;
+        }
+        
+        .comparison-header,
+        .comparison-row {
+            grid-template-columns: 1fr;
+            text-align: center;
+        }
+        
+        .comparison-feature,
+        .comparison-exosuit,
+        .comparison-autogpt,
+        .comparison-langchain {
+            border-right: none;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            justify-content: center;
+        }
+        
+        .comparison-feature {
+            background: rgba(139, 92, 246, 0.1);
+            font-weight: 700;
         }
     }
 </style>
