@@ -64,6 +64,50 @@
     margin-right: auto;
 }
 
+.white-paper-master-index {
+    background: rgba(0, 212, 255, 0.05);
+    border: 1px solid rgba(0, 212, 255, 0.2);
+    border-radius: 15px;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 600px;
+    text-align: center;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+.white-paper-master-index h3 {
+    font-size: 1.5rem;
+    color: #00d4ff;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.white-paper-master-index p {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+.master-index-btn {
+    background: linear-gradient(135deg, #00d4ff, #0080ff);
+    border: none;
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 25px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3);
+}
+
+.master-index-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 212, 255, 0.4);
+    background: linear-gradient(135deg, #00b8e6, #0066cc);
+}
+
 .white-papers-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -310,6 +354,15 @@
                 technical details, and production readiness assessments. They are the authoritative source 
                 for all V5.0 development and must be read before any implementation work.
             </p>
+            
+            <!-- 🎯 WHITE PAPER MASTER INDEX -->
+            <div class="white-paper-master-index">
+                <h3>📚 White Paper Master Index</h3>
+                <p>Complete navigation system for all V5.0 specifications</p>
+                <a href="Project%20White%20Papers/WHITE_PAPER_MASTER_INDEX.md" class="white-paper-btn master-index-btn">
+                    🎯 Access Master Index
+                </a>
+            </div>
         </div>
 
         <!-- 🎯 WHITE PAPERS GRID -->
@@ -323,13 +376,13 @@
                         <div class="white-paper-meta">
                             <span class="status">FINAL</span>
                             <span class="version">V5.0</span>
-                            <span class="date">August 2025</span>
+                            <span class="date">{timestamp}</span>
                         </div>
                     </div>
                 </div>
                 
                 <div class="white-paper-description">
-                    Complete implementation roadmap and current mission for the V5.0 "Builder of Dreams" system. 
+                    Complete implementation roadmap and current mission for the V5.0 system. 
                     Contains the comprehensive V5 core system architecture and legacy integration mission.
                 </div>
                 
@@ -338,7 +391,7 @@
                     <ul class="feature-list">
                         <li>Complete V5 core system architecture</li>
                         <li>Current mission: Legacy V4.0 integration</li>
-                        <li>Agent nuke incident recovery details</li>
+                        <li>System incident recovery details</li>
                         <li>Performance metrics and system status</li>
                         <li>Implementation timeline and targets</li>
                     </ul>
@@ -363,7 +416,7 @@
                         <div class="white-paper-meta">
                             <span class="status">FINAL</span>
                             <span class="version">V5.0</span>
-                            <span class="date">August 2025</span>
+                            <span class="date">{timestamp}</span>
                         </div>
                     </div>
                 </div>
@@ -403,7 +456,7 @@
                         <div class="white-paper-meta">
                             <span class="status">READY</span>
                             <span class="version">V5.0</span>
-                            <span class="date">August 2025</span>
+                            <span class="date">{timestamp}</span>
                         </div>
                     </div>
                 </div>
@@ -443,7 +496,7 @@
                         <div class="white-paper-meta">
                             <span class="status">EXCELLENT</span>
                             <span class="version">V5.0</span>
-                            <span class="date">August 2025</span>
+                            <span class="date">{timestamp}</span>
                         </div>
                     </div>
                 </div>
@@ -483,7 +536,7 @@
                         <div class="white-paper-meta">
                             <span class="status">LEGENDARY</span>
                             <span class="version">V5.0</span>
-                            <span class="date">August 2025</span>
+                            <span class="date">{timestamp}</span>
                         </div>
                     </div>
                 </div>
@@ -523,7 +576,7 @@
                         <div class="white-paper-meta">
                             <span class="status">49% COMPLETE</span>
                             <span class="version">V5.0</span>
-                            <span class="date">August 2025</span>
+                            <span class="date">{timestamp}</span>
                         </div>
                     </div>
                 </div>

@@ -392,7 +392,7 @@ This technology positions the Exo-Suit project as a leader in:
 
 ---
 
-**Report Generated**: 2025-08-18 20:56:27  
+**Report Generated**: {timestamp}  
 **Validation Status**: COMPLETE SUCCESS  
 **Technology Status**: OPERATIONAL & PRODUCTION READY  
 **Next Steps**: FEC Optimization & Production Deployment  

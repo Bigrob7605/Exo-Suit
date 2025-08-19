@@ -254,7 +254,7 @@
 
 ---
 
-**Report Generated**: 2025-08-18  
+**Report Generated**: {timestamp}  
 **Documentation Status**: ✅ **ALL FILES UPDATED WITH REAL DATA**  
 **System Status**: ⚠️ **PARTIALLY OPERATIONAL** - Python working, Rust needs restoration  
 **Next Action**: Begin Rust implementation restoration following the detailed roadmap

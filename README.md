@@ -14,7 +14,7 @@
 
 ## 🚀 **Quick Start (30 Seconds)**
 
-**[Get Started →](QUICK-START.md)** - Complete setup in under 2 minutes
+**[Get Started →](docs/00-QUICKSTART.md)** - Complete setup in under 2 minutes
 
 ```bash
 git clone https://github.com/Bigrob7605/Exo-Suit.git
@@ -25,13 +25,17 @@ python local-security-config.py
 
 ---
 
-## 📊 **Performance Overview**
+## 📊 **Current Status & Performance**
 
-**[View Full Metrics →](PERFORMANCE.md)** - Detailed benchmarks and optimization guides
-
+### **System Status**
 - **Tools Operational**: 21/43 (49% complete)
-- **Performance Range**: 207-3.7K files/second
-- **Compression**: 3.37x average (ZSTD), 2.16x average (LZ4)
+- **System Health**: 94.2% (Protected)
+- **Kai Integration**: 49% complete
+- **GPU Acceleration**: RTX 4070 active
+
+### **Performance Metrics**
+- **Processing Range**: 207-3.7K files/second
+- **Compression Ratio**: 3.37x average (ZSTD), 2.16x average (LZ4)
 - **Status**: Production ready with verified benchmarks
 
 ---
@@ -43,13 +47,13 @@ python local-security-config.py
 - **Access logging** - All activity tracked and logged
 - **Bulletproof protection** - Multi-layer security system
 
-**[Security Details →](USER-GUIDE.md#security-configuration-2-minutes)**
+**[Security Details →](docs/03-SECURITY/security-suite.md)**
 
 ---
 
 ## 🏗️ **System Architecture**
 
-**[Deep Dive →](ARCHITECTURE.md)** - Technical specifications and component details
+**[Deep Dive →](docs/01-ARCHITECTURE/system-overview.md)** - Technical specifications and component details
 
 - **Modular Design**: 11 independent, reusable components
 - **AI Integration**: Kai integration for advanced safety
@@ -60,7 +64,7 @@ python local-security-config.py
 
 ## 🔧 **Getting Started**
 
-**[Complete Guide →](USER-GUIDE.md)** - Step-by-step usage instructions
+**[Complete Guide →](docs/00-QUICKSTART.md)** - Step-by-step usage instructions
 
 ### **System Requirements**
 - **Python**: 3.8+ (3.13 recommended)
@@ -68,27 +72,28 @@ python local-security-config.py
 - **Memory**: 16GB RAM minimum, 32GB+ recommended
 
 ### **Website Access**
-- **Modular Version**: `http://127.0.0.1:8000/index-modular.html` (Recommended)
-- **Original Version**: `http://127.0.0.1:8000/index.html`
+- **Main Website**: `http://127.0.0.1:8000/index.html`
+- **Features**: 11 modular components, responsive design, enterprise interface
 
 ---
 
-## 📚 **Component Library**
+## 📚 **Documentation & Resources**
 
-**[Browse Components →](COMPONENT-LIBRARY.md)** - Individual component specifications
+### **Core Documentation**
+- **[Quick Start →](docs/00-QUICKSTART.md)**: 30-second setup guide
+- **[System Overview →](docs/01-ARCHITECTURE/system-overview.md)**: Technical specifications
+- **[Performance Benchmarks →](docs/02-PERFORMANCE/benchmarks.md)**: Detailed metrics and optimization
+- **[Security Suite →](docs/03-SECURITY/security-suite.md)**: Security features and configuration
+- **[Operations Guide →](docs/04-OPERATIONS/maintenance.md)**: Maintenance and troubleshooting
 
-### **Core Components**
-1. **Hero Section** - System overview and quick stats
-2. **Features Section** - System capabilities showcase
-3. **Performance Section** - Real-time metrics and benchmarks
-4. **Security Section** - Local security configuration
-5. **Kai Integration** - Advanced AI safety features
-6. **Roadmap Section** - Development strategy and goals
-7. **Agent Legacy Logger** - Logging and tracking system
-8. **Hall of Fame** - Legendary agent achievements
-9. **Legacy of Failure** - Learning from past mistakes
-10. **Interactive Demos** - Tool showcase functionality
-11. **White Papers** - Authoritative documentation
+### **White Papers (Authoritative Source)**
+- **[V5.0 Technical Specifications →](Project%20White%20Papers/V5.0_TECHNICAL_SPECIFICATIONS.md)**
+- **[V5.0 Implementation Roadmap →](Project%20White%20Papers/V5.0_IMPLEMENTATION_ROADMAP.md)**
+- **[V5.0 Local Security Specifications →](Project%20White%20Papers/V5.0_LOCAL_SECURITY_SPECIFICATIONS.md)**
+
+### **System Status**
+- **[V5 System Status Master →](V5_SYSTEM_STATUS_MASTER.md)**: Single source of truth
+- **[Agent Read First →](AGENT_READ_FIRST.md)**: Agent onboarding guide
 
 ---
 
@@ -108,44 +113,6 @@ python local-security-config.py
 - **Target**: 40/43 tools operational (93% complete)
 - **Performance**: Achieve 10,000+ files/second peak
 - **Enterprise**: Full enterprise deployment ready
-
----
-
-## 🛡️ **Security Configuration**
-
-### **Default Security (Recommended)**
-```bash
-python local-security-config.py
-```
-**Result**: Server running on `http://127.0.0.1:8000` with maximum security
-
-### **Security Features Active by Default**
-- ✅ **Localhost-only access** - External access blocked
-- ✅ **Security headers** - XSS, CSRF protection
-- ✅ **Access logging** - All activity tracked
-- ✅ **Bulletproof protection** - Multi-layer security
-
-**[Security Documentation →](LOCAL_SECURITY_README.md)**
-
----
-
-## 📚 **Documentation & Resources**
-
-### **Core Documentation**
-- **[Quick Start →](QUICK-START.md)**: 30-second setup guide
-- **[Performance →](PERFORMANCE.md)**: Detailed metrics and benchmarks
-- **[Architecture →](ARCHITECTURE.md)**: Technical specifications
-- **[User Guide →](USER-GUIDE.md)**: Step-by-step usage instructions
-- **[Component Library →](COMPONENT-LIBRARY.md)**: Component documentation
-
-### **White Papers (Authoritative Source)**
-- **[V5.0 Technical Specifications →](Project%20White%20Papers/V5.0_TECHNICAL_SPECIFICATIONS.md)**
-- **[V5.0 Implementation Roadmap →](Project%20White%20Papers/V5.0_IMPLEMENTATION_ROADMAP.md)**
-- **[V5.0 Local Security Specifications →](Project%20White%20Papers/V5.0_LOCAL_SECURITY_SPECIFICATIONS.md)**
-
-### **System Status**
-- **[V5 System Status Master →](V5_SYSTEM_STATUS_MASTER.md)**: Single source of truth
-- **[Agent Read First →](AGENT_READ_FIRST.md)**: Agent onboarding guide
 
 ---
 
@@ -190,4 +157,4 @@ The Exo-Suit V5.0 system is **ready for immediate use** with:
 
 ---
 
-*[Quick Start →](QUICK-START.md) | [Performance →](PERFORMANCE.md) | [Architecture →](ARCHITECTURE.md) | [User Guide →](USER-GUIDE.md) | [Component Library →](COMPONENT-LIBRARY.md)*
+*[Quick Start →](docs/00-QUICKSTART.md) | [System Overview →](docs/01-ARCHITECTURE/system-overview.md) | [Performance →](docs/02-PERFORMANCE/benchmarks.md) | [Security →](docs/03-SECURITY/security-suite.md) | [Operations →](docs/04-OPERATIONS/maintenance.md)*
