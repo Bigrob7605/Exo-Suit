@@ -1,0 +1,3062 @@
+{
+  "attention_patterns": {
+    "gzip": {
+      "original_size": 262144,
+      "compressed_size": 243150,
+      "compression_ratio": 1.078116389060251,
+      "compression_percentage": 7.245635986328125,
+      "processing_time_ms": 8.729934692382812,
+      "speed_mb_s": 28.637098536159055
+    },
+    "zlib": {
+      "original_size": 262144,
+      "compressed_size": 243138,
+      "compression_ratio": 1.07816959915768,
+      "compression_percentage": 7.250213623046875,
+      "processing_time_ms": 8.41665267944336,
+      "speed_mb_s": 29.703019658942836
+    },
+    "zstd": {
+      "original_size": 262144,
+      "compressed_size": 242405,
+      "compression_ratio": 1.0814298384934304,
+      "compression_percentage": 7.5298309326171875,
+      "processing_time_ms": 0.44226646423339844,
+      "speed_mb_s": 565.2700808625337
+    },
+    "lz4": {
+      "original_size": 262144,
+      "compressed_size": 262179,
+      "compression_ratio": 0.9998665034194195,
+      "compression_percentage": -0.0133514404296875,
+      "processing_time_ms": 0.18548965454101562,
+      "speed_mb_s": 1347.784061696658
+    },
+    "best_method": "zstd",
+    "best_ratio": 1.0814298384934304
+  },
+  "classifier.bias": {
+    "gzip": {
+      "original_size": 4000,
+      "compressed_size": 39,
+      "compression_ratio": 102.56410256410257,
+      "compression_percentage": 99.02499999999999,
+      "processing_time_ms": 0.05173683166503906,
+      "speed_mb_s": 73.73271889400921
+    },
+    "zlib": {
+      "original_size": 4000,
+      "compressed_size": 27,
+      "compression_ratio": 148.14814814814815,
+      "compression_percentage": 99.325,
+      "processing_time_ms": 0.011920928955078125,
+      "speed_mb_s": 320.0
+    },
+    "zstd": {
+      "original_size": 4000,
+      "compressed_size": 19,
+      "compression_ratio": 210.52631578947367,
+      "compression_percentage": 99.52499999999999,
+      "processing_time_ms": 0.0286102294921875,
+      "speed_mb_s": 133.33333333333334
+    },
+    "lz4": {
+      "original_size": 4000,
+      "compressed_size": 49,
+      "compression_ratio": 81.63265306122449,
+      "compression_percentage": 98.775,
+      "processing_time_ms": 0.0059604644775390625,
+      "speed_mb_s": 640.0
+    },
+    "best_method": "zstd",
+    "best_ratio": 210.52631578947367
+  },
+  "classifier.weight": {
+    "gzip": {
+      "original_size": 3072000,
+      "compressed_size": 2854731,
+      "compression_ratio": 1.076108396903246,
+      "compression_percentage": 7.07255859375,
+      "processing_time_ms": 108.94489288330078,
+      "speed_mb_s": 26.89146248588461
+    },
+    "zlib": {
+      "original_size": 3072000,
+      "compressed_size": 2854719,
+      "compression_ratio": 1.076112920396018,
+      "compression_percentage": 7.0729492187500025,
+      "processing_time_ms": 110.07332801818848,
+      "speed_mb_s": 26.61578015989395
+    },
+    "zstd": {
+      "original_size": 3072000,
+      "compressed_size": 2848985,
+      "compression_ratio": 1.0782787554164026,
+      "compression_percentage": 7.259602864583337,
+      "processing_time_ms": 4.062891006469727,
+      "speed_mb_s": 721.0844434012089
+    },
+    "lz4": {
+      "original_size": 3072000,
+      "compressed_size": 3072207,
+      "compression_ratio": 0.9999326217276375,
+      "compression_percentage": -0.006738281249996092,
+      "processing_time_ms": 1.8568038940429688,
+      "speed_mb_s": 1577.8120184899847
+    },
+    "best_method": "zstd",
+    "best_ratio": 1.0782787554164026
+  },
+  "class_token": {
+    "gzip": {
+      "original_size": 3072,
+      "compressed_size": 2906,
+      "compression_ratio": 1.05712319339298,
+      "compression_percentage": 5.4036458333333375,
+      "processing_time_ms": 0.08058547973632812,
+      "speed_mb_s": 36.35502958579882
+    },
+    "zlib": {
+      "original_size": 3072,
+      "compressed_size": 2894,
+      "compression_ratio": 1.0615065653075328,
+      "compression_percentage": 5.7942708333333375,
+      "processing_time_ms": 0.054836273193359375,
+      "speed_mb_s": 53.426086956521736
+    },
+    "zstd": {
+      "original_size": 3072,
+      "compressed_size": 2894,
+      "compression_ratio": 1.0615065653075328,
+      "compression_percentage": 5.7942708333333375,
+      "processing_time_ms": 0.02288818359375,
+      "speed_mb_s": 128.0
+    },
+    "lz4": {
+      "original_size": 3072,
+      "compressed_size": 3095,
+      "compression_ratio": 0.9925686591276252,
+      "compression_percentage": -0.7486979166666741,
+      "processing_time_ms": 0.0057220458984375,
+      "speed_mb_s": 512.0
+    },
+    "best_method": "zlib",
+    "best_ratio": 1.0615065653075328
+  },
+  "embedding_layer": {
+    "gzip": {
+      "original_size": 20480000,
+      "compressed_size": 18963057,
+      "compression_ratio": 1.0799946443234336,
+      "compression_percentage": 7.4069482421875055,
+      "processing_time_ms": 823.5588073730469,
+      "speed_mb_s": 23.715671334145473
+    },
+    "zlib": {
+      "original_size": 20480000,
+      "compressed_size": 18963045,
+      "compression_ratio": 1.079995327754588,
+      "compression_percentage": 7.407006835937501,
+      "processing_time_ms": 754.6038627624512,
+      "speed_mb_s": 25.88278560952507
+    },
+    "zstd": {
+      "original_size": 20480000,
+      "compressed_size": 18923490,
+      "compression_ratio": 1.08225279797754,
+      "compression_percentage": 7.600146484375003,
+      "processing_time_ms": 20.907878875732422,
+      "speed_mb_s": 934.1574109973317
+    },
+    "lz4": {
+      "original_size": 20480000,
+      "compressed_size": 20481271,
+      "compression_ratio": 0.9999379433043974,
+      "compression_percentage": -0.006206054687507567,
+      "processing_time_ms": 11.420726776123047,
+      "speed_mb_s": 1710.1582397394682
+    },
+    "best_method": "zstd",
+    "best_ratio": 1.08225279797754
+  },
+  "final_layer_norm.bias": {
+    "gzip": {
+      "original_size": 3072,
+      "compressed_size": 37,
+      "compression_ratio": 83.02702702702703,
+      "compression_percentage": 98.79557291666666,
+      "processing_time_ms": 0.02765655517578125,
+      "speed_mb_s": 105.93103448275862
+    },
+    "zlib": {
+      "original_size": 3072,
+      "compressed_size": 25,
+      "compression_ratio": 122.88,
+      "compression_percentage": 99.18619791666666,
+      "processing_time_ms": 0.010013580322265625,
+      "speed_mb_s": 292.57142857142856
+    },
+    "zstd": {
+      "original_size": 3072,
+      "compressed_size": 19,
+      "compression_ratio": 161.68421052631578,
+      "compression_percentage": 99.38151041666666,
+      "processing_time_ms": 0.011444091796875,
+      "speed_mb_s": 256.0
+    },
+    "lz4": {
+      "original_size": 3072,
+      "compressed_size": 45,
+      "compression_ratio": 68.26666666666667,
+      "compression_percentage": 98.53515625,
+      "processing_time_ms": 0.003814697265625,
+      "speed_mb_s": 768.0
+    },
+    "best_method": "zstd",
+    "best_ratio": 161.68421052631578
+  },
+  "final_layer_norm.weight": {
+    "gzip": {
+      "original_size": 3072,
+      "compressed_size": 41,
+      "compression_ratio": 74.92682926829268,
+      "compression_percentage": 98.66536458333334,
+      "processing_time_ms": 0.019550323486328125,
+      "speed_mb_s": 149.85365853658536
+    },
+    "zlib": {
+      "original_size": 3072,
+      "compressed_size": 29,
+      "compression_ratio": 105.93103448275862,
+      "compression_percentage": 99.05598958333334,
+      "processing_time_ms": 0.009775161743164062,
+      "speed_mb_s": 299.7073170731707
+    },
+    "zstd": {
+      "original_size": 3072,
+      "compressed_size": 21,
+      "compression_ratio": 146.28571428571428,
+      "compression_percentage": 99.31640625,
+      "processing_time_ms": 0.007152557373046875,
+      "speed_mb_s": 409.6
+    },
+    "lz4": {
+      "original_size": 3072,
+      "compressed_size": 48,
+      "compression_ratio": 64.0,
+      "compression_percentage": 98.4375,
+      "processing_time_ms": 0.0030994415283203125,
+      "speed_mb_s": 945.2307692307693
+    },
+    "best_method": "zstd",
+    "best_ratio": 146.28571428571428
+  },
+  "large_matrix": {
+    "gzip": {
+      "original_size": 4000000,
+      "compressed_size": 3710340,
+      "compression_ratio": 1.0780683171892602,
+      "compression_percentage": 7.2415,
+      "processing_time_ms": 148.70500564575195,
+      "speed_mb_s": 25.652783166643687
+    },
+    "zlib": {
+      "original_size": 4000000,
+      "compressed_size": 3710328,
+      "compression_ratio": 1.0780718038944266,
+      "compression_percentage": 7.241799999999998,
+      "processing_time_ms": 145.05529403686523,
+      "speed_mb_s": 26.29822848558364
+    },
+    "zstd": {
+      "original_size": 4000000,
+      "compressed_size": 3702253,
+      "compression_ratio": 1.080423190959667,
+      "compression_percentage": 7.443675000000005,
+      "processing_time_ms": 5.584716796875,
+      "speed_mb_s": 683.0601092896175
+    },
+    "lz4": {
+      "original_size": 4000000,
+      "compressed_size": 4000267,
+      "compression_ratio": 0.9999332544552652,
+      "compression_percentage": -0.006675000000000431,
+      "processing_time_ms": 2.353191375732422,
+      "speed_mb_s": 1621.0739614994934
+    },
+    "best_method": "zstd",
+    "best_ratio": 1.080423190959667
+  },
+  "layer_0.attention.k_proj": {
+    "gzip": {
+      "original_size": 2359296,
+      "compressed_size": 2179968,
+      "compression_ratio": 1.0822617579707592,
+      "compression_percentage": 7.6009114583333375,
+      "processing_time_ms": 89.48087692260742,
+      "speed_mb_s": 25.145037435719804
+    },
+    "zlib": {
+      "original_size": 2359296,
+      "compressed_size": 2179956,
+      "compression_ratio": 1.0822677154951752,
+      "compression_percentage": 7.6014200846354125,
+      "processing_time_ms": 84.46407318115234,
+      "speed_mb_s": 26.63854483046733
+    },
+    "zstd": {
+      "original_size": 2359296,
+      "compressed_size": 2172736,
+      "compression_ratio": 1.0858640902530265,
+      "compression_percentage": 7.907443576388884,
+      "processing_time_ms": 2.573728561401367,
+      "speed_mb_s": 874.2180639184808
+    },
+    "lz4": {
+      "original_size": 2359296,
+      "compressed_size": 2359459,
+      "compression_ratio": 0.9999309163668451,
+      "compression_percentage": -0.0069088406033035454,
+      "processing_time_ms": 1.4107227325439453,
+      "speed_mb_s": 1594.927159033294
+    },
+    "best_method": "zstd",
+    "best_ratio": 1.0858640902530265
+  },
+  "layer_0.attention.out_proj": {
+    "gzip": {
+      "original_size": 2359296,
+      "compressed_size": 2179944,
+      "compression_ratio": 1.08227367308518,
+      "compression_percentage": 7.6019287109375,
+      "processing_time_ms": 94.2385196685791,
+      "speed_mb_s": 23.875587264240448
+    },
+    "zlib": {
+      "original_size": 2359296,
+      "compressed_size": 2179932,
+      "compression_ratio": 1.0822796307407754,
+      "compression_percentage": 7.6024373372395875,
+      "processing_time_ms": 86.59720420837402,
+      "speed_mb_s": 25.982363063199482
+    },
+    "zstd": {
+      "original_size": 2359296,
+      "compressed_size": 2172662,
+      "compression_ratio": 1.085901074350267,
+      "compression_percentage": 7.910580105251741,
+      "processing_time_ms": 2.682924270629883,
+      "speed_mb_s": 838.6371634230871
+    },
+    "lz4": {
+      "original_size": 2359296,
+      "compressed_size": 2359459,
+      "compression_ratio": 0.9999309163668451,
+      "compression_percentage": -0.0069088406033035454,
+      "processing_time_ms": 1.3613700866699219,
+      "speed_mb_s": 1652.7467600700525
+    },
+    "best_method": "zstd",
+    "best_ratio": 1.085901074350267
+  },
+  "layer_0.attention.q_proj": {
+    "gzip": {
+      "original_size": 2359296,
+      "compressed_size": 2179842,
+      "compression_ratio": 1.0823243152485365,
+      "compression_percentage": 7.6062520345052125,
+      "processing_time_ms": 90.78216552734375,
+      "speed_mb_s": 24.784603748214135
+    },
+    "zlib": {
+      "original_size": 2359296,
+      "compressed_size": 2179830,
+      "compression_ratio": 1.082330273461692,
+      "compression_percentage": 7.6067606608072875,
+      "processing_time_ms": 85.35552024841309,
+      "speed_mb_s": 26.360333736491185
+    },
+    "zstd": {
+      "original_size": 2359296,
+      "compressed_size": 2172635,
+      "compression_ratio": 1.0859145691752181,
+      "compression_percentage": 7.9117245144314285,
+      "processing_time_ms": 2.5017261505126953,
+      "speed_mb_s": 899.3790145811494
+    },
+    "lz4": {
+      "original_size": 2359296,
+      "compressed_size": 2359459,
+      "compression_ratio": 0.9999309163668451,
+      "compression_percentage": -0.0069088406033035454,
+      "processing_time_ms": 1.2929439544677734,
+      "speed_mb_s": 1740.2146413424305
+    },
+    "best_method": "zstd",
+    "best_ratio": 1.0859145691752181
+  },
+  "layer_0.attention.v_proj": {
+    "gzip": {
+      "original_size": 2359296,
+      "compressed_size": 2180105,
+      "compression_ratio": 1.0821937475488566,
+      "compression_percentage": 7.5951046413845535,
+      "processing_time_ms": 88.58656883239746,
+      "speed_mb_s": 25.398884161061904
+    },
+    "zlib": {
+      "original_size": 2359296,
+      "compressed_size": 2180093,
+      "compression_ratio": 1.0821997043245404,
+      "compression_percentage": 7.5956132676866295,
+      "processing_time_ms": 85.4496955871582,
+      "speed_mb_s": 26.331281633473026
+    },
+    "zstd": {
+      "original_size": 2359296,
+      "compressed_size": 2172922,
+      "compression_ratio": 1.0857711413479176,
+      "compression_percentage": 7.899559868706596,
+      "processing_time_ms": 2.5632381439208984,
+      "speed_mb_s": 877.7959259603758
+    },
+    "lz4": {
+      "original_size": 2359296,
+      "compressed_size": 2359459,
+      "compression_ratio": 0.9999309163668451,
+      "compression_percentage": -0.0069088406033035454,
+      "processing_time_ms": 1.2793540954589844,
+      "speed_mb_s": 1758.6999627282892
+    },
+    "best_method": "zstd",
+    "best_ratio": 1.0857711413479176
+  },
+  "layer_0.ffn.down_proj": {
+    "gzip": {
+      "original_size": 9437184,
+      "compressed_size": 8764370,
+      "compression_ratio": 1.0767669552974144,
+      "compression_percentage": 7.129393683539497,
+      "processing_time_ms": 345.99757194519043,
+      "speed_mb_s": 26.011743231035425
+    },
+    "zlib": {
+      "original_size": 9437184,
+      "compressed_size": 8764358,
+      "compression_ratio": 1.0767684295871984,
+      "compression_percentage": 7.129520840115022,
+      "processing_time_ms": 342.9131507873535,
+      "speed_mb_s": 26.245712593218855
+    },
+    "zstd": {
+      "original_size": 9437184,
+      "compressed_size": 8746456,
+      "compression_ratio": 1.0789723289067024,
+      "compression_percentage": 7.319217258029509,
+      "processing_time_ms": 10.126590728759766,
+      "speed_mb_s": 888.7492583698263
+    },
+    "lz4": {
+      "original_size": 9437184,
+      "compressed_size": 9437779,
+      "compression_ratio": 0.999936955506163,
+      "compression_percentage": -0.006304846869564784,
+      "processing_time_ms": 5.2661895751953125,
+      "speed_mb_s": 1709.015574067367
+    },
+    "best_method": "zstd",
+    "best_ratio": 1.0789723289067024
+  },
+  "layer_0.ffn.up_proj": {
+    "gzip": {
+      "original_size": 9437184,
+      "compressed_size": 8764365,
+      "compression_ratio": 1.0767675695843337,
+      "compression_percentage": 7.129446665445959,
+      "processing_time_ms": 352.797269821167,
+      "speed_mb_s": 25.51040149648012
+    },
+    "zlib": {
+      "original_size": 9437184,
+      "compressed_size": 8764353,
+      "compression_ratio": 1.0767690438758,
+      "compression_percentage": 7.129573822021484,
+      "processing_time_ms": 336.46225929260254,
+      "speed_mb_s": 26.748913886871335
+    },
+    "zstd": {
+      "original_size": 9437184,
+      "compressed_size": 8746292,
+      "compression_ratio": 1.0789925605044972,
+      "compression_percentage": 7.3209550645616295,
+      "processing_time_ms": 10.21265983581543,
+      "speed_mb_s": 881.2591572312361
+    },
+    "lz4": {
+      "original_size": 9437184,
+      "compressed_size": 9437779,
+      "compression_ratio": 0.999936955506163,
+      "compression_percentage": -0.006304846869564784,
+      "processing_time_ms": 7.628202438354492,
+      "speed_mb_s": 1179.8323488045007
+    },
+    "best_method": "zstd",
+    "best_ratio": 1.0789925605044972
+  },
+  "layer_0.ln1.bias": {
+    "gzip": {
+      "original_size": 3072,
+      "compressed_size": 37,
+      "compression_ratio": 83.02702702702703,
+      "compression_percentage": 98.79557291666666,
+      "processing_time_ms": 0.025987625122070312,
+      "speed_mb_s": 112.73394495412845
+    },
+    "zlib": {
+      "original_size": 3072,
+      "compressed_size": 25,
+      "compression_ratio": 122.88,
+      "compression_percentage": 99.18619791666666,
+      "processing_time_ms": 0.010251998901367188,
+      "speed_mb_s": 285.7674418604651
+    },
+    "zstd": {
+      "original_size": 3072,
+      "compressed_size": 19,
+      "compression_ratio": 161.68421052631578,
+      "compression_percentage": 99.38151041666666,
+      "processing_time_ms": 0.011682510375976562,
+      "speed_mb_s": 250.77551020408163
+    },
+    "lz4": {
+      "original_size": 3072,
+      "compressed_size": 45,
+      "compression_ratio": 68.26666666666667,
+      "compression_percentage": 98.53515625,
+      "processing_time_ms": 0.0050067901611328125,
+      "speed_mb_s": 585.1428571428571
+    },
+    "best_method": "zstd",
+    "best_ratio": 161.68421052631578
+  },
+  "layer_0.ln1.weight": {
+    "gzip": {
+      "original_size": 3072,
+      "compressed_size": 41,
+      "compression_ratio": 74.92682926829268,
+      "compression_percentage": 98.66536458333334,
+      "processing_time_ms": 0.027894973754882812,
+      "speed_mb_s": 105.02564102564102
+    },
+    "zlib": {
+      "original_size": 3072,
+      "compressed_size": 29,
+      "compression_ratio": 105.93103448275862,
+      "compression_percentage": 99.05598958333334,
+      "processing_time_ms": 0.010013580322265625,
+      "speed_mb_s": 292.57142857142856
+    },
+    "zstd": {
+      "original_size": 3072,
+      "compressed_size": 21,
+      "compression_ratio": 146.28571428571428,
+      "compression_percentage": 99.31640625,
+      "processing_time_ms": 0.0050067901611328125,
+      "speed_mb_s": 585.1428571428571
+    },
+    "lz4": {
+      "original_size": 3072,
+      "compressed_size": 48,
+      "compression_ratio": 64.0,
+      "compression_percentage": 98.4375,
+      "processing_time_ms": 0.0021457672119140625,
+      "speed_mb_s": 1365.3333333333333
+    },
+    "best_method": "zstd",
+    "best_ratio": 146.28571428571428
+  },
+  "layer_0.ln2.bias": {
+    "gzip": {
+      "original_size": 3072,
+      "compressed_size": 37,
+      "compression_ratio": 83.02702702702703,
+      "compression_percentage": 98.79557291666666,
+      "processing_time_ms": 0.014066696166992188,
+      "speed_mb_s": 208.27118644067798
+    },
+    "zlib": {
+      "original_size": 3072,
+      "compressed_size": 25,
+      "compression_ratio": 122.88,
+      "compression_percentage": 99.18619791666666,
+      "processing_time_ms": 0.009059906005859375,
+      "speed_mb_s": 323.36842105263156
+    },
+    "zstd": {
+      "original_size": 3072,
+      "compressed_size": 19,
+      "compression_ratio": 161.68421052631578,
+      "compression_percentage": 99.38151041666666,
+      "processing_time_ms": 0.003337860107421875,
+      "speed_mb_s": 877.7142857142857
+    },
+    "lz4": {
+      "original_size": 3072,
+      "compressed_size": 45,
+      "compression_ratio": 68.26666666666667,
+      "compression_percentage": 98.53515625,
+      "processing_time_ms": 0.0019073486328125,
+      "speed_mb_s": 1536.0
+    },
+    "best_method": "zstd",
+    "best_ratio": 161.68421052631578
+  },
+  "layer_0.ln2.weight": {
+    "gzip": {
+      "original_size": 3072,
+      "compressed_size": 41,
+      "compression_ratio": 74.92682926829268,
+      "compression_percentage": 98.66536458333334,
+      "processing_time_ms": 0.01811981201171875,
+      "speed_mb_s": 161.68421052631578
+    },
+    "zlib": {
+      "original_size": 3072,
+      "compressed_size": 29,
+      "compression_ratio": 105.93103448275862,
+      "compression_percentage": 99.05598958333334,
+      "processing_time_ms": 0.010013580322265625,
+      "speed_mb_s": 292.57142857142856
+    },
+    "zstd": {
+      "original_size": 3072,
+      "compressed_size": 21,
+      "compression_ratio": 146.28571428571428,
+      "compression_percentage": 99.31640625,
+      "processing_time_ms": 0.0059604644775390625,
+      "speed_mb_s": 491.52
+    },
+    "lz4": {
+      "original_size": 3072,
+      "compressed_size": 48,
+      "compression_ratio": 64.0,
+      "compression_percentage": 98.4375,
+      "processing_time_ms": 0.0026226043701171875,
+      "speed_mb_s": 1117.090909090909
+    },
+    "best_method": "zstd",
+    "best_ratio": 146.28571428571428
+  },
+  "layer_0.mlp.fc1": {
+    "gzip": {
+      "original_size": 9437184,
+      "compressed_size": 8764108,
+      "compression_ratio": 1.076799144875896,
+      "compression_percentage": 7.1321699354383705,
+      "processing_time_ms": 349.12633895874023,
+      "speed_mb_s": 25.77863367983709
+    },
+    "zlib": {
+      "original_size": 9437184,
+      "compressed_size": 8764096,
+      "compression_ratio": 1.0768006192538284,
+      "compression_percentage": 7.132297092013884,
+      "processing_time_ms": 343.6322212219238,
+      "speed_mb_s": 26.19079191118006
+    },
+    "zstd": {
+      "original_size": 9437184,
+      "compressed_size": 8746268,
+      "compression_ratio": 1.0789955212897662,
+      "compression_percentage": 7.3212093777126785,
+      "processing_time_ms": 9.635448455810547,
+      "speed_mb_s": 934.0509724352947
+    },
+    "lz4": {
+      "original_size": 9437184,
+      "compressed_size": 9437779,
+      "compression_ratio": 0.999936955506163,
+      "compression_percentage": -0.006304846869564784,
+      "processing_time_ms": 5.415439605712891,
+      "speed_mb_s": 1661.9149423263186
+    },
+    "best_method": "zstd",
+    "best_ratio": 1.0789955212897662
+  },
+  "layer_0.mlp.fc2": {
+    "gzip": {
+      "original_size": 9437184,
+      "compressed_size": 8764012,
+      "compression_ratio": 1.0768109400124053,
+      "compression_percentage": 7.133187188042534,
+      "processing_time_ms": 341.78924560546875,
+      "speed_mb_s": 26.332016339650437
+    },
+    "zlib": {
+      "original_size": 9437184,
+      "compressed_size": 8764000,
+      "compression_ratio": 1.076812414422638,
+      "compression_percentage": 7.133314344618058,
+      "processing_time_ms": 342.6647186279297,
+      "speed_mb_s": 26.26474075311013
+    },
+    "zstd": {
+      "original_size": 9437184,
+      "compressed_size": 8746161,
+      "compression_ratio": 1.0790087216551354,
+      "compression_percentage": 7.322343190511072,
+      "processing_time_ms": 10.298728942871094,
+      "speed_mb_s": 873.8942494675433
+    },
+    "lz4": {
+      "original_size": 9437184,
+      "compressed_size": 9437779,
+      "compression_ratio": 0.999936955506163,
+      "compression_percentage": -0.006304846869564784,
+      "processing_time_ms": 5.165576934814453,
+      "speed_mb_s": 1742.3029631680974
+    },
+    "best_method": "zstd",
+    "best_ratio": 1.0790087216551354
+  },
+  "layer_1.attention.k_proj": {
+    "gzip": {
+      "original_size": 2359296,
+      "compressed_size": 2180311,
+      "compression_ratio": 1.0820914997906261,
+      "compression_percentage": 7.586373223198784,
+      "processing_time_ms": 88.01436424255371,
+      "speed_mb_s": 25.564009004250202
+    },
+    "zlib": {
+      "original_size": 2359296,
+      "compressed_size": 2180299,
+      "compression_ratio": 1.0820974554407445,
+      "compression_percentage": 7.5868818495008705,
+      "processing_time_ms": 94.41137313842773,
+      "speed_mb_s": 23.83187454228642
+    },
+    "zstd": {
+      "original_size": 2359296,
+      "compressed_size": 2173080,
+      "compression_ratio": 1.0856921972499862,
+      "compression_percentage": 7.8928629557291625,
+      "processing_time_ms": 4.897356033325195,
+      "speed_mb_s": 459.43157587264494
+    },
+    "lz4": {
+      "original_size": 2359296,
+      "compressed_size": 2359459,
+      "compression_ratio": 0.9999309163668451,
+      "compression_percentage": -0.0069088406033035454,
+      "processing_time_ms": 1.374959945678711,
+      "speed_mb_s": 1636.4113057048726
+    },
+    "best_method": "zstd",
+    "best_ratio": 1.0856921972499862
+  },
+  "layer_1.attention.out_proj": {
+    "gzip": {
+      "original_size": 2359296,
+      "compressed_size": 2180098,
+      "compression_ratio": 1.0821972223267027,
+      "compression_percentage": 7.595401340060759,
+      "processing_time_ms": 87.30697631835938,
+      "speed_mb_s": 25.771136453008257
+    },
+    "zlib": {
+      "original_size": 2359296,
+      "compressed_size": 2180086,
+      "compression_ratio": 1.0822031791406395,
+      "compression_percentage": 7.595909966362846,
+      "processing_time_ms": 87.78095245361328,
+      "speed_mb_s": 25.6319843554783
+    },
+    "zstd": {
+      "original_size": 2359296,
+      "compressed_size": 2172840,
+      "compression_ratio": 1.0858121168608825,
+      "compression_percentage": 7.9030354817708375,
+      "processing_time_ms": 2.5925636291503906,
+      "speed_mb_s": 867.8668383299614
+    },
+    "lz4": {
+      "original_size": 2359296,
+      "compressed_size": 2359459,
+      "compression_ratio": 0.9999309163668451,
+      "compression_percentage": -0.0069088406033035454,
+      "processing_time_ms": 1.3086795806884766,
+      "speed_mb_s": 1719.2902167972309
+    },
+    "best_method": "zstd",
+    "best_ratio": 1.0858121168608825
+  },
+  "layer_1.attention.q_proj": {
+    "gzip": {
+      "original_size": 2359296,
+      "compressed_size": 2179933,
+      "compression_ratio": 1.0822791342669706,
+      "compression_percentage": 7.602394951714409,
+      "processing_time_ms": 87.3417854309082,
+      "speed_mb_s": 25.760865648663255
+    },
+    "zlib": {
+      "original_size": 2359296,
+      "compressed_size": 2179921,
+      "compression_ratio": 1.0822850919826912,
+      "compression_percentage": 7.6029035780164955,
+      "processing_time_ms": 90.96622467041016,
+      "speed_mb_s": 24.73445510300362
+    },
+    "zstd": {
+      "original_size": 2359296,
+      "compressed_size": 2172761,
+      "compression_ratio": 1.0858515961948876,
+      "compression_percentage": 7.9063839382595535,
+      "processing_time_ms": 2.6254653930664062,
+      "speed_mb_s": 856.9909189974574
+    },
+    "lz4": {
+      "original_size": 2359296,
+      "compressed_size": 2359459,
+      "compression_ratio": 0.9999309163668451,
+      "compression_percentage": -0.0069088406033035454,
+      "processing_time_ms": 1.2924671173095703,
+      "speed_mb_s": 1740.8566685113449
+    },
+    "best_method": "zstd",
+    "best_ratio": 1.0858515961948876
+  },
+  "layer_1.attention.v_proj": {
+    "gzip": {
+      "original_size": 2359296,
+      "compressed_size": 2180053,
+      "compression_ratio": 1.082219560717102,
+      "compression_percentage": 7.5973086886935715,
+      "processing_time_ms": 85.16740798950195,
+      "speed_mb_s": 26.418556735662815
+    },
+    "zlib": {
+      "original_size": 2359296,
+      "compressed_size": 2180041,
+      "compression_ratio": 1.0822255177769593,
+      "compression_percentage": 7.597817314995659,
+      "processing_time_ms": 88.31286430358887,
+      "speed_mb_s": 25.477601907070795
+    },
+    "zstd": {
+      "original_size": 2359296,
+      "compressed_size": 2172712,
+      "compression_ratio": 1.085876084819341,
+      "compression_percentage": 7.908460828993058,
+      "processing_time_ms": 2.638578414916992,
+      "speed_mb_s": 852.731905665492
+    },
+    "lz4": {
+      "original_size": 2359296,
+      "compressed_size": 2359459,
+      "compression_ratio": 0.9999309163668451,
+      "compression_percentage": -0.0069088406033035454,
+      "processing_time_ms": 1.3821125030517578,
+      "speed_mb_s": 1627.9427289977575
+    },
+    "best_method": "zstd",
+    "best_ratio": 1.085876084819341
+  },
+  "layer_1.ffn.down_proj": {
+    "gzip": {
+      "original_size": 9437184,
+      "compressed_size": 8764821,
+      "compression_ratio": 1.0767115494999842,
+      "compression_percentage": 7.124614715576172,
+      "processing_time_ms": 340.9590721130371,
+      "speed_mb_s": 26.39613002294967
+    },
+    "zlib": {
+      "original_size": 9437184,
+      "compressed_size": 8764809,
+      "compression_ratio": 1.0767130236380507,
+      "compression_percentage": 7.124741872151697,
+      "processing_time_ms": 335.9560966491699,
+      "speed_mb_s": 26.78921469134243
+    },
+    "zstd": {
+      "original_size": 9437184,
+      "compressed_size": 8746903,
+      "compression_ratio": 1.0789171893183223,
+      "compression_percentage": 7.314480675591362,
+      "processing_time_ms": 9.753942489624023,
+      "speed_mb_s": 922.7038204883772
+    },
+    "lz4": {
+      "original_size": 9437184,
+      "compressed_size": 9437779,
+      "compression_ratio": 0.999936955506163,
+      "compression_percentage": -0.006304846869564784,
+      "processing_time_ms": 7.065534591674805,
+      "speed_mb_s": 1273.788965749958
+    },
+    "best_method": "zstd",
+    "best_ratio": 1.0789171893183223
+  },
+  "layer_1.ffn.up_proj": {
+    "gzip": {
+      "original_size": 9437184,
+      "compressed_size": 8764365,
+      "compression_ratio": 1.0767675695843337,
+      "compression_percentage": 7.129446665445959,
+      "processing_time_ms": 336.8701934814453,
+      "speed_mb_s": 26.716522192087965
+    },
+    "zlib": {
+      "original_size": 9437184,
+      "compressed_size": 8764353,
+      "compression_ratio": 1.0767690438758,
+      "compression_percentage": 7.129573822021484,
+      "processing_time_ms": 339.4582271575928,
+      "speed_mb_s": 26.51283510009545
+    },
+    "zstd": {
+      "original_size": 9437184,
+      "compressed_size": 8746303,
+      "compression_ratio": 1.078991203483346,
+      "compression_percentage": 7.3208385043674,
+      "processing_time_ms": 9.75942611694336,
+      "speed_mb_s": 922.1853715737528
+    },
+    "lz4": {
+      "original_size": 9437184,
+      "compressed_size": 9437779,
+      "compression_ratio": 0.999936955506163,
+      "compression_percentage": -0.006304846869564784,
+      "processing_time_ms": 5.30695915222168,
+      "speed_mb_s": 1695.8864279617233
+    },
+    "best_method": "zstd",
+    "best_ratio": 1.078991203483346
+  },
+  "layer_1.ln1.bias": {
+    "gzip": {
+      "original_size": 3072,
+      "compressed_size": 37,
+      "compression_ratio": 83.02702702702703,
+      "compression_percentage": 98.79557291666666,
+      "processing_time_ms": 0.02765655517578125,
+      "speed_mb_s": 105.93103448275862
+    },
+    "zlib": {
+      "original_size": 3072,
+      "compressed_size": 25,
+      "compression_ratio": 122.88,
+      "compression_percentage": 99.18619791666666,
+      "processing_time_ms": 0.0095367431640625,
+      "speed_mb_s": 307.2
+    },
+    "zstd": {
+      "original_size": 3072,
+      "compressed_size": 19,
+      "compression_ratio": 161.68421052631578,
+      "compression_percentage": 99.38151041666666,
+      "processing_time_ms": 0.010728836059570312,
+      "speed_mb_s": 273.06666666666666
+    },
+    "lz4": {
+      "original_size": 3072,
+      "compressed_size": 45,
+      "compression_ratio": 68.26666666666667,
+      "compression_percentage": 98.53515625,
+      "processing_time_ms": 0.004291534423828125,
+      "speed_mb_s": 682.6666666666666
+    },
+    "best_method": "zstd",
+    "best_ratio": 161.68421052631578
+  },
+  "layer_1.ln1.weight": {
+    "gzip": {
+      "original_size": 3072,
+      "compressed_size": 41,
+      "compression_ratio": 74.92682926829268,
+      "compression_percentage": 98.66536458333334,
+      "processing_time_ms": 0.026702880859375,
+      "speed_mb_s": 109.71428571428571
+    },
+    "zlib": {
+      "original_size": 3072,
+      "compressed_size": 29,
+      "compression_ratio": 105.93103448275862,
+      "compression_percentage": 99.05598958333334,
+      "processing_time_ms": 0.010013580322265625,
+      "speed_mb_s": 292.57142857142856
+    },
+    "zstd": {
+      "original_size": 3072,
+      "compressed_size": 21,
+      "compression_ratio": 146.28571428571428,
+      "compression_percentage": 99.31640625,
+      "processing_time_ms": 0.0064373016357421875,
+      "speed_mb_s": 455.1111111111111
+    },
+    "lz4": {
+      "original_size": 3072,
+      "compressed_size": 48,
+      "compression_ratio": 64.0,
+      "compression_percentage": 98.4375,
+      "processing_time_ms": 0.0026226043701171875,
+      "speed_mb_s": 1117.090909090909
+    },
+    "best_method": "zstd",
+    "best_ratio": 146.28571428571428
+  },
+  "layer_1.ln2.bias": {
+    "gzip": {
+      "original_size": 3072,
+      "compressed_size": 37,
+      "compression_ratio": 83.02702702702703,
+      "compression_percentage": 98.79557291666666,
+      "processing_time_ms": 0.016450881958007812,
+      "speed_mb_s": 178.08695652173913
+    },
+    "zlib": {
+      "original_size": 3072,
+      "compressed_size": 25,
+      "compression_ratio": 122.88,
+      "compression_percentage": 99.18619791666666,
+      "processing_time_ms": 0.009775161743164062,
+      "speed_mb_s": 299.7073170731707
+    },
+    "zstd": {
+      "original_size": 3072,
+      "compressed_size": 19,
+      "compression_ratio": 161.68421052631578,
+      "compression_percentage": 99.38151041666666,
+      "processing_time_ms": 0.0057220458984375,
+      "speed_mb_s": 512.0
+    },
+    "lz4": {
+      "original_size": 3072,
+      "compressed_size": 45,
+      "compression_ratio": 68.26666666666667,
+      "compression_percentage": 98.53515625,
+      "processing_time_ms": 0.002384185791015625,
+      "speed_mb_s": 1228.8
+    },
+    "best_method": "zstd",
+    "best_ratio": 161.68421052631578
+  },
+  "layer_1.ln2.weight": {
+    "gzip": {
+      "original_size": 3072,
+      "compressed_size": 41,
+      "compression_ratio": 74.92682926829268,
+      "compression_percentage": 98.66536458333334,
+      "processing_time_ms": 0.023365020751953125,
+      "speed_mb_s": 125.38775510204081
+    },
+    "zlib": {
+      "original_size": 3072,
+      "compressed_size": 29,
+      "compression_ratio": 105.93103448275862,
+      "compression_percentage": 99.05598958333334,
+      "processing_time_ms": 0.011444091796875,
+      "speed_mb_s": 256.0
+    },
+    "zstd": {
+      "original_size": 3072,
+      "compressed_size": 21,
+      "compression_ratio": 146.28571428571428,
+      "compression_percentage": 99.31640625,
+      "processing_time_ms": 0.0057220458984375,
+      "speed_mb_s": 512.0
+    },
+    "lz4": {
+      "original_size": 3072,
+      "compressed_size": 48,
+      "compression_ratio": 64.0,
+      "compression_percentage": 98.4375,
+      "processing_time_ms": 0.0026226043701171875,
+      "speed_mb_s": 1117.090909090909
+    },
+    "best_method": "zstd",
+    "best_ratio": 146.28571428571428
+  },
+  "layer_1.mlp.fc1": {
+    "gzip": {
+      "original_size": 9437184,
+      "compressed_size": 8764232,
+      "compression_ratio": 1.0767839098736776,
+      "compression_percentage": 7.130855984157991,
+      "processing_time_ms": 348.36626052856445,
+      "speed_mb_s": 25.834878459080972
+    },
+    "zlib": {
+      "original_size": 9437184,
+      "compressed_size": 8764220,
+      "compression_ratio": 1.0767853842098898,
+      "compression_percentage": 7.1309831407335045,
+      "processing_time_ms": 342.0736789703369,
+      "speed_mb_s": 26.31012133728196
+    },
+    "zstd": {
+      "original_size": 9437184,
+      "compressed_size": 8746058,
+      "compression_ratio": 1.0790214288540048,
+      "compression_percentage": 7.323434617784286,
+      "processing_time_ms": 10.108470916748047,
+      "speed_mb_s": 890.3423746403132
+    },
+    "lz4": {
+      "original_size": 9437184,
+      "compressed_size": 9437779,
+      "compression_ratio": 0.999936955506163,
+      "compression_percentage": -0.006304846869564784,
+      "processing_time_ms": 5.265474319458008,
+      "speed_mb_s": 1709.2477247000227
+    },
+    "best_method": "zstd",
+    "best_ratio": 1.0790214288540048
+  },
+  "layer_1.mlp.fc2": {
+    "gzip": {
+      "original_size": 9437184,
+      "compressed_size": 8764004,
+      "compression_ratio": 1.0768119229521118,
+      "compression_percentage": 7.1332719590928795,
+      "processing_time_ms": 348.4303951263428,
+      "speed_mb_s": 25.830123106041167
+    },
+    "zlib": {
+      "original_size": 9437184,
+      "compressed_size": 8763992,
+      "compression_ratio": 1.0768133973650365,
+      "compression_percentage": 7.133399115668404,
+      "processing_time_ms": 347.400426864624,
+      "speed_mb_s": 25.90670391866601
+    },
+    "zstd": {
+      "original_size": 9437184,
+      "compressed_size": 8745951,
+      "compression_ratio": 1.0790346298532887,
+      "compression_percentage": 7.324568430582678,
+      "processing_time_ms": 9.840965270996094,
+      "speed_mb_s": 914.5444326000581
+    },
+    "lz4": {
+      "original_size": 9437184,
+      "compressed_size": 9437779,
+      "compression_ratio": 0.999936955506163,
+      "compression_percentage": -0.006304846869564784,
+      "processing_time_ms": 5.125284194946289,
+      "speed_mb_s": 1756.0001860724751
+    },
+    "best_method": "zstd",
+    "best_ratio": 1.0790346298532887
+  },
+  "layer_2.attention.k_proj": {
+    "gzip": {
+      "original_size": 2359296,
+      "compressed_size": 2180123,
+      "compression_ratio": 1.0821848125082851,
+      "compression_percentage": 7.5943417019314285,
+      "processing_time_ms": 92.00620651245117,
+      "speed_mb_s": 24.454871962311675
+    },
+    "zlib": {
+      "original_size": 2359296,
+      "compressed_size": 2180111,
+      "compression_ratio": 1.0821907691856056,
+      "compression_percentage": 7.5948503282335045,
+      "processing_time_ms": 88.04535865783691,
+      "speed_mb_s": 25.55500976200212
+    },
+    "zstd": {
+      "original_size": 2359296,
+      "compressed_size": 2172801,
+      "compression_ratio": 1.0858316062998867,
+      "compression_percentage": 7.9046885172526,
+      "processing_time_ms": 2.7132034301757812,
+      "speed_mb_s": 829.2780316344464
+    },
+    "lz4": {
+      "original_size": 2359296,
+      "compressed_size": 2359459,
+      "compression_ratio": 0.9999309163668451,
+      "compression_percentage": -0.0069088406033035454,
+      "processing_time_ms": 1.2159347534179688,
+      "speed_mb_s": 1850.4282352941177
+    },
+    "best_method": "zstd",
+    "best_ratio": 1.0858316062998867
+  },
+  "layer_2.attention.out_proj": {
+    "gzip": {
+      "original_size": 2359296,
+      "compressed_size": 2179935,
+      "compression_ratio": 1.0822781413207274,
+      "compression_percentage": 7.6023101806640625,
+      "processing_time_ms": 88.13047409057617,
+      "speed_mb_s": 25.530329017492413
+    },
+    "zlib": {
+      "original_size": 2359296,
+      "compressed_size": 2179923,
+      "compression_ratio": 1.082284099025516,
+      "compression_percentage": 7.60281880696615,
+      "processing_time_ms": 84.45215225219727,
+      "speed_mb_s": 26.642305021201633
+    },
+    "zstd": {
+      "original_size": 2359296,
+      "compressed_size": 2172823,
+      "compression_ratio": 1.085820612171355,
+      "compression_percentage": 7.903756035698784,
+      "processing_time_ms": 2.6803016662597656,
+      "speed_mb_s": 839.4577477317204
+    },
+    "lz4": {
+      "original_size": 2359296,
+      "compressed_size": 2359459,
+      "compression_ratio": 0.9999309163668451,
+      "compression_percentage": -0.0069088406033035454,
+      "processing_time_ms": 1.3074874877929688,
+      "speed_mb_s": 1720.8577680525163
+    },
+    "best_method": "zstd",
+    "best_ratio": 1.085820612171355
+  },
+  "layer_2.attention.q_proj": {
+    "gzip": {
+      "original_size": 2359296,
+      "compressed_size": 2180308,
+      "compression_ratio": 1.0820929886970099,
+      "compression_percentage": 7.586500379774308,
+      "processing_time_ms": 88.16266059875488,
+      "speed_mb_s": 25.521008380636108
+    },
+    "zlib": {
+      "original_size": 2359296,
+      "compressed_size": 2180296,
+      "compression_ratio": 1.0820989443635176,
+      "compression_percentage": 7.587009006076384,
+      "processing_time_ms": 84.14101600646973,
+      "speed_mb_s": 26.74082280902092
+    },
+    "zstd": {
+      "original_size": 2359296,
+      "compressed_size": 2173111,
+      "compression_ratio": 1.085676709565227,
+      "compression_percentage": 7.891549004448784,
+      "processing_time_ms": 2.681255340576172,
+      "speed_mb_s": 839.1591677040726
+    },
+    "lz4": {
+      "original_size": 2359296,
+      "compressed_size": 2359459,
+      "compression_ratio": 0.9999309163668451,
+      "compression_percentage": -0.0069088406033035454,
+      "processing_time_ms": 1.3248920440673828,
+      "speed_mb_s": 1698.2515745906064
+    },
+    "best_method": "zstd",
+    "best_ratio": 1.085676709565227
+  },
+  "layer_2.attention.v_proj": {
+    "gzip": {
+      "original_size": 2359296,
+      "compressed_size": 2180219,
+      "compression_ratio": 1.0821371614502946,
+      "compression_percentage": 7.5902726915147545,
+      "processing_time_ms": 101.08208656311035,
+      "speed_mb_s": 22.259136870856125
+    },
+    "zlib": {
+      "original_size": 2359296,
+      "compressed_size": 2180207,
+      "compression_ratio": 1.0821431176030534,
+      "compression_percentage": 7.590781317816841,
+      "processing_time_ms": 91.66264533996582,
+      "speed_mb_s": 24.546531377695008
+    },
+    "zstd": {
+      "original_size": 2359296,
+      "compressed_size": 2173054,
+      "compression_ratio": 1.0857051872617984,
+      "compression_percentage": 7.893964979383683,
+      "processing_time_ms": 2.562999725341797,
+      "speed_mb_s": 877.8775813953488
+    },
+    "lz4": {
+      "original_size": 2359296,
+      "compressed_size": 2359459,
+      "compression_ratio": 0.9999309163668451,
+      "compression_percentage": -0.0069088406033035454,
+      "processing_time_ms": 1.3532638549804688,
+      "speed_mb_s": 1662.646934460888
+    },
+    "best_method": "zstd",
+    "best_ratio": 1.0857051872617984
+  },
+  "layer_2.ffn.down_proj": {
+    "gzip": {
+      "original_size": 9437184,
+      "compressed_size": 8764227,
+      "compression_ratio": 1.0767845241799419,
+      "compression_percentage": 7.130908966064453,
+      "processing_time_ms": 344.3882465362549,
+      "speed_mb_s": 26.133296041659598
+    },
+    "zlib": {
+      "original_size": 9437184,
+      "compressed_size": 8764215,
+      "compression_ratio": 1.0767859985178365,
+      "compression_percentage": 7.131036122639978,
+      "processing_time_ms": 357.87272453308105,
+      "speed_mb_s": 25.14860558804072
+    },
+    "zstd": {
+      "original_size": 9437184,
+      "compressed_size": 8746363,
+      "compression_ratio": 1.0789838016098805,
+      "compression_percentage": 7.3202027214898,
+      "processing_time_ms": 11.057853698730469,
+      "speed_mb_s": 813.9011642949547
+    },
+    "lz4": {
+      "original_size": 9437184,
+      "compressed_size": 9437779,
+      "compression_ratio": 0.999936955506163,
+      "compression_percentage": -0.006304846869564784,
+      "processing_time_ms": 5.762815475463867,
+      "speed_mb_s": 1561.7366265359315
+    },
+    "best_method": "zstd",
+    "best_ratio": 1.0789838016098805
+  },
+  "layer_2.ffn.up_proj": {
+    "gzip": {
+      "original_size": 9437184,
+      "compressed_size": 8764026,
+      "compression_ratio": 1.0768092198722368,
+      "compression_percentage": 7.133038838704431,
+      "processing_time_ms": 342.09489822387695,
+      "speed_mb_s": 26.308489389134753
+    },
+    "zlib": {
+      "original_size": 9437184,
+      "compressed_size": 8764014,
+      "compression_ratio": 1.076810694277759,
+      "compression_percentage": 7.133165995279944,
+      "processing_time_ms": 364.11118507385254,
+      "speed_mb_s": 24.717724609790643
+    },
+    "zstd": {
+      "original_size": 9437184,
+      "compressed_size": 8746081,
+      "compression_ratio": 1.0790185912982055,
+      "compression_percentage": 7.323190901014542,
+      "processing_time_ms": 9.900093078613281,
+      "speed_mb_s": 909.0823620075138
+    },
+    "lz4": {
+      "original_size": 9437184,
+      "compressed_size": 9437779,
+      "compression_ratio": 0.999936955506163,
+      "compression_percentage": -0.006304846869564784,
+      "processing_time_ms": 5.331993103027344,
+      "speed_mb_s": 1687.9241638347344
+    },
+    "best_method": "zstd",
+    "best_ratio": 1.0790185912982055
+  },
+  "layer_2.ln1.bias": {
+    "gzip": {
+      "original_size": 3072,
+      "compressed_size": 37,
+      "compression_ratio": 83.02702702702703,
+      "compression_percentage": 98.79557291666666,
+      "processing_time_ms": 0.027418136596679688,
+      "speed_mb_s": 106.85217391304347
+    },
+    "zlib": {
+      "original_size": 3072,
+      "compressed_size": 25,
+      "compression_ratio": 122.88,
+      "compression_percentage": 99.18619791666666,
+      "processing_time_ms": 0.009775161743164062,
+      "speed_mb_s": 299.7073170731707
+    },
+    "zstd": {
+      "original_size": 3072,
+      "compressed_size": 19,
+      "compression_ratio": 161.68421052631578,
+      "compression_percentage": 99.38151041666666,
+      "processing_time_ms": 0.01049041748046875,
+      "speed_mb_s": 279.27272727272725
+    },
+    "lz4": {
+      "original_size": 3072,
+      "compressed_size": 45,
+      "compression_ratio": 68.26666666666667,
+      "compression_percentage": 98.53515625,
+      "processing_time_ms": 0.004291534423828125,
+      "speed_mb_s": 682.6666666666666
+    },
+    "best_method": "zstd",
+    "best_ratio": 161.68421052631578
+  },
+  "layer_2.ln1.weight": {
+    "gzip": {
+      "original_size": 3072,
+      "compressed_size": 41,
+      "compression_ratio": 74.92682926829268,
+      "compression_percentage": 98.66536458333334,
+      "processing_time_ms": 0.017642974853515625,
+      "speed_mb_s": 166.05405405405406
+    },
+    "zlib": {
+      "original_size": 3072,
+      "compressed_size": 29,
+      "compression_ratio": 105.93103448275862,
+      "compression_percentage": 99.05598958333334,
+      "processing_time_ms": 0.010251998901367188,
+      "speed_mb_s": 285.7674418604651
+    },
+    "zstd": {
+      "original_size": 3072,
+      "compressed_size": 21,
+      "compression_ratio": 146.28571428571428,
+      "compression_percentage": 99.31640625,
+      "processing_time_ms": 0.0057220458984375,
+      "speed_mb_s": 512.0
+    },
+    "lz4": {
+      "original_size": 3072,
+      "compressed_size": 48,
+      "compression_ratio": 64.0,
+      "compression_percentage": 98.4375,
+      "processing_time_ms": 0.002384185791015625,
+      "speed_mb_s": 1228.8
+    },
+    "best_method": "zstd",
+    "best_ratio": 146.28571428571428
+  },
+  "layer_2.ln2.bias": {
+    "gzip": {
+      "original_size": 3072,
+      "compressed_size": 37,
+      "compression_ratio": 83.02702702702703,
+      "compression_percentage": 98.79557291666666,
+      "processing_time_ms": 0.016450881958007812,
+      "speed_mb_s": 178.08695652173913
+    },
+    "zlib": {
+      "original_size": 3072,
+      "compressed_size": 25,
+      "compression_ratio": 122.88,
+      "compression_percentage": 99.18619791666666,
+      "processing_time_ms": 0.0095367431640625,
+      "speed_mb_s": 307.2
+    },
+    "zstd": {
+      "original_size": 3072,
+      "compressed_size": 19,
+      "compression_ratio": 161.68421052631578,
+      "compression_percentage": 99.38151041666666,
+      "processing_time_ms": 0.0057220458984375,
+      "speed_mb_s": 512.0
+    },
+    "lz4": {
+      "original_size": 3072,
+      "compressed_size": 45,
+      "compression_ratio": 68.26666666666667,
+      "compression_percentage": 98.53515625,
+      "processing_time_ms": 0.002384185791015625,
+      "speed_mb_s": 1228.8
+    },
+    "best_method": "zstd",
+    "best_ratio": 161.68421052631578
+  },
+  "layer_2.ln2.weight": {
+    "gzip": {
+      "original_size": 3072,
+      "compressed_size": 41,
+      "compression_ratio": 74.92682926829268,
+      "compression_percentage": 98.66536458333334,
+      "processing_time_ms": 0.016927719116210938,
+      "speed_mb_s": 173.07042253521126
+    },
+    "zlib": {
+      "original_size": 3072,
+      "compressed_size": 29,
+      "compression_ratio": 105.93103448275862,
+      "compression_percentage": 99.05598958333334,
+      "processing_time_ms": 0.01049041748046875,
+      "speed_mb_s": 279.27272727272725
+    },
+    "zstd": {
+      "original_size": 3072,
+      "compressed_size": 21,
+      "compression_ratio": 146.28571428571428,
+      "compression_percentage": 99.31640625,
+      "processing_time_ms": 0.005245208740234375,
+      "speed_mb_s": 558.5454545454545
+    },
+    "lz4": {
+      "original_size": 3072,
+      "compressed_size": 48,
+      "compression_ratio": 64.0,
+      "compression_percentage": 98.4375,
+      "processing_time_ms": 0.0021457672119140625,
+      "speed_mb_s": 1365.3333333333333
+    },
+    "best_method": "zstd",
+    "best_ratio": 146.28571428571428
+  },
+  "layer_2.mlp.fc1": {
+    "gzip": {
+      "original_size": 9437184,
+      "compressed_size": 8764154,
+      "compression_ratio": 1.0767934931312253,
+      "compression_percentage": 7.131682501898872,
+      "processing_time_ms": 343.0020809173584,
+      "speed_mb_s": 26.238907868808017
+    },
+    "zlib": {
+      "original_size": 9437184,
+      "compressed_size": 8764142,
+      "compression_ratio": 1.0767949674936805,
+      "compression_percentage": 7.131809658474397,
+      "processing_time_ms": 337.65387535095215,
+      "speed_mb_s": 26.65451415490357
+    },
+    "zstd": {
+      "original_size": 9437184,
+      "compressed_size": 8746151,
+      "compression_ratio": 1.0790099553506451,
+      "compression_percentage": 7.322449154324007,
+      "processing_time_ms": 12.228250503540039,
+      "speed_mb_s": 736.0006239154594
+    },
+    "lz4": {
+      "original_size": 9437184,
+      "compressed_size": 9437779,
+      "compression_ratio": 0.999936955506163,
+      "compression_percentage": -0.006304846869564784,
+      "processing_time_ms": 5.085945129394531,
+      "speed_mb_s": 1769.582598912432
+    },
+    "best_method": "zstd",
+    "best_ratio": 1.0790099553506451
+  },
+  "layer_2.mlp.fc2": {
+    "gzip": {
+      "original_size": 9437184,
+      "compressed_size": 8764398,
+      "compression_ratio": 1.0767635153036181,
+      "compression_percentage": 7.129096984863281,
+      "processing_time_ms": 339.43867683410645,
+      "speed_mb_s": 26.514362134396848
+    },
+    "zlib": {
+      "original_size": 9437184,
+      "compressed_size": 8764386,
+      "compression_ratio": 1.0767649895839824,
+      "compression_percentage": 7.129224141438806,
+      "processing_time_ms": 339.05029296875,
+      "speed_mb_s": 26.544734473447345
+    },
+    "zstd": {
+      "original_size": 9437184,
+      "compressed_size": 8746672,
+      "compression_ratio": 1.078945683569705,
+      "compression_percentage": 7.316928439670134,
+      "processing_time_ms": 10.262012481689453,
+      "speed_mb_s": 877.020956275266
+    },
+    "lz4": {
+      "original_size": 9437184,
+      "compressed_size": 9437779,
+      "compression_ratio": 0.999936955506163,
+      "compression_percentage": -0.006304846869564784,
+      "processing_time_ms": 7.112264633178711,
+      "speed_mb_s": 1265.419731152157
+    },
+    "best_method": "zstd",
+    "best_ratio": 1.078945683569705
+  },
+  "layer_3.attention.k_proj": {
+    "gzip": {
+      "original_size": 2359296,
+      "compressed_size": 2180107,
+      "compression_ratio": 1.0821927547592847,
+      "compression_percentage": 7.5950198703341965,
+      "processing_time_ms": 87.53156661987305,
+      "speed_mb_s": 25.70501233881907
+    },
+    "zlib": {
+      "original_size": 2359296,
+      "compressed_size": 2180095,
+      "compression_ratio": 1.082198711524039,
+      "compression_percentage": 7.595528496636284,
+      "processing_time_ms": 86.94171905517578,
+      "speed_mb_s": 25.879405473591838
+    },
+    "zstd": {
+      "original_size": 2359296,
+      "compressed_size": 2172996,
+      "compression_ratio": 1.085734166100628,
+      "compression_percentage": 7.89642333984375,
+      "processing_time_ms": 2.779722213745117,
+      "speed_mb_s": 809.4333990908311
+    },
+    "lz4": {
+      "original_size": 2359296,
+      "compressed_size": 2359459,
+      "compression_ratio": 0.9999309163668451,
+      "compression_percentage": -0.0069088406033035454,
+      "processing_time_ms": 1.2984275817871094,
+      "speed_mb_s": 1732.8652221814175
+    },
+    "best_method": "zstd",
+    "best_ratio": 1.085734166100628
+  },
+  "layer_3.attention.out_proj": {
+    "gzip": {
+      "original_size": 2359296,
+      "compressed_size": 2180025,
+      "compression_ratio": 1.0822334606254516,
+      "compression_percentage": 7.5984954833984375,
+      "processing_time_ms": 87.7828598022461,
+      "speed_mb_s": 25.631427422946974
+    },
+    "zlib": {
+      "original_size": 2359296,
+      "compressed_size": 2180013,
+      "compression_ratio": 1.0822394178383339,
+      "compression_percentage": 7.599004109700525,
+      "processing_time_ms": 93.16658973693848,
+      "speed_mb_s": 24.1502882777293
+    },
+    "zstd": {
+      "original_size": 2359296,
+      "compressed_size": 2172855,
+      "compression_ratio": 1.0858046211090937,
+      "compression_percentage": 7.902399698893225,
+      "processing_time_ms": 2.62451171875,
+      "speed_mb_s": 857.3023255813954
+    },
+    "lz4": {
+      "original_size": 2359296,
+      "compressed_size": 2359459,
+      "compression_ratio": 0.9999309163668451,
+      "compression_percentage": -0.0069088406033035454,
+      "processing_time_ms": 1.2955665588378906,
+      "speed_mb_s": 1736.691939639308
+    },
+    "best_method": "zstd",
+    "best_ratio": 1.0858046211090937
+  },
+  "layer_3.attention.q_proj": {
+    "gzip": {
+      "original_size": 2359296,
+      "compressed_size": 2180000,
+      "compression_ratio": 1.082245871559633,
+      "compression_percentage": 7.599555121527779,
+      "processing_time_ms": 86.93218231201172,
+      "speed_mb_s": 25.88224452855027
+    },
+    "zlib": {
+      "original_size": 2359296,
+      "compressed_size": 2179988,
+      "compression_ratio": 1.08225182890915,
+      "compression_percentage": 7.600063747829866,
+      "processing_time_ms": 88.79899978637695,
+      "speed_mb_s": 25.338123238018525
+    },
+    "zstd": {
+      "original_size": 2359296,
+      "compressed_size": 2172768,
+      "compression_ratio": 1.0858480979101313,
+      "compression_percentage": 7.9060872395833375,
+      "processing_time_ms": 2.8963088989257812,
+      "speed_mb_s": 776.8508396443859
+    },
+    "lz4": {
+      "original_size": 2359296,
+      "compressed_size": 2359459,
+      "compression_ratio": 0.9999309163668451,
+      "compression_percentage": -0.0069088406033035454,
+      "processing_time_ms": 1.3401508331298828,
+      "speed_mb_s": 1678.9154954634407
+    },
+    "best_method": "zstd",
+    "best_ratio": 1.0858480979101313
+  },
+  "layer_3.attention.v_proj": {
+    "gzip": {
+      "original_size": 2359296,
+      "compressed_size": 2180165,
+      "compression_ratio": 1.0821639646540515,
+      "compression_percentage": 7.5925615098741295,
+      "processing_time_ms": 88.39631080627441,
+      "speed_mb_s": 25.453550939823767
+    },
+    "zlib": {
+      "original_size": 2359296,
+      "compressed_size": 2180153,
+      "compression_ratio": 1.0821699211018676,
+      "compression_percentage": 7.593070136176216,
+      "processing_time_ms": 87.22376823425293,
+      "speed_mb_s": 25.795721115341827
+    },
+    "zstd": {
+      "original_size": 2359296,
+      "compressed_size": 2172916,
+      "compression_ratio": 1.0857741394513178,
+      "compression_percentage": 7.899814181857634,
+      "processing_time_ms": 2.673625946044922,
+      "speed_mb_s": 841.553772070626
+    },
+    "lz4": {
+      "original_size": 2359296,
+      "compressed_size": 2359459,
+      "compression_ratio": 0.9999309163668451,
+      "compression_percentage": -0.0069088406033035454,
+      "processing_time_ms": 1.2736320495605469,
+      "speed_mb_s": 1766.6012729314864
+    },
+    "best_method": "zstd",
+    "best_ratio": 1.0857741394513178
+  },
+  "layer_3.ffn.down_proj": {
+    "gzip": {
+      "original_size": 9437184,
+      "compressed_size": 8763982,
+      "compression_ratio": 1.0768146260455578,
+      "compression_percentage": 7.133505079481339,
+      "processing_time_ms": 345.4444408416748,
+      "speed_mb_s": 26.053393645795875
+    },
+    "zlib": {
+      "original_size": 9437184,
+      "compressed_size": 8763970,
+      "compression_ratio": 1.0768161004658847,
+      "compression_percentage": 7.133632236056853,
+      "processing_time_ms": 334.77091789245605,
+      "speed_mb_s": 26.88405568996055
+    },
+    "zstd": {
+      "original_size": 9437184,
+      "compressed_size": 8746130,
+      "compression_ratio": 1.0790125461203983,
+      "compression_percentage": 7.322671678331161,
+      "processing_time_ms": 12.438535690307617,
+      "speed_mb_s": 723.5578386459911
+    },
+    "lz4": {
+      "original_size": 9437184,
+      "compressed_size": 9437779,
+      "compression_ratio": 0.999936955506163,
+      "compression_percentage": -0.006304846869564784,
+      "processing_time_ms": 5.803823471069336,
+      "speed_mb_s": 1550.701885552315
+    },
+    "best_method": "zstd",
+    "best_ratio": 1.0790125461203983
+  },
+  "layer_3.ffn.up_proj": {
+    "gzip": {
+      "original_size": 9437184,
+      "compressed_size": 8763731,
+      "compression_ratio": 1.0768454668451142,
+      "compression_percentage": 7.136164771185982,
+      "processing_time_ms": 344.38014030456543,
+      "speed_mb_s": 26.13391118326543
+    },
+    "zlib": {
+      "original_size": 9437184,
+      "compressed_size": 8763719,
+      "compression_ratio": 1.0768469413498996,
+      "compression_percentage": 7.136291927761507,
+      "processing_time_ms": 341.9778347015381,
+      "speed_mb_s": 26.317495131971842
+    },
+    "zstd": {
+      "original_size": 9437184,
+      "compressed_size": 8745566,
+      "compression_ratio": 1.079082131448096,
+      "compression_percentage": 7.328648037380647,
+      "processing_time_ms": 10.663747787475586,
+      "speed_mb_s": 843.9809511033604
+    },
+    "lz4": {
+      "original_size": 9437184,
+      "compressed_size": 9437779,
+      "compression_ratio": 0.999936955506163,
+      "compression_percentage": -0.006304846869564784,
+      "processing_time_ms": 5.527734756469727,
+      "speed_mb_s": 1628.153375026957
+    },
+    "best_method": "zstd",
+    "best_ratio": 1.079082131448096
+  },
+  "layer_3.ln1.bias": {
+    "gzip": {
+      "original_size": 3072,
+      "compressed_size": 37,
+      "compression_ratio": 83.02702702702703,
+      "compression_percentage": 98.79557291666666,
+      "processing_time_ms": 0.03337860107421875,
+      "speed_mb_s": 87.77142857142857
+    },
+    "zlib": {
+      "original_size": 3072,
+      "compressed_size": 25,
+      "compression_ratio": 122.88,
+      "compression_percentage": 99.18619791666666,
+      "processing_time_ms": 0.009775161743164062,
+      "speed_mb_s": 299.7073170731707
+    },
+    "zstd": {
+      "original_size": 3072,
+      "compressed_size": 19,
+      "compression_ratio": 161.68421052631578,
+      "compression_percentage": 99.38151041666666,
+      "processing_time_ms": 0.013828277587890625,
+      "speed_mb_s": 211.86206896551724
+    },
+    "lz4": {
+      "original_size": 3072,
+      "compressed_size": 45,
+      "compression_ratio": 68.26666666666667,
+      "compression_percentage": 98.53515625,
+      "processing_time_ms": 0.0054836273193359375,
+      "speed_mb_s": 534.2608695652174
+    },
+    "best_method": "zstd",
+    "best_ratio": 161.68421052631578
+  },
+  "layer_3.ln1.weight": {
+    "gzip": {
+      "original_size": 3072,
+      "compressed_size": 41,
+      "compression_ratio": 74.92682926829268,
+      "compression_percentage": 98.66536458333334,
+      "processing_time_ms": 0.018358230590820312,
+      "speed_mb_s": 159.58441558441558
+    },
+    "zlib": {
+      "original_size": 3072,
+      "compressed_size": 29,
+      "compression_ratio": 105.93103448275862,
+      "compression_percentage": 99.05598958333334,
+      "processing_time_ms": 0.009775161743164062,
+      "speed_mb_s": 299.7073170731707
+    },
+    "zstd": {
+      "original_size": 3072,
+      "compressed_size": 21,
+      "compression_ratio": 146.28571428571428,
+      "compression_percentage": 99.31640625,
+      "processing_time_ms": 0.0064373016357421875,
+      "speed_mb_s": 455.1111111111111
+    },
+    "lz4": {
+      "original_size": 3072,
+      "compressed_size": 48,
+      "compression_ratio": 64.0,
+      "compression_percentage": 98.4375,
+      "processing_time_ms": 0.0026226043701171875,
+      "speed_mb_s": 1117.090909090909
+    },
+    "best_method": "zstd",
+    "best_ratio": 146.28571428571428
+  },
+  "layer_3.ln2.bias": {
+    "gzip": {
+      "original_size": 3072,
+      "compressed_size": 37,
+      "compression_ratio": 83.02702702702703,
+      "compression_percentage": 98.79557291666666,
+      "processing_time_ms": 0.016927719116210938,
+      "speed_mb_s": 173.07042253521126
+    },
+    "zlib": {
+      "original_size": 3072,
+      "compressed_size": 25,
+      "compression_ratio": 122.88,
+      "compression_percentage": 99.18619791666666,
+      "processing_time_ms": 0.0095367431640625,
+      "speed_mb_s": 307.2
+    },
+    "zstd": {
+      "original_size": 3072,
+      "compressed_size": 19,
+      "compression_ratio": 161.68421052631578,
+      "compression_percentage": 99.38151041666666,
+      "processing_time_ms": 0.0059604644775390625,
+      "speed_mb_s": 491.52
+    },
+    "lz4": {
+      "original_size": 3072,
+      "compressed_size": 45,
+      "compression_ratio": 68.26666666666667,
+      "compression_percentage": 98.53515625,
+      "processing_time_ms": 0.0019073486328125,
+      "speed_mb_s": 1536.0
+    },
+    "best_method": "zstd",
+    "best_ratio": 161.68421052631578
+  },
+  "layer_3.ln2.weight": {
+    "gzip": {
+      "original_size": 3072,
+      "compressed_size": 41,
+      "compression_ratio": 74.92682926829268,
+      "compression_percentage": 98.66536458333334,
+      "processing_time_ms": 0.013828277587890625,
+      "speed_mb_s": 211.86206896551724
+    },
+    "zlib": {
+      "original_size": 3072,
+      "compressed_size": 29,
+      "compression_ratio": 105.93103448275862,
+      "compression_percentage": 99.05598958333334,
+      "processing_time_ms": 0.0095367431640625,
+      "speed_mb_s": 307.2
+    },
+    "zstd": {
+      "original_size": 3072,
+      "compressed_size": 21,
+      "compression_ratio": 146.28571428571428,
+      "compression_percentage": 99.31640625,
+      "processing_time_ms": 0.0040531158447265625,
+      "speed_mb_s": 722.8235294117648
+    },
+    "lz4": {
+      "original_size": 3072,
+      "compressed_size": 48,
+      "compression_ratio": 64.0,
+      "compression_percentage": 98.4375,
+      "processing_time_ms": 0.0016689300537109375,
+      "speed_mb_s": 1755.4285714285713
+    },
+    "best_method": "zstd",
+    "best_ratio": 146.28571428571428
+  },
+  "layer_3.mlp.fc1": {
+    "gzip": {
+      "original_size": 9437184,
+      "compressed_size": 8763903,
+      "compression_ratio": 1.0768243327202502,
+      "compression_percentage": 7.134342193603516,
+      "processing_time_ms": 343.3725833892822,
+      "speed_mb_s": 26.2105958232451
+    },
+    "zlib": {
+      "original_size": 9437184,
+      "compressed_size": 8763891,
+      "compression_ratio": 1.076825807167159,
+      "compression_percentage": 7.134469350179041,
+      "processing_time_ms": 342.8466320037842,
+      "speed_mb_s": 26.250804761881582
+    },
+    "zstd": {
+      "original_size": 9437184,
+      "compressed_size": 8746047,
+      "compression_ratio": 1.0790227859511845,
+      "compression_percentage": 7.323551177978516,
+      "processing_time_ms": 22.296667098999023,
+      "speed_mb_s": 403.6477721104802
+    },
+    "lz4": {
+      "original_size": 9437184,
+      "compressed_size": 9437779,
+      "compression_ratio": 0.999936955506163,
+      "compression_percentage": -0.006304846869564784,
+      "processing_time_ms": 7.165193557739258,
+      "speed_mb_s": 1256.0721392207101
+    },
+    "best_method": "zstd",
+    "best_ratio": 1.0790227859511845
+  },
+  "layer_3.mlp.fc2": {
+    "gzip": {
+      "original_size": 9437184,
+      "compressed_size": 8763619,
+      "compression_ratio": 1.0768592290468126,
+      "compression_percentage": 7.137351565890837,
+      "processing_time_ms": 339.16616439819336,
+      "speed_mb_s": 26.535665832024666
+    },
+    "zlib": {
+      "original_size": 9437184,
+      "compressed_size": 8763607,
+      "compression_ratio": 1.076860703589287,
+      "compression_percentage": 7.137478722466362,
+      "processing_time_ms": 346.57955169677734,
+      "speed_mb_s": 25.968064058995914
+    },
+    "zstd": {
+      "original_size": 9437184,
+      "compressed_size": 8745780,
+      "compression_ratio": 1.0790557274479806,
+      "compression_percentage": 7.32638041178385,
+      "processing_time_ms": 9.769201278686523,
+      "speed_mb_s": 921.2626235509457
+    },
+    "lz4": {
+      "original_size": 9437184,
+      "compressed_size": 9437779,
+      "compression_ratio": 0.999936955506163,
+      "compression_percentage": -0.006304846869564784,
+      "processing_time_ms": 6.949901580810547,
+      "speed_mb_s": 1294.9823670668954
+    },
+    "best_method": "zstd",
+    "best_ratio": 1.0790557274479806
+  },
+  "layer_4.attention.k_proj": {
+    "gzip": {
+      "original_size": 2359296,
+      "compressed_size": 2180030,
+      "compression_ratio": 1.0822309784727733,
+      "compression_percentage": 7.598283555772567,
+      "processing_time_ms": 86.84206008911133,
+      "speed_mb_s": 25.909104386644046
+    },
+    "zlib": {
+      "original_size": 2359296,
+      "compressed_size": 2180018,
+      "compression_ratio": 1.0822369356583295,
+      "compression_percentage": 7.598792182074654,
+      "processing_time_ms": 84.87558364868164,
+      "speed_mb_s": 26.509390607706873
+    },
+    "zstd": {
+      "original_size": 2359296,
+      "compressed_size": 2172746,
+      "compression_ratio": 1.085859092595269,
+      "compression_percentage": 7.907019721137154,
+      "processing_time_ms": 2.646207809448242,
+      "speed_mb_s": 850.2733579601766
+    },
+    "lz4": {
+      "original_size": 2359296,
+      "compressed_size": 2359459,
+      "compression_ratio": 0.9999309163668451,
+      "compression_percentage": -0.0069088406033035454,
+      "processing_time_ms": 1.2879371643066406,
+      "speed_mb_s": 1746.979637171418
+    },
+    "best_method": "zstd",
+    "best_ratio": 1.085859092595269
+  },
+  "layer_4.attention.out_proj": {
+    "gzip": {
+      "original_size": 2359296,
+      "compressed_size": 2179986,
+      "compression_ratio": 1.0822528218071126,
+      "compression_percentage": 7.6001485188802125,
+      "processing_time_ms": 88.09757232666016,
+      "speed_mb_s": 25.539863818915965
+    },
+    "zlib": {
+      "original_size": 2359296,
+      "compressed_size": 2179974,
+      "compression_ratio": 1.0822587792331468,
+      "compression_percentage": 7.6006571451822875,
+      "processing_time_ms": 89.15376663208008,
+      "speed_mb_s": 25.237296022335254
+    },
+    "zstd": {
+      "original_size": 2359296,
+      "compressed_size": 2172848,
+      "compression_ratio": 1.085808119113716,
+      "compression_percentage": 7.902696397569442,
+      "processing_time_ms": 2.5310516357421875,
+      "speed_mb_s": 888.9585531273549
+    },
+    "lz4": {
+      "original_size": 2359296,
+      "compressed_size": 2359459,
+      "compression_ratio": 0.9999309163668451,
+      "compression_percentage": -0.0069088406033035454,
+      "processing_time_ms": 1.3561248779296875,
+      "speed_mb_s": 1659.139240506329
+    },
+    "best_method": "zstd",
+    "best_ratio": 1.085808119113716
+  },
+  "layer_4.attention.q_proj": {
+    "gzip": {
+      "original_size": 2359296,
+      "compressed_size": 2180254,
+      "compression_ratio": 1.0821197897125747,
+      "compression_percentage": 7.588789198133683,
+      "processing_time_ms": 86.91167831420898,
+      "speed_mb_s": 25.888350606527787
+    },
+    "zlib": {
+      "original_size": 2359296,
+      "compressed_size": 2180242,
+      "compression_ratio": 1.082125745674104,
+      "compression_percentage": 7.589297824435759,
+      "processing_time_ms": 86.13896369934082,
+      "speed_mb_s": 26.120583570675326
+    },
+    "zstd": {
+      "original_size": 2359296,
+      "compressed_size": 2173031,
+      "compression_ratio": 1.0857166786852097,
+      "compression_percentage": 7.8949398464626785,
+      "processing_time_ms": 2.624988555908203,
+      "speed_mb_s": 857.1465940054496
+    },
+    "lz4": {
+      "original_size": 2359296,
+      "compressed_size": 2359459,
+      "compression_ratio": 0.9999309163668451,
+      "compression_percentage": -0.0069088406033035454,
+      "processing_time_ms": 1.2428760528564453,
+      "speed_mb_s": 1810.3172837137924
+    },
+    "best_method": "zstd",
+    "best_ratio": 1.0857166786852097
+  },
+  "layer_4.attention.v_proj": {
+    "gzip": {
+      "original_size": 2359296,
+      "compressed_size": 2180025,
+      "compression_ratio": 1.0822334606254516,
+      "compression_percentage": 7.5984954833984375,
+      "processing_time_ms": 90.79098701477051,
+      "speed_mb_s": 24.782195611927364
+    },
+    "zlib": {
+      "original_size": 2359296,
+      "compressed_size": 2180013,
+      "compression_ratio": 1.0822394178383339,
+      "compression_percentage": 7.599004109700525,
+      "processing_time_ms": 87.3103141784668,
+      "speed_mb_s": 25.770151226358934
+    },
+    "zstd": {
+      "original_size": 2359296,
+      "compressed_size": 2172757,
+      "compression_ratio": 1.0858535952248687,
+      "compression_percentage": 7.9065534803602455,
+      "processing_time_ms": 2.6655197143554688,
+      "speed_mb_s": 844.1130590339893
+    },
+    "lz4": {
+      "original_size": 2359296,
+      "compressed_size": 2359459,
+      "compression_ratio": 0.9999309163668451,
+      "compression_percentage": -0.0069088406033035454,
+      "processing_time_ms": 1.2943744659423828,
+      "speed_mb_s": 1738.2913980475225
+    },
+    "best_method": "zstd",
+    "best_ratio": 1.0858535952248687
+  },
+  "layer_4.ffn.down_proj": {
+    "gzip": {
+      "original_size": 9437184,
+      "compressed_size": 8763804,
+      "compression_ratio": 1.0768364970280029,
+      "compression_percentage": 7.1353912353515625,
+      "processing_time_ms": 341.52793884277344,
+      "speed_mb_s": 26.352163253452773
+    },
+    "zlib": {
+      "original_size": 9437184,
+      "compressed_size": 8763792,
+      "compression_ratio": 1.076837971508224,
+      "compression_percentage": 7.1355183919270875,
+      "processing_time_ms": 340.6982421875,
+      "speed_mb_s": 26.41633823002508
+    },
+    "zstd": {
+      "original_size": 9437184,
+      "compressed_size": 8745977,
+      "compression_ratio": 1.0790314221041286,
+      "compression_percentage": 7.324292924669051,
+      "processing_time_ms": 10.196924209594727,
+      "speed_mb_s": 882.6190932684889
+    },
+    "lz4": {
+      "original_size": 9437184,
+      "compressed_size": 9437779,
+      "compression_ratio": 0.999936955506163,
+      "compression_percentage": -0.006304846869564784,
+      "processing_time_ms": 5.237340927124023,
+      "speed_mb_s": 1718.4292802840625
+    },
+    "best_method": "zstd",
+    "best_ratio": 1.0790314221041286
+  },
+  "layer_4.ffn.up_proj": {
+    "gzip": {
+      "original_size": 9437184,
+      "compressed_size": 8764234,
+      "compression_ratio": 1.076783664151368,
+      "compression_percentage": 7.130834791395402,
+      "processing_time_ms": 346.04787826538086,
+      "speed_mb_s": 26.0079618031872
+    },
+    "zlib": {
+      "original_size": 9437184,
+      "compressed_size": 8764222,
+      "compression_ratio": 1.0767851384869074,
+      "compression_percentage": 7.130961947970915,
+      "processing_time_ms": 345.53027153015137,
+      "speed_mb_s": 26.04692190974836
+    },
+    "zstd": {
+      "original_size": 9437184,
+      "compressed_size": 8746215,
+      "compression_ratio": 1.0790020597481311,
+      "compression_percentage": 7.321770985921228,
+      "processing_time_ms": 10.114192962646484,
+      "speed_mb_s": 889.8386686153411
+    },
+    "lz4": {
+      "original_size": 9437184,
+      "compressed_size": 9437779,
+      "compression_ratio": 0.999936955506163,
+      "compression_percentage": -0.006304846869564784,
+      "processing_time_ms": 5.330324172973633,
+      "speed_mb_s": 1688.4526546495504
+    },
+    "best_method": "zstd",
+    "best_ratio": 1.0790020597481311
+  },
+  "layer_4.ln1.bias": {
+    "gzip": {
+      "original_size": 3072,
+      "compressed_size": 37,
+      "compression_ratio": 83.02702702702703,
+      "compression_percentage": 98.79557291666666,
+      "processing_time_ms": 0.041484832763671875,
+      "speed_mb_s": 70.62068965517241
+    },
+    "zlib": {
+      "original_size": 3072,
+      "compressed_size": 25,
+      "compression_ratio": 122.88,
+      "compression_percentage": 99.18619791666666,
+      "processing_time_ms": 0.013113021850585938,
+      "speed_mb_s": 223.4181818181818
+    },
+    "zstd": {
+      "original_size": 3072,
+      "compressed_size": 19,
+      "compression_ratio": 161.68421052631578,
+      "compression_percentage": 99.38151041666666,
+      "processing_time_ms": 0.016450881958007812,
+      "speed_mb_s": 178.08695652173913
+    },
+    "lz4": {
+      "original_size": 3072,
+      "compressed_size": 45,
+      "compression_ratio": 68.26666666666667,
+      "compression_percentage": 98.53515625,
+      "processing_time_ms": 0.0057220458984375,
+      "speed_mb_s": 512.0
+    },
+    "best_method": "zstd",
+    "best_ratio": 161.68421052631578
+  },
+  "layer_4.ln1.weight": {
+    "gzip": {
+      "original_size": 3072,
+      "compressed_size": 41,
+      "compression_ratio": 74.92682926829268,
+      "compression_percentage": 98.66536458333334,
+      "processing_time_ms": 0.021219253540039062,
+      "speed_mb_s": 138.06741573033707
+    },
+    "zlib": {
+      "original_size": 3072,
+      "compressed_size": 29,
+      "compression_ratio": 105.93103448275862,
+      "compression_percentage": 99.05598958333334,
+      "processing_time_ms": 0.010013580322265625,
+      "speed_mb_s": 292.57142857142856
+    },
+    "zstd": {
+      "original_size": 3072,
+      "compressed_size": 21,
+      "compression_ratio": 146.28571428571428,
+      "compression_percentage": 99.31640625,
+      "processing_time_ms": 0.0069141387939453125,
+      "speed_mb_s": 423.7241379310345
+    },
+    "lz4": {
+      "original_size": 3072,
+      "compressed_size": 48,
+      "compression_ratio": 64.0,
+      "compression_percentage": 98.4375,
+      "processing_time_ms": 0.002384185791015625,
+      "speed_mb_s": 1228.8
+    },
+    "best_method": "zstd",
+    "best_ratio": 146.28571428571428
+  },
+  "layer_4.ln2.bias": {
+    "gzip": {
+      "original_size": 3072,
+      "compressed_size": 37,
+      "compression_ratio": 83.02702702702703,
+      "compression_percentage": 98.79557291666666,
+      "processing_time_ms": 0.015974044799804688,
+      "speed_mb_s": 183.40298507462686
+    },
+    "zlib": {
+      "original_size": 3072,
+      "compressed_size": 25,
+      "compression_ratio": 122.88,
+      "compression_percentage": 99.18619791666666,
+      "processing_time_ms": 0.009775161743164062,
+      "speed_mb_s": 299.7073170731707
+    },
+    "zstd": {
+      "original_size": 3072,
+      "compressed_size": 19,
+      "compression_ratio": 161.68421052631578,
+      "compression_percentage": 99.38151041666666,
+      "processing_time_ms": 0.0054836273193359375,
+      "speed_mb_s": 534.2608695652174
+    },
+    "lz4": {
+      "original_size": 3072,
+      "compressed_size": 45,
+      "compression_ratio": 68.26666666666667,
+      "compression_percentage": 98.53515625,
+      "processing_time_ms": 0.0019073486328125,
+      "speed_mb_s": 1536.0
+    },
+    "best_method": "zstd",
+    "best_ratio": 161.68421052631578
+  },
+  "layer_4.ln2.weight": {
+    "gzip": {
+      "original_size": 3072,
+      "compressed_size": 41,
+      "compression_ratio": 74.92682926829268,
+      "compression_percentage": 98.66536458333334,
+      "processing_time_ms": 0.023365020751953125,
+      "speed_mb_s": 125.38775510204081
+    },
+    "zlib": {
+      "original_size": 3072,
+      "compressed_size": 29,
+      "compression_ratio": 105.93103448275862,
+      "compression_percentage": 99.05598958333334,
+      "processing_time_ms": 0.030279159545898438,
+      "speed_mb_s": 96.75590551181102
+    },
+    "zstd": {
+      "original_size": 3072,
+      "compressed_size": 21,
+      "compression_ratio": 146.28571428571428,
+      "compression_percentage": 99.31640625,
+      "processing_time_ms": 0.0064373016357421875,
+      "speed_mb_s": 455.1111111111111
+    },
+    "lz4": {
+      "original_size": 3072,
+      "compressed_size": 48,
+      "compression_ratio": 64.0,
+      "compression_percentage": 98.4375,
+      "processing_time_ms": 0.0021457672119140625,
+      "speed_mb_s": 1365.3333333333333
+    },
+    "best_method": "zstd",
+    "best_ratio": 146.28571428571428
+  },
+  "layer_4.mlp.fc1": {
+    "gzip": {
+      "original_size": 9437184,
+      "compressed_size": 8764589,
+      "compression_ratio": 1.0767400502179851,
+      "compression_percentage": 7.127073076036239,
+      "processing_time_ms": 348.75035285949707,
+      "speed_mb_s": 25.8064255023876
+    },
+    "zlib": {
+      "original_size": 9437184,
+      "compressed_size": 8764577,
+      "compression_ratio": 1.076741524434094,
+      "compression_percentage": 7.127200232611763,
+      "processing_time_ms": 338.9441967010498,
+      "speed_mb_s": 26.553043502727494
+    },
+    "zstd": {
+      "original_size": 9437184,
+      "compressed_size": 8746679,
+      "compression_ratio": 1.078944820085429,
+      "compression_percentage": 7.316854265001083,
+      "processing_time_ms": 9.89675521850586,
+      "speed_mb_s": 909.388966514093
+    },
+    "lz4": {
+      "original_size": 9437184,
+      "compressed_size": 9437779,
+      "compression_ratio": 0.999936955506163,
+      "compression_percentage": -0.006304846869564784,
+      "processing_time_ms": 5.089044570922852,
+      "speed_mb_s": 1768.504848910752
+    },
+    "best_method": "zstd",
+    "best_ratio": 1.078944820085429
+  },
+  "layer_4.mlp.fc2": {
+    "gzip": {
+      "original_size": 9437184,
+      "compressed_size": 8764128,
+      "compression_ratio": 1.0767966875883146,
+      "compression_percentage": 7.1319580078125,
+      "processing_time_ms": 345.75629234313965,
+      "speed_mb_s": 26.029895042569784
+    },
+    "zlib": {
+      "original_size": 9437184,
+      "compressed_size": 8764116,
+      "compression_ratio": 1.0767981619595177,
+      "compression_percentage": 7.132085164388025,
+      "processing_time_ms": 342.8313732147217,
+      "speed_mb_s": 26.25197313655169
+    },
+    "zstd": {
+      "original_size": 9437184,
+      "compressed_size": 8746078,
+      "compression_ratio": 1.079018961413333,
+      "compression_percentage": 7.323222690158415,
+      "processing_time_ms": 11.177778244018555,
+      "speed_mb_s": 805.1689524987736
+    },
+    "lz4": {
+      "original_size": 9437184,
+      "compressed_size": 9437779,
+      "compression_ratio": 0.999936955506163,
+      "compression_percentage": -0.006304846869564784,
+      "processing_time_ms": 5.96165657043457,
+      "speed_mb_s": 1509.6475104979004
+    },
+    "best_method": "zstd",
+    "best_ratio": 1.079018961413333
+  },
+  "layer_5.attention.k_proj": {
+    "gzip": {
+      "original_size": 2359296,
+      "compressed_size": 2179802,
+      "compression_ratio": 1.08234417621417,
+      "compression_percentage": 7.607947455512154,
+      "processing_time_ms": 87.34488487243652,
+      "speed_mb_s": 25.759951521901126
+    },
+    "zlib": {
+      "original_size": 2359296,
+      "compressed_size": 2179790,
+      "compression_ratio": 1.082350134645998,
+      "compression_percentage": 7.608456081814241,
+      "processing_time_ms": 92.37289428710938,
+      "speed_mb_s": 24.357794755316952
+    },
+    "zstd": {
+      "original_size": 2359296,
+      "compressed_size": 2172495,
+      "compression_ratio": 1.0859845477204781,
+      "compression_percentage": 7.917658487955725,
+      "processing_time_ms": 2.687215805053711,
+      "speed_mb_s": 837.2978440244876
+    },
+    "lz4": {
+      "original_size": 2359296,
+      "compressed_size": 2359459,
+      "compression_ratio": 0.9999309163668451,
+      "compression_percentage": -0.0069088406033035454,
+      "processing_time_ms": 1.238107681274414,
+      "speed_mb_s": 1817.2894280762564
+    },
+    "best_method": "zstd",
+    "best_ratio": 1.0859845477204781
+  },
+  "layer_5.attention.out_proj": {
+    "gzip": {
+      "original_size": 2359296,
+      "compressed_size": 2180323,
+      "compression_ratio": 1.0820855442060648,
+      "compression_percentage": 7.5858645968966965,
+      "processing_time_ms": 90.21139144897461,
+      "speed_mb_s": 24.941417750691116
+    },
+    "zlib": {
+      "original_size": 2359296,
+      "compressed_size": 2180311,
+      "compression_ratio": 1.0820914997906261,
+      "compression_percentage": 7.586373223198784,
+      "processing_time_ms": 88.84620666503906,
+      "speed_mb_s": 25.324660269208476
+    },
+    "zstd": {
+      "original_size": 2359296,
+      "compressed_size": 2173144,
+      "compression_ratio": 1.0856602231605452,
+      "compression_percentage": 7.890150282118058,
+      "processing_time_ms": 2.538442611694336,
+      "speed_mb_s": 886.3702451394759
+    },
+    "lz4": {
+      "original_size": 2359296,
+      "compressed_size": 2359459,
+      "compression_ratio": 0.9999309163668451,
+      "compression_percentage": -0.0069088406033035454,
+      "processing_time_ms": 1.3103485107421875,
+      "speed_mb_s": 1717.1004366812226
+    },
+    "best_method": "zstd",
+    "best_ratio": 1.0856602231605452
+  },
+  "layer_5.attention.q_proj": {
+    "gzip": {
+      "original_size": 2359296,
+      "compressed_size": 2180209,
+      "compression_ratio": 1.0821421249063736,
+      "compression_percentage": 7.5906965467664955,
+      "processing_time_ms": 85.68000793457031,
+      "speed_mb_s": 26.2605017697736
+    },
+    "zlib": {
+      "original_size": 2359296,
+      "compressed_size": 2180197,
+      "compression_ratio": 1.082148081113771,
+      "compression_percentage": 7.5912051730685715,
+      "processing_time_ms": 88.23990821838379,
+      "speed_mb_s": 25.49866659461504
+    },
+    "zstd": {
+      "original_size": 2359296,
+      "compressed_size": 2173069,
+      "compression_ratio": 1.085697692986279,
+      "compression_percentage": 7.8933291965060715,
+      "processing_time_ms": 2.4738311767578125,
+      "speed_mb_s": 909.5204317656129
+    },
+    "lz4": {
+      "original_size": 2359296,
+      "compressed_size": 2359459,
+      "compression_ratio": 0.9999309163668451,
+      "compression_percentage": -0.0069088406033035454,
+      "processing_time_ms": 1.2307167053222656,
+      "speed_mb_s": 1828.2030220844633
+    },
+    "best_method": "zstd",
+    "best_ratio": 1.085697692986279
+  },
+  "layer_5.attention.v_proj": {
+    "gzip": {
+      "original_size": 2359296,
+      "compressed_size": 2180296,
+      "compression_ratio": 1.0820989443635176,
+      "compression_percentage": 7.587009006076384,
+      "processing_time_ms": 87.58425712585449,
+      "speed_mb_s": 25.689548257135467
+    },
+    "zlib": {
+      "original_size": 2359296,
+      "compressed_size": 2180284,
+      "compression_ratio": 1.0821049000955838,
+      "compression_percentage": 7.587517632378471,
+      "processing_time_ms": 87.89587020874023,
+      "speed_mb_s": 25.598472313392755
+    },
+    "zstd": {
+      "original_size": 2359296,
+      "compressed_size": 2173161,
+      "compression_ratio": 1.0856517303596005,
+      "compression_percentage": 7.8894297281901,
+      "processing_time_ms": 2.583026885986328,
+      "speed_mb_s": 871.0710725493816
+    },
+    "lz4": {
+      "original_size": 2359296,
+      "compressed_size": 2359459,
+      "compression_ratio": 0.9999309163668451,
+      "compression_percentage": -0.0069088406033035454,
+      "processing_time_ms": 1.2884140014648438,
+      "speed_mb_s": 1746.3330866025167
+    },
+    "best_method": "zstd",
+    "best_ratio": 1.0856517303596005
+  },
+  "layer_5.ffn.down_proj": {
+    "gzip": {
+      "original_size": 9437184,
+      "compressed_size": 8764463,
+      "compression_ratio": 1.0767555296884703,
+      "compression_percentage": 7.128408220079208,
+      "processing_time_ms": 338.03796768188477,
+      "speed_mb_s": 26.62422822417857
+    },
+    "zlib": {
+      "original_size": 9437184,
+      "compressed_size": 8764451,
+      "compression_ratio": 1.0767570039469672,
+      "compression_percentage": 7.128535376654732,
+      "processing_time_ms": 344.0053462982178,
+      "speed_mb_s": 26.162384093292296
+    },
+    "zstd": {
+      "original_size": 9437184,
+      "compressed_size": 8746352,
+      "compression_ratio": 1.0789851586124135,
+      "compression_percentage": 7.320319281684029,
+      "processing_time_ms": 9.800434112548828,
+      "speed_mb_s": 918.3266676397607
+    },
+    "lz4": {
+      "original_size": 9437184,
+      "compressed_size": 9437779,
+      "compression_ratio": 0.999936955506163,
+      "compression_percentage": -0.006304846869564784,
+      "processing_time_ms": 5.229473114013672,
+      "speed_mb_s": 1721.0146804048509
+    },
+    "best_method": "zstd",
+    "best_ratio": 1.0789851586124135
+  },
+  "layer_5.ffn.up_proj": {
+    "gzip": {
+      "original_size": 9437184,
+      "compressed_size": 8764313,
+      "compression_ratio": 1.0767739582098448,
+      "compression_percentage": 7.129997677273225,
+      "processing_time_ms": 344.88463401794434,
+      "speed_mb_s": 26.095682765419262
+    },
+    "zlib": {
+      "original_size": 9437184,
+      "compressed_size": 8764301,
+      "compression_ratio": 1.0767754325188055,
+      "compression_percentage": 7.130124833848739,
+      "processing_time_ms": 343.4476852416992,
+      "speed_mb_s": 26.20486434103146
+    },
+    "zstd": {
+      "original_size": 9437184,
+      "compressed_size": 8746319,
+      "compression_ratio": 1.0789892296404922,
+      "compression_percentage": 7.320668962266708,
+      "processing_time_ms": 9.903192520141602,
+      "speed_mb_s": 908.7978428870646
+    },
+    "lz4": {
+      "original_size": 9437184,
+      "compressed_size": 9437779,
+      "compression_ratio": 0.999936955506163,
+      "compression_percentage": -0.006304846869564784,
+      "processing_time_ms": 5.166769027709961,
+      "speed_mb_s": 1741.9009736514236
+    },
+    "best_method": "zstd",
+    "best_ratio": 1.0789892296404922
+  },
+  "layer_5.ln1.bias": {
+    "gzip": {
+      "original_size": 3072,
+      "compressed_size": 37,
+      "compression_ratio": 83.02702702702703,
+      "compression_percentage": 98.79557291666666,
+      "processing_time_ms": 0.026941299438476562,
+      "speed_mb_s": 108.7433628318584
+    },
+    "zlib": {
+      "original_size": 3072,
+      "compressed_size": 25,
+      "compression_ratio": 122.88,
+      "compression_percentage": 99.18619791666666,
+      "processing_time_ms": 0.009298324584960938,
+      "speed_mb_s": 315.0769230769231
+    },
+    "zstd": {
+      "original_size": 3072,
+      "compressed_size": 19,
+      "compression_ratio": 161.68421052631578,
+      "compression_percentage": 99.38151041666666,
+      "processing_time_ms": 0.011682510375976562,
+      "speed_mb_s": 250.77551020408163
+    },
+    "lz4": {
+      "original_size": 3072,
+      "compressed_size": 45,
+      "compression_ratio": 68.26666666666667,
+      "compression_percentage": 98.53515625,
+      "processing_time_ms": 0.0040531158447265625,
+      "speed_mb_s": 722.8235294117648
+    },
+    "best_method": "zstd",
+    "best_ratio": 161.68421052631578
+  },
+  "layer_5.ln1.weight": {
+    "gzip": {
+      "original_size": 3072,
+      "compressed_size": 41,
+      "compression_ratio": 74.92682926829268,
+      "compression_percentage": 98.66536458333334,
+      "processing_time_ms": 0.022172927856445312,
+      "speed_mb_s": 132.1290322580645
+    },
+    "zlib": {
+      "original_size": 3072,
+      "compressed_size": 29,
+      "compression_ratio": 105.93103448275862,
+      "compression_percentage": 99.05598958333334,
+      "processing_time_ms": 0.009775161743164062,
+      "speed_mb_s": 299.7073170731707
+    },
+    "zstd": {
+      "original_size": 3072,
+      "compressed_size": 21,
+      "compression_ratio": 146.28571428571428,
+      "compression_percentage": 99.31640625,
+      "processing_time_ms": 0.007152557373046875,
+      "speed_mb_s": 409.6
+    },
+    "lz4": {
+      "original_size": 3072,
+      "compressed_size": 48,
+      "compression_ratio": 64.0,
+      "compression_percentage": 98.4375,
+      "processing_time_ms": 0.0030994415283203125,
+      "speed_mb_s": 945.2307692307693
+    },
+    "best_method": "zstd",
+    "best_ratio": 146.28571428571428
+  },
+  "layer_5.ln2.bias": {
+    "gzip": {
+      "original_size": 3072,
+      "compressed_size": 37,
+      "compression_ratio": 83.02702702702703,
+      "compression_percentage": 98.79557291666666,
+      "processing_time_ms": 0.015974044799804688,
+      "speed_mb_s": 183.40298507462686
+    },
+    "zlib": {
+      "original_size": 3072,
+      "compressed_size": 25,
+      "compression_ratio": 122.88,
+      "compression_percentage": 99.18619791666666,
+      "processing_time_ms": 0.009775161743164062,
+      "speed_mb_s": 299.7073170731707
+    },
+    "zstd": {
+      "original_size": 3072,
+      "compressed_size": 19,
+      "compression_ratio": 161.68421052631578,
+      "compression_percentage": 99.38151041666666,
+      "processing_time_ms": 0.0059604644775390625,
+      "speed_mb_s": 491.52
+    },
+    "lz4": {
+      "original_size": 3072,
+      "compressed_size": 45,
+      "compression_ratio": 68.26666666666667,
+      "compression_percentage": 98.53515625,
+      "processing_time_ms": 0.0021457672119140625,
+      "speed_mb_s": 1365.3333333333333
+    },
+    "best_method": "zstd",
+    "best_ratio": 161.68421052631578
+  },
+  "layer_5.ln2.weight": {
+    "gzip": {
+      "original_size": 3072,
+      "compressed_size": 41,
+      "compression_ratio": 74.92682926829268,
+      "compression_percentage": 98.66536458333334,
+      "processing_time_ms": 0.016689300537109375,
+      "speed_mb_s": 175.54285714285714
+    },
+    "zlib": {
+      "original_size": 3072,
+      "compressed_size": 29,
+      "compression_ratio": 105.93103448275862,
+      "compression_percentage": 99.05598958333334,
+      "processing_time_ms": 0.010728836059570312,
+      "speed_mb_s": 273.06666666666666
+    },
+    "zstd": {
+      "original_size": 3072,
+      "compressed_size": 21,
+      "compression_ratio": 146.28571428571428,
+      "compression_percentage": 99.31640625,
+      "processing_time_ms": 0.005245208740234375,
+      "speed_mb_s": 558.5454545454545
+    },
+    "lz4": {
+      "original_size": 3072,
+      "compressed_size": 48,
+      "compression_ratio": 64.0,
+      "compression_percentage": 98.4375,
+      "processing_time_ms": 0.0019073486328125,
+      "speed_mb_s": 1536.0
+    },
+    "best_method": "zstd",
+    "best_ratio": 146.28571428571428
+  },
+  "layer_5.mlp.fc1": {
+    "gzip": {
+      "original_size": 9437184,
+      "compressed_size": 8764135,
+      "compression_ratio": 1.0767958275403107,
+      "compression_percentage": 7.131883833143449,
+      "processing_time_ms": 347.55897521972656,
+      "speed_mb_s": 25.894885880332126
+    },
+    "zlib": {
+      "original_size": 9437184,
+      "compressed_size": 8764123,
+      "compression_ratio": 1.0767973019091586,
+      "compression_percentage": 7.132010989718962,
+      "processing_time_ms": 352.97298431396484,
+      "speed_mb_s": 25.49770209040876
+    },
+    "zstd": {
+      "original_size": 9437184,
+      "compressed_size": 8746226,
+      "compression_ratio": 1.079000702703086,
+      "compression_percentage": 7.321654425726997,
+      "processing_time_ms": 10.27369499206543,
+      "speed_mb_s": 876.0236708361375
+    },
+    "lz4": {
+      "original_size": 9437184,
+      "compressed_size": 9437779,
+      "compression_ratio": 0.999936955506163,
+      "compression_percentage": -0.006304846869564784,
+      "processing_time_ms": 5.157947540283203,
+      "speed_mb_s": 1744.880096144957
+    },
+    "best_method": "zstd",
+    "best_ratio": 1.079000702703086
+  },
+  "layer_5.mlp.fc2": {
+    "gzip": {
+      "original_size": 9437184,
+      "compressed_size": 8764032,
+      "compression_ratio": 1.0768084826709898,
+      "compression_percentage": 7.1329752604166625,
+      "processing_time_ms": 346.85802459716797,
+      "speed_mb_s": 25.947215753339915
+    },
+    "zlib": {
+      "original_size": 9437184,
+      "compressed_size": 8764020,
+      "compression_ratio": 1.0768099570744931,
+      "compression_percentage": 7.1331024169921875,
+      "processing_time_ms": 342.5276279449463,
+      "speed_mb_s": 26.275252755513637
+    },
+    "zstd": {
+      "original_size": 9437184,
+      "compressed_size": 8746157,
+      "compression_ratio": 1.0790092151330006,
+      "compression_percentage": 7.322385576036239,
+      "processing_time_ms": 10.030746459960938,
+      "speed_mb_s": 897.2413006274958
+    },
+    "lz4": {
+      "original_size": 9437184,
+      "compressed_size": 9437779,
+      "compression_ratio": 0.999936955506163,
+      "compression_percentage": -0.006304846869564784,
+      "processing_time_ms": 5.378007888793945,
+      "speed_mb_s": 1673.4821119829764
+    },
+    "best_method": "zstd",
+    "best_ratio": 1.0790092151330006
+  },
+  "lm_head.weight": {
+    "gzip": {
+      "original_size": 154389504,
+      "compressed_size": 143398981,
+      "compression_ratio": 1.0766429644294335,
+      "compression_percentage": 7.1186983021851,
+      "processing_time_ms": 5654.926776885986,
+      "speed_mb_s": 26.03699579087734
+    },
+    "zlib": {
+      "original_size": 154389504,
+      "compressed_size": 143398969,
+      "compression_ratio": 1.0766430545257268,
+      "compression_percentage": 7.118706074734204,
+      "processing_time_ms": 5569.14758682251,
+      "speed_mb_s": 26.438032462254533
+    },
+    "zstd": {
+      "original_size": 154389504,
+      "compressed_size": 143107374,
+      "compression_ratio": 1.0788368180105101,
+      "compression_percentage": 7.307575779244679,
+      "processing_time_ms": 168.73764991760254,
+      "speed_mb_s": 872.5812215554648
+    },
+    "lz4": {
+      "original_size": 154389504,
+      "compressed_size": 154398947,
+      "compression_ratio": 0.9999388402564688,
+      "compression_percentage": -0.006116348427420704,
+      "processing_time_ms": 93.51229667663574,
+      "speed_mb_s": 1574.5234575581499
+    },
+    "best_method": "zstd",
+    "best_ratio": 1.0788368180105101
+  },
+  "patch_embeddings": {
+    "gzip": {
+      "original_size": 602112,
+      "compressed_size": 559359,
+      "compression_ratio": 1.0764321303492033,
+      "compression_percentage": 7.100506218112246,
+      "processing_time_ms": 20.723581314086914,
+      "speed_mb_s": 27.708470910366884
+    },
+    "zlib": {
+      "original_size": 602112,
+      "compressed_size": 559347,
+      "compression_ratio": 1.0764552236804703,
+      "compression_percentage": 7.102499202806123,
+      "processing_time_ms": 20.215511322021484,
+      "speed_mb_s": 28.404859063568818
+    },
+    "zstd": {
+      "original_size": 602112,
+      "compressed_size": 558200,
+      "compression_ratio": 1.0786671443926907,
+      "compression_percentage": 7.292995323129247,
+      "processing_time_ms": 0.92315673828125,
+      "speed_mb_s": 622.0165289256198
+    },
+    "lz4": {
+      "original_size": 602112,
+      "compressed_size": 602171,
+      "compression_ratio": 0.9999020211866729,
+      "compression_percentage": -0.009798841411567949,
+      "processing_time_ms": 0.3750324249267578,
+      "speed_mb_s": 1531.1176096630643
+    },
+    "best_method": "zstd",
+    "best_ratio": 1.0786671443926907
+  },
+  "position_embeddings": {
+    "gzip": {
+      "original_size": 602112,
+      "compressed_size": 559284,
+      "compression_ratio": 1.0765764799279078,
+      "compression_percentage": 7.112962372448983,
+      "processing_time_ms": 23.74434471130371,
+      "speed_mb_s": 24.18339006536735
+    },
+    "zlib": {
+      "original_size": 602112,
+      "compressed_size": 559272,
+      "compression_ratio": 1.0765995794532892,
+      "compression_percentage": 7.11495535714286,
+      "processing_time_ms": 20.691871643066406,
+      "speed_mb_s": 27.750933308752362
+    },
+    "zstd": {
+      "original_size": 602112,
+      "compressed_size": 558108,
+      "compression_ratio": 1.0788449547399428,
+      "compression_percentage": 7.308274872448983,
+      "processing_time_ms": 0.8502006530761719,
+      "speed_mb_s": 675.3920358945597
+    },
+    "lz4": {
+      "original_size": 602112,
+      "compressed_size": 602171,
+      "compression_ratio": 0.9999020211866729,
+      "compression_percentage": -0.009798841411567949,
+      "processing_time_ms": 0.39196014404296875,
+      "speed_mb_s": 1464.992700729927
+    },
+    "best_method": "zstd",
+    "best_ratio": 1.0788449547399428
+  },
+  "sparse_weights": {
+    "gzip": {
+      "original_size": 1000000,
+      "compressed_size": 252515,
+      "compression_ratio": 3.9601607825277707,
+      "compression_percentage": 74.74849999999999,
+      "processing_time_ms": 186.39111518859863,
+      "speed_mb_s": 5.116522402053772
+    },
+    "zlib": {
+      "original_size": 1000000,
+      "compressed_size": 256437,
+      "compression_ratio": 3.8995932724216864,
+      "compression_percentage": 74.3563,
+      "processing_time_ms": 23.830652236938477,
+      "speed_mb_s": 40.018808840154875
+    },
+    "zstd": {
+      "original_size": 1000000,
+      "compressed_size": 264397,
+      "compression_ratio": 3.782191174635113,
+      "compression_percentage": 73.5603,
+      "processing_time_ms": 3.5810470581054688,
+      "speed_mb_s": 266.31158455392807
+    },
+    "lz4": {
+      "original_size": 1000000,
+      "compressed_size": 333465,
+      "compression_ratio": 2.9988154678901835,
+      "compression_percentage": 66.6535,
+      "processing_time_ms": 1.4393329620361328,
+      "speed_mb_s": 662.5807520291536
+    },
+    "best_method": "gzip",
+    "best_ratio": 3.9601607825277707
+  },
+  "token_embeddings": {
+    "gzip": {
+      "original_size": 154389504,
+      "compressed_size": 143191384,
+      "compression_ratio": 1.0782038673500076,
+      "compression_percentage": 7.2531614584369635,
+      "processing_time_ms": 5599.271535873413,
+      "speed_mb_s": 26.295796469983646
+    },
+    "zlib": {
+      "original_size": 154389504,
+      "compressed_size": 143191372,
+      "compression_ratio": 1.0782039577077311,
+      "compression_percentage": 7.253169230986067,
+      "processing_time_ms": 5583.378076553345,
+      "speed_mb_s": 26.370649214281855
+    },
+    "zstd": {
+      "original_size": 154389504,
+      "compressed_size": 142885380,
+      "compression_ratio": 1.08051295380955,
+      "compression_percentage": 7.451364051276443,
+      "processing_time_ms": 163.7442111968994,
+      "speed_mb_s": 899.190900314942
+    },
+    "lz4": {
+      "original_size": 154389504,
+      "compressed_size": 154398947,
+      "compression_ratio": 0.9999388402564688,
+      "compression_percentage": -0.006116348427420704,
+      "processing_time_ms": 93.85848045349121,
+      "speed_mb_s": 1568.71604969632
+    },
+    "best_method": "zstd",
+    "best_ratio": 1.08051295380955
+  }
+}

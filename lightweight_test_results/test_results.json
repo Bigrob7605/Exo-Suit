@@ -1,0 +1,77 @@
+{
+  "basic_compression": {
+    "success": true,
+    "success_rate": 1.0,
+    "successful_methods": 4,
+    "total_methods": 4,
+    "test_duration_seconds": 0.02895379066467285,
+    "memory_used_mb": 2.11328125,
+    "compression_results": {
+      "gzip": {
+        "original_size": 1048576,
+        "compressed_size": 21037,
+        "compression_ratio": 49.8443694443124,
+        "compression_percentage": 97.99375534057617,
+        "processing_time_ms": 10.143041610717773,
+        "speed_mb_s": 98.58975624662106
+      },
+      "zlib": {
+        "original_size": 1048576,
+        "compressed_size": 22457,
+        "compression_ratio": 46.69261254842588,
+        "compression_percentage": 97.85833358764648,
+        "processing_time_ms": 6.99305534362793,
+        "speed_mb_s": 142.99901128498857
+      },
+      "zstd": {
+        "original_size": 1048576,
+        "compressed_size": 11295,
+        "compression_ratio": 92.83541389995574,
+        "compression_percentage": 98.92282485961914,
+        "processing_time_ms": 0.5953311920166016,
+        "speed_mb_s": 1679.73728474169
+      },
+      "lz4": {
+        "original_size": 1048576,
+        "compressed_size": 109701,
+        "compression_ratio": 9.558490806829473,
+        "compression_percentage": 89.5380973815918,
+        "processing_time_ms": 0.9007453918457031,
+        "speed_mb_s": 1110.1916357861303
+      }
+    },
+    "test_data_size_mb": 1.0
+  },
+  "system_health": {
+    "healthy": false,
+    "checks": {
+      "memory": {
+        "total_gb": 63.635684967041016,
+        "available_gb": 41.632789611816406,
+        "percent_used": 34.6,
+        "healthy": true
+      },
+      "disk": {
+        "error": "argument 1 (impossible<bad format char>)",
+        "healthy": false
+      },
+      "cpu": {
+        "usage_percent": 37.5,
+        "healthy": true
+      }
+    },
+    "timestamp": "2025-08-18 19:38:06"
+  },
+  "memory_efficiency": {
+    "efficient": true,
+    "peak_memory_mb": 0.296875,
+    "average_memory_mb": 0.03125,
+    "total_memory_used_mb": 10.1953125,
+    "max_allowed_mb": 100.0,
+    "test_duration_seconds": 0.16835379600524902,
+    "methods_tested": [
+      "gzip",
+      "zlib"
+    ]
+  }
+}

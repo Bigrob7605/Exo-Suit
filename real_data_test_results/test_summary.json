@@ -1,0 +1,10 @@
+{
+  "total_tensors": 85,
+  "total_original_size_bytes": 621999840,
+  "total_original_size_mb": 593.1852722167969,
+  "total_compressed_size_bytes": 575140251,
+  "total_compressed_size_mb": 548.496485710144,
+  "overall_compression_ratio": 1.0814750644186786,
+  "overall_compression_percentage": 7.5336979186361175,
+  "test_timestamp": "2025-08-18 19:43:28"
+}

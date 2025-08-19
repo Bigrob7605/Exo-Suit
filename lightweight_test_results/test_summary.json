@@ -1,0 +1,8 @@
+{
+  "total_tests": 3,
+  "successful_tests": 2,
+  "system_info": {
+    "error": "argument 1 (impossible<bad format char>)"
+  },
+  "timestamp": "2025-08-18 19:38:06"
+}

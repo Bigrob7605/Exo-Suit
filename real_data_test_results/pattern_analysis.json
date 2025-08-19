@@ -1,0 +1,1130 @@
+{
+  "attention_patterns": {
+    "shape": [
+      256,
+      256
+    ],
+    "dtype": "float32",
+    "size_bytes": 262144,
+    "size_mb": 0.25,
+    "mean": 1.3549292816605885e-05,
+    "std": 0.002103478880599141,
+    "sparsity": 0.0,
+    "diagonal_mean": 0.0001090045552700758,
+    "diagonal_std": 0.010643445886671543
+  },
+  "classifier.bias": {
+    "shape": [
+      1000
+    ],
+    "dtype": "float32",
+    "size_bytes": 4000,
+    "size_mb": 0.003814697265625,
+    "mean": 0.0,
+    "std": 0.0,
+    "min": 0.0,
+    "max": 0.0,
+    "unique_count": 1,
+    "repetition_ratio": 1000.0
+  },
+  "classifier.weight": {
+    "shape": [
+      1000,
+      768
+    ],
+    "dtype": "float32",
+    "size_bytes": 3072000,
+    "size_mb": 2.9296875,
+    "mean": 2.448702434776351e-05,
+    "std": 0.03364885225892067,
+    "sparsity": 0.0
+  },
+  "class_token": {
+    "shape": [
+      1,
+      768
+    ],
+    "dtype": "float32",
+    "size_bytes": 3072,
+    "size_mb": 0.0029296875,
+    "mean": -0.00020597806724254042,
+    "std": 0.024518555030226707,
+    "sparsity": 0.0
+  },
+  "embedding_layer": {
+    "shape": [
+      10000,
+      512
+    ],
+    "dtype": "float32",
+    "size_bytes": 20480000,
+    "size_mb": 19.53125,
+    "mean": 0.00012472896196413785,
+    "std": 0.01418161392211914,
+    "sparsity": 0.0
+  },
+  "final_layer_norm.bias": {
+    "shape": [
+      768
+    ],
+    "dtype": "float32",
+    "size_bytes": 3072,
+    "size_mb": 0.0029296875,
+    "mean": 0.0,
+    "std": 0.0,
+    "min": 0.0,
+    "max": 0.0,
+    "unique_count": 1,
+    "repetition_ratio": 768.0
+  },
+  "final_layer_norm.weight": {
+    "shape": [
+      768
+    ],
+    "dtype": "float32",
+    "size_bytes": 3072,
+    "size_mb": 0.0029296875,
+    "mean": 1.0,
+    "std": 0.0,
+    "min": 1.0,
+    "max": 1.0,
+    "unique_count": 1,
+    "repetition_ratio": 768.0
+  },
+  "large_matrix": {
+    "shape": [
+      1000,
+      1000
+    ],
+    "dtype": "float32",
+    "size_bytes": 4000000,
+    "size_mb": 3.814697265625,
+    "mean": 1.5469251593458466e-05,
+    "std": 0.020007357001304626,
+    "sparsity": 0.0,
+    "diagonal_mean": 0.0003127593081444502,
+    "diagonal_std": 0.018769927322864532
+  },
+  "layer_0.attention.k_proj": {
+    "shape": [
+      768,
+      768
+    ],
+    "dtype": "float32",
+    "size_bytes": 2359296,
+    "size_mb": 2.25,
+    "mean": 1.5460551594514982e-06,
+    "std": 0.0036254103761166334,
+    "sparsity": 0.0,
+    "diagonal_mean": 0.00020774071163032204,
+    "diagonal_std": 0.010428700596094131
+  },
+  "layer_0.attention.out_proj": {
+    "shape": [
+      768,
+      768
+    ],
+    "dtype": "float32",
+    "size_bytes": 2359296,
+    "size_mb": 2.25,
+    "mean": -2.963840643133153e-06,
+    "std": 0.0036296159960329533,
+    "sparsity": 0.0,
+    "diagonal_mean": -0.0003751478798221797,
+    "diagonal_std": 0.010524152778089046
+  },
+  "layer_0.attention.q_proj": {
+    "shape": [
+      768,
+      768
+    ],
+    "dtype": "float32",
+    "size_bytes": 2359296,
+    "size_mb": 2.25,
+    "mean": 6.4455084611836355e-06,
+    "std": 0.00362584856338799,
+    "sparsity": 0.0,
+    "diagonal_mean": -0.00027526402845978737,
+    "diagonal_std": 0.011142483912408352
+  },
+  "layer_0.attention.v_proj": {
+    "shape": [
+      768,
+      768
+    ],
+    "dtype": "float32",
+    "size_bytes": 2359296,
+    "size_mb": 2.25,
+    "mean": -3.437033456066274e-06,
+    "std": 0.0036190866958349943,
+    "sparsity": 0.0,
+    "diagonal_mean": 0.000794370484072715,
+    "diagonal_std": 0.010363154113292694
+  },
+  "layer_0.ffn.down_proj": {
+    "shape": [
+      3072,
+      768
+    ],
+    "dtype": "float32",
+    "size_bytes": 9437184,
+    "size_mb": 9.0,
+    "mean": 1.4554864719684701e-05,
+    "std": 0.022832561284303665,
+    "sparsity": 0.0
+  },
+  "layer_0.ffn.up_proj": {
+    "shape": [
+      768,
+      3072
+    ],
+    "dtype": "float32",
+    "size_bytes": 9437184,
+    "size_mb": 9.0,
+    "mean": -4.792165782419033e-06,
+    "std": 0.02282814122736454,
+    "sparsity": 0.0
+  },
+  "layer_0.ln1.bias": {
+    "shape": [
+      768
+    ],
+    "dtype": "float32",
+    "size_bytes": 3072,
+    "size_mb": 0.0029296875,
+    "mean": 0.0,
+    "std": 0.0,
+    "min": 0.0,
+    "max": 0.0,
+    "unique_count": 1,
+    "repetition_ratio": 768.0
+  },
+  "layer_0.ln1.weight": {
+    "shape": [
+      768
+    ],
+    "dtype": "float32",
+    "size_bytes": 3072,
+    "size_mb": 0.0029296875,
+    "mean": 1.0,
+    "std": 0.0,
+    "min": 1.0,
+    "max": 1.0,
+    "unique_count": 1,
+    "repetition_ratio": 768.0
+  },
+  "layer_0.ln2.bias": {
+    "shape": [
+      768
+    ],
+    "dtype": "float32",
+    "size_bytes": 3072,
+    "size_mb": 0.0029296875,
+    "mean": 0.0,
+    "std": 0.0,
+    "min": 0.0,
+    "max": 0.0,
+    "unique_count": 1,
+    "repetition_ratio": 768.0
+  },
+  "layer_0.ln2.weight": {
+    "shape": [
+      768
+    ],
+    "dtype": "float32",
+    "size_bytes": 3072,
+    "size_mb": 0.0029296875,
+    "mean": 1.0,
+    "std": 0.0,
+    "min": 1.0,
+    "max": 1.0,
+    "unique_count": 1,
+    "repetition_ratio": 768.0
+  },
+  "layer_0.mlp.fc1": {
+    "shape": [
+      768,
+      3072
+    ],
+    "dtype": "float32",
+    "size_bytes": 9437184,
+    "size_mb": 9.0,
+    "mean": -1.776430508471094e-05,
+    "std": 0.02283417247235775,
+    "sparsity": 0.0
+  },
+  "layer_0.mlp.fc2": {
+    "shape": [
+      3072,
+      768
+    ],
+    "dtype": "float32",
+    "size_bytes": 9437184,
+    "size_mb": 9.0,
+    "mean": 1.0936507806036389e-06,
+    "std": 0.022815432399511337,
+    "sparsity": 0.0
+  },
+  "layer_1.attention.k_proj": {
+    "shape": [
+      768,
+      768
+    ],
+    "dtype": "float32",
+    "size_bytes": 2359296,
+    "size_mb": 2.25,
+    "mean": 5.810553602714208e-07,
+    "std": 0.003628268139436841,
+    "sparsity": 0.0,
+    "diagonal_mean": -0.0011374851455911994,
+    "diagonal_std": 0.010939422063529491
+  },
+  "layer_1.attention.out_proj": {
+    "shape": [
+      768,
+      768
+    ],
+    "dtype": "float32",
+    "size_bytes": 2359296,
+    "size_mb": 2.25,
+    "mean": 7.733349775662646e-06,
+    "std": 0.0036277060862630606,
+    "sparsity": 0.0,
+    "diagonal_mean": -0.0003791178169194609,
+    "diagonal_std": 0.010650538839399815
+  },
+  "layer_1.attention.q_proj": {
+    "shape": [
+      768,
+      768
+    ],
+    "dtype": "float32",
+    "size_bytes": 2359296,
+    "size_mb": 2.25,
+    "mean": 8.347311450052075e-06,
+    "std": 0.003626009216532111,
+    "sparsity": 0.0,
+    "diagonal_mean": 6.260677037062123e-05,
+    "diagonal_std": 0.011110112071037292
+  },
+  "layer_1.attention.v_proj": {
+    "shape": [
+      768,
+      768
+    ],
+    "dtype": "float32",
+    "size_bytes": 2359296,
+    "size_mb": 2.25,
+    "mean": 9.302115358877927e-06,
+    "std": 0.0036289175041019917,
+    "sparsity": 0.0,
+    "diagonal_mean": 0.00010031170677393675,
+    "diagonal_std": 0.010397657752037048
+  },
+  "layer_1.ffn.down_proj": {
+    "shape": [
+      3072,
+      768
+    ],
+    "dtype": "float32",
+    "size_bytes": 9437184,
+    "size_mb": 9.0,
+    "mean": 7.102513336576521e-06,
+    "std": 0.02282647043466568,
+    "sparsity": 0.0
+  },
+  "layer_1.ffn.up_proj": {
+    "shape": [
+      768,
+      3072
+    ],
+    "dtype": "float32",
+    "size_bytes": 9437184,
+    "size_mb": 9.0,
+    "mean": 2.9968163289595395e-05,
+    "std": 0.02283623069524765,
+    "sparsity": 0.0
+  },
+  "layer_1.ln1.bias": {
+    "shape": [
+      768
+    ],
+    "dtype": "float32",
+    "size_bytes": 3072,
+    "size_mb": 0.0029296875,
+    "mean": 0.0,
+    "std": 0.0,
+    "min": 0.0,
+    "max": 0.0,
+    "unique_count": 1,
+    "repetition_ratio": 768.0
+  },
+  "layer_1.ln1.weight": {
+    "shape": [
+      768
+    ],
+    "dtype": "float32",
+    "size_bytes": 3072,
+    "size_mb": 0.0029296875,
+    "mean": 1.0,
+    "std": 0.0,
+    "min": 1.0,
+    "max": 1.0,
+    "unique_count": 1,
+    "repetition_ratio": 768.0
+  },
+  "layer_1.ln2.bias": {
+    "shape": [
+      768
+    ],
+    "dtype": "float32",
+    "size_bytes": 3072,
+    "size_mb": 0.0029296875,
+    "mean": 0.0,
+    "std": 0.0,
+    "min": 0.0,
+    "max": 0.0,
+    "unique_count": 1,
+    "repetition_ratio": 768.0
+  },
+  "layer_1.ln2.weight": {
+    "shape": [
+      768
+    ],
+    "dtype": "float32",
+    "size_bytes": 3072,
+    "size_mb": 0.0029296875,
+    "mean": 1.0,
+    "std": 0.0,
+    "min": 1.0,
+    "max": 1.0,
+    "unique_count": 1,
+    "repetition_ratio": 768.0
+  },
+  "layer_1.mlp.fc1": {
+    "shape": [
+      768,
+      3072
+    ],
+    "dtype": "float32",
+    "size_bytes": 9437184,
+    "size_mb": 9.0,
+    "mean": 1.1726903721864801e-05,
+    "std": 0.02281123213469982,
+    "sparsity": 0.0
+  },
+  "layer_1.mlp.fc2": {
+    "shape": [
+      3072,
+      768
+    ],
+    "dtype": "float32",
+    "size_bytes": 9437184,
+    "size_mb": 9.0,
+    "mean": 8.846109267324209e-07,
+    "std": 0.022825609892606735,
+    "sparsity": 0.0
+  },
+  "layer_2.attention.k_proj": {
+    "shape": [
+      768,
+      768
+    ],
+    "dtype": "float32",
+    "size_bytes": 2359296,
+    "size_mb": 2.25,
+    "mean": -6.24361837253673e-06,
+    "std": 0.003628617851063609,
+    "sparsity": 0.0,
+    "diagonal_mean": 0.00015138534945435822,
+    "diagonal_std": 0.010929996147751808
+  },
+  "layer_2.attention.out_proj": {
+    "shape": [
+      768,
+      768
+    ],
+    "dtype": "float32",
+    "size_bytes": 2359296,
+    "size_mb": 2.25,
+    "mean": 5.165537686480093e-07,
+    "std": 0.003626344259828329,
+    "sparsity": 0.0,
+    "diagonal_mean": 0.0001533917966298759,
+    "diagonal_std": 0.010511551052331924
+  },
+  "layer_2.attention.q_proj": {
+    "shape": [
+      768,
+      768
+    ],
+    "dtype": "float32",
+    "size_bytes": 2359296,
+    "size_mb": 2.25,
+    "mean": 1.6901790331758093e-06,
+    "std": 0.003627748927101493,
+    "sparsity": 0.0,
+    "diagonal_mean": 0.0003267214633524418,
+    "diagonal_std": 0.010773842222988605
+  },
+  "layer_2.attention.v_proj": {
+    "shape": [
+      768,
+      768
+    ],
+    "dtype": "float32",
+    "size_bytes": 2359296,
+    "size_mb": 2.25,
+    "mean": 1.0921846751443809e-06,
+    "std": 0.0036223798524588346,
+    "sparsity": 0.0,
+    "diagonal_mean": -0.0001409372198395431,
+    "diagonal_std": 0.010519355535507202
+  },
+  "layer_2.ffn.down_proj": {
+    "shape": [
+      3072,
+      768
+    ],
+    "dtype": "float32",
+    "size_bytes": 9437184,
+    "size_mb": 9.0,
+    "mean": -2.9598291803267784e-05,
+    "std": 0.02281438559293747,
+    "sparsity": 0.0
+  },
+  "layer_2.ffn.up_proj": {
+    "shape": [
+      768,
+      3072
+    ],
+    "dtype": "float32",
+    "size_bytes": 9437184,
+    "size_mb": 9.0,
+    "mean": -2.0687265589458548e-07,
+    "std": 0.02281077764928341,
+    "sparsity": 0.0
+  },
+  "layer_2.ln1.bias": {
+    "shape": [
+      768
+    ],
+    "dtype": "float32",
+    "size_bytes": 3072,
+    "size_mb": 0.0029296875,
+    "mean": 0.0,
+    "std": 0.0,
+    "min": 0.0,
+    "max": 0.0,
+    "unique_count": 1,
+    "repetition_ratio": 768.0
+  },
+  "layer_2.ln1.weight": {
+    "shape": [
+      768
+    ],
+    "dtype": "float32",
+    "size_bytes": 3072,
+    "size_mb": 0.0029296875,
+    "mean": 1.0,
+    "std": 0.0,
+    "min": 1.0,
+    "max": 1.0,
+    "unique_count": 1,
+    "repetition_ratio": 768.0
+  },
+  "layer_2.ln2.bias": {
+    "shape": [
+      768
+    ],
+    "dtype": "float32",
+    "size_bytes": 3072,
+    "size_mb": 0.0029296875,
+    "mean": 0.0,
+    "std": 0.0,
+    "min": 0.0,
+    "max": 0.0,
+    "unique_count": 1,
+    "repetition_ratio": 768.0
+  },
+  "layer_2.ln2.weight": {
+    "shape": [
+      768
+    ],
+    "dtype": "float32",
+    "size_bytes": 3072,
+    "size_mb": 0.0029296875,
+    "mean": 1.0,
+    "std": 0.0,
+    "min": 1.0,
+    "max": 1.0,
+    "unique_count": 1,
+    "repetition_ratio": 768.0
+  },
+  "layer_2.mlp.fc1": {
+    "shape": [
+      768,
+      3072
+    ],
+    "dtype": "float32",
+    "size_bytes": 9437184,
+    "size_mb": 9.0,
+    "mean": -6.597903848160058e-06,
+    "std": 0.022822421044111252,
+    "sparsity": 0.0
+  },
+  "layer_2.mlp.fc2": {
+    "shape": [
+      3072,
+      768
+    ],
+    "dtype": "float32",
+    "size_bytes": 9437184,
+    "size_mb": 9.0,
+    "mean": -2.189398765040096e-05,
+    "std": 0.022831756621599197,
+    "sparsity": 0.0
+  },
+  "layer_3.attention.k_proj": {
+    "shape": [
+      768,
+      768
+    ],
+    "dtype": "float32",
+    "size_bytes": 2359296,
+    "size_mb": 2.25,
+    "mean": -1.2820752999687102e-05,
+    "std": 0.0036249009426683187,
+    "sparsity": 0.0,
+    "diagonal_mean": 0.0001481111830798909,
+    "diagonal_std": 0.010865106247365475
+  },
+  "layer_3.attention.out_proj": {
+    "shape": [
+      768,
+      768
+    ],
+    "dtype": "float32",
+    "size_bytes": 2359296,
+    "size_mb": 2.25,
+    "mean": 6.0758939071092755e-06,
+    "std": 0.003626863704994321,
+    "sparsity": 0.0,
+    "diagonal_mean": 3.0015778975212015e-05,
+    "diagonal_std": 0.010397069156169891
+  },
+  "layer_3.attention.q_proj": {
+    "shape": [
+      768,
+      768
+    ],
+    "dtype": "float32",
+    "size_bytes": 2359296,
+    "size_mb": 2.25,
+    "mean": -1.014199460769305e-05,
+    "std": 0.0036303778178989887,
+    "sparsity": 0.0,
+    "diagonal_mean": -0.00013233568461146206,
+    "diagonal_std": 0.010942315682768822
+  },
+  "layer_3.attention.v_proj": {
+    "shape": [
+      768,
+      768
+    ],
+    "dtype": "float32",
+    "size_bytes": 2359296,
+    "size_mb": 2.25,
+    "mean": 6.63180298943189e-06,
+    "std": 0.0036234071012586355,
+    "sparsity": 0.0,
+    "diagonal_mean": -0.0003179931954946369,
+    "diagonal_std": 0.010767608880996704
+  },
+  "layer_3.ffn.down_proj": {
+    "shape": [
+      3072,
+      768
+    ],
+    "dtype": "float32",
+    "size_bytes": 9437184,
+    "size_mb": 9.0,
+    "mean": 1.4856546840746887e-05,
+    "std": 0.0228243637830019,
+    "sparsity": 0.0
+  },
+  "layer_3.ffn.up_proj": {
+    "shape": [
+      768,
+      3072
+    ],
+    "dtype": "float32",
+    "size_bytes": 9437184,
+    "size_mb": 9.0,
+    "mean": -5.2938071348762605e-06,
+    "std": 0.022799499332904816,
+    "sparsity": 0.0
+  },
+  "layer_3.ln1.bias": {
+    "shape": [
+      768
+    ],
+    "dtype": "float32",
+    "size_bytes": 3072,
+    "size_mb": 0.0029296875,
+    "mean": 0.0,
+    "std": 0.0,
+    "min": 0.0,
+    "max": 0.0,
+    "unique_count": 1,
+    "repetition_ratio": 768.0
+  },
+  "layer_3.ln1.weight": {
+    "shape": [
+      768
+    ],
+    "dtype": "float32",
+    "size_bytes": 3072,
+    "size_mb": 0.0029296875,
+    "mean": 1.0,
+    "std": 0.0,
+    "min": 1.0,
+    "max": 1.0,
+    "unique_count": 1,
+    "repetition_ratio": 768.0
+  },
+  "layer_3.ln2.bias": {
+    "shape": [
+      768
+    ],
+    "dtype": "float32",
+    "size_bytes": 3072,
+    "size_mb": 0.0029296875,
+    "mean": 0.0,
+    "std": 0.0,
+    "min": 0.0,
+    "max": 0.0,
+    "unique_count": 1,
+    "repetition_ratio": 768.0
+  },
+  "layer_3.ln2.weight": {
+    "shape": [
+      768
+    ],
+    "dtype": "float32",
+    "size_bytes": 3072,
+    "size_mb": 0.0029296875,
+    "mean": 1.0,
+    "std": 0.0,
+    "min": 1.0,
+    "max": 1.0,
+    "unique_count": 1,
+    "repetition_ratio": 768.0
+  },
+  "layer_3.mlp.fc1": {
+    "shape": [
+      768,
+      3072
+    ],
+    "dtype": "float32",
+    "size_bytes": 9437184,
+    "size_mb": 9.0,
+    "mean": -2.366189619351644e-05,
+    "std": 0.02283629961311817,
+    "sparsity": 0.0
+  },
+  "layer_3.mlp.fc2": {
+    "shape": [
+      3072,
+      768
+    ],
+    "dtype": "float32",
+    "size_bytes": 9437184,
+    "size_mb": 9.0,
+    "mean": 1.2197143405501265e-05,
+    "std": 0.022818483412265778,
+    "sparsity": 0.0
+  },
+  "layer_4.attention.k_proj": {
+    "shape": [
+      768,
+      768
+    ],
+    "dtype": "float32",
+    "size_bytes": 2359296,
+    "size_mb": 2.25,
+    "mean": -4.229124897392467e-06,
+    "std": 0.0036264476366341114,
+    "sparsity": 0.0,
+    "diagonal_mean": -1.0923482477664948e-05,
+    "diagonal_std": 0.010955620557069778
+  },
+  "layer_4.attention.out_proj": {
+    "shape": [
+      768,
+      768
+    ],
+    "dtype": "float32",
+    "size_bytes": 2359296,
+    "size_mb": 2.25,
+    "mean": -4.088516561751021e-06,
+    "std": 0.00362407136708498,
+    "sparsity": 0.0,
+    "diagonal_mean": -0.0002520065463613719,
+    "diagonal_std": 0.010319351218640804
+  },
+  "layer_4.attention.q_proj": {
+    "shape": [
+      768,
+      768
+    ],
+    "dtype": "float32",
+    "size_bytes": 2359296,
+    "size_mb": 2.25,
+    "mean": 3.4052345654345118e-06,
+    "std": 0.0036319345235824585,
+    "sparsity": 0.0,
+    "diagonal_mean": -0.00010625387221807614,
+    "diagonal_std": 0.010966822504997253
+  },
+  "layer_4.attention.v_proj": {
+    "shape": [
+      768,
+      768
+    ],
+    "dtype": "float32",
+    "size_bytes": 2359296,
+    "size_mb": 2.25,
+    "mean": 5.247301260169479e-07,
+    "std": 0.0036276488099247217,
+    "sparsity": 0.0,
+    "diagonal_mean": 1.987969153560698e-05,
+    "diagonal_std": 0.010832218453288078
+  },
+  "layer_4.ffn.down_proj": {
+    "shape": [
+      3072,
+      768
+    ],
+    "dtype": "float32",
+    "size_bytes": 9437184,
+    "size_mb": 9.0,
+    "mean": 7.400390131806489e-06,
+    "std": 0.02283717319369316,
+    "sparsity": 0.0
+  },
+  "layer_4.ffn.up_proj": {
+    "shape": [
+      768,
+      3072
+    ],
+    "dtype": "float32",
+    "size_bytes": 9437184,
+    "size_mb": 9.0,
+    "mean": 1.191377577924868e-06,
+    "std": 0.022818593308329582,
+    "sparsity": 0.0
+  },
+  "layer_4.ln1.bias": {
+    "shape": [
+      768
+    ],
+    "dtype": "float32",
+    "size_bytes": 3072,
+    "size_mb": 0.0029296875,
+    "mean": 0.0,
+    "std": 0.0,
+    "min": 0.0,
+    "max": 0.0,
+    "unique_count": 1,
+    "repetition_ratio": 768.0
+  },
+  "layer_4.ln1.weight": {
+    "shape": [
+      768
+    ],
+    "dtype": "float32",
+    "size_bytes": 3072,
+    "size_mb": 0.0029296875,
+    "mean": 1.0,
+    "std": 0.0,
+    "min": 1.0,
+    "max": 1.0,
+    "unique_count": 1,
+    "repetition_ratio": 768.0
+  },
+  "layer_4.ln2.bias": {
+    "shape": [
+      768
+    ],
+    "dtype": "float32",
+    "size_bytes": 3072,
+    "size_mb": 0.0029296875,
+    "mean": 0.0,
+    "std": 0.0,
+    "min": 0.0,
+    "max": 0.0,
+    "unique_count": 1,
+    "repetition_ratio": 768.0
+  },
+  "layer_4.ln2.weight": {
+    "shape": [
+      768
+    ],
+    "dtype": "float32",
+    "size_bytes": 3072,
+    "size_mb": 0.0029296875,
+    "mean": 1.0,
+    "std": 0.0,
+    "min": 1.0,
+    "max": 1.0,
+    "unique_count": 1,
+    "repetition_ratio": 768.0
+  },
+  "layer_4.mlp.fc1": {
+    "shape": [
+      768,
+      3072
+    ],
+    "dtype": "float32",
+    "size_bytes": 9437184,
+    "size_mb": 9.0,
+    "mean": 8.600928595114965e-06,
+    "std": 0.022835513576865196,
+    "sparsity": 0.0
+  },
+  "layer_4.mlp.fc2": {
+    "shape": [
+      3072,
+      768
+    ],
+    "dtype": "float32",
+    "size_bytes": 9437184,
+    "size_mb": 9.0,
+    "mean": -1.7357533579343e-05,
+    "std": 0.022810449823737144,
+    "sparsity": 0.0
+  },
+  "layer_5.attention.k_proj": {
+    "shape": [
+      768,
+      768
+    ],
+    "dtype": "float32",
+    "size_bytes": 2359296,
+    "size_mb": 2.25,
+    "mean": 1.7218403627339285e-06,
+    "std": 0.003632950596511364,
+    "sparsity": 0.0,
+    "diagonal_mean": 2.7084732209914364e-05,
+    "diagonal_std": 0.010912331752479076
+  },
+  "layer_5.attention.out_proj": {
+    "shape": [
+      768,
+      768
+    ],
+    "dtype": "float32",
+    "size_bytes": 2359296,
+    "size_mb": 2.25,
+    "mean": -3.4265790418430697e-06,
+    "std": 0.003622094402089715,
+    "sparsity": 0.0,
+    "diagonal_mean": -0.0007313169189728796,
+    "diagonal_std": 0.010549124330282211
+  },
+  "layer_5.attention.q_proj": {
+    "shape": [
+      768,
+      768
+    ],
+    "dtype": "float32",
+    "size_bytes": 2359296,
+    "size_mb": 2.25,
+    "mean": 3.221483666493441e-07,
+    "std": 0.0036215016152709723,
+    "sparsity": 0.0,
+    "diagonal_mean": -0.0005478348466567695,
+    "diagonal_std": 0.010641170665621758
+  },
+  "layer_5.attention.v_proj": {
+    "shape": [
+      768,
+      768
+    ],
+    "dtype": "float32",
+    "size_bytes": 2359296,
+    "size_mb": 2.25,
+    "mean": 6.511930678243516e-06,
+    "std": 0.003624593373388052,
+    "sparsity": 0.0,
+    "diagonal_mean": 0.0002063463325612247,
+    "diagonal_std": 0.010567246936261654
+  },
+  "layer_5.ffn.down_proj": {
+    "shape": [
+      3072,
+      768
+    ],
+    "dtype": "float32",
+    "size_bytes": 9437184,
+    "size_mb": 9.0,
+    "mean": -2.2854106873637647e-07,
+    "std": 0.022833380848169327,
+    "sparsity": 0.0
+  },
+  "layer_5.ffn.up_proj": {
+    "shape": [
+      768,
+      3072
+    ],
+    "dtype": "float32",
+    "size_bytes": 9437184,
+    "size_mb": 9.0,
+    "mean": 1.797249205992557e-05,
+    "std": 0.02280237339437008,
+    "sparsity": 0.0
+  },
+  "layer_5.ln1.bias": {
+    "shape": [
+      768
+    ],
+    "dtype": "float32",
+    "size_bytes": 3072,
+    "size_mb": 0.0029296875,
+    "mean": 0.0,
+    "std": 0.0,
+    "min": 0.0,
+    "max": 0.0,
+    "unique_count": 1,
+    "repetition_ratio": 768.0
+  },
+  "layer_5.ln1.weight": {
+    "shape": [
+      768
+    ],
+    "dtype": "float32",
+    "size_bytes": 3072,
+    "size_mb": 0.0029296875,
+    "mean": 1.0,
+    "std": 0.0,
+    "min": 1.0,
+    "max": 1.0,
+    "unique_count": 1,
+    "repetition_ratio": 768.0
+  },
+  "layer_5.ln2.bias": {
+    "shape": [
+      768
+    ],
+    "dtype": "float32",
+    "size_bytes": 3072,
+    "size_mb": 0.0029296875,
+    "mean": 0.0,
+    "std": 0.0,
+    "min": 0.0,
+    "max": 0.0,
+    "unique_count": 1,
+    "repetition_ratio": 768.0
+  },
+  "layer_5.ln2.weight": {
+    "shape": [
+      768
+    ],
+    "dtype": "float32",
+    "size_bytes": 3072,
+    "size_mb": 0.0029296875,
+    "mean": 1.0,
+    "std": 0.0,
+    "min": 1.0,
+    "max": 1.0,
+    "unique_count": 1,
+    "repetition_ratio": 768.0
+  },
+  "layer_5.mlp.fc1": {
+    "shape": [
+      768,
+      3072
+    ],
+    "dtype": "float32",
+    "size_bytes": 9437184,
+    "size_mb": 9.0,
+    "mean": 7.781990461808164e-06,
+    "std": 0.022803865373134613,
+    "sparsity": 0.0
+  },
+  "layer_5.mlp.fc2": {
+    "shape": [
+      3072,
+      768
+    ],
+    "dtype": "float32",
+    "size_bytes": 9437184,
+    "size_mb": 9.0,
+    "mean": -1.3680989468412008e-05,
+    "std": 0.022823359817266464,
+    "sparsity": 0.0
+  },
+  "lm_head.weight": {
+    "shape": [
+      50257,
+      768
+    ],
+    "dtype": "float32",
+    "size_bytes": 154389504,
+    "size_mb": 147.2373046875,
+    "mean": -1.1880417787324404e-06,
+    "std": 0.006260442081838846,
+    "sparsity": 0.0
+  },
+  "patch_embeddings": {
+    "shape": [
+      196,
+      768
+    ],
+    "dtype": "float32",
+    "size_bytes": 602112,
+    "size_mb": 0.57421875,
+    "mean": 6.692678289255127e-05,
+    "std": 0.024726957082748413,
+    "sparsity": 0.0
+  },
+  "position_embeddings": {
+    "shape": [
+      196,
+      768
+    ],
+    "dtype": "float32",
+    "size_bytes": 602112,
+    "size_mb": 0.57421875,
+    "mean": 7.364782504737377e-05,
+    "std": 0.024786807596683502,
+    "sparsity": 0.0
+  },
+  "sparse_weights": {
+    "shape": [
+      500,
+      500
+    ],
+    "dtype": "float32",
+    "size_bytes": 1000000,
+    "size_mb": 0.95367431640625,
+    "mean": 1.356221764581278e-05,
+    "std": 0.008950795978307724,
+    "sparsity": 0.8,
+    "diagonal_mean": 7.180988905020058e-05,
+    "diagonal_std": 0.009070098400115967
+  },
+  "token_embeddings": {
+    "shape": [
+      50257,
+      768
+    ],
+    "dtype": "float32",
+    "size_bytes": 154389504,
+    "size_mb": 147.2373046875,
+    "mean": 0.000190950115211308,
+    "std": 0.010371747426688671,
+    "sparsity": 0.0
+  }
+}

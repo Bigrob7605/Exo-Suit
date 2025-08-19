@@ -1,0 +1,354 @@
+{
+  "tensor_0_1000": {
+    "pattern_analysis": {
+      "shape": [
+        1000
+      ],
+      "dtype": "float32",
+      "size_bytes": 4000,
+      "unique_values": 1000,
+      "zero_ratio": 0.0,
+      "sparsity": 0.0,
+      "entropy": 82.66805880571894,
+      "pattern_score": 0.0008003003003003004
+    },
+    "compression_results": {
+      "gzip": {
+        "original_size": 4000,
+        "compressed_size": 3767,
+        "compression_ratio": 1.0618529333687283,
+        "compression_percentage": 5.825000000000003,
+        "processing_time_ms": 1.0373592376708984,
+        "speed_mb_s": 3.6773155596414617
+      },
+      "zlib": {
+        "original_size": 4000,
+        "compressed_size": 3755,
+        "compression_ratio": 1.0652463382157125,
+        "compression_percentage": 6.125000000000003,
+        "processing_time_ms": 0.09036064147949219,
+        "speed_mb_s": 42.21635883905013
+      },
+      "zstd": {
+        "original_size": 4000,
+        "compressed_size": 3752,
+        "compression_ratio": 1.0660980810234542,
+        "compression_percentage": 6.2000000000000055,
+        "processing_time_ms": 1.355886459350586,
+        "speed_mb_s": 2.813434148056972
+      },
+      "lz4": {
+        "original_size": 4000,
+        "compressed_size": 4023,
+        "compression_ratio": 0.9942828734775043,
+        "compression_percentage": -0.5749999999999922,
+        "processing_time_ms": 1.7726421356201172,
+        "speed_mb_s": 2.151983860121049
+      }
+    },
+    "tensor_info": {
+      "shape": [
+        1000
+      ],
+      "dtype": "float32",
+      "size_bytes": 4000,
+      "size_mb": 0.003814697265625
+    }
+  },
+  "tensor_1_100x100": {
+    "pattern_analysis": {
+      "shape": [
+        100,
+        100
+      ],
+      "dtype": "float32",
+      "size_bytes": 40000,
+      "unique_values": 10000,
+      "zero_ratio": 0.0,
+      "sparsity": 0.0,
+      "entropy": 71.14340560331352,
+      "pattern_score": 8.000300030003e-05
+    },
+    "compression_results": {
+      "gzip": {
+        "original_size": 40000,
+        "compressed_size": 37089,
+        "compression_ratio": 1.0784868829032868,
+        "compression_percentage": 7.277500000000003,
+        "processing_time_ms": 0.9455680847167969,
+        "speed_mb_s": 40.34291477559254
+      },
+      "zlib": {
+        "original_size": 40000,
+        "compressed_size": 37077,
+        "compression_ratio": 1.078835936025029,
+        "compression_percentage": 7.3075,
+        "processing_time_ms": 0.8971691131591797,
+        "speed_mb_s": 42.51926654265214
+      },
+      "zstd": {
+        "original_size": 40000,
+        "compressed_size": 36983,
+        "compression_ratio": 1.081578022334586,
+        "compression_percentage": 7.542499999999997,
+        "processing_time_ms": 0.1316070556640625,
+        "speed_mb_s": 289.8550724637681
+      },
+      "lz4": {
+        "original_size": 40000,
+        "compressed_size": 40023,
+        "compression_ratio": 0.9994253304349999,
+        "compression_percentage": -0.05749999999999922,
+        "processing_time_ms": 0.008821487426757812,
+        "speed_mb_s": 4324.324324324324
+      }
+    },
+    "tensor_info": {
+      "shape": [
+        100,
+        100
+      ],
+      "dtype": "float32",
+      "size_bytes": 40000,
+      "size_mb": 0.03814697265625
+    }
+  },
+  "tensor_2_50x50x50": {
+    "pattern_analysis": {
+      "shape": [
+        50,
+        50,
+        50
+      ],
+      "dtype": "float32",
+      "size_bytes": 500000,
+      "unique_values": 124901,
+      "zero_ratio": 0.0,
+      "sparsity": 0.0,
+      "entropy": 60.297489910999815,
+      "pattern_score": 1.2800038400307202e-05
+    },
+    "compression_results": {
+      "gzip": {
+        "original_size": 500000,
+        "compressed_size": 463115,
+        "compression_ratio": 1.0796454444360473,
+        "compression_percentage": 7.377000000000001,
+        "processing_time_ms": 19.00482177734375,
+        "speed_mb_s": 25.09032517061421
+      },
+      "zlib": {
+        "original_size": 500000,
+        "compressed_size": 463103,
+        "compression_ratio": 1.0796734203838023,
+        "compression_percentage": 7.379400000000002,
+        "processing_time_ms": 16.68381690979004,
+        "speed_mb_s": 28.580819412092545
+      },
+      "zstd": {
+        "original_size": 500000,
+        "compressed_size": 462081,
+        "compression_ratio": 1.0820613701926718,
+        "compression_percentage": 7.5837999999999965,
+        "processing_time_ms": 0.6396770477294922,
+        "speed_mb_s": 745.4342154304883
+      },
+      "lz4": {
+        "original_size": 500000,
+        "compressed_size": 500051,
+        "compression_ratio": 0.9998980104029389,
+        "compression_percentage": -0.01020000000000465,
+        "processing_time_ms": 0.17070770263671875,
+        "speed_mb_s": 2793.2960893854747
+      }
+    },
+    "tensor_info": {
+      "shape": [
+        50,
+        50,
+        50
+      ],
+      "dtype": "float32",
+      "size_bytes": 500000,
+      "size_mb": 0.476837158203125
+    }
+  },
+  "tensor_3_20x20x20x20": {
+    "pattern_analysis": {
+      "shape": [
+        20,
+        20,
+        20,
+        20
+      ],
+      "dtype": "float32",
+      "size_bytes": 640000,
+      "unique_values": 159803,
+      "zero_ratio": 0.0,
+      "sparsity": 0.0,
+      "entropy": 60.99628577934049,
+      "pattern_score": 1.0000023437646486e-05
+    },
+    "compression_results": {
+      "gzip": {
+        "original_size": 640000,
+        "compressed_size": 592757,
+        "compression_ratio": 1.0797004506062349,
+        "compression_percentage": 7.381718749999999,
+        "processing_time_ms": 24.18041229248047,
+        "speed_mb_s": 25.241569710116348
+      },
+      "zlib": {
+        "original_size": 640000,
+        "compressed_size": 592745,
+        "compression_ratio": 1.079722308918675,
+        "compression_percentage": 7.383593749999995,
+        "processing_time_ms": 21.67654037475586,
+        "speed_mb_s": 28.157240590422138
+      },
+      "zstd": {
+        "original_size": 640000,
+        "compressed_size": 591437,
+        "compression_ratio": 1.0821101824877375,
+        "compression_percentage": 7.587968749999996,
+        "processing_time_ms": 0.7781982421875,
+        "speed_mb_s": 784.3137254901961
+      },
+      "lz4": {
+        "original_size": 640000,
+        "compressed_size": 640059,
+        "compression_ratio": 0.9999078209977518,
+        "compression_percentage": -0.009218749999995168,
+        "processing_time_ms": 0.2567768096923828,
+        "speed_mb_s": 2376.9730733519036
+      }
+    },
+    "tensor_info": {
+      "shape": [
+        20,
+        20,
+        20,
+        20
+      ],
+      "dtype": "float32",
+      "size_bytes": 640000,
+      "size_mb": 0.6103515625
+    }
+  },
+  "tensor_4_1000x100": {
+    "pattern_analysis": {
+      "shape": [
+        1000,
+        100
+      ],
+      "dtype": "float32",
+      "size_bytes": 400000,
+      "unique_values": 99936,
+      "zero_ratio": 0.0,
+      "sparsity": 0.0,
+      "entropy": 56.56072745323807,
+      "pattern_score": 1.6000060000600008e-05
+    },
+    "compression_results": {
+      "gzip": {
+        "original_size": 400000,
+        "compressed_size": 370540,
+        "compression_ratio": 1.0795055864414098,
+        "compression_percentage": 7.364999999999999,
+        "processing_time_ms": 16.284704208374023,
+        "speed_mb_s": 23.425032575435925
+      },
+      "zlib": {
+        "original_size": 400000,
+        "compressed_size": 370528,
+        "compression_ratio": 1.0795405475429658,
+        "compression_percentage": 7.367999999999997,
+        "processing_time_ms": 13.783693313598633,
+        "speed_mb_s": 27.67543632055074
+      },
+      "zstd": {
+        "original_size": 400000,
+        "compressed_size": 369722,
+        "compression_ratio": 1.0818939635726303,
+        "compression_percentage": 7.569499999999996,
+        "processing_time_ms": 0.5505084991455078,
+        "speed_mb_s": 692.940666955392
+      },
+      "lz4": {
+        "original_size": 400000,
+        "compressed_size": 400047,
+        "compression_ratio": 0.999882513804628,
+        "compression_percentage": -0.011749999999999261,
+        "processing_time_ms": 0.17523765563964844,
+        "speed_mb_s": 2176.8707482993195
+      }
+    },
+    "tensor_info": {
+      "shape": [
+        1000,
+        100
+      ],
+      "dtype": "float32",
+      "size_bytes": 400000,
+      "size_mb": 0.3814697265625
+    }
+  },
+  "tensor_5_100x1000": {
+    "pattern_analysis": {
+      "shape": [
+        100,
+        1000
+      ],
+      "dtype": "float32",
+      "size_bytes": 400000,
+      "unique_values": 99929,
+      "zero_ratio": 0.0,
+      "sparsity": 0.0,
+      "entropy": 59.718012052124976,
+      "pattern_score": 2.1000060000600007e-05
+    },
+    "compression_results": {
+      "gzip": {
+        "original_size": 400000,
+        "compressed_size": 370499,
+        "compression_ratio": 1.0796250462214474,
+        "compression_percentage": 7.375249999999999,
+        "processing_time_ms": 13.734579086303711,
+        "speed_mb_s": 27.77440241637301
+      },
+      "zlib": {
+        "original_size": 400000,
+        "compressed_size": 370487,
+        "compression_ratio": 1.0796600150612572,
+        "compression_percentage": 7.378249999999998,
+        "processing_time_ms": 16.739606857299805,
+        "speed_mb_s": 22.788451951973336
+      },
+      "zstd": {
+        "original_size": 400000,
+        "compressed_size": 369696,
+        "compression_ratio": 1.0819700510689865,
+        "compression_percentage": 7.576000000000005,
+        "processing_time_ms": 0.6649494171142578,
+        "speed_mb_s": 573.6823234134098
+      },
+      "lz4": {
+        "original_size": 400000,
+        "compressed_size": 400047,
+        "compression_ratio": 0.999882513804628,
+        "compression_percentage": -0.011749999999999261,
+        "processing_time_ms": 0.16069412231445312,
+        "speed_mb_s": 2373.887240356083
+      }
+    },
+    "tensor_info": {
+      "shape": [
+        100,
+        1000
+      ],
+      "dtype": "float32",
+      "size_bytes": 400000,
+      "size_mb": 0.3814697265625
+    }
+  }
+}
