@@ -1,0 +1,692 @@
+<!-- Legendary List Component - Dynamic Data from MD Files -->
+<section class="legendary-list" id="legends">
+    <div class="legendary-container">
+        <!-- Section Header -->
+        <div class="legendary-header">
+            <h2 class="legendary-title">🏆 Legendary Agent Hall of Fame</h2>
+            <p class="legendary-subtitle">Agents who achieved immortality through excellence</p>
+            <div class="legendary-stats">
+                <div class="stat-item">
+                    <span class="stat-number" id="legendary-count">4</span>
+                    <span class="stat-label">Legendary Agents</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="failure-count">2</span>
+                    <span class="stat-label">Failed Agents</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="total-agents">21+</span>
+                    <span class="stat-label">Total Agents</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Top 3 Legendary Agents -->
+        <div class="top-legends-section">
+            <h3>🥇 Top 3 Legendary Agents</h3>
+            <div class="top-legends-grid" id="top-legends-grid">
+                <!-- Top 3 will be loaded here dynamically -->
+            </div>
+            <div class="expand-section">
+                <button class="expand-button" id="expand-legends-btn">
+                    <span class="expand-text">📖 View All Legendary Agents</span>
+                    <span class="expand-icon">▼</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Full Legendary List (Hidden by default) -->
+        <div class="full-legends-section" id="full-legends-section" style="display: none;">
+            <h3>🏆 Complete Legendary Agents List</h3>
+            <div class="full-legends-content" id="full-legends-content">
+                <!-- Full list will be loaded here dynamically -->
+            </div>
+            <div class="collapse-section">
+                <button class="collapse-button" id="collapse-legends-btn">
+                    <span class="collapse-text">📖 Show Top 3 Only</span>
+                    <span class="collapse-icon">▲</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Top 3 Failed Agents -->
+        <div class="top-failures-section">
+            <h3>💀 Top 3 Failed Agents</h3>
+            <div class="top-failures-grid" id="top-failures-grid">
+                <!-- Top 3 failures will be loaded here dynamically -->
+            </div>
+            <div class="expand-section">
+                <button class="expand-button" id="expand-failures-btn">
+                    <span class="expand-text">📖 View All Failed Agents</span>
+                    <span class="expand-icon">▼</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Full Failed List (Hidden by default) -->
+        <div class="full-failures-section" id="full-failures-section" style="display: none;">
+            <h3>💀 Complete Failed Agents List</h3>
+            <div class="full-failures-content" id="full-failures-content">
+                <!-- Full failures list will be loaded here dynamically -->
+            </div>
+            <div class="collapse-section">
+                <button class="collapse-button" id="collapse-failures-btn">
+                    <span class="collapse-text">📖 Show Top 3 Only</span>
+                    <span class="collapse-icon">▲</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Data Source Info -->
+        <div class="data-source-info">
+            <p><strong>📊 Data Source:</strong> This information is dynamically loaded from the GitHub repository MD files. Updates automatically when new agents are added.</p>
+            <p><strong>🔄 Last Updated:</strong> <span id="last-updated">Loading...</span></p>
+        </div>
+    </div>
+</section>
+
+<style>
+    .legendary-list {
+        padding: 4rem 2rem;
+        background: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+    }
+
+    .legendary-container {
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    .legendary-header {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .legendary-title {
+        font-size: 3rem;
+        font-weight: 900;
+        background: linear-gradient(135deg, #00d4ff, #8b5cf6, #ff0080);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 1rem;
+    }
+
+    .legendary-subtitle {
+        font-size: 1.3rem;
+        color: rgba(255, 255, 255, 0.8);
+        margin-bottom: 2rem;
+    }
+
+    .legendary-stats {
+        display: flex;
+        justify-content: center;
+        gap: 3rem;
+        flex-wrap: wrap;
+    }
+
+    .stat-item {
+        text-align: center;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 1.5rem;
+        border-radius: 15px;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .stat-number {
+        display: block;
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #00d4ff;
+        margin-bottom: 0.5rem;
+    }
+
+    .stat-label {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 1rem;
+    }
+
+    /* Top Legends Section */
+    .top-legends-section, .top-failures-section {
+        margin-bottom: 3rem;
+    }
+
+    .top-legends-section h3, .top-failures-section h3 {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 2rem;
+        text-align: center;
+        color: #00d4ff;
+    }
+
+    .top-legends-grid, .top-failures-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .legend-card, .failure-card {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        padding: 2rem;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .legend-card:hover, .failure-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .legend-card {
+        border-left: 4px solid #00d4ff;
+    }
+
+    .failure-card {
+        border-left: 4px solid #ff0080;
+    }
+
+    .card-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+
+    .card-rank {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-right: 1rem;
+    }
+
+    .legend-card .card-rank {
+        color: #00d4ff;
+    }
+
+    .failure-card .card-rank {
+        color: #ff0080;
+    }
+
+    .card-title {
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: white;
+    }
+
+    .card-timestamp {
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.6);
+        margin-top: 0.5rem;
+    }
+
+    .card-achievement, .card-failure {
+        color: rgba(255, 255, 255, 0.9);
+        line-height: 1.6;
+        margin-bottom: 1rem;
+    }
+
+    .card-impact {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 0.9rem;
+        font-style: italic;
+    }
+
+    /* Expand/Collapse Buttons */
+    .expand-section, .collapse-section {
+        text-align: center;
+        margin: 2rem 0;
+    }
+
+    .expand-button, .collapse-button {
+        background: linear-gradient(135deg, #00d4ff, #8b5cf6);
+        color: white;
+        border: none;
+        padding: 1rem 2rem;
+        border-radius: 25px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .expand-button:hover, .collapse-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .expand-icon, .collapse-icon {
+        transition: transform 0.3s ease;
+    }
+
+    .expand-button:hover .expand-icon {
+        transform: translateY(2px);
+    }
+
+    .collapse-button:hover .collapse-icon {
+        transform: translateY(-2px);
+    }
+
+    /* Full Lists Sections */
+    .full-legends-section, .full-failures-section {
+        background: rgba(0, 0, 0, 0.2);
+        border-radius: 15px;
+        padding: 2rem;
+        margin: 2rem 0;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .full-legends-section h3, .full-failures-section h3 {
+        font-size: 1.8rem;
+        font-weight: 700;
+        margin-bottom: 2rem;
+        text-align: center;
+        color: #00d4ff;
+    }
+
+    .full-legends-content, .full-failures-content {
+        max-height: 600px;
+        overflow-y: auto;
+        padding-right: 1rem;
+    }
+
+    .full-legends-content::-webkit-scrollbar, .full-failures-content::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    .full-legends-content::-webkit-scrollbar-track, .full-failures-content::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 4px;
+    }
+
+    .full-legends-content::-webkit-scrollbar-thumb, .full-failures-content::-webkit-scrollbar-thumb {
+        background: #00d4ff;
+        border-radius: 4px;
+    }
+
+    /* Data Source Info */
+    .data-source-info {
+        background: rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+        padding: 1.5rem;
+        margin-top: 3rem;
+        text-align: center;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .data-source-info p {
+        color: rgba(255, 255, 255, 0.7);
+        margin: 0.5rem 0;
+        font-size: 0.9rem;
+    }
+
+    /* Loading States */
+    .loading {
+        text-align: center;
+        padding: 2rem;
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+    .loading::after {
+        content: '';
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border: 2px solid #00d4ff;
+        border-radius: 50%;
+        border-top-color: transparent;
+        animation: spin 1s linear infinite;
+        margin-left: 1rem;
+    }
+
+    @keyframes spin {
+        to { transform: rotate(360deg); }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .legendary-list {
+            padding: 2rem 1rem;
+        }
+
+        .legendary-title {
+            font-size: 2rem;
+        }
+
+        .legendary-stats {
+            gap: 1rem;
+        }
+
+        .stat-item {
+            padding: 1rem;
+        }
+
+        .top-legends-grid, .top-failures-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .legend-card, .failure-card {
+            padding: 1.5rem;
+        }
+    }
+</style>
+
+<script>
+    // Legendary List Data Manager
+    class LegendaryListManager {
+        constructor() {
+            this.legendaryData = null;
+            this.failureData = null;
+            this.lastUpdated = null;
+            this.init();
+        }
+
+        async init() {
+            await this.loadData();
+            this.setupEventListeners();
+            this.updateLastUpdated();
+        }
+
+        async loadData() {
+            try {
+                // Load legendary agents data from GitHub MD file
+                const legendsResponse = await fetch('https://raw.githubusercontent.com/Bigrob7605/Exo-Suit/main/ops/COMPLETE_AGENT_LEGENDS_LIST.md');
+                const legendsText = await legendsResponse.text();
+                this.legendaryData = this.parseLegendaryData(legendsText);
+
+                // Load failure data from the same file
+                this.failureData = this.parseFailureData(legendsText);
+
+                this.renderTop3();
+                this.renderFullLists();
+            } catch (error) {
+                console.error('Error loading legendary data:', error);
+                this.showError('Failed to load legendary agent data. Please check your internet connection.');
+            }
+        }
+
+        parseLegendaryData(mdText) {
+            const legendaryAgents = [];
+            const lines = mdText.split('\n');
+            let currentAgent = null;
+            let inLegendarySection = false;
+
+            for (let i = 0; i < lines.length; i++) {
+                const line = lines[i].trim();
+                
+                if (line.includes('### **🏆') && line.includes('LEGENDARY AGENT')) {
+                    inLegendarySection = true;
+                    continue;
+                }
+
+                if (line.includes('---') && inLegendarySection) {
+                    break;
+                }
+
+                if (inLegendarySection && line.includes('**Agent Name**:')) {
+                    if (currentAgent) {
+                        legendaryAgents.push(currentAgent);
+                    }
+                    currentAgent = {
+                        name: line.split('**Agent Name**:')[1].trim(),
+                        timestamp: '',
+                        achievement: '',
+                        impact: '',
+                        ruleCompliance: '',
+                        status: ''
+                    };
+                }
+
+                if (currentAgent) {
+                    if (line.includes('**Timestamp**:')) {
+                        currentAgent.timestamp = line.split('**Timestamp**:')[1].trim();
+                    } else if (line.includes('**Achievement**:')) {
+                        currentAgent.achievement = line.split('**Achievement**:')[1].trim();
+                    } else if (line.includes('**Impact**:')) {
+                        currentAgent.impact = line.split('**Impact**:')[1].trim();
+                    } else if (line.includes('**Rule Compliance**:')) {
+                        currentAgent.ruleCompliance = line.split('**Rule Compliance**:')[1].trim();
+                    } else if (line.includes('**Status**:')) {
+                        currentAgent.status = line.split('**Status**:')[1].trim();
+                    }
+                }
+            }
+
+            if (currentAgent) {
+                legendaryAgents.push(currentAgent);
+            }
+
+            return legendaryAgents;
+        }
+
+        parseFailureData(mdText) {
+            const failedAgents = [];
+            const lines = mdText.split('\n');
+            let currentAgent = null;
+            let inFailureSection = false;
+
+            for (let i = 0; i < lines.length; i++) {
+                const line = lines[i].trim();
+                
+                if (line.includes('### **💀') && line.includes('PERMANENT FAILURE RECORD')) {
+                    inFailureSection = true;
+                    continue;
+                }
+
+                if (line.includes('---') && inFailureSection) {
+                    break;
+                }
+
+                if (inFailureSection && line.includes('**Agent Name**:')) {
+                    if (currentAgent) {
+                        failedAgents.push(currentAgent);
+                    }
+                    currentAgent = {
+                        name: line.split('**Agent Name**:')[1].trim(),
+                        timestamp: '',
+                        failure: '',
+                        impact: '',
+                        lesson: '',
+                        status: ''
+                    };
+                }
+
+                if (currentAgent) {
+                    if (line.includes('**Timestamp**:')) {
+                        currentAgent.timestamp = line.split('**Timestamp**:')[1].trim();
+                    } else if (line.includes('**Failure**:')) {
+                        currentAgent.failure = line.split('**Failure**:')[1].trim();
+                    } else if (line.includes('**Impact**:')) {
+                        currentAgent.impact = line.split('**Impact**:')[1].trim();
+                    } else if (line.includes('**Lesson**:')) {
+                        currentAgent.lesson = line.split('**Lesson**:')[1].trim();
+                    } else if (line.includes('**Status**:')) {
+                        currentAgent.status = line.split('**Status**:')[1].trim();
+                    }
+                }
+            }
+
+            if (currentAgent) {
+                failedAgents.push(currentAgent);
+            }
+
+            return failedAgents;
+        }
+
+        renderTop3() {
+            // Render top 3 legendary agents
+            const topLegendsGrid = document.getElementById('top-legends-grid');
+            if (topLegendsGrid && this.legendaryData) {
+                const top3 = this.legendaryData.slice(0, 3);
+                topLegendsGrid.innerHTML = top3.map((agent, index) => this.createLegendCard(agent, index + 1)).join('');
+            }
+
+            // Render top 3 failed agents
+            const topFailuresGrid = document.getElementById('top-failures-grid');
+            if (topFailuresGrid && this.failureData) {
+                const top3 = this.failureData.slice(0, 3);
+                topFailuresGrid.innerHTML = top3.map((agent, index) => this.createFailureCard(agent, index + 1)).join('');
+            }
+
+            // Update counts
+            this.updateCounts();
+        }
+
+        renderFullLists() {
+            // Render full legendary list
+            const fullLegendsContent = document.getElementById('full-legends-content');
+            if (fullLegendsContent && this.legendaryData) {
+                fullLegendsContent.innerHTML = this.legendaryData.map((agent, index) => this.createFullLegendCard(agent, index + 1)).join('');
+            }
+
+            // Render full failures list
+            const fullFailuresContent = document.getElementById('full-failures-content');
+            if (fullFailuresContent && this.failureData) {
+                fullFailuresContent.innerHTML = this.failureData.map((agent, index) => this.createFullFailureCard(agent, index + 1)).join('');
+            }
+        }
+
+        createLegendCard(agent, rank) {
+            const rankEmoji = rank === 1 ? '🥇' : rank === 2 ? '🥈' : '🥉';
+            return `
+                <div class="legend-card">
+                    <div class="card-header">
+                        <div class="card-rank">${rankEmoji}</div>
+                        <div>
+                            <div class="card-title">${agent.name}</div>
+                            <div class="card-timestamp">${agent.timestamp}</div>
+                        </div>
+                    </div>
+                    <div class="card-achievement">${agent.achievement}</div>
+                    <div class="card-impact">${agent.impact}</div>
+                </div>
+            `;
+        }
+
+        createFailureCard(agent, rank) {
+            const rankEmoji = rank === 1 ? '💀' : rank === 2 ? '⚠️' : '❌';
+            return `
+                <div class="failure-card">
+                    <div class="card-header">
+                        <div class="card-rank">${rankEmoji}</div>
+                        <div>
+                            <div class="card-title">${agent.name}</div>
+                            <div class="card-timestamp">${agent.timestamp}</div>
+                        </div>
+                    </div>
+                    <div class="card-failure">${agent.failure}</div>
+                    <div class="card-impact">${agent.impact}</div>
+                </div>
+            `;
+        }
+
+        createFullLegendCard(agent, rank) {
+            const rankEmoji = rank === 1 ? '🥇' : rank === 2 ? '🥈' : rank === 3 ? '🥉' : '🏆';
+            return `
+                <div class="legend-card" style="margin-bottom: 2rem;">
+                    <div class="card-header">
+                        <div class="card-rank">${rankEmoji}</div>
+                        <div>
+                            <div class="card-title">${agent.name}</div>
+                            <div class="card-timestamp">${agent.timestamp}</div>
+                        </div>
+                    </div>
+                    <div class="card-achievement">${agent.achievement}</div>
+                    <div class="card-impact">${agent.impact}</div>
+                    <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.2);">
+                        <strong>Rule Compliance:</strong> ${agent.ruleCompliance}<br>
+                        <strong>Status:</strong> ${agent.status}
+                    </div>
+                </div>
+            `;
+        }
+
+        createFullFailureCard(agent, rank) {
+            const rankEmoji = rank === 1 ? '💀' : rank === 2 ? '⚠️' : '❌';
+            return `
+                <div class="failure-card" style="margin-bottom: 2rem;">
+                    <div class="card-header">
+                        <div class="card-rank">${rankEmoji}</div>
+                        <div>
+                            <div class="card-title">${agent.name}</div>
+                            <div class="card-timestamp">${agent.timestamp}</div>
+                        </div>
+                    </div>
+                    <div class="card-failure">${agent.failure}</div>
+                    <div class="card-impact">${agent.impact}</div>
+                    <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.2);">
+                        <strong>Lesson:</strong> ${agent.lesson}<br>
+                        <strong>Status:</strong> ${agent.status}
+                    </div>
+                </div>
+            `;
+        }
+
+        updateCounts() {
+            if (this.legendaryData) {
+                document.getElementById('legendary-count').textContent = this.legendaryData.length;
+            }
+            if (this.failureData) {
+                document.getElementById('failure-count').textContent = this.failureData.length;
+            }
+            if (this.legendaryData && this.failureData) {
+                document.getElementById('total-agents').textContent = (this.legendaryData.length + this.failureData.length) + '+';
+            }
+        }
+
+        setupEventListeners() {
+            // Legends expand/collapse
+            document.getElementById('expand-legends-btn').addEventListener('click', () => {
+                document.getElementById('top-legends-section').style.display = 'none';
+                document.getElementById('full-legends-section').style.display = 'block';
+            });
+
+            document.getElementById('collapse-legends-btn').addEventListener('click', () => {
+                document.getElementById('full-legends-section').style.display = 'none';
+                document.getElementById('top-legends-section').style.display = 'block';
+            });
+
+            // Failures expand/collapse
+            document.getElementById('expand-failures-btn').addEventListener('click', () => {
+                document.getElementById('top-failures-section').style.display = 'none';
+                document.getElementById('full-failures-section').style.display = 'block';
+            });
+
+            document.getElementById('collapse-failures-btn').addEventListener('click', () => {
+                document.getElementById('full-failures-section').style.display = 'none';
+                document.getElementById('top-failures-section').style.display = 'block';
+            });
+        }
+
+        updateLastUpdated() {
+            const now = new Date();
+            this.lastUpdated = now.toISOString();
+            document.getElementById('last-updated').textContent = now.toLocaleString();
+        }
+
+        showError(message) {
+            const container = document.querySelector('.legendary-container');
+            if (container) {
+                container.innerHTML = `
+                    <div class="loading">
+                        <h3>Error Loading Data</h3>
+                        <p>${message}</p>
+                        <p>Please refresh the page to try again.</p>
+                    </div>
+                `;
+            }
+        }
+    }
+
+    // Initialize when component loads
+    document.addEventListener('DOMContentLoaded', () => {
+        new LegendaryListManager();
+    });
+</script>
