@@ -1,13 +1,18 @@
-# GitHub Pages Configuration - serve site assets
-# Keep minimal settings; .nojekyll will bypass Jekyll
+# GitHub Pages Configuration - Static Site
+# Minimal configuration for static HTML serving
 
 title: "Agent Exo-Suit V5.0"
-description: "Revolutionary AI Development Platform"
+description: "Enterprise AI Development Platform with MMH-RS Real Compression"
 url: "https://bigrob7605.github.io"
 baseurl: "/Exo-Suit"
 
+# Disable Jekyll processing
 plugins: []
 collections: {}
 defaults: []
 markdown: kramdown
 encoding: utf-8
+
+# Force static file serving
+exclude: []
+include: [".nojekyll"]

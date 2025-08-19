@@ -1,2 +1,2 @@
-# Do not process with Jekyll
-# Allows serving Markdown and assets directly from subfolders
+# This file tells GitHub Pages to serve static files directly
+# without Jekyll processing. Required for static HTML sites.
