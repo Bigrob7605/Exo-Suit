@@ -1,6 +1,6 @@
 ---
 name: 🐛 Bug Report
-about: Create a report to help us improve Exo-Suit V5.0
+about: Create a report to help us improve Agent Exo-Suit V5.0
 title: '[BUG] '
 labels: ['bug', 'needs-triage']
 assignees: ''
@@ -33,21 +33,19 @@ assignees: ''
 
 ---
 
-## 📱 **Environment Information**
+## 📸 **Screenshots**
 
-**Please complete the following information:**
-
-- **OS**: [e.g. Windows 11, macOS 14.0, Ubuntu 22.04]
-- **Browser**: [e.g. Chrome 120, Firefox 121, Safari 17]
-- **Exo-Suit Version**: [e.g. V5.0.1]
-- **Component**: [e.g. Performance Dashboard, Kai Integration]
-- **Python Version**: [e.g. 3.11.0] (if applicable)
+**If applicable, add screenshots to help explain your problem.**
 
 ---
 
-## 📸 **Screenshots/Videos**
+## 🖥️ **Environment Information**
 
-**If applicable, add screenshots or videos to help explain your problem.**
+- **OS**: [e.g. Windows 10, macOS 12.0, Ubuntu 20.04]
+- **Python Version**: [e.g. 3.8, 3.9, 3.10]
+- **Agent Exo-Suit Version**: [e.g. v0.5.0-alpha]
+- **GPU**: [e.g. RTX 4070, CPU only, etc.]
+- **RAM**: [e.g. 16GB, 32GB]
 
 ---
 
@@ -57,24 +55,19 @@ assignees: ''
 
 ---
 
-## 🔧 **Possible Solutions**
+## 🔧 **Possible Solution**
 
-**If you have suggestions on a fix for the bug, describe them here.**
-
----
-
-## 📊 **Impact Assessment**
-
-- **Severity**: [Critical/High/Medium/Low]
-- **Affected Users**: [All users/Specific users/Developers only]
-- **Workaround Available**: [Yes/No/Partial]
+**If you have suggestions on a fix for the bug, describe it here.**
 
 ---
 
-## 🏷️ **Labels**
+## 📝 **Checklist**
 
-**Please add relevant labels to help categorize this issue.**
+- [ ] I have searched existing issues for duplicates
+- [ ] I have provided all required information
+- [ ] I have tested on a clean environment
+- [ ] I have included relevant error messages/logs
 
 ---
 
-*This bug report template is part of Exo-Suit V5.0 - The AI system that survived its own apocalypse and got stronger.*
+**Thank you for helping improve Agent Exo-Suit V5.0! 🚀**

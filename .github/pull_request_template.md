@@ -1,124 +1,71 @@
-# 🔄 Pull Request
+# 🚀 Pull Request
 
 ## 📋 **Description**
 
-**A clear and concise description of what this PR accomplishes.**
+**Please include a summary of the change and which issue is fixed. Please also include relevant motivation and context.**
+
+Fixes # (issue)
 
 ---
 
-## 🔗 **Related Issue**
+## 🔧 **Type of Change**
 
-**Closes #[issue number]**
+**Please delete options that are not relevant.**
 
----
-
-## 🧪 **Type of Change**
-
-**Please delete options that are not relevant:**
-
-- [ ] **Bug fix** (non-breaking change which fixes an issue)
-- [ ] **New feature** (non-breaking change which adds functionality)
-- [ ] **Breaking change** (fix or feature that would cause existing functionality to not work as expected)
-- [ ] **Documentation update** (updates to documentation, README, etc.)
-- [ ] **Performance improvement** (code change that improves performance)
-- [ ] **Refactoring** (code change that neither fixes a bug nor adds a feature)
-- [ ] **Style change** (formatting, missing semi colons, etc; no logic change)
-- [ ] **Test addition** (adding missing tests or correcting existing tests)
+- [ ] 🐛 Bug fix (non-breaking change which fixes an issue)
+- [ ] ✨ New feature (non-breaking change which adds functionality)
+- [ ] 💥 Breaking change (fix or feature that would cause existing functionality to not work as expected)
+- [ ] 📚 Documentation update
+- [ ] 🎨 Style/formatting change
+- [ ] ♻️ Code refactoring (no functional changes)
+- [ ] ⚡ Performance improvement
+- [ ] ✅ Test addition or update
+- [ ] 🔧 CI/CD configuration change
 
 ---
 
-## 🎯 **What Changed**
+## 🧪 **How Has This Been Tested?**
 
-**Please describe the changes made:**
+**Please describe the tests that you ran to verify your changes. Provide instructions so we can reproduce. Please also list any relevant details for your test configuration.**
 
-- **Component**: [Which component was modified?]
-- **Functionality**: [What new functionality was added?]
-- **Files**: [List of files modified/added/deleted]
-
----
-
-## 🧪 **Testing**
-
-**Please describe the tests that you ran to verify your changes:**
-
-- [ ] **Unit tests**: [Description of unit tests run]
-- [ ] **Integration tests**: [Description of integration tests run]
-- [ ] **Performance tests**: [Description of performance tests run]
-- [ ] **Manual testing**: [Description of manual testing performed]
-
-**Test Results:**
-```
-[Paste test output here]
-```
+- [ ] Test A
+- [ ] Test B
 
 ---
 
-## 📸 **Screenshots/Videos**
+## 📸 **Screenshots (if applicable)**
 
-**If applicable, add screenshots or videos to demonstrate the changes.**
-
----
-
-## 📊 **Performance Impact**
-
-**Does this change affect performance? If so, please provide:**
-
-- **Before**: [Performance metrics before changes]
-- **After**: [Performance metrics after changes]
-- **Impact**: [Description of performance impact]
+**Add screenshots to help explain your changes.**
 
 ---
 
-## 🔒 **Security Considerations**
+## 📋 **Checklist**
 
-**Does this change introduce any security implications?**
+**Before submitting this PR, please make sure:**
 
-- [ ] **No security impact**
-- [ ] **Security improvement** (describe)
-- [ ] **Security consideration** (describe what needs attention)
-
----
-
-## 📚 **Documentation Updates**
-
-**Does this change require documentation updates?**
-
-- [ ] **No documentation changes needed**
-- [ ] **README updates** (describe)
-- [ ] **API documentation** (describe)
-- [ ] **Component documentation** (describe)
+- [ ] My code follows the style guidelines of this project
+- [ ] I have performed a self-review of my own code
+- [ ] I have commented my code, particularly in hard-to-understand areas
+- [ ] I have made corresponding changes to the documentation
+- [ ] My changes generate no new warnings
+- [ ] I have added tests that prove my fix is effective or that my feature works
+- [ ] New and existing unit tests pass locally with my changes
+- [ ] Any dependent changes have been merged and published in downstream modules
 
 ---
 
-## 🚀 **Deployment Notes**
-
-**Any special deployment considerations:**
-
-- [ ] **No special deployment requirements**
-- [ ] **Database migrations** (describe)
-- [ ] **Environment variables** (describe)
-- [ ] **Dependencies** (describe)
-
----
-
-## ✅ **Checklist**
-
-**Before submitting this PR, please ensure:**
-
-- [ ] **Code follows project style guidelines**
-- [ ] **Self-review completed**
-- [ ] **Code is commented where necessary**
-- [ ] **Corresponding documentation updated**
-- [ ] **Changes generate no new warnings**
-- [ ] **Tests added for new functionality**
-- [ ] **All tests pass locally**
-
----
-
-## 📝 **Additional Notes**
+## 📚 **Additional Notes**
 
 **Add any other context about the pull request here.**
 
 ---
 
-*This pull request template is part of Exo-Suit V5.0 - The AI system that survived its own apocalypse and got stronger.*
+## 🎯 **Related Issues**
+
+**Link any related issues here using the format:**
+- Related to #123
+- Closes #456
+
+---
+
+**Thank you for contributing to Agent Exo-Suit V5.0! 🚀**

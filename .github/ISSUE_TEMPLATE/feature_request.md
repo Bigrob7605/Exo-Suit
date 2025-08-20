@@ -1,96 +1,69 @@
 ---
-name: 🚀 Feature Request
-about: Suggest an idea for Exo-Suit V5.0
+name: ✨ Feature Request
+about: Suggest an idea for Agent Exo-Suit V5.0
 title: '[FEATURE] '
 labels: ['enhancement', 'needs-triage']
 assignees: ''
 ---
 
-## 🚀 **Feature Description**
-
-**A clear and concise description of the feature you'd like to see implemented.**
-
----
-
-## 🎯 **Problem Statement**
+## 🚀 **Feature Request**
 
 **Is your feature request related to a problem? Please describe.**
-**Ex: I'm always frustrated when [...]**
+A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
 
 ---
 
 ## 💡 **Proposed Solution**
 
-**A clear and concise description of what you want to happen.**
+**Describe the solution you'd like**
+A clear and concise description of what you want to happen.
 
 ---
 
 ## 🔄 **Alternative Solutions**
 
-**A clear and concise description of any alternative solutions or features you've considered.**
+**Describe alternatives you've considered**
+A clear and concise description of any alternative solutions or features you've considered.
 
 ---
 
-## 📊 **Use Case Scenarios**
+## 📊 **Use Case**
 
-**Describe specific scenarios where this feature would be useful:**
-
-1. **Scenario 1**: [Description]
-2. **Scenario 2**: [Description]
-3. **Scenario 3**: [Description]
+**Describe the use case for this feature**
+How would this feature be used? Who would benefit from it?
 
 ---
 
-## 🎨 **Design Considerations**
+## 🎯 **Impact**
 
-**If this feature involves UI/UX changes, please describe:**
-
-- **Visual elements**: [What should it look like?]
-- **User interaction**: [How should users interact with it?]
-- **Accessibility**: [Any accessibility considerations?]
-
----
-
-## 🔧 **Technical Requirements**
-
-**If this feature has technical requirements, please specify:**
-
-- **Performance impact**: [Expected performance characteristics]
-- **Dependencies**: [Any new dependencies required]
-- **Integration points**: [How it fits with existing components]
-- **Testing requirements**: [What tests should be added]
+**How important is this feature to you?**
+- [ ] **Critical** - Cannot work without this feature
+- [ ] **High** - Significantly improves workflow
+- [ ] **Medium** - Nice to have, improves experience
+- [ ] **Low** - Minor improvement
 
 ---
 
-## 📈 **Impact Assessment**
+## 🧪 **Implementation Ideas**
 
-- **User benefit**: [How many users would benefit?]
-- **Complexity**: [Low/Medium/High implementation complexity]
-- **Priority**: [Low/Medium/High priority for users]
-- **Maintenance**: [Ongoing maintenance requirements]
+**Do you have any ideas on how to implement this feature?**
+If you have technical suggestions or implementation ideas, please share them.
 
 ---
 
-## 🧪 **Acceptance Criteria**
-
-**List the criteria that must be met for this feature to be considered complete:**
-
-- [ ] **Criterion 1**: [Description]
-- [ ] **Criterion 2**: [Description]
-- [ ] **Criterion 3**: [Description]
-
----
-
-## 📚 **Additional Context**
+## 📋 **Additional Context**
 
 **Add any other context or screenshots about the feature request here.**
 
 ---
 
-## 🏷️ **Labels**
+## 📝 **Checklist**
 
-**Please add relevant labels to help categorize this feature request.**
+- [ ] I have searched existing issues for duplicates
+- [ ] I have provided a clear use case
+- [ ] I have considered alternative solutions
+- [ ] I have provided implementation suggestions if possible
 
 ---
 
-*This feature request template is part of Exo-Suit V5.0 - The AI system that survived its own apocalypse and got stronger.*
+**Thank you for helping improve Agent Exo-Suit V5.0! 🚀**
