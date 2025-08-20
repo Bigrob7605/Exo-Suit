@@ -475,11 +475,11 @@ class EnhancedNeuralEntanglementAI:
 
 def demonstrate_ai_tensor_optimization():
     """Demonstrate the enhanced AI tensor optimization capabilities"""
-    print("🚀 Enhanced Pattern251 AI Codec - AI Tensor Optimization Demo")
+    print("🚀 Enhanced Neural Entanglement AI Codec - AI Tensor Optimization Demo")
     print("=" * 70)
     
     # Initialize the enhanced codec
-    ai_codec = EnhancedPattern251AI()
+    ai_codec = EnhancedNeuralEntanglementAI()
     
     # Create sample AI tensors
     print("\n🧠 Creating sample AI tensors...")
@@ -537,7 +537,7 @@ def demonstrate_ai_tensor_optimization():
         print(f"   {key}: {value}")
     
     print("\n🎉 AI Tensor Optimization Demo Complete!")
-    print("   The Enhanced Pattern251 AI Codec is now operational!")
+    print("   The Enhanced Neural Entanglement AI Codec is now operational!")
 
 if __name__ == "__main__":
     demonstrate_ai_tensor_optimization()

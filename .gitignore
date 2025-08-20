@@ -1,10 +1,4 @@
-# Virtual Environments
-gpu_rag_env/
-rag_env/
-venv/
-env/
-.venv/
-.env/
+# Agent Exo-Suit V5.0 - Git Ignore File
 
 # Python
 __pycache__/
@@ -24,84 +18,402 @@ parts/
 sdist/
 var/
 wheels/
+share/python-wheels/
 *.egg-info/
 .installed.cfg
 *.egg
 MANIFEST
 
-# Large Data Files
-*.bin
-*.pkl
-*.h5
-*.hdf5
-*.faiss
-*.index
-*.vec
-*.model
-*.weights
-*.ckpt
-*.safetensors
+# PyInstaller
+*.manifest
+*.spec
 
-# Large Log and Scan Files (Excluded from Jekyll processing)
-emoji_sentinel_v4.log
-current_emoji_scan.txt
-current_emoji_scan.json
-current_emoji_status.txt
-current_emoji_status.json
-post_repair_emoji_scan.txt
-post_repair_emoji_scan.json
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
 
-# GPU Environment Files
-gpu_rag_env/
-gpu_rag_env/venv/
-gpu_rag_env/venv/Lib/
-gpu_rag_env/venv/Scripts/
-gpu_rag_env/venv/Include/
-gpu_rag_env/venv/share/
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
 
-# Legacy and Testing Data
-Cleanup - Testing Data/
-Testing_Tools/
-temp/
-logs/
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
 *.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
 
-# IDE and Editor Files
-.vscode/
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+.pybuilder/
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# poetry
+poetry.lock
+
+# pdm
+.pdm.toml
+
+# PEP 582
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pytype static type analyzer
+.pytype/
+
+# Cython debug symbols
+cython_debug/
+
+# PyCharm
 .idea/
+
+# VS Code
+.vscode/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
 *.swp
 *.swo
 *~
 
-# OS Files
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# macOS
 .DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Windows
 Thumbs.db
-
-# Git Submodules and Embedded Repos
-.sandboxes/
-ai-sbx-*/
-chaos_test_repos/
-
-# Large Model Files
-*.onnx
-*.tflite
-*.pb
-*.pth
-*.pt
-*.bin
-*.safetensors
-
-# Large Tensor Files (NumPy arrays)
-*.npy
-generated_tensors/
-tensor_cache/
-model_weights/
-
-# Cache and Temporary Files
-.cache/
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
 *.tmp
 *.temp
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
 
-# Testing Toolbox (Excluded from Repository)
-Universal Open Science Toolbox With Kai (The Real Test)/
-Universal Open Science Toolbox With Kai (For Testing ONLY - NO NOT PUSH TO REPO)/
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# Node.js (if using any JS components)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Rust (for MMH-RS components)
+target/
+**/*.rs.bk
+Cargo.lock
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
+
+# nyc test coverage
+.nyc_output
+
+# Grunt intermediate storage
+.grunt
+
+# Bower dependency directory
+bower_components
+
+# node-waf configuration
+.lock-wscript
+
+# Compiled binary addons
+build/Release
+
+# Dependency directories
+jspm_packages/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional stylelint cache
+.stylelintcache
+
+# Microbundle cache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# dotenv environment variable files
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
+
+# parcel-bundler cache
+.cache
+.parcel-cache
+
+# Next.js build output
+.next
+
+# Nuxt.js build / generate output
+.nuxt
+dist
+
+# Gatsby files
+.cache/
+public
+
+# Vuepress build output
+.vuepress/dist
+
+# Serverless directories
+.serverless/
+
+# FuseBox cache
+.fusebox/
+
+# DynamoDB Local files
+.dynamodb/
+
+# TernJS port file
+.tern-port
+
+# Stores VSCode versions used for testing VSCode extensions
+.vscode-test
+
+# yarn v2
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+# Project-specific
+*.mmh
+*.mmh_rs
+*.compressed
+*.decompressed
+*.validation
+*.benchmark
+*.performance
+*.test_results
+*.validation_results
+*.real_data_results
+*.tensor_results
+*.mmh_rs_results
+
+# Temporary files
+temp/
+tmp/
+cache/
+trash/
+backup_*/
+
+# Security and sensitive files
+*.key
+*.pem
+*.p12
+*.pfx
+*.crt
+*.csr
+*.pem
+*.env
+secrets/
+secrets.json
+config.json
+auth.json
+credentials.json
+
+# Large data files
+*.zip
+*.tar.gz
+*.rar
+*.7z
+*.iso
+*.bin
+*.exe
+*.dll
+*.so
+*.dylib
+*.a
+*.lib
+*.obj
+*.o
+
+# Generated files
+generated_*/
+*.generated
+*.auto
+*.tmp
+*.temp
+*.bak
+*.backup
+*.old
+*.orig
+*.rej
+*.swp
+*.swo
+*~
+
+# IDE and editor files
+.vscode/
+.idea/
+*.sublime-*
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Project-specific exclusions
+# Keep these important files
+!README.md
+!LICENSE
+!CONTRIBUTING.md
+!requirements.txt
+!setup.py
+!pyproject.toml
+!Cargo.toml
+!package.json
