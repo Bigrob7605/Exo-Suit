@@ -1,5 +1,6 @@
 # GitHub Pages Configuration - Static Site
 # Minimal configuration for static HTML serving
+# Last updated: 2025-08-20 - Triggering rebuild to resolve outdated status
 
 title: "Agent Exo-Suit V5.0"
 description: "Enterprise AI Development Platform with MMH-RS Real Compression"
