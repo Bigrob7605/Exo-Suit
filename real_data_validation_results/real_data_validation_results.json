@@ -1,0 +1,212 @@
+[
+  {
+    "test_name": "Advanced Self-Healing Test",
+    "file_name": "dickens",
+    "status": "ERROR",
+    "metrics": {
+      "execution_time": 0.0,
+      "memory_usage_mb": 0.0,
+      "cpu_usage_percent": 0.0,
+      "compression_ratio": 0.0,
+      "throughput_mbps": 0.0
+    },
+    "details": {},
+    "error_message": "No module named 'advanced_self_healing_system'",
+    "timestamp": "2025-08-19 19:03:00"
+  },
+  {
+    "test_name": "Advanced Self-Healing Test",
+    "file_name": "webster",
+    "status": "ERROR",
+    "metrics": {
+      "execution_time": 0.0,
+      "memory_usage_mb": 0.0,
+      "cpu_usage_percent": 0.0,
+      "compression_ratio": 0.0,
+      "throughput_mbps": 0.0
+    },
+    "details": {},
+    "error_message": "No module named 'advanced_self_healing_system'",
+    "timestamp": "2025-08-19 19:03:00"
+  },
+  {
+    "test_name": "AI Pattern Recognition Analysis",
+    "file_name": "dickens",
+    "status": "ERROR",
+    "metrics": {
+      "execution_time": 0.0,
+      "memory_usage_mb": 0.0,
+      "cpu_usage_percent": 0.0,
+      "compression_ratio": 0.0,
+      "throughput_mbps": 0.0
+    },
+    "details": {},
+    "error_message": "No module named 'enhanced_pattern251_ai'",
+    "timestamp": "2025-08-19 19:03:00"
+  },
+  {
+    "test_name": "AI Pattern Recognition Analysis",
+    "file_name": "mozilla",
+    "status": "ERROR",
+    "metrics": {
+      "execution_time": 0.0,
+      "memory_usage_mb": 0.0,
+      "cpu_usage_percent": 0.0,
+      "compression_ratio": 0.0,
+      "throughput_mbps": 0.0
+    },
+    "details": {},
+    "error_message": "No module named 'enhanced_pattern251_ai'",
+    "timestamp": "2025-08-19 19:03:00"
+  },
+  {
+    "test_name": "AI Pattern Recognition Analysis",
+    "file_name": "mr",
+    "status": "ERROR",
+    "metrics": {
+      "execution_time": 0.0,
+      "memory_usage_mb": 0.0,
+      "cpu_usage_percent": 0.0,
+      "compression_ratio": 0.0,
+      "throughput_mbps": 0.0
+    },
+    "details": {},
+    "error_message": "No module named 'enhanced_pattern251_ai'",
+    "timestamp": "2025-08-19 19:03:00"
+  },
+  {
+    "test_name": "AI Pattern Recognition Analysis",
+    "file_name": "nci",
+    "status": "ERROR",
+    "metrics": {
+      "execution_time": 0.0,
+      "memory_usage_mb": 0.0,
+      "cpu_usage_percent": 0.0,
+      "compression_ratio": 0.0,
+      "throughput_mbps": 0.0
+    },
+    "details": {},
+    "error_message": "No module named 'enhanced_pattern251_ai'",
+    "timestamp": "2025-08-19 19:03:00"
+  },
+  {
+    "test_name": "AI Pattern Recognition Analysis",
+    "file_name": "ooffice",
+    "status": "ERROR",
+    "metrics": {
+      "execution_time": 0.0,
+      "memory_usage_mb": 0.0,
+      "cpu_usage_percent": 0.0,
+      "compression_ratio": 0.0,
+      "throughput_mbps": 0.0
+    },
+    "details": {},
+    "error_message": "No module named 'enhanced_pattern251_ai'",
+    "timestamp": "2025-08-19 19:03:00"
+  },
+  {
+    "test_name": "AI Pattern Recognition Analysis",
+    "file_name": "osdb",
+    "status": "ERROR",
+    "metrics": {
+      "execution_time": 0.0,
+      "memory_usage_mb": 0.0,
+      "cpu_usage_percent": 0.0,
+      "compression_ratio": 0.0,
+      "throughput_mbps": 0.0
+    },
+    "details": {},
+    "error_message": "No module named 'enhanced_pattern251_ai'",
+    "timestamp": "2025-08-19 19:03:00"
+  },
+  {
+    "test_name": "AI Pattern Recognition Analysis",
+    "file_name": "reymont",
+    "status": "ERROR",
+    "metrics": {
+      "execution_time": 0.0,
+      "memory_usage_mb": 0.0,
+      "cpu_usage_percent": 0.0,
+      "compression_ratio": 0.0,
+      "throughput_mbps": 0.0
+    },
+    "details": {},
+    "error_message": "No module named 'enhanced_pattern251_ai'",
+    "timestamp": "2025-08-19 19:03:00"
+  },
+  {
+    "test_name": "AI Pattern Recognition Analysis",
+    "file_name": "samba",
+    "status": "ERROR",
+    "metrics": {
+      "execution_time": 0.0,
+      "memory_usage_mb": 0.0,
+      "cpu_usage_percent": 0.0,
+      "compression_ratio": 0.0,
+      "throughput_mbps": 0.0
+    },
+    "details": {},
+    "error_message": "No module named 'enhanced_pattern251_ai'",
+    "timestamp": "2025-08-19 19:03:00"
+  },
+  {
+    "test_name": "AI Pattern Recognition Analysis",
+    "file_name": "sao",
+    "status": "ERROR",
+    "metrics": {
+      "execution_time": 0.0,
+      "memory_usage_mb": 0.0,
+      "cpu_usage_percent": 0.0,
+      "compression_ratio": 0.0,
+      "throughput_mbps": 0.0
+    },
+    "details": {},
+    "error_message": "No module named 'enhanced_pattern251_ai'",
+    "timestamp": "2025-08-19 19:03:00"
+  },
+  {
+    "test_name": "AI Pattern Recognition Analysis",
+    "file_name": "webster",
+    "status": "ERROR",
+    "metrics": {
+      "execution_time": 0.0,
+      "memory_usage_mb": 0.0,
+      "cpu_usage_percent": 0.0,
+      "compression_ratio": 0.0,
+      "throughput_mbps": 0.0
+    },
+    "details": {},
+    "error_message": "No module named 'enhanced_pattern251_ai'",
+    "timestamp": "2025-08-19 19:03:00"
+  },
+  {
+    "test_name": "AI Pattern Recognition Analysis",
+    "file_name": "xml",
+    "status": "ERROR",
+    "metrics": {
+      "execution_time": 0.0,
+      "memory_usage_mb": 0.0,
+      "cpu_usage_percent": 0.0,
+      "compression_ratio": 0.0,
+      "throughput_mbps": 0.0
+    },
+    "details": {},
+    "error_message": "No module named 'enhanced_pattern251_ai'",
+    "timestamp": "2025-08-19 19:03:00"
+  },
+  {
+    "test_name": "AI Pattern Recognition Analysis",
+    "file_name": "x-ray",
+    "status": "ERROR",
+    "metrics": {
+      "execution_time": 0.0,
+      "memory_usage_mb": 0.0,
+      "cpu_usage_percent": 0.0,
+      "compression_ratio": 0.0,
+      "throughput_mbps": 0.0
+    },
+    "details": {},
+    "error_message": "No module named 'enhanced_pattern251_ai'",
+    "timestamp": "2025-08-19 19:03:00"
+  }
+]

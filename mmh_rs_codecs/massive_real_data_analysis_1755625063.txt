@@ -1,0 +1,136 @@
+🔍 ENHANCED PATTERN ANALYZER - MASSIVE REAL DATA ANALYSIS REPORT
+================================================================================
+
+📊 SUMMARY STATISTICS:
+   Files analyzed: 17
+   Total data size: 5.33 MB
+   Average compression potential: 2468.957
+   Average pattern complexity: 0.939
+   Total processing time: 1499.1797037s
+   Average processing time: 88.187041394s
+   Total memory usage: 5.38 MB
+   Processing speed: 0.00 MB/s
+
+📁 FILE TYPE ANALYSIS:
+--------------------------------------------------------------------------------
+   Source Code: 8 files, 0.12 MB, avg potential: 1368.498
+   Text Document: 1 files, 0.00 MB, avg potential: 345.088
+   Configuration: 1 files, 0.00 MB, avg potential: 13.484
+   Unknown: 4 files, 4.26 MB, avg potential: 6988.741
+   Binary: 3 files, 0.95 MB, avg potential: 903.585
+
+🏆 TOP PERFORMERS:
+--------------------------------------------------------------------------------
+🏆 Best compression: test_enhanced_analyzer.pdb (9810.458) - 1.33 MB
+📉 Worst compression: Cargo.toml (13.484) - 0.00 MB
+⚡ Fastest processing: Cargo.toml (230.0538ms) - 0.00 MB
+📏 Largest file: test_massive_real_data.pdb - 1.50 MB
+
+🎯 STRATEGY RECOMMENDATIONS:
+--------------------------------------------------------------------------------
+   Hybrid (Balanced): 17 files (100.0%)
+
+📋 DETAILED ANALYSIS (First 17 files):
+--------------------------------------------------------------------------------
+1. Cargo.lock
+   Type: Unknown, Size: 0.01 MB
+   Patterns: 101, Potential: 564.785, Complexity: 0.935
+   Strategy: Hybrid (Balanced), Time: 4.5361193s, Memory: 0.02 MB
+   Top patterns: 4b(887), 5b(830), 6b(848)
+
+2. Cargo.toml
+   Type: Configuration, Size: 0.00 MB
+   Patterns: 13, Potential: 13.484, Complexity: 0.994
+   Strategy: Hybrid (Balanced), Time: 230.0538ms, Memory: 0.00 MB
+   Top patterns: 4b(134), 5b(113), 6b(94)
+
+3. hierarchical_codec.rs
+   Type: Source Code, Size: 0.02 MB
+   Patterns: 248, Potential: 3331.386, Complexity: 0.944
+   Strategy: Hybrid (Balanced), Time: 5.6366103s, Memory: 0.02 MB
+   Top patterns: 4b(1876), 5b(2136), 6b(2352)
+
+4. hierarchical_turbo.rs
+   Type: Source Code, Size: 0.01 MB
+   Patterns: 121, Potential: 228.343, Complexity: 0.967
+   Strategy: Hybrid (Balanced), Time: 3.493082s, Memory: 0.01 MB
+   Top patterns: 4b(993), 5b(1044), 6b(1080)
+
+5. lib.rs
+   Type: Source Code, Size: 0.00 MB
+   Patterns: 60, Potential: 102.515, Complexity: 0.978
+   Strategy: Hybrid (Balanced), Time: 1.8793711s, Memory: 0.01 MB
+   Top patterns: 4b(764), 5b(798), 6b(817)
+
+6. mod.rs
+   Type: Source Code, Size: 0.02 MB
+   Patterns: 248, Potential: 4595.661, Complexity: 0.918
+   Strategy: Hybrid (Balanced), Time: 4.8691331s, Memory: 0.02 MB
+   Top patterns: 4b(1454), 5b(1652), 6b(1828)
+
+7. pattern_analyzer.rs
+   Type: Source Code, Size: 0.02 MB
+   Patterns: 221, Potential: 1030.617, Complexity: 0.968
+   Strategy: Hybrid (Balanced), Time: 5.7463546s, Memory: 0.03 MB
+   Top patterns: 4b(2216), 5b(2570), 6b(2834)
+
+8. real_data_analysis_report.txt
+   Type: Text Document, Size: 0.00 MB
+   Patterns: 70, Potential: 345.088, Complexity: 0.947
+   Strategy: Hybrid (Balanced), Time: 832.952ms, Memory: 0.00 MB
+   Top patterns: 4b(318), 5b(307), 6b(293)
+
+9. test_enhanced_analyzer.exe
+   Type: Binary, Size: 0.23 MB
+   Patterns: 248, Potential: 647.046, Complexity: 0.992
+   Strategy: Hybrid (Balanced), Time: 77.6555605s, Memory: 0.23 MB
+   Top patterns: 4b(23024), 5b(23058), 6b(22519)
+
+10. test_enhanced_analyzer.pdb
+   Type: Unknown, Size: 1.33 MB
+   Patterns: 248, Potential: 9810.458, Complexity: 0.800
+   Strategy: Hybrid (Balanced), Time: 372.158161s, Memory: 1.34 MB
+   Top patterns: 4b(72384), 5b(87283), 6b(96396)
+
+11. test_massive_real_data.exe
+   Type: Binary, Size: 0.40 MB
+   Patterns: 248, Potential: 1024.340, Complexity: 0.994
+   Strategy: Hybrid (Balanced), Time: 108.0354729s, Memory: 0.40 MB
+   Top patterns: 4b(34642), 5b(35946), 6b(36649)
+
+12. test_massive_real_data.pdb
+   Type: Unknown, Size: 1.50 MB
+   Patterns: 248, Potential: 8597.176, Complexity: 0.826
+   Strategy: Hybrid (Balanced), Time: 411.0049845s, Memory: 1.50 MB
+   Top patterns: 4b(84191), 5b(99299), 6b(108645)
+
+13. test_massive_real_data.rs
+   Type: Source Code, Size: 0.02 MB
+   Patterns: 113, Potential: 293.473, Complexity: 0.976
+   Strategy: Hybrid (Balanced), Time: 6.189575s, Memory: 0.03 MB
+   Top patterns: 4b(2416), 5b(2749), 6b(2976)
+
+14. test_real_data_analysis.exe
+   Type: Binary, Size: 0.33 MB
+   Patterns: 248, Potential: 1039.368, Complexity: 0.993
+   Strategy: Hybrid (Balanced), Time: 95.4201506s, Memory: 0.33 MB
+   Top patterns: 4b(29782), 5b(31368), 6b(32051)
+
+15. test_real_data_analysis.pdb
+   Type: Unknown, Size: 1.42 MB
+   Patterns: 248, Potential: 8982.545, Complexity: 0.819
+   Strategy: Hybrid (Balanced), Time: 394.7693833s, Memory: 1.42 MB
+   Top patterns: 4b(79037), 5b(94180), 6b(103478)
+
+16. test_real_data_analysis.rs
+   Type: Source Code, Size: 0.02 MB
+   Patterns: 120, Potential: 306.292, Complexity: 0.971
+   Strategy: Hybrid (Balanced), Time: 5.0318317s, Memory: 0.02 MB
+   Top patterns: 4b(1711), 5b(1896), 6b(2040)
+
+17. test_runner.rs
+   Type: Source Code, Size: 0.00 MB
+   Patterns: 203, Potential: 1059.700, Complexity: 0.937
+   Strategy: Hybrid (Balanced), Time: 1.690908s, Memory: 0.01 MB
+   Top patterns: 4b(681), 5b(732), 6b(776)
+

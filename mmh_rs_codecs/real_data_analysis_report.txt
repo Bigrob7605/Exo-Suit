@@ -1,0 +1,66 @@
+🔍 ENHANCED PATTERN ANALYZER - REAL DATA ANALYSIS REPORT
+======================================================================
+
+📊 SUMMARY STATISTICS:
+   Files analyzed: 4
+   Total data size: 0.05 MB
+   Average compression potential: 1119.501
+   Average pattern complexity: 0.971
+   Total processing time: 14.2497917s
+   Average processing time: 3.562447925s
+
+📁 INDIVIDUAL FILE ANALYSIS:
+----------------------------------------------------------------------
+1. Cargo.toml
+   Size: 0.00 MB
+   Patterns found: 13
+   Compression potential: 13.484
+   Pattern complexity: 0.994
+   Compression ratio estimate: 0.100
+   Entropy: 4.871
+   Processing time: 234.5646ms
+   Recommended strategy: Hybrid (Balanced)
+   Top pattern lengths: 4b(134), 5b(113), 6b(94), 7b(78), 8b(62)
+
+2. lib.rs
+   Size: 0.00 MB
+   Patterns found: 60
+   Compression potential: 102.515
+   Pattern complexity: 0.978
+   Compression ratio estimate: 0.100
+   Entropy: 4.890
+   Processing time: 2.1152032s
+   Recommended strategy: Hybrid (Balanced)
+   Top pattern lengths: 4b(764), 5b(798), 6b(817), 7b(815), 8b(798)
+
+3. pattern_analyzer.rs
+   Size: 0.02 MB
+   Patterns found: 221
+   Compression potential: 1030.617
+   Pattern complexity: 0.968
+   Compression ratio estimate: 0.100
+   Entropy: 4.630
+   Processing time: 6.2280556s
+   Recommended strategy: Hybrid (Balanced)
+   Top pattern lengths: 4b(2216), 5b(2570), 6b(2834), 7b(3039), 8b(3237)
+
+4. hierarchical_codec.rs
+   Size: 0.02 MB
+   Patterns found: 248
+   Compression potential: 3331.386
+   Pattern complexity: 0.944
+   Compression ratio estimate: 0.100
+   Entropy: 4.549
+   Processing time: 5.6719683s
+   Recommended strategy: Hybrid (Balanced)
+   Top pattern lengths: 4b(1876), 5b(2136), 6b(2352), 7b(2521), 8b(2662)
+
+🚀 PERFORMANCE INSIGHTS:
+----------------------------------------------------------------------
+🏆 Best compression candidate: hierarchical_codec.rs (3331.386)
+📉 Worst compression candidate: Cargo.toml (13.484)
+⚡ Fastest processing: Cargo.toml (234.5646ms)
+
+🎯 STRATEGY RECOMMENDATIONS:
+----------------------------------------------------------------------
+   Hybrid (Balanced): 4 files

@@ -12,14 +12,32 @@ thiserror = "1.0"
 log = "0.4"
 env_logger = "0.10"
 num_cpus = "1.0"
+# Compression dependencies
+zstd = "0.12"
+lz4 = "1.24"
+brotli = "3.3"
+bincode = "1.3"
+sha2 = "0.10"
+# Real data generation dependencies
+chrono = "0.4"
+flate2 = "1.0"
+walkdir = "2.3"
 
 [lib]
 name = "mmh_rs_codecs"
-path = "mod.rs"
+path = "lib.rs"
 
 [[bin]]
 name = "mmh-rs-test"
 path = "test_runner.rs"
+
+[[bin]]
+name = "test_enhanced_patterns"
+path = "test_enhanced_patterns.rs"
+
+[[bin]]
+name = "mmh-rs-animated"
+path = "mmh_rs_animated_test.rs"
 
 [features]
 default = ["std"]

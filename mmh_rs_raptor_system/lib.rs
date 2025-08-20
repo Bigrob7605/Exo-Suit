@@ -28,7 +28,7 @@ pub mod codecs;
 pub mod fec;
 pub mod core;
 pub mod pattern_codec;
-pub mod pattern251;
+pub mod neural_entanglement_codec;
 pub mod chunking;
 pub mod utils;
 pub mod system_agent;
@@ -46,7 +46,7 @@ pub enum CodecType {
     Zstd,
     Lz4,
     Brotli,
-    Pattern251,
+    NeuralEntanglementCodec,
     Hierarchical,
     None,
 }

@@ -1,0 +1,1453 @@
+New code ideas for MMH-RS
+
+// Enhanced file type detection with more magic bytes and heuristics
+impl UniversalFileAnalyzer {
+    /// Enhanced file type detection with more comprehensive magic bytes
+    fn detect_file_type(data: &[u8], extension: &str) -> FileType {
+        if data.len() < 8 { return FileType::Unknown; }
+        
+        // Check magic bytes for common formats
+        match data {
+            // Executables - More comprehensive
+            [0x4D, 0x5A, ..] => FileType::Executable, // MZ header (PE/Windows)
+            [0x7F, 0x45, 0x4C, 0x46, ..] => FileType::Executable, // ELF header (Linux)
+            [0xFE, 0xED, 0xFA, 0xCE, ..] | [0xCE, 0xFA, 0xED, 0xFE, ..] => FileType::Executable, // Mach-O
+            [0xCA, 0xFE, 0xBA, 0xBE, ..] => FileType::Executable, // Java class
+            [0x50, 0x45, 0x00, 0x00, ..] => FileType::Executable, // PE header
+            
+            // Archives - Extended
+            [0x50, 0x4B, 0x03, 0x04, ..] | [0x50, 0x4B, 0x05, 0x06, ..] => FileType::Archive, // ZIP variants
+            [0x52, 0x61, 0x72, 0x21, 0x1A, 0x07, 0x00, ..] => FileType::Archive, // RAR
+            [0x52, 0x61, 0x72, 0x21, 0x1A, 0x07, 0x01, ..] => FileType::Archive, // RAR5
+            [0x37, 0x7A, 0xBC, 0xAF, 0x27, 0x1C, ..] => FileType::Archive, // 7Z
+            [0x1F, 0x8B, 0x08, ..] => FileType::Archive, // GZIP
+            [0x42, 0x5A, 0x68, ..] => FileType::Archive, // BZIP2
+            [0xFD, 0x37, 0x7A, 0x58, 0x5A, 0x00, ..] => FileType::Archive, // XZ
+            [0x75, 0x73, 0x74, 0x61, 0x72, ..] => FileType::Archive, // TAR
+            
+            // Media files - More types
+            [0xFF, 0xFB, ..] | [0xFF, 0xF3, ..] | [0xFF, 0xF2, ..] => FileType::Media, // MP3
+            [0x00, 0x00, 0x00, _, 0x66, 0x74, 0x79, 0x70, ..] => FileType::Media, // MP4/MOV
+            [0x52, 0x49, 0x46, 0x46, _, _, _, _, 0x41, 0x56, 0x49, 0x20, ..] => FileType::Media, // AVI
+            [0x1A, 0x45, 0xDF, 0xA3, ..] => FileType::Media, // MKV
+            [0x4F, 0x67, 0x67, 0x53, ..] => FileType::Media, // OGG
+            [0x46, 0x4C, 0x56, 0x01, ..] => FileType::Media, // FLV
+            [0xFF, 0xD8, 0xFF, ..] => FileType::Media, // JPEG
+            [0x89, 0x50, 0x4E, 0x47, 0x0D, 0x0A, 0x1A, 0x0A, ..] => FileType::Media, // PNG
+            [0x47, 0x49, 0x46, 0x38, ..] => FileType::Media, // GIF
+            [0x42, 0x4D, ..] => FileType::Media, // BMP
+            [0x49, 0x49, 0x2A, 0x00, ..] | [0x4D, 0x4D, 0x00, 0x2A, ..] => FileType::Media, // TIFF
+            
+            // Documents - Extended
+            [0x25, 0x50, 0x44, 0x46, ..] => FileType::Document, // PDF
+            [0xD0, 0xCF, 0x11, 0xE0, 0xA1, 0xB1, 0x1A, 0xE1, ..] => FileType::Document, // MS Office (old)
+            [0x50, 0x4B, 0x03, 0x04, 0x14, 0x00, 0x06, 0x00, ..] => FileType::Document, // MS Office (new)
+            [0x7B, 0x5C, 0x72, 0x74, 0x66, 0x31, ..] => FileType::Document, // RTF
+            [0x3C, 0x3F, 0x78, 0x6D, 0x6C, ..] => FileType::Document, // XML
+            [0xEF, 0xBB, 0xBF, ..] => FileType::Document, // UTF-8 BOM text
+            
+            // Databases
+            [0x53, 0x51, 0x4C, 0x69, 0x74, 0x65, 0x20, 0x66, ..] => FileType::Database, // SQLite
+            [0x00, 0x01, 0x00, 0x00, 0x53, 0x74, 0x61, 0x6E, ..] => FileType::Database, // MS Access
+            
+            // Virtual Machine files
+            [0x4B, 0x44, 0x4D, ..] => FileType::VirtualMachine, // VMDK
+            [0x7F, 0x10, 0xDA, 0xBE, ..] => FileType::VirtualMachine, // VDI
+            [0x63, 0x6F, 0x6E, 0x65, 0x63, 0x74, 0x69, 0x78, ..] => FileType::VirtualMachine, // VHD
+            [0x43, 0x44, 0x30, 0x30, 0x31, ..] => FileType::VirtualMachine, // ISO
+            
+            // Debug symbols (enhanced)
+            _ if Self::is_pdb_file(data, extension) => FileType::DebugSymbol,
+            _ if Self::is_dwarf_debug(data) => FileType::DebugSymbol,
+            
+            // Programming-specific detection
+            _ if Self::is_source_code_by_content(data) => FileType::SourceCode,
+            _ if Self::is_log_file(data, extension) => FileType::Log,
+            
+            _ => FileType::Unknown,
+        }
+    }
+    
+    /// Enhanced PDB detection
+    fn is_pdb_file(data: &[u8], extension: &str) -> bool {
+        if extension.to_lowercase() == "pdb" { return true; }
+        
+        // Check for PDB magic signatures
+        if data.len() > 32 {
+            data.starts_with(b"Microsoft C/C++ MSF 7.00") ||
+            data.starts_with(b"Microsoft C/C++ program database") ||
+            (data.len() > 0x1000 && 
+             data.get(0x1000..0x1004).map_or(false, |slice| slice == [0xE0, 0xE0, 0xE0, 0xE0]))
+        } else {
+            false
+        }
+    }
+    
+    /// Detect DWARF debug info
+    fn is_dwarf_debug(data: &[u8]) -> bool {
+        if data.len() < 16 { return false; }
+        
+        // Look for DWARF section markers
+        data.windows(8).any(|window| {
+            window == b".debug_i" || // .debug_info
+            window == b".debug_a" || // .debug_abbrev
+            window == b".debug_l" || // .debug_line
+            window == b".debug_s"    // .debug_str
+        })
+    }
+    
+    /// Detect source code by content analysis
+    fn is_source_code_by_content(data: &[u8]) -> bool {
+        if data.len() < 50 { return false; }
+        
+        // Try to decode as UTF-8
+        if let Ok(text) = std::str::from_utf8(&data[..data.len().min(1024)]) {
+            let lines: Vec<&str> = text.lines().take(20).collect();
+            let code_indicators = lines.iter().filter(|line| {
+                let trimmed = line.trim();
+                trimmed.contains("function") ||
+                trimmed.contains("def ") ||
+                trimmed.contains("class ") ||
+                trimmed.contains("struct ") ||
+                trimmed.contains("impl ") ||
+                trimmed.contains("#include") ||
+                trimmed.contains("import ") ||
+                trimmed.contains("package ") ||
+                trimmed.starts_with("//") ||
+                trimmed.starts_with("/*") ||
+                trimmed.starts_with("#") ||
+                trimmed.contains("{}") ||
+                trimmed.contains("[]")
+            }).count();
+            
+            code_indicators >= 2 || (code_indicators > 0 && lines.len() > 5)
+        } else {
+            false
+        }
+    }
+    
+    /// Detect log files
+    fn is_log_file(data: &[u8], extension: &str) -> bool {
+        if ["log", "txt"].contains(&extension.to_lowercase().as_str()) {
+            if let Ok(text) = std::str::from_utf8(&data[..data.len().min(1024)]) {
+                let lines: Vec<&str> = text.lines().take(10).collect();
+                return lines.iter().any(|line| {
+                    // Look for timestamp patterns
+                    line.contains("INFO") || line.contains("ERROR") || line.contains("WARN") ||
+                    line.contains("DEBUG") || line.contains("TRACE") ||
+                    line.matches(':').count() >= 2 || // Time patterns
+                    line.contains('[') && line.contains(']') // Log levels in brackets
+                });
+            }
+        }
+        false
+    }
+}
+
+impl UniversalPatternAnalyzer {
+    /// Adaptive sampling strategy based on file type and characteristics
+    fn get_adaptive_sample<'a>(&self, data: &'a [u8], file_type: &FileType) -> Vec<&'a [u8]> {
+        let max_sample_size = self.config.sample_size_mb * 1024 * 1024;
+        
+        if data.len() <= max_sample_size {
+            return vec![data];
+        }
+        
+        match file_type {
+            FileType::Executable => {
+                // For executables, sample header, middle sections, and end
+                let header_size = (data.len() / 20).min(64 * 1024);
+                let footer_size = (data.len() / 20).min(32 * 1024);
+                let middle_size = max_sample_size - header_size - footer_size;
+                let middle_start = data.len() / 2 - middle_size / 2;
+                
+                vec![
+                    &data[..header_size],
+                    &data[middle_start..middle_start + middle_size],
+                    &data[data.len() - footer_size..]
+                ]
+            },
+            
+            FileType::Media => {
+                // For media, focus on beginning (headers/metadata) and periodic samples
+                let chunk_size = max_sample_size / 4;
+                let step = data.len() / 4;
+                
+                (0..4).filter_map(|i| {
+                    let start = i * step;
+                    let end = (start + chunk_size).min(data.len());
+                    if start < end {
+                        Some(&data[start..end])
+                    } else {
+                        None
+                    }
+                }).collect()
+            },
+            
+            FileType::Archive => {
+                // For archives, sample directory structures and file headers
+                let header_size = 8192.min(data.len() / 10);
+                let remaining = max_sample_size - header_size;
+                
+                // Look for file entry patterns in ZIP/RAR
+                let mut samples = vec![&data[..header_size]];
+                
+                // Sample at intervals where file entries might be
+                let num_samples = 8;
+                let step = (data.len() - header_size) / num_samples;
+                let sample_size = remaining / num_samples;
+                
+                for i in 1..=num_samples {
+                    let start = header_size + i * step;
+                    let end = (start + sample_size).min(data.len());
+                    if start < end {
+                        samples.push(&data[start..end]);
+                    }
+                }
+                
+                samples
+            },
+            
+            FileType::Document => {
+                // For documents, focus on structure and repeated elements
+                let header_size = 16384.min(data.len() / 8);
+                let footer_size = 4096.min(data.len() / 16);
+                let middle_samples = 6;
+                let middle_total = max_sample_size - header_size - footer_size;
+                let middle_size = middle_total / middle_samples;
+                
+                let mut samples = vec![&data[..header_size]];
+                
+                // Sample middle sections
+                for i in 1..=middle_samples {
+                    let start = header_size + (data.len() - header_size - footer_size) * i / (middle_samples + 1);
+                    let end = (start + middle_size).min(data.len() - footer_size);
+                    if start < end {
+                        samples.push(&data[start..end]);
+                    }
+                }
+                
+                samples.push(&data[data.len() - footer_size..]);
+                samples
+            },
+            
+            FileType::SourceCode => {
+                // For source code, sample evenly but focus on function/class boundaries
+                if let Ok(text) = std::str::from_utf8(data) {
+                    let lines: Vec<&str> = text.lines().collect();
+                    let bytes_per_line = data.len() / lines.len().max(1);
+                    let target_lines = max_sample_size / bytes_per_line;
+                    
+                    if lines.len() <= target_lines {
+                        vec![data]
+                    } else {
+                        // Sample key sections with function/class definitions
+                        let step = lines.len() / 10;
+                        let lines_per_sample = target_lines / 10;
+                        
+                        (0..10).filter_map(|i| {
+                            let start_line = i * step;
+                            let end_line = (start_line + lines_per_sample).min(lines.len());
+                            
+                            if start_line < end_line {
+                                let start_byte = lines[..start_line].iter().map(|l| l.len() + 1).sum::<usize>();
+                                let end_byte = start_byte + lines[start_line..end_line].iter().map(|l| l.len() + 1).sum::<usize>();
+                                
+                                Some(&data[start_byte.min(data.len())..end_byte.min(data.len())])
+                            } else {
+                                None
+                            }
+                        }).collect()
+                    }
+                } else {
+                    // Fallback to regular sampling
+                    vec![&data[..max_sample_size]]
+                }
+            },
+            
+            FileType::Database => {
+                // For databases, sample headers, indexes, and data pages
+                let page_size = 4096; // Common database page size
+                let header_size = page_size * 4; // Usually first few pages
+                let samples_per_mb = 8;
+                let total_samples = (data.len() / (1024 * 1024)).max(1) * samples_per_mb;
+                let sample_size = (max_sample_size / total_samples).max(page_size);
+                
+                let mut samples = vec![];
+                
+                // Always include header
+                if data.len() > header_size {
+                    samples.push(&data[..header_size]);
+                }
+                
+                // Sample at regular intervals aligned to page boundaries
+                let step = (data.len() - header_size) / total_samples;
+                for i in 1..total_samples {
+                    let start = header_size + i * step;
+                    let aligned_start = (start / page_size) * page_size; // Align to page
+                    let end = (aligned_start + sample_size).min(data.len());
+                    
+                    if aligned_start < end {
+                        samples.push(&data[aligned_start..end]);
+                    }
+                }
+                
+                samples
+            },
+            
+            FileType::Log => {
+                // For logs, sample beginning, end, and distributed middle
+                let header_size = 32768.min(data.len() / 4);
+                let footer_size = 32768.min(data.len() / 4);
+                let middle_budget = max_sample_size - header_size - footer_size;
+                
+                let mut samples = vec![&data[..header_size]];
+                
+                // Sample middle portions to catch different time periods/patterns
+                if data.len() > header_size + footer_size {
+                    let middle_start = header_size;
+                    let middle_len = data.len() - header_size - footer_size;
+                    let num_middle_samples = 6;
+                    let middle_sample_size = middle_budget / num_middle_samples;
+                    
+                    for i in 0..num_middle_samples {
+                        let start = middle_start + (middle_len * i / num_middle_samples);
+                        let end = (start + middle_sample_size).min(data.len() - footer_size);
+                        if start < end {
+                            samples.push(&data[start..end]);
+                        }
+                    }
+                }
+                
+                samples.push(&data[data.len() - footer_size..]);
+                samples
+            },
+            
+            _ => {
+                // Default: beginning, middle, end sampling
+                let chunk_size = max_sample_size / 3;
+                vec![
+                    &data[..chunk_size.min(data.len())],
+                    &data[(data.len() / 2).saturating_sub(chunk_size / 2)..(data.len() / 2 + chunk_size / 2).min(data.len())],
+                    &data[data.len().saturating_sub(chunk_size)..]
+                ]
+            }
+        }
+    }
+    
+    /// Analyze patterns using adaptive sampling
+    fn analyze_patterns_adaptive(&self, data: &[u8], file_type: &FileType) -> CompressionMetrics {
+        let samples = self.get_adaptive_sample(data, file_type);
+        let total_sample_size: usize = samples.iter().map(|s| s.len()).sum();
+        
+        let mut combined_metrics = CompressionMetrics {
+            compression_potential: 0.0,
+            pattern_complexity: 0.0,
+            entropy: 0.0,
+            estimated_ratio: 0.0,
+            pattern_count: 0,
+            repetition_ratio: 0.0,
+            structural_similarity: 0.0,
+        };
+        
+        // Analyze each sample and weight by size
+        for sample in samples {
+            if sample.is_empty() { continue; }
+            
+            let sample_weight = sample.len() as f64 / total_sample_size as f64;
+            let sample_metrics = self.analyze_patterns(sample);
+            
+            // Weighted average of metrics
+            combined_metrics.compression_potential += sample_metrics.compression_potential * sample_weight;
+            combined_metrics.pattern_complexity += sample_metrics.pattern_complexity * sample_weight;
+            combined_metrics.entropy += sample_metrics.entropy * sample_weight;
+            combined_metrics.repetition_ratio += sample_metrics.repetition_ratio * sample_weight;
+            combined_metrics.structural_similarity += sample_metrics.structural_similarity * sample_weight;
+            combined_metrics.pattern_count += sample_metrics.pattern_count;
+        }
+        
+        // Recalculate estimated ratio based on combined metrics
+        combined_metrics.estimated_ratio = self.estimate_compression_ratio(
+            combined_metrics.compression_potential,
+            combined_metrics.entropy,
+            combined_metrics.repetition_ratio
+        );
+        
+        combined_metrics
+    }
+}
+
+/// MMH-RS Codec specifications
+#[derive(Debug, Clone)]
+pub struct MMHRSCodec {
+    pub name: String,
+    pub description: String,
+    pub best_for: Vec<String>,
+    pub compression_range: (f64, f64), // (min_ratio, max_ratio)
+    pub speed_class: SpeedClass,
+    pub memory_usage: MemoryUsage,
+    pub special_features: Vec<String>,
+}
+
+#[derive(Debug, Clone)]
+pub enum SpeedClass {
+    Ultra,      // > 500 MB/s
+    High,       // 100-500 MB/s  
+    Medium,     // 20-100 MB/s
+    Thorough,   // < 20 MB/s but best compression
+}
+
+#[derive(Debug, Clone)]
+pub enum MemoryUsage {
+    Low,        // < 32MB
+    Medium,     // 32-128MB
+    High,       // 128-512MB
+    VeryHigh,   // > 512MB
+}
+
+impl UniversalStrategySelector {
+    /// Enhanced MMH-RS codec selection with detailed analysis
+    fn select_mmh_rs_codec_detailed(
+        file_metrics: &FileSpecificMetrics, 
+        compression_metrics: &CompressionMetrics
+    ) -> MMHRSCodec {
+        let entropy = compression_metrics.entropy;
+        let repetition = compression_metrics.repetition_ratio;
+        let complexity = compression_metrics.pattern_complexity;
+        let potential = compression_metrics.compression_potential;
+        
+        match &file_metrics.format_specific_data {
+            FormatSpecificData::Executable { sections, imports, exports, .. } => {
+                if *sections > 10 || *imports > 100 {
+                    MMHRSCodec {
+                        name: "Hierarchical Turbo".to_string(),
+                        description: "Multi-stage compression with section-aware optimization".to_string(),
+                        best_for: vec!["Large executables".to_string(), "Complex binaries".to_string()],
+                        compression_range: (0.15, 0.35),
+                        speed_class: SpeedClass::Medium,
+                        memory_usage: MemoryUsage::High,
+                        special_features: vec![
+                            "Import/Export table compression".to_string(),
+                            "Cross-section deduplication".to_string(),
+                            "Symbol table optimization".to_string(),
+                        ],
+                    }
+                } else {
+                    MMHRSCodec {
+                        name: "Binary Optimizer".to_string(),
+                        description: "Fast binary compression with structure awareness".to_string(),
+                        best_for: vec!["Small executables".to_string(), "Libraries".to_string()],
+                        compression_range: (0.20, 0.45),
+                        speed_class: SpeedClass::High,
+                        memory_usage: MemoryUsage::Medium,
+                        special_features: vec![
+                            "Opcode pattern matching".to_string(),
+                            "Address alignment optimization".to_string(),
+                        ],
+                    }
+                }
+            },
+            
+            FormatSpecificData::SourceCode { comment_ratio, language, .. } => {
+                if *comment_ratio > 0.3 {
+                    MMHRSCodec {
+                        name: "Text Pattern Analyzer".to_string(),
+                        description: "Specialized for heavily commented source code".to_string(),
+                        best_for: vec!["Well-documented code".to_string(), "Header files".to_string()],
+                        compression_range: (0.10, 0.25),
+                        speed_class: SpeedClass::High,
+                        memory_usage: MemoryUsage::Low,
+                        special_features: vec![
+                            "Comment block deduplication".to_string(),
+                            "Identifier dictionary".to_string(),
+                            "Language-specific optimization".to_string(),
+                        ],
+                    }
+                } else {
+                    MMHRSCodec {
+                        name: "Code Compressor".to_string(),
+                        description: "General source code compression with syntax awareness".to_string(),
+                        best_for: vec!["Source files".to_string(), "Scripts".to_string()],
+                        compression_range: (0.15, 0.35),
+                        speed_class: SpeedClass::Medium,
+                        memory_usage: MemoryUsage::Medium,
+                        special_features: vec![
+                            "Syntax-aware tokenization".to_string(),
+                            "Function pattern matching".to_string(),
+                            "Keyword optimization".to_string(),
+                        ],
+                    }
+                }
+            },
+            
+            FormatSpecificData::Media { codec_type, bit_depth, .. } => {
+                if entropy > 7.0 {
+                    MMHRSCodec {
+                        name: "Media Stream Optimizer".to_string(),
+                        description: "Specialized for high-entropy media content".to_string(),
+                        best_for: vec!["Compressed media".to_string(), "High bitrate content".to_string()],
+                        compression_range: (0.85, 0.95), // Very little compression expected
+                        speed_class: SpeedClass::Ultra,
+                        memory_usage: MemoryUsage::Low,
+                        special_features: vec![
+                            "Header/metadata compression".to_string(),
+                            "Container optimization".to_string(),
+                            "Lossless recompression detection".to_string(),
+                        ],
+                    }
+                } else {
+                    MMHRSCodec {
+                        name: "Entropy Compressor".to_string(),
+                        description: "For media with compression opportunities".to_string(),
+                        best_for: vec!["Uncompressed media".to_string(), "Raw formats".to_string()],
+                        compression_range: (0.30, 0.70),
+                        speed_class: SpeedClass::Medium,
+                        memory_usage: MemoryUsage::Medium,
+                        special_features: vec![
+                            "Frame delta compression".to_string(),
+                            "Pattern-based optimization".to_string(),
+                            "Bitrate-aware compression".to_string(),
+                        ],
+                    }
+                }
+            },
+            
+            FormatSpecificData::Document { page_count, text_ratio, .. } => {
+                if *text_ratio > 0.7 {
+                    MMHRSCodec {
+                        name: "Document Text Optimizer".to_string(),
+                        description: "Optimized for text-heavy documents".to_string(),
+                        best_for: vec!["Text documents".to_string(), "Reports".to_string()],
+                        compression_range: (0.08, 0.20),
+                        speed_class: SpeedClass::High,
+                        memory_usage: MemoryUsage::Medium,
+                        special_features: vec![
+                            "Dictionary-based text compression".to_string(),
+                            "Language model optimization".to_string(),
+                            "Formatting pattern matching".to_string(),
+                        ],
+                    }
+                } else {
+                    MMHRSCodec {
+                        name: "Structural Document Compressor".to_string(),
+                        description: "For documents with mixed content types".to_string(),
+                        best_for: vec!["Rich documents".to_string(), "Presentations".to_string()],
+                        compression_range: (0.15, 0.40),
+                        speed_class: SpeedClass::Medium,
+                        memory_usage: MemoryUsage::High,
+                        special_features: vec![
+                            "Object deduplication".to_string(),
+                            "Image/media optimization".to_string(),
+                            "Structure-aware compression".to_string(),
+                        ],
+                    }
+                }
+            },
+            
+            FormatSpecificData::Archive { compression_method, .. } => {
+                MMHRSCodec {
+                    name: "Archive Recompressor".to_string(),
+                    description: "Specialized recompression for existing archives".to_string(),
+                    best_for: vec!["Existing archives".to_string(), "Multi-file containers".to_string()],
+                    compression_range: (0.70, 0.95), // Limited improvement expected
+                    speed_class: SpeedClass::Thorough,
+                    memory_usage: MemoryUsage::VeryHigh,
+                    special_features: vec![
+                        "Decompression + recompression".to_string(),
+                        "File type specific optimization".to_string(),
+                        "Directory structure optimization".to_string(),
+                    ],
+                }
+            },
+            
+            FormatSpecificData::Database { table_count, data_types, .. } => {
+                MMHRSCodec {
+                    name: "Database Optimizer".to_string(),
+                    description: "Database-aware compression with schema optimization".to_string(),
+                    best_for: vec!["Database files".to_string(), "Structured data".to_string()],
+                    compression_range: (
+
+    /// MMH-RS Codec specifications
+#[derive(Debug, Clone)]
+pub struct MMHRSCodec {
+    pub name: String,
+    pub description: String,
+    pub best_for: Vec<String>,
+    pub compression_range: (f64, f64), // (min_ratio, max_ratio)
+    pub speed_class: SpeedClass,
+    pub memory_usage: MemoryUsage,
+    pub special_features: Vec<String>,
+}
+
+#[derive(Debug, Clone)]
+pub enum SpeedClass {
+    Ultra,      // > 500 MB/s
+    High,       // 100-500 MB/s  
+    Medium,     // 20-100 MB/s
+    Thorough,   // < 20 MB/s but best compression
+}
+
+#[derive(Debug, Clone)]
+pub enum MemoryUsage {
+    Low,        // < 32MB
+    Medium,     // 32-128MB
+    High,       // 128-512MB
+    VeryHigh,   // > 512MB
+}
+
+impl UniversalStrategySelector {
+    /// Enhanced MMH-RS codec selection with detailed analysis
+    fn select_mmh_rs_codec_detailed(
+        file_metrics: &FileSpecificMetrics, 
+        compression_metrics: &CompressionMetrics
+    ) -> MMHRSCodec {
+        let entropy = compression_metrics.entropy;
+        let repetition = compression_metrics.repetition_ratio;
+        let complexity = compression_metrics.pattern_complexity;
+        let potential = compression_metrics.compression_potential;
+        
+        match &file_metrics.format_specific_data {
+            FormatSpecificData::Executable { sections, imports, exports, .. } => {
+                if *sections > 10 || *imports > 100 {
+                    MMHRSCodec {
+                        name: "Hierarchical Turbo".to_string(),
+                        description: "Multi-stage compression with section-aware optimization".to_string(),
+                        best_for: vec!["Large executables".to_string(), "Complex binaries".to_string()],
+                        compression_range: (0.20, 0.50),
+                    speed_class: SpeedClass::Medium,
+                    memory_usage: MemoryUsage::High,
+                    special_features: vec![
+                        "Column-based compression".to_string(),
+                        "Index optimization".to_string(),
+                        "Data type specific encoding".to_string(),
+                        "Row deduplication".to_string(),
+                    ],
+                }
+            },
+            
+            _ => {
+                // Universal codec selection based on metrics
+                Self::select_universal_codec(compression_metrics)
+            }
+        }
+    }
+    
+    /// Universal codec selection for unknown or generic file types
+    fn select_universal_codec(metrics: &CompressionMetrics) -> MMHRSCodec {
+        let entropy = metrics.entropy;
+        let repetition = metrics.repetition_ratio;
+        let complexity = metrics.pattern_complexity;
+        let potential = metrics.compression_potential;
+        
+        match (entropy, repetition, complexity, potential) {
+            // High repetition, low entropy - excellent compression candidate
+            (e, r, c, p) if r > 0.4 && e < 4.0 && p > 6000.0 => MMHRSCodec {
+                name: "Repetition Eliminator Pro".to_string(),
+                description: "Specialized for highly repetitive data with low entropy".to_string(),
+                best_for: vec!["Repetitive data".to_string(), "Structured files".to_string()],
+                compression_range: (0.05, 0.20),
+                speed_class: SpeedClass::High,
+                memory_usage: MemoryUsage::Medium,
+                special_features: vec![
+                    "Advanced pattern dictionary".to_string(),
+                    "Multi-level repetition detection".to_string(),
+                    "Entropy-guided optimization".to_string(),
+                ],
+            },
+            
+            // Medium entropy, good patterns - balanced approach
+            (e, r, c, p) if e >= 4.0 && e < 6.0 && p > 3000.0 => MMHRSCodec {
+                name: "Balanced Hybrid Compressor".to_string(),
+                description: "Balanced compression for mixed-content files".to_string(),
+                best_for: vec!["Mixed content".to_string(), "General purpose".to_string()],
+                compression_range: (0.25, 0.45),
+                speed_class: SpeedClass::Medium,
+                memory_usage: MemoryUsage::Medium,
+                special_features: vec![
+                    "Adaptive algorithm selection".to_string(),
+                    "Multi-pass optimization".to_string(),
+                    "Context-aware compression".to_string(),
+                ],
+            },
+            
+            // High entropy - focus on speed
+            (e, r, c, p) if e >= 6.0 => MMHRSCodec {
+                name: "High-Entropy Fast Compressor".to_string(),
+                description: "Fast compression for high-entropy data with minimal gains".to_string(),
+                best_for: vec!["Random data".to_string(), "Encrypted files".to_string()],
+                compression_range: (0.70, 0.90),
+                speed_class: SpeedClass::Ultra,
+                memory_usage: MemoryUsage::Low,
+                special_features: vec![
+                    "Entropy analysis skip".to_string(),
+                    "Fast header compression".to_string(),
+                    "Minimal CPU overhead".to_string(),
+                ],
+            },
+            
+            // Low complexity, good potential - thorough compression
+            (e, r, c, p) if c < 0.3 && p > 5000.0 => MMHRSCodec {
+                name: "Pattern Master Pro".to_string(),
+                description: "Deep pattern analysis for low-complexity, high-potential data".to_string(),
+                best_for: vec!["Structured data".to_string(), "Template-based files".to_string()],
+                compression_range: (0.10, 0.30),
+                speed_class: SpeedClass::Thorough,
+                memory_usage: MemoryUsage::High,
+                special_features: vec![
+                    "Deep pattern mining".to_string(),
+                    "Hierarchical dictionary building".to_string(),
+                    "Multi-scale analysis".to_string(),
+                ],
+            },
+            
+            // Default case
+            _ => MMHRSCodec {
+                name: "Universal Adaptive Compressor".to_string(),
+                description: "General-purpose compressor with adaptive algorithms".to_string(),
+                best_for: vec!["Unknown file types".to_string(), "Mixed workloads".to_string()],
+                compression_range: (0.30, 0.60),
+                speed_class: SpeedClass::Medium,
+                memory_usage: MemoryUsage::Medium,
+                special_features: vec![
+                    "Automatic algorithm selection".to_string(),
+                    "Runtime adaptation".to_string(),
+                    "Fallback compression modes".to_string(),
+                ],
+            }
+        }
+    }
+    
+    /// Generate detailed compression recommendations
+    fn generate_detailed_recommendations(
+        file_metrics: &FileSpecificMetrics,
+        compression_metrics: &CompressionMetrics,
+        file_size_mb: f64
+    ) -> CompressionRecommendation {
+        let codec = Self::select_mmh_rs_codec_detailed(file_metrics, compression_metrics);
+        let estimated_compressed_size = file_size_mb * compression_metrics.estimated_ratio;
+        let estimated_time = Self::estimate_compression_time(&codec, file_size_mb);
+        let memory_required = Self::estimate_memory_usage(&codec, file_size_mb);
+        
+        CompressionRecommendation {
+            codec,
+            estimated_compressed_size_mb: estimated_compressed_size,
+            estimated_compression_time: estimated_time,
+            memory_required_mb: memory_required,
+            confidence_score: Self::calculate_confidence_score(compression_metrics),
+            alternative_codecs: Self::suggest_alternatives(file_metrics, compression_metrics),
+            optimization_tips: Self::generate_optimization_tips(file_metrics, compression_metrics),
+        }
+    }
+    
+    /// Estimate compression time based on codec and file size
+    fn estimate_compression_time(codec: &MMHRSCodec, file_size_mb: f64) -> Duration {
+        let base_speed_mbps = match codec.speed_class {
+            SpeedClass::Ultra => 500.0,
+            SpeedClass::High => 200.0,
+            SpeedClass::Medium => 50.0,
+            SpeedClass::Thorough => 10.0,
+        };
+        
+        // Adjust for memory usage (higher memory = potentially faster but with overhead)
+        let memory_factor = match codec.memory_usage {
+            MemoryUsage::Low => 0.8,
+            MemoryUsage::Medium => 1.0,
+            MemoryUsage::High => 1.2,
+            MemoryUsage::VeryHigh => 1.5,
+        };
+        
+        let effective_speed = base_speed_mbps * memory_factor;
+        let seconds = file_size_mb / effective_speed;
+        
+        Duration::from_secs_f64(seconds.max(0.1))
+    }
+    
+    /// Estimate memory usage
+    fn estimate_memory_usage(codec: &MMHRSCodec, file_size_mb: f64) -> f64 {
+        let base_memory = match codec.memory_usage {
+            MemoryUsage::Low => 16.0,
+            MemoryUsage::Medium => 64.0,
+            MemoryUsage::High => 256.0,
+            MemoryUsage::VeryHigh => 512.0,
+        };
+        
+        // Scale with file size but with diminishing returns
+        base_memory + (file_size_mb * 0.1).min(base_memory)
+    }
+    
+    /// Calculate confidence score for the recommendation
+    fn calculate_confidence_score(metrics: &CompressionMetrics) -> f64 {
+        let entropy_confidence = if metrics.entropy < 2.0 { 0.9 }
+        else if metrics.entropy < 4.0 { 0.8 }
+        else if metrics.entropy < 6.0 { 0.6 }
+        else { 0.3 };
+        
+        let pattern_confidence = if metrics.pattern_count > 1000 { 0.9 }
+        else if metrics.pattern_count > 100 { 0.7 }
+        else if metrics.pattern_count > 10 { 0.5 }
+        else { 0.2 };
+        
+        let repetition_confidence = if metrics.repetition_ratio > 0.3 { 0.9 }
+        else if metrics.repetition_ratio > 0.1 { 0.7 }
+        else { 0.4 };
+        
+        (entropy_confidence + pattern_confidence + repetition_confidence) / 3.0
+    }
+    
+    /// Suggest alternative codecs
+    fn suggest_alternatives(
+        file_metrics: &FileSpecificMetrics,
+        compression_metrics: &CompressionMetrics
+    ) -> Vec<String> {
+        let mut alternatives = Vec::new();
+        
+        // Based on trade-offs
+        if compression_metrics.compression_potential > 5000.0 {
+            alternatives.push("Speed-optimized variant for faster processing".to_string());
+            alternatives.push("Memory-efficient variant for low-RAM systems".to_string());
+        }
+        
+        if compression_metrics.entropy > 6.0 {
+            alternatives.push("Skip compression (minimal gains expected)".to_string());
+        }
+        
+        alternatives.push("Standard DEFLATE for compatibility".to_string());
+        alternatives.push("LZMA for maximum compression".to_string());
+        
+        alternatives
+    }
+    
+    /// Generate optimization tips
+    fn generate_optimization_tips(
+        file_metrics: &FileSpecificMetrics,
+        compression_metrics: &CompressionMetrics
+    ) -> Vec<String> {
+        let mut tips = Vec::new();
+        
+        match &file_metrics.format_specific_data {
+            FormatSpecificData::Executable { .. } => {
+                tips.push("Consider stripping debug symbols first".to_string());
+                tips.push("UPX packing may provide additional benefits".to_string());
+            },
+            FormatSpecificData::SourceCode { .. } => {
+                tips.push("Minification before compression may help".to_string());
+                tips.push("Consider bundling related files together".to_string());
+            },
+            FormatSpecificData::Document { .. } => {
+                tips.push("Extract and compress images separately".to_string());
+                tips.push("Consider PDF optimization tools first".to_string());
+            },
+            _ => {}
+        }
+        
+        if compression_metrics.repetition_ratio > 0.4 {
+            tips.push("High repetition detected - excellent compression candidate".to_string());
+        }
+        
+        if compression_metrics.entropy > 7.0 {
+            tips.push("High entropy detected - compression gains will be minimal".to_string());
+        }
+        
+        tips
+    }
+}
+
+/// Detailed compression recommendation
+#[derive(Debug, Clone)]
+pub struct CompressionRecommendation {
+    pub codec: MMHRSCodec,
+    pub estimated_compressed_size_mb: f64,
+    pub estimated_compression_time: Duration,
+    pub memory_required_mb: f64,
+    pub confidence_score: f64,
+    pub alternative_codecs: Vec<String>,
+    pub optimization_tips: Vec<String>,
+}0.15, 0.35),
+                        speed_class: SpeedClass::Medium,
+                        memory_usage: MemoryUsage::High,
+                        special_features: vec![
+                            "Import/Export table compression".to_string(),
+                            "Cross-section deduplication".to_string(),
+                            "Symbol table optimization".to_string(),
+                        ],
+                    }
+                } else {
+                    MMHRSCodec {
+                        name: "Binary Optimizer".to_string(),
+                        description: "Fast binary compression with structure awareness".to_string(),
+                        best_for: vec!["Small executables".to_string(), "Libraries".to_string()],
+                        compression_range: (0.20, 0.45),
+                        speed_class: SpeedClass::High,
+                        memory_usage: MemoryUsage::Medium,
+                        special_features: vec![
+                            "Opcode pattern matching".to_string(),
+                            "Address alignment optimization".to_string(),
+                        ],
+                    }
+                }
+            },
+            
+            FormatSpecificData::SourceCode { comment_ratio, language, .. } => {
+                if *comment_ratio > 0.3 {
+                    MMHRSCodec {
+                        name: "Text Pattern Analyzer".to_string(),
+                        description: "Specialized for heavily commented source code".to_string(),
+                        best_for: vec!["Well-documented code".to_string(), "Header files".to_string()],
+                        compression_range: (0.10, 0.25),
+                        speed_class: SpeedClass::High,
+                        memory_usage: MemoryUsage::Low,
+                        special_features: vec![
+                            "Comment block deduplication".to_string(),
+                            "Identifier dictionary".to_string(),
+                            "Language-specific optimization".to_string(),
+                        ],
+                    }
+                } else {
+                    MMHRSCodec {
+                        name: "Code Compressor".to_string(),
+                        description: "General source code compression with syntax awareness".to_string(),
+                        best_for: vec!["Source files".to_string(), "Scripts".to_string()],
+                        compression_range: (0.15, 0.35),
+                        speed_class: SpeedClass::Medium,
+                        memory_usage: MemoryUsage::Medium,
+                        special_features: vec![
+                            "Syntax-aware tokenization".to_string(),
+                            "Function pattern matching".to_string(),
+                            "Keyword optimization".to_string(),
+                        ],
+                    }
+                }
+            },
+            
+            FormatSpecificData::Media { codec_type, bit_depth, .. } => {
+                if entropy > 7.0 {
+                    MMHRSCodec {
+                        name: "Media Stream Optimizer".to_string(),
+                        description: "Specialized for high-entropy media content".to_string(),
+                        best_for: vec!["Compressed media".to_string(), "High bitrate content".to_string()],
+                        compression_range: (0.85, 0.95), // Very little compression expected
+                        speed_class: SpeedClass::Ultra,
+                        memory_usage: MemoryUsage::Low,
+                        special_features: vec![
+                            "Header/metadata compression".to_string(),
+                            "Container optimization".to_string(),
+                            "Lossless recompression detection".to_string(),
+                        ],
+                    }
+                } else {
+                    MMHRSCodec {
+                        name: "Entropy Compressor".to_string(),
+                        description: "For media with compression opportunities".to_string(),
+                        best_for: vec!["Uncompressed media".to_string(), "Raw formats".to_string()],
+                        compression_range: (0.30, 0.70),
+                        speed_class: SpeedClass::Medium,
+                        memory_usage: MemoryUsage::Medium,
+                        special_features: vec![
+                            "Frame delta compression".to_string(),
+                            "Pattern-based optimization".to_string(),
+                            "Bitrate-aware compression".to_string(),
+                        ],
+                    }
+                }
+            },
+            
+            FormatSpecificData::Document { page_count, text_ratio, .. } => {
+                if *text_ratio > 0.7 {
+                    MMHRSCodec {
+                        name: "Document Text Optimizer".to_string(),
+                        description: "Optimized for text-heavy documents".to_string(),
+                        best_for: vec!["Text documents".to_string(), "Reports".to_string()],
+                        compression_range: (0.08, 0.20),
+                        speed_class: SpeedClass::High,
+                        memory_usage: MemoryUsage::Medium,
+                        special_features: vec![
+                            "Dictionary-based text compression".to_string(),
+                            "Language model optimization".to_string(),
+                            "Formatting pattern matching".to_string(),
+                        ],
+                    }
+                } else {
+                    MMHRSCodec {
+                        name: "Structural Document Compressor".to_string(),
+                        description: "For documents with mixed content types".to_string(),
+                        best_for: vec!["Rich documents".to_string(), "Presentations".to_string()],
+                        compression_range: (0.15, 0.40),
+                        speed_class: SpeedClass::Medium,
+                        memory_usage: MemoryUsage::High,
+                        special_features: vec![
+                            "Object deduplication".to_string(),
+                            "Image/media optimization".to_string(),
+                            "Structure-aware compression".to_string(),
+                        ],
+                    }
+                }
+            },
+            
+            FormatSpecificData::Archive { compression_method, .. } => {
+                MMHRSCodec {
+                    name: "Archive Recompressor".to_string(),
+                    description: "Specialized recompression for existing archives".to_string(),
+                    best_for: vec!["Existing archives".to_string(), "Multi-file containers".to_string()],
+                    compression_range: (0.70, 0.95), // Limited improvement expected
+                    speed_class: SpeedClass::Thorough,
+                    memory_usage: MemoryUsage::VeryHigh,
+                    special_features: vec![
+                        "Decompression + recompression".to_string(),
+                        "File type specific optimization".to_string(),
+                        "Directory structure optimization".to_string(),
+                    ],
+                }
+            },
+            
+            FormatSpecificData::Database { table_count, data_types, .. } => {
+                MMHRSCodec {
+                    name: "Database Optimizer".to_string(),
+                    description: "Database-aware compression with schema optimization".to_string(),
+                    best_for: vec!["Database files".to_string(), "Structured data".to_string()],
+                    compression_range: (
+
+    use std::process::Command;
+use std::path::Path;
+
+/// Benchmarking system for validating compression predictions
+#[derive(Debug)]
+pub struct CompressionBenchmark {
+    available_compressors: Vec<CompressorInfo>,
+    benchmark_results: HashMap<String, BenchmarkResult>,
+}
+
+/// Information about available compressors
+#[derive(Debug, Clone)]
+pub struct CompressorInfo {
+    pub name: String,
+    pub command: String,
+    pub compress_args: Vec<String>,
+    pub decompress_args: Vec<String>,
+    pub supports_stdin: bool,
+    pub creates_archive: bool,
+}
+
+/// Benchmark results
+#[derive(Debug, Clone)]
+pub struct BenchmarkResult {
+    pub original_size: usize,
+    pub compressed_size: usize,
+    pub compression_time: Duration,
+    pub decompression_time: Duration,
+    pub compression_ratio: f64,
+    pub speed_mbps: f64,
+    pub memory_usage_mb: f64,
+}
+
+/// Prediction accuracy metrics
+#[derive(Debug)]
+pub struct PredictionAccuracy {
+    pub size_prediction_error: f64,
+    pub time_prediction_error: f64,
+    pub ratio_prediction_error: f64,
+    pub overall_confidence: f64,
+}
+
+impl CompressionBenchmark {
+    pub fn new() -> Self {
+        Self {
+            available_compressors: Self::detect_available_compressors(),
+            benchmark_results: HashMap::new(),
+        }
+    }
+    
+    /// Detect available compression tools on the system
+    fn detect_available_compressors() -> Vec<CompressorInfo> {
+        let mut compressors = Vec::new();
+        
+        // Standard compressors
+        let candidates = vec![
+            CompressorInfo {
+                name: "gzip".to_string(),
+                command: "gzip".to_string(),
+                compress_args: vec!["-c".to_string(), "-9".to_string()],
+                decompress_args: vec!["-d".to_string(), "-c".to_string()],
+                supports_stdin: true,
+                creates_archive: false,
+            },
+            CompressorInfo {
+                name: "bzip2".to_string(),
+                command: "bzip2".to_string(),
+                compress_args: vec!["-c".to_string(), "-9".to_string()],
+                decompress_args: vec!["-d".to_string(), "-c".to_string()],
+                supports_stdin: true,
+                creates_archive: false,
+            },
+            CompressorInfo {
+                name: "xz".to_string(),
+                command: "xz".to_string(),
+                compress_args: vec!["-c".to_string(), "-9".to_string()],
+                decompress_args: vec!["-d".to_string(), "-c".to_string()],
+                supports_stdin: true,
+                creates_archive: false,
+            },
+            CompressorInfo {
+                name: "lz4".to_string(),
+                command: "lz4".to_string(),
+                compress_args: vec!["-c".to_string(), "-9".to_string()],
+                decompress_args: vec!["-d".to_string(), "-c".to_string()],
+                supports_stdin: true,
+                creates_archive: false,
+            },
+            CompressorInfo {
+                name: "zstd".to_string(),
+                command: "zstd".to_string(),
+                compress_args: vec!["-c".to_string(), "-19".to_string()],
+                decompress_args: vec!["-d".to_string(), "-c".to_string()],
+                supports_stdin: true,
+                creates_archive: false,
+            },
+            CompressorInfo {
+                name: "7z".to_string(),
+                command: "7z".to_string(),
+                compress_args: vec!["a".to_string(), "-si".to_string(), "-so".to_string(), "-mx9".to_string()],
+                decompress_args: vec!["e".to_string(), "-si".to_string(), "-so".to_string()],
+                supports_stdin: true,
+                creates_archive: true,
+            },
+        ];
+        
+        // Test which compressors are actually available
+        for compressor in candidates {
+            if Self::is_compressor_available(&compressor.command) {
+                compressors.push(compressor);
+            }
+        }
+        
+        compressors
+    }
+    
+    /// Check if a compressor is available on the system
+    fn is_compressor_available(command: &str) -> bool {
+        Command::new(command)
+            .arg("--help")
+            .output()
+            .is_ok()
+    }
+    
+    /// Run a quick benchmark on a file sample
+    pub fn quick_benchmark(&mut self, data: &[u8], file_type: &str) -> Vec<BenchmarkResult> {
+        let mut results = Vec::new();
+        
+        // Limit sample size for quick benchmarking
+        let sample_size = data.len().min(1024 * 1024); // Max 1MB for quick test
+        let sample_data = &data[..sample_size];
+        
+        for compressor in &self.available_compressors {
+            if let Ok(result) = self.benchmark_compressor(compressor, sample_data) {
+                results.push(result);
+            }
+        }
+        
+        results.sort_by(|a, b| a.compression_ratio.partial_cmp(&b.compression_ratio).unwrap());
+        results
+    }
+    
+    /// Benchmark a specific compressor
+    fn benchmark_compressor(&self, compressor: &CompressorInfo, data: &[u8]) -> Result<BenchmarkResult, Box<dyn std::error::Error>> {
+        let start_time = Instant::now();
+        
+        // Create temporary file for the data
+        let temp_dir = std::env::temp_dir();
+        let temp_input = temp_dir.join(format!("benchmark_input_{}", std::process::id()));
+        std::fs::write(&temp_input, data)?;
+        
+        let temp_output = temp_dir.join(format!("benchmark_output_{}", std::process::id()));
+        
+        // Run compression
+        let compress_start = Instant::now();
+        let compress_output = if compressor.supports_stdin {
+            Command::new(&compressor.command)
+                .args(&compressor.compress_args)
+                .stdin(std::process::Stdio::piped())
+                .stdout(std::process::Stdio::piped())
+                .spawn()?
+                .stdin.take().unwrap()
+                .write_all(data)?;
+            
+            // This is simplified - in reality you'd need to handle the process properly
+            Vec::new() // Placeholder
+        } else {
+            let mut args = compressor.compress_args.clone();
+            args.push(temp_input.to_string_lossy().to_string());
+            args.push(temp_output.to_string_lossy().to_string());
+            
+            let output = Command::new(&compressor.command)
+                .args(args)
+                .output()?;
+                
+            if output.status.success() {
+                std::fs::read(&temp_output).unwrap_or_default()
+            } else {
+                return Err("Compression failed".into());
+            }
+        };
+        
+        let compression_time = compress_start.elapsed();
+        let compressed_size = compress_output.len();
+        
+        // Calculate metrics
+        let compression_ratio = compressed_size as f64 / data.len() as f64;
+        let speed_mbps = (data.len() as f64 / 1_048_576.0) / compression_time.as_secs_f64();
+        
+        // Cleanup
+        let _ = std::fs::remove_file(&temp_input);
+        let _ = std::fs::remove_file(&temp_output);
+        
+        Ok(BenchmarkResult {
+            original_size: data.len(),
+            compressed_size,
+            compression_time,
+            decompression_time: Duration::from_millis(0), // Would need separate test
+            compression_ratio,
+            speed_mbps,
+            memory_usage_mb: Self::estimate_memory_usage(&compressor.name, data.len()),
+        })
+    }
+    
+    /// Estimate memory usage for different compressors
+    fn estimate_memory_usage(compressor_name: &str, data_size: usize) -> f64 {
+        let base_mb = match compressor_name {
+            "lz4" => 1.0,
+            "gzip" => 8.0,
+            "bzip2" => 16.0,
+            "xz" => 32.0,
+            "zstd" => 16.0,
+            "7z" => 64.0,
+            _ => 8.0,
+        };
+        
+        // Scale with data size but with reasonable limits
+        base_mb + (data_size as f64 / 1_048_576.0 * 0.1).min(base_mb * 2.0)
+    }
+    
+    /// Validate predictions against benchmark results
+    pub fn validate_predictions(
+        &self,
+        predictions: &CompressionMetrics,
+        benchmark_results: &[BenchmarkResult]
+    ) -> PredictionAccuracy {
+        if benchmark_results.is_empty() {
+            return PredictionAccuracy {
+                size_prediction_error: 1.0,
+                time_prediction_error: 1.0,
+                ratio_prediction_error: 1.0,
+                overall_confidence: 0.0,
+            };
+        }
+        
+        // Find best actual result for comparison
+        let best_actual = benchmark_results.iter()
+            .min_by(|a, b| a.compression_ratio.partial_cmp(&b.compression_ratio).unwrap())
+            .unwrap();
+        
+        // Calculate prediction errors
+        let ratio_error = (predictions.estimated_ratio - best_actual.compression_ratio).abs() 
+            / best_actual.compression_ratio;
+        
+        let size_error = ratio_error; // Same as ratio error for size
+        
+        // Time prediction is harder without actual time estimates in CompressionMetrics
+        let time_error = 0.5; // Placeholder
+        
+        let overall_confidence = 1.0 - (ratio_error + size_error + time_error) / 3.0;
+        
+        PredictionAccuracy {
+            size_prediction_error: size_error,
+            time_prediction_error: time_error,
+            ratio_prediction_error: ratio_error,
+            overall_confidence: overall_confidence.max(0.0).min(1.0),
+        }
+    }
+    
+    /// Generate benchmark report
+    pub fn generate_benchmark_report(
+        &self,
+        predictions: &CompressionMetrics,
+        benchmark_results: &[BenchmarkResult],
+        accuracy: &PredictionAccuracy
+    ) -> String {
+        let mut report = String::new();
+        
+        report.push_str("BENCHMARK VALIDATION REPORT\n");
+        report.push_str(&"=".repeat(50));
+        report.push_str("\n\n");
+        
+        report.push_str("PREDICTIONS vs ACTUAL RESULTS:\n");
+        report.push_str(&"-".repeat(40));
+        report.push_str("\n");
+        
+        if let Some(best_result) = benchmark_results.iter()
+            .min_by(|a, b| a.compression_ratio.partial_cmp(&b.compression_ratio).unwrap()) {
+            
+            report.push_str(&format!("Predicted compression ratio: {:.3}\n", predictions.estimated_ratio));
+            report.push_str(&format!("Best actual ratio:         {:.3}\n", best_result.compression_ratio));
+            report.push_str(&format!("Prediction error:          {:.1}%\n\n", accuracy.ratio_prediction_error * 100.0));
+        }
+        
+        report.push_str("BENCHMARK RESULTS BY COMPRESSOR:\n");
+        report.push_str(&"-".repeat(40));
+        report.push_str("\n");
+        
+        for (i, result) in benchmark_results.iter().enumerate() {
+            report.push_str(&format!("{}. Compressor (ratio: {:.3}, speed: {:.1} MB/s, memory: {:.1} MB)\n",
+                i + 1, result.compression_ratio, result.speed_mbps, result.memory_usage_mb));
+        }
+        
+        report.push_str(&format!("\nOverall prediction confidence: {:.1}%\n", accuracy.overall_confidence * 100.0));
+        
+        report
+    }
+}
+
+/// Performance prediction system
+pub struct PerformancePredictor {
+    historical_data: HashMap<String, Vec<BenchmarkResult>>,
+}
+
+impl PerformancePredictor {
+    pub fn new() -> Self {
+        Self {
+            historical_data: HashMap::new(),
+        }
+    }
+    
+    /// Add benchmark result to historical data
+    pub fn add_benchmark_result(&mut self, file_type: String, result: BenchmarkResult) {
+        self.historical_data.entry(file_type).or_insert_with(Vec::new).push(result);
+    }
+    
+    /// Predict performance based on historical data
+    pub fn predict_performance(&self, file_type: &str, file_size_mb: f64, metrics: &CompressionMetrics) -> Option<PerformancePrediction> {
+        if let Some(history) = self.historical_data.get(file_type) {
+            if history.is_empty() { return None; }
+            
+            // Weight historical results by similarity to current metrics
+            let mut weighted_ratio = 0.0;
+            let mut weighted_speed = 0.0;
+            let mut total_weight = 0.0;
+            
+            for result in history {
+                // Simple similarity metric (would be more sophisticated in practice)
+                let similarity = 1.0 / (1.0 + (metrics.estimated_ratio - result.compression_ratio).abs());
+                let weight = similarity * similarity; // Square for stronger weighting
+                
+                weighted_ratio += result.compression_ratio * weight;
+                weighted_speed += result.speed_mbps * weight;
+                total_weight += weight;
+            }
+            
+            if total_weight > 0.0 {
+                let predicted_ratio = weighted_ratio / total_weight;
+                let predicted_speed = weighted_speed / total_weight;
+                let predicted_time = Duration::from_secs_f64(file_size_mb / predicted_speed);
+                
+                Some(PerformancePrediction {
+                    estimated_compression_ratio: predicted_ratio,
+                    estimated_speed_mbps: predicted_speed,
+                    estimated_compression_time: predicted_time,
+                    confidence: (total_weight / history.len() as f64).min(1.0),
+                })
+            } else {
+                None
+            }
+        } else {
+            None
+        }
+    }
+}
+
+/// Performance prediction result
+#[derive(Debug)]
+pub struct PerformancePrediction {
+    pub estimated_compression_ratio: f64,
+    pub estimated_speed_mbps: f64,
+    pub estimated_compression_time: Duration,
+    pub confidence: f64,
+}
+
+/// Enhanced reporting system with actionable insights
+impl UniversalCompressionChampion {
+    /// Generate comprehensive report with actionable insights
+    pub fn generate_enhanced_report(&self, analyses: &[CompressionAnalysis]) -> String {
+        let mut report = String::new();
+        
+        // Header
+        report.push_str("🚀 UNIVERSAL COMPRESSION CHAMPION REPORT - MMH-RS\n");
+        report.push_str(&"=".repeat(80));
+        report.push_str("\n\n");
+
+        // Executive Summary
+        report.push_str(&self.generate_executive_summary(analyses));
+        
+        // Compression Opportunities
+        report.push_str(&self.generate_compression_opportunities(analyses));
+        
+        // File Type Analysis
+        report.push_str(&self.generate_file_type_analysis(analyses));
+        
+        // Top Candidates with Detailed Recommendations
+        report.push_str(&self.generate_detailed_candidates(analyses));
+        
+        // ROI Analysis
+        report.push_str(&self.generate_roi_analysis(analyses));
+        
+        // Implementation Roadmap
+        report.push_str(&self.generate_implementation_roadmap(analyses));
+        
+        // Technical Deep Dive
+        report.push_str(&self.generate_technical_deep_dive(analyses));
+        
+        report
+    }
+    
+    fn generate_executive_summary(&self, analyses: &[CompressionAnalysis]) -> String {
+        let mut summary = String::new();
+        
+        let total_files = analyses.len();
+        let total_size_mb: f64 = analyses.iter().map(|a| a.file_info.size_mb).sum();
+        let potential_savings_mb: f64 = analyses.iter()
+            .map(|a| a.file_info.size_mb * (1.0 - a.compression_metrics.estimated_ratio))
+            .sum();
+        let savings_percentage = (potential_savings_mb / total_size_mb) * 100.0;
+        
+        let champion_files = analyses.iter()
+            .filter(|a| matches!(a.recommended_strategy, CompressionStrategy::Champion { .. }))
+            .count();
+        
+        summary.push_str("📊 EXECUTIVE SUMMARY\n");
+        summary.push_str(&"=".repeat(50));
+        summary.push_str("\n");
+        summary.push_str(&format!("• Total files analyzed: {} ({:.1} GB)\n", total_files, total_size_mb / 1024.0));
+        summary.push_str(&format!("• Potential storage savings: {:.1} MB ({:.1}%)\n", potential_savings_mb, savings_percentage));
+        summary.push_str(&format!("• Champion compression candidates: {} files\n", champion_files));
+        summary.push_str(&format!("• Expected ROI: {}x in storage costs\n", (savings_percentage / 10.0).max(1.0)));
+        summary.push_str("\n");
+        
+        // Key insights
+        summary.push_str("🎯 KEY INSIGHTS:\n");
+        if champion_files > 0 {
+            summary.push_str(&format!("  ✓ {} files are excellent compression candidates\n", champion_files));
+        }
+        if savings_percentage > 50.0 {
+            summary.push_str("  ✓ Very high compression potential detected\n");
+        } else if savings_percentage > 25.0 {
+            summary.push_str("  ✓ Good compression opportunities available\n");
+        } else {
+            summary.push_str("  ⚠ Limited compression opportunities\n");
+        }
+        
+        let high_entropy_files = analyses.iter()
+            .filter(|a| a.compression_metrics.entropy > 6.0)
+            .count();
+        
+        if high_entropy_files > total_files / 2 {
+            summary.push_str("  ⚠ Many files are already compressed or encrypted\n");
+        }
+        
+        summary.push_

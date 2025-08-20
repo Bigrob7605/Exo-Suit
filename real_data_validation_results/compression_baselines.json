@@ -1,0 +1,74 @@
+{
+  "dickens": {
+    "gzip": 0.0,
+    "bzip2": 0.0,
+    "xz": 0.0,
+    "zstd": 0.0
+  },
+  "mozilla": {
+    "gzip": 0.0,
+    "bzip2": 0.0,
+    "xz": 0.0,
+    "zstd": 0.0
+  },
+  "mr": {
+    "gzip": 0.0,
+    "bzip2": 0.0,
+    "xz": 0.0,
+    "zstd": 0.0
+  },
+  "nci": {
+    "gzip": 0.0,
+    "bzip2": 0.0,
+    "xz": 0.0,
+    "zstd": 0.0
+  },
+  "ooffice": {
+    "gzip": 0.0,
+    "bzip2": 0.0,
+    "xz": 0.0,
+    "zstd": 0.0
+  },
+  "osdb": {
+    "gzip": 0.0,
+    "bzip2": 0.0,
+    "xz": 0.0,
+    "zstd": 0.0
+  },
+  "reymont": {
+    "gzip": 0.0,
+    "bzip2": 0.0,
+    "xz": 0.0,
+    "zstd": 0.0
+  },
+  "samba": {
+    "gzip": 0.0,
+    "bzip2": 0.0,
+    "xz": 0.0,
+    "zstd": 0.0
+  },
+  "sao": {
+    "gzip": 0.0,
+    "bzip2": 0.0,
+    "xz": 0.0,
+    "zstd": 0.0
+  },
+  "webster": {
+    "gzip": 0.0,
+    "bzip2": 0.0,
+    "xz": 0.0,
+    "zstd": 0.0
+  },
+  "xml": {
+    "gzip": 0.0,
+    "bzip2": 0.0,
+    "xz": 0.0,
+    "zstd": 0.0
+  },
+  "x-ray": {
+    "gzip": 0.0,
+    "bzip2": 0.0,
+    "xz": 0.0,
+    "zstd": 0.0
+  }
+}

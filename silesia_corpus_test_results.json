@@ -1,0 +1,452 @@
+{
+  "test_time": "2025-08-19 16:28:27",
+  "dataset": "Silesia Corpus",
+  "total_files": 12,
+  "total_original_size": 211938580,
+  "results": [
+    {
+      "file_name": "mozilla",
+      "file_size": 51220480,
+      "compression_results": {
+        "zstd": {
+          "compressed_size": 18487478,
+          "compression_ratio": 2.7705498824663914,
+          "speed_mb_s": 304.8502397057467,
+          "processing_time": 0.16076397895812988,
+          "space_saved_mb": 31.216623306274414
+        },
+        "lz4": {
+          "compressed_size": 26441653,
+          "compression_ratio": 1.9371133869731971,
+          "speed_mb_s": 687.2533938017624,
+          "processing_time": 0.07178354263305664,
+          "space_saved_mb": 23.63093090057373
+        },
+        "gzip": {
+          "compressed_size": 19089136,
+          "compression_ratio": 2.683226731686547,
+          "speed_mb_s": 28.00565466158283,
+          "processing_time": 1.7447190284729004,
+          "space_saved_mb": 30.642837524414062
+        },
+        "zlib": {
+          "compressed_size": 19089124,
+          "compression_ratio": 2.6832284184439263,
+          "speed_mb_s": 28.2377717177826,
+          "processing_time": 1.7303791046142578,
+          "space_saved_mb": 30.64284896850586
+        }
+      },
+      "best_compression": "zstd",
+      "best_ratio": 2.7705498824663914,
+      "best_speed": 304.8502397057467
+    },
+    {
+      "file_name": "webster",
+      "file_size": 41458703,
+      "compression_results": {
+        "zstd": {
+          "compressed_size": 12121884,
+          "compression_ratio": 3.4201534183960183,
+          "speed_mb_s": 236.40805329326548,
+          "processing_time": 0.16763639450073242,
+          "space_saved_mb": 27.977770805358887
+        },
+        "lz4": {
+          "compressed_size": 20145891,
+          "compression_ratio": 2.05792352395831,
+          "speed_mb_s": 480.5886757895591,
+          "processing_time": 0.0828256607055664,
+          "space_saved_mb": 20.325481414794922
+        },
+        "gzip": {
+          "compressed_size": 12213959,
+          "compression_ratio": 3.3943705722280546,
+          "speed_mb_s": 30.5283427823081,
+          "processing_time": 1.2954463958740234,
+          "space_saved_mb": 27.88996124267578
+        },
+        "zlib": {
+          "compressed_size": 12213947,
+          "compression_ratio": 3.3943739071407464,
+          "speed_mb_s": 30.685090879485458,
+          "processing_time": 1.288991928100586,
+          "space_saved_mb": 27.889972686767578
+        }
+      },
+      "best_compression": "zstd",
+      "best_ratio": 3.4201534183960183,
+      "best_speed": 236.40805329326548
+    },
+    {
+      "file_name": "nci",
+      "file_size": 33553445,
+      "compression_results": {
+        "zstd": {
+          "compressed_size": 2843995,
+          "compression_ratio": 11.797997183539351,
+          "speed_mb_s": 762.2621299120251,
+          "processing_time": 0.04208731651306152,
+          "space_saved_mb": 29.286813735961914
+        },
+        "lz4": {
+          "compressed_size": 5541821,
+          "compression_ratio": 6.054588374471135,
+          "speed_mb_s": 1140.0715232238117,
+          "processing_time": 0.028237342834472656,
+          "space_saved_mb": 26.713966369628906
+        },
+        "gzip": {
+          "compressed_size": 3200200,
+          "compression_ratio": 10.48479626273358,
+          "speed_mb_s": 86.82059028058544,
+          "processing_time": 0.3686680793762207,
+          "space_saved_mb": 28.947110176086426
+        },
+        "zlib": {
+          "compressed_size": 3200188,
+          "compression_ratio": 10.484835578409768,
+          "speed_mb_s": 88.80836962721519,
+          "processing_time": 0.36042046546936035,
+          "space_saved_mb": 28.947121620178223
+        }
+      },
+      "best_compression": "zstd",
+      "best_ratio": 11.797997183539351,
+      "best_speed": 762.2621299120251
+    },
+    {
+      "file_name": "samba",
+      "file_size": 21606400,
+      "compression_results": {
+        "zstd": {
+          "compressed_size": 4976446,
+          "compression_ratio": 4.341733035985922,
+          "speed_mb_s": 378.65774046845013,
+          "processing_time": 0.05457901954650879,
+          "space_saved_mb": 15.859560012817383
+        },
+        "lz4": {
+          "compressed_size": 7721963,
+          "compression_ratio": 2.798045004877646,
+          "speed_mb_s": 687.7952505252435,
+          "processing_time": 0.03019881248474121,
+          "space_saved_mb": 13.241230964660645
+        },
+        "gzip": {
+          "compressed_size": 5451417,
+          "compression_ratio": 3.963446568112474,
+          "speed_mb_s": 44.732172987700224,
+          "processing_time": 0.4608151912689209,
+          "space_saved_mb": 15.40659236907959
+        },
+        "zlib": {
+          "compressed_size": 5451405,
+          "compression_ratio": 3.9634552927181157,
+          "speed_mb_s": 45.07754535757968,
+          "processing_time": 0.45727992057800293,
+          "space_saved_mb": 15.406603813171387
+        }
+      },
+      "best_compression": "zstd",
+      "best_ratio": 4.341733035985922,
+      "best_speed": 378.65774046845013
+    },
+    {
+      "file_name": "dickens",
+      "file_size": 10192446,
+      "compression_results": {
+        "zstd": {
+          "compressed_size": 3667667,
+          "compression_ratio": 2.7789998383168375,
+          "speed_mb_s": 189.01414484207012,
+          "processing_time": 0.05156111717224121,
+          "space_saved_mb": 6.2225141525268555
+        },
+        "lz4": {
+          "compressed_size": 6430049,
+          "compression_ratio": 1.5851272673038728,
+          "speed_mb_s": 405.3105607969062,
+          "processing_time": 0.024222135543823242,
+          "space_saved_mb": 3.588101387023926
+        },
+        "gzip": {
+          "compressed_size": 3871646,
+          "compression_ratio": 2.6325872768326444,
+          "speed_mb_s": 18.690238710958077,
+          "processing_time": 0.520205020904541,
+          "space_saved_mb": 6.027984619140625
+        },
+        "zlib": {
+          "compressed_size": 3871634,
+          "compression_ratio": 2.6325954364487965,
+          "speed_mb_s": 18.81194096239945,
+          "processing_time": 0.516834020614624,
+          "space_saved_mb": 6.027996063232422
+        }
+      },
+      "best_compression": "zstd",
+      "best_ratio": 2.7789998383168375,
+      "best_speed": 189.01414484207012
+    },
+    {
+      "file_name": "osdb",
+      "file_size": 10085684,
+      "compression_results": {
+        "zstd": {
+          "compressed_size": 3506444,
+          "compression_ratio": 2.876328268753187,
+          "speed_mb_s": 264.8725362747029,
+          "processing_time": 0.03644537925720215,
+          "space_saved_mb": 6.274452209472656
+        },
+        "lz4": {
+          "compressed_size": 5258269,
+          "compression_ratio": 1.91806162826588,
+          "speed_mb_s": 596.7418977886251,
+          "processing_time": 0.0162811279296875,
+          "space_saved_mb": 4.603781700134277
+        },
+        "gzip": {
+          "compressed_size": 3695182,
+          "compression_ratio": 2.7294146810630706,
+          "speed_mb_s": 36.39211695925424,
+          "processing_time": 0.2644171714782715,
+          "space_saved_mb": 6.094457626342773
+        },
+        "zlib": {
+          "compressed_size": 3695170,
+          "compression_ratio": 2.7294235447895496,
+          "speed_mb_s": 36.759628018522534,
+          "processing_time": 0.26182985305786133,
+          "space_saved_mb": 6.09446907043457
+        }
+      },
+      "best_compression": "zstd",
+      "best_ratio": 2.876328268753187,
+      "best_speed": 264.8725362747029
+    },
+    {
+      "file_name": "mr",
+      "file_size": 9970564,
+      "compression_results": {
+        "zstd": {
+          "compressed_size": 3547800,
+          "compression_ratio": 2.8103512035627713,
+          "speed_mb_s": 234.07277678655274,
+          "processing_time": 0.040749311447143555,
+          "space_saved_mb": 6.125225067138672
+        },
+        "lz4": {
+          "compressed_size": 5443900,
+          "compression_ratio": 1.8315112327559286,
+          "speed_mb_s": 636.1313661376505,
+          "processing_time": 0.01511073112487793,
+          "space_saved_mb": 4.316963195800781
+        },
+        "gzip": {
+          "compressed_size": 3675953,
+          "compression_ratio": 2.712375267039595,
+          "speed_mb_s": 22.50320827493438,
+          "processing_time": 0.4226648807525635,
+          "space_saved_mb": 6.003008842468262
+        },
+        "zlib": {
+          "compressed_size": 3675941,
+          "compression_ratio": 2.712384121507935,
+          "speed_mb_s": 22.526671810379984,
+          "processing_time": 0.42222094535827637,
+          "space_saved_mb": 6.003020286560059
+        }
+      },
+      "best_compression": "zstd",
+      "best_ratio": 2.8103512035627713,
+      "best_speed": 234.07277678655274
+    },
+    {
+      "file_name": "x-ray",
+      "file_size": 8474240,
+      "compression_results": {
+        "zstd": {
+          "compressed_size": 6085291,
+          "compression_ratio": 1.392577610503754,
+          "speed_mb_s": 154.97949423689758,
+          "processing_time": 0.05232954025268555,
+          "space_saved_mb": 2.2782793045043945
+        },
+        "lz4": {
+          "compressed_size": 8387862,
+          "compression_ratio": 1.0102979758131452,
+          "speed_mb_s": 1241.8743359589669,
+          "processing_time": 0.0067441463470458984,
+          "space_saved_mb": 0.08237648010253906
+        },
+        "gzip": {
+          "compressed_size": 6045129,
+          "compression_ratio": 1.401829472952521,
+          "speed_mb_s": 26.57140863828523,
+          "processing_time": 0.30433130264282227,
+          "space_saved_mb": 2.3165807723999023
+        },
+        "zlib": {
+          "compressed_size": 6045117,
+          "compression_ratio": 1.4018322556866971,
+          "speed_mb_s": 27.460694874597067,
+          "processing_time": 0.2944808006286621,
+          "space_saved_mb": 2.316592216491699
+        }
+      },
+      "best_compression": "zlib",
+      "best_ratio": 1.4018322556866971,
+      "best_speed": 27.460694874597067
+    },
+    {
+      "file_name": "sao",
+      "file_size": 7251944,
+      "compression_results": {
+        "zstd": {
+          "compressed_size": 5551154,
+          "compression_ratio": 1.3063849426623726,
+          "speed_mb_s": 171.38099598839648,
+          "processing_time": 0.04053068161010742,
+          "space_saved_mb": 1.621999740600586
+        },
+        "lz4": {
+          "compressed_size": 6790933,
+          "compression_ratio": 1.0678862536267109,
+          "speed_mb_s": 606.2737950925887,
+          "processing_time": 0.011608600616455078,
+          "space_saved_mb": 0.4396543502807617
+        },
+        "gzip": {
+          "compressed_size": 5331811,
+          "compression_ratio": 1.3601277314593485,
+          "speed_mb_s": 18.162359271621657,
+          "processing_time": 0.3809535503387451,
+          "space_saved_mb": 1.831181526184082
+        },
+        "zlib": {
+          "compressed_size": 5331799,
+          "compression_ratio": 1.360130792627404,
+          "speed_mb_s": 18.478161801099603,
+          "processing_time": 0.374434232711792,
+          "space_saved_mb": 1.831192970275879
+        }
+      },
+      "best_compression": "zlib",
+      "best_ratio": 1.360130792627404,
+      "best_speed": 18.478161801099603
+    },
+    {
+      "file_name": "reymont",
+      "file_size": 6627202,
+      "compression_results": {
+        "zstd": {
+          "compressed_size": 1942004,
+          "compression_ratio": 3.4125583675419824,
+          "speed_mb_s": 244.72229094736065,
+          "processing_time": 0.025921344757080078,
+          "space_saved_mb": 4.46815299987793
+        },
+        "lz4": {
+          "compressed_size": 3183061,
+          "compression_ratio": 2.082021676618827,
+          "speed_mb_s": 405.6622033146128,
+          "processing_time": 0.015679121017456055,
+          "space_saved_mb": 3.2845888137817383
+        },
+        "gzip": {
+          "compressed_size": 1860883,
+          "compression_ratio": 3.5613211577514545,
+          "speed_mb_s": 20.277059349972845,
+          "processing_time": 0.3117702007293701,
+          "space_saved_mb": 4.545516014099121
+        },
+        "zlib": {
+          "compressed_size": 1860871,
+          "compression_ratio": 3.5613441232627085,
+          "speed_mb_s": 20.369329218815313,
+          "processing_time": 0.31034374237060547,
+          "space_saved_mb": 4.545527458190918
+        }
+      },
+      "best_compression": "zlib",
+      "best_ratio": 3.5613441232627085,
+      "best_speed": 20.369329218815313
+    },
+    {
+      "file_name": "ooffice",
+      "file_size": 6152192,
+      "compression_results": {
+        "zstd": {
+          "compressed_size": 3143604,
+          "compression_ratio": 1.9570505699827332,
+          "speed_mb_s": 203.5633054843246,
+          "processing_time": 0.028939485549926758,
+          "space_saved_mb": 2.869213104248047
+        },
+        "lz4": {
+          "compressed_size": 4339979,
+          "compression_ratio": 1.4175626195426292,
+          "speed_mb_s": 559.6335933413686,
+          "processing_time": 0.010614633560180664,
+          "space_saved_mb": 1.7282609939575195
+        },
+        "gzip": {
+          "compressed_size": 3097306,
+          "compression_ratio": 1.9863042269636904,
+          "speed_mb_s": 21.328581469986386,
+          "processing_time": 0.27518749237060547,
+          "space_saved_mb": 2.9133663177490234
+        },
+        "zlib": {
+          "compressed_size": 3097294,
+          "compression_ratio": 1.986311922600825,
+          "speed_mb_s": 21.974723784163654,
+          "processing_time": 0.2671029567718506,
+          "space_saved_mb": 2.9133777618408203
+        }
+      },
+      "best_compression": "zlib",
+      "best_ratio": 1.986311922600825,
+      "best_speed": 21.974723784163654
+    },
+    {
+      "file_name": "xml",
+      "file_size": 5345280,
+      "compression_results": {
+        "zstd": {
+          "compressed_size": 639134,
+          "compression_ratio": 8.363316612791683,
+          "speed_mb_s": 583.8964443716205,
+          "processing_time": 0.008765935897827148,
+          "space_saved_mb": 4.488130569458008
+        },
+        "lz4": {
+          "compressed_size": 1229418,
+          "compression_ratio": 4.347813355587766,
+          "speed_mb_s": 879.049459359454,
+          "processing_time": 0.0058515071868896484,
+          "space_saved_mb": 3.925191879272461
+        },
+        "gzip": {
+          "compressed_size": 688009,
+          "compression_ratio": 7.769200693595578,
+          "speed_mb_s": 63.62122064218955,
+          "processing_time": 0.08017730712890625,
+          "space_saved_mb": 4.441519737243652
+        },
+        "zlib": {
+          "compressed_size": 687997,
+          "compression_ratio": 7.769336203500887,
+          "speed_mb_s": 64.18289666434524,
+          "processing_time": 0.07953310012817383,
+          "space_saved_mb": 4.441531181335449
+        }
+      },
+      "best_compression": "zstd",
+      "best_ratio": 8.363316612791683,
+      "best_speed": 583.8964443716205
+    }
+  ]
+}

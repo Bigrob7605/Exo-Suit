@@ -12,7 +12,7 @@
 - **Basic Compression**: PASS
   - Tested 4 compression methods on 1MB data
 - **Pattern Recognition**: PASS
-  - Pattern251 codec tested with repetitive data
+  - Neural Entanglement Codec tested with repetitive data
 - **Self-Healing (RaptorQ FEC)**: FAIL
   - RaptorQ FEC corruption recovery test
 - **Hierarchical Compression**: PASS

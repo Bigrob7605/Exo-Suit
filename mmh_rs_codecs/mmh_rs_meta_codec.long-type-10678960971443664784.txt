@@ -1,0 +1,1 @@
+HashMap<CompressionStrategy, Box<(dyn Compressor + 'static)>>

@@ -17,7 +17,7 @@
       "test_name": "Pattern Recognition",
       "success": true,
       "error_message": null,
-      "details": "Pattern251 codec tested with repetitive data"
+      "details": "Neural Entanglement Codec tested with repetitive data"
     },
     {
       "test_name": "Self-Healing (RaptorQ FEC)",

@@ -48,7 +48,7 @@
 
 ### **⚡ AI Tensor Optimization**
 - **Neural Network Specialized**: Designed for AI model weights
-- **Pattern251 Codec**: 99.99995% compression for repetitive AI data
+- **Neural Entanglement Codec**: 99.99995% compression for repetitive AI data
 - **Tensor-First Architecture**: Native safetensors integration
 - **GPU Acceleration Ready**: Future-ready for massive AI workloads
 
@@ -349,7 +349,7 @@
 ### **📊 REVOLUTIONARY COMPRESSION PERFORMANCE BREAKDOWN**
 | Codec | Average Ratio | Best Case | Worst Case | Special Features | Status |
 |-------|---------------|------------|-------------|------------------|---------|
-| **Pattern251** | 99.99995% | 99.99995% | 99.99995% | **AI Pattern Recognition** | ✅ Revolutionary |
+| **Neural Entanglement Codec** | 99.99995% | 99.99995% | 99.99995% | **AI Pattern Recognition** | ✅ Revolutionary |
 | **Hierarchical** | 15-35% | 40% | 10% | **4-bit to 251-bit Analysis** | ✅ Advanced |
 | **ZSTD** | 2.18x | 2.45x | 1.88x | **Industry Standard** | ✅ Production |
 | **LZ4** | 1.55x | 1.76x | 1.55x | **Lightning Speed** | ✅ Production |
