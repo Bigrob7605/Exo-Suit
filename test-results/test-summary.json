@@ -1,0 +1,32 @@
+{
+  "timestamp": "2025-08-20T12:55:24.196Z",
+  "website": "http://127.0.0.1:8000",
+  "summary": {
+    "accessibility": {
+      "status": "PASS",
+      "passes": 33,
+      "violations": 2,
+      "critical": 0,
+      "serious": 0
+    },
+    "performance": {
+      "status": "FAIL",
+      "overallScore": 0,
+      "performanceScore": 0,
+      "accessibilityScore": 0,
+      "bestPracticesScore": 0,
+      "seoScore": 0
+    }
+  },
+  "recommendations": [
+    "Minor accessibility improvements recommended"
+  ],
+  "nextSteps": [
+    "Fix accessibility issues identified in testing",
+    "Address performance issues before launch",
+    "Re-run tests after fixes are implemented",
+    "Ensure all tests pass before production deployment",
+    "Monitor website performance in production",
+    "Set up automated testing for future updates"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "timestamp": "2025-08-20T12:55:24.196Z",
+  "website": "http://127.0.0.1:8000",
+  "tests": {
+    "accessibility": {
+      "success": true,
+      "violations": 2,
+      "passes": 33,
+      "critical": 0,
+      "serious": 0
+    },
+    "performance": {
+      "success": false,
+      "error": "lighthouse is not a function"
+    }
+  }
+}
