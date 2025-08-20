@@ -22,6 +22,14 @@
     --border-medium: rgba(255, 255, 255, 0.2);
     --shadow-dark: rgba(0, 0, 0, 0.3);
     --shadow-light: rgba(0, 0, 0, 0.1);
+    
+    /* Phase 3 Brand Colors */
+    --exo-blue: #0066CC;
+    --neural-green: #00CC66;
+    --security-red: #CC0000;
+    --dark-space: #1A1A1A;
+    --light-silver: #F5F5F5;
+    --warm-orange: #FF6600;
 }
 
 /* Reset and Base Styles */
@@ -505,44 +513,262 @@ li {
     text-align: center;
 }
 
-/* Responsive Design */
+/* Phase 3: New Section Styles */
+
+/* Branding Section */
+.section-branding {
+    background: linear-gradient(135deg, rgba(0, 102, 204, 0.1) 0%, rgba(0, 204, 102, 0.1) 100%);
+}
+
+.branding-showcase {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.branding-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-light);
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+}
+
+.branding-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--exo-blue);
+    box-shadow: 0 20px 40px rgba(0, 102, 204, 0.2);
+}
+
+.branding-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.branding-card h3 {
+    color: var(--exo-blue);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.branding-card p {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.btn-branding {
+    background: linear-gradient(135deg, var(--exo-blue) 0%, var(--neural-green) 100%);
+    color: var(--light-silver);
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.btn-branding:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 102, 204, 0.3);
+}
+
+/* Content Strategy Section */
+.section-content-strategy {
+    background: linear-gradient(135deg, rgba(0, 204, 102, 0.1) 0%, rgba(255, 102, 0, 0.1) 100%);
+}
+
+.content-strategy-showcase {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.strategy-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-light);
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+}
+
+.strategy-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--neural-green);
+    box-shadow: 0 20px 40px rgba(0, 204, 102, 0.2);
+}
+
+.strategy-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.strategy-card h3 {
+    color: var(--neural-green);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.strategy-card p {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.btn-strategy {
+    background: linear-gradient(135deg, var(--neural-green) 0%, var(--warm-orange) 100%);
+    color: var(--light-silver);
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.btn-strategy:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 204, 102, 0.3);
+}
+
+/* User Experience Section */
+.section-user-experience {
+    background: linear-gradient(135deg, rgba(255, 102, 0, 0.1) 0%, rgba(204, 0, 0, 0.1) 100%);
+}
+
+.ux-showcase {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.ux-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-light);
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+}
+
+.ux-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--warm-orange);
+    box-shadow: 0 20px 40px rgba(255, 102, 0, 0.2);
+}
+
+.ux-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.ux-card h3 {
+    color: var(--warm-orange);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.ux-card p {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.btn-ux {
+    background: linear-gradient(135deg, var(--warm-orange) 0%, var(--security-red) 100%);
+    color: var(--light-silver);
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.btn-ux:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(255, 102, 0, 0.3);
+}
+
+/* Enhanced Navigation for Phase 3 */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    white-space: nowrap;
+}
+
+.nav-links a:hover {
+    color: var(--cyber-blue);
+    background: rgba(0, 212, 255, 0.1);
+}
+
+/* Phase 3 Section Transitions */
+.section-branding,
+.section-content-strategy,
+.section-user-experience {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.section-branding {
+    animation-delay: 0.1s;
+}
+
+.section-content-strategy {
+    animation-delay: 0.2s;
+}
+
+.section-user-experience {
+    animation-delay: 0.3s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design for Phase 3 */
 @media (max-width: 768px) {
-    .nav-content {
-        flex-direction: column;
-        gap: 1rem;
+    .branding-showcase,
+    .content-strategy-showcase,
+    .ux-showcase {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
     
     .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
         gap: 1rem;
     }
     
-    .container {
-        padding: 0 1rem;
-    }
-    
-    .section-header h2 {
-        font-size: 2rem;
-    }
-    
-    .grid-2,
-    .grid-3,
-    .grid-4 {
-        grid-template-columns: 1fr;
-    }
-    
-    .stats-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .section {
-        margin: 2rem 0;
-        padding: 1rem 0;
-    }
-    
-    .content-block {
-        padding: 1.5rem;
+    .nav-links a {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
     }
 }
 
@@ -565,5 +791,17 @@ li {
     
     .stat-number {
         font-size: 2rem;
+    }
+    
+    .branding-card,
+    .strategy-card,
+    .ux-card {
+        padding: 1.5rem;
+    }
+    
+    .branding-icon,
+    .strategy-icon,
+    .ux-icon {
+        font-size: 2.5rem;
     }
 }
