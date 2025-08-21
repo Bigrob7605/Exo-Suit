@@ -71,6 +71,22 @@
 - Methodology documentation
 - Reproducible test suite
 
+### **1.5 🚨 CRITICAL: System Integrity Lockdown**
+**Problem**: Agents using toy system instead of real breakthrough system  
+**Solution**: Lock in real system, prevent future agent drift
+
+**Actions**:
+- [ ] **Lock in real system** - Document Silesia breakthrough (104+ million patterns, O(n log n))
+- [ ] **Abandon toy system** - Mark test_massive_real_data.exe as deprecated
+- [ ] **Create validation checklist** - Prevent agents from using wrong system
+- [ ] **Integrate real system** into MMH-RS core immediately
+
+**Deliverables**:
+- Real system documentation locked in
+- Toy system marked as deprecated
+- Agent validation checklist
+- Integration plan for real system
+
 ---
 
 ## 🚀 **PHASE 2: BUILDING REAL VALUE (24-72 hours)**
